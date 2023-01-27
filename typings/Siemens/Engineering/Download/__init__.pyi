@@ -4,21 +4,23 @@
 # by generator 1.145
 """ no doc """
 from __future__ import annotations
-from Siemens.Engineering import (IEngineeringComposition, IEngineeringObject, 
+from Siemens.Engineering import (IEngineeringComposition, IEngineeringObject,
     IEngineeringService)
 
-from Siemens.Engineering.Connection import (ConnectionConfiguration, 
+from Siemens.Engineering.Connection import (ConnectionConfiguration,
     IConfiguration)
 
 from Siemens.Engineering.Download.Configurations import (
     DownloadConfiguration)
 
-from System import (AsyncCallback, DateTime, Enum, IAsyncResult, IEquatable, 
+from System import (AsyncCallback, DateTime, Enum, IAsyncResult, IEquatable,
     MulticastDelegate)
 
 """The following names are not found in the module: (
     IInternalCompositionAccess, IInternalObjectAccess, field#)
 """
+
+from Siemens import IInternalCompositionAccess, IInternalObjectAccess
 
 # no functions
 # classes
@@ -29,18 +31,19 @@ class DownloadConfigurationDelegate(MulticastDelegate): # skipped bases: <type '
         """ BeginInvoke(self: DownloadConfigurationDelegate, downloadConfiguration: DownloadConfiguration, callback: AsyncCallback, object: object) -> IAsyncResult """
         ...
 
-    def EndInvoke(self, result:IAsyncResult): # -> 
+    def EndInvoke(self, result:IAsyncResult): # ->
         """ EndInvoke(self: DownloadConfigurationDelegate, result: IAsyncResult) """
         ...
 
-    def Invoke(self, downloadConfiguration:DownloadConfiguration): # -> 
+    def Invoke(self, downloadConfiguration:DownloadConfiguration): # ->
         """ Invoke(self: DownloadConfigurationDelegate, downloadConfiguration: DownloadConfiguration) """
         ...
 
 
 class DownloadOptions(Enum): # skipped bases: <type 'IConvertible'>, <type 'IComparable'>, <type 'IFormattable'>, <type 'object'>
     """
-    The list of possible download options
+    The list of possible download options
+
     enum (flags) DownloadOptions, values: Hardware (1), None (0), Software (2)
     """
     Hardware: DownloadOptions = ...
@@ -53,7 +56,8 @@ class DownloadProvider(IEquatable, IEngineeringObject, IEngineeringService, IInt
     @property
     def Configuration(self) -> ConnectionConfiguration:
         """
-        Connection Configuration.
+        Connection Configuration.
+
         Get: Configuration(self: DownloadProvider) -> ConnectionConfiguration
         """
         ...
@@ -61,7 +65,8 @@ class DownloadProvider(IEquatable, IEngineeringObject, IEngineeringService, IInt
     @property
     def Parent(self) -> IEngineeringObject:
         """
-        EOM parent of this object
+        EOM parent of this object
+
         Get: Parent(self: DownloadProvider) -> IEngineeringObject
         """
         ...
@@ -69,28 +74,38 @@ class DownloadProvider(IEquatable, IEngineeringObject, IEngineeringService, IInt
 
     def Download(self, configuration:IConfiguration, preDownloadConfigurationDelegate:DownloadConfigurationDelegate, postDownloadConfigurationDelegate:DownloadConfigurationDelegate, downloadOptions:DownloadOptions) -> DownloadResult:
         """
-        Download(self: DownloadProvider, configuration: IConfiguration, preDownloadConfigurationDelegate: DownloadConfigurationDelegate, postDownloadConfigurationDelegate: DownloadConfigurationDelegate, downloadOptions: DownloadOptions) -> DownloadResult
-            Downloads hardware and software to the device
-            configuration: Connection cofiguration path to a device.
-            preDownloadConfigurationDelegate: This delegate will be called for each configuration before the download.
-            postDownloadConfigurationDelegate: This delegate will be called for each configuration after the download.
-            downloadOptions: Download options
+        Download(self: DownloadProvider, configuration: IConfiguration, preDownloadConfigurationDelegate: DownloadConfigurationDelegate, postDownloadConfigurationDelegate: DownloadConfigurationDelegate, downloadOptions: DownloadOptions) -> DownloadResult
+
+            Downloads hardware and software to the device
+
+            configuration: Connection cofiguration path to a device.
+
+            preDownloadConfigurationDelegate: This delegate will be called for each configuration before the download.
+
+            postDownloadConfigurationDelegate: This delegate will be called for each configuration after the download.
+
+            downloadOptions: Download options
+
             Returns: Siemens.Engineering.Download.DownloadResult
         """
         ...
 
     def GetHashCode(self) -> int:
         """
-        GetHashCode(self: DownloadProvider) -> int
-            Returns a hash code for this instance.
+        GetHashCode(self: DownloadProvider) -> int
+
+            Returns a hash code for this instance.
+
             Returns: A hash code for this instance, suitable for use in hashing algorithms and data structures like a hash table.
         """
         ...
 
     def ToString(self) -> str:
         """
-        ToString(self: DownloadProvider) -> str
-            Returns a System.String that represents the current System.Object.
+        ToString(self: DownloadProvider) -> str
+
+            Returns a System.String that represents the current System.Object.
+
             Returns: A System.String that represents the current System.Object.
         """
         ...
@@ -104,7 +119,8 @@ class DownloadResult(IEquatable, IEngineeringObject, IInternalObjectAccess): # s
     @property
     def ErrorCount(self) -> int:
         """
-        Number of errors in a given download scenario
+        Number of errors in a given download scenario
+
         Get: ErrorCount(self: DownloadResult) -> int
         """
         ...
@@ -112,7 +128,8 @@ class DownloadResult(IEquatable, IEngineeringObject, IInternalObjectAccess): # s
     @property
     def Messages(self) -> DownloadResultMessageComposition:
         """
-        Collection of output messages for the result of a given download scenario.
+        Collection of output messages for the result of a given download scenario.
+
         Get: Messages(self: DownloadResult) -> DownloadResultMessageComposition
         """
         ...
@@ -120,7 +137,8 @@ class DownloadResult(IEquatable, IEngineeringObject, IInternalObjectAccess): # s
     @property
     def Parent(self) -> IEngineeringObject:
         """
-        EOM parent of this object
+        EOM parent of this object
+
         Get: Parent(self: DownloadResult) -> IEngineeringObject
         """
         ...
@@ -128,7 +146,8 @@ class DownloadResult(IEquatable, IEngineeringObject, IInternalObjectAccess): # s
     @property
     def State(self) -> DownloadResultState:
         """
-        Final state of a given compile scenario
+        Final state of a given compile scenario
+
         Get: State(self: DownloadResult) -> DownloadResultState
         """
         ...
@@ -136,7 +155,8 @@ class DownloadResult(IEquatable, IEngineeringObject, IInternalObjectAccess): # s
     @property
     def WarningCount(self) -> int:
         """
-        Number of warnings in a given download scenario
+        Number of warnings in a given download scenario
+
         Get: WarningCount(self: DownloadResult) -> int
         """
         ...
@@ -144,16 +164,20 @@ class DownloadResult(IEquatable, IEngineeringObject, IInternalObjectAccess): # s
 
     def GetHashCode(self) -> int:
         """
-        GetHashCode(self: DownloadResult) -> int
-            Returns a hash code for this instance.
+        GetHashCode(self: DownloadResult) -> int
+
+            Returns a hash code for this instance.
+
             Returns: A hash code for this instance, suitable for use in hashing algorithms and data structures like a hash table.
         """
         ...
 
     def ToString(self) -> str:
         """
-        ToString(self: DownloadResult) -> str
-            Returns a System.String that represents the current System.Object.
+        ToString(self: DownloadResult) -> str
+
+            Returns a System.String that represents the current System.Object.
+
             Returns: A System.String that represents the current System.Object.
         """
         ...
@@ -167,7 +191,8 @@ class DownloadResultMessage(IEquatable, IEngineeringObject, IInternalObjectAcces
     @property
     def DateTime(self) -> DateTime:
         """
-        Date and time in a download message
+        Date and time in a download message
+
         Get: DateTime(self: DownloadResultMessage) -> DateTime
         """
         ...
@@ -175,7 +200,8 @@ class DownloadResultMessage(IEquatable, IEngineeringObject, IInternalObjectAcces
     @property
     def ErrorCount(self) -> int:
         """
-        Number of errors in a download message
+        Number of errors in a download message
+
         Get: ErrorCount(self: DownloadResultMessage) -> int
         """
         ...
@@ -183,7 +209,8 @@ class DownloadResultMessage(IEquatable, IEngineeringObject, IInternalObjectAcces
     @property
     def Message(self) -> str:
         """
-        Description or content of a download message
+        Description or content of a download message
+
         Get: Message(self: DownloadResultMessage) -> str
         """
         ...
@@ -191,7 +218,8 @@ class DownloadResultMessage(IEquatable, IEngineeringObject, IInternalObjectAcces
     @property
     def Messages(self) -> DownloadResultMessageComposition:
         """
-        Access to the download messages for a given download scenario
+        Access to the download messages for a given download scenario
+
         Get: Messages(self: DownloadResultMessage) -> DownloadResultMessageComposition
         """
         ...
@@ -199,7 +227,8 @@ class DownloadResultMessage(IEquatable, IEngineeringObject, IInternalObjectAcces
     @property
     def Parent(self) -> IEngineeringObject:
         """
-        EOM parent of this object
+        EOM parent of this object
+
         Get: Parent(self: DownloadResultMessage) -> IEngineeringObject
         """
         ...
@@ -207,7 +236,8 @@ class DownloadResultMessage(IEquatable, IEngineeringObject, IInternalObjectAcces
     @property
     def State(self) -> DownloadResultState:
         """
-        Final state in a download message
+        Final state in a download message
+
         Get: State(self: DownloadResultMessage) -> DownloadResultState
         """
         ...
@@ -215,7 +245,8 @@ class DownloadResultMessage(IEquatable, IEngineeringObject, IInternalObjectAcces
     @property
     def WarningCount(self) -> int:
         """
-        Number of warnings in a download message
+        Number of warnings in a download message
+
         Get: WarningCount(self: DownloadResultMessage) -> int
         """
         ...
@@ -223,16 +254,20 @@ class DownloadResultMessage(IEquatable, IEngineeringObject, IInternalObjectAcces
 
     def GetHashCode(self) -> int:
         """
-        GetHashCode(self: DownloadResultMessage) -> int
-            Returns a hash code for this instance.
+        GetHashCode(self: DownloadResultMessage) -> int
+
+            Returns a hash code for this instance.
+
             Returns: A hash code for this instance, suitable for use in hashing algorithms and data structures like a hash table.
         """
         ...
 
     def ToString(self) -> str:
         """
-        ToString(self: DownloadResultMessage) -> str
-            Returns a System.String that represents the current System.Object.
+        ToString(self: DownloadResultMessage) -> str
+
+            Returns a System.String that represents the current System.Object.
+
             Returns: A System.String that represents the current System.Object.
         """
         ...
@@ -246,7 +281,8 @@ class DownloadResultMessageComposition(IInternalCompositionAccess, IEngineeringC
     @property
     def Parent(self) -> IEngineeringObject:
         """
-        Gets the parent.
+        Gets the parent.
+
         Get: Parent(self: DownloadResultMessageComposition) -> IEngineeringObject
         """
         ...
@@ -254,16 +290,20 @@ class DownloadResultMessageComposition(IInternalCompositionAccess, IEngineeringC
 
     def GetHashCode(self) -> int:
         """
-        GetHashCode(self: DownloadResultMessageComposition) -> int
-            Returns a hash code for this instance.
+        GetHashCode(self: DownloadResultMessageComposition) -> int
+
+            Returns a hash code for this instance.
+
             Returns: A hash code for this instance, suitable for use in hashing algorithms and data structures like a hash table.
         """
         ...
 
     def ToString(self) -> str:
         """
-        ToString(self: DownloadResultMessageComposition) -> str
-            Returns a System.String that represents the current System.Object.
+        ToString(self: DownloadResultMessageComposition) -> str
+
+            Returns a System.String that represents the current System.Object.
+
             Returns: A System.String that represents the current System.Object.
         """
         ...
@@ -278,7 +318,8 @@ class DownloadResultMessageComposition(IInternalCompositionAccess, IEngineeringC
 
 class DownloadResultState(Enum): # skipped bases: <type 'IConvertible'>, <type 'IComparable'>, <type 'IFormattable'>, <type 'object'>
     """
-    The list of possible compiler result options
+    The list of possible compiler result options
+
     enum DownloadResultState, values: Error (3), Information (1), Success (0), Warning (2)
     """
     Error: DownloadResultState = ...
@@ -293,7 +334,8 @@ class RHDownloadProvider(IEquatable, IEngineeringService, IInternalObjectAccess)
     @property
     def Configuration(self) -> ConnectionConfiguration:
         """
-        Connection Configuration.
+        Connection Configuration.
+
         Get: Configuration(self: RHDownloadProvider) -> ConnectionConfiguration
         """
         ...
@@ -301,40 +343,56 @@ class RHDownloadProvider(IEquatable, IEngineeringService, IInternalObjectAccess)
 
     def DownloadToBackup(self, configuration:IConfiguration, preDownloadConfigurationDelegate:DownloadConfigurationDelegate, postDownloadConfigurationDelegate:DownloadConfigurationDelegate, downloadOptions:DownloadOptions) -> DownloadResult:
         """
-        DownloadToBackup(self: RHDownloadProvider, configuration: IConfiguration, preDownloadConfigurationDelegate: DownloadConfigurationDelegate, postDownloadConfigurationDelegate: DownloadConfigurationDelegate, downloadOptions: DownloadOptions) -> DownloadResult
-            Downloads hardware and software to the backup device
-            configuration: Connection cofiguration path to a device.
-            preDownloadConfigurationDelegate: This delegate will be called for each configuration before the download.
-            postDownloadConfigurationDelegate: This delegate will be called for each configuration after the download.
-            downloadOptions: Download options
+        DownloadToBackup(self: RHDownloadProvider, configuration: IConfiguration, preDownloadConfigurationDelegate: DownloadConfigurationDelegate, postDownloadConfigurationDelegate: DownloadConfigurationDelegate, downloadOptions: DownloadOptions) -> DownloadResult
+
+            Downloads hardware and software to the backup device
+
+            configuration: Connection cofiguration path to a device.
+
+            preDownloadConfigurationDelegate: This delegate will be called for each configuration before the download.
+
+            postDownloadConfigurationDelegate: This delegate will be called for each configuration after the download.
+
+            downloadOptions: Download options
+
             Returns: Siemens.Engineering.Download.DownloadResult
         """
         ...
 
     def DownloadToPrimary(self, configuration:IConfiguration, preDownloadConfigurationDelegate:DownloadConfigurationDelegate, postDownloadConfigurationDelegate:DownloadConfigurationDelegate, downloadOptions:DownloadOptions) -> DownloadResult:
         """
-        DownloadToPrimary(self: RHDownloadProvider, configuration: IConfiguration, preDownloadConfigurationDelegate: DownloadConfigurationDelegate, postDownloadConfigurationDelegate: DownloadConfigurationDelegate, downloadOptions: DownloadOptions) -> DownloadResult
-            Downloads hardware and software to the primary device
-            configuration: Connection cofiguration path to a device.
-            preDownloadConfigurationDelegate: This delegate will be called for each configuration before the download.
-            postDownloadConfigurationDelegate: This delegate will be called for each configuration after the download.
-            downloadOptions: Download options
+        DownloadToPrimary(self: RHDownloadProvider, configuration: IConfiguration, preDownloadConfigurationDelegate: DownloadConfigurationDelegate, postDownloadConfigurationDelegate: DownloadConfigurationDelegate, downloadOptions: DownloadOptions) -> DownloadResult
+
+            Downloads hardware and software to the primary device
+
+            configuration: Connection cofiguration path to a device.
+
+            preDownloadConfigurationDelegate: This delegate will be called for each configuration before the download.
+
+            postDownloadConfigurationDelegate: This delegate will be called for each configuration after the download.
+
+            downloadOptions: Download options
+
             Returns: Siemens.Engineering.Download.DownloadResult
         """
         ...
 
     def GetHashCode(self) -> int:
         """
-        GetHashCode(self: RHDownloadProvider) -> int
-            Returns a hash code for this instance.
+        GetHashCode(self: RHDownloadProvider) -> int
+
+            Returns a hash code for this instance.
+
             Returns: A hash code for this instance, suitable for use in hashing algorithms and data structures like a hash table.
         """
         ...
 
     def ToString(self) -> str:
         """
-        ToString(self: RHDownloadProvider) -> str
-            Returns a System.String that represents the current System.Object.
+        ToString(self: RHDownloadProvider) -> str
+
+            Returns a System.String that represents the current System.Object.
+
             Returns: A System.String that represents the current System.Object.
         """
         ...
@@ -344,4 +402,3 @@ class RHDownloadProvider(IEquatable, IEngineeringService, IInternalObjectAccess)
 
 
 # variables with complex values
-

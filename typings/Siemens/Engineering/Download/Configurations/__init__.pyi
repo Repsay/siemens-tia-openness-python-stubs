@@ -10,9 +10,11 @@ from System import Enum, IEquatable
 
 from System.Security import SecureString
 
-"""The following names are not found in the module: (IInternalObjectAccess, 
+"""The following names are not found in the module: (IInternalObjectAccess,
     field#)
 """
+
+from Siemens import IInternalObjectAccess
 
 # no functions
 # classes
@@ -22,7 +24,8 @@ class DownloadConfiguration(IEquatable, IEngineeringObject, IInternalObjectAcces
     @property
     def Message(self) -> str:
         """
-        Descriptions of this onfiguration
+        Descriptions of this onfiguration
+
         Get: Message(self: DownloadConfiguration) -> str
         """
         ...
@@ -30,7 +33,8 @@ class DownloadConfiguration(IEquatable, IEngineeringObject, IInternalObjectAcces
     @property
     def Parent(self) -> IEngineeringObject:
         """
-        EOM parent of this object
+        EOM parent of this object
+
         Get: Parent(self: DownloadConfiguration) -> IEngineeringObject
         """
         ...
@@ -38,16 +42,20 @@ class DownloadConfiguration(IEquatable, IEngineeringObject, IInternalObjectAcces
 
     def GetHashCode(self) -> int:
         """
-        GetHashCode(self: DownloadConfiguration) -> int
-            Returns a hash code for this instance.
+        GetHashCode(self: DownloadConfiguration) -> int
+
+            Returns a hash code for this instance.
+
             Returns: A hash code for this instance, suitable for use in hashing algorithms and data structures like a hash table.
         """
         ...
 
     def ToString(self) -> str:
         """
-        ToString(self: DownloadConfiguration) -> str
-            Returns a System.String that represents the current System.Object.
+        ToString(self: DownloadConfiguration) -> str
+
+            Returns a System.String that represents the current System.Object.
+
             Returns: A System.String that represents the current System.Object.
         """
         ...
@@ -65,8 +73,10 @@ class ActiveTestCanBeAborted(DownloadSelectionConfiguration): # skipped bases: <
     @property
     def CurrentSelection(self) -> ActiveTestCanBeAbortedSelections:
         """
-        Current selection for this configuration.
-        Get: CurrentSelection(self: ActiveTestCanBeAborted) -> ActiveTestCanBeAbortedSelections
+        Current selection for this configuration.
+
+        Get: CurrentSelection(self: ActiveTestCanBeAborted) -> ActiveTestCanBeAbortedSelections
+
         Set: CurrentSelection(self: ActiveTestCanBeAborted) = value
         """
         ...
@@ -75,7 +85,8 @@ class ActiveTestCanBeAborted(DownloadSelectionConfiguration): # skipped bases: <
 
 class ActiveTestCanBeAbortedSelections(Enum): # skipped bases: <type 'IConvertible'>, <type 'IComparable'>, <type 'IFormattable'>, <type 'object'>
     """
-    Available selections for ActiveTestCanBeAborted configuration
+    Available selections for ActiveTestCanBeAborted configuration
+
     enum ActiveTestCanBeAbortedSelections, values: AcceptAll (1), NoAction (0)
     """
     AcceptAll: ActiveTestCanBeAbortedSelections = ...
@@ -88,8 +99,10 @@ class ActiveTestCanPreventDownload(DownloadSelectionConfiguration): # skipped ba
     @property
     def CurrentSelection(self) -> ActiveTestCanPreventDownloadSelections:
         """
-        Current selection for this configuration.
-        Get: CurrentSelection(self: ActiveTestCanPreventDownload) -> ActiveTestCanPreventDownloadSelections
+        Current selection for this configuration.
+
+        Get: CurrentSelection(self: ActiveTestCanPreventDownload) -> ActiveTestCanPreventDownloadSelections
+
         Set: CurrentSelection(self: ActiveTestCanPreventDownload) = value
         """
         ...
@@ -98,7 +111,8 @@ class ActiveTestCanPreventDownload(DownloadSelectionConfiguration): # skipped ba
 
 class ActiveTestCanPreventDownloadSelections(Enum): # skipped bases: <type 'IConvertible'>, <type 'IComparable'>, <type 'IFormattable'>, <type 'object'>
     """
-    Available selections for ActiveTestCanPreventDownload configuration
+    Available selections for ActiveTestCanPreventDownload configuration
+
     enum ActiveTestCanPreventDownloadSelections, values: AcceptAll (1), NoAction (0)
     """
     AcceptAll: ActiveTestCanPreventDownloadSelections = ...
@@ -111,8 +125,10 @@ class AlarmTextLibrariesDownload(DownloadSelectionConfiguration): # skipped base
     @property
     def CurrentSelection(self) -> AlarmTextLibrariesDownloadSelections:
         """
-        Current selection for this configuration.
-        Get: CurrentSelection(self: AlarmTextLibrariesDownload) -> AlarmTextLibrariesDownloadSelections
+        Current selection for this configuration.
+
+        Get: CurrentSelection(self: AlarmTextLibrariesDownload) -> AlarmTextLibrariesDownloadSelections
+
         Set: CurrentSelection(self: AlarmTextLibrariesDownload) = value
         """
         ...
@@ -121,7 +137,8 @@ class AlarmTextLibrariesDownload(DownloadSelectionConfiguration): # skipped base
 
 class AlarmTextLibrariesDownloadSelections(Enum): # skipped bases: <type 'IConvertible'>, <type 'IComparable'>, <type 'IFormattable'>, <type 'object'>
     """
-    Available selections for AlarmTextLibrariesDownload configuration
+    Available selections for AlarmTextLibrariesDownload configuration
+
     enum AlarmTextLibrariesDownloadSelections, values: ConsistentDownload (0), NoAction (1)
     """
     ConsistentDownload: AlarmTextLibrariesDownloadSelections = ...
@@ -134,8 +151,10 @@ class AllBlocksDownload(DownloadSelectionConfiguration): # skipped bases: <type 
     @property
     def CurrentSelection(self) -> AllBlocksDownloadSelections:
         """
-        Current selection for this configuration.
-        Get: CurrentSelection(self: AllBlocksDownload) -> AllBlocksDownloadSelections
+        Current selection for this configuration.
+
+        Get: CurrentSelection(self: AllBlocksDownload) -> AllBlocksDownloadSelections
+
         Set: CurrentSelection(self: AllBlocksDownload) = value
         """
         ...
@@ -144,7 +163,8 @@ class AllBlocksDownload(DownloadSelectionConfiguration): # skipped bases: <type 
 
 class AllBlocksDownloadSelections(Enum): # skipped bases: <type 'IConvertible'>, <type 'IComparable'>, <type 'IFormattable'>, <type 'object'>
     """
-    Available selections for AllBlocksDownload configuration
+    Available selections for AllBlocksDownload configuration
+
     enum AllBlocksDownloadSelections, values: DownloadAllBlocks (0)
     """
     DownloadAllBlocks: AllBlocksDownloadSelections = ...
@@ -153,10 +173,12 @@ class AllBlocksDownloadSelections(Enum): # skipped bases: <type 'IConvertible'>,
 
 class DownloadPasswordConfiguration(DownloadConfiguration): # skipped bases: <type 'IInternalInstanceAccess'>, <type 'IEngineeringInstance'>, <type 'IEngineeringObject'>, <type 'IInternalObjectAccess'>, <type 'IEquatable[object]'>, <type 'IInternalBaseAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'object'>
     """ Download password configuration. """
-    def SetPassword(self, password:SecureString): # -> 
+    def SetPassword(self, password:SecureString): # ->
         """
-        SetPassword(self: DownloadPasswordConfiguration, password: SecureString)
-            Sets password
+        SetPassword(self: DownloadPasswordConfiguration, password: SecureString)
+
+            Sets password
+
             password: Required password.
         """
         ...
@@ -171,8 +193,10 @@ class DownloadCheckConfiguration(DownloadConfiguration): # skipped bases: <type 
     @property
     def Checked(self) -> bool:
         """
-        Specifies if this configuration checked.
-        Get: Checked(self: DownloadCheckConfiguration) -> bool
+        Specifies if this configuration checked.
+
+        Get: Checked(self: DownloadCheckConfiguration) -> bool
+
         Set: Checked(self: DownloadCheckConfiguration) = value
         """
         ...
@@ -188,8 +212,10 @@ class ConsistentBlocksDownload(DownloadSelectionConfiguration): # skipped bases:
     @property
     def CurrentSelection(self) -> ConsistentBlocksDownloadSelections:
         """
-        Current selection for this configuration.
-        Get: CurrentSelection(self: ConsistentBlocksDownload) -> ConsistentBlocksDownloadSelections
+        Current selection for this configuration.
+
+        Get: CurrentSelection(self: ConsistentBlocksDownload) -> ConsistentBlocksDownloadSelections
+
         Set: CurrentSelection(self: ConsistentBlocksDownload) = value
         """
         ...
@@ -198,7 +224,8 @@ class ConsistentBlocksDownload(DownloadSelectionConfiguration): # skipped bases:
 
 class ConsistentBlocksDownloadSelections(Enum): # skipped bases: <type 'IConvertible'>, <type 'IComparable'>, <type 'IFormattable'>, <type 'object'>
     """
-    Available selections for ConsistentBlocksDownload configuration
+    Available selections for ConsistentBlocksDownload configuration
+
     enum ConsistentBlocksDownloadSelections, values: ConsistentDownload (0)
     """
     ConsistentDownload: ConsistentBlocksDownloadSelections = ...
@@ -210,8 +237,10 @@ class DifferentTargetConfiguration(DownloadSelectionConfiguration): # skipped ba
     @property
     def CurrentSelection(self) -> DifferentTargetConfigurationSelections:
         """
-        Current selection for this configuration.
-        Get: CurrentSelection(self: DifferentTargetConfiguration) -> DifferentTargetConfigurationSelections
+        Current selection for this configuration.
+
+        Get: CurrentSelection(self: DifferentTargetConfiguration) -> DifferentTargetConfigurationSelections
+
         Set: CurrentSelection(self: DifferentTargetConfiguration) = value
         """
         ...
@@ -220,7 +249,8 @@ class DifferentTargetConfiguration(DownloadSelectionConfiguration): # skipped ba
 
 class DifferentTargetConfigurationSelections(Enum): # skipped bases: <type 'IConvertible'>, <type 'IComparable'>, <type 'IFormattable'>, <type 'object'>
     """
-    Available selections for DifferentTargetConfiguration configuration
+    Available selections for DifferentTargetConfiguration configuration
+
     enum DifferentTargetConfigurationSelections, values: AcceptAll (1), NoAction (0)
     """
     AcceptAll: DifferentTargetConfigurationSelections = ...
@@ -237,8 +267,10 @@ class ExpandDownload(DownloadSelectionConfiguration): # skipped bases: <type 'II
     @property
     def CurrentSelection(self) -> ExpandDownloadSelections:
         """
-        Current selection for this configuration.
-        Get: CurrentSelection(self: ExpandDownload) -> ExpandDownloadSelections
+        Current selection for this configuration.
+
+        Get: CurrentSelection(self: ExpandDownload) -> ExpandDownloadSelections
+
         Set: CurrentSelection(self: ExpandDownload) = value
         """
         ...
@@ -247,7 +279,8 @@ class ExpandDownload(DownloadSelectionConfiguration): # skipped bases: <type 'II
 
 class ExpandDownloadSelections(Enum): # skipped bases: <type 'IConvertible'>, <type 'IComparable'>, <type 'IFormattable'>, <type 'object'>
     """
-    Available selections for ExpandDownload configuration
+    Available selections for ExpandDownload configuration
+
     enum ExpandDownloadSelections, values: Download (1), NoAction (0)
     """
     Download: ExpandDownloadSelections = ...
@@ -264,8 +297,10 @@ class InitializeMemory(DownloadSelectionConfiguration): # skipped bases: <type '
     @property
     def CurrentSelection(self) -> InitializeMemorySelections:
         """
-        Current selection for this configuration.
-        Get: CurrentSelection(self: InitializeMemory) -> InitializeMemorySelections
+        Current selection for this configuration.
+
+        Get: CurrentSelection(self: InitializeMemory) -> InitializeMemorySelections
+
         Set: CurrentSelection(self: InitializeMemory) = value
         """
         ...
@@ -274,7 +309,8 @@ class InitializeMemory(DownloadSelectionConfiguration): # skipped bases: <type '
 
 class InitializeMemorySelections(Enum): # skipped bases: <type 'IConvertible'>, <type 'IComparable'>, <type 'IFormattable'>, <type 'object'>
     """
-    Available selections for InitializeMemory configuration
+    Available selections for InitializeMemory configuration
+
     enum InitializeMemorySelections, values: AcceptAll (1), NoAction (0)
     """
     AcceptAll: InitializeMemorySelections = ...
@@ -287,8 +323,10 @@ class LoadIdentificationData(DownloadSelectionConfiguration): # skipped bases: <
     @property
     def CurrentSelection(self) -> LoadIdentificationDataSelections:
         """
-        Current selection for this configuration.
-        Get: CurrentSelection(self: LoadIdentificationData) -> LoadIdentificationDataSelections
+        Current selection for this configuration.
+
+        Get: CurrentSelection(self: LoadIdentificationData) -> LoadIdentificationDataSelections
+
         Set: CurrentSelection(self: LoadIdentificationData) = value
         """
         ...
@@ -297,7 +335,8 @@ class LoadIdentificationData(DownloadSelectionConfiguration): # skipped bases: <
 
 class LoadIdentificationDataSelections(Enum): # skipped bases: <type 'IConvertible'>, <type 'IComparable'>, <type 'IFormattable'>, <type 'object'>
     """
-    Available selections for LoadIdentificationData configuration
+    Available selections for LoadIdentificationData configuration
+
     enum LoadIdentificationDataSelections, values: LoadData (1), LoadNothing (0)
     """
     LoadData: LoadIdentificationDataSelections = ...
@@ -322,8 +361,10 @@ class OverwriteSystemData(DownloadSelectionConfiguration): # skipped bases: <typ
     @property
     def CurrentSelection(self) -> OverwriteSystemDataSelections:
         """
-        Current selection for this configuration.
-        Get: CurrentSelection(self: OverwriteSystemData) -> OverwriteSystemDataSelections
+        Current selection for this configuration.
+
+        Get: CurrentSelection(self: OverwriteSystemData) -> OverwriteSystemDataSelections
+
         Set: CurrentSelection(self: OverwriteSystemData) = value
         """
         ...
@@ -332,7 +373,8 @@ class OverwriteSystemData(DownloadSelectionConfiguration): # skipped bases: <typ
 
 class OverwriteSystemDataSelections(Enum): # skipped bases: <type 'IConvertible'>, <type 'IComparable'>, <type 'IFormattable'>, <type 'object'>
     """
-    Available selections for OverwriteSystemData configuration
+    Available selections for OverwriteSystemData configuration
+
     enum OverwriteSystemDataSelections, values: NoAction (0), Overwrite (1)
     """
     NoAction: OverwriteSystemDataSelections = ...
@@ -349,8 +391,10 @@ class ProtectionLevelChanged(DownloadSelectionConfiguration): # skipped bases: <
     @property
     def CurrentSelection(self) -> ProtectionLevelChangedSelections:
         """
-        Current selection for this configuration.
-        Get: CurrentSelection(self: ProtectionLevelChanged) -> ProtectionLevelChangedSelections
+        Current selection for this configuration.
+
+        Get: CurrentSelection(self: ProtectionLevelChanged) -> ProtectionLevelChangedSelections
+
         Set: CurrentSelection(self: ProtectionLevelChanged) = value
         """
         ...
@@ -359,7 +403,8 @@ class ProtectionLevelChanged(DownloadSelectionConfiguration): # skipped bases: <
 
 class ProtectionLevelChangedSelections(Enum): # skipped bases: <type 'IConvertible'>, <type 'IComparable'>, <type 'IFormattable'>, <type 'object'>
     """
-    Available selections for ProtectionLevelChanged configuration
+    Available selections for ProtectionLevelChanged configuration
+
     enum ProtectionLevelChangedSelections, values: ContinueDownloading (1), NoChange (0)
     """
     ContinueDownloading: ProtectionLevelChangedSelections = ...
@@ -372,8 +417,10 @@ class ResetModule(DownloadSelectionConfiguration): # skipped bases: <type 'IInte
     @property
     def CurrentSelection(self) -> ResetModuleSelections:
         """
-        Current selection for this configuration.
-        Get: CurrentSelection(self: ResetModule) -> ResetModuleSelections
+        Current selection for this configuration.
+
+        Get: CurrentSelection(self: ResetModule) -> ResetModuleSelections
+
         Set: CurrentSelection(self: ResetModule) = value
         """
         ...
@@ -382,7 +429,8 @@ class ResetModule(DownloadSelectionConfiguration): # skipped bases: <type 'IInte
 
 class ResetModuleSelections(Enum): # skipped bases: <type 'IConvertible'>, <type 'IComparable'>, <type 'IFormattable'>, <type 'object'>
     """
-    Available selections for ResetModule configuration
+    Available selections for ResetModule configuration
+
     enum ResetModuleSelections, values: DeleteAll (1), NoAction (0)
     """
     DeleteAll: ResetModuleSelections = ...
@@ -395,8 +443,10 @@ class StartBackupModules(DownloadSelectionConfiguration): # skipped bases: <type
     @property
     def CurrentSelection(self) -> StartBackupModulesSelections:
         """
-        Current selection for this configuration.
-        Get: CurrentSelection(self: StartBackupModules) -> StartBackupModulesSelections
+        Current selection for this configuration.
+
+        Get: CurrentSelection(self: StartBackupModules) -> StartBackupModulesSelections
+
         Set: CurrentSelection(self: StartBackupModules) = value
         """
         ...
@@ -405,7 +455,8 @@ class StartBackupModules(DownloadSelectionConfiguration): # skipped bases: <type
 
 class StartBackupModulesSelections(Enum): # skipped bases: <type 'IConvertible'>, <type 'IComparable'>, <type 'IFormattable'>, <type 'object'>
     """
-    Available selections for StartBackupModules configuration
+    Available selections for StartBackupModules configuration
+
     enum StartBackupModulesSelections, values: NoAction (0), StartModule (2), SwitchToPrimaryCpu (1)
     """
     NoAction: StartBackupModulesSelections = ...
@@ -419,8 +470,10 @@ class StartModules(DownloadSelectionConfiguration): # skipped bases: <type 'IInt
     @property
     def CurrentSelection(self) -> StartModulesSelections:
         """
-        Current selection for this configuration.
-        Get: CurrentSelection(self: StartModules) -> StartModulesSelections
+        Current selection for this configuration.
+
+        Get: CurrentSelection(self: StartModules) -> StartModulesSelections
+
         Set: CurrentSelection(self: StartModules) = value
         """
         ...
@@ -429,7 +482,8 @@ class StartModules(DownloadSelectionConfiguration): # skipped bases: <type 'IInt
 
 class StartModulesSelections(Enum): # skipped bases: <type 'IConvertible'>, <type 'IComparable'>, <type 'IFormattable'>, <type 'object'>
     """
-    Available selections for StartModules configuration
+    Available selections for StartModules configuration
+
     enum StartModulesSelections, values: NoAction (0), StartModule (1)
     """
     NoAction: StartModulesSelections = ...
@@ -442,8 +496,10 @@ class StopHSystem(DownloadSelectionConfiguration): # skipped bases: <type 'IInte
     @property
     def CurrentSelection(self) -> StopHSystemSelections:
         """
-        Current selection for this configuration.
-        Get: CurrentSelection(self: StopHSystem) -> StopHSystemSelections
+        Current selection for this configuration.
+
+        Get: CurrentSelection(self: StopHSystem) -> StopHSystemSelections
+
         Set: CurrentSelection(self: StopHSystem) = value
         """
         ...
@@ -455,8 +511,10 @@ class StopHSystemOrModule(DownloadSelectionConfiguration): # skipped bases: <typ
     @property
     def CurrentSelection(self) -> StopHSystemOrModuleSelections:
         """
-        Current selection for this configuration.
-        Get: CurrentSelection(self: StopHSystemOrModule) -> StopHSystemOrModuleSelections
+        Current selection for this configuration.
+
+        Get: CurrentSelection(self: StopHSystemOrModule) -> StopHSystemOrModuleSelections
+
         Set: CurrentSelection(self: StopHSystemOrModule) = value
         """
         ...
@@ -465,7 +523,8 @@ class StopHSystemOrModule(DownloadSelectionConfiguration): # skipped bases: <typ
 
 class StopHSystemOrModuleSelections(Enum): # skipped bases: <type 'IConvertible'>, <type 'IComparable'>, <type 'IFormattable'>, <type 'object'>
     """
-    Available selections for StopHSystemOrModule configuration
+    Available selections for StopHSystemOrModule configuration
+
     enum StopHSystemOrModuleSelections, values: NoAction (0), StopHSystem (1), StopModule (2)
     """
     NoAction: StopHSystemOrModuleSelections = ...
@@ -476,7 +535,8 @@ class StopHSystemOrModuleSelections(Enum): # skipped bases: <type 'IConvertible'
 
 class StopHSystemSelections(Enum): # skipped bases: <type 'IConvertible'>, <type 'IComparable'>, <type 'IFormattable'>, <type 'object'>
     """
-    Available selections for StopHSystem configuration
+    Available selections for StopHSystem configuration
+
     enum StopHSystemSelections, values: NoAction (0), StopHSystem (1)
     """
     NoAction: StopHSystemSelections = ...
@@ -489,8 +549,10 @@ class StopModules(DownloadSelectionConfiguration): # skipped bases: <type 'IInte
     @property
     def CurrentSelection(self) -> StopModulesSelections:
         """
-        Current selection for this configuration.
-        Get: CurrentSelection(self: StopModules) -> StopModulesSelections
+        Current selection for this configuration.
+
+        Get: CurrentSelection(self: StopModules) -> StopModulesSelections
+
         Set: CurrentSelection(self: StopModules) = value
         """
         ...
@@ -499,7 +561,8 @@ class StopModules(DownloadSelectionConfiguration): # skipped bases: <type 'IInte
 
 class StopModulesSelections(Enum): # skipped bases: <type 'IConvertible'>, <type 'IComparable'>, <type 'IFormattable'>, <type 'object'>
     """
-    Available selections for StopModules configuration
+    Available selections for StopModules configuration
+
     enum StopModulesSelections, values: NoAction (0), StopAll (1)
     """
     NoAction: StopModulesSelections = ...
@@ -512,8 +575,10 @@ class SwitchBackupToPrimary(DownloadSelectionConfiguration): # skipped bases: <t
     @property
     def CurrentSelection(self) -> SwitchBackupToPrimarySelections:
         """
-        Current selection for this configuration.
-        Get: CurrentSelection(self: SwitchBackupToPrimary) -> SwitchBackupToPrimarySelections
+        Current selection for this configuration.
+
+        Get: CurrentSelection(self: SwitchBackupToPrimary) -> SwitchBackupToPrimarySelections
+
         Set: CurrentSelection(self: SwitchBackupToPrimary) = value
         """
         ...
@@ -522,7 +587,8 @@ class SwitchBackupToPrimary(DownloadSelectionConfiguration): # skipped bases: <t
 
 class SwitchBackupToPrimarySelections(Enum): # skipped bases: <type 'IConvertible'>, <type 'IComparable'>, <type 'IFormattable'>, <type 'object'>
     """
-    Available selections for SwitchBackupToPrimary configuration
+    Available selections for SwitchBackupToPrimary configuration
+
     enum SwitchBackupToPrimarySelections, values: NoAction (0), SwitchToPrimaryCpu (1)
     """
     NoAction: SwitchBackupToPrimarySelections = ...
@@ -543,8 +609,10 @@ class WaitOnReboot(DownloadSelectionConfiguration): # skipped bases: <type 'IInt
     @property
     def CurrentSelection(self) -> WaitOnRebootSelections:
         """
-        Current selection for this configuation.
-        Get: CurrentSelection(self: WaitOnReboot) -> WaitOnRebootSelections
+        Current selection for this configuation.
+
+        Get: CurrentSelection(self: WaitOnReboot) -> WaitOnRebootSelections
+
         Set: CurrentSelection(self: WaitOnReboot) = value
         """
         ...
@@ -553,11 +621,10 @@ class WaitOnReboot(DownloadSelectionConfiguration): # skipped bases: <type 'IInt
 
 class WaitOnRebootSelections(Enum): # skipped bases: <type 'IConvertible'>, <type 'IComparable'>, <type 'IFormattable'>, <type 'object'>
     """
-    Available selections for WaitOnReboot configuration.
+    Available selections for WaitOnReboot configuration.
+
     enum WaitOnRebootSelections, values: NoAction (0), Wait (1)
     """
     NoAction: WaitOnRebootSelections = ...
     value__ = ...
     Wait: WaitOnRebootSelections = ...
-
-

@@ -4,8 +4,8 @@
 # by generator 1.145
 """ no doc """
 from __future__ import annotations
-from Siemens.Engineering import (ExportOptions, IEngineeringAssociation, 
-    IEngineeringComposition, IEngineeringObject, IEngineeringService, 
+from Siemens.Engineering import (ExportOptions, IEngineeringAssociation,
+    IEngineeringComposition, IEngineeringObject, IEngineeringService,
     MultilingualText)
 
 from Siemens.Engineering.Library import ILibrary
@@ -19,9 +19,11 @@ from System.Collections import IDictionary, IList
 from System.IO import FileInfo
 
 """The following names are not found in the module: (
-    IInternalAssociationAccess, IInternalCompositionAccess, 
+    IInternalAssociationAccess, IInternalCompositionAccess,
     IInternalObjectAccess, field#)
 """
+
+from Siemens import IInternalAssociationAccess, IInternalCompositionAccess, IInternalObjectAccess
 
 # no functions
 # classes
@@ -47,7 +49,8 @@ class LibraryType(IEquatable, IEngineeringObject, ILibraryTypeOrFolderSelection,
     @property
     def Author(self) -> str:
         """
-        Author of the library type
+        Author of the library type
+
         Get: Author(self: LibraryType) -> str
         """
         ...
@@ -55,7 +58,8 @@ class LibraryType(IEquatable, IEngineeringObject, ILibraryTypeOrFolderSelection,
     @property
     def Comment(self) -> MultilingualText:
         """
-        The library type's comment
+        The library type's comment
+
         Get: Comment(self: LibraryType) -> MultilingualText
         """
         ...
@@ -63,7 +67,8 @@ class LibraryType(IEquatable, IEngineeringObject, ILibraryTypeOrFolderSelection,
     @property
     def Guid(self) -> Guid:
         """
-        Gets the GUID of this library type
+        Gets the GUID of this library type
+
         Get: Guid(self: LibraryType) -> Guid
         """
         ...
@@ -71,8 +76,10 @@ class LibraryType(IEquatable, IEngineeringObject, ILibraryTypeOrFolderSelection,
     @property
     def Name(self) -> str:
         """
-        The name of the library type
-        Get: Name(self: LibraryType) -> str
+        The name of the library type
+
+        Get: Name(self: LibraryType) -> str
+
         Set: Name(self: LibraryType) = value
         """
         ...
@@ -80,7 +87,8 @@ class LibraryType(IEquatable, IEngineeringObject, ILibraryTypeOrFolderSelection,
     @property
     def Parent(self) -> IEngineeringObject:
         """
-        EOM parent of this object
+        EOM parent of this object
+
         Get: Parent(self: LibraryType) -> IEngineeringObject
         """
         ...
@@ -88,47 +96,57 @@ class LibraryType(IEquatable, IEngineeringObject, ILibraryTypeOrFolderSelection,
     @property
     def Versions(self) -> LibraryTypeVersionComposition:
         """
-        Composition of library type versions
+        Composition of library type versions
+
         Get: Versions(self: LibraryType) -> LibraryTypeVersionComposition
         """
         ...
 
 
-    def Delete(self): # -> 
+    def Delete(self): # ->
         """
-        Delete(self: LibraryType)
+        Delete(self: LibraryType)
+
             Deletes this instance.
         """
         ...
 
     def GetHashCode(self) -> int:
         """
-        GetHashCode(self: LibraryType) -> int
-            Returns a hash code for this instance.
+        GetHashCode(self: LibraryType) -> int
+
+            Returns a hash code for this instance.
+
             Returns: A hash code for this instance, suitable for use in hashing algorithms and data structures like a hash table.
         """
         ...
 
     def ToString(self) -> str:
         """
-        ToString(self: LibraryType) -> str
-            Returns a System.String that represents the current System.Object.
+        ToString(self: LibraryType) -> str
+
+            Returns a System.String that represents the current System.Object.
+
             Returns: A System.String that represents the current System.Object.
         """
         ...
 
-    def UpdateLibrary(self, targetLibrary:ILibrary): # -> 
+    def UpdateLibrary(self, targetLibrary:ILibrary): # ->
         """
-        UpdateLibrary(self: LibraryType, targetLibrary: ILibrary)
-            Updates the target library with the latest content from this type
+        UpdateLibrary(self: LibraryType, targetLibrary: ILibrary)
+
+            Updates the target library with the latest content from this type
+
             targetLibrary: Target library to update
         """
         ...
 
-    def UpdateProject(self, updateProjectScope:IUpdateProjectScope): # -> 
+    def UpdateProject(self, updateProjectScope:IUpdateProjectScope): # ->
         """
-        UpdateProject(self: LibraryType, updateProjectScope: IUpdateProjectScope)
-            Updates the project with the latest content from this type
+        UpdateProject(self: LibraryType, updateProjectScope: IUpdateProjectScope)
+
+            Updates the project with the latest content from this type
+
             updateProjectScope: The scope of the project that will be updated.
         """
         ...
@@ -142,7 +160,8 @@ class LibraryTypeComposition(IInternalCompositionAccess, IEngineeringComposition
     @property
     def Parent(self) -> IEngineeringObject:
         """
-        Gets the parent.
+        Gets the parent.
+
         Get: Parent(self: LibraryTypeComposition) -> IEngineeringObject
         """
         ...
@@ -150,25 +169,32 @@ class LibraryTypeComposition(IInternalCompositionAccess, IEngineeringComposition
 
     def Find(self, name:str) -> LibraryType:
         """
-        Find(self: LibraryTypeComposition, name: str) -> LibraryType
-            Finds a given library type
-            name: Name to find
+        Find(self: LibraryTypeComposition, name: str) -> LibraryType
+
+            Finds a given library type
+
+            name: Name to find
+
             Returns: Siemens.Engineering.Library.Types.LibraryType
         """
         ...
 
     def GetHashCode(self) -> int:
         """
-        GetHashCode(self: LibraryTypeComposition) -> int
-            Returns a hash code for this instance.
+        GetHashCode(self: LibraryTypeComposition) -> int
+
+            Returns a hash code for this instance.
+
             Returns: A hash code for this instance, suitable for use in hashing algorithms and data structures like a hash table.
         """
         ...
 
     def ToString(self) -> str:
         """
-        ToString(self: LibraryTypeComposition) -> str
-            Returns a System.String that represents the current System.Object.
+        ToString(self: LibraryTypeComposition) -> str
+
+            Returns a System.String that represents the current System.Object.
+
             Returns: A System.String that represents the current System.Object.
         """
         ...
@@ -186,7 +212,8 @@ class LibraryTypeFolder(IEquatable, IEngineeringObject, ILibraryTypeOrFolderSele
     @property
     def Folders(self) -> LibraryTypeUserFolderComposition:
         """
-        Composition of library type user folders
+        Composition of library type user folders
+
         Get: Folders(self: LibraryTypeFolder) -> LibraryTypeUserFolderComposition
         """
         ...
@@ -194,7 +221,8 @@ class LibraryTypeFolder(IEquatable, IEngineeringObject, ILibraryTypeOrFolderSele
     @property
     def Name(self) -> str:
         """
-        The name of the library type folder
+        The name of the library type folder
+
         Get: Name(self: LibraryTypeFolder) -> str
         """
         ...
@@ -202,7 +230,8 @@ class LibraryTypeFolder(IEquatable, IEngineeringObject, ILibraryTypeOrFolderSele
     @property
     def Parent(self) -> IEngineeringObject:
         """
-        EOM parent of this object
+        EOM parent of this object
+
         Get: Parent(self: LibraryTypeFolder) -> IEngineeringObject
         """
         ...
@@ -210,7 +239,8 @@ class LibraryTypeFolder(IEquatable, IEngineeringObject, ILibraryTypeOrFolderSele
     @property
     def Types(self) -> LibraryTypeComposition:
         """
-        Composition of library types
+        Composition of library types
+
         Get: Types(self: LibraryTypeFolder) -> LibraryTypeComposition
         """
         ...
@@ -218,16 +248,20 @@ class LibraryTypeFolder(IEquatable, IEngineeringObject, ILibraryTypeOrFolderSele
 
     def GetHashCode(self) -> int:
         """
-        GetHashCode(self: LibraryTypeFolder) -> int
-            Returns a hash code for this instance.
+        GetHashCode(self: LibraryTypeFolder) -> int
+
+            Returns a hash code for this instance.
+
             Returns: A hash code for this instance, suitable for use in hashing algorithms and data structures like a hash table.
         """
         ...
 
     def ToString(self) -> str:
         """
-        ToString(self: LibraryTypeFolder) -> str
-            Returns a System.String that represents the current System.Object.
+        ToString(self: LibraryTypeFolder) -> str
+
+            Returns a System.String that represents the current System.Object.
+
             Returns: A System.String that represents the current System.Object.
         """
         ...
@@ -241,7 +275,8 @@ class LibraryTypeInstanceInfo(IEquatable, IEngineeringObject, IEngineeringServic
     @property
     def LibraryTypeInstance(self) -> IEngineeringObject:
         """
-        Library type instance
+        Library type instance
+
         Get: LibraryTypeInstance(self: LibraryTypeInstanceInfo) -> IEngineeringObject
         """
         ...
@@ -249,7 +284,8 @@ class LibraryTypeInstanceInfo(IEquatable, IEngineeringObject, IEngineeringServic
     @property
     def LibraryTypeVersion(self) -> LibraryTypeVersion:
         """
-        Connected version
+        Connected version
+
         Get: LibraryTypeVersion(self: LibraryTypeInstanceInfo) -> LibraryTypeVersion
         """
         ...
@@ -257,7 +293,8 @@ class LibraryTypeInstanceInfo(IEquatable, IEngineeringObject, IEngineeringServic
     @property
     def Parent(self) -> IEngineeringObject:
         """
-        EOM parent of this object
+        EOM parent of this object
+
         Get: Parent(self: LibraryTypeInstanceInfo) -> IEngineeringObject
         """
         ...
@@ -265,16 +302,20 @@ class LibraryTypeInstanceInfo(IEquatable, IEngineeringObject, IEngineeringServic
 
     def GetHashCode(self) -> int:
         """
-        GetHashCode(self: LibraryTypeInstanceInfo) -> int
-            Returns a hash code for this instance.
+        GetHashCode(self: LibraryTypeInstanceInfo) -> int
+
+            Returns a hash code for this instance.
+
             Returns: A hash code for this instance, suitable for use in hashing algorithms and data structures like a hash table.
         """
         ...
 
     def ToString(self) -> str:
         """
-        ToString(self: LibraryTypeInstanceInfo) -> str
-            Returns a System.String that represents the current System.Object.
+        ToString(self: LibraryTypeInstanceInfo) -> str
+
+            Returns a System.String that represents the current System.Object.
+
             Returns: A System.String that represents the current System.Object.
         """
         ...
@@ -289,9 +330,10 @@ class LibraryTypeSystemFolder(LibraryTypeFolder): # skipped bases: <type 'IInter
 
 class LibraryTypeUserFolder(LibraryTypeFolder): # skipped bases: <type 'IInternalInstanceAccess'>, <type 'IEngineeringInstance'>, <type 'IEngineeringObject'>, <type 'ILibraryTypeOrFolderSelection'>, <type 'IInternalObjectAccess'>, <type 'IEquatable[object]'>, <type 'IInternalBaseAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'object'>
     """ User folder containing library types & library type folders """
-    def Delete(self): # -> 
+    def Delete(self): # ->
         """
-        Delete(self: LibraryTypeUserFolder)
+        Delete(self: LibraryTypeUserFolder)
+
             Deletes this instance.
         """
         ...
@@ -302,7 +344,8 @@ class LibraryTypeUserFolderComposition(IInternalCompositionAccess, IEngineeringC
     @property
     def Parent(self) -> IEngineeringObject:
         """
-        Gets the parent.
+        Gets the parent.
+
         Get: Parent(self: LibraryTypeUserFolderComposition) -> IEngineeringObject
         """
         ...
@@ -310,25 +353,32 @@ class LibraryTypeUserFolderComposition(IInternalCompositionAccess, IEngineeringC
 
     def Find(self, name:str) -> LibraryTypeUserFolder:
         """
-        Find(self: LibraryTypeUserFolderComposition, name: str) -> LibraryTypeUserFolder
-            Finds a given library type user folder
-            name: Name to find
+        Find(self: LibraryTypeUserFolderComposition, name: str) -> LibraryTypeUserFolder
+
+            Finds a given library type user folder
+
+            name: Name to find
+
             Returns: Siemens.Engineering.Library.Types.LibraryTypeUserFolder
         """
         ...
 
     def GetHashCode(self) -> int:
         """
-        GetHashCode(self: LibraryTypeUserFolderComposition) -> int
-            Returns a hash code for this instance.
+        GetHashCode(self: LibraryTypeUserFolderComposition) -> int
+
+            Returns a hash code for this instance.
+
             Returns: A hash code for this instance, suitable for use in hashing algorithms and data structures like a hash table.
         """
         ...
 
     def ToString(self) -> str:
         """
-        ToString(self: LibraryTypeUserFolderComposition) -> str
-            Returns a System.String that represents the current System.Object.
+        ToString(self: LibraryTypeUserFolderComposition) -> str
+
+            Returns a System.String that represents the current System.Object.
+
             Returns: A System.String that represents the current System.Object.
         """
         ...
@@ -346,7 +396,8 @@ class LibraryTypeVersion(IEquatable, IEngineeringObject, IInternalObjectAccess):
     @property
     def Author(self) -> str:
         """
-        Author of the library type version
+        Author of the library type version
+
         Get: Author(self: LibraryTypeVersion) -> str
         """
         ...
@@ -354,7 +405,8 @@ class LibraryTypeVersion(IEquatable, IEngineeringObject, IInternalObjectAccess):
     @property
     def Comment(self) -> MultilingualText:
         """
-        The library type version's comment
+        The library type version's comment
+
         Get: Comment(self: LibraryTypeVersion) -> MultilingualText
         """
         ...
@@ -362,7 +414,8 @@ class LibraryTypeVersion(IEquatable, IEngineeringObject, IInternalObjectAccess):
     @property
     def Dependencies(self) -> LibraryTypeVersionAssociation:
         """
-        Returns all versions that this version depends on
+        Returns all versions that this version depends on
+
         Get: Dependencies(self: LibraryTypeVersion) -> LibraryTypeVersionAssociation
         """
         ...
@@ -370,7 +423,8 @@ class LibraryTypeVersion(IEquatable, IEngineeringObject, IInternalObjectAccess):
     @property
     def Dependents(self) -> LibraryTypeVersionAssociation:
         """
-        Returns all versions that depend on this version
+        Returns all versions that depend on this version
+
         Get: Dependents(self: LibraryTypeVersion) -> LibraryTypeVersionAssociation
         """
         ...
@@ -378,7 +432,8 @@ class LibraryTypeVersion(IEquatable, IEngineeringObject, IInternalObjectAccess):
     @property
     def Guid(self) -> Guid:
         """
-        Gets the GUID of this library version
+        Gets the GUID of this library version
+
         Get: Guid(self: LibraryTypeVersion) -> Guid
         """
         ...
@@ -386,7 +441,8 @@ class LibraryTypeVersion(IEquatable, IEngineeringObject, IInternalObjectAccess):
     @property
     def MasterCopiesContainingInstances(self) -> MasterCopyAssociation:
         """
-        Gets the master copies that contain instances of this version
+        Gets the master copies that contain instances of this version
+
         Get: MasterCopiesContainingInstances(self: LibraryTypeVersion) -> MasterCopyAssociation
         """
         ...
@@ -394,7 +450,8 @@ class LibraryTypeVersion(IEquatable, IEngineeringObject, IInternalObjectAccess):
     @property
     def ModifiedDate(self) -> DateTime:
         """
-        Gets the last modified date and time
+        Gets the last modified date and time
+
         Get: ModifiedDate(self: LibraryTypeVersion) -> DateTime
         """
         ...
@@ -402,7 +459,8 @@ class LibraryTypeVersion(IEquatable, IEngineeringObject, IInternalObjectAccess):
     @property
     def Parent(self) -> IEngineeringObject:
         """
-        EOM parent of this object
+        EOM parent of this object
+
         Get: Parent(self: LibraryTypeVersion) -> IEngineeringObject
         """
         ...
@@ -410,7 +468,8 @@ class LibraryTypeVersion(IEquatable, IEngineeringObject, IInternalObjectAccess):
     @property
     def State(self) -> LibraryTypeVersionState:
         """
-        Gets the state of the version
+        Gets the state of the version
+
         Get: State(self: LibraryTypeVersion) -> LibraryTypeVersionState
         """
         ...
@@ -418,7 +477,8 @@ class LibraryTypeVersion(IEquatable, IEngineeringObject, IInternalObjectAccess):
     @property
     def TypeObject(self) -> LibraryType:
         """
-        Gets the connected type object
+        Gets the connected type object
+
         Get: TypeObject(self: LibraryTypeVersion) -> LibraryType
         """
         ...
@@ -426,49 +486,61 @@ class LibraryTypeVersion(IEquatable, IEngineeringObject, IInternalObjectAccess):
     @property
     def VersionNumber(self) -> Version:
         """
-        Gets the library version number. The format is Major.Minor.Build
+        Gets the library version number. The format is Major.Minor.Build
+
         Get: VersionNumber(self: LibraryTypeVersion) -> Version
         """
         ...
 
 
-    def Delete(self): # -> 
+    def Delete(self): # ->
         """
-        Delete(self: LibraryTypeVersion)
+        Delete(self: LibraryTypeVersion)
+
             Deletes this instance.
         """
         ...
 
-    def Export(self, exportFileInfo:FileInfo, exportOptions:ExportOptions): # -> 
+    def Export(self, exportFileInfo:FileInfo, exportOptions:ExportOptions): # ->
         """
-        Export(self: LibraryTypeVersion, exportFileInfo: FileInfo, exportOptions: ExportOptions)
-            Export Version
-            exportFileInfo: exportFileInfo
+        Export(self: LibraryTypeVersion, exportFileInfo: FileInfo, exportOptions: ExportOptions)
+
+            Export Version
+
+            exportFileInfo: exportFileInfo
+
             exportOptions: exportOptions
         """
         ...
 
     def FindInstances(self, searchScope:IInstanceSearchScope) -> IList:
         """
-        FindInstances(self: LibraryTypeVersion, searchScope: IInstanceSearchScope) -> IList[LibraryTypeInstanceInfo]
-            Find all instances in the given scope that are connected to this version.
-            searchScope: Scope within the project to search when performing a 'Find instance in project' operation. This may be a ControllerTarget, HmiTarget, etc.
+        FindInstances(self: LibraryTypeVersion, searchScope: IInstanceSearchScope) -> IList[LibraryTypeInstanceInfo]
+
+            Find all instances in the given scope that are connected to this version.
+
+            searchScope: Scope within the project to search when performing a 'Find instance in project' operation. This may be a ControllerTarget, HmiTarget, etc.
+
             Returns: System.Collections.Generic.IList<Siemens.Engineering.Library.Types.LibraryTypeInstanceInfo>
         """
         ...
 
     def GetHashCode(self) -> int:
         """
-        GetHashCode(self: LibraryTypeVersion) -> int
-            Returns a hash code for this instance.
+        GetHashCode(self: LibraryTypeVersion) -> int
+
+            Returns a hash code for this instance.
+
             Returns: A hash code for this instance, suitable for use in hashing algorithms and data structures like a hash table.
         """
         ...
 
     def ToString(self) -> str:
         """
-        ToString(self: LibraryTypeVersion) -> str
-            Returns a System.String that represents the current System.Object.
+        ToString(self: LibraryTypeVersion) -> str
+
+            Returns a System.String that represents the current System.Object.
+
             Returns: A System.String that represents the current System.Object.
         """
         ...
@@ -482,7 +554,8 @@ class LibraryTypeVersionAssociation(IEquatable, IEngineeringAssociation, IIntern
     @property
     def Parent(self) -> IEngineeringObject:
         """
-        Gets the parent..
+        Gets the parent..
+
         Get: Parent(self: LibraryTypeVersionAssociation) -> IEngineeringObject
         """
         ...
@@ -490,16 +563,20 @@ class LibraryTypeVersionAssociation(IEquatable, IEngineeringAssociation, IIntern
 
     def GetHashCode(self) -> int:
         """
-        GetHashCode(self: LibraryTypeVersionAssociation) -> int
-            Returns a hash code for this instance.
+        GetHashCode(self: LibraryTypeVersionAssociation) -> int
+
+            Returns a hash code for this instance.
+
             Returns: A hash code for this instance, suitable for use in hashing algorithms and data structures like a hash table.
         """
         ...
 
     def ToString(self) -> str:
         """
-        ToString(self: LibraryTypeVersionAssociation) -> str
-            Returns a System.String that represents the current System.Object.
+        ToString(self: LibraryTypeVersionAssociation) -> str
+
+            Returns a System.String that represents the current System.Object.
+
             Returns: A System.String that represents the current System.Object.
         """
         ...
@@ -517,7 +594,8 @@ class LibraryTypeVersionComposition(IInternalCompositionAccess, IEngineeringComp
     @property
     def Parent(self) -> IEngineeringObject:
         """
-        Gets the parent.
+        Gets the parent.
+
         Get: Parent(self: LibraryTypeVersionComposition) -> IEngineeringObject
         """
         ...
@@ -525,25 +603,32 @@ class LibraryTypeVersionComposition(IInternalCompositionAccess, IEngineeringComp
 
     def Find(self, versionNumber:Version) -> LibraryTypeVersion:
         """
-        Find(self: LibraryTypeVersionComposition, versionNumber: Version) -> LibraryTypeVersion
-            Finds a given library type version
-            versionNumber: VersionNumber to find
+        Find(self: LibraryTypeVersionComposition, versionNumber: Version) -> LibraryTypeVersion
+
+            Finds a given library type version
+
+            versionNumber: VersionNumber to find
+
             Returns: Siemens.Engineering.Library.Types.LibraryTypeVersion
         """
         ...
 
     def GetHashCode(self) -> int:
         """
-        GetHashCode(self: LibraryTypeVersionComposition) -> int
-            Returns a hash code for this instance.
+        GetHashCode(self: LibraryTypeVersionComposition) -> int
+
+            Returns a hash code for this instance.
+
             Returns: A hash code for this instance, suitable for use in hashing algorithms and data structures like a hash table.
         """
         ...
 
     def ToString(self) -> str:
         """
-        ToString(self: LibraryTypeVersionComposition) -> str
-            Returns a System.String that represents the current System.Object.
+        ToString(self: LibraryTypeVersionComposition) -> str
+
+            Returns a System.String that represents the current System.Object.
+
             Returns: A System.String that represents the current System.Object.
         """
         ...
@@ -558,7 +643,8 @@ class LibraryTypeVersionComposition(IInternalCompositionAccess, IEngineeringComp
 
 class LibraryTypeVersionState(Enum): # skipped bases: <type 'IConvertible'>, <type 'IComparable'>, <type 'IFormattable'>, <type 'object'>
     """
-    Defines the library version object state
+    Defines the library version object state
+
     enum LibraryTypeVersionState, values: Committed (1), InWork (0)
     """
     Committed: LibraryTypeVersionState = ...
@@ -568,7 +654,8 @@ class LibraryTypeVersionState(Enum): # skipped bases: <type 'IConvertible'>, <ty
 
 class UpdateCheckMode(Enum): # skipped bases: <type 'IConvertible'>, <type 'IComparable'>, <type 'IFormattable'>, <type 'object'>
     """
-    Used to control verbosity of logging output from the update check
+    Used to control verbosity of logging output from the update check
+
     enum UpdateCheckMode, values: ReportOutOfDateAndUpToDate (1), ReportOutOfDateOnly (0)
     """
     ReportOutOfDateAndUpToDate: UpdateCheckMode = ...
@@ -581,7 +668,8 @@ class UpdateCheckResult(IEquatable, IEngineeringObject, IInternalObjectAccess): 
     @property
     def Messages(self) -> UpdateCheckResultMessageComposition:
         """
-        Log messages explaining the details of the update check
+        Log messages explaining the details of the update check
+
         Get: Messages(self: UpdateCheckResult) -> UpdateCheckResultMessageComposition
         """
         ...
@@ -589,7 +677,8 @@ class UpdateCheckResult(IEquatable, IEngineeringObject, IInternalObjectAccess): 
     @property
     def Parent(self) -> IEngineeringObject:
         """
-        EOM parent of this object
+        EOM parent of this object
+
         Get: Parent(self: UpdateCheckResult) -> IEngineeringObject
         """
         ...
@@ -597,16 +686,20 @@ class UpdateCheckResult(IEquatable, IEngineeringObject, IInternalObjectAccess): 
 
     def GetHashCode(self) -> int:
         """
-        GetHashCode(self: UpdateCheckResult) -> int
-            Returns a hash code for this instance.
+        GetHashCode(self: UpdateCheckResult) -> int
+
+            Returns a hash code for this instance.
+
             Returns: A hash code for this instance, suitable for use in hashing algorithms and data structures like a hash table.
         """
         ...
 
     def ToString(self) -> str:
         """
-        ToString(self: UpdateCheckResult) -> str
-            Returns a System.String that represents the current System.Object.
+        ToString(self: UpdateCheckResult) -> str
+
+            Returns a System.String that represents the current System.Object.
+
             Returns: A System.String that represents the current System.Object.
         """
         ...
@@ -620,7 +713,8 @@ class UpdateCheckResultMessage(IEquatable, IEngineeringObject, IInternalObjectAc
     @property
     def Description(self) -> str:
         """
-        Gets the header for this result of the update check
+        Gets the header for this result of the update check
+
         Get: Description(self: UpdateCheckResultMessage) -> str
         """
         ...
@@ -628,7 +722,8 @@ class UpdateCheckResultMessage(IEquatable, IEngineeringObject, IInternalObjectAc
     @property
     def MessageParts(self) -> IDictionary:
         """
-        Gets the log messages specific to each description explaining the details of the update check.
+        Gets the log messages specific to each description explaining the details of the update check.
+
         Get: MessageParts(self: UpdateCheckResultMessage) -> IDictionary[str, str]
         """
         ...
@@ -636,7 +731,8 @@ class UpdateCheckResultMessage(IEquatable, IEngineeringObject, IInternalObjectAc
     @property
     def Messages(self) -> UpdateCheckResultMessageComposition:
         """
-        Log messages explaining the details of the update check
+        Log messages explaining the details of the update check
+
         Get: Messages(self: UpdateCheckResultMessage) -> UpdateCheckResultMessageComposition
         """
         ...
@@ -644,7 +740,8 @@ class UpdateCheckResultMessage(IEquatable, IEngineeringObject, IInternalObjectAc
     @property
     def Parent(self) -> IEngineeringObject:
         """
-        EOM parent of this object
+        EOM parent of this object
+
         Get: Parent(self: UpdateCheckResultMessage) -> IEngineeringObject
         """
         ...
@@ -652,16 +749,20 @@ class UpdateCheckResultMessage(IEquatable, IEngineeringObject, IInternalObjectAc
 
     def GetHashCode(self) -> int:
         """
-        GetHashCode(self: UpdateCheckResultMessage) -> int
-            Returns a hash code for this instance.
+        GetHashCode(self: UpdateCheckResultMessage) -> int
+
+            Returns a hash code for this instance.
+
             Returns: A hash code for this instance, suitable for use in hashing algorithms and data structures like a hash table.
         """
         ...
 
     def ToString(self) -> str:
         """
-        ToString(self: UpdateCheckResultMessage) -> str
-            Returns a System.String that represents the current System.Object.
+        ToString(self: UpdateCheckResultMessage) -> str
+
+            Returns a System.String that represents the current System.Object.
+
             Returns: A System.String that represents the current System.Object.
         """
         ...
@@ -675,7 +776,8 @@ class UpdateCheckResultMessageComposition(IInternalCompositionAccess, IEngineeri
     @property
     def Parent(self) -> IEngineeringObject:
         """
-        Gets the parent.
+        Gets the parent.
+
         Get: Parent(self: UpdateCheckResultMessageComposition) -> IEngineeringObject
         """
         ...
@@ -683,16 +785,20 @@ class UpdateCheckResultMessageComposition(IInternalCompositionAccess, IEngineeri
 
     def GetHashCode(self) -> int:
         """
-        GetHashCode(self: UpdateCheckResultMessageComposition) -> int
-            Returns a hash code for this instance.
+        GetHashCode(self: UpdateCheckResultMessageComposition) -> int
+
+            Returns a hash code for this instance.
+
             Returns: A hash code for this instance, suitable for use in hashing algorithms and data structures like a hash table.
         """
         ...
 
     def ToString(self) -> str:
         """
-        ToString(self: UpdateCheckResultMessageComposition) -> str
-            Returns a System.String that represents the current System.Object.
+        ToString(self: UpdateCheckResultMessageComposition) -> str
+
+            Returns a System.String that represents the current System.Object.
+
             Returns: A System.String that represents the current System.Object.
         """
         ...
@@ -703,5 +809,3 @@ class UpdateCheckResultMessageComposition(IInternalCompositionAccess, IEngineeri
 
     def __ne__(self, *args): #cannot find CLR method
         ...
-
-

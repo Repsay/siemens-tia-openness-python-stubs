@@ -4,13 +4,13 @@
 # by generator 1.145
 """ no doc """
 from __future__ import annotations
-from Siemens.Engineering import (IEngineeringAssociation, IEngineeringObject, 
+from Siemens.Engineering import (IEngineeringAssociation, IEngineeringObject,
     IEngineeringService)
 
-from Siemens.Engineering.HW import (AddressAssociation, Device, DeviceItem, 
-    HardwareResource, HwIdentifierAssociation, InterfaceOperatingModes, 
-    IoConnectorComposition, IoControllerComposition, NetType, NodeComposition, 
-    PcInterfaceAssignmentMode, PlcProtectionAccessLevel, Software, 
+from Siemens.Engineering.HW import (AddressAssociation, Device, DeviceItem,
+    HardwareResource, HwIdentifierAssociation, InterfaceOperatingModes,
+    IoConnectorComposition, IoControllerComposition, NetType, NodeComposition,
+    PcInterfaceAssignmentMode, PlcProtectionAccessLevel, Software,
     SubnetComposition, TransferAreaComposition)
 
 from System import Array, IEquatable
@@ -25,6 +25,8 @@ from System.Security import SecureString
     IInternalAssociationAccess, IInternalObjectAccess)
 """
 
+from Siemens import IInternalAssociationAccess, IInternalObjectAccess
+
 # no functions
 # classes
 
@@ -33,7 +35,8 @@ class HardwareFeature(IEquatable, IEngineeringObject, IInternalObjectAccess): # 
     @property
     def Parent(self) -> IEngineeringObject:
         """
-        EOM parent of this object
+        EOM parent of this object
+
         Get: Parent(self: HardwareFeature) -> IEngineeringObject
         """
         ...
@@ -41,16 +44,20 @@ class HardwareFeature(IEquatable, IEngineeringObject, IInternalObjectAccess): # 
 
     def GetHashCode(self) -> int:
         """
-        GetHashCode(self: HardwareFeature) -> int
-            Returns a hash code for this instance.
+        GetHashCode(self: HardwareFeature) -> int
+
+            Returns a hash code for this instance.
+
             Returns: A hash code for this instance, suitable for use in hashing algorithms and data structures like a hash table.
         """
         ...
 
     def ToString(self) -> str:
         """
-        ToString(self: HardwareFeature) -> str
-            Returns a System.String that represents the current System.Object.
+        ToString(self: HardwareFeature) -> str
+
+            Returns a System.String that represents the current System.Object.
+
             Returns: A System.String that represents the current System.Object.
         """
         ...
@@ -64,7 +71,8 @@ class DeviceItemFeature(HardwareFeature): # skipped bases: <type 'IInternalInsta
     @property
     def OwnedBy(self) -> DeviceItem:
         """
-        DeviceItem Object that owns this role
+        DeviceItem Object that owns this role
+
         Get: OwnedBy(self: DeviceItemFeature) -> DeviceItem
         """
         ...
@@ -76,7 +84,8 @@ class AddressController(IEngineeringService, DeviceItemFeature): # skipped bases
     @property
     def RegisteredAddresses(self) -> AddressAssociation:
         """
-        Associated registered address
+        Associated registered address
+
         Get: RegisteredAddresses(self: AddressController) -> AddressAssociation
         """
         ...
@@ -88,7 +97,8 @@ class AddressControllerAssociation(IEquatable, IEngineeringAssociation, IInterna
     @property
     def Parent(self) -> IEngineeringObject:
         """
-        Gets the parent..
+        Gets the parent..
+
         Get: Parent(self: AddressControllerAssociation) -> IEngineeringObject
         """
         ...
@@ -96,16 +106,20 @@ class AddressControllerAssociation(IEquatable, IEngineeringAssociation, IInterna
 
     def GetHashCode(self) -> int:
         """
-        GetHashCode(self: AddressControllerAssociation) -> int
-            Returns a hash code for this instance.
+        GetHashCode(self: AddressControllerAssociation) -> int
+
+            Returns a hash code for this instance.
+
             Returns: A hash code for this instance, suitable for use in hashing algorithms and data structures like a hash table.
         """
         ...
 
     def ToString(self) -> str:
         """
-        ToString(self: AddressControllerAssociation) -> str
-            Returns a System.String that represents the current System.Object.
+        ToString(self: AddressControllerAssociation) -> str
+
+            Returns a System.String that represents the current System.Object.
+
             Returns: A System.String that represents the current System.Object.
         """
         ...
@@ -123,7 +137,8 @@ class DeviceFeature(HardwareFeature): # skipped bases: <type 'IInternalInstanceA
     @property
     def OwnedBy(self) -> Device:
         """
-        Device Object that owns this role
+        Device Object that owns this role
+
         Get: OwnedBy(self: DeviceFeature) -> Device
         """
         ...
@@ -135,8 +150,10 @@ class FrontPanelDisplay(IEngineeringService, DeviceItemFeature): # skipped bases
     @property
     def AdaptLogoActivated(self) -> bool:
         """
-        Adapt the logo to the display
-        Get: AdaptLogoActivated(self: FrontPanelDisplay) -> bool
+        Adapt the logo to the display
+
+        Get: AdaptLogoActivated(self: FrontPanelDisplay) -> bool
+
         Set: AdaptLogoActivated(self: FrontPanelDisplay) = value
         """
         ...
@@ -144,17 +161,21 @@ class FrontPanelDisplay(IEngineeringService, DeviceItemFeature): # skipped bases
     @property
     def UserDefinedLogoActivated(self) -> bool:
         """
-        Activate or deactivate the User Defined Logo
-        Get: UserDefinedLogoActivated(self: FrontPanelDisplay) -> bool
+        Activate or deactivate the User Defined Logo
+
+        Get: UserDefinedLogoActivated(self: FrontPanelDisplay) -> bool
+
         Set: UserDefinedLogoActivated(self: FrontPanelDisplay) = value
         """
         ...
 
 
-    def SetUserDefinedLogo(self, logoImagePath:FileInfo): # -> 
+    def SetUserDefinedLogo(self, logoImagePath:FileInfo): # ->
         """
-        SetUserDefinedLogo(self: FrontPanelDisplay, logoImagePath: FileInfo)
-            Sets the Logo on the Display
+        SetUserDefinedLogo(self: FrontPanelDisplay, logoImagePath: FileInfo)
+
+            Sets the Logo on the Display
+
             logoImagePath: Specifies the file info of the logo
         """
         ...
@@ -165,7 +186,8 @@ class IGsdObject: # skipped bases: <type 'object'>
     @property
     def GsdId(self) -> str:
         """
-        The Gsd ID of the Gsd object
+        The Gsd ID of the Gsd object
+
         Get: GsdId(self: IGsdObject) -> str
         """
         ...
@@ -173,7 +195,8 @@ class IGsdObject: # skipped bases: <type 'object'>
     @property
     def GsdName(self) -> str:
         """
-        The Gsd Name of the Gsd object
+        The Gsd Name of the Gsd object
+
         Get: GsdName(self: IGsdObject) -> str
         """
         ...
@@ -181,7 +204,8 @@ class IGsdObject: # skipped bases: <type 'object'>
     @property
     def GsdType(self) -> str:
         """
-        The Gsd Type of the Gsd object
+        The Gsd Type of the Gsd object
+
         Get: GsdType(self: IGsdObject) -> str
         """
         ...
@@ -189,7 +213,8 @@ class IGsdObject: # skipped bases: <type 'object'>
     @property
     def IsProfibus(self) -> bool:
         """
-        Indicates if this Gsd device item supports Profibus
+        Indicates if this Gsd device item supports Profibus
+
         Get: IsProfibus(self: IGsdObject) -> bool
         """
         ...
@@ -197,7 +222,8 @@ class IGsdObject: # skipped bases: <type 'object'>
     @property
     def IsProfinet(self) -> bool:
         """
-        Indicates if this Gsd object supports Profinet
+        Indicates if this Gsd object supports Profinet
+
         Get: IsProfinet(self: IGsdObject) -> bool
         """
         ...
@@ -212,16 +238,21 @@ class GsdDeviceItem(IEngineeringService, IGsdObject, DeviceItemFeature): # skipp
     """ Represents a Gsd device item """
     def GetPrmData(self, dsNumber:int, byteOffset:int, length:int) -> Array:
         """
-        GetPrmData(self: GsdDeviceItem, dsNumber: int, byteOffset: int, length: int) -> Array[Byte]
-            Returns the Prm Data for this Gsd device item
-            dsNumber: Specifies which dsNumber to set the Prm Data to this Gsd device item
-            byteOffset: The byte offset
-            length: Specifies which length to get the Prm Data from this Gsd device item
+        GetPrmData(self: GsdDeviceItem, dsNumber: int, byteOffset: int, length: int) -> Array[Byte]
+
+            Returns the Prm Data for this Gsd device item
+
+            dsNumber: Specifies which dsNumber to set the Prm Data to this Gsd device item
+
+            byteOffset: The byte offset
+
+            length: Specifies which length to get the Prm Data from this Gsd device item
+
             Returns: System.Byte[]
         """
         ...
 
-    def SetPrmData(self, dsNumber:int, byteOffset:int, prmData:IEnumerable): # -> 
+    def SetPrmData(self, dsNumber:int, byteOffset:int, prmData:IEnumerable): # ->
         """ SetPrmData(self: GsdDeviceItem, dsNumber: int, byteOffset: int, prmData: IEnumerable[Byte]) """
         ...
 
@@ -231,7 +262,8 @@ class HwIdentifierController(IEngineeringService, DeviceItemFeature): # skipped 
     @property
     def RegisteredHwIdentifiers(self) -> HwIdentifierAssociation:
         """
-        Associated registered HW identifiers
+        Associated registered HW identifiers
+
         Get: RegisteredHwIdentifiers(self: HwIdentifierController) -> HwIdentifierAssociation
         """
         ...
@@ -243,7 +275,8 @@ class HwIdentifierControllerAssociation(IEquatable, IEngineeringAssociation, IIn
     @property
     def Parent(self) -> IEngineeringObject:
         """
-        Gets the parent..
+        Gets the parent..
+
         Get: Parent(self: HwIdentifierControllerAssociation) -> IEngineeringObject
         """
         ...
@@ -251,16 +284,20 @@ class HwIdentifierControllerAssociation(IEquatable, IEngineeringAssociation, IIn
 
     def GetHashCode(self) -> int:
         """
-        GetHashCode(self: HwIdentifierControllerAssociation) -> int
-            Returns a hash code for this instance.
+        GetHashCode(self: HwIdentifierControllerAssociation) -> int
+
+            Returns a hash code for this instance.
+
             Returns: A hash code for this instance, suitable for use in hashing algorithms and data structures like a hash table.
         """
         ...
 
     def ToString(self) -> str:
         """
-        ToString(self: HwIdentifierControllerAssociation) -> str
-            Returns a System.String that represents the current System.Object.
+        ToString(self: HwIdentifierControllerAssociation) -> str
+
+            Returns a System.String that represents the current System.Object.
+
             Returns: A System.String that represents the current System.Object.
         """
         ...
@@ -278,8 +315,10 @@ class NetworkInterface(IEngineeringService, DeviceItemFeature): # skipped bases:
     @property
     def InterfaceOperatingMode(self) -> InterfaceOperatingModes:
         """
-        The operating mode of this interface
-        Get: InterfaceOperatingMode(self: NetworkInterface) -> InterfaceOperatingModes
+        The operating mode of this interface
+
+        Get: InterfaceOperatingMode(self: NetworkInterface) -> InterfaceOperatingModes
+
         Set: InterfaceOperatingMode(self: NetworkInterface) = value
         """
         ...
@@ -287,8 +326,10 @@ class NetworkInterface(IEngineeringService, DeviceItemFeature): # skipped bases:
     @property
     def InterfaceType(self) -> NetType:
         """
-        The type of this interface
-        Get: InterfaceType(self: NetworkInterface) -> NetType
+        The type of this interface
+
+        Get: InterfaceType(self: NetworkInterface) -> NetType
+
         Set: InterfaceType(self: NetworkInterface) = value
         """
         ...
@@ -296,7 +337,8 @@ class NetworkInterface(IEngineeringService, DeviceItemFeature): # skipped bases:
     @property
     def IoConnectors(self) -> IoConnectorComposition:
         """
-        Composition of IO connectors
+        Composition of IO connectors
+
         Get: IoConnectors(self: NetworkInterface) -> IoConnectorComposition
         """
         ...
@@ -304,7 +346,8 @@ class NetworkInterface(IEngineeringService, DeviceItemFeature): # skipped bases:
     @property
     def IoControllers(self) -> IoControllerComposition:
         """
-        Composition of IO controllers
+        Composition of IO controllers
+
         Get: IoControllers(self: NetworkInterface) -> IoControllerComposition
         """
         ...
@@ -312,7 +355,8 @@ class NetworkInterface(IEngineeringService, DeviceItemFeature): # skipped bases:
     @property
     def Nodes(self) -> NodeComposition:
         """
-        Composition of nodes
+        Composition of nodes
+
         Get: Nodes(self: NetworkInterface) -> NodeComposition
         """
         ...
@@ -320,7 +364,8 @@ class NetworkInterface(IEngineeringService, DeviceItemFeature): # skipped bases:
     @property
     def Ports(self) -> NetworkPortAssociation:
         """
-        Associated ports
+        Associated ports
+
         Get: Ports(self: NetworkInterface) -> NetworkPortAssociation
         """
         ...
@@ -328,7 +373,8 @@ class NetworkInterface(IEngineeringService, DeviceItemFeature): # skipped bases:
     @property
     def TransferAreas(self) -> TransferAreaComposition:
         """
-        Composition of transfer areas
+        Composition of transfer areas
+
         Get: TransferAreas(self: NetworkInterface) -> TransferAreaComposition
         """
         ...
@@ -340,7 +386,8 @@ class NetworkPort(IEngineeringService, DeviceItemFeature): # skipped bases: <typ
     @property
     def ConnectedPorts(self) -> NetworkPortAssociation:
         """
-        Internal use only
+        Internal use only
+
         Get: ConnectedPorts(self: NetworkPort) -> NetworkPortAssociation
         """
         ...
@@ -348,24 +395,29 @@ class NetworkPort(IEngineeringService, DeviceItemFeature): # skipped bases: <typ
     @property
     def Interface(self) -> NetworkInterface:
         """
-        The interface supported by this port
+        The interface supported by this port
+
         Get: Interface(self: NetworkPort) -> NetworkInterface
         """
         ...
 
 
-    def ConnectToPort(self, partnerPort:NetworkPort): # -> 
+    def ConnectToPort(self, partnerPort:NetworkPort): # ->
         """
-        ConnectToPort(self: NetworkPort, partnerPort: NetworkPort)
-            Connects to the Port
+        ConnectToPort(self: NetworkPort, partnerPort: NetworkPort)
+
+            Connects to the Port
+
             partnerPort: The partner port to be disconnected
         """
         ...
 
-    def DisconnectFromPort(self, partnerPort:NetworkPort): # -> 
+    def DisconnectFromPort(self, partnerPort:NetworkPort): # ->
         """
-        DisconnectFromPort(self: NetworkPort, partnerPort: NetworkPort)
-            Disconnects a device from the given port
+        DisconnectFromPort(self: NetworkPort, partnerPort: NetworkPort)
+
+            Disconnects a device from the given port
+
             partnerPort: The partner port to be disconnected
         """
         ...
@@ -376,7 +428,8 @@ class NetworkPortAssociation(IEquatable, IEngineeringAssociation, IInternalAssoc
     @property
     def Parent(self) -> IEngineeringObject:
         """
-        Gets the parent..
+        Gets the parent..
+
         Get: Parent(self: NetworkPortAssociation) -> IEngineeringObject
         """
         ...
@@ -384,16 +437,20 @@ class NetworkPortAssociation(IEquatable, IEngineeringAssociation, IInternalAssoc
 
     def GetHashCode(self) -> int:
         """
-        GetHashCode(self: NetworkPortAssociation) -> int
-            Returns a hash code for this instance.
+        GetHashCode(self: NetworkPortAssociation) -> int
+
+            Returns a hash code for this instance.
+
             Returns: A hash code for this instance, suitable for use in hashing algorithms and data structures like a hash table.
         """
         ...
 
     def ToString(self) -> str:
         """
-        ToString(self: NetworkPortAssociation) -> str
-            Returns a System.String that represents the current System.Object.
+        ToString(self: NetworkPortAssociation) -> str
+
+            Returns a System.String that represents the current System.Object.
+
             Returns: A System.String that represents the current System.Object.
         """
         ...
@@ -411,8 +468,10 @@ class PcInterfaceAssignment(IEngineeringService, DeviceItemFeature): # skipped b
     @property
     def HardwareResource(self) -> HardwareResource:
         """
-        Get or set hardware resource of interface
-        Get: HardwareResource(self: PcInterfaceAssignment) -> HardwareResource
+        Get or set hardware resource of interface
+
+        Get: HardwareResource(self: PcInterfaceAssignment) -> HardwareResource
+
         Set: HardwareResource(self: PcInterfaceAssignment) = value
         """
         ...
@@ -420,8 +479,10 @@ class PcInterfaceAssignment(IEngineeringService, DeviceItemFeature): # skipped b
     @property
     def IpcExpansion(self) -> str:
         """
-        Get or set hardware IPC Expansion of interface
-        Get: IpcExpansion(self: PcInterfaceAssignment) -> str
+        Get or set hardware IPC Expansion of interface
+
+        Get: IpcExpansion(self: PcInterfaceAssignment) -> str
+
         Set: IpcExpansion(self: PcInterfaceAssignment) = value
         """
         ...
@@ -429,7 +490,8 @@ class PcInterfaceAssignment(IEngineeringService, DeviceItemFeature): # skipped b
     @property
     def PcInterfaceAssignmentMode(self) -> PcInterfaceAssignmentMode:
         """
-        Returns type of interface assignment
+        Returns type of interface assignment
+
         Get: PcInterfaceAssignmentMode(self: PcInterfaceAssignment) -> PcInterfaceAssignmentMode
         """
         ...
@@ -437,28 +499,37 @@ class PcInterfaceAssignment(IEngineeringService, DeviceItemFeature): # skipped b
     @property
     def SoftwarePlc(self) -> DeviceItem:
         """
-        Returns cpu DeviceItem
+        Returns cpu DeviceItem
+
         Get: SoftwarePlc(self: PcInterfaceAssignment) -> DeviceItem
         """
         ...
 
 
-    def AssignInterface(self, interfaceAssignmentFor:PcInterfaceAssignmentMode, softwareTarget:DeviceItem = ...): # -> 
+    def AssignInterface(self, interfaceAssignmentFor:PcInterfaceAssignmentMode, softwareTarget:DeviceItem = ...): # ->
         """
-        AssignInterface(self: PcInterfaceAssignment, interfaceAssignmentFor: PcInterfaceAssignmentMode)
-            Assign interface to one of the following( None, PC Station)
-            interfaceAssignmentFor: assignment type for interface
-        AssignInterface(self: PcInterfaceAssignment, interfaceAssignmentFor: PcInterfaceAssignmentMode, softwareTarget: DeviceItem)
-            Assign interface to Software PLC
-            interfaceAssignmentFor: assignment type for interface
+        AssignInterface(self: PcInterfaceAssignment, interfaceAssignmentFor: PcInterfaceAssignmentMode)
+
+            Assign interface to one of the following( None, PC Station)
+
+            interfaceAssignmentFor: assignment type for interface
+
+        AssignInterface(self: PcInterfaceAssignment, interfaceAssignmentFor: PcInterfaceAssignmentMode, softwareTarget: DeviceItem)
+
+            Assign interface to Software PLC
+
+            interfaceAssignmentFor: assignment type for interface
+
             softwareTarget: if interface assignment will be to CPU, provide cpu device item
         """
         ...
 
     def GetAvailableIPCExpansions(self) -> IEnumerable:
         """
-        GetAvailableIPCExpansions(self: PcInterfaceAssignment) -> IEnumerable[str]
-            Get available IPC expansion list that can be selected
+        GetAvailableIPCExpansions(self: PcInterfaceAssignment) -> IEnumerable[str]
+
+            Get available IPC expansion list that can be selected
+
             Returns: System.Collections.Generic.IEnumerable<System.String>
         """
         ...
@@ -469,26 +540,33 @@ class PlcAccessLevelProvider(IEngineeringService, DeviceItemFeature): # skipped 
     @property
     def PlcProtectionAccessLevel(self) -> PlcProtectionAccessLevel:
         """
-        To set the protection access level type
-        Get: PlcProtectionAccessLevel(self: PlcAccessLevelProvider) -> PlcProtectionAccessLevel
+        To set the protection access level type
+
+        Get: PlcProtectionAccessLevel(self: PlcAccessLevelProvider) -> PlcProtectionAccessLevel
+
         Set: PlcProtectionAccessLevel(self: PlcAccessLevelProvider) = value
         """
         ...
 
 
-    def ResetPassword(self, accessLevelType:PlcProtectionAccessLevel): # -> 
+    def ResetPassword(self, accessLevelType:PlcProtectionAccessLevel): # ->
         """
-        ResetPassword(self: PlcAccessLevelProvider, accessLevelType: PlcProtectionAccessLevel)
-            Reset the password for the specific Access Level Type
+        ResetPassword(self: PlcAccessLevelProvider, accessLevelType: PlcProtectionAccessLevel)
+
+            Reset the password for the specific Access Level Type
+
             accessLevelType: Specifies the Access level type
         """
         ...
 
-    def SetPassword(self, accessLevelType:PlcProtectionAccessLevel, password:SecureString): # -> 
+    def SetPassword(self, accessLevelType:PlcProtectionAccessLevel, password:SecureString): # ->
         """
-        SetPassword(self: PlcAccessLevelProvider, accessLevelType: PlcProtectionAccessLevel, password: SecureString)
-            set the password for the specific Access Level Type
-            accessLevelType: Specifies the protection Access level type
+        SetPassword(self: PlcAccessLevelProvider, accessLevelType: PlcProtectionAccessLevel, password: SecureString)
+
+            set the password for the specific Access Level Type
+
+            accessLevelType: Specifies the protection Access level type
+
             password: Specifies the password for the access level type
         """
         ...
@@ -499,7 +577,8 @@ class SoftwareContainer(IEngineeringService, DeviceItemFeature): # skipped bases
     @property
     def Software(self) -> Software:
         """
-        Gets the software target containing the software elements of the device
+        Gets the software target containing the software elements of the device
+
         Get: Software(self: SoftwareContainer) -> Software
         """
         ...
@@ -511,10 +590,8 @@ class SubnetOwner(IEngineeringService, DeviceItemFeature): # skipped bases: <typ
     @property
     def Subnets(self) -> SubnetComposition:
         """
-        Composition of Subnets
+        Composition of Subnets
+
         Get: Subnets(self: SubnetOwner) -> SubnetComposition
         """
         ...
-
-
-

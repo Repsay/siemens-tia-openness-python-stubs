@@ -12,6 +12,8 @@ from System import IEquatable
     IInternalCompositionAccess, IInternalObjectAccess)
 """
 
+from Siemens import IInternalCompositionAccess, IInternalObjectAccess
+
 # no functions
 # classes
 
@@ -24,7 +26,8 @@ class ConfigurationAddress(IEquatable, IEngineeringObject, IConfiguration, IInte
     @property
     def Address(self) -> str:
         """
-        The nodeaddress as string
+        The nodeaddress as string
+
         Get: Address(self: ConfigurationAddress) -> str
         """
         ...
@@ -32,7 +35,8 @@ class ConfigurationAddress(IEquatable, IEngineeringObject, IConfiguration, IInte
     @property
     def Name(self) -> str:
         """
-        The name of the configuration address
+        The name of the configuration address
+
         Get: Name(self: ConfigurationAddress) -> str
         """
         ...
@@ -40,7 +44,8 @@ class ConfigurationAddress(IEquatable, IEngineeringObject, IConfiguration, IInte
     @property
     def Parent(self) -> IEngineeringObject:
         """
-        EOM parent of this object
+        EOM parent of this object
+
         Get: Parent(self: ConfigurationAddress) -> IEngineeringObject
         """
         ...
@@ -48,16 +53,20 @@ class ConfigurationAddress(IEquatable, IEngineeringObject, IConfiguration, IInte
 
     def GetHashCode(self) -> int:
         """
-        GetHashCode(self: ConfigurationAddress) -> int
-            Returns a hash code for this instance.
+        GetHashCode(self: ConfigurationAddress) -> int
+
+            Returns a hash code for this instance.
+
             Returns: A hash code for this instance, suitable for use in hashing algorithms and data structures like a hash table.
         """
         ...
 
     def ToString(self) -> str:
         """
-        ToString(self: ConfigurationAddress) -> str
-            Returns a System.String that represents the current System.Object.
+        ToString(self: ConfigurationAddress) -> str
+
+            Returns a System.String that represents the current System.Object.
+
             Returns: A System.String that represents the current System.Object.
         """
         ...
@@ -71,7 +80,8 @@ class ConfigurationAddressComposition(IInternalCompositionAccess, IEngineeringCo
     @property
     def Parent(self) -> IEngineeringObject:
         """
-        Gets the parent.
+        Gets the parent.
+
         Get: Parent(self: ConfigurationAddressComposition) -> IEngineeringObject
         """
         ...
@@ -79,25 +89,32 @@ class ConfigurationAddressComposition(IInternalCompositionAccess, IEngineeringCo
 
     def Find(self, name:str) -> ConfigurationAddress:
         """
-        Find(self: ConfigurationAddressComposition, name: str) -> ConfigurationAddress
-            Finds a given configuration address
-            name: Name to find
+        Find(self: ConfigurationAddressComposition, name: str) -> ConfigurationAddress
+
+            Finds a given configuration address
+
+            name: Name to find
+
             Returns: Siemens.Engineering.Connection.ConfigurationAddress
         """
         ...
 
     def GetHashCode(self) -> int:
         """
-        GetHashCode(self: ConfigurationAddressComposition) -> int
-            Returns a hash code for this instance.
+        GetHashCode(self: ConfigurationAddressComposition) -> int
+
+            Returns a hash code for this instance.
+
             Returns: A hash code for this instance, suitable for use in hashing algorithms and data structures like a hash table.
         """
         ...
 
     def ToString(self) -> str:
         """
-        ToString(self: ConfigurationAddressComposition) -> str
-            Returns a System.String that represents the current System.Object.
+        ToString(self: ConfigurationAddressComposition) -> str
+
+            Returns a System.String that represents the current System.Object.
+
             Returns: A System.String that represents the current System.Object.
         """
         ...
@@ -115,7 +132,8 @@ class ConfigurationGateway(IEquatable, IEngineeringObject, IInternalObjectAccess
     @property
     def Addresses(self) -> ConfigurationAddressComposition:
         """
-        Composition of configuration addresses
+        Composition of configuration addresses
+
         Get: Addresses(self: ConfigurationGateway) -> ConfigurationAddressComposition
         """
         ...
@@ -123,7 +141,8 @@ class ConfigurationGateway(IEquatable, IEngineeringObject, IInternalObjectAccess
     @property
     def Name(self) -> str:
         """
-        The name of the configuration gateway
+        The name of the configuration gateway
+
         Get: Name(self: ConfigurationGateway) -> str
         """
         ...
@@ -131,7 +150,8 @@ class ConfigurationGateway(IEquatable, IEngineeringObject, IInternalObjectAccess
     @property
     def Parent(self) -> IEngineeringObject:
         """
-        EOM parent of this object
+        EOM parent of this object
+
         Get: Parent(self: ConfigurationGateway) -> IEngineeringObject
         """
         ...
@@ -139,16 +159,20 @@ class ConfigurationGateway(IEquatable, IEngineeringObject, IInternalObjectAccess
 
     def GetHashCode(self) -> int:
         """
-        GetHashCode(self: ConfigurationGateway) -> int
-            Returns a hash code for this instance.
+        GetHashCode(self: ConfigurationGateway) -> int
+
+            Returns a hash code for this instance.
+
             Returns: A hash code for this instance, suitable for use in hashing algorithms and data structures like a hash table.
         """
         ...
 
     def ToString(self) -> str:
         """
-        ToString(self: ConfigurationGateway) -> str
-            Returns a System.String that represents the current System.Object.
+        ToString(self: ConfigurationGateway) -> str
+
+            Returns a System.String that represents the current System.Object.
+
             Returns: A System.String that represents the current System.Object.
         """
         ...
@@ -162,7 +186,8 @@ class ConfigurationGatewayComposition(IInternalCompositionAccess, IEngineeringCo
     @property
     def Parent(self) -> IEngineeringObject:
         """
-        Gets the parent.
+        Gets the parent.
+
         Get: Parent(self: ConfigurationGatewayComposition) -> IEngineeringObject
         """
         ...
@@ -170,25 +195,32 @@ class ConfigurationGatewayComposition(IInternalCompositionAccess, IEngineeringCo
 
     def Find(self, name:str) -> ConfigurationGateway:
         """
-        Find(self: ConfigurationGatewayComposition, name: str) -> ConfigurationGateway
-            Finds a given configuration gateway
-            name: Name to find
+        Find(self: ConfigurationGatewayComposition, name: str) -> ConfigurationGateway
+
+            Finds a given configuration gateway
+
+            name: Name to find
+
             Returns: Siemens.Engineering.Connection.ConfigurationGateway
         """
         ...
 
     def GetHashCode(self) -> int:
         """
-        GetHashCode(self: ConfigurationGatewayComposition) -> int
-            Returns a hash code for this instance.
+        GetHashCode(self: ConfigurationGatewayComposition) -> int
+
+            Returns a hash code for this instance.
+
             Returns: A hash code for this instance, suitable for use in hashing algorithms and data structures like a hash table.
         """
         ...
 
     def ToString(self) -> str:
         """
-        ToString(self: ConfigurationGatewayComposition) -> str
-            Returns a System.String that represents the current System.Object.
+        ToString(self: ConfigurationGatewayComposition) -> str
+
+            Returns a System.String that represents the current System.Object.
+
             Returns: A System.String that represents the current System.Object.
         """
         ...
@@ -206,7 +238,8 @@ class ConfigurationMode(IEquatable, IEngineeringObject, IInternalObjectAccess): 
     @property
     def Name(self) -> str:
         """
-        The name of the configuration mode
+        The name of the configuration mode
+
         Get: Name(self: ConfigurationMode) -> str
         """
         ...
@@ -214,7 +247,8 @@ class ConfigurationMode(IEquatable, IEngineeringObject, IInternalObjectAccess): 
     @property
     def Parent(self) -> IEngineeringObject:
         """
-        EOM parent of this object
+        EOM parent of this object
+
         Get: Parent(self: ConfigurationMode) -> IEngineeringObject
         """
         ...
@@ -222,7 +256,8 @@ class ConfigurationMode(IEquatable, IEngineeringObject, IInternalObjectAccess): 
     @property
     def PcInterfaces(self) -> ConfigurationPcInterfaceComposition:
         """
-        Composition of Pc interfaces
+        Composition of Pc interfaces
+
         Get: PcInterfaces(self: ConfigurationMode) -> ConfigurationPcInterfaceComposition
         """
         ...
@@ -230,16 +265,20 @@ class ConfigurationMode(IEquatable, IEngineeringObject, IInternalObjectAccess): 
 
     def GetHashCode(self) -> int:
         """
-        GetHashCode(self: ConfigurationMode) -> int
-            Returns a hash code for this instance.
+        GetHashCode(self: ConfigurationMode) -> int
+
+            Returns a hash code for this instance.
+
             Returns: A hash code for this instance, suitable for use in hashing algorithms and data structures like a hash table.
         """
         ...
 
     def ToString(self) -> str:
         """
-        ToString(self: ConfigurationMode) -> str
-            Returns a System.String that represents the current System.Object.
+        ToString(self: ConfigurationMode) -> str
+
+            Returns a System.String that represents the current System.Object.
+
             Returns: A System.String that represents the current System.Object.
         """
         ...
@@ -253,7 +292,8 @@ class ConfigurationModeComposition(IInternalCompositionAccess, IEngineeringCompo
     @property
     def Parent(self) -> IEngineeringObject:
         """
-        Gets the parent.
+        Gets the parent.
+
         Get: Parent(self: ConfigurationModeComposition) -> IEngineeringObject
         """
         ...
@@ -261,25 +301,32 @@ class ConfigurationModeComposition(IInternalCompositionAccess, IEngineeringCompo
 
     def Find(self, name:str) -> ConfigurationMode:
         """
-        Find(self: ConfigurationModeComposition, name: str) -> ConfigurationMode
-            Finds a given configuration mode
-            name: Name to find
+        Find(self: ConfigurationModeComposition, name: str) -> ConfigurationMode
+
+            Finds a given configuration mode
+
+            name: Name to find
+
             Returns: Siemens.Engineering.Connection.ConfigurationMode
         """
         ...
 
     def GetHashCode(self) -> int:
         """
-        GetHashCode(self: ConfigurationModeComposition) -> int
-            Returns a hash code for this instance.
+        GetHashCode(self: ConfigurationModeComposition) -> int
+
+            Returns a hash code for this instance.
+
             Returns: A hash code for this instance, suitable for use in hashing algorithms and data structures like a hash table.
         """
         ...
 
     def ToString(self) -> str:
         """
-        ToString(self: ConfigurationModeComposition) -> str
-            Returns a System.String that represents the current System.Object.
+        ToString(self: ConfigurationModeComposition) -> str
+
+            Returns a System.String that represents the current System.Object.
+
             Returns: A System.String that represents the current System.Object.
         """
         ...
@@ -297,7 +344,8 @@ class ConfigurationPcInterface(IEquatable, IEngineeringObject, IInternalObjectAc
     @property
     def Addresses(self) -> ConfigurationAddressComposition:
         """
-        Composition of configurationAddress
+        Composition of configurationAddress
+
         Get: Addresses(self: ConfigurationPcInterface) -> ConfigurationAddressComposition
         """
         ...
@@ -305,7 +353,8 @@ class ConfigurationPcInterface(IEquatable, IEngineeringObject, IInternalObjectAc
     @property
     def Name(self) -> str:
         """
-        The name of the configuration Pc interface
+        The name of the configuration Pc interface
+
         Get: Name(self: ConfigurationPcInterface) -> str
         """
         ...
@@ -313,7 +362,8 @@ class ConfigurationPcInterface(IEquatable, IEngineeringObject, IInternalObjectAc
     @property
     def Number(self) -> int:
         """
-        Number identifying PcInterface
+        Number identifying PcInterface
+
         Get: Number(self: ConfigurationPcInterface) -> int
         """
         ...
@@ -321,7 +371,8 @@ class ConfigurationPcInterface(IEquatable, IEngineeringObject, IInternalObjectAc
     @property
     def Parent(self) -> IEngineeringObject:
         """
-        EOM parent of this object
+        EOM parent of this object
+
         Get: Parent(self: ConfigurationPcInterface) -> IEngineeringObject
         """
         ...
@@ -329,7 +380,8 @@ class ConfigurationPcInterface(IEquatable, IEngineeringObject, IInternalObjectAc
     @property
     def Subnets(self) -> ConfigurationSubnetComposition:
         """
-        Composition of configuration Subnets
+        Composition of configuration Subnets
+
         Get: Subnets(self: ConfigurationPcInterface) -> ConfigurationSubnetComposition
         """
         ...
@@ -337,7 +389,8 @@ class ConfigurationPcInterface(IEquatable, IEngineeringObject, IInternalObjectAc
     @property
     def TargetInterfaces(self) -> ConfigurationTargetInterfaceComposition:
         """
-        Composition of configuration target interfaces
+        Composition of configuration target interfaces
+
         Get: TargetInterfaces(self: ConfigurationPcInterface) -> ConfigurationTargetInterfaceComposition
         """
         ...
@@ -345,16 +398,20 @@ class ConfigurationPcInterface(IEquatable, IEngineeringObject, IInternalObjectAc
 
     def GetHashCode(self) -> int:
         """
-        GetHashCode(self: ConfigurationPcInterface) -> int
-            Returns a hash code for this instance.
+        GetHashCode(self: ConfigurationPcInterface) -> int
+
+            Returns a hash code for this instance.
+
             Returns: A hash code for this instance, suitable for use in hashing algorithms and data structures like a hash table.
         """
         ...
 
     def ToString(self) -> str:
         """
-        ToString(self: ConfigurationPcInterface) -> str
-            Returns a System.String that represents the current System.Object.
+        ToString(self: ConfigurationPcInterface) -> str
+
+            Returns a System.String that represents the current System.Object.
+
             Returns: A System.String that represents the current System.Object.
         """
         ...
@@ -368,7 +425,8 @@ class ConfigurationPcInterfaceComposition(IInternalCompositionAccess, IEngineeri
     @property
     def Parent(self) -> IEngineeringObject:
         """
-        Gets the parent.
+        Gets the parent.
+
         Get: Parent(self: ConfigurationPcInterfaceComposition) -> IEngineeringObject
         """
         ...
@@ -376,26 +434,34 @@ class ConfigurationPcInterfaceComposition(IInternalCompositionAccess, IEngineeri
 
     def Find(self, name:str, number:int) -> ConfigurationPcInterface:
         """
-        Find(self: ConfigurationPcInterfaceComposition, name: str, number: int) -> ConfigurationPcInterface
-            Finds a given configuration pc interface
-            name: Name to find
-            number: Number to find
+        Find(self: ConfigurationPcInterfaceComposition, name: str, number: int) -> ConfigurationPcInterface
+
+            Finds a given configuration pc interface
+
+            name: Name to find
+
+            number: Number to find
+
             Returns: Siemens.Engineering.Connection.ConfigurationPcInterface
         """
         ...
 
     def GetHashCode(self) -> int:
         """
-        GetHashCode(self: ConfigurationPcInterfaceComposition) -> int
-            Returns a hash code for this instance.
+        GetHashCode(self: ConfigurationPcInterfaceComposition) -> int
+
+            Returns a hash code for this instance.
+
             Returns: A hash code for this instance, suitable for use in hashing algorithms and data structures like a hash table.
         """
         ...
 
     def ToString(self) -> str:
         """
-        ToString(self: ConfigurationPcInterfaceComposition) -> str
-            Returns a System.String that represents the current System.Object.
+        ToString(self: ConfigurationPcInterfaceComposition) -> str
+
+            Returns a System.String that represents the current System.Object.
+
             Returns: A System.String that represents the current System.Object.
         """
         ...
@@ -413,7 +479,8 @@ class ConfigurationSubnet(IEquatable, IEngineeringObject, IInternalObjectAccess)
     @property
     def Addresses(self) -> ConfigurationAddressComposition:
         """
-        Composition of configuration addresses
+        Composition of configuration addresses
+
         Get: Addresses(self: ConfigurationSubnet) -> ConfigurationAddressComposition
         """
         ...
@@ -421,7 +488,8 @@ class ConfigurationSubnet(IEquatable, IEngineeringObject, IInternalObjectAccess)
     @property
     def Gateways(self) -> ConfigurationGatewayComposition:
         """
-        Get all gateways associated with this subnet
+        Get all gateways associated with this subnet
+
         Get: Gateways(self: ConfigurationSubnet) -> ConfigurationGatewayComposition
         """
         ...
@@ -429,7 +497,8 @@ class ConfigurationSubnet(IEquatable, IEngineeringObject, IInternalObjectAccess)
     @property
     def Name(self) -> str:
         """
-        The name of the configuration Subnet
+        The name of the configuration Subnet
+
         Get: Name(self: ConfigurationSubnet) -> str
         """
         ...
@@ -437,7 +506,8 @@ class ConfigurationSubnet(IEquatable, IEngineeringObject, IInternalObjectAccess)
     @property
     def Parent(self) -> IEngineeringObject:
         """
-        EOM parent of this object
+        EOM parent of this object
+
         Get: Parent(self: ConfigurationSubnet) -> IEngineeringObject
         """
         ...
@@ -445,16 +515,20 @@ class ConfigurationSubnet(IEquatable, IEngineeringObject, IInternalObjectAccess)
 
     def GetHashCode(self) -> int:
         """
-        GetHashCode(self: ConfigurationSubnet) -> int
-            Returns a hash code for this instance.
+        GetHashCode(self: ConfigurationSubnet) -> int
+
+            Returns a hash code for this instance.
+
             Returns: A hash code for this instance, suitable for use in hashing algorithms and data structures like a hash table.
         """
         ...
 
     def ToString(self) -> str:
         """
-        ToString(self: ConfigurationSubnet) -> str
-            Returns a System.String that represents the current System.Object.
+        ToString(self: ConfigurationSubnet) -> str
+
+            Returns a System.String that represents the current System.Object.
+
             Returns: A System.String that represents the current System.Object.
         """
         ...
@@ -468,7 +542,8 @@ class ConfigurationSubnetComposition(IInternalCompositionAccess, IEngineeringCom
     @property
     def Parent(self) -> IEngineeringObject:
         """
-        Gets the parent.
+        Gets the parent.
+
         Get: Parent(self: ConfigurationSubnetComposition) -> IEngineeringObject
         """
         ...
@@ -476,25 +551,32 @@ class ConfigurationSubnetComposition(IInternalCompositionAccess, IEngineeringCom
 
     def Find(self, name:str) -> ConfigurationSubnet:
         """
-        Find(self: ConfigurationSubnetComposition, name: str) -> ConfigurationSubnet
-            Finds a given configuration Subnet
-            name: Name to find
+        Find(self: ConfigurationSubnetComposition, name: str) -> ConfigurationSubnet
+
+            Finds a given configuration Subnet
+
+            name: Name to find
+
             Returns: Siemens.Engineering.Connection.ConfigurationSubnet
         """
         ...
 
     def GetHashCode(self) -> int:
         """
-        GetHashCode(self: ConfigurationSubnetComposition) -> int
-            Returns a hash code for this instance.
+        GetHashCode(self: ConfigurationSubnetComposition) -> int
+
+            Returns a hash code for this instance.
+
             Returns: A hash code for this instance, suitable for use in hashing algorithms and data structures like a hash table.
         """
         ...
 
     def ToString(self) -> str:
         """
-        ToString(self: ConfigurationSubnetComposition) -> str
-            Returns a System.String that represents the current System.Object.
+        ToString(self: ConfigurationSubnetComposition) -> str
+
+            Returns a System.String that represents the current System.Object.
+
             Returns: A System.String that represents the current System.Object.
         """
         ...
@@ -512,7 +594,8 @@ class ConfigurationTargetInterface(IEquatable, IEngineeringObject, IConfiguratio
     @property
     def Name(self) -> str:
         """
-        The name of the configuration target interface
+        The name of the configuration target interface
+
         Get: Name(self: ConfigurationTargetInterface) -> str
         """
         ...
@@ -520,7 +603,8 @@ class ConfigurationTargetInterface(IEquatable, IEngineeringObject, IConfiguratio
     @property
     def Parent(self) -> IEngineeringObject:
         """
-        EOM parent of this object
+        EOM parent of this object
+
         Get: Parent(self: ConfigurationTargetInterface) -> IEngineeringObject
         """
         ...
@@ -528,16 +612,20 @@ class ConfigurationTargetInterface(IEquatable, IEngineeringObject, IConfiguratio
 
     def GetHashCode(self) -> int:
         """
-        GetHashCode(self: ConfigurationTargetInterface) -> int
-            Returns a hash code for this instance.
+        GetHashCode(self: ConfigurationTargetInterface) -> int
+
+            Returns a hash code for this instance.
+
             Returns: A hash code for this instance, suitable for use in hashing algorithms and data structures like a hash table.
         """
         ...
 
     def ToString(self) -> str:
         """
-        ToString(self: ConfigurationTargetInterface) -> str
-            Returns a System.String that represents the current System.Object.
+        ToString(self: ConfigurationTargetInterface) -> str
+
+            Returns a System.String that represents the current System.Object.
+
             Returns: A System.String that represents the current System.Object.
         """
         ...
@@ -551,7 +639,8 @@ class ConfigurationTargetInterfaceComposition(IInternalCompositionAccess, IEngin
     @property
     def Parent(self) -> IEngineeringObject:
         """
-        Gets the parent.
+        Gets the parent.
+
         Get: Parent(self: ConfigurationTargetInterfaceComposition) -> IEngineeringObject
         """
         ...
@@ -559,25 +648,32 @@ class ConfigurationTargetInterfaceComposition(IInternalCompositionAccess, IEngin
 
     def Find(self, name:str) -> ConfigurationTargetInterface:
         """
-        Find(self: ConfigurationTargetInterfaceComposition, name: str) -> ConfigurationTargetInterface
-            Finds a given configuration target interface
-            name: Name to find
+        Find(self: ConfigurationTargetInterfaceComposition, name: str) -> ConfigurationTargetInterface
+
+            Finds a given configuration target interface
+
+            name: Name to find
+
             Returns: Siemens.Engineering.Connection.ConfigurationTargetInterface
         """
         ...
 
     def GetHashCode(self) -> int:
         """
-        GetHashCode(self: ConfigurationTargetInterfaceComposition) -> int
-            Returns a hash code for this instance.
+        GetHashCode(self: ConfigurationTargetInterfaceComposition) -> int
+
+            Returns a hash code for this instance.
+
             Returns: A hash code for this instance, suitable for use in hashing algorithms and data structures like a hash table.
         """
         ...
 
     def ToString(self) -> str:
         """
-        ToString(self: ConfigurationTargetInterfaceComposition) -> str
-            Returns a System.String that represents the current System.Object.
+        ToString(self: ConfigurationTargetInterfaceComposition) -> str
+
+            Returns a System.String that represents the current System.Object.
+
             Returns: A System.String that represents the current System.Object.
         """
         ...
@@ -595,7 +691,8 @@ class ConnectionConfiguration(IEquatable, IEngineeringObject, IInternalObjectAcc
     @property
     def IsConfigured(self) -> bool:
         """
-        Indicates if the connection is configured
+        Indicates if the connection is configured
+
         Get: IsConfigured(self: ConnectionConfiguration) -> bool
         """
         ...
@@ -603,7 +700,8 @@ class ConnectionConfiguration(IEquatable, IEngineeringObject, IInternalObjectAcc
     @property
     def Modes(self) -> ConfigurationModeComposition:
         """
-        Composition of configuration modes
+        Composition of configuration modes
+
         Get: Modes(self: ConnectionConfiguration) -> ConfigurationModeComposition
         """
         ...
@@ -611,7 +709,8 @@ class ConnectionConfiguration(IEquatable, IEngineeringObject, IInternalObjectAcc
     @property
     def Parent(self) -> IEngineeringObject:
         """
-        EOM parent of this object
+        EOM parent of this object
+
         Get: Parent(self: ConnectionConfiguration) -> IEngineeringObject
         """
         ...
@@ -619,34 +718,43 @@ class ConnectionConfiguration(IEquatable, IEngineeringObject, IInternalObjectAcc
 
     def ApplyConfiguration(self, *__args:ConfigurationAddress) -> bool:
         """
-        ApplyConfiguration(self: ConnectionConfiguration, address: ConfigurationAddress) -> bool
-            If online is configured, then apply the configuration
-            address: The address to apply the configuration
-            Returns: System.Boolean
-        ApplyConfiguration(self: ConnectionConfiguration, targetInterface: ConfigurationTargetInterface) -> bool
-            If online is configured, then apply the configuration
-            targetInterface: The target interface for which to apply the configuration
+        ApplyConfiguration(self: ConnectionConfiguration, address: ConfigurationAddress) -> bool
+
+            If online is configured, then apply the configuration
+
+            address: The address to apply the configuration
+
+            Returns: System.Boolean
+
+        ApplyConfiguration(self: ConnectionConfiguration, targetInterface: ConfigurationTargetInterface) -> bool
+
+            If online is configured, then apply the configuration
+
+            targetInterface: The target interface for which to apply the configuration
+
             Returns: System.Boolean
         """
         ...
 
     def GetHashCode(self) -> int:
         """
-        GetHashCode(self: ConnectionConfiguration) -> int
-            Returns a hash code for this instance.
+        GetHashCode(self: ConnectionConfiguration) -> int
+
+            Returns a hash code for this instance.
+
             Returns: A hash code for this instance, suitable for use in hashing algorithms and data structures like a hash table.
         """
         ...
 
     def ToString(self) -> str:
         """
-        ToString(self: ConnectionConfiguration) -> str
-            Returns a System.String that represents the current System.Object.
+        ToString(self: ConnectionConfiguration) -> str
+
+            Returns a System.String that represents the current System.Object.
+
             Returns: A System.String that represents the current System.Object.
         """
         ...
 
     def __ne__(self, *args): #cannot find CLR method
         ...
-
-

@@ -9,20 +9,20 @@ from Microsoft.ManagementConsole import View
 from Siemens.Engineering.Hmi.Globalization import (
     MultiLingualGraphicComposition)
 
-from Siemens.Engineering.HW import (DeviceComposition, DeviceSystemGroup, 
+from Siemens.Engineering.HW import (DeviceComposition, DeviceSystemGroup,
     DeviceUserGroupComposition, SubnetComposition)
 
 from Siemens.Engineering.HW.Utilities import HardwareUtilityComposition
 
-from Siemens.Engineering.Library import (GlobalLibraryComposition, 
+from Siemens.Engineering.Library import (GlobalLibraryComposition,
     ProjectLibrary)
 
 from Siemens.Engineering.Library.MasterCopies import IMasterCopyTarget
 
 from Siemens.Engineering.Settings import TiaPortalSettingsFolderComposition
 
-from System import (AsyncCallback, DateTime, Enum, EventArgs, IAsyncResult, 
-    IDisposable, IEquatable, IServiceProvider, Int64, MulticastDelegate, 
+from System import (AsyncCallback, DateTime, Enum, EventArgs, IAsyncResult,
+    IDisposable, IEquatable, IServiceProvider, Int64, MulticastDelegate,
     TimeSpan, Type)
 
 from System.Collections import IEnumerable, IList
@@ -33,11 +33,13 @@ from System.IO import DirectoryInfo, FileInfo
 
 from System.Security import SecureString
 
-"""The following names are not found in the module: (BoundEvent, 
-    IApplicationEntryPoint, IInternalApplicationAccess, 
-    IInternalAssociationAccess, IInternalCompositionAccess, 
+"""The following names are not found in the module: (BoundEvent,
+    IApplicationEntryPoint, IInternalApplicationAccess,
+    IInternalAssociationAccess, IInternalCompositionAccess,
     IInternalObjectAccess, field#)
 """
+
+from Siemens import IApplicationEntryPoint, IInternalApplicationAccess, IInternalAssociationAccess, IInternalCompositionAccess, IInternalObjectAccess
 
 # no functions
 # classes
@@ -47,7 +49,8 @@ class AttachingEventArgs(EventArgs): # skipped bases: <type 'object'>
     @property
     def AccessLevel(self) -> TiaPortalAccessLevel:
         """
-        Gets access level argument of the attaching event.
+        Gets access level argument of the attaching event.
+
         Get: AccessLevel(self: AttachingEventArgs) -> TiaPortalAccessLevel
         """
         ...
@@ -55,7 +58,8 @@ class AttachingEventArgs(EventArgs): # skipped bases: <type 'object'>
     @property
     def ProcessId(self) -> int:
         """
-        Gets attaching process identifier.
+        Gets attaching process identifier.
+
         Get: ProcessId(self: AttachingEventArgs) -> int
         """
         ...
@@ -63,7 +67,8 @@ class AttachingEventArgs(EventArgs): # skipped bases: <type 'object'>
     @property
     def ProcessPath(self) -> str:
         """
-        Gets attaching event process path.
+        Gets attaching event process path.
+
         Get: ProcessPath(self: AttachingEventArgs) -> str
         """
         ...
@@ -71,7 +76,8 @@ class AttachingEventArgs(EventArgs): # skipped bases: <type 'object'>
     @property
     def TrustAuthority(self) -> TiaPortalTrustAuthority:
         """
-        Gets TIA-Portal trust authority of the attaching event.
+        Gets TIA-Portal trust authority of the attaching event.
+
         Get: TrustAuthority(self: AttachingEventArgs) -> TiaPortalTrustAuthority
         """
         ...
@@ -79,15 +85,17 @@ class AttachingEventArgs(EventArgs): # skipped bases: <type 'object'>
     @property
     def Version(self) -> str:
         """
-        Gets version argument of the attaching event.
+        Gets version argument of the attaching event.
+
         Get: Version(self: AttachingEventArgs) -> str
         """
         ...
 
 
-    def GrantAccess(self): # -> 
+    def GrantAccess(self): # ->
         """
-        GrantAccess(self: AttachingEventArgs)
+        GrantAccess(self: AttachingEventArgs)
+
             Grants permission to the attaching Openness application to attach.
         """
         ...
@@ -95,7 +103,8 @@ class AttachingEventArgs(EventArgs): # skipped bases: <type 'object'>
 
 class ConfirmationChoices(Enum): # skipped bases: <type 'IConvertible'>, <type 'IComparable'>, <type 'IFormattable'>, <type 'object'>
     """
-    The list of possible confirmation choices
+    The list of possible confirmation choices
+
     enum (flags) ConfirmationChoices, values: Abort (8), Cancel (256), Ignore (32), No (64), None (0), NoToAll (128), Ok (1), Retry (16), Yes (2), YesToAll (4)
     """
     Abort: ConfirmationChoices = ...
@@ -115,7 +124,8 @@ class IEngineeringInstance: # skipped bases: <type 'object'>
     @property
     def Parent(self) -> IEngineeringObject:
         """
-        Gets the parent of the instance.
+        Gets the parent of the instance.
+
         Get: Parent(self: IEngineeringInstance) -> IEngineeringObject
         """
         ...
@@ -134,17 +144,22 @@ class IEngineeringObject(IEngineeringCompositionOrObject): # skipped bases: <typ
 
     def GetAttribute(self, name:str) -> object:
         """
-        GetAttribute(self: IEngineeringObject, name: str) -> object
-            Gets an attribute with the given name.
-            name: The name of the attribute to get.
+        GetAttribute(self: IEngineeringObject, name: str) -> object
+
+            Gets an attribute with the given name.
+
+            name: The name of the attribute to get.
+
             Returns: The attribute with the given name or a null if not found.
         """
         ...
 
     def GetAttributeInfos(self) -> IList:
         """
-        GetAttributeInfos(self: IEngineeringObject) -> IList[EngineeringAttributeInfo]
-            Returns a collection of EngineeringAttributeInfo objects describing the different attributes on this object.
+        GetAttributeInfos(self: IEngineeringObject) -> IList[EngineeringAttributeInfo]
+
+            Returns a collection of EngineeringAttributeInfo objects describing the different attributes on this object.
+
             Returns: A collection of EngineeringAttributeInfo objects describing the different attributes on this object.
         """
         ...
@@ -155,17 +170,22 @@ class IEngineeringObject(IEngineeringCompositionOrObject): # skipped bases: <typ
 
     def GetComposition(self, name:str) -> IEngineeringCompositionOrObject:
         """
-        GetComposition(self: IEngineeringObject, name: str) -> IEngineeringCompositionOrObject
-            Gets an IEngineeringCompositionOrObject with the given name.
-            name: The name of the IEngineeringCompositionOrObject to get.
+        GetComposition(self: IEngineeringObject, name: str) -> IEngineeringCompositionOrObject
+
+            Gets an IEngineeringCompositionOrObject with the given name.
+
+            name: The name of the IEngineeringCompositionOrObject to get.
+
             Returns: The IEngineeringCompositionOrObject with the given name; otherwise a null.
         """
         ...
 
     def GetCompositionInfos(self) -> IList:
         """
-        GetCompositionInfos(self: IEngineeringObject) -> IList[EngineeringCompositionInfo]
-            Gets the list of composition infos available for the object.
+        GetCompositionInfos(self: IEngineeringObject) -> IList[EngineeringCompositionInfo]
+
+            Gets the list of composition infos available for the object.
+
             Returns: The list of composition infos available for the object.
         """
         ...
@@ -176,8 +196,10 @@ class IEngineeringObject(IEngineeringCompositionOrObject): # skipped bases: <typ
 
     def GetInvocationInfos(self) -> IList:
         """
-        GetInvocationInfos(self: IEngineeringObject) -> IList[EngineeringInvocationInfo]
-            Returns a collection of EngineeringInvocationInfo objects describing the different actions on this object.
+        GetInvocationInfos(self: IEngineeringObject) -> IList[EngineeringInvocationInfo]
+
+            Returns a collection of EngineeringInvocationInfo objects describing the different actions on this object.
+
             Returns: A collection of EngineeringInvocationInfo objects describing the different actions on this object.
         """
         ...
@@ -186,16 +208,19 @@ class IEngineeringObject(IEngineeringCompositionOrObject): # skipped bases: <typ
         """ Invoke(self: IEngineeringObject, name: str, parameters: IEnumerable[KeyValuePair[Type, object]]) -> object """
         ...
 
-    def SetAttribute(self, name:str, value:object): # -> 
+    def SetAttribute(self, name:str, value:object): # ->
         """
-        SetAttribute(self: IEngineeringObject, name: str, value: object)
-            Sets an attribute with the given name to the given value value.
-            name: The name of the attribute to set with the given value.
+        SetAttribute(self: IEngineeringObject, name: str, value: object)
+
+            Sets an attribute with the given name to the given value value.
+
+            name: The name of the attribute to set with the given value.
+
             value: The value to set for the attribute with the given name.
         """
         ...
 
-    def SetAttributes(self, attributes:IEnumerable): # -> 
+    def SetAttributes(self, attributes:IEnumerable): # ->
         """ SetAttributes(self: IEngineeringObject, attributes: IEnumerable[KeyValuePair[str, object]]) """
         ...
 
@@ -205,7 +230,8 @@ class ConfirmationEventArgs(IInternalObjectAccess, IEngineeringObject, IEquatabl
     @property
     def Caption(self) -> str:
         """
-        Gets the caption of the confirmation.
+        Gets the caption of the confirmation.
+
         Get: Caption(self: ConfirmationEventArgs) -> str
         """
         ...
@@ -213,7 +239,8 @@ class ConfirmationEventArgs(IInternalObjectAccess, IEngineeringObject, IEquatabl
     @property
     def Choices(self) -> ConfirmationChoices:
         """
-        Gets the choices of the confirmation.
+        Gets the choices of the confirmation.
+
         Get: Choices(self: ConfirmationEventArgs) -> ConfirmationChoices
         """
         ...
@@ -221,7 +248,8 @@ class ConfirmationEventArgs(IInternalObjectAccess, IEngineeringObject, IEquatabl
     @property
     def DetailText(self) -> str:
         """
-        Gets the detail text of the confirmation.
+        Gets the detail text of the confirmation.
+
         Get: DetailText(self: ConfirmationEventArgs) -> str
         """
         ...
@@ -229,7 +257,8 @@ class ConfirmationEventArgs(IInternalObjectAccess, IEngineeringObject, IEquatabl
     @property
     def Icon(self) -> ConfirmationIcon:
         """
-        Gets the icon.
+        Gets the icon.
+
         Get: Icon(self: ConfirmationEventArgs) -> ConfirmationIcon
         """
         ...
@@ -237,8 +266,10 @@ class ConfirmationEventArgs(IInternalObjectAccess, IEngineeringObject, IEquatabl
     @property
     def IsHandled(self) -> bool:
         """
-        Gets or sets if the confirmation is handled.
-        Get: IsHandled(self: ConfirmationEventArgs) -> bool
+        Gets or sets if the confirmation is handled.
+
+        Get: IsHandled(self: ConfirmationEventArgs) -> bool
+
         Set: IsHandled(self: ConfirmationEventArgs) = value
         """
         ...
@@ -246,7 +277,8 @@ class ConfirmationEventArgs(IInternalObjectAccess, IEngineeringObject, IEquatabl
     @property
     def Parent(self) -> IEngineeringObject:
         """
-        EOM parent of this object
+        EOM parent of this object
+
         Get: Parent(self: ConfirmationEventArgs) -> IEngineeringObject
         """
         ...
@@ -254,8 +286,10 @@ class ConfirmationEventArgs(IInternalObjectAccess, IEngineeringObject, IEquatabl
     @property
     def Result(self) -> ConfirmationResult:
         """
-        Gets or sets the result of the confirmation.
-        Get: Result(self: ConfirmationEventArgs) -> ConfirmationResult
+        Gets or sets the result of the confirmation.
+
+        Get: Result(self: ConfirmationEventArgs) -> ConfirmationResult
+
         Set: Result(self: ConfirmationEventArgs) = value
         """
         ...
@@ -263,7 +297,8 @@ class ConfirmationEventArgs(IInternalObjectAccess, IEngineeringObject, IEquatabl
     @property
     def Text(self) -> str:
         """
-        Gets the text of the confirmation.
+        Gets the text of the confirmation.
+
         Get: Text(self: ConfirmationEventArgs) -> str
         """
         ...
@@ -271,16 +306,20 @@ class ConfirmationEventArgs(IInternalObjectAccess, IEngineeringObject, IEquatabl
 
     def GetHashCode(self) -> int:
         """
-        GetHashCode(self: ConfirmationEventArgs) -> int
-            Returns a hash code for this instance.
+        GetHashCode(self: ConfirmationEventArgs) -> int
+
+            Returns a hash code for this instance.
+
             Returns: A hash code for this instance, suitable for use in hashing algorithms and data structures like a hash table.
         """
         ...
 
     def ToString(self) -> str:
         """
-        ToString(self: ConfirmationEventArgs) -> str
-            Returns a System.String that represents the current System.Object.
+        ToString(self: ConfirmationEventArgs) -> str
+
+            Returns a System.String that represents the current System.Object.
+
             Returns: A System.String that represents the current System.Object.
         """
         ...
@@ -294,7 +333,8 @@ class ConfirmationEventArgs(IInternalObjectAccess, IEngineeringObject, IEquatabl
 
 class ConfirmationIcon(Enum): # skipped bases: <type 'IConvertible'>, <type 'IComparable'>, <type 'IFormattable'>, <type 'object'>
     """
-    The list of possible confirmation icons
+    The list of possible confirmation icons
+
     enum ConfirmationIcon, values: Critical (1), Error (2), General (0)
     """
     Critical: ConfirmationIcon = ...
@@ -305,7 +345,8 @@ class ConfirmationIcon(Enum): # skipped bases: <type 'IConvertible'>, <type 'ICo
 
 class ConfirmationResult(Enum): # skipped bases: <type 'IConvertible'>, <type 'IComparable'>, <type 'IFormattable'>, <type 'object'>
     """
-    The list of possible confirmation results
+    The list of possible confirmation results
+
     enum ConfirmationResult, values: Abort (3), Cancel (8), Ignore (5), No (6), NoToAll (7), Ok (0), Retry (4), Yes (1), YesToAll (2)
     """
     Abort: ConfirmationResult = ...
@@ -322,7 +363,8 @@ class ConfirmationResult(Enum): # skipped bases: <type 'IConvertible'>, <type 'I
 
 class EngineeringAttributeAccessMode(Enum): # skipped bases: <type 'IConvertible'>, <type 'IComparable'>, <type 'IFormattable'>, <type 'object'>
     """
-    Flags enum that describes different access levels
+    Flags enum that describes different access levels
+
     enum (flags) EngineeringAttributeAccessMode, values: None (0), Read (1), ReadWrite (3), Write (2)
     """
     Read: EngineeringAttributeAccessMode = ...
@@ -336,7 +378,8 @@ class EngineeringAttributeInfo: # skipped bases: <type 'object'>, <type 'object'
     @property
     def AccessMode(self) -> EngineeringAttributeAccessMode:
         """
-        Gets the level of access supported by the attribute.
+        Gets the level of access supported by the attribute.
+
         Get: AccessMode(self: EngineeringAttributeInfo) -> EngineeringAttributeAccessMode
         """
         ...
@@ -349,7 +392,8 @@ class EngineeringAttributeInfo: # skipped bases: <type 'object'>, <type 'object'
     @property
     def Name(self) -> str:
         """
-        Gets the name of the attribute.
+        Gets the name of the attribute.
+
         Get: Name(self: EngineeringAttributeInfo) -> str
         """
         ...
@@ -357,8 +401,10 @@ class EngineeringAttributeInfo: # skipped bases: <type 'object'>, <type 'object'
 
     def ToString(self) -> str:
         """
-        ToString(self: EngineeringAttributeInfo) -> str
-            Returns a System.String that represents the current System.Object.
+        ToString(self: EngineeringAttributeInfo) -> str
+
+            Returns a System.String that represents the current System.Object.
+
             Returns: A System.String that represents the current System.Object.
         """
         ...
@@ -369,7 +415,8 @@ class EngineeringCompositionInfo: # skipped bases: <type 'object'>, <type 'objec
     @property
     def Name(self) -> str:
         """
-        Gets composition name.
+        Gets composition name.
+
         Get: Name(self: EngineeringCompositionInfo) -> str
         """
         ...
@@ -377,8 +424,10 @@ class EngineeringCompositionInfo: # skipped bases: <type 'object'>, <type 'objec
 
     def ToString(self) -> str:
         """
-        ToString(self: EngineeringCompositionInfo) -> str
-            Returns a System.String that represents the current System.Object.
+        ToString(self: EngineeringCompositionInfo) -> str
+
+            Returns a System.String that represents the current System.Object.
+
             Returns: A System.String that represents the current System.Object.
         """
         ...
@@ -396,7 +445,8 @@ class EngineeringCreationInfo: # skipped bases: <type 'object'>, <type 'object'>
     @property
     def ParameterInfos(self) -> IList:
         """
-        The parameters needed to create the object.
+        The parameters needed to create the object.
+
         Get: ParameterInfos(self: EngineeringCreationInfo) -> IList[EngineeringCreationParameterInfo]
         """
         ...
@@ -404,7 +454,8 @@ class EngineeringCreationInfo: # skipped bases: <type 'object'>, <type 'object'>
     @property
     def Type(self) -> Type:
         """
-        The type of the objec that will be created.
+        The type of the objec that will be created.
+
         Get: Type(self: EngineeringCreationInfo) -> Type
         """
         ...
@@ -412,8 +463,10 @@ class EngineeringCreationInfo: # skipped bases: <type 'object'>, <type 'object'>
 
     def ToString(self) -> str:
         """
-        ToString(self: EngineeringCreationInfo) -> str
-            Returns a System.String that represents the current System.Object.
+        ToString(self: EngineeringCreationInfo) -> str
+
+            Returns a System.String that represents the current System.Object.
+
             Returns: A System.String that represents the current System.Object.
         """
         ...
@@ -424,7 +477,8 @@ class EngineeringCreationParameterInfo: # skipped bases: <type 'object'>, <type 
     @property
     def IsMandatory(self) -> bool:
         """
-        Gets if the parameter is mandatory.
+        Gets if the parameter is mandatory.
+
         Get: IsMandatory(self: EngineeringCreationParameterInfo) -> bool
         """
         ...
@@ -432,7 +486,8 @@ class EngineeringCreationParameterInfo: # skipped bases: <type 'object'>, <type 
     @property
     def Name(self) -> str:
         """
-        Gets the name of the parameter.
+        Gets the name of the parameter.
+
         Get: Name(self: EngineeringCreationParameterInfo) -> str
         """
         ...
@@ -440,8 +495,10 @@ class EngineeringCreationParameterInfo: # skipped bases: <type 'object'>, <type 
 
     def ToString(self) -> str:
         """
-        ToString(self: EngineeringCreationParameterInfo) -> str
-            Returns a System.String that represents the current System.Object.
+        ToString(self: EngineeringCreationParameterInfo) -> str
+
+            Returns a System.String that represents the current System.Object.
+
             Returns: A System.String that represents the current System.Object.
         """
         ...
@@ -449,16 +506,21 @@ class EngineeringCreationParameterInfo: # skipped bases: <type 'object'>, <type 
 
 class EngineeringException(Exception): # skipped bases: <type 'ISerializable'>, <type '_Exception'>, <type 'object'>
     """
-    Engineering exception.
-    EngineeringException()
-    EngineeringException(text: str)
-    EngineeringException(text: str, exception: Exception)
+    Engineering exception.
+
+    EngineeringException()
+
+    EngineeringException(text: str)
+
+    EngineeringException(text: str, exception: Exception)
+
     EngineeringException(text: str, *detailTexts: Array[str])
     """
     @property
     def DetailMessageData(self) -> IList:
         """
-        Gets the detail message data that describes the current exception.
+        Gets the detail message data that describes the current exception.
+
         Get: DetailMessageData(self: EngineeringException) -> IList[ExceptionMessageData]
         """
         ...
@@ -466,7 +528,8 @@ class EngineeringException(Exception): # skipped bases: <type 'ISerializable'>, 
     @property
     def MessageData(self) -> ExceptionMessageData:
         """
-        Gets the message data that describes the current exception.
+        Gets the message data that describes the current exception.
+
         Get: MessageData(self: EngineeringException) -> ExceptionMessageData
         """
         ...
@@ -477,10 +540,14 @@ class EngineeringException(Exception): # skipped bases: <type 'ISerializable'>, 
 
 class EngineeringTargetInvocationException(EngineeringException): # skipped bases: <type 'ISerializable'>, <type '_Exception'>, <type 'object'>
     """
-    Engineering Target Invocation Exception
-    EngineeringTargetInvocationException()
-    EngineeringTargetInvocationException(text: str)
-    EngineeringTargetInvocationException(text: str, exception: Exception)
+    Engineering Target Invocation Exception
+
+    EngineeringTargetInvocationException()
+
+    EngineeringTargetInvocationException(text: str)
+
+    EngineeringTargetInvocationException(text: str, exception: Exception)
+
     EngineeringTargetInvocationException(text: str, *detailTexts: Array[str])
     """
     SerializeObjectState = ...
@@ -488,10 +555,14 @@ class EngineeringTargetInvocationException(EngineeringException): # skipped base
 
 class EngineeringDelegateInvocationException(EngineeringTargetInvocationException): # skipped bases: <type 'ISerializable'>, <type '_Exception'>, <type 'object'>
     """
-    Engineering Delegate Invocation Exception
-    EngineeringDelegateInvocationException()
-    EngineeringDelegateInvocationException(text: str)
-    EngineeringDelegateInvocationException(text: str, exception: Exception)
+    Engineering Delegate Invocation Exception
+
+    EngineeringDelegateInvocationException()
+
+    EngineeringDelegateInvocationException(text: str)
+
+    EngineeringDelegateInvocationException(text: str, exception: Exception)
+
     EngineeringDelegateInvocationException(text: str, *detailTexts: Array[str])
     """
     SerializeObjectState = ...
@@ -502,7 +573,8 @@ class EngineeringInvocationInfo: # skipped bases: <type 'object'>, <type 'object
     @property
     def Name(self) -> str:
         """
-        Gets the name of the action.
+        Gets the name of the action.
+
         Get: Name(self: EngineeringInvocationInfo) -> str
         """
         ...
@@ -510,7 +582,8 @@ class EngineeringInvocationInfo: # skipped bases: <type 'object'>, <type 'object
     @property
     def ParameterInfos(self) -> IList:
         """
-        Gets the parameter info list.
+        Gets the parameter info list.
+
         Get: ParameterInfos(self: EngineeringInvocationInfo) -> IList[EngineeringInvocationParameterInfo]
         """
         ...
@@ -518,8 +591,10 @@ class EngineeringInvocationInfo: # skipped bases: <type 'object'>, <type 'object
 
     def ToString(self) -> str:
         """
-        ToString(self: EngineeringInvocationInfo) -> str
-            Returns a System.String that represents the current System.Object.
+        ToString(self: EngineeringInvocationInfo) -> str
+
+            Returns a System.String that represents the current System.Object.
+
             Returns: A System.String that represents the current System.Object.
         """
         ...
@@ -530,7 +605,8 @@ class EngineeringInvocationParameterInfo: # skipped bases: <type 'object'>, <typ
     @property
     def Name(self) -> str:
         """
-        Gets the name of the parameter.
+        Gets the name of the parameter.
+
         Get: Name(self: EngineeringInvocationParameterInfo) -> str
         """
         ...
@@ -538,7 +614,8 @@ class EngineeringInvocationParameterInfo: # skipped bases: <type 'object'>, <typ
     @property
     def Type(self) -> Type:
         """
-        Gets the type of the parameter.
+        Gets the type of the parameter.
+
         Get: Type(self: EngineeringInvocationParameterInfo) -> Type
         """
         ...
@@ -546,8 +623,10 @@ class EngineeringInvocationParameterInfo: # skipped bases: <type 'object'>, <typ
 
     def ToString(self) -> str:
         """
-        ToString(self: EngineeringInvocationParameterInfo) -> str
-            Returns a System.String that represents the current System.Object.
+        ToString(self: EngineeringInvocationParameterInfo) -> str
+
+            Returns a System.String that represents the current System.Object.
+
             Returns: A System.String that represents the current System.Object.
         """
         ...
@@ -555,10 +634,14 @@ class EngineeringInvocationParameterInfo: # skipped bases: <type 'object'>, <typ
 
 class EngineeringNotSupportedException(EngineeringException): # skipped bases: <type 'ISerializable'>, <type '_Exception'>, <type 'object'>
     """
-    Engineering Not Supported Exception
-    EngineeringNotSupportedException()
-    EngineeringNotSupportedException(text: str)
-    EngineeringNotSupportedException(text: str, exception: Exception)
+    Engineering Not Supported Exception
+
+    EngineeringNotSupportedException()
+
+    EngineeringNotSupportedException(text: str)
+
+    EngineeringNotSupportedException(text: str, exception: Exception)
+
     EngineeringNotSupportedException(text: str, *detailTexts: Array[str])
     """
     SerializeObjectState = ...
@@ -566,10 +649,14 @@ class EngineeringNotSupportedException(EngineeringException): # skipped bases: <
 
 class EngineeringObjectDisposedException(EngineeringException): # skipped bases: <type 'ISerializable'>, <type '_Exception'>, <type 'object'>
     """
-    Engineering Object Disposed Exception
-    EngineeringObjectDisposedException()
-    EngineeringObjectDisposedException(text: str)
-    EngineeringObjectDisposedException(text: str, exception: Exception)
+    Engineering Object Disposed Exception
+
+    EngineeringObjectDisposedException()
+
+    EngineeringObjectDisposedException(text: str)
+
+    EngineeringObjectDisposedException(text: str, exception: Exception)
+
     EngineeringObjectDisposedException(text: str, *detailTexts: Array[str])
     """
     SerializeObjectState = ...
@@ -577,10 +664,14 @@ class EngineeringObjectDisposedException(EngineeringException): # skipped bases:
 
 class EngineeringOutOfMemoryException(EngineeringException): # skipped bases: <type 'ISerializable'>, <type '_Exception'>, <type 'object'>
     """
-    Engineering Out Of Memory Exception
-    EngineeringOutOfMemoryException()
-    EngineeringOutOfMemoryException(text: str)
-    EngineeringOutOfMemoryException(text: str, exception: Exception)
+    Engineering Out Of Memory Exception
+
+    EngineeringOutOfMemoryException()
+
+    EngineeringOutOfMemoryException(text: str)
+
+    EngineeringOutOfMemoryException(text: str, exception: Exception)
+
     EngineeringOutOfMemoryException(text: str, *detailTexts: Array[str])
     """
     SerializeObjectState = ...
@@ -588,10 +679,14 @@ class EngineeringOutOfMemoryException(EngineeringException): # skipped bases: <t
 
 class EngineeringRuntimeException(EngineeringException): # skipped bases: <type 'ISerializable'>, <type '_Exception'>, <type 'object'>
     """
-    Engineering Runtime Exception
-    EngineeringRuntimeException()
-    EngineeringRuntimeException(text: str)
-    EngineeringRuntimeException(text: str, exception: Exception)
+    Engineering Runtime Exception
+
+    EngineeringRuntimeException()
+
+    EngineeringRuntimeException(text: str)
+
+    EngineeringRuntimeException(text: str, exception: Exception)
+
     EngineeringRuntimeException(text: str, *detailTexts: Array[str])
     """
     SerializeObjectState = ...
@@ -599,10 +694,14 @@ class EngineeringRuntimeException(EngineeringException): # skipped bases: <type 
 
 class EngineeringSecurityException(EngineeringException): # skipped bases: <type 'ISerializable'>, <type '_Exception'>, <type 'object'>
     """
-    Engineering Security Exception
-    EngineeringSecurityException()
-    EngineeringSecurityException(text: str)
-    EngineeringSecurityException(text: str, exception: Exception)
+    Engineering Security Exception
+
+    EngineeringSecurityException()
+
+    EngineeringSecurityException(text: str)
+
+    EngineeringSecurityException(text: str, exception: Exception)
+
     EngineeringSecurityException(text: str, *detailTexts: Array[str])
     """
     SerializeObjectState = ...
@@ -613,7 +712,8 @@ class EngineeringServiceInfo: # skipped bases: <type 'object'>, <type 'object'>
     @property
     def Type(self) -> Type:
         """
-        Gets the name of the action.
+        Gets the name of the action.
+
         Get: Type(self: EngineeringServiceInfo) -> Type
         """
         ...
@@ -621,8 +721,10 @@ class EngineeringServiceInfo: # skipped bases: <type 'object'>, <type 'object'>
 
     def ToString(self) -> str:
         """
-        ToString(self: EngineeringServiceInfo) -> str
-            Returns a System.String that represents the current System.Object.
+        ToString(self: EngineeringServiceInfo) -> str
+
+            Returns a System.String that represents the current System.Object.
+
             Returns: A System.String that represents the current System.Object.
         """
         ...
@@ -630,10 +732,14 @@ class EngineeringServiceInfo: # skipped bases: <type 'object'>, <type 'object'>
 
 class EngineeringUserAbortException(EngineeringTargetInvocationException): # skipped bases: <type 'ISerializable'>, <type '_Exception'>, <type 'object'>
     """
-    Engineering User Abort Exception
-    EngineeringUserAbortException()
-    EngineeringUserAbortException(text: str)
-    EngineeringUserAbortException(text: str, exception: Exception)
+    Engineering User Abort Exception
+
+    EngineeringUserAbortException()
+
+    EngineeringUserAbortException(text: str)
+
+    EngineeringUserAbortException(text: str, exception: Exception)
+
     EngineeringUserAbortException(text: str, *detailTexts: Array[str])
     """
     SerializeObjectState = ...
@@ -644,7 +750,8 @@ class ExceptionMessageData: # skipped bases: <type 'object'>, <type 'object'>
     @property
     def DetailText(self) -> str:
         """
-        Gets the detail text.
+        Gets the detail text.
+
         Get: DetailText(self: ExceptionMessageData) -> str
         """
         ...
@@ -652,7 +759,8 @@ class ExceptionMessageData: # skipped bases: <type 'object'>, <type 'object'>
     @property
     def Text(self) -> str:
         """
-        Gets the text.
+        Gets the text.
+
         Get: Text(self: ExceptionMessageData) -> str
         """
         ...
@@ -660,8 +768,10 @@ class ExceptionMessageData: # skipped bases: <type 'object'>, <type 'object'>
 
     def ToString(self) -> str:
         """
-        ToString(self: ExceptionMessageData) -> str
-            Returns a System.String that represents the current System.Object.
+        ToString(self: ExceptionMessageData) -> str
+
+            Returns a System.String that represents the current System.Object.
+
             Returns: A System.String that represents the current System.Object.
         """
         ...
@@ -672,7 +782,8 @@ class ExclusiveAccess(IEquatable, IEngineeringObject, IDisposable, IInternalObje
     @property
     def IsCancellationRequested(self) -> bool:
         """
-        Indication if the user has requested a cancellation of the exclusive access session
+        Indication if the user has requested a cancellation of the exclusive access session
+
         Get: IsCancellationRequested(self: ExclusiveAccess) -> bool
         """
         ...
@@ -680,7 +791,8 @@ class ExclusiveAccess(IEquatable, IEngineeringObject, IDisposable, IInternalObje
     @property
     def Parent(self) -> IEngineeringObject:
         """
-        EOM parent of this object
+        EOM parent of this object
+
         Get: Parent(self: ExclusiveAccess) -> IEngineeringObject
         """
         ...
@@ -688,8 +800,10 @@ class ExclusiveAccess(IEquatable, IEngineeringObject, IDisposable, IInternalObje
     @property
     def Text(self) -> str:
         """
-        The information to display while an exclusive access session is active
-        Get: Text(self: ExclusiveAccess) -> str
+        The information to display while an exclusive access session is active
+
+        Get: Text(self: ExclusiveAccess) -> str
+
         Set: Text(self: ExclusiveAccess) = value
         """
         ...
@@ -697,26 +811,34 @@ class ExclusiveAccess(IEquatable, IEngineeringObject, IDisposable, IInternalObje
 
     def GetHashCode(self) -> int:
         """
-        GetHashCode(self: ExclusiveAccess) -> int
-            Returns a hash code for this instance.
+        GetHashCode(self: ExclusiveAccess) -> int
+
+            Returns a hash code for this instance.
+
             Returns: A hash code for this instance, suitable for use in hashing algorithms and data structures like a hash table.
         """
         ...
 
     def ToString(self) -> str:
         """
-        ToString(self: ExclusiveAccess) -> str
-            Returns a System.String that represents the current System.Object.
+        ToString(self: ExclusiveAccess) -> str
+
+            Returns a System.String that represents the current System.Object.
+
             Returns: A System.String that represents the current System.Object.
         """
         ...
 
     def Transaction(self, peristence:ITransactionSupport, undoDescription:str) -> Transaction:
         """
-        Transaction(self: ExclusiveAccess, peristence: ITransactionSupport, undoDescription: str) -> Transaction
-            Acquires a transaction instance from the active exclusive access session
-            peristence: The persistence where the transaction is to be created
-            undoDescription: The description of the undo unit that is created for the open transaction
+        Transaction(self: ExclusiveAccess, peristence: ITransactionSupport, undoDescription: str) -> Transaction
+
+            Acquires a transaction instance from the active exclusive access session
+
+            peristence: The persistence where the transaction is to be created
+
+            undoDescription: The description of the undo unit that is created for the open transaction
+
             Returns: Siemens.Engineering.Transaction
         """
         ...
@@ -727,7 +849,8 @@ class ExclusiveAccess(IEquatable, IEngineeringObject, IDisposable, IInternalObje
 
 class ExportOptions(Enum): # skipped bases: <type 'IConvertible'>, <type 'IComparable'>, <type 'IFormattable'>, <type 'object'>
     """
-    The list of possible scenarios supported by export action parameterization
+    The list of possible scenarios supported by export action parameterization
+
     enum (flags) ExportOptions, values: None (0), WithDefaults (1), WithReadOnly (2)
     """
     value__ = ...
@@ -737,10 +860,14 @@ class ExportOptions(Enum): # skipped bases: <type 'IConvertible'>, <type 'ICompa
 
 class FunctionRightNotFoundException(EngineeringTargetInvocationException): # skipped bases: <type 'ISerializable'>, <type '_Exception'>, <type 'object'>
     """
-    Throws when a user who does not have required function right(s) to invoke an Openness API on a protected project
-    FunctionRightNotFoundException()
-    FunctionRightNotFoundException(text: str)
-    FunctionRightNotFoundException(text: str, exception: Exception)
+    Throws when a user who does not have required function right(s) to invoke an Openness API on a protected project
+
+    FunctionRightNotFoundException()
+
+    FunctionRightNotFoundException(text: str)
+
+    FunctionRightNotFoundException(text: str, exception: Exception)
+
     FunctionRightNotFoundException(text: str, *detailTexts: Array[str])
     """
     SerializeObjectState = ...
@@ -751,7 +878,8 @@ class HistoryEntry(IEquatable, IEngineeringObject, IInternalObjectAccess): # ski
     @property
     def DateTime(self) -> DateTime:
         """
-        The time when the event occurred
+        The time when the event occurred
+
         Get: DateTime(self: HistoryEntry) -> DateTime
         """
         ...
@@ -759,7 +887,8 @@ class HistoryEntry(IEquatable, IEngineeringObject, IInternalObjectAccess): # ski
     @property
     def Parent(self) -> IEngineeringObject:
         """
-        EOM parent of this object
+        EOM parent of this object
+
         Get: Parent(self: HistoryEntry) -> IEngineeringObject
         """
         ...
@@ -767,7 +896,8 @@ class HistoryEntry(IEquatable, IEngineeringObject, IInternalObjectAccess): # ski
     @property
     def Text(self) -> str:
         """
-        The event description
+        The event description
+
         Get: Text(self: HistoryEntry) -> str
         """
         ...
@@ -775,16 +905,20 @@ class HistoryEntry(IEquatable, IEngineeringObject, IInternalObjectAccess): # ski
 
     def GetHashCode(self) -> int:
         """
-        GetHashCode(self: HistoryEntry) -> int
-            Returns a hash code for this instance.
+        GetHashCode(self: HistoryEntry) -> int
+
+            Returns a hash code for this instance.
+
             Returns: A hash code for this instance, suitable for use in hashing algorithms and data structures like a hash table.
         """
         ...
 
     def ToString(self) -> str:
         """
-        ToString(self: HistoryEntry) -> str
-            Returns a System.String that represents the current System.Object.
+        ToString(self: HistoryEntry) -> str
+
+            Returns a System.String that represents the current System.Object.
+
             Returns: A System.String that represents the current System.Object.
         """
         ...
@@ -798,7 +932,8 @@ class IEngineeringComposition(IEngineeringCompositionOrObject, IEnumerable): # s
     @property
     def Count(self) -> int:
         """
-        Gets the number of elements contained within this Composition.
+        Gets the number of elements contained within this Composition.
+
         Get: Count(self: IEngineeringComposition) -> int
         """
         ...
@@ -806,7 +941,8 @@ class IEngineeringComposition(IEngineeringCompositionOrObject, IEnumerable): # s
     @property
     def IsReadOnly(self) -> bool:
         """
-        Gets a value indicating whether this Composition was instantiated as ReadOnly.
+        Gets a value indicating whether this Composition was instantiated as ReadOnly.
+
         Get: IsReadOnly(self: IEngineeringComposition) -> bool
         """
         ...
@@ -814,9 +950,12 @@ class IEngineeringComposition(IEngineeringCompositionOrObject, IEnumerable): # s
 
     def Contains(self, item:IEngineeringObject) -> bool:
         """
-        Contains(self: IEngineeringComposition, item: IEngineeringObject) -> bool
-            Determines if item is contained within.
-            item: The item being sought.
+        Contains(self: IEngineeringComposition, item: IEngineeringObject) -> bool
+
+            Determines if item is contained within.
+
+            item: The item being sought.
+
             Returns: true if item is contained within; otherwise false.
         """
         ...
@@ -827,25 +966,32 @@ class IEngineeringComposition(IEngineeringCompositionOrObject, IEnumerable): # s
 
     def GetCreationInfos(self) -> IList:
         """
-        GetCreationInfos(self: IEngineeringComposition) -> IList[EngineeringCreationInfo]
-            Gets the collection of EngineeringCreateInfo objects describing the different CreateInfos on this object.
+        GetCreationInfos(self: IEngineeringComposition) -> IList[EngineeringCreationInfo]
+
+            Gets the collection of EngineeringCreateInfo objects describing the different CreateInfos on this object.
+
             Returns: The collection of EngineeringCreationInfo objects
         """
         ...
 
     def GetInvocationInfos(self) -> IList:
         """
-        GetInvocationInfos(self: IEngineeringComposition) -> IList[EngineeringInvocationInfo]
-            Returns a collection of EngineeringInvocationInfo objects describing the different actions on this object.
+        GetInvocationInfos(self: IEngineeringComposition) -> IList[EngineeringInvocationInfo]
+
+            Returns a collection of EngineeringInvocationInfo objects describing the different actions on this object.
+
             Returns: A collection of EngineeringInvocationInfo objects describing the different actions on this object.
         """
         ...
 
     def IndexOf(self, item:IEngineeringObject) -> int:
         """
-        IndexOf(self: IEngineeringComposition, item: IEngineeringObject) -> int
-            Searches for item and returns the zero-based index of the first occurrence within.
-            item: The item for which an index is sought.
+        IndexOf(self: IEngineeringComposition, item: IEngineeringObject) -> int
+
+            Searches for item and returns the zero-based index of the first occurrence within.
+
+            item: The item for which an index is sought.
+
             Returns: The element at the specified item.
         """
         ...
@@ -864,7 +1010,8 @@ class HistoryEntryComposition(IInternalCompositionAccess, IEngineeringCompositio
     @property
     def Parent(self) -> IEngineeringObject:
         """
-        Gets the parent.
+        Gets the parent.
+
         Get: Parent(self: HistoryEntryComposition) -> IEngineeringObject
         """
         ...
@@ -872,16 +1019,20 @@ class HistoryEntryComposition(IInternalCompositionAccess, IEngineeringCompositio
 
     def GetHashCode(self) -> int:
         """
-        GetHashCode(self: HistoryEntryComposition) -> int
-            Returns a hash code for this instance.
+        GetHashCode(self: HistoryEntryComposition) -> int
+
+            Returns a hash code for this instance.
+
             Returns: A hash code for this instance, suitable for use in hashing algorithms and data structures like a hash table.
         """
         ...
 
     def ToString(self) -> str:
         """
-        ToString(self: HistoryEntryComposition) -> str
-            Returns a System.String that represents the current System.Object.
+        ToString(self: HistoryEntryComposition) -> str
+
+            Returns a System.String that represents the current System.Object.
+
             Returns: A System.String that represents the current System.Object.
         """
         ...
@@ -899,7 +1050,8 @@ class IEngineeringAssociation(IEngineeringInstance, IEnumerable): # skipped base
     @property
     def Count(self) -> int:
         """
-        Gets the number of elements contained within this association.
+        Gets the number of elements contained within this association.
+
         Get: Count(self: IEngineeringAssociation) -> int
         """
         ...
@@ -907,7 +1059,8 @@ class IEngineeringAssociation(IEngineeringInstance, IEnumerable): # skipped base
     @property
     def IsReadOnly(self) -> bool:
         """
-        Gets a value indicating whether this association was instantiated as ReadOnly.
+        Gets a value indicating whether this association was instantiated as ReadOnly.
+
         Get: IsReadOnly(self: IEngineeringAssociation) -> bool
         """
         ...
@@ -915,26 +1068,34 @@ class IEngineeringAssociation(IEngineeringInstance, IEnumerable): # skipped base
 
     def Contains(self, item:IEngineeringObject) -> bool:
         """
-        Contains(self: IEngineeringAssociation, item: IEngineeringObject) -> bool
-            Determines if item is contained within.
-            item: The item being sought.
+        Contains(self: IEngineeringAssociation, item: IEngineeringObject) -> bool
+
+            Determines if item is contained within.
+
+            item: The item being sought.
+
             Returns: true if item is contained within; otherwise false.
         """
         ...
 
     def GetInvocationInfos(self) -> IList:
         """
-        GetInvocationInfos(self: IEngineeringAssociation) -> IList[EngineeringInvocationInfo]
-            Returns a collection of EngineeringInvocationInfo objects describing the different actions on this object.
+        GetInvocationInfos(self: IEngineeringAssociation) -> IList[EngineeringInvocationInfo]
+
+            Returns a collection of EngineeringInvocationInfo objects describing the different actions on this object.
+
             Returns: A collection of EngineeringInvocationInfo objects describing the different actions on this object.
         """
         ...
 
     def IndexOf(self, item:IEngineeringObject) -> int:
         """
-        IndexOf(self: IEngineeringAssociation, item: IEngineeringObject) -> int
-            Searches for item and returns the zero-based index of the first occurrence within.
-            item: The item for which an index is sought.
+        IndexOf(self: IEngineeringAssociation, item: IEngineeringObject) -> int
+
+            Searches for item and returns the zero-based index of the first occurrence within.
+
+            item: The item for which an index is sought.
+
             Returns: The element at the specified item.
         """
         ...
@@ -953,7 +1114,8 @@ class IEngineeringObjectAssociation(IEquatable, IEngineeringAssociation, IIntern
     @property
     def Parent(self) -> IEngineeringObject:
         """
-        Gets the parent..
+        Gets the parent..
+
         Get: Parent(self: IEngineeringObjectAssociation) -> IEngineeringObject
         """
         ...
@@ -961,16 +1123,20 @@ class IEngineeringObjectAssociation(IEquatable, IEngineeringAssociation, IIntern
 
     def GetHashCode(self) -> int:
         """
-        GetHashCode(self: IEngineeringObjectAssociation) -> int
-            Returns a hash code for this instance.
+        GetHashCode(self: IEngineeringObjectAssociation) -> int
+
+            Returns a hash code for this instance.
+
             Returns: A hash code for this instance, suitable for use in hashing algorithms and data structures like a hash table.
         """
         ...
 
     def ToString(self) -> str:
         """
-        ToString(self: IEngineeringObjectAssociation) -> str
-            Returns a System.String that represents the current System.Object.
+        ToString(self: IEngineeringObjectAssociation) -> str
+
+            Returns a System.String that represents the current System.Object.
+
             Returns: A System.String that represents the current System.Object.
         """
         ...
@@ -995,8 +1161,10 @@ class IEngineeringServiceProvider(IServiceProvider): # skipped bases: <type 'obj
     """ IEngineeringServiceProvider """
     def GetServiceInfos(self) -> IList:
         """
-        GetServiceInfos(self: IEngineeringServiceProvider) -> IList[EngineeringServiceInfo]
-            Returns a collection of EngineeringServiceInfo objects describing the different services on this object.
+        GetServiceInfos(self: IEngineeringServiceProvider) -> IList[EngineeringServiceInfo]
+
+            Returns a collection of EngineeringServiceInfo objects describing the different services on this object.
+
             Returns: A collection of EngineeringServiceInfo objects describing the different services on this object.
         """
         ...
@@ -1004,7 +1172,8 @@ class IEngineeringServiceProvider(IServiceProvider): # skipped bases: <type 'obj
 
 class ImportOptions(Enum): # skipped bases: <type 'IConvertible'>, <type 'IComparable'>, <type 'IFormattable'>, <type 'object'>
     """
-    The list of possible options for Import
+    The list of possible options for Import
+
     enum (flags) ImportOptions, values: None (0), Override (1)
     """
     Override: ImportOptions = ...
@@ -1013,9 +1182,10 @@ class ImportOptions(Enum): # skipped bases: <type 'IConvertible'>, <type 'ICompa
 
 class IShowable: # skipped bases: <type 'object'>
     """ Access to Showable attributes """
-    def ShowInEditor(self): # -> 
+    def ShowInEditor(self): # ->
         """
-        ShowInEditor(self: IShowable)
+        ShowInEditor(self: IShowable)
+
             Flag to indicate to show in the editor
         """
         ...
@@ -1026,7 +1196,8 @@ class ISystemObject: # skipped bases: <type 'object'>
     @property
     def IsSystemObject(self) -> bool:
         """
-        Indicates if this instance is a system object
+        Indicates if this instance is a system object
+
         Get: IsSystemObject(self: ISystemObject) -> bool
         """
         ...
@@ -1042,7 +1213,8 @@ class Language(IEquatable, IEngineeringObject, IInternalObjectAccess): # skipped
     @property
     def Culture(self) -> CultureInfo:
         """
-        The culture info object
+        The culture info object
+
         Get: Culture(self: Language) -> CultureInfo
         """
         ...
@@ -1050,7 +1222,8 @@ class Language(IEquatable, IEngineeringObject, IInternalObjectAccess): # skipped
     @property
     def Parent(self) -> IEngineeringObject:
         """
-        EOM parent of this object
+        EOM parent of this object
+
         Get: Parent(self: Language) -> IEngineeringObject
         """
         ...
@@ -1058,16 +1231,20 @@ class Language(IEquatable, IEngineeringObject, IInternalObjectAccess): # skipped
 
     def GetHashCode(self) -> int:
         """
-        GetHashCode(self: Language) -> int
-            Returns a hash code for this instance.
+        GetHashCode(self: Language) -> int
+
+            Returns a hash code for this instance.
+
             Returns: A hash code for this instance, suitable for use in hashing algorithms and data structures like a hash table.
         """
         ...
 
     def ToString(self) -> str:
         """
-        ToString(self: Language) -> str
-            Returns a System.String that represents the current System.Object.
+        ToString(self: Language) -> str
+
+            Returns a System.String that represents the current System.Object.
+
             Returns: A System.String that represents the current System.Object.
         """
         ...
@@ -1081,50 +1258,63 @@ class LanguageAssociation(IEquatable, IEngineeringAssociation, IInternalAssociat
     @property
     def Parent(self) -> IEngineeringObject:
         """
-        Gets the parent..
+        Gets the parent..
+
         Get: Parent(self: LanguageAssociation) -> IEngineeringObject
         """
         ...
 
 
-    def Add(self, item:Language): # -> 
+    def Add(self, item:Language): # ->
         """
-        Add(self: LanguageAssociation, item: Language)
-            Adds an item.
+        Add(self: LanguageAssociation, item: Language)
+
+            Adds an item.
+
             item: The item to be added.
         """
         ...
 
     def Find(self, culture:CultureInfo) -> Language:
         """
-        Find(self: LanguageAssociation, culture: CultureInfo) -> Language
-            Searches for a language by a given culture.
-            culture: Language culture
+        Find(self: LanguageAssociation, culture: CultureInfo) -> Language
+
+            Searches for a language by a given culture.
+
+            culture: Language culture
+
             Returns: Siemens.Engineering.Language
         """
         ...
 
     def GetHashCode(self) -> int:
         """
-        GetHashCode(self: LanguageAssociation) -> int
-            Returns a hash code for this instance.
+        GetHashCode(self: LanguageAssociation) -> int
+
+            Returns a hash code for this instance.
+
             Returns: A hash code for this instance, suitable for use in hashing algorithms and data structures like a hash table.
         """
         ...
 
     def Remove(self, item:Language) -> bool:
         """
-        Remove(self: LanguageAssociation, item: Language) -> bool
-            Removes an item.
-            item: The item to be removed.
+        Remove(self: LanguageAssociation, item: Language) -> bool
+
+            Removes an item.
+
+            item: The item to be removed.
+
             Returns: true if the item was removed; otherwise false.
         """
         ...
 
     def ToString(self) -> str:
         """
-        ToString(self: LanguageAssociation) -> str
-            Returns a System.String that represents the current System.Object.
+        ToString(self: LanguageAssociation) -> str
+
+            Returns a System.String that represents the current System.Object.
+
             Returns: A System.String that represents the current System.Object.
         """
         ...
@@ -1146,7 +1336,8 @@ class LanguageComposition(IInternalCompositionAccess, IEngineeringComposition, I
     @property
     def Parent(self) -> IEngineeringObject:
         """
-        Gets the parent.
+        Gets the parent.
+
         Get: Parent(self: LanguageComposition) -> IEngineeringObject
         """
         ...
@@ -1154,25 +1345,32 @@ class LanguageComposition(IInternalCompositionAccess, IEngineeringComposition, I
 
     def Find(self, culture:CultureInfo) -> Language:
         """
-        Find(self: LanguageComposition, culture: CultureInfo) -> Language
-            Searches for a language by a given culture.
-            culture: Language culture.
+        Find(self: LanguageComposition, culture: CultureInfo) -> Language
+
+            Searches for a language by a given culture.
+
+            culture: Language culture.
+
             Returns: Siemens.Engineering.Language
         """
         ...
 
     def GetHashCode(self) -> int:
         """
-        GetHashCode(self: LanguageComposition) -> int
-            Returns a hash code for this instance.
+        GetHashCode(self: LanguageComposition) -> int
+
+            Returns a hash code for this instance.
+
             Returns: A hash code for this instance, suitable for use in hashing algorithms and data structures like a hash table.
         """
         ...
 
     def ToString(self) -> str:
         """
-        ToString(self: LanguageComposition) -> str
-            Returns a System.String that represents the current System.Object.
+        ToString(self: LanguageComposition) -> str
+
+            Returns a System.String that represents the current System.Object.
+
             Returns: A System.String that represents the current System.Object.
         """
         ...
@@ -1190,7 +1388,8 @@ class LanguageSettings(IEquatable, IEngineeringObject, IInternalObjectAccess): #
     @property
     def ActiveLanguages(self) -> LanguageAssociation:
         """
-        The collection of active languages.
+        The collection of active languages.
+
         Get: ActiveLanguages(self: LanguageSettings) -> LanguageAssociation
         """
         ...
@@ -1198,8 +1397,10 @@ class LanguageSettings(IEquatable, IEngineeringObject, IInternalObjectAccess): #
     @property
     def EditingLanguage(self) -> Language:
         """
-        Represents an editing language.
-        Get: EditingLanguage(self: LanguageSettings) -> Language
+        Represents an editing language.
+
+        Get: EditingLanguage(self: LanguageSettings) -> Language
+
         Set: EditingLanguage(self: LanguageSettings) = value
         """
         ...
@@ -1207,7 +1408,8 @@ class LanguageSettings(IEquatable, IEngineeringObject, IInternalObjectAccess): #
     @property
     def Languages(self) -> LanguageComposition:
         """
-        The collection of all supported languages.
+        The collection of all supported languages.
+
         Get: Languages(self: LanguageSettings) -> LanguageComposition
         """
         ...
@@ -1215,7 +1417,8 @@ class LanguageSettings(IEquatable, IEngineeringObject, IInternalObjectAccess): #
     @property
     def Parent(self) -> IEngineeringObject:
         """
-        EOM parent of this object
+        EOM parent of this object
+
         Get: Parent(self: LanguageSettings) -> IEngineeringObject
         """
         ...
@@ -1223,8 +1426,10 @@ class LanguageSettings(IEquatable, IEngineeringObject, IInternalObjectAccess): #
     @property
     def ReferenceLanguage(self) -> Language:
         """
-        Represents a reference language.
-        Get: ReferenceLanguage(self: LanguageSettings) -> Language
+        Represents a reference language.
+
+        Get: ReferenceLanguage(self: LanguageSettings) -> Language
+
         Set: ReferenceLanguage(self: LanguageSettings) = value
         """
         ...
@@ -1232,16 +1437,20 @@ class LanguageSettings(IEquatable, IEngineeringObject, IInternalObjectAccess): #
 
     def GetHashCode(self) -> int:
         """
-        GetHashCode(self: LanguageSettings) -> int
-            Returns a hash code for this instance.
+        GetHashCode(self: LanguageSettings) -> int
+
+            Returns a hash code for this instance.
+
             Returns: A hash code for this instance, suitable for use in hashing algorithms and data structures like a hash table.
         """
         ...
 
     def ToString(self) -> str:
         """
-        ToString(self: LanguageSettings) -> str
-            Returns a System.String that represents the current System.Object.
+        ToString(self: LanguageSettings) -> str
+
+            Returns a System.String that represents the current System.Object.
+
             Returns: A System.String that represents the current System.Object.
         """
         ...
@@ -1255,7 +1464,8 @@ class MultilingualText(IEquatable, IEngineeringObject, IInternalObjectAccess): #
     @property
     def Items(self) -> MultilingualTextItemComposition:
         """
-        Contains a collection of multilingual text items.
+        Contains a collection of multilingual text items.
+
         Get: Items(self: MultilingualText) -> MultilingualTextItemComposition
         """
         ...
@@ -1263,7 +1473,8 @@ class MultilingualText(IEquatable, IEngineeringObject, IInternalObjectAccess): #
     @property
     def Parent(self) -> IEngineeringObject:
         """
-        EOM parent of this object
+        EOM parent of this object
+
         Get: Parent(self: MultilingualText) -> IEngineeringObject
         """
         ...
@@ -1271,16 +1482,20 @@ class MultilingualText(IEquatable, IEngineeringObject, IInternalObjectAccess): #
 
     def GetHashCode(self) -> int:
         """
-        GetHashCode(self: MultilingualText) -> int
-            Returns a hash code for this instance.
+        GetHashCode(self: MultilingualText) -> int
+
+            Returns a hash code for this instance.
+
             Returns: A hash code for this instance, suitable for use in hashing algorithms and data structures like a hash table.
         """
         ...
 
     def ToString(self) -> str:
         """
-        ToString(self: MultilingualText) -> str
-            Returns a System.String that represents the current System.Object.
+        ToString(self: MultilingualText) -> str
+
+            Returns a System.String that represents the current System.Object.
+
             Returns: A System.String that represents the current System.Object.
         """
         ...
@@ -1294,7 +1509,8 @@ class MultilingualTextItem(IEquatable, IEngineeringObject, IInternalObjectAccess
     @property
     def Language(self) -> Language:
         """
-        Represents language of this item.
+        Represents language of this item.
+
         Get: Language(self: MultilingualTextItem) -> Language
         """
         ...
@@ -1302,7 +1518,8 @@ class MultilingualTextItem(IEquatable, IEngineeringObject, IInternalObjectAccess
     @property
     def Parent(self) -> IEngineeringObject:
         """
-        EOM parent of this object
+        EOM parent of this object
+
         Get: Parent(self: MultilingualTextItem) -> IEngineeringObject
         """
         ...
@@ -1310,8 +1527,10 @@ class MultilingualTextItem(IEquatable, IEngineeringObject, IInternalObjectAccess
     @property
     def Text(self) -> str:
         """
-        Represents text content.
-        Get: Text(self: MultilingualTextItem) -> str
+        Represents text content.
+
+        Get: Text(self: MultilingualTextItem) -> str
+
         Set: Text(self: MultilingualTextItem) = value
         """
         ...
@@ -1319,16 +1538,20 @@ class MultilingualTextItem(IEquatable, IEngineeringObject, IInternalObjectAccess
 
     def GetHashCode(self) -> int:
         """
-        GetHashCode(self: MultilingualTextItem) -> int
-            Returns a hash code for this instance.
+        GetHashCode(self: MultilingualTextItem) -> int
+
+            Returns a hash code for this instance.
+
             Returns: A hash code for this instance, suitable for use in hashing algorithms and data structures like a hash table.
         """
         ...
 
     def ToString(self) -> str:
         """
-        ToString(self: MultilingualTextItem) -> str
-            Returns a System.String that represents the current System.Object.
+        ToString(self: MultilingualTextItem) -> str
+
+            Returns a System.String that represents the current System.Object.
+
             Returns: A System.String that represents the current System.Object.
         """
         ...
@@ -1342,7 +1565,8 @@ class MultilingualTextItemComposition(IInternalCompositionAccess, IEngineeringCo
     @property
     def Parent(self) -> IEngineeringObject:
         """
-        Gets the parent.
+        Gets the parent.
+
         Get: Parent(self: MultilingualTextItemComposition) -> IEngineeringObject
         """
         ...
@@ -1350,25 +1574,32 @@ class MultilingualTextItemComposition(IInternalCompositionAccess, IEngineeringCo
 
     def Find(self, language:Language) -> MultilingualTextItem:
         """
-        Find(self: MultilingualTextItemComposition, language: Language) -> MultilingualTextItem
-            Searches multilingual text item by language.
-            language: Language to find.
+        Find(self: MultilingualTextItemComposition, language: Language) -> MultilingualTextItem
+
+            Searches multilingual text item by language.
+
+            language: Language to find.
+
             Returns: Siemens.Engineering.MultilingualTextItem
         """
         ...
 
     def GetHashCode(self) -> int:
         """
-        GetHashCode(self: MultilingualTextItemComposition) -> int
-            Returns a hash code for this instance.
+        GetHashCode(self: MultilingualTextItemComposition) -> int
+
+            Returns a hash code for this instance.
+
             Returns: A hash code for this instance, suitable for use in hashing algorithms and data structures like a hash table.
         """
         ...
 
     def ToString(self) -> str:
         """
-        ToString(self: MultilingualTextItemComposition) -> str
-            Returns a System.String that represents the current System.Object.
+        ToString(self: MultilingualTextItemComposition) -> str
+
+            Returns a System.String that represents the current System.Object.
+
             Returns: A System.String that represents the current System.Object.
         """
         ...
@@ -1383,16 +1614,21 @@ class MultilingualTextItemComposition(IInternalCompositionAccess, IEngineeringCo
 
 class NonRecoverableException(Exception): # skipped bases: <type 'ISerializable'>, <type '_Exception'>, <type 'object'>
     """
-    Non Recoverable Exception.
-    NonRecoverableException()
-    NonRecoverableException(text: str)
-    NonRecoverableException(text: str, exception: Exception)
+    Non Recoverable Exception.
+
+    NonRecoverableException()
+
+    NonRecoverableException(text: str)
+
+    NonRecoverableException(text: str, exception: Exception)
+
     NonRecoverableException(text: str, *detailTexts: Array[str])
     """
     @property
     def DetailMessageData(self) -> IList:
         """
-        Gets the detail message data that describes the current exception.
+        Gets the detail message data that describes the current exception.
+
         Get: DetailMessageData(self: NonRecoverableException) -> IList[ExceptionMessageData]
         """
         ...
@@ -1400,7 +1636,8 @@ class NonRecoverableException(Exception): # skipped bases: <type 'ISerializable'
     @property
     def MessageData(self) -> ExceptionMessageData:
         """
-        Gets the message data that describes the current exception.
+        Gets the message data that describes the current exception.
+
         Get: MessageData(self: NonRecoverableException) -> ExceptionMessageData
         """
         ...
@@ -1414,7 +1651,8 @@ class NotificationEventArgs(IInternalObjectAccess, IEngineeringObject, IEquatabl
     @property
     def Caption(self) -> str:
         """
-        Gets the caption of the confirmation.
+        Gets the caption of the confirmation.
+
         Get: Caption(self: NotificationEventArgs) -> str
         """
         ...
@@ -1422,7 +1660,8 @@ class NotificationEventArgs(IInternalObjectAccess, IEngineeringObject, IEquatabl
     @property
     def DetailText(self) -> str:
         """
-        Gets the detail text of the confirmation.
+        Gets the detail text of the confirmation.
+
         Get: DetailText(self: NotificationEventArgs) -> str
         """
         ...
@@ -1430,7 +1669,8 @@ class NotificationEventArgs(IInternalObjectAccess, IEngineeringObject, IEquatabl
     @property
     def Icon(self) -> NotificationIcon:
         """
-        Gets the icon.
+        Gets the icon.
+
         Get: Icon(self: NotificationEventArgs) -> NotificationIcon
         """
         ...
@@ -1438,8 +1678,10 @@ class NotificationEventArgs(IInternalObjectAccess, IEngineeringObject, IEquatabl
     @property
     def IsHandled(self) -> bool:
         """
-        Gets or sets if the notification is handled.
-        Get: IsHandled(self: NotificationEventArgs) -> bool
+        Gets or sets if the notification is handled.
+
+        Get: IsHandled(self: NotificationEventArgs) -> bool
+
         Set: IsHandled(self: NotificationEventArgs) = value
         """
         ...
@@ -1447,7 +1689,8 @@ class NotificationEventArgs(IInternalObjectAccess, IEngineeringObject, IEquatabl
     @property
     def Parent(self) -> IEngineeringObject:
         """
-        EOM parent of this object
+        EOM parent of this object
+
         Get: Parent(self: NotificationEventArgs) -> IEngineeringObject
         """
         ...
@@ -1455,7 +1698,8 @@ class NotificationEventArgs(IInternalObjectAccess, IEngineeringObject, IEquatabl
     @property
     def Text(self) -> str:
         """
-        Gets the text of the notification.
+        Gets the text of the notification.
+
         Get: Text(self: NotificationEventArgs) -> str
         """
         ...
@@ -1463,16 +1707,20 @@ class NotificationEventArgs(IInternalObjectAccess, IEngineeringObject, IEquatabl
 
     def GetHashCode(self) -> int:
         """
-        GetHashCode(self: NotificationEventArgs) -> int
-            Returns a hash code for this instance.
+        GetHashCode(self: NotificationEventArgs) -> int
+
+            Returns a hash code for this instance.
+
             Returns: A hash code for this instance, suitable for use in hashing algorithms and data structures like a hash table.
         """
         ...
 
     def ToString(self) -> str:
         """
-        ToString(self: NotificationEventArgs) -> str
-            Returns a System.String that represents the current System.Object.
+        ToString(self: NotificationEventArgs) -> str
+
+            Returns a System.String that represents the current System.Object.
+
             Returns: A System.String that represents the current System.Object.
         """
         ...
@@ -1486,7 +1734,8 @@ class NotificationEventArgs(IInternalObjectAccess, IEngineeringObject, IEquatabl
 
 class NotificationIcon(Enum): # skipped bases: <type 'IConvertible'>, <type 'IComparable'>, <type 'IFormattable'>, <type 'object'>
     """
-    The list of possible notification icons
+    The list of possible notification icons
+
     enum NotificationIcon, values: Error (3), Information (1), Success (0), Warning (2)
     """
     Error: NotificationIcon = ...
@@ -1498,7 +1747,8 @@ class NotificationIcon(Enum): # skipped bases: <type 'IConvertible'>, <type 'ICo
 
 class OpenMode(Enum): # skipped bases: <type 'IConvertible'>, <type 'IComparable'>, <type 'IFormattable'>, <type 'object'>
     """
-    The modification state of an item being opened.
+    The modification state of an item being opened.
+
     enum OpenMode, values: ReadOnly (0), ReadWrite (1)
     """
     ReadOnly: OpenMode = ...
@@ -1511,7 +1761,8 @@ class Project(IInternalObjectAccess, ITransactionSupport, IEngineeringServicePro
     @property
     def Author(self) -> str:
         """
-        Author of the project
+        Author of the project
+
         Get: Author(self: Project) -> str
         """
         ...
@@ -1519,7 +1770,8 @@ class Project(IInternalObjectAccess, ITransactionSupport, IEngineeringServicePro
     @property
     def Comment(self) -> MultilingualText:
         """
-        The project's comment
+        The project's comment
+
         Get: Comment(self: Project) -> MultilingualText
         """
         ...
@@ -1527,7 +1779,8 @@ class Project(IInternalObjectAccess, ITransactionSupport, IEngineeringServicePro
     @property
     def Copyright(self) -> str:
         """
-        Project copyright information
+        Project copyright information
+
         Get: Copyright(self: Project) -> str
         """
         ...
@@ -1535,7 +1788,8 @@ class Project(IInternalObjectAccess, ITransactionSupport, IEngineeringServicePro
     @property
     def CreationTime(self) -> DateTime:
         """
-        The creation time of the project
+        The creation time of the project
+
         Get: CreationTime(self: Project) -> DateTime
         """
         ...
@@ -1543,7 +1797,8 @@ class Project(IInternalObjectAccess, ITransactionSupport, IEngineeringServicePro
     @property
     def DeviceGroups(self) -> DeviceUserGroupComposition:
         """
-        Composition of device user groups
+        Composition of device user groups
+
         Get: DeviceGroups(self: Project) -> DeviceUserGroupComposition
         """
         ...
@@ -1551,7 +1806,8 @@ class Project(IInternalObjectAccess, ITransactionSupport, IEngineeringServicePro
     @property
     def Devices(self) -> DeviceComposition:
         """
-        Composition of devices
+        Composition of devices
+
         Get: Devices(self: Project) -> DeviceComposition
         """
         ...
@@ -1559,7 +1815,8 @@ class Project(IInternalObjectAccess, ITransactionSupport, IEngineeringServicePro
     @property
     def Family(self) -> str:
         """
-        The project family
+        The project family
+
         Get: Family(self: Project) -> str
         """
         ...
@@ -1567,7 +1824,8 @@ class Project(IInternalObjectAccess, ITransactionSupport, IEngineeringServicePro
     @property
     def Graphics(self) -> MultiLingualGraphicComposition:
         """
-        Composition of graphics
+        Composition of graphics
+
         Get: Graphics(self: Project) -> MultiLingualGraphicComposition
         """
         ...
@@ -1575,7 +1833,8 @@ class Project(IInternalObjectAccess, ITransactionSupport, IEngineeringServicePro
     @property
     def HistoryEntries(self) -> HistoryEntryComposition:
         """
-        Contains log of project history events
+        Contains log of project history events
+
         Get: HistoryEntries(self: Project) -> HistoryEntryComposition
         """
         ...
@@ -1583,7 +1842,8 @@ class Project(IInternalObjectAccess, ITransactionSupport, IEngineeringServicePro
     @property
     def HwUtilities(self) -> HardwareUtilityComposition:
         """
-        Composition of HW extensions
+        Composition of HW extensions
+
         Get: HwUtilities(self: Project) -> HardwareUtilityComposition
         """
         ...
@@ -1591,7 +1851,8 @@ class Project(IInternalObjectAccess, ITransactionSupport, IEngineeringServicePro
     @property
     def IsModified(self) -> bool:
         """
-        True if there are unsaved changes to the project
+        True if there are unsaved changes to the project
+
         Get: IsModified(self: Project) -> bool
         """
         ...
@@ -1599,7 +1860,8 @@ class Project(IInternalObjectAccess, ITransactionSupport, IEngineeringServicePro
     @property
     def IsPrimary(self) -> bool:
         """
-        Indicates whether the project is the primary project
+        Indicates whether the project is the primary project
+
         Get: IsPrimary(self: Project) -> bool
         """
         ...
@@ -1607,7 +1869,8 @@ class Project(IInternalObjectAccess, ITransactionSupport, IEngineeringServicePro
     @property
     def LanguageSettings(self) -> LanguageSettings:
         """
-        Project's language settings.
+        Project's language settings.
+
         Get: LanguageSettings(self: Project) -> LanguageSettings
         """
         ...
@@ -1615,7 +1878,8 @@ class Project(IInternalObjectAccess, ITransactionSupport, IEngineeringServicePro
     @property
     def LastModified(self) -> DateTime:
         """
-        The time of the last modification of the project
+        The time of the last modification of the project
+
         Get: LastModified(self: Project) -> DateTime
         """
         ...
@@ -1623,7 +1887,8 @@ class Project(IInternalObjectAccess, ITransactionSupport, IEngineeringServicePro
     @property
     def LastModifiedBy(self) -> str:
         """
-        The project was last modified by this user.
+        The project was last modified by this user.
+
         Get: LastModifiedBy(self: Project) -> str
         """
         ...
@@ -1631,7 +1896,8 @@ class Project(IInternalObjectAccess, ITransactionSupport, IEngineeringServicePro
     @property
     def Name(self) -> str:
         """
-        The name of the project
+        The name of the project
+
         Get: Name(self: Project) -> str
         """
         ...
@@ -1639,7 +1905,8 @@ class Project(IInternalObjectAccess, ITransactionSupport, IEngineeringServicePro
     @property
     def Parent(self) -> IEngineeringObject:
         """
-        EOM parent of this object
+        EOM parent of this object
+
         Get: Parent(self: Project) -> IEngineeringObject
         """
         ...
@@ -1647,7 +1914,8 @@ class Project(IInternalObjectAccess, ITransactionSupport, IEngineeringServicePro
     @property
     def Path(self) -> FileInfo:
         """
-        The path to this project
+        The path to this project
+
         Get: Path(self: Project) -> FileInfo
         """
         ...
@@ -1655,7 +1923,8 @@ class Project(IInternalObjectAccess, ITransactionSupport, IEngineeringServicePro
     @property
     def ProjectLibrary(self) -> ProjectLibrary:
         """
-        Gets the project library
+        Gets the project library
+
         Get: ProjectLibrary(self: Project) -> ProjectLibrary
         """
         ...
@@ -1663,7 +1932,8 @@ class Project(IInternalObjectAccess, ITransactionSupport, IEngineeringServicePro
     @property
     def Size(self) -> Int64:
         """
-        The size of the project in KB
+        The size of the project in KB
+
         Get: Size(self: Project) -> Int64
         """
         ...
@@ -1671,7 +1941,8 @@ class Project(IInternalObjectAccess, ITransactionSupport, IEngineeringServicePro
     @property
     def Subnets(self) -> SubnetComposition:
         """
-        Composition of Subnets
+        Composition of Subnets
+
         Get: Subnets(self: Project) -> SubnetComposition
         """
         ...
@@ -1679,7 +1950,8 @@ class Project(IInternalObjectAccess, ITransactionSupport, IEngineeringServicePro
     @property
     def UngroupedDevicesGroup(self) -> DeviceSystemGroup:
         """
-        Gets the devices system group
+        Gets the devices system group
+
         Get: UngroupedDevicesGroup(self: Project) -> DeviceSystemGroup
         """
         ...
@@ -1687,7 +1959,8 @@ class Project(IInternalObjectAccess, ITransactionSupport, IEngineeringServicePro
     @property
     def UsedProducts(self) -> UsedProductComposition:
         """
-        Composition of used products in the project
+        Composition of used products in the project
+
         Get: UsedProducts(self: Project) -> UsedProductComposition
         """
         ...
@@ -1695,84 +1968,107 @@ class Project(IInternalObjectAccess, ITransactionSupport, IEngineeringServicePro
     @property
     def Version(self) -> str:
         """
-        The version of this project
+        The version of this project
+
         Get: Version(self: Project) -> str
         """
         ...
 
 
-    def Archive(self, targetDirectory:DirectoryInfo, targetName:str, archivationMode:ProjectArchivationMode): # -> 
+    def Archive(self, targetDirectory:DirectoryInfo, targetName:str, archivationMode:ProjectArchivationMode): # ->
         """
-        Archive(self: Project, targetDirectory: DirectoryInfo, targetName: str, archivationMode: ProjectArchivationMode)
-            Archives the current project
-            targetDirectory: Directory where the project to be archived
-            targetName: File name for the archived file
+        Archive(self: Project, targetDirectory: DirectoryInfo, targetName: str, archivationMode: ProjectArchivationMode)
+
+            Archives the current project
+
+            targetDirectory: Directory where the project to be archived
+
+            targetName: File name for the archived file
+
             archivationMode: Archivation mode
         """
         ...
 
-    def Close(self): # -> 
+    def Close(self): # ->
         """
-        Close(self: Project)
+        Close(self: Project)
+
             Closes the project
         """
         ...
 
-    def ExportProjectTexts(self, path:FileInfo, sourceLanguage:CultureInfo, targetLanguage:CultureInfo): # -> 
+    def ExportProjectTexts(self, path:FileInfo, sourceLanguage:CultureInfo, targetLanguage:CultureInfo): # ->
         """
-        ExportProjectTexts(self: Project, path: FileInfo, sourceLanguage: CultureInfo, targetLanguage: CultureInfo)
-            Export project text to an xlsx file
-            path: Path to the xlsx file
-            sourceLanguage: The source language to use for the export of project texts
+        ExportProjectTexts(self: Project, path: FileInfo, sourceLanguage: CultureInfo, targetLanguage: CultureInfo)
+
+            Export project text to an xlsx file
+
+            path: Path to the xlsx file
+
+            sourceLanguage: The source language to use for the export of project texts
+
             targetLanguage: The target language to use for the export of project texts
         """
         ...
 
     def GetHashCode(self) -> int:
         """
-        GetHashCode(self: Project) -> int
-            Returns a hash code for this instance.
+        GetHashCode(self: Project) -> int
+
+            Returns a hash code for this instance.
+
             Returns: A hash code for this instance, suitable for use in hashing algorithms and data structures like a hash table.
         """
         ...
 
     def ImportProjectTexts(self, path:FileInfo, updateSourceLanguage:bool) -> ProjectTextResult:
         """
-        ImportProjectTexts(self: Project, path: FileInfo, updateSourceLanguage: bool) -> ProjectTextResult
-            Import project text from an import file
-            path: Path to the xlsx file
-            updateSourceLanguage: True if the source language is to be updated
+        ImportProjectTexts(self: Project, path: FileInfo, updateSourceLanguage: bool) -> ProjectTextResult
+
+            Import project text from an import file
+
+            path: Path to the xlsx file
+
+            updateSourceLanguage: True if the source language is to be updated
+
             Returns: Siemens.Engineering.ProjectTextResult
         """
         ...
 
-    def Save(self): # -> 
+    def Save(self): # ->
         """
-        Save(self: Project)
+        Save(self: Project)
+
             Saves all changes of the project
         """
         ...
 
-    def SaveAs(self, targetFolderPath:DirectoryInfo): # -> 
+    def SaveAs(self, targetFolderPath:DirectoryInfo): # ->
         """
-        SaveAs(self: Project, targetFolderPath: DirectoryInfo)
-            Saves all changes of the project to a new location.
+        SaveAs(self: Project, targetFolderPath: DirectoryInfo)
+
+            Saves all changes of the project to a new location.
+
             targetFolderPath: Target location for newly SavedAs project
         """
         ...
 
-    def ShowHwEditor(self, view:View): # -> 
+    def ShowHwEditor(self, view:View): # ->
         """
-        ShowHwEditor(self: Project, view: View)
-            Show the indicated item in the HW editor of the attached TIA Portal
+        ShowHwEditor(self: Project, view: View)
+
+            Show the indicated item in the HW editor of the attached TIA Portal
+
             view: Which view of the HW editor to show
         """
         ...
 
     def ToString(self) -> str:
         """
-        ToString(self: Project) -> str
-            Returns a System.String that represents the current System.Object.
+        ToString(self: Project) -> str
+
+            Returns a System.String that represents the current System.Object.
+
             Returns: A System.String that represents the current System.Object.
         """
         ...
@@ -1783,7 +2079,8 @@ class Project(IInternalObjectAccess, ITransactionSupport, IEngineeringServicePro
 
 class ProjectArchivationMode(Enum): # skipped bases: <type 'IConvertible'>, <type 'IComparable'>, <type 'IFormattable'>, <type 'object'>
     """
-    Archivation mode
+    Archivation mode
+
     enum ProjectArchivationMode, values: Compressed (1), DiscardRestorableData (2), DiscardRestorableDataAndCompressed (3), None (0)
     """
     Compressed: ProjectArchivationMode = ...
@@ -1797,7 +2094,8 @@ class ProjectComposition(IInternalCompositionAccess, IEngineeringComposition, IE
     @property
     def Parent(self) -> IEngineeringObject:
         """
-        Gets the parent.
+        Gets the parent.
+
         Get: Parent(self: ProjectComposition) -> IEngineeringObject
         """
         ...
@@ -1805,102 +2103,168 @@ class ProjectComposition(IInternalCompositionAccess, IEngineeringComposition, IE
 
     def GetHashCode(self) -> int:
         """
-        GetHashCode(self: ProjectComposition) -> int
-            Returns a hash code for this instance.
+        GetHashCode(self: ProjectComposition) -> int
+
+            Returns a hash code for this instance.
+
             Returns: A hash code for this instance, suitable for use in hashing algorithms and data structures like a hash table.
         """
         ...
 
     def Open(self, path:FileInfo, umacDelegate:UmacDelegate = ..., projectOpenMode:ProjectOpenMode = ...) -> Project:
         """
-        Open(self: ProjectComposition, path: FileInfo) -> Project
-            Open Action
-            path: Path to the Tia Portal project file
-            Returns: Siemens.Engineering.Project
-        Open(self: ProjectComposition, path: FileInfo, umacDelegate: UmacDelegate) -> Project
-            Open project and authenticate with UMAC if necessary.
-            path: Path to the Tia Portal project file.
-            umacDelegate: Delegate that will be called if user authentication with UMAC is required.
-            Returns: Siemens.Engineering.Project
-        Open(self: ProjectComposition, path: FileInfo, umacDelegate: UmacDelegate, projectOpenMode: ProjectOpenMode) -> Project
-            Open project and authenticate with UMAC if necessary.
-            path: Path to the Tia Portal project file.
-            umacDelegate: Delegate that will be called if user authentication with UMAC is required.
-            projectOpenMode: Open mode.
+        Open(self: ProjectComposition, path: FileInfo) -> Project
+
+            Open Action
+
+            path: Path to the Tia Portal project file
+
+            Returns: Siemens.Engineering.Project
+
+        Open(self: ProjectComposition, path: FileInfo, umacDelegate: UmacDelegate) -> Project
+
+            Open project and authenticate with UMAC if necessary.
+
+            path: Path to the Tia Portal project file.
+
+            umacDelegate: Delegate that will be called if user authentication with UMAC is required.
+
+            Returns: Siemens.Engineering.Project
+
+        Open(self: ProjectComposition, path: FileInfo, umacDelegate: UmacDelegate, projectOpenMode: ProjectOpenMode) -> Project
+
+            Open project and authenticate with UMAC if necessary.
+
+            path: Path to the Tia Portal project file.
+
+            umacDelegate: Delegate that will be called if user authentication with UMAC is required.
+
+            projectOpenMode: Open mode.
+
             Returns: Siemens.Engineering.Project
         """
         ...
 
     def OpenWithUpgrade(self, path:FileInfo, umacDelegate:UmacDelegate = ..., projectOpenMode:ProjectOpenMode = ...) -> Project:
         """
-        OpenWithUpgrade(self: ProjectComposition, path: FileInfo) -> Project
-            Open Action with project update is necessary
-            path: Path to the Tia Portal project file
-            Returns: Siemens.Engineering.Project
-        OpenWithUpgrade(self: ProjectComposition, path: FileInfo, umacDelegate: UmacDelegate) -> Project
-            Open Action with project update and authenticate with UMAC if necessary.
-            path: Path to the Tia Portal project file.
-            umacDelegate: Delegate that will be called if user authentication with UMAC is required.
-            Returns: Siemens.Engineering.Project
-        OpenWithUpgrade(self: ProjectComposition, path: FileInfo, umacDelegate: UmacDelegate, projectOpenMode: ProjectOpenMode) -> Project
-            Open Action with project update and authenticate with UMAC if necessary.
-            path: Path to the Tia Portal project file.
-            umacDelegate: Delegate that will be called if user authentication with UMAC is required.
-            projectOpenMode: Open mode.
+        OpenWithUpgrade(self: ProjectComposition, path: FileInfo) -> Project
+
+            Open Action with project update is necessary
+
+            path: Path to the Tia Portal project file
+
+            Returns: Siemens.Engineering.Project
+
+        OpenWithUpgrade(self: ProjectComposition, path: FileInfo, umacDelegate: UmacDelegate) -> Project
+
+            Open Action with project update and authenticate with UMAC if necessary.
+
+            path: Path to the Tia Portal project file.
+
+            umacDelegate: Delegate that will be called if user authentication with UMAC is required.
+
+            Returns: Siemens.Engineering.Project
+
+        OpenWithUpgrade(self: ProjectComposition, path: FileInfo, umacDelegate: UmacDelegate, projectOpenMode: ProjectOpenMode) -> Project
+
+            Open Action with project update and authenticate with UMAC if necessary.
+
+            path: Path to the Tia Portal project file.
+
+            umacDelegate: Delegate that will be called if user authentication with UMAC is required.
+
+            projectOpenMode: Open mode.
+
             Returns: Siemens.Engineering.Project
         """
         ...
 
     def Retrieve(self, sourcePath:FileInfo, targetDirectory:DirectoryInfo, umacDelegate:UmacDelegate = ..., projectOpenMode:ProjectOpenMode = ...) -> Project:
         """
-        Retrieve(self: ProjectComposition, sourcePath: FileInfo, targetDirectory: DirectoryInfo) -> Project
-            Retrieves an archived project
-            sourcePath: The path of the archived project file
-            targetDirectory: The path to the folder where project would be retrieved.
-            Returns: Siemens.Engineering.Project
-        Retrieve(self: ProjectComposition, sourcePath: FileInfo, targetDirectory: DirectoryInfo, umacDelegate: UmacDelegate) -> Project
-            Retrieves an archived project with UMAC
-            sourcePath: The path of the archived project file
-            targetDirectory: The path to the folder where project would be retrieved.
-            umacDelegate: Delegate will be called if the project is protected and user authentication is required. If the project is not protected, then null can be passed as parameter
-            Returns: Siemens.Engineering.Project
-        Retrieve(self: ProjectComposition, sourcePath: FileInfo, targetDirectory: DirectoryInfo, umacDelegate: UmacDelegate, projectOpenMode: ProjectOpenMode) -> Project
-            Retrieves an archived project with UMAC and opens the project as Primary or Secorndary
-            sourcePath: The path of the archived project file
-            targetDirectory: The path to the folder where project would be retrieved.
-            umacDelegate: Delegate will be called if the project is protected and user authentication is required.If the project is not protected, then null can be passed as parameter
-            projectOpenMode: Project Open Mode
+        Retrieve(self: ProjectComposition, sourcePath: FileInfo, targetDirectory: DirectoryInfo) -> Project
+
+            Retrieves an archived project
+
+            sourcePath: The path of the archived project file
+
+            targetDirectory: The path to the folder where project would be retrieved.
+
+            Returns: Siemens.Engineering.Project
+
+        Retrieve(self: ProjectComposition, sourcePath: FileInfo, targetDirectory: DirectoryInfo, umacDelegate: UmacDelegate) -> Project
+
+            Retrieves an archived project with UMAC
+
+            sourcePath: The path of the archived project file
+
+            targetDirectory: The path to the folder where project would be retrieved.
+
+            umacDelegate: Delegate will be called if the project is protected and user authentication is required. If the project is not protected, then null can be passed as parameter
+
+            Returns: Siemens.Engineering.Project
+
+        Retrieve(self: ProjectComposition, sourcePath: FileInfo, targetDirectory: DirectoryInfo, umacDelegate: UmacDelegate, projectOpenMode: ProjectOpenMode) -> Project
+
+            Retrieves an archived project with UMAC and opens the project as Primary or Secorndary
+
+            sourcePath: The path of the archived project file
+
+            targetDirectory: The path to the folder where project would be retrieved.
+
+            umacDelegate: Delegate will be called if the project is protected and user authentication is required.If the project is not protected, then null can be passed as parameter
+
+            projectOpenMode: Project Open Mode
+
             Returns: Siemens.Engineering.Project
         """
         ...
 
     def RetrieveWithUpgrade(self, sourcePath:FileInfo, targetDirectory:DirectoryInfo, umacDelegate:UmacDelegate = ..., projectOpenMode:ProjectOpenMode = ...) -> Project:
         """
-        RetrieveWithUpgrade(self: ProjectComposition, sourcePath: FileInfo, targetDirectory: DirectoryInfo) -> Project
-            Retrieves a project from an archive and upgrades it to the current version
-            sourcePath: The path of the archived project file
-            targetDirectory: The path to the folder where project would be retrieved.
-            Returns: Siemens.Engineering.Project
-        RetrieveWithUpgrade(self: ProjectComposition, sourcePath: FileInfo, targetDirectory: DirectoryInfo, umacDelegate: UmacDelegate) -> Project
-            Retrieves a project from an archive and upgrades it to the current version with umac
-            sourcePath: The path of the archived project file
-            targetDirectory: The path to the folder where project would be retrieved.
-            umacDelegate: Delegate will be called if the project is protected and user authentication is required.If the project is not protected, then null can be passed as parameter
-            Returns: Siemens.Engineering.Project
-        RetrieveWithUpgrade(self: ProjectComposition, sourcePath: FileInfo, targetDirectory: DirectoryInfo, umacDelegate: UmacDelegate, projectOpenMode: ProjectOpenMode) -> Project
-            Retrieves a project from an archive and upgrades it to the current version
-            sourcePath: The path of the archived project file
-            targetDirectory: The path to the folder where project would be retrieved.
-            umacDelegate: Delegate will be called if the project is protected and user authentication is required.If the project is not protected, then null can be passed as parameter
-            projectOpenMode: Project Open Mode
+        RetrieveWithUpgrade(self: ProjectComposition, sourcePath: FileInfo, targetDirectory: DirectoryInfo) -> Project
+
+            Retrieves a project from an archive and upgrades it to the current version
+
+            sourcePath: The path of the archived project file
+
+            targetDirectory: The path to the folder where project would be retrieved.
+
+            Returns: Siemens.Engineering.Project
+
+        RetrieveWithUpgrade(self: ProjectComposition, sourcePath: FileInfo, targetDirectory: DirectoryInfo, umacDelegate: UmacDelegate) -> Project
+
+            Retrieves a project from an archive and upgrades it to the current version with umac
+
+            sourcePath: The path of the archived project file
+
+            targetDirectory: The path to the folder where project would be retrieved.
+
+            umacDelegate: Delegate will be called if the project is protected and user authentication is required.If the project is not protected, then null can be passed as parameter
+
+            Returns: Siemens.Engineering.Project
+
+        RetrieveWithUpgrade(self: ProjectComposition, sourcePath: FileInfo, targetDirectory: DirectoryInfo, umacDelegate: UmacDelegate, projectOpenMode: ProjectOpenMode) -> Project
+
+            Retrieves a project from an archive and upgrades it to the current version
+
+            sourcePath: The path of the archived project file
+
+            targetDirectory: The path to the folder where project would be retrieved.
+
+            umacDelegate: Delegate will be called if the project is protected and user authentication is required.If the project is not protected, then null can be passed as parameter
+
+            projectOpenMode: Project Open Mode
+
             Returns: Siemens.Engineering.Project
         """
         ...
 
     def ToString(self) -> str:
         """
-        ToString(self: ProjectComposition) -> str
-            Returns a System.String that represents the current System.Object.
+        ToString(self: ProjectComposition) -> str
+
+            Returns a System.String that represents the current System.Object.
+
             Returns: A System.String that represents the current System.Object.
         """
         ...
@@ -1915,7 +2279,8 @@ class ProjectComposition(IInternalCompositionAccess, IEngineeringComposition, IE
 
 class ProjectOpenMode(Enum): # skipped bases: <type 'IConvertible'>, <type 'IComparable'>, <type 'IFormattable'>, <type 'object'>
     """
-    Project open mode
+    Project open mode
+
     enum ProjectOpenMode, values: Primary (0), Secondary (1)
     """
     Primary: ProjectOpenMode = ...
@@ -1928,7 +2293,8 @@ class ProjectTextResult(IEquatable, IEngineeringObject, IInternalObjectAccess): 
     @property
     def Parent(self) -> IEngineeringObject:
         """
-        EOM parent of this object
+        EOM parent of this object
+
         Get: Parent(self: ProjectTextResult) -> IEngineeringObject
         """
         ...
@@ -1936,7 +2302,8 @@ class ProjectTextResult(IEquatable, IEngineeringObject, IInternalObjectAccess): 
     @property
     def Path(self) -> FileInfo:
         """
-        Path to a text result
+        Path to a text result
+
         Get: Path(self: ProjectTextResult) -> FileInfo
         """
         ...
@@ -1944,7 +2311,8 @@ class ProjectTextResult(IEquatable, IEngineeringObject, IInternalObjectAccess): 
     @property
     def State(self) -> ProjectTextResultState:
         """
-        Final state of the project text result
+        Final state of the project text result
+
         Get: State(self: ProjectTextResult) -> ProjectTextResultState
         """
         ...
@@ -1952,16 +2320,20 @@ class ProjectTextResult(IEquatable, IEngineeringObject, IInternalObjectAccess): 
 
     def GetHashCode(self) -> int:
         """
-        GetHashCode(self: ProjectTextResult) -> int
-            Returns a hash code for this instance.
+        GetHashCode(self: ProjectTextResult) -> int
+
+            Returns a hash code for this instance.
+
             Returns: A hash code for this instance, suitable for use in hashing algorithms and data structures like a hash table.
         """
         ...
 
     def ToString(self) -> str:
         """
-        ToString(self: ProjectTextResult) -> str
-            Returns a System.String that represents the current System.Object.
+        ToString(self: ProjectTextResult) -> str
+
+            Returns a System.String that represents the current System.Object.
+
             Returns: A System.String that represents the current System.Object.
         """
         ...
@@ -1972,7 +2344,8 @@ class ProjectTextResult(IEquatable, IEngineeringObject, IInternalObjectAccess): 
 
 class ProjectTextResultState(Enum): # skipped bases: <type 'IConvertible'>, <type 'IComparable'>, <type 'IFormattable'>, <type 'object'>
     """
-    The state of project text result
+    The state of project text result
+
     enum ProjectTextResultState, values: Error (2), Info (0), Warning (1)
     """
     Error: ProjectTextResultState = ...
@@ -1983,13 +2356,15 @@ class ProjectTextResultState(Enum): # skipped bases: <type 'IConvertible'>, <typ
 
 class TiaPortal(IInternalApplicationAccess, IDisposable, IApplicationEntryPoint, IEngineeringRoot, IEquatable): # skipped bases: <type 'IInternalInstanceAccess'>, <type 'IEngineeringInstance'>, <type 'IEngineeringObject'>, <type 'IInternalObjectAccess'>, <type 'IInternalBaseAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'object'>
     """
-    TIAPortal.
+    TIAPortal.
+
     TiaPortal(tiaPortalMode: TiaPortalMode)
     """
     @property
     def GlobalLibraries(self) -> GlobalLibraryComposition:
         """
-        Composition of global libraries
+        Composition of global libraries
+
         Get: GlobalLibraries(self: TiaPortal) -> GlobalLibraryComposition
         """
         ...
@@ -1997,7 +2372,8 @@ class TiaPortal(IInternalApplicationAccess, IDisposable, IApplicationEntryPoint,
     @property
     def Projects(self) -> ProjectComposition:
         """
-        Composition of open projects
+        Composition of open projects
+
         Get: Projects(self: TiaPortal) -> ProjectComposition
         """
         ...
@@ -2005,7 +2381,8 @@ class TiaPortal(IInternalApplicationAccess, IDisposable, IApplicationEntryPoint,
     @property
     def SettingsFolders(self) -> TiaPortalSettingsFolderComposition:
         """
-        The settings of the TIA portal
+        The settings of the TIA portal
+
         Get: SettingsFolders(self: TiaPortal) -> TiaPortalSettingsFolderComposition
         """
         ...
@@ -2013,20 +2390,28 @@ class TiaPortal(IInternalApplicationAccess, IDisposable, IApplicationEntryPoint,
 
     def ExclusiveAccess(self, text:str = ...) -> ExclusiveAccess:
         """
-        ExclusiveAccess(self: TiaPortal) -> ExclusiveAccess
-            Acquire an exclusive access session to the TIA Portal
-            Returns: Siemens.Engineering.ExclusiveAccess
-        ExclusiveAccess(self: TiaPortal, text: str) -> ExclusiveAccess
-            Acquire an exclusive access session to the TIA Portal
-            text: The text to present to the interactive user while an exclusive access session is active
+        ExclusiveAccess(self: TiaPortal) -> ExclusiveAccess
+
+            Acquire an exclusive access session to the TIA Portal
+
+            Returns: Siemens.Engineering.ExclusiveAccess
+
+        ExclusiveAccess(self: TiaPortal, text: str) -> ExclusiveAccess
+
+            Acquire an exclusive access session to the TIA Portal
+
+            text: The text to present to the interactive user while an exclusive access session is active
+
             Returns: Siemens.Engineering.ExclusiveAccess
         """
         ...
 
     def GetCurrentProcess(self) -> TiaPortalProcess:
         """
-        GetCurrentProcess(self: TiaPortal) -> TiaPortalProcess
-            Gets the information of connected TIA-Portal.
+        GetCurrentProcess(self: TiaPortal) -> TiaPortalProcess
+
+            Gets the information of connected TIA-Portal.
+
             Returns: The connected TIA-Portal.
         """
         ...
@@ -2034,15 +2419,24 @@ class TiaPortal(IInternalApplicationAccess, IDisposable, IApplicationEntryPoint,
     @staticmethod
     def GetProcess(processId:int, *__args:int) -> TiaPortalProcess:
         """
-        GetProcess(processId: int, millisecondsTimeout: int) -> TiaPortalProcess
-            Gets the information of the running TIA-Portal.
-            processId: TIA-Portal's process id.
-            millisecondsTimeout: An optional parameter that provides the ability to set a timeout.
-            Returns: The running TIA-Portal.
-        GetProcess(processId: int, timeout: TimeSpan) -> TiaPortalProcess
-            Gets the information of the running TIA-Portal.
-            processId: TIA-Portal's process id.
-            timeout: An optional parameter that provides the ability to set a timeout.
+        GetProcess(processId: int, millisecondsTimeout: int) -> TiaPortalProcess
+
+            Gets the information of the running TIA-Portal.
+
+            processId: TIA-Portal's process id.
+
+            millisecondsTimeout: An optional parameter that provides the ability to set a timeout.
+
+            Returns: The running TIA-Portal.
+
+        GetProcess(processId: int, timeout: TimeSpan) -> TiaPortalProcess
+
+            Gets the information of the running TIA-Portal.
+
+            processId: TIA-Portal's process id.
+
+            timeout: An optional parameter that provides the ability to set a timeout.
+
             Returns: The running TIA-Portal.
         """
         ...
@@ -2050,8 +2444,10 @@ class TiaPortal(IInternalApplicationAccess, IDisposable, IApplicationEntryPoint,
     @staticmethod
     def GetProcesses() -> IList:
         """
-        GetProcesses() -> IList[TiaPortalProcess]
-            Gets the information of all running TIA-Portals.
+        GetProcesses() -> IList[TiaPortalProcess]
+
+            Gets the information of all running TIA-Portals.
+
             Returns: The running TIA-Portals.
         """
         ...
@@ -2063,7 +2459,8 @@ class TiaPortal(IInternalApplicationAccess, IDisposable, IApplicationEntryPoint,
 
 class TiaPortalAccessLevel(Enum): # skipped bases: <type 'IConvertible'>, <type 'IComparable'>, <type 'IFormattable'>, <type 'object'>
     """
-    The access level of the associated TIA Portal
+    The access level of the associated TIA Portal
+
     enum (flags) TiaPortalAccessLevel, values: Elevated (256), Modify (4), NoLicense (1), None (0), Pilot (32), Published (8), Trusted (2)
     """
     Elevated: TiaPortalAccessLevel = ...
@@ -2077,7 +2474,8 @@ class TiaPortalAccessLevel(Enum): # skipped bases: <type 'IConvertible'>, <type 
 
 class TiaPortalMode(Enum): # skipped bases: <type 'IConvertible'>, <type 'IComparable'>, <type 'IFormattable'>, <type 'object'>
     """
-    Mode how to start the TIA-Portal.
+    Mode how to start the TIA-Portal.
+
     enum TiaPortalMode, values: WithoutUserInterface (0), WithUserInterface (1)
     """
     value__ = ...
@@ -2090,7 +2488,8 @@ class TiaPortalProcess(IDisposable): # skipped bases: <type 'object'>
     @property
     def AcquisitionTime(self) -> DateTime:
         """
-        Gets the time when the TiaPortalProcess object was acquired.
+        Gets the time when the TiaPortalProcess object was acquired.
+
         Get: AcquisitionTime(self: TiaPortalProcess) -> DateTime
         """
         ...
@@ -2098,7 +2497,8 @@ class TiaPortalProcess(IDisposable): # skipped bases: <type 'object'>
     @property
     def AttachedSessions(self) -> IList:
         """
-        Gets a list of other process attached to this same TIA-Portal process.
+        Gets a list of other process attached to this same TIA-Portal process.
+
         Get: AttachedSessions(self: TiaPortalProcess) -> IList[TiaPortalSession]
         """
         ...
@@ -2106,7 +2506,8 @@ class TiaPortalProcess(IDisposable): # skipped bases: <type 'object'>
     @property
     def Id(self) -> int:
         """
-        Gets the Process ID of the TIA Portal.
+        Gets the Process ID of the TIA Portal.
+
         Get: Id(self: TiaPortalProcess) -> int
         """
         ...
@@ -2114,7 +2515,8 @@ class TiaPortalProcess(IDisposable): # skipped bases: <type 'object'>
     @property
     def InstalledSoftware(self) -> IList:
         """
-        Gets a list of installed software of the TIA-Portal process.
+        Gets a list of installed software of the TIA-Portal process.
+
         Get: InstalledSoftware(self: TiaPortalProcess) -> IList[TiaPortalProduct]
         """
         ...
@@ -2122,7 +2524,8 @@ class TiaPortalProcess(IDisposable): # skipped bases: <type 'object'>
     @property
     def Mode(self) -> TiaPortalMode:
         """
-        Gets the mode of the attached TIA-Portal.
+        Gets the mode of the attached TIA-Portal.
+
         Get: Mode(self: TiaPortalProcess) -> TiaPortalMode
         """
         ...
@@ -2130,7 +2533,8 @@ class TiaPortalProcess(IDisposable): # skipped bases: <type 'object'>
     @property
     def Path(self) -> FileInfo:
         """
-        The path to the executable of the TIA Portal.
+        The path to the executable of the TIA Portal.
+
         Get: Path(self: TiaPortalProcess) -> FileInfo
         """
         ...
@@ -2138,7 +2542,8 @@ class TiaPortalProcess(IDisposable): # skipped bases: <type 'object'>
     @property
     def ProjectPath(self) -> FileInfo:
         """
-        Gets the path of any project currently open in the attached TIA_Portal.
+        Gets the path of any project currently open in the attached TIA_Portal.
+
         Get: ProjectPath(self: TiaPortalProcess) -> FileInfo
         """
         ...
@@ -2146,8 +2551,10 @@ class TiaPortalProcess(IDisposable): # skipped bases: <type 'object'>
 
     def Attach(self) -> TiaPortal:
         """
-        Attach(self: TiaPortalProcess) -> TiaPortal
-            Gets an additional instance of a TIA-Portal that is attached to the TIA-Portal process.
+        Attach(self: TiaPortalProcess) -> TiaPortal
+
+            Gets an additional instance of a TIA-Portal that is attached to the TIA-Portal process.
+
             Returns: A TIA-Portal instance that is attached to the TIA-Portal process.
         """
         ...
@@ -2160,7 +2567,8 @@ class TiaPortalProduct: # skipped bases: <type 'object'>, <type 'object'>
     @property
     def Name(self) -> str:
         """
-        Gets the product name.
+        Gets the product name.
+
         Get: Name(self: TiaPortalProduct) -> str
         """
         ...
@@ -2168,7 +2576,8 @@ class TiaPortalProduct: # skipped bases: <type 'object'>, <type 'object'>
     @property
     def Options(self) -> IList:
         """
-        Gets a list of installed options of the TIA-Portal process.
+        Gets a list of installed options of the TIA-Portal process.
+
         Get: Options(self: TiaPortalProduct) -> IList[TiaPortalProduct]
         """
         ...
@@ -2176,7 +2585,8 @@ class TiaPortalProduct: # skipped bases: <type 'object'>, <type 'object'>
     @property
     def Version(self) -> str:
         """
-        Gets the product version.
+        Gets the product version.
+
         Get: Version(self: TiaPortalProduct) -> str
         """
         ...
@@ -2188,7 +2598,8 @@ class TiaPortalSession(IDisposable): # skipped bases: <type 'object'>
     @property
     def AccessLevel(self) -> TiaPortalAccessLevel:
         """
-        Gets the access level of the process.
+        Gets the access level of the process.
+
         Get: AccessLevel(self: TiaPortalSession) -> TiaPortalAccessLevel
         """
         ...
@@ -2196,7 +2607,8 @@ class TiaPortalSession(IDisposable): # skipped bases: <type 'object'>
     @property
     def AttachTime(self) -> DateTime:
         """
-        Gets the attached session date and time.
+        Gets the attached session date and time.
+
         Get: AttachTime(self: TiaPortalSession) -> DateTime
         """
         ...
@@ -2204,7 +2616,8 @@ class TiaPortalSession(IDisposable): # skipped bases: <type 'object'>
     @property
     def Id(self) -> int:
         """
-        Gets the attached session identifier.
+        Gets the attached session identifier.
+
         Get: Id(self: TiaPortalSession) -> int
         """
         ...
@@ -2212,7 +2625,8 @@ class TiaPortalSession(IDisposable): # skipped bases: <type 'object'>
     @property
     def IsActive(self) -> bool:
         """
-        Gets a boolean value describing whether the TIA Portal is in  the middle of processing a call from this session.
+        Gets a boolean value describing whether the TIA Portal is in  the middle of processing a call from this session.
+
         Get: IsActive(self: TiaPortalSession) -> bool
         """
         ...
@@ -2220,7 +2634,8 @@ class TiaPortalSession(IDisposable): # skipped bases: <type 'object'>
     @property
     def ProcessId(self) -> int:
         """
-        Gets the attached session process identifier.
+        Gets the attached session process identifier.
+
         Get: ProcessId(self: TiaPortalSession) -> int
         """
         ...
@@ -2228,7 +2643,8 @@ class TiaPortalSession(IDisposable): # skipped bases: <type 'object'>
     @property
     def ProcessPath(self) -> FileInfo:
         """
-        Gets the path to where the executable of the attached process lives.
+        Gets the path to where the executable of the attached process lives.
+
         Get: ProcessPath(self: TiaPortalSession) -> FileInfo
         """
         ...
@@ -2236,7 +2652,8 @@ class TiaPortalSession(IDisposable): # skipped bases: <type 'object'>
     @property
     def TrustAuthority(self) -> TiaPortalTrustAuthority:
         """
-        Indicates if the current session was started by a process that was signed, and if so, if it is an Openness certificate or not.
+        Indicates if the current session was started by a process that was signed, and if so, if it is an Openness certificate or not.
+
         Get: TrustAuthority(self: TiaPortalSession) -> TiaPortalTrustAuthority
         """
         ...
@@ -2244,7 +2661,8 @@ class TiaPortalSession(IDisposable): # skipped bases: <type 'object'>
     @property
     def UtilizationTime(self) -> TimeSpan:
         """
-        Gets time the process has spent actively using the TIA Portal.
+        Gets time the process has spent actively using the TIA Portal.
+
         Get: UtilizationTime(self: TiaPortalSession) -> TimeSpan
         """
         ...
@@ -2252,7 +2670,8 @@ class TiaPortalSession(IDisposable): # skipped bases: <type 'object'>
     @property
     def Version(self) -> str:
         """
-        Gets the attached session version.
+        Gets the attached session version.
+
         Get: Version(self: TiaPortalSession) -> str
         """
         ...
@@ -2261,7 +2680,8 @@ class TiaPortalSession(IDisposable): # skipped bases: <type 'object'>
 
 class TiaPortalTrustAuthority(Enum): # skipped bases: <type 'IConvertible'>, <type 'IComparable'>, <type 'IFormattable'>, <type 'object'>
     """
-    The trust authority of the associated TIA Portal
+    The trust authority of the associated TIA Portal
+
     enum (flags) TiaPortalTrustAuthority, values: Certified (2), CertifiedWithExpiration (256), FeatureTokens (512), None (0), Signed (1)
     """
     Certified: TiaPortalTrustAuthority = ...
@@ -2276,7 +2696,8 @@ class Transaction(IEquatable, IEngineeringObject, IDisposable, IInternalObjectAc
     @property
     def CanCommit(self) -> bool:
         """
-        Indicates if the transaction can be committed.
+        Indicates if the transaction can be committed.
+
         Get: CanCommit(self: Transaction) -> bool
         """
         ...
@@ -2284,7 +2705,8 @@ class Transaction(IEquatable, IEngineeringObject, IDisposable, IInternalObjectAc
     @property
     def CommitRequested(self) -> bool:
         """
-        Indicates if a commit has been requested.
+        Indicates if a commit has been requested.
+
         Get: CommitRequested(self: Transaction) -> bool
         """
         ...
@@ -2292,31 +2714,37 @@ class Transaction(IEquatable, IEngineeringObject, IDisposable, IInternalObjectAc
     @property
     def Parent(self) -> IEngineeringObject:
         """
-        EOM parent of this object
+        EOM parent of this object
+
         Get: Parent(self: Transaction) -> IEngineeringObject
         """
         ...
 
 
-    def CommitOnDispose(self): # -> 
+    def CommitOnDispose(self): # ->
         """
-        CommitOnDispose(self: Transaction)
+        CommitOnDispose(self: Transaction)
+
             Commit transaction when disposed
         """
         ...
 
     def GetHashCode(self) -> int:
         """
-        GetHashCode(self: Transaction) -> int
-            Returns a hash code for this instance.
+        GetHashCode(self: Transaction) -> int
+
+            Returns a hash code for this instance.
+
             Returns: A hash code for this instance, suitable for use in hashing algorithms and data structures like a hash table.
         """
         ...
 
     def ToString(self) -> str:
         """
-        ToString(self: Transaction) -> str
-            Returns a System.String that represents the current System.Object.
+        ToString(self: Transaction) -> str
+
+            Returns a System.String that represents the current System.Object.
+
             Returns: A System.String that represents the current System.Object.
         """
         ...
@@ -2330,8 +2758,10 @@ class UmacCredentials(IEquatable, IEngineeringObject, IInternalObjectAccess): # 
     @property
     def Name(self) -> str:
         """
-        User name.
-        Get: Name(self: UmacCredentials) -> str
+        User name.
+
+        Get: Name(self: UmacCredentials) -> str
+
         Set: Name(self: UmacCredentials) = value
         """
         ...
@@ -2339,7 +2769,8 @@ class UmacCredentials(IEquatable, IEngineeringObject, IInternalObjectAccess): # 
     @property
     def Parent(self) -> IEngineeringObject:
         """
-        EOM parent of this object
+        EOM parent of this object
+
         Get: Parent(self: UmacCredentials) -> IEngineeringObject
         """
         ...
@@ -2347,8 +2778,10 @@ class UmacCredentials(IEquatable, IEngineeringObject, IInternalObjectAccess): # 
     @property
     def Type(self) -> UmacUserType:
         """
-        User Type
-        Get: Type(self: UmacCredentials) -> UmacUserType
+        User Type
+
+        Get: Type(self: UmacCredentials) -> UmacUserType
+
         Set: Type(self: UmacCredentials) = value
         """
         ...
@@ -2356,24 +2789,30 @@ class UmacCredentials(IEquatable, IEngineeringObject, IInternalObjectAccess): # 
 
     def GetHashCode(self) -> int:
         """
-        GetHashCode(self: UmacCredentials) -> int
-            Returns a hash code for this instance.
+        GetHashCode(self: UmacCredentials) -> int
+
+            Returns a hash code for this instance.
+
             Returns: A hash code for this instance, suitable for use in hashing algorithms and data structures like a hash table.
         """
         ...
 
-    def SetPassword(self, password:SecureString): # -> 
+    def SetPassword(self, password:SecureString): # ->
         """
-        SetPassword(self: UmacCredentials, password: SecureString)
-            Set password.
+        SetPassword(self: UmacCredentials, password: SecureString)
+
+            Set password.
+
             password: Password
         """
         ...
 
     def ToString(self) -> str:
         """
-        ToString(self: UmacCredentials) -> str
-            Returns a System.String that represents the current System.Object.
+        ToString(self: UmacCredentials) -> str
+
+            Returns a System.String that represents the current System.Object.
+
             Returns: A System.String that represents the current System.Object.
         """
         ...
@@ -2384,25 +2823,27 @@ class UmacCredentials(IEquatable, IEngineeringObject, IInternalObjectAccess): # 
 
 class UmacDelegate(MulticastDelegate): # skipped bases: <type 'ISerializable'>, <type 'ICloneable'>, <type 'object'>
     """
-    The delegate that will called back for user credetials if project is protected.
+    The delegate that will called back for user credetials if project is protected.
+
     UmacDelegate(object: object, method: IntPtr)
     """
     def BeginInvoke(self, umacCredentials:UmacCredentials, callback:AsyncCallback, object:object) -> IAsyncResult:
         """ BeginInvoke(self: UmacDelegate, umacCredentials: UmacCredentials, callback: AsyncCallback, object: object) -> IAsyncResult """
         ...
 
-    def EndInvoke(self, result:IAsyncResult): # -> 
+    def EndInvoke(self, result:IAsyncResult): # ->
         """ EndInvoke(self: UmacDelegate, result: IAsyncResult) """
         ...
 
-    def Invoke(self, umacCredentials:UmacCredentials): # -> 
+    def Invoke(self, umacCredentials:UmacCredentials): # ->
         """ Invoke(self: UmacDelegate, umacCredentials: UmacCredentials) """
         ...
 
 
 class UmacUserType(Enum): # skipped bases: <type 'IConvertible'>, <type 'IComparable'>, <type 'IFormattable'>, <type 'object'>
     """
-    User type.
+    User type.
+
     enum UmacUserType, values: Global (1), Project (0)
     """
     Global: UmacUserType = ...
@@ -2415,7 +2856,8 @@ class UsedProduct(IEquatable, IEngineeringObject, IInternalObjectAccess): # skip
     @property
     def Name(self) -> str:
         """
-        The name of the used product
+        The name of the used product
+
         Get: Name(self: UsedProduct) -> str
         """
         ...
@@ -2423,7 +2865,8 @@ class UsedProduct(IEquatable, IEngineeringObject, IInternalObjectAccess): # skip
     @property
     def Parent(self) -> IEngineeringObject:
         """
-        EOM parent of this object
+        EOM parent of this object
+
         Get: Parent(self: UsedProduct) -> IEngineeringObject
         """
         ...
@@ -2431,7 +2874,8 @@ class UsedProduct(IEquatable, IEngineeringObject, IInternalObjectAccess): # skip
     @property
     def Version(self) -> str:
         """
-        The product version
+        The product version
+
         Get: Version(self: UsedProduct) -> str
         """
         ...
@@ -2439,16 +2883,20 @@ class UsedProduct(IEquatable, IEngineeringObject, IInternalObjectAccess): # skip
 
     def GetHashCode(self) -> int:
         """
-        GetHashCode(self: UsedProduct) -> int
-            Returns a hash code for this instance.
+        GetHashCode(self: UsedProduct) -> int
+
+            Returns a hash code for this instance.
+
             Returns: A hash code for this instance, suitable for use in hashing algorithms and data structures like a hash table.
         """
         ...
 
     def ToString(self) -> str:
         """
-        ToString(self: UsedProduct) -> str
-            Returns a System.String that represents the current System.Object.
+        ToString(self: UsedProduct) -> str
+
+            Returns a System.String that represents the current System.Object.
+
             Returns: A System.String that represents the current System.Object.
         """
         ...
@@ -2462,7 +2910,8 @@ class UsedProductComposition(IInternalCompositionAccess, IEngineeringComposition
     @property
     def Parent(self) -> IEngineeringObject:
         """
-        Gets the parent.
+        Gets the parent.
+
         Get: Parent(self: UsedProductComposition) -> IEngineeringObject
         """
         ...
@@ -2470,16 +2919,20 @@ class UsedProductComposition(IInternalCompositionAccess, IEngineeringComposition
 
     def GetHashCode(self) -> int:
         """
-        GetHashCode(self: UsedProductComposition) -> int
-            Returns a hash code for this instance.
+        GetHashCode(self: UsedProductComposition) -> int
+
+            Returns a hash code for this instance.
+
             Returns: A hash code for this instance, suitable for use in hashing algorithms and data structures like a hash table.
         """
         ...
 
     def ToString(self) -> str:
         """
-        ToString(self: UsedProductComposition) -> str
-            Returns a System.String that represents the current System.Object.
+        ToString(self: UsedProductComposition) -> str
+
+            Returns a System.String that represents the current System.Object.
+
             Returns: A System.String that represents the current System.Object.
         """
         ...
@@ -2493,4 +2946,3 @@ class UsedProductComposition(IInternalCompositionAccess, IEngineeringComposition
 
 
 # variables with complex values
-

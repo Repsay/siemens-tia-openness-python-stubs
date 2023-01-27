@@ -6,7 +6,7 @@
 from __future__ import annotations
 from Siemens.Engineering import IEngineeringComposition, IEngineeringObject
 
-from Siemens.Engineering.Library.MasterCopies import (IMasterCopySource, 
+from Siemens.Engineering.Library.MasterCopies import (IMasterCopySource,
     MasterCopy)
 
 from System import Enum, IEquatable
@@ -19,12 +19,15 @@ from System.IO import FileInfo
     IInternalCompositionAccess, IInternalObjectAccess, field#)
 """
 
+from Siemens import IInternalCompositionAccess, IInternalObjectAccess
+
 # no functions
 # classes
 
 class GenerateBlockOption(Enum): # skipped bases: <type 'IConvertible'>, <type 'IComparable'>, <type 'IFormattable'>, <type 'object'>
     """
-    Lists the possible options for block generation from source
+    Lists the possible options for block generation from source
+
     enum GenerateBlockOption, values: KeepOnError (1), None (0)
     """
     KeepOnError: GenerateBlockOption = ...
@@ -33,7 +36,8 @@ class GenerateBlockOption(Enum): # skipped bases: <type 'IConvertible'>, <type '
 
 class GenerateOptions(Enum): # skipped bases: <type 'IConvertible'>, <type 'IComparable'>, <type 'IFormattable'>, <type 'object'>
     """
-    Options for source generation
+    Options for source generation
+
     enum GenerateOptions, values: None (0), WithDependencies (1)
     """
     value__ = ...
@@ -49,7 +53,8 @@ class PlcExternalSource(IEquatable, IEngineeringObject, IMasterCopySource, IInte
     @property
     def Name(self) -> str:
         """
-        The name of the Plc external source
+        The name of the Plc external source
+
         Get: Name(self: PlcExternalSource) -> str
         """
         ...
@@ -57,42 +62,53 @@ class PlcExternalSource(IEquatable, IEngineeringObject, IMasterCopySource, IInte
     @property
     def Parent(self) -> IEngineeringObject:
         """
-        EOM parent of this object
+        EOM parent of this object
+
         Get: Parent(self: PlcExternalSource) -> IEngineeringObject
         """
         ...
 
 
-    def Delete(self): # -> 
+    def Delete(self): # ->
         """
-        Delete(self: PlcExternalSource)
+        Delete(self: PlcExternalSource)
+
             Deletes this instance.
         """
         ...
 
     def GenerateBlocksFromSource(self, generateBlockOption:GenerateBlockOption = ...) -> IList:
         """
-        GenerateBlocksFromSource(self: PlcExternalSource)
-            Creates a block or blocks from the current source file object
-        GenerateBlocksFromSource(self: PlcExternalSource, generateBlockOption: GenerateBlockOption) -> IList[IEngineeringObject]
-            Creates a block or blocks from the current source file object
-            generateBlockOption: Option to use for block generation from source
+        GenerateBlocksFromSource(self: PlcExternalSource)
+
+            Creates a block or blocks from the current source file object
+
+        GenerateBlocksFromSource(self: PlcExternalSource, generateBlockOption: GenerateBlockOption) -> IList[IEngineeringObject]
+
+            Creates a block or blocks from the current source file object
+
+            generateBlockOption: Option to use for block generation from source
+
             Returns: System.Collections.Generic.IList<Siemens.Engineering.IEngineeringObject>
         """
         ...
 
     def GetHashCode(self) -> int:
         """
-        GetHashCode(self: PlcExternalSource) -> int
-            Returns a hash code for this instance.
+        GetHashCode(self: PlcExternalSource) -> int
+
+            Returns a hash code for this instance.
+
             Returns: A hash code for this instance, suitable for use in hashing algorithms and data structures like a hash table.
         """
         ...
 
     def ToString(self) -> str:
         """
-        ToString(self: PlcExternalSource) -> str
-            Returns a System.String that represents the current System.Object.
+        ToString(self: PlcExternalSource) -> str
+
+            Returns a System.String that represents the current System.Object.
+
             Returns: A System.String that represents the current System.Object.
         """
         ...
@@ -106,7 +122,8 @@ class PlcExternalSourceComposition(IInternalCompositionAccess, IEngineeringCompo
     @property
     def Parent(self) -> IEngineeringObject:
         """
-        Gets the parent.
+        Gets the parent.
+
         Get: Parent(self: PlcExternalSourceComposition) -> IEngineeringObject
         """
         ...
@@ -114,44 +131,58 @@ class PlcExternalSourceComposition(IInternalCompositionAccess, IEngineeringCompo
 
     def CreateFrom(self, sourceMasterCopy:MasterCopy) -> PlcExternalSource:
         """
-        CreateFrom(self: PlcExternalSourceComposition, sourceMasterCopy: MasterCopy) -> PlcExternalSource
-            Create External Source from MasterCopy
-            sourceMasterCopy: The source master copy
+        CreateFrom(self: PlcExternalSourceComposition, sourceMasterCopy: MasterCopy) -> PlcExternalSource
+
+            Create External Source from MasterCopy
+
+            sourceMasterCopy: The source master copy
+
             Returns: Siemens.Engineering.SW.ExternalSources.PlcExternalSource
         """
         ...
 
     def CreateFromFile(self, name:str, path:str) -> PlcExternalSource:
         """
-        CreateFromFile(self: PlcExternalSourceComposition, name: str, path: str) -> PlcExternalSource
-            Create an external source from a specified file
-            name: Name of Plc external source to be created
-            path: Path to the external source file
+        CreateFromFile(self: PlcExternalSourceComposition, name: str, path: str) -> PlcExternalSource
+
+            Create an external source from a specified file
+
+            name: Name of Plc external source to be created
+
+            path: Path to the external source file
+
             Returns: Siemens.Engineering.SW.ExternalSources.PlcExternalSource
         """
         ...
 
     def Find(self, name:str) -> PlcExternalSource:
         """
-        Find(self: PlcExternalSourceComposition, name: str) -> PlcExternalSource
-            Finds a given Plc external source
-            name: Name to find
+        Find(self: PlcExternalSourceComposition, name: str) -> PlcExternalSource
+
+            Finds a given Plc external source
+
+            name: Name to find
+
             Returns: Siemens.Engineering.SW.ExternalSources.PlcExternalSource
         """
         ...
 
     def GetHashCode(self) -> int:
         """
-        GetHashCode(self: PlcExternalSourceComposition) -> int
-            Returns a hash code for this instance.
+        GetHashCode(self: PlcExternalSourceComposition) -> int
+
+            Returns a hash code for this instance.
+
             Returns: A hash code for this instance, suitable for use in hashing algorithms and data structures like a hash table.
         """
         ...
 
     def ToString(self) -> str:
         """
-        ToString(self: PlcExternalSourceComposition) -> str
-            Returns a System.String that represents the current System.Object.
+        ToString(self: PlcExternalSourceComposition) -> str
+
+            Returns a System.String that represents the current System.Object.
+
             Returns: A System.String that represents the current System.Object.
         """
         ...
@@ -169,7 +200,8 @@ class PlcExternalSourceGroup(IEquatable, IEngineeringObject, IInternalObjectAcce
     @property
     def ExternalSources(self) -> PlcExternalSourceComposition:
         """
-        Composition of Plc external sources
+        Composition of Plc external sources
+
         Get: ExternalSources(self: PlcExternalSourceGroup) -> PlcExternalSourceComposition
         """
         ...
@@ -177,7 +209,8 @@ class PlcExternalSourceGroup(IEquatable, IEngineeringObject, IInternalObjectAcce
     @property
     def Groups(self) -> PlcExternalSourceUserGroupComposition:
         """
-        Composition of Plc external source user groups
+        Composition of Plc external source user groups
+
         Get: Groups(self: PlcExternalSourceGroup) -> PlcExternalSourceUserGroupComposition
         """
         ...
@@ -185,7 +218,8 @@ class PlcExternalSourceGroup(IEquatable, IEngineeringObject, IInternalObjectAcce
     @property
     def Name(self) -> str:
         """
-        The name of the Plc external source group
+        The name of the Plc external source group
+
         Get: Name(self: PlcExternalSourceGroup) -> str
         """
         ...
@@ -193,7 +227,8 @@ class PlcExternalSourceGroup(IEquatable, IEngineeringObject, IInternalObjectAcce
     @property
     def Parent(self) -> IEngineeringObject:
         """
-        EOM parent of this object
+        EOM parent of this object
+
         Get: Parent(self: PlcExternalSourceGroup) -> IEngineeringObject
         """
         ...
@@ -201,16 +236,20 @@ class PlcExternalSourceGroup(IEquatable, IEngineeringObject, IInternalObjectAcce
 
     def GetHashCode(self) -> int:
         """
-        GetHashCode(self: PlcExternalSourceGroup) -> int
-            Returns a hash code for this instance.
+        GetHashCode(self: PlcExternalSourceGroup) -> int
+
+            Returns a hash code for this instance.
+
             Returns: A hash code for this instance, suitable for use in hashing algorithms and data structures like a hash table.
         """
         ...
 
     def ToString(self) -> str:
         """
-        ToString(self: PlcExternalSourceGroup) -> str
-            Returns a System.String that represents the current System.Object.
+        ToString(self: PlcExternalSourceGroup) -> str
+
+            Returns a System.String that represents the current System.Object.
+
             Returns: A System.String that represents the current System.Object.
         """
         ...
@@ -221,16 +260,17 @@ class PlcExternalSourceGroup(IEquatable, IEngineeringObject, IInternalObjectAcce
 
 class PlcExternalSourceSystemGroup(PlcExternalSourceGroup): # skipped bases: <type 'IInternalInstanceAccess'>, <type 'IEngineeringInstance'>, <type 'IEngineeringObject'>, <type 'IInternalObjectAccess'>, <type 'IEquatable[object]'>, <type 'IInternalBaseAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'object'>
     """ System group containing Plc external sources & Plc external source user groups """
-    def GenerateSource(self, blocks:IEnumerable, sourceFile:FileInfo, generateOption:GenerateOptions = ...): # -> 
+    def GenerateSource(self, blocks:IEnumerable, sourceFile:FileInfo, generateOption:GenerateOptions = ...): # ->
         """ GenerateSource(self: PlcExternalSourceSystemGroup, blocks: IEnumerable[IGenerateSource], sourceFile: FileInfo)GenerateSource(self: PlcExternalSourceSystemGroup, blocks: IEnumerable[IGenerateSource], sourceFile: FileInfo, generateOption: GenerateOptions) """
         ...
 
 
 class PlcExternalSourceUserGroup(PlcExternalSourceGroup): # skipped bases: <type 'IInternalInstanceAccess'>, <type 'IEngineeringInstance'>, <type 'IEngineeringObject'>, <type 'IInternalObjectAccess'>, <type 'IEquatable[object]'>, <type 'IInternalBaseAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'object'>
     """ User group containing Plc external sources & Plc external source user groups """
-    def Delete(self): # -> 
+    def Delete(self): # ->
         """
-        Delete(self: PlcExternalSourceUserGroup)
+        Delete(self: PlcExternalSourceUserGroup)
+
             Deletes this instance.
         """
         ...
@@ -241,7 +281,8 @@ class PlcExternalSourceUserGroupComposition(IInternalCompositionAccess, IEnginee
     @property
     def Parent(self) -> IEngineeringObject:
         """
-        Gets the parent.
+        Gets the parent.
+
         Get: Parent(self: PlcExternalSourceUserGroupComposition) -> IEngineeringObject
         """
         ...
@@ -249,34 +290,44 @@ class PlcExternalSourceUserGroupComposition(IInternalCompositionAccess, IEnginee
 
     def CreateFrom(self, sourceMasterCopy:MasterCopy) -> PlcExternalSourceUserGroup:
         """
-        CreateFrom(self: PlcExternalSourceUserGroupComposition, sourceMasterCopy: MasterCopy) -> PlcExternalSourceUserGroup
-            Create ExternalSourceUserGroup from MasterCopy
-            sourceMasterCopy: The source master copy
+        CreateFrom(self: PlcExternalSourceUserGroupComposition, sourceMasterCopy: MasterCopy) -> PlcExternalSourceUserGroup
+
+            Create ExternalSourceUserGroup from MasterCopy
+
+            sourceMasterCopy: The source master copy
+
             Returns: Siemens.Engineering.SW.ExternalSources.PlcExternalSourceUserGroup
         """
         ...
 
     def Find(self, name:str) -> PlcExternalSourceUserGroup:
         """
-        Find(self: PlcExternalSourceUserGroupComposition, name: str) -> PlcExternalSourceUserGroup
-            Finds a given Plc external source user group
-            name: Name to find
+        Find(self: PlcExternalSourceUserGroupComposition, name: str) -> PlcExternalSourceUserGroup
+
+            Finds a given Plc external source user group
+
+            name: Name to find
+
             Returns: Siemens.Engineering.SW.ExternalSources.PlcExternalSourceUserGroup
         """
         ...
 
     def GetHashCode(self) -> int:
         """
-        GetHashCode(self: PlcExternalSourceUserGroupComposition) -> int
-            Returns a hash code for this instance.
+        GetHashCode(self: PlcExternalSourceUserGroupComposition) -> int
+
+            Returns a hash code for this instance.
+
             Returns: A hash code for this instance, suitable for use in hashing algorithms and data structures like a hash table.
         """
         ...
 
     def ToString(self) -> str:
         """
-        ToString(self: PlcExternalSourceUserGroupComposition) -> str
-            Returns a System.String that represents the current System.Object.
+        ToString(self: PlcExternalSourceUserGroupComposition) -> str
+
+            Returns a System.String that represents the current System.Object.
+
             Returns: A System.String that represents the current System.Object.
         """
         ...
@@ -287,5 +338,3 @@ class PlcExternalSourceUserGroupComposition(IInternalCompositionAccess, IEnginee
 
     def __ne__(self, *args): #cannot find CLR method
         ...
-
-

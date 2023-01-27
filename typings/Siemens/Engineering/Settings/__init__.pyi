@@ -12,6 +12,8 @@ from System import IEquatable
     IInternalCompositionAccess, IInternalObjectAccess)
 """
 
+from Siemens import IInternalCompositionAccess, IInternalObjectAccess
+
 # no functions
 # classes
 
@@ -20,8 +22,10 @@ class TiaPortalSetting(IEquatable, IEngineeringObject, IInternalObjectAccess): #
     @property
     def Name(self) -> str:
         """
-        Represents the name of a TiaPortalSetting.
-        Get: Name(self: TiaPortalSetting) -> str
+        Represents the name of a TiaPortalSetting.
+
+        Get: Name(self: TiaPortalSetting) -> str
+
         Set: Name(self: TiaPortalSetting) = value
         """
         ...
@@ -29,7 +33,8 @@ class TiaPortalSetting(IEquatable, IEngineeringObject, IInternalObjectAccess): #
     @property
     def Parent(self) -> IEngineeringObject:
         """
-        EOM parent of this object
+        EOM parent of this object
+
         Get: Parent(self: TiaPortalSetting) -> IEngineeringObject
         """
         ...
@@ -37,8 +42,10 @@ class TiaPortalSetting(IEquatable, IEngineeringObject, IInternalObjectAccess): #
     @property
     def Value(self) -> object:
         """
-        Represents the value of a TiaPortalSetting.
-        Get: Value(self: TiaPortalSetting) -> object
+        Represents the value of a TiaPortalSetting.
+
+        Get: Value(self: TiaPortalSetting) -> object
+
         Set: Value(self: TiaPortalSetting) = value
         """
         ...
@@ -46,16 +53,20 @@ class TiaPortalSetting(IEquatable, IEngineeringObject, IInternalObjectAccess): #
 
     def GetHashCode(self) -> int:
         """
-        GetHashCode(self: TiaPortalSetting) -> int
-            Returns a hash code for this instance.
+        GetHashCode(self: TiaPortalSetting) -> int
+
+            Returns a hash code for this instance.
+
             Returns: A hash code for this instance, suitable for use in hashing algorithms and data structures like a hash table.
         """
         ...
 
     def ToString(self) -> str:
         """
-        ToString(self: TiaPortalSetting) -> str
-            Returns a System.String that represents the current System.Object.
+        ToString(self: TiaPortalSetting) -> str
+
+            Returns a System.String that represents the current System.Object.
+
             Returns: A System.String that represents the current System.Object.
         """
         ...
@@ -69,7 +80,8 @@ class TiaPortalSettingComposition(IInternalCompositionAccess, IEngineeringCompos
     @property
     def Parent(self) -> IEngineeringObject:
         """
-        Gets the parent.
+        Gets the parent.
+
         Get: Parent(self: TiaPortalSettingComposition) -> IEngineeringObject
         """
         ...
@@ -77,25 +89,32 @@ class TiaPortalSettingComposition(IInternalCompositionAccess, IEngineeringCompos
 
     def Find(self, name:str) -> TiaPortalSetting:
         """
-        Find(self: TiaPortalSettingComposition, name: str) -> TiaPortalSetting
-            Returns the TiaPortalSetting with the matching name.
-            name: The name of the TiaPortalSetting to find.
+        Find(self: TiaPortalSettingComposition, name: str) -> TiaPortalSetting
+
+            Returns the TiaPortalSetting with the matching name.
+
+            name: The name of the TiaPortalSetting to find.
+
             Returns: Siemens.Engineering.Settings.TiaPortalSetting
         """
         ...
 
     def GetHashCode(self) -> int:
         """
-        GetHashCode(self: TiaPortalSettingComposition) -> int
-            Returns a hash code for this instance.
+        GetHashCode(self: TiaPortalSettingComposition) -> int
+
+            Returns a hash code for this instance.
+
             Returns: A hash code for this instance, suitable for use in hashing algorithms and data structures like a hash table.
         """
         ...
 
     def ToString(self) -> str:
         """
-        ToString(self: TiaPortalSettingComposition) -> str
-            Returns a System.String that represents the current System.Object.
+        ToString(self: TiaPortalSettingComposition) -> str
+
+            Returns a System.String that represents the current System.Object.
+
             Returns: A System.String that represents the current System.Object.
         """
         ...
@@ -113,7 +132,8 @@ class TiaPortalSettingsFolder(IEquatable, IEngineeringObject, IInternalObjectAcc
     @property
     def Folders(self) -> TiaPortalSettingsFolderComposition:
         """
-        Composition of TiaPortalSettingsFolders
+        Composition of TiaPortalSettingsFolders
+
         Get: Folders(self: TiaPortalSettingsFolder) -> TiaPortalSettingsFolderComposition
         """
         ...
@@ -121,7 +141,8 @@ class TiaPortalSettingsFolder(IEquatable, IEngineeringObject, IInternalObjectAcc
     @property
     def Name(self) -> str:
         """
-        Represents the name of a TiaPortalSettingsFolder.
+        Represents the name of a TiaPortalSettingsFolder.
+
         Get: Name(self: TiaPortalSettingsFolder) -> str
         """
         ...
@@ -129,7 +150,8 @@ class TiaPortalSettingsFolder(IEquatable, IEngineeringObject, IInternalObjectAcc
     @property
     def Parent(self) -> IEngineeringObject:
         """
-        EOM parent of this object
+        EOM parent of this object
+
         Get: Parent(self: TiaPortalSettingsFolder) -> IEngineeringObject
         """
         ...
@@ -137,7 +159,8 @@ class TiaPortalSettingsFolder(IEquatable, IEngineeringObject, IInternalObjectAcc
     @property
     def Settings(self) -> TiaPortalSettingComposition:
         """
-        Composition of TiaPortalSettings
+        Composition of TiaPortalSettings
+
         Get: Settings(self: TiaPortalSettingsFolder) -> TiaPortalSettingComposition
         """
         ...
@@ -145,16 +168,20 @@ class TiaPortalSettingsFolder(IEquatable, IEngineeringObject, IInternalObjectAcc
 
     def GetHashCode(self) -> int:
         """
-        GetHashCode(self: TiaPortalSettingsFolder) -> int
-            Returns a hash code for this instance.
+        GetHashCode(self: TiaPortalSettingsFolder) -> int
+
+            Returns a hash code for this instance.
+
             Returns: A hash code for this instance, suitable for use in hashing algorithms and data structures like a hash table.
         """
         ...
 
     def ToString(self) -> str:
         """
-        ToString(self: TiaPortalSettingsFolder) -> str
-            Returns a System.String that represents the current System.Object.
+        ToString(self: TiaPortalSettingsFolder) -> str
+
+            Returns a System.String that represents the current System.Object.
+
             Returns: A System.String that represents the current System.Object.
         """
         ...
@@ -168,7 +195,8 @@ class TiaPortalSettingsFolderComposition(IInternalCompositionAccess, IEngineerin
     @property
     def Parent(self) -> IEngineeringObject:
         """
-        Gets the parent.
+        Gets the parent.
+
         Get: Parent(self: TiaPortalSettingsFolderComposition) -> IEngineeringObject
         """
         ...
@@ -176,25 +204,32 @@ class TiaPortalSettingsFolderComposition(IInternalCompositionAccess, IEngineerin
 
     def Find(self, name:str) -> TiaPortalSettingsFolder:
         """
-        Find(self: TiaPortalSettingsFolderComposition, name: str) -> TiaPortalSettingsFolder
-            Returns the TiaPortalSettingsFolder with the matching name.
-            name: The name of the TiaPortalSettingsFolder to find.
+        Find(self: TiaPortalSettingsFolderComposition, name: str) -> TiaPortalSettingsFolder
+
+            Returns the TiaPortalSettingsFolder with the matching name.
+
+            name: The name of the TiaPortalSettingsFolder to find.
+
             Returns: Siemens.Engineering.Settings.TiaPortalSettingsFolder
         """
         ...
 
     def GetHashCode(self) -> int:
         """
-        GetHashCode(self: TiaPortalSettingsFolderComposition) -> int
-            Returns a hash code for this instance.
+        GetHashCode(self: TiaPortalSettingsFolderComposition) -> int
+
+            Returns a hash code for this instance.
+
             Returns: A hash code for this instance, suitable for use in hashing algorithms and data structures like a hash table.
         """
         ...
 
     def ToString(self) -> str:
         """
-        ToString(self: TiaPortalSettingsFolderComposition) -> str
-            Returns a System.String that represents the current System.Object.
+        ToString(self: TiaPortalSettingsFolderComposition) -> str
+
+            Returns a System.String that represents the current System.Object.
+
             Returns: A System.String that represents the current System.Object.
         """
         ...
@@ -205,5 +240,3 @@ class TiaPortalSettingsFolderComposition(IInternalCompositionAccess, IEngineerin
 
     def __ne__(self, *args): #cannot find CLR method
         ...
-
-

@@ -4,7 +4,7 @@
 # by generator 1.145
 """ no doc """
 from __future__ import annotations
-from Siemens.Engineering import (ExportOptions, IEngineeringComposition, 
+from Siemens.Engineering import (ExportOptions, IEngineeringComposition,
     IEngineeringObject, ImportOptions)
 
 from System import IEquatable
@@ -17,6 +17,8 @@ from System.IO import FileInfo
     IInternalCompositionAccess, IInternalObjectAccess)
 """
 
+from Siemens import IInternalCompositionAccess, IInternalObjectAccess
+
 # no functions
 # classes
 
@@ -25,7 +27,8 @@ class GraphicList(IEquatable, IEngineeringObject, IInternalObjectAccess): # skip
     @property
     def Name(self) -> str:
         """
-        The name of the graphic list
+        The name of the graphic list
+
         Get: Name(self: GraphicList) -> str
         """
         ...
@@ -33,40 +36,49 @@ class GraphicList(IEquatable, IEngineeringObject, IInternalObjectAccess): # skip
     @property
     def Parent(self) -> IEngineeringObject:
         """
-        EOM parent of this object
+        EOM parent of this object
+
         Get: Parent(self: GraphicList) -> IEngineeringObject
         """
         ...
 
 
-    def Delete(self): # -> 
+    def Delete(self): # ->
         """
-        Delete(self: GraphicList)
+        Delete(self: GraphicList)
+
             Deletes this instance.
         """
         ...
 
-    def Export(self, path:FileInfo, exportOptions:ExportOptions): # -> 
+    def Export(self, path:FileInfo, exportOptions:ExportOptions): # ->
         """
-        Export(self: GraphicList, path: FileInfo, exportOptions: ExportOptions)
-            Simatic ML export of a graphic list
-            path: Path to the Simatic ML file
+        Export(self: GraphicList, path: FileInfo, exportOptions: ExportOptions)
+
+            Simatic ML export of a graphic list
+
+            path: Path to the Simatic ML file
+
             exportOptions: Option to use for export (default, readonly, etc.)
         """
         ...
 
     def GetHashCode(self) -> int:
         """
-        GetHashCode(self: GraphicList) -> int
-            Returns a hash code for this instance.
+        GetHashCode(self: GraphicList) -> int
+
+            Returns a hash code for this instance.
+
             Returns: A hash code for this instance, suitable for use in hashing algorithms and data structures like a hash table.
         """
         ...
 
     def ToString(self) -> str:
         """
-        ToString(self: GraphicList) -> str
-            Returns a System.String that represents the current System.Object.
+        ToString(self: GraphicList) -> str
+
+            Returns a System.String that represents the current System.Object.
+
             Returns: A System.String that represents the current System.Object.
         """
         ...
@@ -80,7 +92,8 @@ class GraphicListComposition(IInternalCompositionAccess, IEngineeringComposition
     @property
     def Parent(self) -> IEngineeringObject:
         """
-        Gets the parent.
+        Gets the parent.
+
         Get: Parent(self: GraphicListComposition) -> IEngineeringObject
         """
         ...
@@ -88,35 +101,46 @@ class GraphicListComposition(IInternalCompositionAccess, IEngineeringComposition
 
     def Find(self, name:str) -> GraphicList:
         """
-        Find(self: GraphicListComposition, name: str) -> GraphicList
-            Finds a given graphic list
-            name: Name to find
+        Find(self: GraphicListComposition, name: str) -> GraphicList
+
+            Finds a given graphic list
+
+            name: Name to find
+
             Returns: Siemens.Engineering.Hmi.TextGraphicList.GraphicList
         """
         ...
 
     def GetHashCode(self) -> int:
         """
-        GetHashCode(self: GraphicListComposition) -> int
-            Returns a hash code for this instance.
+        GetHashCode(self: GraphicListComposition) -> int
+
+            Returns a hash code for this instance.
+
             Returns: A hash code for this instance, suitable for use in hashing algorithms and data structures like a hash table.
         """
         ...
 
     def Import(self, path:FileInfo, importOptions:ImportOptions) -> IList:
         """
-        Import(self: GraphicListComposition, path: FileInfo, importOptions: ImportOptions) -> IList[GraphicList]
-            Simatic ML import of a graphic list
-            path: Path to the Simatic ML file
-            importOptions: Options to use for Import
+        Import(self: GraphicListComposition, path: FileInfo, importOptions: ImportOptions) -> IList[GraphicList]
+
+            Simatic ML import of a graphic list
+
+            path: Path to the Simatic ML file
+
+            importOptions: Options to use for Import
+
             Returns: System.Collections.Generic.IList<Siemens.Engineering.Hmi.TextGraphicList.GraphicList>
         """
         ...
 
     def ToString(self) -> str:
         """
-        ToString(self: GraphicListComposition) -> str
-            Returns a System.String that represents the current System.Object.
+        ToString(self: GraphicListComposition) -> str
+
+            Returns a System.String that represents the current System.Object.
+
             Returns: A System.String that represents the current System.Object.
         """
         ...
@@ -134,7 +158,8 @@ class TextList(IEquatable, IEngineeringObject, IInternalObjectAccess): # skipped
     @property
     def Name(self) -> str:
         """
-        The name of the text list
+        The name of the text list
+
         Get: Name(self: TextList) -> str
         """
         ...
@@ -142,40 +167,49 @@ class TextList(IEquatable, IEngineeringObject, IInternalObjectAccess): # skipped
     @property
     def Parent(self) -> IEngineeringObject:
         """
-        EOM parent of this object
+        EOM parent of this object
+
         Get: Parent(self: TextList) -> IEngineeringObject
         """
         ...
 
 
-    def Delete(self): # -> 
+    def Delete(self): # ->
         """
-        Delete(self: TextList)
+        Delete(self: TextList)
+
             Deletes this instance.
         """
         ...
 
-    def Export(self, path:FileInfo, exportOptions:ExportOptions): # -> 
+    def Export(self, path:FileInfo, exportOptions:ExportOptions): # ->
         """
-        Export(self: TextList, path: FileInfo, exportOptions: ExportOptions)
-            Simatic ML export of a text list
-            path: Path to the Simatic ML file
+        Export(self: TextList, path: FileInfo, exportOptions: ExportOptions)
+
+            Simatic ML export of a text list
+
+            path: Path to the Simatic ML file
+
             exportOptions: Option to use for export (default, readonly, etc.)
         """
         ...
 
     def GetHashCode(self) -> int:
         """
-        GetHashCode(self: TextList) -> int
-            Returns a hash code for this instance.
+        GetHashCode(self: TextList) -> int
+
+            Returns a hash code for this instance.
+
             Returns: A hash code for this instance, suitable for use in hashing algorithms and data structures like a hash table.
         """
         ...
 
     def ToString(self) -> str:
         """
-        ToString(self: TextList) -> str
-            Returns a System.String that represents the current System.Object.
+        ToString(self: TextList) -> str
+
+            Returns a System.String that represents the current System.Object.
+
             Returns: A System.String that represents the current System.Object.
         """
         ...
@@ -189,7 +223,8 @@ class TextListComposition(IInternalCompositionAccess, IEngineeringComposition, I
     @property
     def Parent(self) -> IEngineeringObject:
         """
-        Gets the parent.
+        Gets the parent.
+
         Get: Parent(self: TextListComposition) -> IEngineeringObject
         """
         ...
@@ -197,35 +232,46 @@ class TextListComposition(IInternalCompositionAccess, IEngineeringComposition, I
 
     def Find(self, name:str) -> TextList:
         """
-        Find(self: TextListComposition, name: str) -> TextList
-            Finds a given text list
-            name: Name to find
+        Find(self: TextListComposition, name: str) -> TextList
+
+            Finds a given text list
+
+            name: Name to find
+
             Returns: Siemens.Engineering.Hmi.TextGraphicList.TextList
         """
         ...
 
     def GetHashCode(self) -> int:
         """
-        GetHashCode(self: TextListComposition) -> int
-            Returns a hash code for this instance.
+        GetHashCode(self: TextListComposition) -> int
+
+            Returns a hash code for this instance.
+
             Returns: A hash code for this instance, suitable for use in hashing algorithms and data structures like a hash table.
         """
         ...
 
     def Import(self, path:FileInfo, importOptions:ImportOptions) -> IList:
         """
-        Import(self: TextListComposition, path: FileInfo, importOptions: ImportOptions) -> IList[TextList]
-            Simatic ML import of a text list
-            path: Path to the Simatic ML file
-            importOptions: Options to use for Import
+        Import(self: TextListComposition, path: FileInfo, importOptions: ImportOptions) -> IList[TextList]
+
+            Simatic ML import of a text list
+
+            path: Path to the Simatic ML file
+
+            importOptions: Options to use for Import
+
             Returns: System.Collections.Generic.IList<Siemens.Engineering.Hmi.TextGraphicList.TextList>
         """
         ...
 
     def ToString(self) -> str:
         """
-        ToString(self: TextListComposition) -> str
-            Returns a System.String that represents the current System.Object.
+        ToString(self: TextListComposition) -> str
+
+            Returns a System.String that represents the current System.Object.
+
             Returns: A System.String that represents the current System.Object.
         """
         ...
@@ -236,5 +282,3 @@ class TextListComposition(IInternalCompositionAccess, IEngineeringComposition, I
 
     def __ne__(self, *args): #cannot find CLR method
         ...
-
-

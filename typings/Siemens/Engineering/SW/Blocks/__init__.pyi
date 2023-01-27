@@ -4,13 +4,13 @@
 # by generator 1.145
 """ no doc """
 from __future__ import annotations
-from Siemens.Engineering import (ExportOptions, IEngineeringComposition, 
-    IEngineeringObject, IEngineeringService, IEngineeringServiceProvider, 
+from Siemens.Engineering import (ExportOptions, IEngineeringComposition,
+    IEngineeringObject, IEngineeringService, IEngineeringServiceProvider,
     IShowable, ImportOptions)
 
 from Siemens.Engineering.AdvancedProtection import ProtectionProviderBase
 
-from Siemens.Engineering.Library.MasterCopies import (IMasterCopySource, 
+from Siemens.Engineering.Library.MasterCopies import (IMasterCopySource,
     IMasterCopyTarget, MasterCopy)
 
 from Siemens.Engineering.Library.Types import (
@@ -30,6 +30,8 @@ from System.IO import DirectoryInfo, FileInfo
     IInternalCompositionAccess, IInternalObjectAccess, field#)
 """
 
+from Siemens import IInternalCompositionAccess, IInternalObjectAccess
+
 # no functions
 # classes
 
@@ -38,8 +40,10 @@ class PlcBlock(IInternalObjectAccess, IEngineeringServiceProvider, IShowable, IE
     @property
     def AutoNumber(self) -> bool:
         """
-        Determines if the block gets the block number automatically or manually
-        Get: AutoNumber(self: PlcBlock) -> bool
+        Determines if the block gets the block number automatically or manually
+
+        Get: AutoNumber(self: PlcBlock) -> bool
+
         Set: AutoNumber(self: PlcBlock) = value
         """
         ...
@@ -47,7 +51,8 @@ class PlcBlock(IInternalObjectAccess, IEngineeringServiceProvider, IShowable, IE
     @property
     def CodeModifiedDate(self) -> DateTime:
         """
-        Last code modification date
+        Last code modification date
+
         Get: CodeModifiedDate(self: PlcBlock) -> DateTime
         """
         ...
@@ -55,7 +60,8 @@ class PlcBlock(IInternalObjectAccess, IEngineeringServiceProvider, IShowable, IE
     @property
     def CompileDate(self) -> DateTime:
         """
-        Last compilation date
+        Last compilation date
+
         Get: CompileDate(self: PlcBlock) -> DateTime
         """
         ...
@@ -63,7 +69,8 @@ class PlcBlock(IInternalObjectAccess, IEngineeringServiceProvider, IShowable, IE
     @property
     def CreationDate(self) -> DateTime:
         """
-        Creation date of this Plc block
+        Creation date of this Plc block
+
         Get: CreationDate(self: PlcBlock) -> DateTime
         """
         ...
@@ -71,7 +78,8 @@ class PlcBlock(IInternalObjectAccess, IEngineeringServiceProvider, IShowable, IE
     @property
     def HeaderAuthor(self) -> str:
         """
-        PLC header attribute author
+        PLC header attribute author
+
         Get: HeaderAuthor(self: PlcBlock) -> str
         """
         ...
@@ -79,7 +87,8 @@ class PlcBlock(IInternalObjectAccess, IEngineeringServiceProvider, IShowable, IE
     @property
     def HeaderFamily(self) -> str:
         """
-        PLC header attribute family
+        PLC header attribute family
+
         Get: HeaderFamily(self: PlcBlock) -> str
         """
         ...
@@ -87,7 +96,8 @@ class PlcBlock(IInternalObjectAccess, IEngineeringServiceProvider, IShowable, IE
     @property
     def HeaderName(self) -> str:
         """
-        PLC header attribute name
+        PLC header attribute name
+
         Get: HeaderName(self: PlcBlock) -> str
         """
         ...
@@ -95,7 +105,8 @@ class PlcBlock(IInternalObjectAccess, IEngineeringServiceProvider, IShowable, IE
     @property
     def HeaderVersion(self) -> Version:
         """
-        PLC header attribute version
+        PLC header attribute version
+
         Get: HeaderVersion(self: PlcBlock) -> Version
         """
         ...
@@ -103,7 +114,8 @@ class PlcBlock(IInternalObjectAccess, IEngineeringServiceProvider, IShowable, IE
     @property
     def InterfaceModifiedDate(self) -> DateTime:
         """
-        Last interface modification
+        Last interface modification
+
         Get: InterfaceModifiedDate(self: PlcBlock) -> DateTime
         """
         ...
@@ -111,7 +123,8 @@ class PlcBlock(IInternalObjectAccess, IEngineeringServiceProvider, IShowable, IE
     @property
     def IsConsistent(self) -> bool:
         """
-        True if block and used data is consistent
+        True if block and used data is consistent
+
         Get: IsConsistent(self: PlcBlock) -> bool
         """
         ...
@@ -119,7 +132,8 @@ class PlcBlock(IInternalObjectAccess, IEngineeringServiceProvider, IShowable, IE
     @property
     def IsKnowHowProtected(self) -> bool:
         """
-        Gets the know-how protection status of the block
+        Gets the know-how protection status of the block
+
         Get: IsKnowHowProtected(self: PlcBlock) -> bool
         """
         ...
@@ -127,7 +141,8 @@ class PlcBlock(IInternalObjectAccess, IEngineeringServiceProvider, IShowable, IE
     @property
     def MemoryLayout(self) -> MemoryLayout:
         """
-        Indicates if a block has been optimized
+        Indicates if a block has been optimized
+
         Get: MemoryLayout(self: PlcBlock) -> MemoryLayout
         """
         ...
@@ -135,7 +150,8 @@ class PlcBlock(IInternalObjectAccess, IEngineeringServiceProvider, IShowable, IE
     @property
     def ModifiedDate(self) -> DateTime:
         """
-        Last modification date including e.g. comments
+        Last modification date including e.g. comments
+
         Get: ModifiedDate(self: PlcBlock) -> DateTime
         """
         ...
@@ -143,8 +159,10 @@ class PlcBlock(IInternalObjectAccess, IEngineeringServiceProvider, IShowable, IE
     @property
     def Name(self) -> str:
         """
-        The name of the Plc block
-        Get: Name(self: PlcBlock) -> str
+        The name of the Plc block
+
+        Get: Name(self: PlcBlock) -> str
+
         Set: Name(self: PlcBlock) = value
         """
         ...
@@ -152,8 +170,10 @@ class PlcBlock(IInternalObjectAccess, IEngineeringServiceProvider, IShowable, IE
     @property
     def Number(self) -> int:
         """
-        The number of this Plc block
-        Get: Number(self: PlcBlock) -> int
+        The number of this Plc block
+
+        Get: Number(self: PlcBlock) -> int
+
         Set: Number(self: PlcBlock) = value
         """
         ...
@@ -161,7 +181,8 @@ class PlcBlock(IInternalObjectAccess, IEngineeringServiceProvider, IShowable, IE
     @property
     def ParameterModified(self) -> DateTime:
         """
-        Date of the last parameter modification
+        Date of the last parameter modification
+
         Get: ParameterModified(self: PlcBlock) -> DateTime
         """
         ...
@@ -169,7 +190,8 @@ class PlcBlock(IInternalObjectAccess, IEngineeringServiceProvider, IShowable, IE
     @property
     def Parent(self) -> IEngineeringObject:
         """
-        EOM parent of this object
+        EOM parent of this object
+
         Get: Parent(self: PlcBlock) -> IEngineeringObject
         """
         ...
@@ -177,7 +199,8 @@ class PlcBlock(IInternalObjectAccess, IEngineeringServiceProvider, IShowable, IE
     @property
     def ProgrammingLanguage(self) -> ProgrammingLanguage:
         """
-        The language of this block
+        The language of this block
+
         Get: ProgrammingLanguage(self: PlcBlock) -> ProgrammingLanguage
         """
         ...
@@ -185,40 +208,49 @@ class PlcBlock(IInternalObjectAccess, IEngineeringServiceProvider, IShowable, IE
     @property
     def StructureModified(self) -> DateTime:
         """
-        Date of the last structure modification
+        Date of the last structure modification
+
         Get: StructureModified(self: PlcBlock) -> DateTime
         """
         ...
 
 
-    def Delete(self): # -> 
+    def Delete(self): # ->
         """
-        Delete(self: PlcBlock)
+        Delete(self: PlcBlock)
+
             Deletes this instance.
         """
         ...
 
-    def Export(self, path:FileInfo, exportOptions:ExportOptions): # -> 
+    def Export(self, path:FileInfo, exportOptions:ExportOptions): # ->
         """
-        Export(self: PlcBlock, path: FileInfo, exportOptions: ExportOptions)
-            Simatic ML export of a Plc block
-            path: Path to the Simatic ML file
+        Export(self: PlcBlock, path: FileInfo, exportOptions: ExportOptions)
+
+            Simatic ML export of a Plc block
+
+            path: Path to the Simatic ML file
+
             exportOptions: Option to use for export (default, readonly, etc.)
         """
         ...
 
     def GetHashCode(self) -> int:
         """
-        GetHashCode(self: PlcBlock) -> int
-            Returns a hash code for this instance.
+        GetHashCode(self: PlcBlock) -> int
+
+            Returns a hash code for this instance.
+
             Returns: A hash code for this instance, suitable for use in hashing algorithms and data structures like a hash table.
         """
         ...
 
     def ToString(self) -> str:
         """
-        ToString(self: PlcBlock) -> str
-            Returns a System.String that represents the current System.Object.
+        ToString(self: PlcBlock) -> str
+
+            Returns a System.String that represents the current System.Object.
+
             Returns: A System.String that represents the current System.Object.
         """
         ...
@@ -236,7 +268,8 @@ class ArrayDB(DataBlock): # skipped bases: <type 'IInternalInstanceAccess'>, <ty
     @property
     def Parent(self) -> IEngineeringObject:
         """
-        EOM parent of this object
+        EOM parent of this object
+
         Get: Parent(self: ArrayDB) -> IEngineeringObject
         """
         ...
@@ -245,7 +278,8 @@ class ArrayDB(DataBlock): # skipped bases: <type 'IInternalInstanceAccess'>, <ty
 
 class BlockType(Enum): # skipped bases: <type 'IConvertible'>, <type 'IComparable'>, <type 'IFormattable'>, <type 'object'>
     """
-    The list of possible IECPL block types
+    The list of possible IECPL block types
+
     enum BlockType, values: FB (1), FBT (4), SDT (5), SFB (2), UDT (3), Undef (0)
     """
     FB: BlockType = ...
@@ -259,10 +293,12 @@ class BlockType(Enum): # skipped bases: <type 'IConvertible'>, <type 'IComparabl
 
 class CodeBlock(PlcBlock, IMasterCopySource): # skipped bases: <type 'IInternalInstanceAccess'>, <type 'IShowable'>, <type 'IEngineeringInstance'>, <type 'IEngineeringServiceProvider'>, <type 'IServiceProvider'>, <type 'IEngineeringObject'>, <type 'IInternalObjectAccess'>, <type 'IGenerateSource'>, <type 'IEquatable[object]'>, <type 'IInternalBaseAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'object'>
     """ Class representing a code block """
-    def ExportProDIAGInfo(self, path:DirectoryInfo): # -> 
+    def ExportProDIAGInfo(self, path:DirectoryInfo): # ->
         """
-        ExportProDIAGInfo(self: CodeBlock, path: DirectoryInfo)
-            Exports prodiag alarm information
+        ExportProDIAGInfo(self: CodeBlock, path: DirectoryInfo)
+
+            Exports prodiag alarm information
+
             path: path where the file gets exported
         """
         ...
@@ -281,7 +317,8 @@ class FB(CodeBlock): # skipped bases: <type 'IInternalInstanceAccess'>, <type 'I
     @property
     def Parent(self) -> IEngineeringObject:
         """
-        EOM parent of this object
+        EOM parent of this object
+
         Get: Parent(self: FB) -> IEngineeringObject
         """
         ...
@@ -289,7 +326,8 @@ class FB(CodeBlock): # skipped bases: <type 'IInternalInstanceAccess'>, <type 'I
     @property
     def Supervisions(self) -> SupervisionComposition:
         """
-        Get supervisions
+        Get supervisions
+
         Get: Supervisions(self: FB) -> SupervisionComposition
         """
         ...
@@ -301,7 +339,8 @@ class FC(CodeBlock): # skipped bases: <type 'IInternalInstanceAccess'>, <type 'I
     @property
     def Parent(self) -> IEngineeringObject:
         """
-        EOM parent of this object
+        EOM parent of this object
+
         Get: Parent(self: FC) -> IEngineeringObject
         """
         ...
@@ -313,7 +352,8 @@ class GlobalDB(DataBlock): # skipped bases: <type 'IInternalInstanceAccess'>, <t
     @property
     def Parent(self) -> IEngineeringObject:
         """
-        EOM parent of this object
+        EOM parent of this object
+
         Get: Parent(self: GlobalDB) -> IEngineeringObject
         """
         ...
@@ -323,9 +363,10 @@ class GlobalDB(DataBlock): # skipped bases: <type 'IInternalInstanceAccess'>, <t
 class InstanceDB(DataBlock): # skipped bases: <type 'IInternalInstanceAccess'>, <type 'IEngineeringServiceProvider'>, <type 'IServiceProvider'>, <type 'IEngineeringObject'>, <type 'IInternalObjectAccess'>, <type 'IEquatable[object]'>, <type 'IEngineeringCompositionOrObject'>, <type 'IEngineeringInstance'>, <type 'IMasterCopySource'>, <type 'IGenerateSource'>, <type 'IInternalBaseAccess'>, <type 'IShowable'>, <type 'object'>
     """ Represents an instance DB """
     @property
-    def InstanceOfName(self): # -> 
+    def InstanceOfName(self): # ->
         """
-        The block name of the father instance (FB/SFB/UDT/SDT)
+        The block name of the father instance (FB/SFB/UDT/SDT)
+
         Get: InstanceOfName(self: InstanceDB) -> str
         """
         ...
@@ -333,7 +374,8 @@ class InstanceDB(DataBlock): # skipped bases: <type 'IInternalInstanceAccess'>, 
     @property
     def Parent(self) -> IEngineeringObject:
         """
-        EOM parent of this object
+        EOM parent of this object
+
         Get: Parent(self: InstanceDB) -> IEngineeringObject
         """
         ...
@@ -345,33 +387,41 @@ class InterfaceSnapshot(IEquatable, IEngineeringObject, IEngineeringService, IIn
     @property
     def Parent(self) -> IEngineeringObject:
         """
-        EOM parent of this object
+        EOM parent of this object
+
         Get: Parent(self: InterfaceSnapshot) -> IEngineeringObject
         """
         ...
 
 
-    def Export(self, path:FileInfo, exportOptions:ExportOptions): # -> 
+    def Export(self, path:FileInfo, exportOptions:ExportOptions): # ->
         """
-        Export(self: InterfaceSnapshot, path: FileInfo, exportOptions: ExportOptions)
-            Simatic ML export of snapshot values.
-            path: Path to the Simatic ML file
+        Export(self: InterfaceSnapshot, path: FileInfo, exportOptions: ExportOptions)
+
+            Simatic ML export of snapshot values.
+
+            path: Path to the Simatic ML file
+
             exportOptions: Option to use for export (default, readonly, etc.)
         """
         ...
 
     def GetHashCode(self) -> int:
         """
-        GetHashCode(self: InterfaceSnapshot) -> int
-            Returns a hash code for this instance.
+        GetHashCode(self: InterfaceSnapshot) -> int
+
+            Returns a hash code for this instance.
+
             Returns: A hash code for this instance, suitable for use in hashing algorithms and data structures like a hash table.
         """
         ...
 
     def ToString(self) -> str:
         """
-        ToString(self: InterfaceSnapshot) -> str
-            Returns a System.String that represents the current System.Object.
+        ToString(self: InterfaceSnapshot) -> str
+
+            Returns a System.String that represents the current System.Object.
+
             Returns: A System.String that represents the current System.Object.
         """
         ...
@@ -382,7 +432,8 @@ class InterfaceSnapshot(IEquatable, IEngineeringObject, IEngineeringService, IIn
 
 class MemoryLayout(Enum): # skipped bases: <type 'IConvertible'>, <type 'IComparable'>, <type 'IFormattable'>, <type 'object'>
     """
-    Determines if a block access is optimized or not
+    Determines if a block access is optimized or not
+
     enum MemoryLayout, values: Optimized (1), Standard (0)
     """
     Optimized: MemoryLayout = ...
@@ -395,7 +446,8 @@ class OB(CodeBlock): # skipped bases: <type 'IInternalInstanceAccess'>, <type 'I
     @property
     def Parent(self) -> IEngineeringObject:
         """
-        EOM parent of this object
+        EOM parent of this object
+
         Get: Parent(self: OB) -> IEngineeringObject
         """
         ...
@@ -403,7 +455,8 @@ class OB(CodeBlock): # skipped bases: <type 'IInternalInstanceAccess'>, <type 'I
     @property
     def SecondaryType(self) -> str:
         """
-        Additional information about the type
+        Additional information about the type
+
         Get: SecondaryType(self: OB) -> str
         """
         ...
@@ -412,7 +465,8 @@ class OB(CodeBlock): # skipped bases: <type 'IInternalInstanceAccess'>, <type 'I
 
 class OBDataExchangeMode(Enum): # skipped bases: <type 'IConvertible'>, <type 'IComparable'>, <type 'IFormattable'>, <type 'object'>
     """
-    Enum for OBDataExchangeMode
+    Enum for OBDataExchangeMode
+
     enum OBDataExchangeMode, values: Cyclic (1), None (0), Synchronous (2)
     """
     Cyclic: OBDataExchangeMode = ...
@@ -422,7 +476,8 @@ class OBDataExchangeMode(Enum): # skipped bases: <type 'IConvertible'>, <type 'I
 
 class OBExecution(Enum): # skipped bases: <type 'IConvertible'>, <type 'IComparable'>, <type 'IFormattable'>, <type 'object'>
     """
-    Enum for Execution
+    Enum for Execution
+
     enum OBExecution, values: Daily (4), End_of_month (8), Every_minute (2), Hourly (3), Monthly (6), Never (0), Once (1), Weekly (5), Yearly (7)
     """
     Daily: OBExecution = ...
@@ -439,7 +494,8 @@ class OBExecution(Enum): # skipped bases: <type 'IConvertible'>, <type 'ICompara
 
 class OBTimeMode(Enum): # skipped bases: <type 'IConvertible'>, <type 'IComparable'>, <type 'IFormattable'>, <type 'object'>
     """
-    Enum for TimeMode
+    Enum for TimeMode
+
     enum OBTimeMode, values: Local (1), None (0), System (2)
     """
     Local: OBTimeMode = ...
@@ -452,7 +508,8 @@ class PlcBlockComposition(IInternalCompositionAccess, IEngineeringComposition, I
     @property
     def Parent(self) -> IEngineeringObject:
         """
-        Gets the parent.
+        Gets the parent.
+
         Get: Parent(self: PlcBlockComposition) -> IEngineeringObject
         """
         ...
@@ -460,78 +517,114 @@ class PlcBlockComposition(IInternalCompositionAccess, IEngineeringComposition, I
 
     def CreateFB(self, name:str, isAutoNumbered:bool, number:int, programmingLanguage:ProgrammingLanguage) -> FB:
         """
-        CreateFB(self: PlcBlockComposition, name: str, isAutoNumbered: bool, number: int, programmingLanguage: ProgrammingLanguage) -> FB
-            Creates a block.
-            name: Name of the block.
-            isAutoNumbered: Indicates if block is autonumbered.
-            number: Number of the block.
-            programmingLanguage: Language of the block.
+        CreateFB(self: PlcBlockComposition, name: str, isAutoNumbered: bool, number: int, programmingLanguage: ProgrammingLanguage) -> FB
+
+            Creates a block.
+
+            name: Name of the block.
+
+            isAutoNumbered: Indicates if block is autonumbered.
+
+            number: Number of the block.
+
+            programmingLanguage: Language of the block.
+
             Returns: Siemens.Engineering.SW.Blocks.FB
         """
         ...
 
     def CreateFrom(self, *__args:MasterCopy) -> PlcBlock:
         """
-        CreateFrom(self: PlcBlockComposition, sourceMasterCopy: MasterCopy) -> PlcBlock
-            Create PlcBlock from MasterCopy
-            sourceMasterCopy: The source master copy
-            Returns: Siemens.Engineering.SW.Blocks.PlcBlock
-        CreateFrom(self: PlcBlockComposition, libraryTypeVersion: CodeBlockLibraryTypeVersion) -> PlcBlock
-            Create from version
-            libraryTypeVersion: type version
+        CreateFrom(self: PlcBlockComposition, sourceMasterCopy: MasterCopy) -> PlcBlock
+
+            Create PlcBlock from MasterCopy
+
+            sourceMasterCopy: The source master copy
+
+            Returns: Siemens.Engineering.SW.Blocks.PlcBlock
+
+        CreateFrom(self: PlcBlockComposition, libraryTypeVersion: CodeBlockLibraryTypeVersion) -> PlcBlock
+
+            Create from version
+
+            libraryTypeVersion: type version
+
             Returns: Siemens.Engineering.SW.Blocks.PlcBlock
         """
         ...
 
     def CreateInstanceDB(self, name:str, isAutoNumbered:bool, number:int, instanceOfName:str) -> InstanceDB:
         """
-        CreateInstanceDB(self: PlcBlockComposition, name: str, isAutoNumbered: bool, number: int, instanceOfName: str) -> InstanceDB
-            Creates an instance DB for Prodiag block.
-            name: Name of the block.
-            isAutoNumbered: Indicates if block is autonumbered.
-            number: Number of the block.
-            instanceOfName: Name of the block where db belongs to.
+        CreateInstanceDB(self: PlcBlockComposition, name: str, isAutoNumbered: bool, number: int, instanceOfName: str) -> InstanceDB
+
+            Creates an instance DB for Prodiag block.
+
+            name: Name of the block.
+
+            isAutoNumbered: Indicates if block is autonumbered.
+
+            number: Number of the block.
+
+            instanceOfName: Name of the block where db belongs to.
+
             Returns: Siemens.Engineering.SW.Blocks.InstanceDB
         """
         ...
 
     def Find(self, name:str) -> PlcBlock:
         """
-        Find(self: PlcBlockComposition, name: str) -> PlcBlock
-            Finds a given Plc block
-            name: Name to find
+        Find(self: PlcBlockComposition, name: str) -> PlcBlock
+
+            Finds a given Plc block
+
+            name: Name to find
+
             Returns: Siemens.Engineering.SW.Blocks.PlcBlock
         """
         ...
 
     def GetHashCode(self) -> int:
         """
-        GetHashCode(self: PlcBlockComposition) -> int
-            Returns a hash code for this instance.
+        GetHashCode(self: PlcBlockComposition) -> int
+
+            Returns a hash code for this instance.
+
             Returns: A hash code for this instance, suitable for use in hashing algorithms and data structures like a hash table.
         """
         ...
 
     def Import(self, path:FileInfo, importOptions:ImportOptions, swImportOptions:SWImportOptions = ...) -> IList:
         """
-        Import(self: PlcBlockComposition, path: FileInfo, importOptions: ImportOptions) -> IList[PlcBlock]
-            Simatic ML import of a Plc block
-            path: Path to the Simatic ML file
-            importOptions: Options to use for Import
-            Returns: System.Collections.Generic.IList<Siemens.Engineering.SW.Blocks.PlcBlock>
-        Import(self: PlcBlockComposition, path: FileInfo, importOptions: ImportOptions, swImportOptions: SWImportOptions) -> IList[PlcBlock]
-            Simatic ML import of a Plc block with ignore flags.
-            path: Path to the Simatic ML file
-            importOptions: Options to use for Import
-            swImportOptions: Sw import options to use for Import
+        Import(self: PlcBlockComposition, path: FileInfo, importOptions: ImportOptions) -> IList[PlcBlock]
+
+            Simatic ML import of a Plc block
+
+            path: Path to the Simatic ML file
+
+            importOptions: Options to use for Import
+
+            Returns: System.Collections.Generic.IList<Siemens.Engineering.SW.Blocks.PlcBlock>
+
+        Import(self: PlcBlockComposition, path: FileInfo, importOptions: ImportOptions, swImportOptions: SWImportOptions) -> IList[PlcBlock]
+
+            Simatic ML import of a Plc block with ignore flags.
+
+            path: Path to the Simatic ML file
+
+            importOptions: Options to use for Import
+
+            swImportOptions: Sw import options to use for Import
+
             Returns: System.Collections.Generic.IList<Siemens.Engineering.SW.Blocks.PlcBlock>
         """
         ...
 
     def ToString(self) -> str:
         """
-        ToString(self: PlcBlockComposition) -> str
-            Returns a System.String that represents the current System.Object.
+        ToString(self: PlcBlockComposition) -> str
+
+            Returns a System.String that represents the current System.Object.
+
             Returns: A System.String that represents the current System.Object.
         """
         ...
@@ -549,7 +642,8 @@ class PlcBlockGroup(IEquatable, IEngineeringObject, IEngineeringServiceProvider,
     @property
     def Blocks(self) -> PlcBlockComposition:
         """
-        Composition of Plc blocks
+        Composition of Plc blocks
+
         Get: Blocks(self: PlcBlockGroup) -> PlcBlockComposition
         """
         ...
@@ -557,7 +651,8 @@ class PlcBlockGroup(IEquatable, IEngineeringObject, IEngineeringServiceProvider,
     @property
     def Groups(self) -> PlcBlockUserGroupComposition:
         """
-        Composition of Plc block user groups
+        Composition of Plc block user groups
+
         Get: Groups(self: PlcBlockGroup) -> PlcBlockUserGroupComposition
         """
         ...
@@ -565,7 +660,8 @@ class PlcBlockGroup(IEquatable, IEngineeringObject, IEngineeringServiceProvider,
     @property
     def Name(self) -> str:
         """
-        The name of the Plc block group
+        The name of the Plc block group
+
         Get: Name(self: PlcBlockGroup) -> str
         """
         ...
@@ -573,7 +669,8 @@ class PlcBlockGroup(IEquatable, IEngineeringObject, IEngineeringServiceProvider,
     @property
     def Parent(self) -> IEngineeringObject:
         """
-        EOM parent of this object
+        EOM parent of this object
+
         Get: Parent(self: PlcBlockGroup) -> IEngineeringObject
         """
         ...
@@ -581,16 +678,20 @@ class PlcBlockGroup(IEquatable, IEngineeringObject, IEngineeringServiceProvider,
 
     def GetHashCode(self) -> int:
         """
-        GetHashCode(self: PlcBlockGroup) -> int
-            Returns a hash code for this instance.
+        GetHashCode(self: PlcBlockGroup) -> int
+
+            Returns a hash code for this instance.
+
             Returns: A hash code for this instance, suitable for use in hashing algorithms and data structures like a hash table.
         """
         ...
 
     def ToString(self) -> str:
         """
-        ToString(self: PlcBlockGroup) -> str
-            Returns a System.String that represents the current System.Object.
+        ToString(self: PlcBlockGroup) -> str
+
+            Returns a System.String that represents the current System.Object.
+
             Returns: A System.String that represents the current System.Object.
         """
         ...
@@ -604,7 +705,8 @@ class PlcBlockProtectionProvider(ProtectionProviderBase): # skipped bases: <type
     @property
     def Parent(self) -> IEngineeringObject:
         """
-        EOM parent of this object
+        EOM parent of this object
+
         Get: Parent(self: PlcBlockProtectionProvider) -> IEngineeringObject
         """
         ...
@@ -616,7 +718,8 @@ class PlcBlockSystemGroup(PlcBlockGroup, ILibraryTypeInstantiationTarget, IMaste
     @property
     def SystemBlockGroups(self) -> PlcSystemBlockGroupComposition:
         """
-        Composition of Plc system block groups
+        Composition of Plc system block groups
+
         Get: SystemBlockGroups(self: PlcBlockSystemGroup) -> PlcSystemBlockGroupComposition
         """
         ...
@@ -625,9 +728,10 @@ class PlcBlockSystemGroup(PlcBlockGroup, ILibraryTypeInstantiationTarget, IMaste
 
 class PlcBlockUserGroup(PlcBlockGroup, ILibraryTypeInstantiationTarget, IMasterCopySource, IMasterCopyTarget): # skipped bases: <type 'IInternalInstanceAccess'>, <type 'IEngineeringServiceProvider'>, <type 'IEngineeringInstance'>, <type 'IServiceProvider'>, <type 'IEngineeringObject'>, <type 'IInternalObjectAccess'>, <type 'IEquatable[object]'>, <type 'IInternalBaseAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'object'>
     """ User group containing Plc blocks & Plc block user groups """
-    def Delete(self): # -> 
+    def Delete(self): # ->
         """
-        Delete(self: PlcBlockUserGroup)
+        Delete(self: PlcBlockUserGroup)
+
             Deletes this instance.
         """
         ...
@@ -638,7 +742,8 @@ class PlcBlockUserGroupComposition(IInternalCompositionAccess, IEngineeringCompo
     @property
     def Parent(self) -> IEngineeringObject:
         """
-        Gets the parent.
+        Gets the parent.
+
         Get: Parent(self: PlcBlockUserGroupComposition) -> IEngineeringObject
         """
         ...
@@ -646,34 +751,44 @@ class PlcBlockUserGroupComposition(IInternalCompositionAccess, IEngineeringCompo
 
     def CreateFrom(self, sourceMasterCopy:MasterCopy) -> PlcBlockUserGroup:
         """
-        CreateFrom(self: PlcBlockUserGroupComposition, sourceMasterCopy: MasterCopy) -> PlcBlockUserGroup
-            Create PlcBlockUserGroup from MasterCopy
-            sourceMasterCopy: The source master copy
+        CreateFrom(self: PlcBlockUserGroupComposition, sourceMasterCopy: MasterCopy) -> PlcBlockUserGroup
+
+            Create PlcBlockUserGroup from MasterCopy
+
+            sourceMasterCopy: The source master copy
+
             Returns: Siemens.Engineering.SW.Blocks.PlcBlockUserGroup
         """
         ...
 
     def Find(self, name:str) -> PlcBlockUserGroup:
         """
-        Find(self: PlcBlockUserGroupComposition, name: str) -> PlcBlockUserGroup
-            Finds a given Plc block user group
-            name: Name to find
+        Find(self: PlcBlockUserGroupComposition, name: str) -> PlcBlockUserGroup
+
+            Finds a given Plc block user group
+
+            name: Name to find
+
             Returns: Siemens.Engineering.SW.Blocks.PlcBlockUserGroup
         """
         ...
 
     def GetHashCode(self) -> int:
         """
-        GetHashCode(self: PlcBlockUserGroupComposition) -> int
-            Returns a hash code for this instance.
+        GetHashCode(self: PlcBlockUserGroupComposition) -> int
+
+            Returns a hash code for this instance.
+
             Returns: A hash code for this instance, suitable for use in hashing algorithms and data structures like a hash table.
         """
         ...
 
     def ToString(self) -> str:
         """
-        ToString(self: PlcBlockUserGroupComposition) -> str
-            Returns a System.String that represents the current System.Object.
+        ToString(self: PlcBlockUserGroupComposition) -> str
+
+            Returns a System.String that represents the current System.Object.
+
             Returns: A System.String that represents the current System.Object.
         """
         ...
@@ -691,7 +806,8 @@ class PlcSystemBlockGroup(IEquatable, IEngineeringObject, IInternalObjectAccess)
     @property
     def Blocks(self) -> PlcBlockComposition:
         """
-        Composition of Plc system blocks
+        Composition of Plc system blocks
+
         Get: Blocks(self: PlcSystemBlockGroup) -> PlcBlockComposition
         """
         ...
@@ -699,7 +815,8 @@ class PlcSystemBlockGroup(IEquatable, IEngineeringObject, IInternalObjectAccess)
     @property
     def Groups(self) -> PlcSystemBlockGroupComposition:
         """
-        Composition of Plc system block groups
+        Composition of Plc system block groups
+
         Get: Groups(self: PlcSystemBlockGroup) -> PlcSystemBlockGroupComposition
         """
         ...
@@ -707,7 +824,8 @@ class PlcSystemBlockGroup(IEquatable, IEngineeringObject, IInternalObjectAccess)
     @property
     def Name(self) -> str:
         """
-        The name of the Plc system block group
+        The name of the Plc system block group
+
         Get: Name(self: PlcSystemBlockGroup) -> str
         """
         ...
@@ -715,7 +833,8 @@ class PlcSystemBlockGroup(IEquatable, IEngineeringObject, IInternalObjectAccess)
     @property
     def Parent(self) -> IEngineeringObject:
         """
-        EOM parent of this object
+        EOM parent of this object
+
         Get: Parent(self: PlcSystemBlockGroup) -> IEngineeringObject
         """
         ...
@@ -723,16 +842,20 @@ class PlcSystemBlockGroup(IEquatable, IEngineeringObject, IInternalObjectAccess)
 
     def GetHashCode(self) -> int:
         """
-        GetHashCode(self: PlcSystemBlockGroup) -> int
-            Returns a hash code for this instance.
+        GetHashCode(self: PlcSystemBlockGroup) -> int
+
+            Returns a hash code for this instance.
+
             Returns: A hash code for this instance, suitable for use in hashing algorithms and data structures like a hash table.
         """
         ...
 
     def ToString(self) -> str:
         """
-        ToString(self: PlcSystemBlockGroup) -> str
-            Returns a System.String that represents the current System.Object.
+        ToString(self: PlcSystemBlockGroup) -> str
+
+            Returns a System.String that represents the current System.Object.
+
             Returns: A System.String that represents the current System.Object.
         """
         ...
@@ -746,7 +869,8 @@ class PlcSystemBlockGroupComposition(IInternalCompositionAccess, IEngineeringCom
     @property
     def Parent(self) -> IEngineeringObject:
         """
-        Gets the parent.
+        Gets the parent.
+
         Get: Parent(self: PlcSystemBlockGroupComposition) -> IEngineeringObject
         """
         ...
@@ -754,25 +878,32 @@ class PlcSystemBlockGroupComposition(IInternalCompositionAccess, IEngineeringCom
 
     def Find(self, name:str) -> PlcSystemBlockGroup:
         """
-        Find(self: PlcSystemBlockGroupComposition, name: str) -> PlcSystemBlockGroup
-            Finds a given Plc system block group
-            name: Name to find
+        Find(self: PlcSystemBlockGroupComposition, name: str) -> PlcSystemBlockGroup
+
+            Finds a given Plc system block group
+
+            name: Name to find
+
             Returns: Siemens.Engineering.SW.Blocks.PlcSystemBlockGroup
         """
         ...
 
     def GetHashCode(self) -> int:
         """
-        GetHashCode(self: PlcSystemBlockGroupComposition) -> int
-            Returns a hash code for this instance.
+        GetHashCode(self: PlcSystemBlockGroupComposition) -> int
+
+            Returns a hash code for this instance.
+
             Returns: A hash code for this instance, suitable for use in hashing algorithms and data structures like a hash table.
         """
         ...
 
     def ToString(self) -> str:
         """
-        ToString(self: PlcSystemBlockGroupComposition) -> str
-            Returns a System.String that represents the current System.Object.
+        ToString(self: PlcSystemBlockGroupComposition) -> str
+
+            Returns a System.String that represents the current System.Object.
+
             Returns: A System.String that represents the current System.Object.
         """
         ...
@@ -787,7 +918,8 @@ class PlcSystemBlockGroupComposition(IInternalCompositionAccess, IEngineeringCom
 
 class ProgrammingLanguage(Enum): # skipped bases: <type 'IConvertible'>, <type 'IComparable'>, <type 'IFormattable'>, <type 'object'>
     """
-    The list of possible creation languages of programming blocks
+    The list of possible creation languages of programming blocks
+
     enum ProgrammingLanguage, values: CFC (8), CPU_DB (7), DB (5), F_CALL (26), F_DB (18), F_FBD (17), F_FBD_LIB (20), F_LAD (16), F_LAD_LIB (19), F_STL (15), FBD (3), FBD_IEC (10), FCP (21), FLD (22), GRAPH (6), LAD (2), LAD_IEC (11), Motion_DB (25), ProDiag (23), ProDiag_OB (24), RSE (14), S7_PDIAG (13), SCL (4), SDB (12), SFC (9), STL (1), Undef (0)
     """
     CFC: ProgrammingLanguage = ...
@@ -825,7 +957,8 @@ class Supervision(IEquatable, IEngineeringObject, IInternalObjectAccess): # skip
     @property
     def Parent(self) -> IEngineeringObject:
         """
-        EOM parent of this object
+        EOM parent of this object
+
         Get: Parent(self: Supervision) -> IEngineeringObject
         """
         ...
@@ -833,16 +966,20 @@ class Supervision(IEquatable, IEngineeringObject, IInternalObjectAccess): # skip
 
     def GetHashCode(self) -> int:
         """
-        GetHashCode(self: Supervision) -> int
-            Returns a hash code for this instance.
+        GetHashCode(self: Supervision) -> int
+
+            Returns a hash code for this instance.
+
             Returns: A hash code for this instance, suitable for use in hashing algorithms and data structures like a hash table.
         """
         ...
 
     def ToString(self) -> str:
         """
-        ToString(self: Supervision) -> str
-            Returns a System.String that represents the current System.Object.
+        ToString(self: Supervision) -> str
+
+            Returns a System.String that represents the current System.Object.
+
             Returns: A System.String that represents the current System.Object.
         """
         ...
@@ -856,7 +993,8 @@ class SupervisionComposition(IInternalCompositionAccess, IEngineeringComposition
     @property
     def Parent(self) -> IEngineeringObject:
         """
-        Gets the parent.
+        Gets the parent.
+
         Get: Parent(self: SupervisionComposition) -> IEngineeringObject
         """
         ...
@@ -864,16 +1002,20 @@ class SupervisionComposition(IInternalCompositionAccess, IEngineeringComposition
 
     def GetHashCode(self) -> int:
         """
-        GetHashCode(self: SupervisionComposition) -> int
-            Returns a hash code for this instance.
+        GetHashCode(self: SupervisionComposition) -> int
+
+            Returns a hash code for this instance.
+
             Returns: A hash code for this instance, suitable for use in hashing algorithms and data structures like a hash table.
         """
         ...
 
     def ToString(self) -> str:
         """
-        ToString(self: SupervisionComposition) -> str
-            Returns a System.String that represents the current System.Object.
+        ToString(self: SupervisionComposition) -> str
+
+            Returns a System.String that represents the current System.Object.
+
             Returns: A System.String that represents the current System.Object.
         """
         ...
@@ -884,5 +1026,3 @@ class SupervisionComposition(IInternalCompositionAccess, IEngineeringComposition
 
     def __ne__(self, *args): #cannot find CLR method
         ...
-
-

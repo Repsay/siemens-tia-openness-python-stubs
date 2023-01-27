@@ -9,3 +9,19 @@ from __future__ import annotations
 # no classes
 # variables with complex values
 
+## This are abstract classes which could not be defined by the stub generator
+
+class IInternalApplicationAccess:
+    pass
+
+class IInternalAssociationAccess:
+    pass
+
+class IInternalCompositionAccess:
+    pass
+
+class IInternalObjectAccess:
+    pass
+
+class IApplicationEntryPoint:
+    pass

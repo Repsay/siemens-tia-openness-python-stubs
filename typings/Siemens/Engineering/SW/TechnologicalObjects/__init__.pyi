@@ -4,7 +4,7 @@
 # by generator 1.145
 """ no doc """
 from __future__ import annotations
-from Siemens.Engineering import (ExportOptions, IEngineeringAssociation, 
+from Siemens.Engineering import (ExportOptions, IEngineeringAssociation,
     IEngineeringComposition, IEngineeringObject, IEngineeringServiceProvider)
 
 from Siemens.Engineering.Library.MasterCopies import MasterCopy
@@ -16,9 +16,11 @@ from System import IEquatable, Version
 from System.IO import FileInfo
 
 """The following names are not found in the module: (
-    IInternalAssociationAccess, IInternalCompositionAccess, 
+    IInternalAssociationAccess, IInternalCompositionAccess,
     IInternalObjectAccess)
 """
+
+from Siemens import IInternalAssociationAccess, IInternalCompositionAccess, IInternalObjectAccess
 
 # no functions
 # classes
@@ -28,8 +30,10 @@ class TechnologicalInstanceDB(InstanceDB): # skipped bases: <type 'IInternalInst
     @property
     def Name(self) -> str:
         """
-        Name of the Block
-        Get: Name(self: TechnologicalInstanceDB) -> str
+        Name of the Block
+
+        Get: Name(self: TechnologicalInstanceDB) -> str
+
         Set: Name(self: TechnologicalInstanceDB) = value
         """
         ...
@@ -37,7 +41,8 @@ class TechnologicalInstanceDB(InstanceDB): # skipped bases: <type 'IInternalInst
     @property
     def OfSystemLibElement(self) -> str:
         """
-        Gets the name of the system library element associated with the DB
+        Gets the name of the system library element associated with the DB
+
         Get: OfSystemLibElement(self: TechnologicalInstanceDB) -> str
         """
         ...
@@ -45,8 +50,10 @@ class TechnologicalInstanceDB(InstanceDB): # skipped bases: <type 'IInternalInst
     @property
     def OfSystemLibVersion(self) -> Version:
         """
-        Gets the version of the system library element associated with the DB
-        Get: OfSystemLibVersion(self: TechnologicalInstanceDB) -> Version
+        Gets the version of the system library element associated with the DB
+
+        Get: OfSystemLibVersion(self: TechnologicalInstanceDB) -> Version
+
         Set: OfSystemLibVersion(self: TechnologicalInstanceDB) = value
         """
         ...
@@ -54,17 +61,21 @@ class TechnologicalInstanceDB(InstanceDB): # skipped bases: <type 'IInternalInst
     @property
     def Parameters(self) -> TechnologicalParameterComposition:
         """
-        Get all technological parameters
+        Get all technological parameters
+
         Get: Parameters(self: TechnologicalInstanceDB) -> TechnologicalParameterComposition
         """
         ...
 
 
-    def Export(self, path:FileInfo, exportOptions:ExportOptions): # -> 
+    def Export(self, path:FileInfo, exportOptions:ExportOptions): # ->
         """
-        Export(self: TechnologicalInstanceDB, path: FileInfo, exportOptions: ExportOptions)
-            Simatic ML export of a TechnlogicalInstanceDB
-            path: Path to the Simatic ML file
+        Export(self: TechnologicalInstanceDB, path: FileInfo, exportOptions: ExportOptions)
+
+            Simatic ML export of a TechnlogicalInstanceDB
+
+            path: Path to the Simatic ML file
+
             exportOptions: Option to use for export (default, readonly, etc.)
         """
         ...
@@ -75,41 +86,51 @@ class TechnologicalInstanceDBAssociation(IEquatable, IEngineeringAssociation, II
     @property
     def Parent(self) -> IEngineeringObject:
         """
-        Gets the parent..
+        Gets the parent..
+
         Get: Parent(self: TechnologicalInstanceDBAssociation) -> IEngineeringObject
         """
         ...
 
 
-    def Add(self, item:TechnologicalInstanceDB): # -> 
+    def Add(self, item:TechnologicalInstanceDB): # ->
         """
-        Add(self: TechnologicalInstanceDBAssociation, item: TechnologicalInstanceDB)
-            Adds an item.
+        Add(self: TechnologicalInstanceDBAssociation, item: TechnologicalInstanceDB)
+
+            Adds an item.
+
             item: The item to be added.
         """
         ...
 
     def GetHashCode(self) -> int:
         """
-        GetHashCode(self: TechnologicalInstanceDBAssociation) -> int
-            Returns a hash code for this instance.
+        GetHashCode(self: TechnologicalInstanceDBAssociation) -> int
+
+            Returns a hash code for this instance.
+
             Returns: A hash code for this instance, suitable for use in hashing algorithms and data structures like a hash table.
         """
         ...
 
     def Remove(self, item:TechnologicalInstanceDB) -> bool:
         """
-        Remove(self: TechnologicalInstanceDBAssociation, item: TechnologicalInstanceDB) -> bool
-            Removes an item.
-            item: The item to be removed.
+        Remove(self: TechnologicalInstanceDBAssociation, item: TechnologicalInstanceDB) -> bool
+
+            Removes an item.
+
+            item: The item to be removed.
+
             Returns: true if the item was removed; otherwise false.
         """
         ...
 
     def ToString(self) -> str:
         """
-        ToString(self: TechnologicalInstanceDBAssociation) -> str
-            Returns a System.String that represents the current System.Object.
+        ToString(self: TechnologicalInstanceDBAssociation) -> str
+
+            Returns a System.String that represents the current System.Object.
+
             Returns: A System.String that represents the current System.Object.
         """
         ...
@@ -131,7 +152,8 @@ class TechnologicalInstanceDBComposition(IInternalCompositionAccess, IEngineerin
     @property
     def Parent(self) -> IEngineeringObject:
         """
-        Gets the parent.
+        Gets the parent.
+
         Get: Parent(self: TechnologicalInstanceDBComposition) -> IEngineeringObject
         """
         ...
@@ -139,34 +161,44 @@ class TechnologicalInstanceDBComposition(IInternalCompositionAccess, IEngineerin
 
     def CreateFrom(self, sourceMasterCopy:MasterCopy) -> TechnologicalInstanceDB:
         """
-        CreateFrom(self: TechnologicalInstanceDBComposition, sourceMasterCopy: MasterCopy) -> TechnologicalInstanceDB
-            Create TechnologicalInstanceDB from MasterCopy
-            sourceMasterCopy: The source master copy
+        CreateFrom(self: TechnologicalInstanceDBComposition, sourceMasterCopy: MasterCopy) -> TechnologicalInstanceDB
+
+            Create TechnologicalInstanceDB from MasterCopy
+
+            sourceMasterCopy: The source master copy
+
             Returns: Siemens.Engineering.SW.TechnologicalObjects.TechnologicalInstanceDB
         """
         ...
 
     def Find(self, name:str) -> TechnologicalInstanceDB:
         """
-        Find(self: TechnologicalInstanceDBComposition, name: str) -> TechnologicalInstanceDB
-            Find by its name
-            name: Name of the TechnologicalInstanceDB
+        Find(self: TechnologicalInstanceDBComposition, name: str) -> TechnologicalInstanceDB
+
+            Find by its name
+
+            name: Name of the TechnologicalInstanceDB
+
             Returns: Siemens.Engineering.SW.TechnologicalObjects.TechnologicalInstanceDB
         """
         ...
 
     def GetHashCode(self) -> int:
         """
-        GetHashCode(self: TechnologicalInstanceDBComposition) -> int
-            Returns a hash code for this instance.
+        GetHashCode(self: TechnologicalInstanceDBComposition) -> int
+
+            Returns a hash code for this instance.
+
             Returns: A hash code for this instance, suitable for use in hashing algorithms and data structures like a hash table.
         """
         ...
 
     def ToString(self) -> str:
         """
-        ToString(self: TechnologicalInstanceDBComposition) -> str
-            Returns a System.String that represents the current System.Object.
+        ToString(self: TechnologicalInstanceDBComposition) -> str
+
+            Returns a System.String that represents the current System.Object.
+
             Returns: A System.String that represents the current System.Object.
         """
         ...
@@ -184,7 +216,8 @@ class TechnologicalInstanceDBGroup(IEquatable, IEngineeringObject, IEngineeringS
     @property
     def Name(self) -> str:
         """
-        Name of external source group
+        Name of external source group
+
         Get: Name(self: TechnologicalInstanceDBGroup) -> str
         """
         ...
@@ -192,7 +225,8 @@ class TechnologicalInstanceDBGroup(IEquatable, IEngineeringObject, IEngineeringS
     @property
     def Parent(self) -> IEngineeringObject:
         """
-        Parent of this object
+        Parent of this object
+
         Get: Parent(self: TechnologicalInstanceDBGroup) -> IEngineeringObject
         """
         ...
@@ -200,7 +234,8 @@ class TechnologicalInstanceDBGroup(IEquatable, IEngineeringObject, IEngineeringS
     @property
     def TechnologicalObjects(self) -> TechnologicalInstanceDBComposition:
         """
-        Get all technological objects
+        Get all technological objects
+
         Get: TechnologicalObjects(self: TechnologicalInstanceDBGroup) -> TechnologicalInstanceDBComposition
         """
         ...
@@ -208,16 +243,20 @@ class TechnologicalInstanceDBGroup(IEquatable, IEngineeringObject, IEngineeringS
 
     def GetHashCode(self) -> int:
         """
-        GetHashCode(self: TechnologicalInstanceDBGroup) -> int
-            Returns a hash code for this instance.
+        GetHashCode(self: TechnologicalInstanceDBGroup) -> int
+
+            Returns a hash code for this instance.
+
             Returns: A hash code for this instance, suitable for use in hashing algorithms and data structures like a hash table.
         """
         ...
 
     def ToString(self) -> str:
         """
-        ToString(self: TechnologicalInstanceDBGroup) -> str
-            Returns a System.String that represents the current System.Object.
+        ToString(self: TechnologicalInstanceDBGroup) -> str
+
+            Returns a System.String that represents the current System.Object.
+
             Returns: A System.String that represents the current System.Object.
         """
         ...
@@ -235,7 +274,8 @@ class TechnologicalParameter(IEquatable, IEngineeringObject, IInternalObjectAcce
     @property
     def Name(self) -> str:
         """
-        Represents the name of a technological parameter
+        Represents the name of a technological parameter
+
         Get: Name(self: TechnologicalParameter) -> str
         """
         ...
@@ -243,7 +283,8 @@ class TechnologicalParameter(IEquatable, IEngineeringObject, IInternalObjectAcce
     @property
     def Parent(self) -> IEngineeringObject:
         """
-        EOM parent of this object
+        EOM parent of this object
+
         Get: Parent(self: TechnologicalParameter) -> IEngineeringObject
         """
         ...
@@ -251,8 +292,10 @@ class TechnologicalParameter(IEquatable, IEngineeringObject, IInternalObjectAcce
     @property
     def Value(self) -> object:
         """
-        Represents the value of a technological parameter
-        Get: Value(self: TechnologicalParameter) -> object
+        Represents the value of a technological parameter
+
+        Get: Value(self: TechnologicalParameter) -> object
+
         Set: Value(self: TechnologicalParameter) = value
         """
         ...
@@ -260,16 +303,20 @@ class TechnologicalParameter(IEquatable, IEngineeringObject, IInternalObjectAcce
 
     def GetHashCode(self) -> int:
         """
-        GetHashCode(self: TechnologicalParameter) -> int
-            Returns a hash code for this instance.
+        GetHashCode(self: TechnologicalParameter) -> int
+
+            Returns a hash code for this instance.
+
             Returns: A hash code for this instance, suitable for use in hashing algorithms and data structures like a hash table.
         """
         ...
 
     def ToString(self) -> str:
         """
-        ToString(self: TechnologicalParameter) -> str
-            Returns a System.String that represents the current System.Object.
+        ToString(self: TechnologicalParameter) -> str
+
+            Returns a System.String that represents the current System.Object.
+
             Returns: A System.String that represents the current System.Object.
         """
         ...
@@ -283,7 +330,8 @@ class TechnologicalParameterComposition(IInternalCompositionAccess, IEngineering
     @property
     def Parent(self) -> IEngineeringObject:
         """
-        Gets the parent.
+        Gets the parent.
+
         Get: Parent(self: TechnologicalParameterComposition) -> IEngineeringObject
         """
         ...
@@ -291,25 +339,32 @@ class TechnologicalParameterComposition(IInternalCompositionAccess, IEngineering
 
     def Find(self, name:str) -> TechnologicalParameter:
         """
-        Find(self: TechnologicalParameterComposition, name: str) -> TechnologicalParameter
-            Finds a TechnologicalParameter by name
-            name: The name of the TechnologicalParameter
+        Find(self: TechnologicalParameterComposition, name: str) -> TechnologicalParameter
+
+            Finds a TechnologicalParameter by name
+
+            name: The name of the TechnologicalParameter
+
             Returns: Siemens.Engineering.SW.TechnologicalObjects.TechnologicalParameter
         """
         ...
 
     def GetHashCode(self) -> int:
         """
-        GetHashCode(self: TechnologicalParameterComposition) -> int
-            Returns a hash code for this instance.
+        GetHashCode(self: TechnologicalParameterComposition) -> int
+
+            Returns a hash code for this instance.
+
             Returns: A hash code for this instance, suitable for use in hashing algorithms and data structures like a hash table.
         """
         ...
 
     def ToString(self) -> str:
         """
-        ToString(self: TechnologicalParameterComposition) -> str
-            Returns a System.String that represents the current System.Object.
+        ToString(self: TechnologicalParameterComposition) -> str
+
+            Returns a System.String that represents the current System.Object.
+
             Returns: A System.String that represents the current System.Object.
         """
         ...
@@ -323,4 +378,3 @@ class TechnologicalParameterComposition(IInternalCompositionAccess, IEngineering
 
 
 # variables with complex values
-

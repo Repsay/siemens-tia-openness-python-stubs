@@ -4,14 +4,14 @@
 # by generator 1.145
 """ no doc """
 from __future__ import annotations
-from Siemens.Engineering import (IEngineeringComposition, IEngineeringObject, 
-    ITransactionSupport, LanguageSettings, MultilingualText, OpenMode, 
+from Siemens.Engineering import (IEngineeringComposition, IEngineeringObject,
+    ITransactionSupport, LanguageSettings, MultilingualText, OpenMode,
     Project)
 
 from Siemens.Engineering.Library.MasterCopies import MasterCopySystemFolder
 
-from Siemens.Engineering.Library.Types import (LibraryType, 
-    LibraryTypeSystemFolder, LibraryTypeVersion, UpdateCheckMode, 
+from Siemens.Engineering.Library.Types import (LibraryType,
+    LibraryTypeSystemFolder, LibraryTypeVersion, UpdateCheckMode,
     UpdateCheckResult)
 
 from Siemens.Engineering.SW import ISoftwareCompareTarget
@@ -26,6 +26,8 @@ from System.IO import DirectoryInfo, FileInfo
     IInternalCompositionAccess, IInternalObjectAccess, field#)
 """
 
+from Siemens import IInternalCompositionAccess, IInternalObjectAccess
+
 # no functions
 # classes
 
@@ -34,7 +36,8 @@ class ILibrary: # skipped bases: <type 'object'>
     @property
     def MasterCopyFolder(self) -> MasterCopySystemFolder:
         """
-        System folder containing master copies and master copy folders
+        System folder containing master copies and master copy folders
+
         Get: MasterCopyFolder(self: ILibrary) -> MasterCopySystemFolder
         """
         ...
@@ -42,7 +45,8 @@ class ILibrary: # skipped bases: <type 'object'>
     @property
     def TypeFolder(self) -> LibraryTypeSystemFolder:
         """
-        System folder containing library types and library type folders
+        System folder containing library types and library type folders
+
         Get: TypeFolder(self: ILibrary) -> LibraryTypeSystemFolder
         """
         ...
@@ -50,37 +54,47 @@ class ILibrary: # skipped bases: <type 'object'>
 
     def FindType(self, typeGuid:Guid) -> LibraryType:
         """
-        FindType(self: ILibrary, typeGuid: Guid) -> LibraryType
-            Searches the global library for a type object using a type GUID as the search criteria
-            typeGuid: Globally unique identifier of the type object to be searched for
+        FindType(self: ILibrary, typeGuid: Guid) -> LibraryType
+
+            Searches the global library for a type object using a type GUID as the search criteria
+
+            typeGuid: Globally unique identifier of the type object to be searched for
+
             Returns: Siemens.Engineering.Library.Types.LibraryType
         """
         ...
 
     def FindVersion(self, versionGuid:Guid) -> LibraryTypeVersion:
         """
-        FindVersion(self: ILibrary, versionGuid: Guid) -> LibraryTypeVersion
-            Searches the global library for a version object using a version GUID as the search criteria
-            versionGuid: Globally unique identifier of the version object to be searched for
+        FindVersion(self: ILibrary, versionGuid: Guid) -> LibraryTypeVersion
+
+            Searches the global library for a version object using a version GUID as the search criteria
+
+            versionGuid: Globally unique identifier of the version object to be searched for
+
             Returns: Siemens.Engineering.Library.Types.LibraryTypeVersion
         """
         ...
 
     def UpdateCheck(self, project:Project, updateCheckMode:UpdateCheckMode) -> UpdateCheckResult:
         """
-        UpdateCheck(self: ILibrary, project: Project, updateCheckMode: UpdateCheckMode) -> UpdateCheckResult
-            Identify all instances in a project that require updating based on the content of this library
-            project: The project to be compared with this library
-            updateCheckMode: Used to control whether or not to log out of date instances
+        UpdateCheck(self: ILibrary, project: Project, updateCheckMode: UpdateCheckMode) -> UpdateCheckResult
+
+            Identify all instances in a project that require updating based on the content of this library
+
+            project: The project to be compared with this library
+
+            updateCheckMode: Used to control whether or not to log out of date instances
+
             Returns: Siemens.Engineering.Library.Types.UpdateCheckResult
         """
         ...
 
-    def UpdateLibrary(self, sourceTypesAndFolders:IEnumerable, targetLibrary:ILibrary): # -> 
+    def UpdateLibrary(self, sourceTypesAndFolders:IEnumerable, targetLibrary:ILibrary): # ->
         """ UpdateLibrary(self: ILibrary, sourceTypesAndFolders: IEnumerable[ILibraryTypeOrFolderSelection], targetLibrary: ILibrary) """
         ...
 
-    def UpdateProject(self, sourceTypesAndFolders:IEnumerable, updateProjectScopes:IEnumerable): # -> 
+    def UpdateProject(self, sourceTypesAndFolders:IEnumerable, updateProjectScopes:IEnumerable): # ->
         """ UpdateProject(self: ILibrary, sourceTypesAndFolders: IEnumerable[ILibraryTypeOrFolderSelection], updateProjectScopes: IEnumerable[IUpdateProjectScope]) """
         ...
 
@@ -90,7 +104,8 @@ class GlobalLibrary(IInternalObjectAccess, ITransactionSupport, ILibrary, IEngin
     @property
     def Author(self) -> str:
         """
-        Author of the Global Library
+        Author of the Global Library
+
         Get: Author(self: GlobalLibrary) -> str
         """
         ...
@@ -98,7 +113,8 @@ class GlobalLibrary(IInternalObjectAccess, ITransactionSupport, ILibrary, IEngin
     @property
     def Comment(self) -> MultilingualText:
         """
-        The global libraries comment
+        The global libraries comment
+
         Get: Comment(self: GlobalLibrary) -> MultilingualText
         """
         ...
@@ -106,7 +122,8 @@ class GlobalLibrary(IInternalObjectAccess, ITransactionSupport, ILibrary, IEngin
     @property
     def IsModified(self) -> bool:
         """
-        True if the global library has been modified
+        True if the global library has been modified
+
         Get: IsModified(self: GlobalLibrary) -> bool
         """
         ...
@@ -114,7 +131,8 @@ class GlobalLibrary(IInternalObjectAccess, ITransactionSupport, ILibrary, IEngin
     @property
     def IsReadOnly(self) -> bool:
         """
-        Is the global library open only for read
+        Is the global library open only for read
+
         Get: IsReadOnly(self: GlobalLibrary) -> bool
         """
         ...
@@ -122,7 +140,8 @@ class GlobalLibrary(IInternalObjectAccess, ITransactionSupport, ILibrary, IEngin
     @property
     def LanguageSettings(self) -> LanguageSettings:
         """
-        Global Library language settings
+        Global Library language settings
+
         Get: LanguageSettings(self: GlobalLibrary) -> LanguageSettings
         """
         ...
@@ -130,7 +149,8 @@ class GlobalLibrary(IInternalObjectAccess, ITransactionSupport, ILibrary, IEngin
     @property
     def Name(self) -> str:
         """
-        The name of the global library.
+        The name of the global library.
+
         Get: Name(self: GlobalLibrary) -> str
         """
         ...
@@ -138,7 +158,8 @@ class GlobalLibrary(IInternalObjectAccess, ITransactionSupport, ILibrary, IEngin
     @property
     def Parent(self) -> IEngineeringObject:
         """
-        EOM parent of this object
+        EOM parent of this object
+
         Get: Parent(self: GlobalLibrary) -> IEngineeringObject
         """
         ...
@@ -146,7 +167,8 @@ class GlobalLibrary(IInternalObjectAccess, ITransactionSupport, ILibrary, IEngin
     @property
     def Path(self) -> FileInfo:
         """
-        The path to this global library
+        The path to this global library
+
         Get: Path(self: GlobalLibrary) -> FileInfo
         """
         ...
@@ -154,16 +176,20 @@ class GlobalLibrary(IInternalObjectAccess, ITransactionSupport, ILibrary, IEngin
 
     def GetHashCode(self) -> int:
         """
-        GetHashCode(self: GlobalLibrary) -> int
-            Returns a hash code for this instance.
+        GetHashCode(self: GlobalLibrary) -> int
+
+            Returns a hash code for this instance.
+
             Returns: A hash code for this instance, suitable for use in hashing algorithms and data structures like a hash table.
         """
         ...
 
     def ToString(self) -> str:
         """
-        ToString(self: GlobalLibrary) -> str
-            Returns a System.String that represents the current System.Object.
+        ToString(self: GlobalLibrary) -> str
+
+            Returns a System.String that represents the current System.Object.
+
             Returns: A System.String that represents the current System.Object.
         """
         ...
@@ -181,7 +207,8 @@ class GlobalLibraryComposition(IInternalCompositionAccess, IEngineeringCompositi
     @property
     def Parent(self) -> IEngineeringObject:
         """
-        Gets the parent.
+        Gets the parent.
+
         Get: Parent(self: GlobalLibraryComposition) -> IEngineeringObject
         """
         ...
@@ -189,69 +216,96 @@ class GlobalLibraryComposition(IInternalCompositionAccess, IEngineeringCompositi
 
     def GetGlobalLibraryInfos(self) -> IList:
         """
-        GetGlobalLibraryInfos(self: GlobalLibraryComposition) -> IList[GlobalLibraryInfo]
-            Returns a list of LibraryInfo's representing preview state Global Libraries
+        GetGlobalLibraryInfos(self: GlobalLibraryComposition) -> IList[GlobalLibraryInfo]
+
+            Returns a list of LibraryInfo's representing preview state Global Libraries
+
             Returns: System.Collections.Generic.IList<Siemens.Engineering.Library.GlobalLibraryInfo>
         """
         ...
 
     def GetHashCode(self) -> int:
         """
-        GetHashCode(self: GlobalLibraryComposition) -> int
-            Returns a hash code for this instance.
+        GetHashCode(self: GlobalLibraryComposition) -> int
+
+            Returns a hash code for this instance.
+
             Returns: A hash code for this instance, suitable for use in hashing algorithms and data structures like a hash table.
         """
         ...
 
     def Open(self, *__args:GlobalLibraryInfo) -> GlobalLibrary:
         """
-        Open(self: GlobalLibraryComposition, libraryInfo: GlobalLibraryInfo) -> GlobalLibrary
-            Opens the specified global library
-            libraryInfo: The global library info associated with a global library to be opened
-            Returns: Siemens.Engineering.Library.GlobalLibrary
-        Open(self: GlobalLibraryComposition, path: FileInfo, openMode: OpenMode) -> UserGlobalLibrary
-            Opens the specified global library
-            path: Path to the global library
-            openMode: The open mode to open the global library with.
+        Open(self: GlobalLibraryComposition, libraryInfo: GlobalLibraryInfo) -> GlobalLibrary
+
+            Opens the specified global library
+
+            libraryInfo: The global library info associated with a global library to be opened
+
+            Returns: Siemens.Engineering.Library.GlobalLibrary
+
+        Open(self: GlobalLibraryComposition, path: FileInfo, openMode: OpenMode) -> UserGlobalLibrary
+
+            Opens the specified global library
+
+            path: Path to the global library
+
+            openMode: The open mode to open the global library with.
+
             Returns: Siemens.Engineering.Library.UserGlobalLibrary
         """
         ...
 
     def OpenWithUpgrade(self, path:FileInfo) -> UserGlobalLibrary:
         """
-        OpenWithUpgrade(self: GlobalLibraryComposition, path: FileInfo) -> UserGlobalLibrary
-            Opens the specified global library and allows for upgrade of older versions if possible.
-            path: Path to the global library
+        OpenWithUpgrade(self: GlobalLibraryComposition, path: FileInfo) -> UserGlobalLibrary
+
+            Opens the specified global library and allows for upgrade of older versions if possible.
+
+            path: Path to the global library
+
             Returns: Siemens.Engineering.Library.UserGlobalLibrary
         """
         ...
 
     def Retrieve(self, sourcePath:FileInfo, targetDirectory:DirectoryInfo, openMode:OpenMode) -> UserGlobalLibrary:
         """
-        Retrieve(self: GlobalLibraryComposition, sourcePath: FileInfo, targetDirectory: DirectoryInfo, openMode: OpenMode) -> UserGlobalLibrary
-            Retrieves an archived library
-            sourcePath: The path of the archived library file
-            targetDirectory: The path to the folder where library would be retrieved.
-            openMode: The open mode to open the global library with.
+        Retrieve(self: GlobalLibraryComposition, sourcePath: FileInfo, targetDirectory: DirectoryInfo, openMode: OpenMode) -> UserGlobalLibrary
+
+            Retrieves an archived library
+
+            sourcePath: The path of the archived library file
+
+            targetDirectory: The path to the folder where library would be retrieved.
+
+            openMode: The open mode to open the global library with.
+
             Returns: Siemens.Engineering.Library.UserGlobalLibrary
         """
         ...
 
     def RetrieveWithUpgrade(self, sourcePath:FileInfo, targetDirectory:DirectoryInfo, openMode:OpenMode) -> UserGlobalLibrary:
         """
-        RetrieveWithUpgrade(self: GlobalLibraryComposition, sourcePath: FileInfo, targetDirectory: DirectoryInfo, openMode: OpenMode) -> UserGlobalLibrary
-            Retrieves a library from an archive and upgrades it to the current version
-            sourcePath: The path of the archived library file
-            targetDirectory: The path to the folder where library would be retrieved.
-            openMode: The open mode to open the global library with.
+        RetrieveWithUpgrade(self: GlobalLibraryComposition, sourcePath: FileInfo, targetDirectory: DirectoryInfo, openMode: OpenMode) -> UserGlobalLibrary
+
+            Retrieves a library from an archive and upgrades it to the current version
+
+            sourcePath: The path of the archived library file
+
+            targetDirectory: The path to the folder where library would be retrieved.
+
+            openMode: The open mode to open the global library with.
+
             Returns: Siemens.Engineering.Library.UserGlobalLibrary
         """
         ...
 
     def ToString(self) -> str:
         """
-        ToString(self: GlobalLibraryComposition) -> str
-            Returns a System.String that represents the current System.Object.
+        ToString(self: GlobalLibraryComposition) -> str
+
+            Returns a System.String that represents the current System.Object.
+
             Returns: A System.String that represents the current System.Object.
         """
         ...
@@ -269,7 +323,8 @@ class GlobalLibraryInfo(IEquatable, IEngineeringObject, IInternalObjectAccess): 
     @property
     def IsOpen(self) -> bool:
         """
-        Returns a Boolean representing if the global library associated with this GlobalLibraryInfo is already open or not.
+        Returns a Boolean representing if the global library associated with this GlobalLibraryInfo is already open or not.
+
         Get: IsOpen(self: GlobalLibraryInfo) -> bool
         """
         ...
@@ -277,7 +332,8 @@ class GlobalLibraryInfo(IEquatable, IEngineeringObject, IInternalObjectAccess): 
     @property
     def IsReadOnly(self) -> bool:
         """
-        True if the globa library is currently read only.
+        True if the globa library is currently read only.
+
         Get: IsReadOnly(self: GlobalLibraryInfo) -> bool
         """
         ...
@@ -285,7 +341,8 @@ class GlobalLibraryInfo(IEquatable, IEngineeringObject, IInternalObjectAccess): 
     @property
     def LibraryType(self) -> GlobalLibraryType:
         """
-        The Global Library Type
+        The Global Library Type
+
         Get: LibraryType(self: GlobalLibraryInfo) -> GlobalLibraryType
         """
         ...
@@ -293,7 +350,8 @@ class GlobalLibraryInfo(IEquatable, IEngineeringObject, IInternalObjectAccess): 
     @property
     def Name(self) -> str:
         """
-        The name of the global library.
+        The name of the global library.
+
         Get: Name(self: GlobalLibraryInfo) -> str
         """
         ...
@@ -301,7 +359,8 @@ class GlobalLibraryInfo(IEquatable, IEngineeringObject, IInternalObjectAccess): 
     @property
     def Parent(self) -> IEngineeringObject:
         """
-        EOM parent of this object
+        EOM parent of this object
+
         Get: Parent(self: GlobalLibraryInfo) -> IEngineeringObject
         """
         ...
@@ -309,7 +368,8 @@ class GlobalLibraryInfo(IEquatable, IEngineeringObject, IInternalObjectAccess): 
     @property
     def Path(self) -> FileInfo:
         """
-        The full library path.
+        The full library path.
+
         Get: Path(self: GlobalLibraryInfo) -> FileInfo
         """
         ...
@@ -317,16 +377,20 @@ class GlobalLibraryInfo(IEquatable, IEngineeringObject, IInternalObjectAccess): 
 
     def GetHashCode(self) -> int:
         """
-        GetHashCode(self: GlobalLibraryInfo) -> int
-            Returns a hash code for this instance.
+        GetHashCode(self: GlobalLibraryInfo) -> int
+
+            Returns a hash code for this instance.
+
             Returns: A hash code for this instance, suitable for use in hashing algorithms and data structures like a hash table.
         """
         ...
 
     def ToString(self) -> str:
         """
-        ToString(self: GlobalLibraryInfo) -> str
-            Returns a System.String that represents the current System.Object.
+        ToString(self: GlobalLibraryInfo) -> str
+
+            Returns a System.String that represents the current System.Object.
+
             Returns: A System.String that represents the current System.Object.
         """
         ...
@@ -337,7 +401,8 @@ class GlobalLibraryInfo(IEquatable, IEngineeringObject, IInternalObjectAccess): 
 
 class GlobalLibraryType(Enum): # skipped bases: <type 'IConvertible'>, <type 'IComparable'>, <type 'IFormattable'>, <type 'object'>
     """
-    Represents the GlobalLibrary Types such as System, User, or Corporate
+    Represents the GlobalLibrary Types such as System, User, or Corporate
+
     enum GlobalLibraryType, values: Corporate (1), System (0), User (2)
     """
     Corporate: GlobalLibraryType = ...
@@ -348,7 +413,8 @@ class GlobalLibraryType(Enum): # skipped bases: <type 'IConvertible'>, <type 'IC
 
 class LibraryArchivationMode(Enum): # skipped bases: <type 'IConvertible'>, <type 'IComparable'>, <type 'IFormattable'>, <type 'object'>
     """
-    Library archivation modes
+    Library archivation modes
+
     enum LibraryArchivationMode, values: Compressed (1), DiscardRestorableData (2), DiscardRestorableDataAndCompressed (3), None (0)
     """
     Compressed: LibraryArchivationMode = ...
@@ -362,7 +428,8 @@ class ProjectLibrary(IEquatable, IEngineeringObject, ILibrary, ISoftwareCompareT
     @property
     def Parent(self) -> IEngineeringObject:
         """
-        EOM parent of this object
+        EOM parent of this object
+
         Get: Parent(self: ProjectLibrary) -> IEngineeringObject
         """
         ...
@@ -370,16 +437,20 @@ class ProjectLibrary(IEquatable, IEngineeringObject, ILibrary, ISoftwareCompareT
 
     def GetHashCode(self) -> int:
         """
-        GetHashCode(self: ProjectLibrary) -> int
-            Returns a hash code for this instance.
+        GetHashCode(self: ProjectLibrary) -> int
+
+            Returns a hash code for this instance.
+
             Returns: A hash code for this instance, suitable for use in hashing algorithms and data structures like a hash table.
         """
         ...
 
     def ToString(self) -> str:
         """
-        ToString(self: ProjectLibrary) -> str
-            Returns a System.String that represents the current System.Object.
+        ToString(self: ProjectLibrary) -> str
+
+            Returns a System.String that represents the current System.Object.
+
             Returns: A System.String that represents the current System.Object.
         """
         ...
@@ -394,38 +465,45 @@ class SystemGlobalLibrary(GlobalLibrary): # skipped bases: <type 'IInternalInsta
 
 class UserGlobalLibrary(GlobalLibrary): # skipped bases: <type 'IInternalInstanceAccess'>, <type 'IEngineeringInstance'>, <type 'IEngineeringObject'>, <type 'ILibrary'>, <type 'IInternalObjectAccess'>, <type 'IEquatable[object]'>, <type 'IInternalBaseAccess'>, <type 'ITransactionSupport'>, <type 'ISoftwareCompareTarget'>, <type 'IEngineeringCompositionOrObject'>, <type 'object'>
     """ Represents a User Global Library """
-    def Archive(self, targetDirectory:DirectoryInfo, targetName:str, archivationMode:LibraryArchivationMode): # -> 
+    def Archive(self, targetDirectory:DirectoryInfo, targetName:str, archivationMode:LibraryArchivationMode): # ->
         """
-        Archive(self: UserGlobalLibrary, targetDirectory: DirectoryInfo, targetName: str, archivationMode: LibraryArchivationMode)
-            Archives the User Global library.
-            targetDirectory: Directory where the library to be archived
-            targetName: File name for the archived file
+        Archive(self: UserGlobalLibrary, targetDirectory: DirectoryInfo, targetName: str, archivationMode: LibraryArchivationMode)
+
+            Archives the User Global library.
+
+            targetDirectory: Directory where the library to be archived
+
+            targetName: File name for the archived file
+
             archivationMode: Archivation mode
         """
         ...
 
-    def Close(self): # -> 
+    def Close(self): # ->
         """
-        Close(self: UserGlobalLibrary)
+        Close(self: UserGlobalLibrary)
+
             Closes the User Library
         """
         ...
 
-    def Save(self): # -> 
+    def Save(self): # ->
         """
-        Save(self: UserGlobalLibrary)
+        Save(self: UserGlobalLibrary)
+
             Saves the User Library
         """
         ...
 
-    def SaveAs(self, targetDirectory:DirectoryInfo): # -> 
+    def SaveAs(self, targetDirectory:DirectoryInfo): # ->
         """
-        SaveAs(self: UserGlobalLibrary, targetDirectory: DirectoryInfo)
-            Save a User Library to another location
+        SaveAs(self: UserGlobalLibrary, targetDirectory: DirectoryInfo)
+
+            Save a User Library to another location
+
             targetDirectory: The target directory path to save the User Library
         """
         ...
 
 
 # variables with complex values
-

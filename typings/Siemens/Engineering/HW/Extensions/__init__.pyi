@@ -11,6 +11,8 @@ from System import IEquatable
 """The following names are not found in the module: IInternalObjectAccess
 """
 
+from Siemens import IInternalObjectAccess
+
 # no functions
 # classes
 
@@ -19,7 +21,8 @@ class PlugLocation(IEquatable, IEngineeringObject, IInternalObjectAccess): # ski
     @property
     def Label(self) -> str:
         """
-        The label of the free slot.
+        The label of the free slot.
+
         Get: Label(self: PlugLocation) -> str
         """
         ...
@@ -27,7 +30,8 @@ class PlugLocation(IEquatable, IEngineeringObject, IInternalObjectAccess): # ski
     @property
     def Parent(self) -> IEngineeringObject:
         """
-        EOM parent of this object
+        EOM parent of this object
+
         Get: Parent(self: PlugLocation) -> IEngineeringObject
         """
         ...
@@ -35,7 +39,8 @@ class PlugLocation(IEquatable, IEngineeringObject, IInternalObjectAccess): # ski
     @property
     def PositionNumber(self) -> int:
         """
-        The position number of the free slot
+        The position number of the free slot
+
         Get: PositionNumber(self: PlugLocation) -> int
         """
         ...
@@ -43,21 +48,23 @@ class PlugLocation(IEquatable, IEngineeringObject, IInternalObjectAccess): # ski
 
     def GetHashCode(self) -> int:
         """
-        GetHashCode(self: PlugLocation) -> int
-            Returns a hash code for this instance.
+        GetHashCode(self: PlugLocation) -> int
+
+            Returns a hash code for this instance.
+
             Returns: A hash code for this instance, suitable for use in hashing algorithms and data structures like a hash table.
         """
         ...
 
     def ToString(self) -> str:
         """
-        ToString(self: PlugLocation) -> str
-            Returns a System.String that represents the current System.Object.
+        ToString(self: PlugLocation) -> str
+
+            Returns a System.String that represents the current System.Object.
+
             Returns: A System.String that represents the current System.Object.
         """
         ...
 
     def __ne__(self, *args): #cannot find CLR method
         ...
-
-

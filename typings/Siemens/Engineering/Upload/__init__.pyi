@@ -4,22 +4,24 @@
 # by generator 1.145
 """ no doc """
 from __future__ import annotations
-from Siemens.Engineering import (IEngineeringComposition, IEngineeringObject, 
+from Siemens.Engineering import (IEngineeringComposition, IEngineeringObject,
     IEngineeringService)
 
-from Siemens.Engineering.Connection import (ConfigurationAddress, 
+from Siemens.Engineering.Connection import (ConfigurationAddress,
     ConnectionConfiguration)
 
 from Siemens.Engineering.HW import Device
 
 from Siemens.Engineering.Upload.Configurations import UploadConfiguration
 
-from System import (AsyncCallback, DateTime, Enum, IAsyncResult, IEquatable, 
+from System import (AsyncCallback, DateTime, Enum, IAsyncResult, IEquatable,
     MulticastDelegate)
 
 """The following names are not found in the module: (
     IInternalCompositionAccess, IInternalObjectAccess, field#)
 """
+
+from Siemens import IInternalCompositionAccess, IInternalObjectAccess
 
 # no functions
 # classes
@@ -29,7 +31,8 @@ class StationUploadProvider(IEquatable, IEngineeringObject, IEngineeringService,
     @property
     def Configuration(self) -> ConnectionConfiguration:
         """
-        Connection Configuration.
+        Connection Configuration.
+
         Get: Configuration(self: StationUploadProvider) -> ConnectionConfiguration
         """
         ...
@@ -37,7 +40,8 @@ class StationUploadProvider(IEquatable, IEngineeringObject, IEngineeringService,
     @property
     def Parent(self) -> IEngineeringObject:
         """
-        EOM parent of this object
+        EOM parent of this object
+
         Get: Parent(self: StationUploadProvider) -> IEngineeringObject
         """
         ...
@@ -45,26 +49,34 @@ class StationUploadProvider(IEquatable, IEngineeringObject, IEngineeringService,
 
     def GetHashCode(self) -> int:
         """
-        GetHashCode(self: StationUploadProvider) -> int
-            Returns a hash code for this instance.
+        GetHashCode(self: StationUploadProvider) -> int
+
+            Returns a hash code for this instance.
+
             Returns: A hash code for this instance, suitable for use in hashing algorithms and data structures like a hash table.
         """
         ...
 
     def StationUpload(self, configurationAddress:ConfigurationAddress, uploadConfigurationDelegate:UploadConfigurationDelegate) -> UploadResult:
         """
-        StationUpload(self: StationUploadProvider, configurationAddress: ConfigurationAddress, uploadConfigurationDelegate: UploadConfigurationDelegate) -> UploadResult
-            Service provides station upload functionality
-            configurationAddress: Configuration address for station upload
-            uploadConfigurationDelegate: Upload parameter
+        StationUpload(self: StationUploadProvider, configurationAddress: ConfigurationAddress, uploadConfigurationDelegate: UploadConfigurationDelegate) -> UploadResult
+
+            Service provides station upload functionality
+
+            configurationAddress: Configuration address for station upload
+
+            uploadConfigurationDelegate: Upload parameter
+
             Returns: Siemens.Engineering.Upload.UploadResult
         """
         ...
 
     def ToString(self) -> str:
         """
-        ToString(self: StationUploadProvider) -> str
-            Returns a System.String that represents the current System.Object.
+        ToString(self: StationUploadProvider) -> str
+
+            Returns a System.String that represents the current System.Object.
+
             Returns: A System.String that represents the current System.Object.
         """
         ...
@@ -79,11 +91,11 @@ class UploadConfigurationDelegate(MulticastDelegate): # skipped bases: <type 'IS
         """ BeginInvoke(self: UploadConfigurationDelegate, uploadConfiguration: UploadConfiguration, callback: AsyncCallback, object: object) -> IAsyncResult """
         ...
 
-    def EndInvoke(self, result:IAsyncResult): # -> 
+    def EndInvoke(self, result:IAsyncResult): # ->
         """ EndInvoke(self: UploadConfigurationDelegate, result: IAsyncResult) """
         ...
 
-    def Invoke(self, uploadConfiguration:UploadConfiguration): # -> 
+    def Invoke(self, uploadConfiguration:UploadConfiguration): # ->
         """ Invoke(self: UploadConfigurationDelegate, uploadConfiguration: UploadConfiguration) """
         ...
 
@@ -93,7 +105,8 @@ class UploadResult(IEquatable, IEngineeringObject, IInternalObjectAccess): # ski
     @property
     def ErrorCount(self) -> int:
         """
-        Number of errors in a given Upload scenario
+        Number of errors in a given Upload scenario
+
         Get: ErrorCount(self: UploadResult) -> int
         """
         ...
@@ -101,7 +114,8 @@ class UploadResult(IEquatable, IEngineeringObject, IInternalObjectAccess): # ski
     @property
     def Messages(self) -> UploadResultMessageComposition:
         """
-        Collection of output messages for the result of a given Upload scenario.
+        Collection of output messages for the result of a given Upload scenario.
+
         Get: Messages(self: UploadResult) -> UploadResultMessageComposition
         """
         ...
@@ -109,7 +123,8 @@ class UploadResult(IEquatable, IEngineeringObject, IInternalObjectAccess): # ski
     @property
     def Parent(self) -> IEngineeringObject:
         """
-        EOM parent of this object
+        EOM parent of this object
+
         Get: Parent(self: UploadResult) -> IEngineeringObject
         """
         ...
@@ -117,7 +132,8 @@ class UploadResult(IEquatable, IEngineeringObject, IInternalObjectAccess): # ski
     @property
     def State(self) -> UploadResultState:
         """
-        Final state of a given compile scenario
+        Final state of a given compile scenario
+
         Get: State(self: UploadResult) -> UploadResultState
         """
         ...
@@ -125,7 +141,8 @@ class UploadResult(IEquatable, IEngineeringObject, IInternalObjectAccess): # ski
     @property
     def UploadedStation(self) -> Device:
         """
-        The uploaded station if upload was successful.
+        The uploaded station if upload was successful.
+
         Get: UploadedStation(self: UploadResult) -> Device
         """
         ...
@@ -133,7 +150,8 @@ class UploadResult(IEquatable, IEngineeringObject, IInternalObjectAccess): # ski
     @property
     def WarningCount(self) -> int:
         """
-        Number of warnings in a given Upload scenario
+        Number of warnings in a given Upload scenario
+
         Get: WarningCount(self: UploadResult) -> int
         """
         ...
@@ -141,16 +159,20 @@ class UploadResult(IEquatable, IEngineeringObject, IInternalObjectAccess): # ski
 
     def GetHashCode(self) -> int:
         """
-        GetHashCode(self: UploadResult) -> int
-            Returns a hash code for this instance.
+        GetHashCode(self: UploadResult) -> int
+
+            Returns a hash code for this instance.
+
             Returns: A hash code for this instance, suitable for use in hashing algorithms and data structures like a hash table.
         """
         ...
 
     def ToString(self) -> str:
         """
-        ToString(self: UploadResult) -> str
-            Returns a System.String that represents the current System.Object.
+        ToString(self: UploadResult) -> str
+
+            Returns a System.String that represents the current System.Object.
+
             Returns: A System.String that represents the current System.Object.
         """
         ...
@@ -164,7 +186,8 @@ class UploadResultMessage(IEquatable, IEngineeringObject, IInternalObjectAccess)
     @property
     def DateTime(self) -> DateTime:
         """
-        Date and time in a Upload message
+        Date and time in a Upload message
+
         Get: DateTime(self: UploadResultMessage) -> DateTime
         """
         ...
@@ -172,7 +195,8 @@ class UploadResultMessage(IEquatable, IEngineeringObject, IInternalObjectAccess)
     @property
     def ErrorCount(self) -> int:
         """
-        Number of errors in a Upload message
+        Number of errors in a Upload message
+
         Get: ErrorCount(self: UploadResultMessage) -> int
         """
         ...
@@ -180,7 +204,8 @@ class UploadResultMessage(IEquatable, IEngineeringObject, IInternalObjectAccess)
     @property
     def Message(self) -> str:
         """
-        Description or content of a Upload message
+        Description or content of a Upload message
+
         Get: Message(self: UploadResultMessage) -> str
         """
         ...
@@ -188,7 +213,8 @@ class UploadResultMessage(IEquatable, IEngineeringObject, IInternalObjectAccess)
     @property
     def Messages(self) -> UploadResultMessageComposition:
         """
-        Access to the Upload messages for a given Upload scenario
+        Access to the Upload messages for a given Upload scenario
+
         Get: Messages(self: UploadResultMessage) -> UploadResultMessageComposition
         """
         ...
@@ -196,7 +222,8 @@ class UploadResultMessage(IEquatable, IEngineeringObject, IInternalObjectAccess)
     @property
     def Parent(self) -> IEngineeringObject:
         """
-        EOM parent of this object
+        EOM parent of this object
+
         Get: Parent(self: UploadResultMessage) -> IEngineeringObject
         """
         ...
@@ -204,7 +231,8 @@ class UploadResultMessage(IEquatable, IEngineeringObject, IInternalObjectAccess)
     @property
     def State(self) -> UploadResultState:
         """
-        Final state in a Upload message
+        Final state in a Upload message
+
         Get: State(self: UploadResultMessage) -> UploadResultState
         """
         ...
@@ -212,7 +240,8 @@ class UploadResultMessage(IEquatable, IEngineeringObject, IInternalObjectAccess)
     @property
     def WarningCount(self) -> int:
         """
-        Number of warnings in a Upload message
+        Number of warnings in a Upload message
+
         Get: WarningCount(self: UploadResultMessage) -> int
         """
         ...
@@ -220,16 +249,20 @@ class UploadResultMessage(IEquatable, IEngineeringObject, IInternalObjectAccess)
 
     def GetHashCode(self) -> int:
         """
-        GetHashCode(self: UploadResultMessage) -> int
-            Returns a hash code for this instance.
+        GetHashCode(self: UploadResultMessage) -> int
+
+            Returns a hash code for this instance.
+
             Returns: A hash code for this instance, suitable for use in hashing algorithms and data structures like a hash table.
         """
         ...
 
     def ToString(self) -> str:
         """
-        ToString(self: UploadResultMessage) -> str
-            Returns a System.String that represents the current System.Object.
+        ToString(self: UploadResultMessage) -> str
+
+            Returns a System.String that represents the current System.Object.
+
             Returns: A System.String that represents the current System.Object.
         """
         ...
@@ -243,7 +276,8 @@ class UploadResultMessageComposition(IInternalCompositionAccess, IEngineeringCom
     @property
     def Parent(self) -> IEngineeringObject:
         """
-        Gets the parent.
+        Gets the parent.
+
         Get: Parent(self: UploadResultMessageComposition) -> IEngineeringObject
         """
         ...
@@ -251,16 +285,20 @@ class UploadResultMessageComposition(IInternalCompositionAccess, IEngineeringCom
 
     def GetHashCode(self) -> int:
         """
-        GetHashCode(self: UploadResultMessageComposition) -> int
-            Returns a hash code for this instance.
+        GetHashCode(self: UploadResultMessageComposition) -> int
+
+            Returns a hash code for this instance.
+
             Returns: A hash code for this instance, suitable for use in hashing algorithms and data structures like a hash table.
         """
         ...
 
     def ToString(self) -> str:
         """
-        ToString(self: UploadResultMessageComposition) -> str
-            Returns a System.String that represents the current System.Object.
+        ToString(self: UploadResultMessageComposition) -> str
+
+            Returns a System.String that represents the current System.Object.
+
             Returns: A System.String that represents the current System.Object.
         """
         ...
@@ -275,7 +313,8 @@ class UploadResultMessageComposition(IInternalCompositionAccess, IEngineeringCom
 
 class UploadResultState(Enum): # skipped bases: <type 'IConvertible'>, <type 'IComparable'>, <type 'IFormattable'>, <type 'object'>
     """
-    The list of possible compiler result options
+    The list of possible compiler result options
+
     enum UploadResultState, values: Error (3), Information (1), Success (0), Warning (2)
     """
     Error: UploadResultState = ...
@@ -286,4 +325,3 @@ class UploadResultState(Enum): # skipped bases: <type 'IConvertible'>, <type 'IC
 
 
 # variables with complex values
-

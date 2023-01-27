@@ -16,6 +16,8 @@ from System.IO import FileInfo
     IInternalCompositionAccess, IInternalObjectAccess)
 """
 
+from Siemens import IInternalCompositionAccess, IInternalObjectAccess
+
 # no functions
 # classes
 
@@ -24,7 +26,8 @@ class HardwareUtility(IEquatable, IEngineeringObject, IInternalObjectAccess): # 
     @property
     def Identifier(self) -> str:
         """
-        Identifier for this HW extension
+        Identifier for this HW extension
+
         Get: Identifier(self: HardwareUtility) -> str
         """
         ...
@@ -32,7 +35,8 @@ class HardwareUtility(IEquatable, IEngineeringObject, IInternalObjectAccess): # 
     @property
     def Parent(self) -> IEngineeringObject:
         """
-        EOM parent of this object
+        EOM parent of this object
+
         Get: Parent(self: HardwareUtility) -> IEngineeringObject
         """
         ...
@@ -40,16 +44,20 @@ class HardwareUtility(IEquatable, IEngineeringObject, IInternalObjectAccess): # 
 
     def GetHashCode(self) -> int:
         """
-        GetHashCode(self: HardwareUtility) -> int
-            Returns a hash code for this instance.
+        GetHashCode(self: HardwareUtility) -> int
+
+            Returns a hash code for this instance.
+
             Returns: A hash code for this instance, suitable for use in hashing algorithms and data structures like a hash table.
         """
         ...
 
     def ToString(self) -> str:
         """
-        ToString(self: HardwareUtility) -> str
-            Returns a System.String that represents the current System.Object.
+        ToString(self: HardwareUtility) -> str
+
+            Returns a System.String that represents the current System.Object.
+
             Returns: A System.String that represents the current System.Object.
         """
         ...
@@ -60,11 +68,14 @@ class HardwareUtility(IEquatable, IEngineeringObject, IInternalObjectAccess): # 
 
 class CardReaderPscProvider(HardwareUtility): # skipped bases: <type 'IInternalInstanceAccess'>, <type 'IEngineeringInstance'>, <type 'IEngineeringObject'>, <type 'IInternalObjectAccess'>, <type 'IEquatable[object]'>, <type 'IInternalBaseAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'object'>
     """ Card reader provider utility for .psc file """
-    def Export(self, device:Device, fileName:FileInfo): # -> 
+    def Export(self, device:Device, fileName:FileInfo): # ->
         """
-        Export(self: CardReaderPscProvider, device: Device, fileName: FileInfo)
-            Exports device configuration to file
-            device: device to be exported
+        Export(self: CardReaderPscProvider, device: Device, fileName: FileInfo)
+
+            Exports device configuration to file
+
+            device: device to be exported
+
             fileName: file name that will be saved(*.psc)
         """
         ...
@@ -75,7 +86,8 @@ class HardwareUtilityComposition(IInternalCompositionAccess, IEngineeringComposi
     @property
     def Parent(self) -> IEngineeringObject:
         """
-        Gets the parent.
+        Gets the parent.
+
         Get: Parent(self: HardwareUtilityComposition) -> IEngineeringObject
         """
         ...
@@ -83,25 +95,32 @@ class HardwareUtilityComposition(IInternalCompositionAccess, IEngineeringComposi
 
     def Find(self, identifier:str) -> HardwareUtility:
         """
-        Find(self: HardwareUtilityComposition, identifier: str) -> HardwareUtility
-            Finds a given extension
-            identifier: Identifier to find
+        Find(self: HardwareUtilityComposition, identifier: str) -> HardwareUtility
+
+            Finds a given extension
+
+            identifier: Identifier to find
+
             Returns: Siemens.Engineering.HW.Utilities.HardwareUtility
         """
         ...
 
     def GetHashCode(self) -> int:
         """
-        GetHashCode(self: HardwareUtilityComposition) -> int
-            Returns a hash code for this instance.
+        GetHashCode(self: HardwareUtilityComposition) -> int
+
+            Returns a hash code for this instance.
+
             Returns: A hash code for this instance, suitable for use in hashing algorithms and data structures like a hash table.
         """
         ...
 
     def ToString(self) -> str:
         """
-        ToString(self: HardwareUtilityComposition) -> str
-            Returns a System.String that represents the current System.Object.
+        ToString(self: HardwareUtilityComposition) -> str
+
+            Returns a System.String that represents the current System.Object.
+
             Returns: A System.String that represents the current System.Object.
         """
         ...
@@ -118,18 +137,24 @@ class ModuleInformationProvider(HardwareUtility): # skipped bases: <type 'IInter
     """ Service provider for module information """
     def FindContainerTypes(self, typeIdentifier:str) -> Array:
         """
-        FindContainerTypes(self: ModuleInformationProvider, typeIdentifier: str) -> Array[str]
-            Finds the possible container types
-            typeIdentifier: The type identifier to use to find a given container type
+        FindContainerTypes(self: ModuleInformationProvider, typeIdentifier: str) -> Array[str]
+
+            Finds the possible container types
+
+            typeIdentifier: The type identifier to use to find a given container type
+
             Returns: System.String[]
         """
         ...
 
     def FindModuleTypes(self, partialTypeIdentifier:str) -> Array:
         """
-        FindModuleTypes(self: ModuleInformationProvider, partialTypeIdentifier: str) -> Array[str]
-            Finds the possible module types
-            partialTypeIdentifier: The partial type identifier to be used to find a given module type
+        FindModuleTypes(self: ModuleInformationProvider, partialTypeIdentifier: str) -> Array[str]
+
+            Finds the possible module types
+
+            partialTypeIdentifier: The partial type identifier to be used to find a given module type
+
             Returns: System.String[]
         """
         ...
@@ -137,13 +162,14 @@ class ModuleInformationProvider(HardwareUtility): # skipped bases: <type 'IInter
 
 class OpcUaExportProvider(HardwareUtility): # skipped bases: <type 'IInternalInstanceAccess'>, <type 'IEngineeringInstance'>, <type 'IEngineeringObject'>, <type 'IInternalObjectAccess'>, <type 'IEquatable[object]'>, <type 'IInternalBaseAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'object'>
     """ Service provider for export of OPC UA """
-    def Export(self, deviceItem:DeviceItem, path:FileInfo): # -> 
+    def Export(self, deviceItem:DeviceItem, path:FileInfo): # ->
         """
-        Export(self: OpcUaExportProvider, deviceItem: DeviceItem, path: FileInfo)
-            Simatic ML export of a OPC UA
-            deviceItem: The device item to be exported
+        Export(self: OpcUaExportProvider, deviceItem: DeviceItem, path: FileInfo)
+
+            Simatic ML export of a OPC UA
+
+            deviceItem: The device item to be exported
+
             path: Path to the export file
         """
         ...
-
-

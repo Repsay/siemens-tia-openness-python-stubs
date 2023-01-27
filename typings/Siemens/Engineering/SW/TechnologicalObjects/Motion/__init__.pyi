@@ -4,7 +4,7 @@
 # by generator 1.145
 """ no doc """
 from __future__ import annotations
-from Siemens.Engineering import (IEngineeringComposition, IEngineeringObject, 
+from Siemens.Engineering import (IEngineeringComposition, IEngineeringObject,
     IEngineeringService)
 
 from Siemens.Engineering.HW import Channel, DeviceItem
@@ -22,6 +22,8 @@ from System.IO import FileInfo
     IInternalCompositionAccess, IInternalObjectAccess, field#)
 """
 
+from Siemens import IInternalCompositionAccess, IInternalObjectAccess
+
 # no functions
 # classes
 
@@ -30,7 +32,8 @@ class AxisEncoderHardwareConnectionInterface(IEquatable, IEngineeringObject, IIn
     @property
     def Channel(self) -> Channel:
         """
-        Connected Channel
+        Connected Channel
+
         Get: Channel(self: AxisEncoderHardwareConnectionInterface) -> Channel
         """
         ...
@@ -38,7 +41,8 @@ class AxisEncoderHardwareConnectionInterface(IEquatable, IEngineeringObject, IIn
     @property
     def ConnectOption(self) -> ConnectOption:
         """
-        ConnectOption that has been set when the connection was made
+        ConnectOption that has been set when the connection was made
+
         Get: ConnectOption(self: AxisEncoderHardwareConnectionInterface) -> ConnectOption
         """
         ...
@@ -46,23 +50,26 @@ class AxisEncoderHardwareConnectionInterface(IEquatable, IEngineeringObject, IIn
     @property
     def InputAddress(self) -> int:
         """
-        Raw input bit address
+        Raw input bit address
+
         Get: InputAddress(self: AxisEncoderHardwareConnectionInterface) -> int
         """
         ...
 
     @property
-    def InputModule(self): # -> 
+    def InputModule(self): # ->
         """
-        Connected input (sub) module
+        Connected input (sub) module
+
         Get: InputModule(self: AxisEncoderHardwareConnectionInterface) -> DeviceItem
         """
         ...
 
     @property
-    def InputOutputModule(self): # -> 
+    def InputOutputModule(self): # ->
         """
-        Connected mixed (sub) module that contains input and output addresses
+        Connected mixed (sub) module that contains input and output addresses
+
         Get: InputOutputModule(self: AxisEncoderHardwareConnectionInterface) -> DeviceItem
         """
         ...
@@ -70,7 +77,8 @@ class AxisEncoderHardwareConnectionInterface(IEquatable, IEngineeringObject, IIn
     @property
     def IsConnected(self) -> bool:
         """
-        Indicates whether the interface is connected
+        Indicates whether the interface is connected
+
         Get: IsConnected(self: AxisEncoderHardwareConnectionInterface) -> bool
         """
         ...
@@ -78,23 +86,26 @@ class AxisEncoderHardwareConnectionInterface(IEquatable, IEngineeringObject, IIn
     @property
     def OutputAddress(self) -> int:
         """
-        Raw output bit address
+        Raw output bit address
+
         Get: OutputAddress(self: AxisEncoderHardwareConnectionInterface) -> int
         """
         ...
 
     @property
-    def OutputModule(self): # -> 
+    def OutputModule(self): # ->
         """
-        Connected output (sub) module
+        Connected output (sub) module
+
         Get: OutputModule(self: AxisEncoderHardwareConnectionInterface) -> DeviceItem
         """
         ...
 
     @property
-    def OutputTag(self): # -> 
+    def OutputTag(self): # ->
         """
-        Connected tag (analog connection)
+        Connected tag (analog connection)
+
         Get: OutputTag(self: AxisEncoderHardwareConnectionInterface) -> PlcTag
         """
         ...
@@ -102,7 +113,8 @@ class AxisEncoderHardwareConnectionInterface(IEquatable, IEngineeringObject, IIn
     @property
     def Parent(self) -> IEngineeringObject:
         """
-        EOM parent of this object
+        EOM parent of this object
+
         Get: Parent(self: AxisEncoderHardwareConnectionInterface) -> IEngineeringObject
         """
         ...
@@ -110,7 +122,8 @@ class AxisEncoderHardwareConnectionInterface(IEquatable, IEngineeringObject, IIn
     @property
     def PathToDBMember(self) -> str:
         """
-        Path to connected DB member
+        Path to connected DB member
+
         Get: PathToDBMember(self: AxisEncoderHardwareConnectionInterface) -> str
         """
         ...
@@ -118,62 +131,93 @@ class AxisEncoderHardwareConnectionInterface(IEquatable, IEngineeringObject, IIn
     @property
     def SensorIndexInActorTelegram(self) -> int:
         """
-        Connection to sensor part in actor telegram.
+        Connection to sensor part in actor telegram.
+
         Get: SensorIndexInActorTelegram(self: AxisEncoderHardwareConnectionInterface) -> int
         """
         ...
 
 
-    def Connect(self, *__args:Channel): # -> 
+    def Connect(self, *__args:Channel): # ->
         """
-        Connect(self: AxisEncoderHardwareConnectionInterface, channel: Channel)
-            Connect with a Channel (e.g. of a TechnologyModule)
-            channel: Channel to connect
-        Connect(self: AxisEncoderHardwareConnectionInterface, moduleInOut: DeviceItem)
-            Connect with a mixed (sub) module that contains input and output addresses
-            moduleInOut: Module or submodule that contains input and output addresses
-        Connect(self: AxisEncoderHardwareConnectionInterface, outputTag: PlcTag)
-            Connect to an output PlcTag in order to establish an analog connection
-            outputTag: Output PlcTag to connect
-        Connect(self: AxisEncoderHardwareConnectionInterface, pathToDBMember: str)
-            Connect to DB member
-            pathToDBMember: Path to the DB member
-        Connect(self: AxisEncoderHardwareConnectionInterface, moduleIn: DeviceItem, moduleOut: DeviceItem)
-            Connect with separate (sub) modules for inputs and outputs, specifying an additional ConnectOption
-            moduleIn: Module or submodule that contains the input address
-            moduleOut: Module or submodule that contains the output address
-        Connect(self: AxisEncoderHardwareConnectionInterface, moduleIn: DeviceItem, moduleOut: DeviceItem, connectOption: ConnectOption)
-            Connect with separate (sub) modules for inputs and outputs, specifying an additional ConnectOption
-            moduleIn: Module or submodule that contains the input address
-            moduleOut: Module or submodule that contains the output address
-            connectOption: Additional option for making the connection
-        Connect(self: AxisEncoderHardwareConnectionInterface, addressIn: int, addressOut: int, connectOption: ConnectOption)
-            Connect specifying input and output bit addresses directly
-            addressIn: Input bit address to connect
-            addressOut: Output bit address to connect
+        Connect(self: AxisEncoderHardwareConnectionInterface, channel: Channel)
+
+            Connect with a Channel (e.g. of a TechnologyModule)
+
+            channel: Channel to connect
+
+        Connect(self: AxisEncoderHardwareConnectionInterface, moduleInOut: DeviceItem)
+
+            Connect with a mixed (sub) module that contains input and output addresses
+
+            moduleInOut: Module or submodule that contains input and output addresses
+
+        Connect(self: AxisEncoderHardwareConnectionInterface, outputTag: PlcTag)
+
+            Connect to an output PlcTag in order to establish an analog connection
+
+            outputTag: Output PlcTag to connect
+
+        Connect(self: AxisEncoderHardwareConnectionInterface, pathToDBMember: str)
+
+            Connect to DB member
+
+            pathToDBMember: Path to the DB member
+
+        Connect(self: AxisEncoderHardwareConnectionInterface, moduleIn: DeviceItem, moduleOut: DeviceItem)
+
+            Connect with separate (sub) modules for inputs and outputs, specifying an additional ConnectOption
+
+            moduleIn: Module or submodule that contains the input address
+
+            moduleOut: Module or submodule that contains the output address
+
+        Connect(self: AxisEncoderHardwareConnectionInterface, moduleIn: DeviceItem, moduleOut: DeviceItem, connectOption: ConnectOption)
+
+            Connect with separate (sub) modules for inputs and outputs, specifying an additional ConnectOption
+
+            moduleIn: Module or submodule that contains the input address
+
+            moduleOut: Module or submodule that contains the output address
+
+            connectOption: Additional option for making the connection
+
+        Connect(self: AxisEncoderHardwareConnectionInterface, addressIn: int, addressOut: int, connectOption: ConnectOption)
+
+            Connect specifying input and output bit addresses directly
+
+            addressIn: Input bit address to connect
+
+            addressOut: Output bit address to connect
+
             connectOption: Additional option for making the connection
         """
         ...
 
-    def Disconnect(self): # -> 
+    def Disconnect(self): # ->
         """
-        Disconnect(self: AxisEncoderHardwareConnectionInterface)
+        Disconnect(self: AxisEncoderHardwareConnectionInterface)
+
             Remove an existing connection
         """
         ...
 
     def GetHashCode(self) -> int:
         """
-        GetHashCode(self: AxisEncoderHardwareConnectionInterface) -> int
-            Returns a hash code for this instance.
+        GetHashCode(self: AxisEncoderHardwareConnectionInterface) -> int
+
+            Returns a hash code for this instance.
+
             Returns: A hash code for this instance, suitable for use in hashing algorithms and data structures like a hash table.
         """
         ...
 
     def ToString(self) -> str:
         """
-        ToString(self: AxisEncoderHardwareConnectionInterface) -> str
-            Returns a System.String that represents the current System.Object.
+        ToString(self: AxisEncoderHardwareConnectionInterface) -> str
+
+            Returns a System.String that represents the current System.Object.
+
             Returns: A System.String that represents the current System.Object.
         """
         ...
@@ -187,7 +231,8 @@ class AxisEncoderHardwareConnectionInterfaceComposition(IInternalCompositionAcce
     @property
     def Parent(self) -> IEngineeringObject:
         """
-        Gets the parent.
+        Gets the parent.
+
         Get: Parent(self: AxisEncoderHardwareConnectionInterfaceComposition) -> IEngineeringObject
         """
         ...
@@ -195,16 +240,20 @@ class AxisEncoderHardwareConnectionInterfaceComposition(IInternalCompositionAcce
 
     def GetHashCode(self) -> int:
         """
-        GetHashCode(self: AxisEncoderHardwareConnectionInterfaceComposition) -> int
-            Returns a hash code for this instance.
+        GetHashCode(self: AxisEncoderHardwareConnectionInterfaceComposition) -> int
+
+            Returns a hash code for this instance.
+
             Returns: A hash code for this instance, suitable for use in hashing algorithms and data structures like a hash table.
         """
         ...
 
     def ToString(self) -> str:
         """
-        ToString(self: AxisEncoderHardwareConnectionInterfaceComposition) -> str
-            Returns a System.String that represents the current System.Object.
+        ToString(self: AxisEncoderHardwareConnectionInterfaceComposition) -> str
+
+            Returns a System.String that represents the current System.Object.
+
             Returns: A System.String that represents the current System.Object.
         """
         ...
@@ -222,7 +271,8 @@ class AxisHardwareConnectionProvider(IEquatable, IEngineeringObject, IEngineerin
     @property
     def ActorInterface(self) -> AxisEncoderHardwareConnectionInterface:
         """
-        Provides access to the connections for the actor interface of the axis
+        Provides access to the connections for the actor interface of the axis
+
         Get: ActorInterface(self: AxisHardwareConnectionProvider) -> AxisEncoderHardwareConnectionInterface
         """
         ...
@@ -230,7 +280,8 @@ class AxisHardwareConnectionProvider(IEquatable, IEngineeringObject, IEngineerin
     @property
     def Parent(self) -> IEngineeringObject:
         """
-        EOM parent of this object
+        EOM parent of this object
+
         Get: Parent(self: AxisHardwareConnectionProvider) -> IEngineeringObject
         """
         ...
@@ -238,7 +289,8 @@ class AxisHardwareConnectionProvider(IEquatable, IEngineeringObject, IEngineerin
     @property
     def SensorInterface(self) -> AxisEncoderHardwareConnectionInterfaceComposition:
         """
-        Provides access to the connections for the sensor interfaces of the axis
+        Provides access to the connections for the sensor interfaces of the axis
+
         Get: SensorInterface(self: AxisHardwareConnectionProvider) -> AxisEncoderHardwareConnectionInterfaceComposition
         """
         ...
@@ -246,7 +298,8 @@ class AxisHardwareConnectionProvider(IEquatable, IEngineeringObject, IEngineerin
     @property
     def TorqueInterface(self) -> TorqueHardwareConnectionInterface:
         """
-        Provides access to the torque connection interface of the axis
+        Provides access to the torque connection interface of the axis
+
         Get: TorqueInterface(self: AxisHardwareConnectionProvider) -> TorqueHardwareConnectionInterface
         """
         ...
@@ -254,16 +307,20 @@ class AxisHardwareConnectionProvider(IEquatable, IEngineeringObject, IEngineerin
 
     def GetHashCode(self) -> int:
         """
-        GetHashCode(self: AxisHardwareConnectionProvider) -> int
-            Returns a hash code for this instance.
+        GetHashCode(self: AxisHardwareConnectionProvider) -> int
+
+            Returns a hash code for this instance.
+
             Returns: A hash code for this instance, suitable for use in hashing algorithms and data structures like a hash table.
         """
         ...
 
     def ToString(self) -> str:
         """
-        ToString(self: AxisHardwareConnectionProvider) -> str
-            Returns a System.String that represents the current System.Object.
+        ToString(self: AxisHardwareConnectionProvider) -> str
+
+            Returns a System.String that represents the current System.Object.
+
             Returns: A System.String that represents the current System.Object.
         """
         ...
@@ -274,7 +331,8 @@ class AxisHardwareConnectionProvider(IEquatable, IEngineeringObject, IEngineerin
 
 class CamDataFormat(Enum): # skipped bases: <type 'IConvertible'>, <type 'IComparable'>, <type 'IFormattable'>, <type 'object'>
     """
-    Describes the format in which a cam object should be Exportet/Imported
+    Describes the format in which a cam object should be Exportet/Imported
+
     enum CamDataFormat, values: MCD (0), PointList (2), Scout (1)
     """
     MCD: CamDataFormat = ...
@@ -285,7 +343,8 @@ class CamDataFormat(Enum): # skipped bases: <type 'IConvertible'>, <type 'ICompa
 
 class CamDataFormatSeparator(Enum): # skipped bases: <type 'IConvertible'>, <type 'IComparable'>, <type 'IFormattable'>, <type 'object'>
     """
-    Describes a Seperator with which the data should be seperated on Import/Export
+    Describes a Seperator with which the data should be seperated on Import/Export
+
     enum CamDataFormatSeparator, values: Comma (0), Tab (1)
     """
     Comma: CamDataFormatSeparator = ...
@@ -298,7 +357,8 @@ class CamDataSupport(IEquatable, IEngineeringObject, IEngineeringService, IInter
     @property
     def Parent(self) -> IEngineeringObject:
         """
-        EOM parent of this object
+        EOM parent of this object
+
         Get: Parent(self: CamDataSupport) -> IEngineeringObject
         """
         ...
@@ -306,61 +366,80 @@ class CamDataSupport(IEquatable, IEngineeringObject, IEngineeringService, IInter
 
     def GetHashCode(self) -> int:
         """
-        GetHashCode(self: CamDataSupport) -> int
-            Returns a hash code for this instance.
+        GetHashCode(self: CamDataSupport) -> int
+
+            Returns a hash code for this instance.
+
             Returns: A hash code for this instance, suitable for use in hashing algorithms and data structures like a hash table.
         """
         ...
 
-    def LoadCamData(self, sourceFile:FileInfo, separator:CamDataFormatSeparator): # -> 
+    def LoadCamData(self, sourceFile:FileInfo, separator:CamDataFormatSeparator): # ->
         """
-        LoadCamData(self: CamDataSupport, sourceFile: FileInfo, separator: CamDataFormatSeparator)
-            Loads the cam data from the specified file
-            sourceFile: Path to the file that will be loaded
+        LoadCamData(self: CamDataSupport, sourceFile: FileInfo, separator: CamDataFormatSeparator)
+
+            Loads the cam data from the specified file
+
+            sourceFile: Path to the file that will be loaded
+
             separator: Separator to use
         """
         ...
 
-    def LoadCamDataBinary(self, sourceFile:FileInfo): # -> 
+    def LoadCamDataBinary(self, sourceFile:FileInfo): # ->
         """
-        LoadCamDataBinary(self: CamDataSupport, sourceFile: FileInfo)
-            Loads the cam data from the specified binary file
+        LoadCamDataBinary(self: CamDataSupport, sourceFile: FileInfo)
+
+            Loads the cam data from the specified binary file
+
             sourceFile: Path to the file that will be loaded
         """
         ...
 
-    def SaveCamData(self, destinationFile:FileInfo, format:CamDataFormat, separator:CamDataFormatSeparator): # -> 
+    def SaveCamData(self, destinationFile:FileInfo, format:CamDataFormat, separator:CamDataFormatSeparator): # ->
         """
-        SaveCamData(self: CamDataSupport, destinationFile: FileInfo, format: CamDataFormat, separator: CamDataFormatSeparator)
-            Saves the cam data to the specified file in the given format
-            destinationFile: Path to the destination file
-            format: format in which the data should be stored
+        SaveCamData(self: CamDataSupport, destinationFile: FileInfo, format: CamDataFormat, separator: CamDataFormatSeparator)
+
+            Saves the cam data to the specified file in the given format
+
+            destinationFile: Path to the destination file
+
+            format: format in which the data should be stored
+
             separator: Separator to use
         """
         ...
 
-    def SaveCamDataBinary(self, destinationFile:FileInfo): # -> 
+    def SaveCamDataBinary(self, destinationFile:FileInfo): # ->
         """
-        SaveCamDataBinary(self: CamDataSupport, destinationFile: FileInfo)
-            Saves the cam data to the specified file in binary format
+        SaveCamDataBinary(self: CamDataSupport, destinationFile: FileInfo)
+
+            Saves the cam data to the specified file in binary format
+
             destinationFile: Path to the destination file
         """
         ...
 
-    def SaveCamDataPointList(self, destinationFile:FileInfo, separator:CamDataFormatSeparator, samplePoints:int): # -> 
+    def SaveCamDataPointList(self, destinationFile:FileInfo, separator:CamDataFormatSeparator, samplePoints:int): # ->
         """
-        SaveCamDataPointList(self: CamDataSupport, destinationFile: FileInfo, separator: CamDataFormatSeparator, samplePoints: int)
-            Saves the cam data to the specified file as a point list
-            destinationFile: Path to the destination file
-            separator: Separator to use
+        SaveCamDataPointList(self: CamDataSupport, destinationFile: FileInfo, separator: CamDataFormatSeparator, samplePoints: int)
+
+            Saves the cam data to the specified file as a point list
+
+            destinationFile: Path to the destination file
+
+            separator: Separator to use
+
             samplePoints: Number of sample points
         """
         ...
 
     def ToString(self) -> str:
         """
-        ToString(self: CamDataSupport) -> str
-            Returns a System.String that represents the current System.Object.
+        ToString(self: CamDataSupport) -> str
+
+            Returns a System.String that represents the current System.Object.
+
             Returns: A System.String that represents the current System.Object.
         """
         ...
@@ -371,7 +450,8 @@ class CamDataSupport(IEquatable, IEngineeringObject, IEngineeringService, IInter
 
 class ConnectOption(Enum): # skipped bases: <type 'IConvertible'>, <type 'IComparable'>, <type 'IFormattable'>, <type 'object'>
     """
-    Describes additional options for making a connection
+    Describes additional options for making a connection
+
     enum ConnectOption, values: AllowAllModules (1), Default (0)
     """
     AllowAllModules: ConnectOption = ...
@@ -384,7 +464,8 @@ class EncoderHardwareConnectionProvider(IEquatable, IEngineeringObject, IEnginee
     @property
     def Parent(self) -> IEngineeringObject:
         """
-        EOM parent of this object
+        EOM parent of this object
+
         Get: Parent(self: EncoderHardwareConnectionProvider) -> IEngineeringObject
         """
         ...
@@ -392,7 +473,8 @@ class EncoderHardwareConnectionProvider(IEquatable, IEngineeringObject, IEnginee
     @property
     def SensorInterface(self) -> AxisEncoderHardwareConnectionInterface:
         """
-        Provides access to the connections for the sensor interface of the encoder
+        Provides access to the connections for the sensor interface of the encoder
+
         Get: SensorInterface(self: EncoderHardwareConnectionProvider) -> AxisEncoderHardwareConnectionInterface
         """
         ...
@@ -400,16 +482,20 @@ class EncoderHardwareConnectionProvider(IEquatable, IEngineeringObject, IEnginee
 
     def GetHashCode(self) -> int:
         """
-        GetHashCode(self: EncoderHardwareConnectionProvider) -> int
-            Returns a hash code for this instance.
+        GetHashCode(self: EncoderHardwareConnectionProvider) -> int
+
+            Returns a hash code for this instance.
+
             Returns: A hash code for this instance, suitable for use in hashing algorithms and data structures like a hash table.
         """
         ...
 
     def ToString(self) -> str:
         """
-        ToString(self: EncoderHardwareConnectionProvider) -> str
-            Returns a System.String that represents the current System.Object.
+        ToString(self: EncoderHardwareConnectionProvider) -> str
+
+            Returns a System.String that represents the current System.Object.
+
             Returns: A System.String that represents the current System.Object.
         """
         ...
@@ -423,7 +509,8 @@ class MeasuringInputHardwareConnectionProvider(IEquatable, IEngineeringObject, I
     @property
     def Channel(self) -> Channel:
         """
-        Connected Channel
+        Connected Channel
+
         Get: Channel(self: MeasuringInputHardwareConnectionProvider) -> Channel
         """
         ...
@@ -431,7 +518,8 @@ class MeasuringInputHardwareConnectionProvider(IEquatable, IEngineeringObject, I
     @property
     def ChannelIndex(self) -> int:
         """
-        Index of connected channel with respect to InputModule
+        Index of connected channel with respect to InputModule
+
         Get: ChannelIndex(self: MeasuringInputHardwareConnectionProvider) -> int
         """
         ...
@@ -439,15 +527,17 @@ class MeasuringInputHardwareConnectionProvider(IEquatable, IEngineeringObject, I
     @property
     def InputAddress(self) -> int:
         """
-        Raw input bit address
+        Raw input bit address
+
         Get: InputAddress(self: MeasuringInputHardwareConnectionProvider) -> int
         """
         ...
 
     @property
-    def InputModule(self): # -> 
+    def InputModule(self): # ->
         """
-        Connected input (sub) module
+        Connected input (sub) module
+
         Get: InputModule(self: MeasuringInputHardwareConnectionProvider) -> DeviceItem
         """
         ...
@@ -455,7 +545,8 @@ class MeasuringInputHardwareConnectionProvider(IEquatable, IEngineeringObject, I
     @property
     def IsConnected(self) -> bool:
         """
-        Indicates whether the interface is connected
+        Indicates whether the interface is connected
+
         Get: IsConnected(self: MeasuringInputHardwareConnectionProvider) -> bool
         """
         ...
@@ -463,46 +554,61 @@ class MeasuringInputHardwareConnectionProvider(IEquatable, IEngineeringObject, I
     @property
     def Parent(self) -> IEngineeringObject:
         """
-        EOM parent of this object
+        EOM parent of this object
+
         Get: Parent(self: MeasuringInputHardwareConnectionProvider) -> IEngineeringObject
         """
         ...
 
 
-    def Connect(self, *__args:Channel): # -> 
+    def Connect(self, *__args:Channel): # ->
         """
-        Connect(self: MeasuringInputHardwareConnectionProvider, channel: Channel)
-            Connect with a Channel (e.g. of a TechnologyModule)
-            channel: Channel to connect
-        Connect(self: MeasuringInputHardwareConnectionProvider, addressIn: int)
-            Connect specifying the input bit address directly
-            addressIn: Input bit address to connect
-        Connect(self: MeasuringInputHardwareConnectionProvider, moduleIn: DeviceItem, channelIndex: int)
-            Connect with a (sub) module, specifying an additional channel index
-            moduleIn: Module or submodule to connect
+        Connect(self: MeasuringInputHardwareConnectionProvider, channel: Channel)
+
+            Connect with a Channel (e.g. of a TechnologyModule)
+
+            channel: Channel to connect
+
+        Connect(self: MeasuringInputHardwareConnectionProvider, addressIn: int)
+
+            Connect specifying the input bit address directly
+
+            addressIn: Input bit address to connect
+
+        Connect(self: MeasuringInputHardwareConnectionProvider, moduleIn: DeviceItem, channelIndex: int)
+
+            Connect with a (sub) module, specifying an additional channel index
+
+            moduleIn: Module or submodule to connect
+
             channelIndex: Index of connected channel with respect to moduleIn
         """
         ...
 
-    def Disconnect(self): # -> 
+    def Disconnect(self): # ->
         """
-        Disconnect(self: MeasuringInputHardwareConnectionProvider)
+        Disconnect(self: MeasuringInputHardwareConnectionProvider)
+
             Remove an existing connection
         """
         ...
 
     def GetHashCode(self) -> int:
         """
-        GetHashCode(self: MeasuringInputHardwareConnectionProvider) -> int
-            Returns a hash code for this instance.
+        GetHashCode(self: MeasuringInputHardwareConnectionProvider) -> int
+
+            Returns a hash code for this instance.
+
             Returns: A hash code for this instance, suitable for use in hashing algorithms and data structures like a hash table.
         """
         ...
 
     def ToString(self) -> str:
         """
-        ToString(self: MeasuringInputHardwareConnectionProvider) -> str
-            Returns a System.String that represents the current System.Object.
+        ToString(self: MeasuringInputHardwareConnectionProvider) -> str
+
+            Returns a System.String that represents the current System.Object.
+
             Returns: A System.String that represents the current System.Object.
         """
         ...
@@ -516,7 +622,8 @@ class OutputCamHardwareConnectionProvider(IEquatable, IEngineeringObject, IEngin
     @property
     def Channel(self) -> Channel:
         """
-        Connected Channel
+        Connected Channel
+
         Get: Channel(self: OutputCamHardwareConnectionProvider) -> Channel
         """
         ...
@@ -524,7 +631,8 @@ class OutputCamHardwareConnectionProvider(IEquatable, IEngineeringObject, IEngin
     @property
     def IsConnected(self) -> bool:
         """
-        Indicates whether the interface is connected
+        Indicates whether the interface is connected
+
         Get: IsConnected(self: OutputCamHardwareConnectionProvider) -> bool
         """
         ...
@@ -532,7 +640,8 @@ class OutputCamHardwareConnectionProvider(IEquatable, IEngineeringObject, IEngin
     @property
     def OutputAddress(self) -> int:
         """
-        Raw output bit address
+        Raw output bit address
+
         Get: OutputAddress(self: OutputCamHardwareConnectionProvider) -> int
         """
         ...
@@ -540,7 +649,8 @@ class OutputCamHardwareConnectionProvider(IEquatable, IEngineeringObject, IEngin
     @property
     def OutputTag(self) -> PlcTag:
         """
-        Connected tag
+        Connected tag
+
         Get: OutputTag(self: OutputCamHardwareConnectionProvider) -> PlcTag
         """
         ...
@@ -548,45 +658,59 @@ class OutputCamHardwareConnectionProvider(IEquatable, IEngineeringObject, IEngin
     @property
     def Parent(self) -> IEngineeringObject:
         """
-        EOM parent of this object
+        EOM parent of this object
+
         Get: Parent(self: OutputCamHardwareConnectionProvider) -> IEngineeringObject
         """
         ...
 
 
-    def Connect(self, *__args:Channel): # -> 
+    def Connect(self, *__args:Channel): # ->
         """
-        Connect(self: OutputCamHardwareConnectionProvider, channel: Channel)
-            Connect with a Channel (e.g. of a TechnologyModule)
-            channel: Channel to connect
-        Connect(self: OutputCamHardwareConnectionProvider, outputTag: PlcTag)
-            Connect to an output PlcTag
-            outputTag: Output PlcTag to connect
-        Connect(self: OutputCamHardwareConnectionProvider, addressOut: int)
-            Connect specifying the output bit address directly
+        Connect(self: OutputCamHardwareConnectionProvider, channel: Channel)
+
+            Connect with a Channel (e.g. of a TechnologyModule)
+
+            channel: Channel to connect
+
+        Connect(self: OutputCamHardwareConnectionProvider, outputTag: PlcTag)
+
+            Connect to an output PlcTag
+
+            outputTag: Output PlcTag to connect
+
+        Connect(self: OutputCamHardwareConnectionProvider, addressOut: int)
+
+            Connect specifying the output bit address directly
+
             addressOut: Output bit address to connect
         """
         ...
 
-    def Disconnect(self): # -> 
+    def Disconnect(self): # ->
         """
-        Disconnect(self: OutputCamHardwareConnectionProvider)
+        Disconnect(self: OutputCamHardwareConnectionProvider)
+
             Remove an existing connection
         """
         ...
 
     def GetHashCode(self) -> int:
         """
-        GetHashCode(self: OutputCamHardwareConnectionProvider) -> int
-            Returns a hash code for this instance.
+        GetHashCode(self: OutputCamHardwareConnectionProvider) -> int
+
+            Returns a hash code for this instance.
+
             Returns: A hash code for this instance, suitable for use in hashing algorithms and data structures like a hash table.
         """
         ...
 
     def ToString(self) -> str:
         """
-        ToString(self: OutputCamHardwareConnectionProvider) -> str
-            Returns a System.String that represents the current System.Object.
+        ToString(self: OutputCamHardwareConnectionProvider) -> str
+
+            Returns a System.String that represents the current System.Object.
+
             Returns: A System.String that represents the current System.Object.
         """
         ...
@@ -600,7 +724,8 @@ class OutputCamMeasuringInputContainer(IEquatable, IEngineeringObject, IEngineer
     @property
     def MeasuringInputs(self) -> TechnologicalInstanceDBComposition:
         """
-        Contains measuring input TOs
+        Contains measuring input TOs
+
         Get: MeasuringInputs(self: OutputCamMeasuringInputContainer) -> TechnologicalInstanceDBComposition
         """
         ...
@@ -608,7 +733,8 @@ class OutputCamMeasuringInputContainer(IEquatable, IEngineeringObject, IEngineer
     @property
     def OutputCams(self) -> TechnologicalInstanceDBComposition:
         """
-        Contains output cam and cam track TOs
+        Contains output cam and cam track TOs
+
         Get: OutputCams(self: OutputCamMeasuringInputContainer) -> TechnologicalInstanceDBComposition
         """
         ...
@@ -616,7 +742,8 @@ class OutputCamMeasuringInputContainer(IEquatable, IEngineeringObject, IEngineer
     @property
     def Parent(self) -> IEngineeringObject:
         """
-        EOM parent of this object
+        EOM parent of this object
+
         Get: Parent(self: OutputCamMeasuringInputContainer) -> IEngineeringObject
         """
         ...
@@ -624,16 +751,20 @@ class OutputCamMeasuringInputContainer(IEquatable, IEngineeringObject, IEngineer
 
     def GetHashCode(self) -> int:
         """
-        GetHashCode(self: OutputCamMeasuringInputContainer) -> int
-            Returns a hash code for this instance.
+        GetHashCode(self: OutputCamMeasuringInputContainer) -> int
+
+            Returns a hash code for this instance.
+
             Returns: A hash code for this instance, suitable for use in hashing algorithms and data structures like a hash table.
         """
         ...
 
     def ToString(self) -> str:
         """
-        ToString(self: OutputCamMeasuringInputContainer) -> str
-            Returns a System.String that represents the current System.Object.
+        ToString(self: OutputCamMeasuringInputContainer) -> str
+
+            Returns a System.String that represents the current System.Object.
+
             Returns: A System.String that represents the current System.Object.
         """
         ...
@@ -647,7 +778,8 @@ class SynchronousAxisMasterValues(IEquatable, IEngineeringObject, IEngineeringSe
     @property
     def ActualValueCoupling(self) -> TechnologicalInstanceDBAssociation:
         """
-        Master values that are coupled via actual values
+        Master values that are coupled via actual values
+
         Get: ActualValueCoupling(self: SynchronousAxisMasterValues) -> TechnologicalInstanceDBAssociation
         """
         ...
@@ -655,7 +787,8 @@ class SynchronousAxisMasterValues(IEquatable, IEngineeringObject, IEngineeringSe
     @property
     def Parent(self) -> IEngineeringObject:
         """
-        EOM parent of this object
+        EOM parent of this object
+
         Get: Parent(self: SynchronousAxisMasterValues) -> IEngineeringObject
         """
         ...
@@ -663,7 +796,8 @@ class SynchronousAxisMasterValues(IEquatable, IEngineeringObject, IEngineeringSe
     @property
     def SetPointCoupling(self) -> TechnologicalInstanceDBAssociation:
         """
-        Master values that are coupled via set points
+        Master values that are coupled via set points
+
         Get: SetPointCoupling(self: SynchronousAxisMasterValues) -> TechnologicalInstanceDBAssociation
         """
         ...
@@ -671,16 +805,20 @@ class SynchronousAxisMasterValues(IEquatable, IEngineeringObject, IEngineeringSe
 
     def GetHashCode(self) -> int:
         """
-        GetHashCode(self: SynchronousAxisMasterValues) -> int
-            Returns a hash code for this instance.
+        GetHashCode(self: SynchronousAxisMasterValues) -> int
+
+            Returns a hash code for this instance.
+
             Returns: A hash code for this instance, suitable for use in hashing algorithms and data structures like a hash table.
         """
         ...
 
     def ToString(self) -> str:
         """
-        ToString(self: SynchronousAxisMasterValues) -> str
-            Returns a System.String that represents the current System.Object.
+        ToString(self: SynchronousAxisMasterValues) -> str
+
+            Returns a System.String that represents the current System.Object.
+
             Returns: A System.String that represents the current System.Object.
         """
         ...
@@ -694,7 +832,8 @@ class TorqueHardwareConnectionInterface(IEquatable, IEngineeringObject, IInterna
     @property
     def ConnectOption(self) -> ConnectOption:
         """
-        ConnectOption that has been set when the connection was made
+        ConnectOption that has been set when the connection was made
+
         Get: ConnectOption(self: TorqueHardwareConnectionInterface) -> ConnectOption
         """
         ...
@@ -702,23 +841,26 @@ class TorqueHardwareConnectionInterface(IEquatable, IEngineeringObject, IInterna
     @property
     def InputAddress(self) -> int:
         """
-        Raw input bit address
+        Raw input bit address
+
         Get: InputAddress(self: TorqueHardwareConnectionInterface) -> int
         """
         ...
 
     @property
-    def InputModule(self): # -> 
+    def InputModule(self): # ->
         """
-        Connected input (sub) module
+        Connected input (sub) module
+
         Get: InputModule(self: TorqueHardwareConnectionInterface) -> DeviceItem
         """
         ...
 
     @property
-    def InputOutputModule(self): # -> 
+    def InputOutputModule(self): # ->
         """
-        Connected mixed (sub) module that contains input and output addresses
+        Connected mixed (sub) module that contains input and output addresses
+
         Get: InputOutputModule(self: TorqueHardwareConnectionInterface) -> DeviceItem
         """
         ...
@@ -726,7 +868,8 @@ class TorqueHardwareConnectionInterface(IEquatable, IEngineeringObject, IInterna
     @property
     def IsConnected(self) -> bool:
         """
-        Indicates whether the interface is connected
+        Indicates whether the interface is connected
+
         Get: IsConnected(self: TorqueHardwareConnectionInterface) -> bool
         """
         ...
@@ -734,15 +877,17 @@ class TorqueHardwareConnectionInterface(IEquatable, IEngineeringObject, IInterna
     @property
     def OutputAddress(self) -> int:
         """
-        Raw output bit address
+        Raw output bit address
+
         Get: OutputAddress(self: TorqueHardwareConnectionInterface) -> int
         """
         ...
 
     @property
-    def OutputModule(self): # -> 
+    def OutputModule(self): # ->
         """
-        Connected output (sub) module
+        Connected output (sub) module
+
         Get: OutputModule(self: TorqueHardwareConnectionInterface) -> DeviceItem
         """
         ...
@@ -750,7 +895,8 @@ class TorqueHardwareConnectionInterface(IEquatable, IEngineeringObject, IInterna
     @property
     def Parent(self) -> IEngineeringObject:
         """
-        EOM parent of this object
+        EOM parent of this object
+
         Get: Parent(self: TorqueHardwareConnectionInterface) -> IEngineeringObject
         """
         ...
@@ -758,61 +904,84 @@ class TorqueHardwareConnectionInterface(IEquatable, IEngineeringObject, IInterna
     @property
     def PathToDBMember(self) -> str:
         """
-        Path to connected DB member
+        Path to connected DB member
+
         Get: PathToDBMember(self: TorqueHardwareConnectionInterface) -> str
         """
         ...
 
 
-    def Connect(self, *__args:DeviceItem): # -> 
+    def Connect(self, *__args:DeviceItem): # ->
         """
-        Connect(self: TorqueHardwareConnectionInterface, moduleInOut: DeviceItem)
-            Connect with a mixed (sub) module that contains input and output addresses
-            moduleInOut: Module or submodule that contains input and output addresses
-        Connect(self: TorqueHardwareConnectionInterface, pathToDBMember: str)
-            Connect to DB member
-            pathToDBMember: Path to the DB member
-        Connect(self: TorqueHardwareConnectionInterface, moduleIn: DeviceItem, moduleOut: DeviceItem)
-            Connect with separate (sub) modules for inputs and outputs, specifying an additional ConnectOption
-            moduleIn: Module or submodule that contains the input address
-            moduleOut: Module or submodule that contains the output address
-        Connect(self: TorqueHardwareConnectionInterface, moduleIn: DeviceItem, moduleOut: DeviceItem, connectOption: ConnectOption)
-            Connect with separate (sub) modules for inputs and outputs, specifying an additional ConnectOption
-            moduleIn: Module or submodule that contains the input address
-            moduleOut: Module or submodule that contains the output address
-            connectOption: Additional option for making the connection
-        Connect(self: TorqueHardwareConnectionInterface, addressIn: int, addressOut: int, connectOption: ConnectOption)
-            Connect specifying input and output bit addresses directly
-            addressIn: Input bit address to connect
-            addressOut: Output bit address to connect
+        Connect(self: TorqueHardwareConnectionInterface, moduleInOut: DeviceItem)
+
+            Connect with a mixed (sub) module that contains input and output addresses
+
+            moduleInOut: Module or submodule that contains input and output addresses
+
+        Connect(self: TorqueHardwareConnectionInterface, pathToDBMember: str)
+
+            Connect to DB member
+
+            pathToDBMember: Path to the DB member
+
+        Connect(self: TorqueHardwareConnectionInterface, moduleIn: DeviceItem, moduleOut: DeviceItem)
+
+            Connect with separate (sub) modules for inputs and outputs, specifying an additional ConnectOption
+
+            moduleIn: Module or submodule that contains the input address
+
+            moduleOut: Module or submodule that contains the output address
+
+        Connect(self: TorqueHardwareConnectionInterface, moduleIn: DeviceItem, moduleOut: DeviceItem, connectOption: ConnectOption)
+
+            Connect with separate (sub) modules for inputs and outputs, specifying an additional ConnectOption
+
+            moduleIn: Module or submodule that contains the input address
+
+            moduleOut: Module or submodule that contains the output address
+
+            connectOption: Additional option for making the connection
+
+        Connect(self: TorqueHardwareConnectionInterface, addressIn: int, addressOut: int, connectOption: ConnectOption)
+
+            Connect specifying input and output bit addresses directly
+
+            addressIn: Input bit address to connect
+
+            addressOut: Output bit address to connect
+
             connectOption: Additional option for making the connection
         """
         ...
 
-    def Disconnect(self): # -> 
+    def Disconnect(self): # ->
         """
-        Disconnect(self: TorqueHardwareConnectionInterface)
+        Disconnect(self: TorqueHardwareConnectionInterface)
+
             Remove an existing connection
         """
         ...
 
     def GetHashCode(self) -> int:
         """
-        GetHashCode(self: TorqueHardwareConnectionInterface) -> int
-            Returns a hash code for this instance.
+        GetHashCode(self: TorqueHardwareConnectionInterface) -> int
+
+            Returns a hash code for this instance.
+
             Returns: A hash code for this instance, suitable for use in hashing algorithms and data structures like a hash table.
         """
         ...
 
     def ToString(self) -> str:
         """
-        ToString(self: TorqueHardwareConnectionInterface) -> str
-            Returns a System.String that represents the current System.Object.
+        ToString(self: TorqueHardwareConnectionInterface) -> str
+
+            Returns a System.String that represents the current System.Object.
+
             Returns: A System.String that represents the current System.Object.
         """
         ...
 
     def __ne__(self, *args): #cannot find CLR method
         ...
-
-

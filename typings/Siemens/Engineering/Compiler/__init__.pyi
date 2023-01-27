@@ -4,7 +4,7 @@
 # by generator 1.145
 """ no doc """
 from __future__ import annotations
-from Siemens.Engineering import (IEngineeringComposition, IEngineeringObject, 
+from Siemens.Engineering import (IEngineeringComposition, IEngineeringObject,
     IEngineeringService)
 
 from System import DateTime, Enum, IEquatable
@@ -12,6 +12,8 @@ from System import DateTime, Enum, IEquatable
 """The following names are not found in the module: (
     IInternalCompositionAccess, IInternalObjectAccess, field#)
 """
+
+from Siemens import IInternalCompositionAccess, IInternalObjectAccess
 
 # no functions
 # classes
@@ -21,7 +23,8 @@ class CompilerResult(IEquatable, IEngineeringObject, IInternalObjectAccess): # s
     @property
     def ErrorCount(self) -> int:
         """
-        Number of errors in a given compile scenario
+        Number of errors in a given compile scenario
+
         Get: ErrorCount(self: CompilerResult) -> int
         """
         ...
@@ -29,7 +32,8 @@ class CompilerResult(IEquatable, IEngineeringObject, IInternalObjectAccess): # s
     @property
     def Messages(self) -> CompilerResultMessageComposition:
         """
-        Collection of output messages for the result of a given compile scenario
+        Collection of output messages for the result of a given compile scenario
+
         Get: Messages(self: CompilerResult) -> CompilerResultMessageComposition
         """
         ...
@@ -37,7 +41,8 @@ class CompilerResult(IEquatable, IEngineeringObject, IInternalObjectAccess): # s
     @property
     def Parent(self) -> IEngineeringObject:
         """
-        EOM parent of this object
+        EOM parent of this object
+
         Get: Parent(self: CompilerResult) -> IEngineeringObject
         """
         ...
@@ -45,7 +50,8 @@ class CompilerResult(IEquatable, IEngineeringObject, IInternalObjectAccess): # s
     @property
     def State(self) -> CompilerResultState:
         """
-        Final state of a given compile scenario
+        Final state of a given compile scenario
+
         Get: State(self: CompilerResult) -> CompilerResultState
         """
         ...
@@ -53,7 +59,8 @@ class CompilerResult(IEquatable, IEngineeringObject, IInternalObjectAccess): # s
     @property
     def WarningCount(self) -> int:
         """
-        Number of warnings in a given compile scenario
+        Number of warnings in a given compile scenario
+
         Get: WarningCount(self: CompilerResult) -> int
         """
         ...
@@ -61,16 +68,20 @@ class CompilerResult(IEquatable, IEngineeringObject, IInternalObjectAccess): # s
 
     def GetHashCode(self) -> int:
         """
-        GetHashCode(self: CompilerResult) -> int
-            Returns a hash code for this instance.
+        GetHashCode(self: CompilerResult) -> int
+
+            Returns a hash code for this instance.
+
             Returns: A hash code for this instance, suitable for use in hashing algorithms and data structures like a hash table.
         """
         ...
 
     def ToString(self) -> str:
         """
-        ToString(self: CompilerResult) -> str
-            Returns a System.String that represents the current System.Object.
+        ToString(self: CompilerResult) -> str
+
+            Returns a System.String that represents the current System.Object.
+
             Returns: A System.String that represents the current System.Object.
         """
         ...
@@ -84,7 +95,8 @@ class CompilerResultMessage(IEquatable, IEngineeringObject, IInternalObjectAcces
     @property
     def DateTime(self) -> DateTime:
         """
-        Date and time in a compiler message
+        Date and time in a compiler message
+
         Get: DateTime(self: CompilerResultMessage) -> DateTime
         """
         ...
@@ -92,7 +104,8 @@ class CompilerResultMessage(IEquatable, IEngineeringObject, IInternalObjectAcces
     @property
     def Description(self) -> str:
         """
-        Description or content of a compiler message
+        Description or content of a compiler message
+
         Get: Description(self: CompilerResultMessage) -> str
         """
         ...
@@ -100,7 +113,8 @@ class CompilerResultMessage(IEquatable, IEngineeringObject, IInternalObjectAcces
     @property
     def ErrorCount(self) -> int:
         """
-        Number of errors in a compiler message
+        Number of errors in a compiler message
+
         Get: ErrorCount(self: CompilerResultMessage) -> int
         """
         ...
@@ -108,7 +122,8 @@ class CompilerResultMessage(IEquatable, IEngineeringObject, IInternalObjectAcces
     @property
     def Messages(self) -> CompilerResultMessageComposition:
         """
-        Access to the compiler messages for a given compile scenario
+        Access to the compiler messages for a given compile scenario
+
         Get: Messages(self: CompilerResultMessage) -> CompilerResultMessageComposition
         """
         ...
@@ -116,7 +131,8 @@ class CompilerResultMessage(IEquatable, IEngineeringObject, IInternalObjectAcces
     @property
     def Parent(self) -> IEngineeringObject:
         """
-        EOM parent of this object
+        EOM parent of this object
+
         Get: Parent(self: CompilerResultMessage) -> IEngineeringObject
         """
         ...
@@ -124,7 +140,8 @@ class CompilerResultMessage(IEquatable, IEngineeringObject, IInternalObjectAcces
     @property
     def Path(self) -> str:
         """
-        Path to a compiler message
+        Path to a compiler message
+
         Get: Path(self: CompilerResultMessage) -> str
         """
         ...
@@ -132,7 +149,8 @@ class CompilerResultMessage(IEquatable, IEngineeringObject, IInternalObjectAcces
     @property
     def State(self) -> CompilerResultState:
         """
-        Final state in a compiler message
+        Final state in a compiler message
+
         Get: State(self: CompilerResultMessage) -> CompilerResultState
         """
         ...
@@ -140,7 +158,8 @@ class CompilerResultMessage(IEquatable, IEngineeringObject, IInternalObjectAcces
     @property
     def WarningCount(self) -> int:
         """
-        Number of warnings in a compiler message
+        Number of warnings in a compiler message
+
         Get: WarningCount(self: CompilerResultMessage) -> int
         """
         ...
@@ -148,16 +167,20 @@ class CompilerResultMessage(IEquatable, IEngineeringObject, IInternalObjectAcces
 
     def GetHashCode(self) -> int:
         """
-        GetHashCode(self: CompilerResultMessage) -> int
-            Returns a hash code for this instance.
+        GetHashCode(self: CompilerResultMessage) -> int
+
+            Returns a hash code for this instance.
+
             Returns: A hash code for this instance, suitable for use in hashing algorithms and data structures like a hash table.
         """
         ...
 
     def ToString(self) -> str:
         """
-        ToString(self: CompilerResultMessage) -> str
-            Returns a System.String that represents the current System.Object.
+        ToString(self: CompilerResultMessage) -> str
+
+            Returns a System.String that represents the current System.Object.
+
             Returns: A System.String that represents the current System.Object.
         """
         ...
@@ -171,7 +194,8 @@ class CompilerResultMessageComposition(IInternalCompositionAccess, IEngineeringC
     @property
     def Parent(self) -> IEngineeringObject:
         """
-        Gets the parent.
+        Gets the parent.
+
         Get: Parent(self: CompilerResultMessageComposition) -> IEngineeringObject
         """
         ...
@@ -179,16 +203,20 @@ class CompilerResultMessageComposition(IInternalCompositionAccess, IEngineeringC
 
     def GetHashCode(self) -> int:
         """
-        GetHashCode(self: CompilerResultMessageComposition) -> int
-            Returns a hash code for this instance.
+        GetHashCode(self: CompilerResultMessageComposition) -> int
+
+            Returns a hash code for this instance.
+
             Returns: A hash code for this instance, suitable for use in hashing algorithms and data structures like a hash table.
         """
         ...
 
     def ToString(self) -> str:
         """
-        ToString(self: CompilerResultMessageComposition) -> str
-            Returns a System.String that represents the current System.Object.
+        ToString(self: CompilerResultMessageComposition) -> str
+
+            Returns a System.String that represents the current System.Object.
+
             Returns: A System.String that represents the current System.Object.
         """
         ...
@@ -203,7 +231,8 @@ class CompilerResultMessageComposition(IInternalCompositionAccess, IEngineeringC
 
 class CompilerResultState(Enum): # skipped bases: <type 'IConvertible'>, <type 'IComparable'>, <type 'IFormattable'>, <type 'object'>
     """
-    The list of possible compiler result options
+    The list of possible compiler result options
+
     enum CompilerResultState, values: Error (3), Information (1), Success (0), Warning (2)
     """
     Error: CompilerResultState = ...
@@ -217,10 +246,10 @@ class ICompilable(IEngineeringService): # skipped bases: <type 'object'>
     """ An interface indication that the item supports compilation """
     def Compile(self) -> CompilerResult:
         """
-        Compile(self: ICompilable) -> CompilerResult
-            Compiles the item
+        Compile(self: ICompilable) -> CompilerResult
+
+            Compiles the item
+
             Returns: Siemens.Engineering.Compiler.CompilerResult
         """
         ...
-
-

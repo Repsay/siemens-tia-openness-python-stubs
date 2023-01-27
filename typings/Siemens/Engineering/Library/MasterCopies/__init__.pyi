@@ -4,7 +4,7 @@
 # by generator 1.145
 """ no doc """
 from __future__ import annotations
-from Siemens.Engineering import (IEngineeringAssociation, 
+from Siemens.Engineering import (IEngineeringAssociation,
     IEngineeringComposition, IEngineeringObject)
 
 from Siemens.Engineering.SW import ISoftwareCompareTarget
@@ -12,9 +12,11 @@ from Siemens.Engineering.SW import ISoftwareCompareTarget
 from System import DateTime, Enum, IEquatable, Type
 
 """The following names are not found in the module: (
-    IInternalAssociationAccess, IInternalCompositionAccess, 
+    IInternalAssociationAccess, IInternalCompositionAccess,
     IInternalObjectAccess, field#)
 """
+
+from Siemens import IInternalAssociationAccess, IInternalCompositionAccess, IInternalObjectAccess
 
 # no functions
 # classes
@@ -32,7 +34,8 @@ class MasterCopy(IEquatable, IEngineeringObject, ISoftwareCompareTarget, IIntern
     @property
     def Author(self) -> str:
         """
-        Author of the master copy
+        Author of the master copy
+
         Get: Author(self: MasterCopy) -> str
         """
         ...
@@ -40,7 +43,8 @@ class MasterCopy(IEquatable, IEngineeringObject, ISoftwareCompareTarget, IIntern
     @property
     def ContentDescriptions(self) -> MasterCopyContentDescriptionComposition:
         """
-        Content descriptions
+        Content descriptions
+
         Get: ContentDescriptions(self: MasterCopy) -> MasterCopyContentDescriptionComposition
         """
         ...
@@ -48,7 +52,8 @@ class MasterCopy(IEquatable, IEngineeringObject, ISoftwareCompareTarget, IIntern
     @property
     def CreationDate(self) -> DateTime:
         """
-        Creation date of this master copy
+        Creation date of this master copy
+
         Get: CreationDate(self: MasterCopy) -> DateTime
         """
         ...
@@ -56,8 +61,10 @@ class MasterCopy(IEquatable, IEngineeringObject, ISoftwareCompareTarget, IIntern
     @property
     def Name(self) -> str:
         """
-        The name of the MasterCopy
-        Get: Name(self: MasterCopy) -> str
+        The name of the MasterCopy
+
+        Get: Name(self: MasterCopy) -> str
+
         Set: Name(self: MasterCopy) = value
         """
         ...
@@ -65,31 +72,37 @@ class MasterCopy(IEquatable, IEngineeringObject, ISoftwareCompareTarget, IIntern
     @property
     def Parent(self) -> IEngineeringObject:
         """
-        EOM parent of this object
+        EOM parent of this object
+
         Get: Parent(self: MasterCopy) -> IEngineeringObject
         """
         ...
 
 
-    def Delete(self): # -> 
+    def Delete(self): # ->
         """
-        Delete(self: MasterCopy)
+        Delete(self: MasterCopy)
+
             Deletes this instance.
         """
         ...
 
     def GetHashCode(self) -> int:
         """
-        GetHashCode(self: MasterCopy) -> int
-            Returns a hash code for this instance.
+        GetHashCode(self: MasterCopy) -> int
+
+            Returns a hash code for this instance.
+
             Returns: A hash code for this instance, suitable for use in hashing algorithms and data structures like a hash table.
         """
         ...
 
     def ToString(self) -> str:
         """
-        ToString(self: MasterCopy) -> str
-            Returns a System.String that represents the current System.Object.
+        ToString(self: MasterCopy) -> str
+
+            Returns a System.String that represents the current System.Object.
+
             Returns: A System.String that represents the current System.Object.
         """
         ...
@@ -103,7 +116,8 @@ class MasterCopyAssociation(IEquatable, IEngineeringAssociation, IInternalAssoci
     @property
     def Parent(self) -> IEngineeringObject:
         """
-        Gets the parent..
+        Gets the parent..
+
         Get: Parent(self: MasterCopyAssociation) -> IEngineeringObject
         """
         ...
@@ -111,16 +125,20 @@ class MasterCopyAssociation(IEquatable, IEngineeringAssociation, IInternalAssoci
 
     def GetHashCode(self) -> int:
         """
-        GetHashCode(self: MasterCopyAssociation) -> int
-            Returns a hash code for this instance.
+        GetHashCode(self: MasterCopyAssociation) -> int
+
+            Returns a hash code for this instance.
+
             Returns: A hash code for this instance, suitable for use in hashing algorithms and data structures like a hash table.
         """
         ...
 
     def ToString(self) -> str:
         """
-        ToString(self: MasterCopyAssociation) -> str
-            Returns a System.String that represents the current System.Object.
+        ToString(self: MasterCopyAssociation) -> str
+
+            Returns a System.String that represents the current System.Object.
+
             Returns: A System.String that represents the current System.Object.
         """
         ...
@@ -138,7 +156,8 @@ class MasterCopyComposition(IInternalCompositionAccess, IEngineeringComposition,
     @property
     def Parent(self) -> IEngineeringObject:
         """
-        Gets the parent.
+        Gets the parent.
+
         Get: Parent(self: MasterCopyComposition) -> IEngineeringObject
         """
         ...
@@ -146,34 +165,44 @@ class MasterCopyComposition(IInternalCompositionAccess, IEngineeringComposition,
 
     def CreateFrom(self, sourceMasterCopy:MasterCopy) -> MasterCopy:
         """
-        CreateFrom(self: MasterCopyComposition, sourceMasterCopy: MasterCopy) -> MasterCopy
-            Create from given Master Copy
-            sourceMasterCopy: Source MasterCopy
+        CreateFrom(self: MasterCopyComposition, sourceMasterCopy: MasterCopy) -> MasterCopy
+
+            Create from given Master Copy
+
+            sourceMasterCopy: Source MasterCopy
+
             Returns: Siemens.Engineering.Library.MasterCopies.MasterCopy
         """
         ...
 
     def Find(self, name:str) -> MasterCopy:
         """
-        Find(self: MasterCopyComposition, name: str) -> MasterCopy
-            Finds a given MasterCopy
-            name: Name to find
+        Find(self: MasterCopyComposition, name: str) -> MasterCopy
+
+            Finds a given MasterCopy
+
+            name: Name to find
+
             Returns: Siemens.Engineering.Library.MasterCopies.MasterCopy
         """
         ...
 
     def GetHashCode(self) -> int:
         """
-        GetHashCode(self: MasterCopyComposition) -> int
-            Returns a hash code for this instance.
+        GetHashCode(self: MasterCopyComposition) -> int
+
+            Returns a hash code for this instance.
+
             Returns: A hash code for this instance, suitable for use in hashing algorithms and data structures like a hash table.
         """
         ...
 
     def ToString(self) -> str:
         """
-        ToString(self: MasterCopyComposition) -> str
-            Returns a System.String that represents the current System.Object.
+        ToString(self: MasterCopyComposition) -> str
+
+            Returns a System.String that represents the current System.Object.
+
             Returns: A System.String that represents the current System.Object.
         """
         ...
@@ -191,7 +220,8 @@ class MasterCopyContentDescription(IEquatable, IEngineeringObject, IInternalObje
     @property
     def ContentName(self) -> str:
         """
-        name of master coy content
+        name of master coy content
+
         Get: ContentName(self: MasterCopyContentDescription) -> str
         """
         ...
@@ -199,7 +229,8 @@ class MasterCopyContentDescription(IEquatable, IEngineeringObject, IInternalObje
     @property
     def ContentType(self) -> Type:
         """
-        Type of master copy content
+        Type of master copy content
+
         Get: ContentType(self: MasterCopyContentDescription) -> Type
         """
         ...
@@ -207,7 +238,8 @@ class MasterCopyContentDescription(IEquatable, IEngineeringObject, IInternalObje
     @property
     def Parent(self) -> IEngineeringObject:
         """
-        EOM parent of this object
+        EOM parent of this object
+
         Get: Parent(self: MasterCopyContentDescription) -> IEngineeringObject
         """
         ...
@@ -215,16 +247,20 @@ class MasterCopyContentDescription(IEquatable, IEngineeringObject, IInternalObje
 
     def GetHashCode(self) -> int:
         """
-        GetHashCode(self: MasterCopyContentDescription) -> int
-            Returns a hash code for this instance.
+        GetHashCode(self: MasterCopyContentDescription) -> int
+
+            Returns a hash code for this instance.
+
             Returns: A hash code for this instance, suitable for use in hashing algorithms and data structures like a hash table.
         """
         ...
 
     def ToString(self) -> str:
         """
-        ToString(self: MasterCopyContentDescription) -> str
-            Returns a System.String that represents the current System.Object.
+        ToString(self: MasterCopyContentDescription) -> str
+
+            Returns a System.String that represents the current System.Object.
+
             Returns: A System.String that represents the current System.Object.
         """
         ...
@@ -238,7 +274,8 @@ class MasterCopyContentDescriptionComposition(IInternalCompositionAccess, IEngin
     @property
     def Parent(self) -> IEngineeringObject:
         """
-        Gets the parent.
+        Gets the parent.
+
         Get: Parent(self: MasterCopyContentDescriptionComposition) -> IEngineeringObject
         """
         ...
@@ -246,16 +283,20 @@ class MasterCopyContentDescriptionComposition(IInternalCompositionAccess, IEngin
 
     def GetHashCode(self) -> int:
         """
-        GetHashCode(self: MasterCopyContentDescriptionComposition) -> int
-            Returns a hash code for this instance.
+        GetHashCode(self: MasterCopyContentDescriptionComposition) -> int
+
+            Returns a hash code for this instance.
+
             Returns: A hash code for this instance, suitable for use in hashing algorithms and data structures like a hash table.
         """
         ...
 
     def ToString(self) -> str:
         """
-        ToString(self: MasterCopyContentDescriptionComposition) -> str
-            Returns a System.String that represents the current System.Object.
+        ToString(self: MasterCopyContentDescriptionComposition) -> str
+
+            Returns a System.String that represents the current System.Object.
+
             Returns: A System.String that represents the current System.Object.
         """
         ...
@@ -273,7 +314,8 @@ class MasterCopyFolder(IEquatable, IEngineeringObject, IInternalObjectAccess): #
     @property
     def Folders(self) -> MasterCopyUserFolderComposition:
         """
-        Composition of MasterCopy user folders
+        Composition of MasterCopy user folders
+
         Get: Folders(self: MasterCopyFolder) -> MasterCopyUserFolderComposition
         """
         ...
@@ -281,7 +323,8 @@ class MasterCopyFolder(IEquatable, IEngineeringObject, IInternalObjectAccess): #
     @property
     def MasterCopies(self) -> MasterCopyComposition:
         """
-        Composition of MasterCopies
+        Composition of MasterCopies
+
         Get: MasterCopies(self: MasterCopyFolder) -> MasterCopyComposition
         """
         ...
@@ -289,7 +332,8 @@ class MasterCopyFolder(IEquatable, IEngineeringObject, IInternalObjectAccess): #
     @property
     def Name(self) -> str:
         """
-        The name of the MasterCopy folder
+        The name of the MasterCopy folder
+
         Get: Name(self: MasterCopyFolder) -> str
         """
         ...
@@ -297,7 +341,8 @@ class MasterCopyFolder(IEquatable, IEngineeringObject, IInternalObjectAccess): #
     @property
     def Parent(self) -> IEngineeringObject:
         """
-        EOM parent of this object
+        EOM parent of this object
+
         Get: Parent(self: MasterCopyFolder) -> IEngineeringObject
         """
         ...
@@ -305,16 +350,20 @@ class MasterCopyFolder(IEquatable, IEngineeringObject, IInternalObjectAccess): #
 
     def GetHashCode(self) -> int:
         """
-        GetHashCode(self: MasterCopyFolder) -> int
-            Returns a hash code for this instance.
+        GetHashCode(self: MasterCopyFolder) -> int
+
+            Returns a hash code for this instance.
+
             Returns: A hash code for this instance, suitable for use in hashing algorithms and data structures like a hash table.
         """
         ...
 
     def ToString(self) -> str:
         """
-        ToString(self: MasterCopyFolder) -> str
-            Returns a System.String that represents the current System.Object.
+        ToString(self: MasterCopyFolder) -> str
+
+            Returns a System.String that represents the current System.Object.
+
             Returns: A System.String that represents the current System.Object.
         """
         ...
@@ -325,7 +374,8 @@ class MasterCopyFolder(IEquatable, IEngineeringObject, IInternalObjectAccess): #
 
 class MasterCopyMode(Enum): # skipped bases: <type 'IConvertible'>, <type 'IComparable'>, <type 'IFormattable'>, <type 'object'>
     """
-    The list of possible scenarios supported by master copy 'copy' action parameterization
+    The list of possible scenarios supported by master copy 'copy' action parameterization
+
     enum MasterCopyMode, values: Rename (1), Replace (2), ThrowIfExists (0)
     """
     Rename: MasterCopyMode = ...
@@ -340,9 +390,10 @@ class MasterCopySystemFolder(MasterCopyFolder): # skipped bases: <type 'IInterna
 
 class MasterCopyUserFolder(MasterCopyFolder): # skipped bases: <type 'IInternalInstanceAccess'>, <type 'IEngineeringInstance'>, <type 'IEngineeringObject'>, <type 'IInternalObjectAccess'>, <type 'IEquatable[object]'>, <type 'IInternalBaseAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'object'>
     """ User folder containing Master Copies & Master Copy folders """
-    def Delete(self): # -> 
+    def Delete(self): # ->
         """
-        Delete(self: MasterCopyUserFolder)
+        Delete(self: MasterCopyUserFolder)
+
             Deletes this instance.
         """
         ...
@@ -353,7 +404,8 @@ class MasterCopyUserFolderComposition(IInternalCompositionAccess, IEngineeringCo
     @property
     def Parent(self) -> IEngineeringObject:
         """
-        Gets the parent.
+        Gets the parent.
+
         Get: Parent(self: MasterCopyUserFolderComposition) -> IEngineeringObject
         """
         ...
@@ -361,25 +413,32 @@ class MasterCopyUserFolderComposition(IInternalCompositionAccess, IEngineeringCo
 
     def Find(self, name:str) -> MasterCopyUserFolder:
         """
-        Find(self: MasterCopyUserFolderComposition, name: str) -> MasterCopyUserFolder
-            Finds a given MasterCopy user folder
-            name: Name to find
+        Find(self: MasterCopyUserFolderComposition, name: str) -> MasterCopyUserFolder
+
+            Finds a given MasterCopy user folder
+
+            name: Name to find
+
             Returns: Siemens.Engineering.Library.MasterCopies.MasterCopyUserFolder
         """
         ...
 
     def GetHashCode(self) -> int:
         """
-        GetHashCode(self: MasterCopyUserFolderComposition) -> int
-            Returns a hash code for this instance.
+        GetHashCode(self: MasterCopyUserFolderComposition) -> int
+
+            Returns a hash code for this instance.
+
             Returns: A hash code for this instance, suitable for use in hashing algorithms and data structures like a hash table.
         """
         ...
 
     def ToString(self) -> str:
         """
-        ToString(self: MasterCopyUserFolderComposition) -> str
-            Returns a System.String that represents the current System.Object.
+        ToString(self: MasterCopyUserFolderComposition) -> str
+
+            Returns a System.String that represents the current System.Object.
+
             Returns: A System.String that represents the current System.Object.
         """
         ...
@@ -390,5 +449,3 @@ class MasterCopyUserFolderComposition(IInternalCompositionAccess, IEngineeringCo
 
     def __ne__(self, *args): #cannot find CLR method
         ...
-
-

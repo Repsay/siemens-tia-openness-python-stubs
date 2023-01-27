@@ -4,10 +4,10 @@
 # by generator 1.145
 """ no doc """
 from __future__ import annotations
-from Siemens.Engineering import (ExportOptions, IEngineeringComposition, 
+from Siemens.Engineering import (ExportOptions, IEngineeringComposition,
     IEngineeringObject, IEngineeringServiceProvider, ImportOptions)
 
-from Siemens.Engineering.Library.MasterCopies import (IMasterCopySource, 
+from Siemens.Engineering.Library.MasterCopies import (IMasterCopySource,
     IMasterCopyTarget, MasterCopy)
 
 from Siemens.Engineering.Library.Types import (
@@ -23,6 +23,8 @@ from System.IO import FileInfo
     IInternalCompositionAccess, IInternalObjectAccess, field#)
 """
 
+from Siemens import IInternalCompositionAccess, IInternalObjectAccess
+
 # no functions
 # classes
 
@@ -31,7 +33,8 @@ class Screen(IEquatable, IEngineeringObject, IEngineeringServiceProvider, IMaste
     @property
     def Name(self) -> str:
         """
-        The name of the screen
+        The name of the screen
+
         Get: Name(self: Screen) -> str
         """
         ...
@@ -39,40 +42,49 @@ class Screen(IEquatable, IEngineeringObject, IEngineeringServiceProvider, IMaste
     @property
     def Parent(self) -> IEngineeringObject:
         """
-        EOM parent of this object
+        EOM parent of this object
+
         Get: Parent(self: Screen) -> IEngineeringObject
         """
         ...
 
 
-    def Delete(self): # -> 
+    def Delete(self): # ->
         """
-        Delete(self: Screen)
+        Delete(self: Screen)
+
             Deletes this instance.
         """
         ...
 
-    def Export(self, path:FileInfo, exportOptions:ExportOptions): # -> 
+    def Export(self, path:FileInfo, exportOptions:ExportOptions): # ->
         """
-        Export(self: Screen, path: FileInfo, exportOptions: ExportOptions)
-            Simatic ML export of a screen
-            path: Path to the Simatic ML file
+        Export(self: Screen, path: FileInfo, exportOptions: ExportOptions)
+
+            Simatic ML export of a screen
+
+            path: Path to the Simatic ML file
+
             exportOptions: Option to use for export (default, readonly, etc.)
         """
         ...
 
     def GetHashCode(self) -> int:
         """
-        GetHashCode(self: Screen) -> int
-            Returns a hash code for this instance.
+        GetHashCode(self: Screen) -> int
+
+            Returns a hash code for this instance.
+
             Returns: A hash code for this instance, suitable for use in hashing algorithms and data structures like a hash table.
         """
         ...
 
     def ToString(self) -> str:
         """
-        ToString(self: Screen) -> str
-            Returns a System.String that represents the current System.Object.
+        ToString(self: Screen) -> str
+
+            Returns a System.String that represents the current System.Object.
+
             Returns: A System.String that represents the current System.Object.
         """
         ...
@@ -86,7 +98,8 @@ class ScreenComposition(IInternalCompositionAccess, IEngineeringComposition, IEq
     @property
     def Parent(self) -> IEngineeringObject:
         """
-        Gets the parent.
+        Gets the parent.
+
         Get: Parent(self: ScreenComposition) -> IEngineeringObject
         """
         ...
@@ -94,48 +107,66 @@ class ScreenComposition(IInternalCompositionAccess, IEngineeringComposition, IEq
 
     def CreateFrom(self, *__args:ScreenLibraryTypeVersion) -> Screen:
         """
-        CreateFrom(self: ScreenComposition, libraryTypeVersion: ScreenLibraryTypeVersion) -> Screen
-            Create screen from type version
-            libraryTypeVersion: screen version
-            Returns: Siemens.Engineering.Hmi.Screen.Screen
-        CreateFrom(self: ScreenComposition, sourceMasterCopy: MasterCopy) -> Screen
-            Create Screen from MasterCopy
-            sourceMasterCopy: The source master copy
+        CreateFrom(self: ScreenComposition, libraryTypeVersion: ScreenLibraryTypeVersion) -> Screen
+
+            Create screen from type version
+
+            libraryTypeVersion: screen version
+
+            Returns: Siemens.Engineering.Hmi.Screen.Screen
+
+        CreateFrom(self: ScreenComposition, sourceMasterCopy: MasterCopy) -> Screen
+
+            Create Screen from MasterCopy
+
+            sourceMasterCopy: The source master copy
+
             Returns: Siemens.Engineering.Hmi.Screen.Screen
         """
         ...
 
     def Find(self, name:str) -> Screen:
         """
-        Find(self: ScreenComposition, name: str) -> Screen
-            Finds a given screen
-            name: Name to find
+        Find(self: ScreenComposition, name: str) -> Screen
+
+            Finds a given screen
+
+            name: Name to find
+
             Returns: Siemens.Engineering.Hmi.Screen.Screen
         """
         ...
 
     def GetHashCode(self) -> int:
         """
-        GetHashCode(self: ScreenComposition) -> int
-            Returns a hash code for this instance.
+        GetHashCode(self: ScreenComposition) -> int
+
+            Returns a hash code for this instance.
+
             Returns: A hash code for this instance, suitable for use in hashing algorithms and data structures like a hash table.
         """
         ...
 
     def Import(self, path:FileInfo, importOptions:ImportOptions) -> IList:
         """
-        Import(self: ScreenComposition, path: FileInfo, importOptions: ImportOptions) -> IList[Screen]
-            Simatic ML import of a screen
-            path: Path to the Simatic ML file
-            importOptions: Options to use for Import
+        Import(self: ScreenComposition, path: FileInfo, importOptions: ImportOptions) -> IList[Screen]
+
+            Simatic ML import of a screen
+
+            path: Path to the Simatic ML file
+
+            importOptions: Options to use for Import
+
             Returns: System.Collections.Generic.IList<Siemens.Engineering.Hmi.Screen.Screen>
         """
         ...
 
     def ToString(self) -> str:
         """
-        ToString(self: ScreenComposition) -> str
-            Returns a System.String that represents the current System.Object.
+        ToString(self: ScreenComposition) -> str
+
+            Returns a System.String that represents the current System.Object.
+
             Returns: A System.String that represents the current System.Object.
         """
         ...
@@ -153,7 +184,8 @@ class ScreenFolder(IEquatable, IEngineeringObject, IInternalObjectAccess): # ski
     @property
     def Folders(self) -> ScreenUserFolderComposition:
         """
-        Composition of screen user folders
+        Composition of screen user folders
+
         Get: Folders(self: ScreenFolder) -> ScreenUserFolderComposition
         """
         ...
@@ -161,7 +193,8 @@ class ScreenFolder(IEquatable, IEngineeringObject, IInternalObjectAccess): # ski
     @property
     def Name(self) -> str:
         """
-        The name of the screen folder
+        The name of the screen folder
+
         Get: Name(self: ScreenFolder) -> str
         """
         ...
@@ -169,7 +202,8 @@ class ScreenFolder(IEquatable, IEngineeringObject, IInternalObjectAccess): # ski
     @property
     def Parent(self) -> IEngineeringObject:
         """
-        EOM parent of this object
+        EOM parent of this object
+
         Get: Parent(self: ScreenFolder) -> IEngineeringObject
         """
         ...
@@ -177,7 +211,8 @@ class ScreenFolder(IEquatable, IEngineeringObject, IInternalObjectAccess): # ski
     @property
     def Screens(self) -> ScreenComposition:
         """
-        Composition of screens
+        Composition of screens
+
         Get: Screens(self: ScreenFolder) -> ScreenComposition
         """
         ...
@@ -185,16 +220,20 @@ class ScreenFolder(IEquatable, IEngineeringObject, IInternalObjectAccess): # ski
 
     def GetHashCode(self) -> int:
         """
-        GetHashCode(self: ScreenFolder) -> int
-            Returns a hash code for this instance.
+        GetHashCode(self: ScreenFolder) -> int
+
+            Returns a hash code for this instance.
+
             Returns: A hash code for this instance, suitable for use in hashing algorithms and data structures like a hash table.
         """
         ...
 
     def ToString(self) -> str:
         """
-        ToString(self: ScreenFolder) -> str
-            Returns a System.String that represents the current System.Object.
+        ToString(self: ScreenFolder) -> str
+
+            Returns a System.String that represents the current System.Object.
+
             Returns: A System.String that represents the current System.Object.
         """
         ...
@@ -208,33 +247,41 @@ class ScreenGlobalElements(IEquatable, IEngineeringObject, IInternalObjectAccess
     @property
     def Parent(self) -> IEngineeringObject:
         """
-        EOM parent of this object
+        EOM parent of this object
+
         Get: Parent(self: ScreenGlobalElements) -> IEngineeringObject
         """
         ...
 
 
-    def Export(self, path:FileInfo, exportOptions:ExportOptions): # -> 
+    def Export(self, path:FileInfo, exportOptions:ExportOptions): # ->
         """
-        Export(self: ScreenGlobalElements, path: FileInfo, exportOptions: ExportOptions)
-            Simatic ML export of screen global elements
-            path: Path to the Simatic ML file
+        Export(self: ScreenGlobalElements, path: FileInfo, exportOptions: ExportOptions)
+
+            Simatic ML export of screen global elements
+
+            path: Path to the Simatic ML file
+
             exportOptions: Option to use for export (default, readonly, etc.)
         """
         ...
 
     def GetHashCode(self) -> int:
         """
-        GetHashCode(self: ScreenGlobalElements) -> int
-            Returns a hash code for this instance.
+        GetHashCode(self: ScreenGlobalElements) -> int
+
+            Returns a hash code for this instance.
+
             Returns: A hash code for this instance, suitable for use in hashing algorithms and data structures like a hash table.
         """
         ...
 
     def ToString(self) -> str:
         """
-        ToString(self: ScreenGlobalElements) -> str
-            Returns a System.String that represents the current System.Object.
+        ToString(self: ScreenGlobalElements) -> str
+
+            Returns a System.String that represents the current System.Object.
+
             Returns: A System.String that represents the current System.Object.
         """
         ...
@@ -256,33 +303,41 @@ class ScreenOverview(IEquatable, IEngineeringObject, IInternalObjectAccess): # s
     @property
     def Parent(self) -> IEngineeringObject:
         """
-        EOM parent of this object
+        EOM parent of this object
+
         Get: Parent(self: ScreenOverview) -> IEngineeringObject
         """
         ...
 
 
-    def Export(self, path:FileInfo, exportOptions:ExportOptions): # -> 
+    def Export(self, path:FileInfo, exportOptions:ExportOptions): # ->
         """
-        Export(self: ScreenOverview, path: FileInfo, exportOptions: ExportOptions)
-            Simatic ML export of a screen overview
-            path: Path to the Simatic ML file
+        Export(self: ScreenOverview, path: FileInfo, exportOptions: ExportOptions)
+
+            Simatic ML export of a screen overview
+
+            path: Path to the Simatic ML file
+
             exportOptions: Option to use for export (default, readonly, etc.)
         """
         ...
 
     def GetHashCode(self) -> int:
         """
-        GetHashCode(self: ScreenOverview) -> int
-            Returns a hash code for this instance.
+        GetHashCode(self: ScreenOverview) -> int
+
+            Returns a hash code for this instance.
+
             Returns: A hash code for this instance, suitable for use in hashing algorithms and data structures like a hash table.
         """
         ...
 
     def ToString(self) -> str:
         """
-        ToString(self: ScreenOverview) -> str
-            Returns a System.String that represents the current System.Object.
+        ToString(self: ScreenOverview) -> str
+
+            Returns a System.String that represents the current System.Object.
+
             Returns: A System.String that represents the current System.Object.
         """
         ...
@@ -296,7 +351,8 @@ class ScreenPopup(IEquatable, IEngineeringObject, IMasterCopySource, IInternalOb
     @property
     def Name(self) -> str:
         """
-        Gets or sets the screen name.
+        Gets or sets the screen name.
+
         Get: Name(self: ScreenPopup) -> str
         """
         ...
@@ -304,40 +360,49 @@ class ScreenPopup(IEquatable, IEngineeringObject, IMasterCopySource, IInternalOb
     @property
     def Parent(self) -> IEngineeringObject:
         """
-        EOM parent of this object
+        EOM parent of this object
+
         Get: Parent(self: ScreenPopup) -> IEngineeringObject
         """
         ...
 
 
-    def Delete(self): # -> 
+    def Delete(self): # ->
         """
-        Delete(self: ScreenPopup)
+        Delete(self: ScreenPopup)
+
             Deletes this instance.
         """
         ...
 
-    def Export(self, path:FileInfo, exportOptions:ExportOptions): # -> 
+    def Export(self, path:FileInfo, exportOptions:ExportOptions): # ->
         """
-        Export(self: ScreenPopup, path: FileInfo, exportOptions: ExportOptions)
-            Common export
-            path: Path to the Simatic ML file
+        Export(self: ScreenPopup, path: FileInfo, exportOptions: ExportOptions)
+
+            Common export
+
+            path: Path to the Simatic ML file
+
             exportOptions: Determines whether the default values are exported or not
         """
         ...
 
     def GetHashCode(self) -> int:
         """
-        GetHashCode(self: ScreenPopup) -> int
-            Returns a hash code for this instance.
+        GetHashCode(self: ScreenPopup) -> int
+
+            Returns a hash code for this instance.
+
             Returns: A hash code for this instance, suitable for use in hashing algorithms and data structures like a hash table.
         """
         ...
 
     def ToString(self) -> str:
         """
-        ToString(self: ScreenPopup) -> str
-            Returns a System.String that represents the current System.Object.
+        ToString(self: ScreenPopup) -> str
+
+            Returns a System.String that represents the current System.Object.
+
             Returns: A System.String that represents the current System.Object.
         """
         ...
@@ -351,7 +416,8 @@ class ScreenPopupComposition(IInternalCompositionAccess, IEngineeringComposition
     @property
     def Parent(self) -> IEngineeringObject:
         """
-        Gets the parent.
+        Gets the parent.
+
         Get: Parent(self: ScreenPopupComposition) -> IEngineeringObject
         """
         ...
@@ -359,44 +425,58 @@ class ScreenPopupComposition(IInternalCompositionAccess, IEngineeringComposition
 
     def CreateFrom(self, sourceMasterCopy:MasterCopy) -> ScreenPopup:
         """
-        CreateFrom(self: ScreenPopupComposition, sourceMasterCopy: MasterCopy) -> ScreenPopup
-            Create ScreenPopup from MasterCopy
-            sourceMasterCopy: The source master copy
+        CreateFrom(self: ScreenPopupComposition, sourceMasterCopy: MasterCopy) -> ScreenPopup
+
+            Create ScreenPopup from MasterCopy
+
+            sourceMasterCopy: The source master copy
+
             Returns: Siemens.Engineering.Hmi.Screen.ScreenPopup
         """
         ...
 
     def Find(self, name:str) -> ScreenPopup:
         """
-        Find(self: ScreenPopupComposition, name: str) -> ScreenPopup
-            Finds a given screen popup
-            name: Name to find
+        Find(self: ScreenPopupComposition, name: str) -> ScreenPopup
+
+            Finds a given screen popup
+
+            name: Name to find
+
             Returns: Siemens.Engineering.Hmi.Screen.ScreenPopup
         """
         ...
 
     def GetHashCode(self) -> int:
         """
-        GetHashCode(self: ScreenPopupComposition) -> int
-            Returns a hash code for this instance.
+        GetHashCode(self: ScreenPopupComposition) -> int
+
+            Returns a hash code for this instance.
+
             Returns: A hash code for this instance, suitable for use in hashing algorithms and data structures like a hash table.
         """
         ...
 
     def Import(self, path:FileInfo, importOptions:ImportOptions) -> IList:
         """
-        Import(self: ScreenPopupComposition, path: FileInfo, importOptions: ImportOptions) -> IList[ScreenPopup]
-            Import Action
-            path: Path to the Simatic ML file
-            importOptions: Options to use for the Import
+        Import(self: ScreenPopupComposition, path: FileInfo, importOptions: ImportOptions) -> IList[ScreenPopup]
+
+            Import Action
+
+            path: Path to the Simatic ML file
+
+            importOptions: Options to use for the Import
+
             Returns: System.Collections.Generic.IList<Siemens.Engineering.Hmi.Screen.ScreenPopup>
         """
         ...
 
     def ToString(self) -> str:
         """
-        ToString(self: ScreenPopupComposition) -> str
-            Returns a System.String that represents the current System.Object.
+        ToString(self: ScreenPopupComposition) -> str
+
+            Returns a System.String that represents the current System.Object.
+
             Returns: A System.String that represents the current System.Object.
         """
         ...
@@ -414,7 +494,8 @@ class ScreenPopupFolder(IEquatable, IEngineeringObject, IInternalObjectAccess): 
     @property
     def Folders(self) -> ScreenPopupUserFolderComposition:
         """
-        Composition of screen popup user folders
+        Composition of screen popup user folders
+
         Get: Folders(self: ScreenPopupFolder) -> ScreenPopupUserFolderComposition
         """
         ...
@@ -422,7 +503,8 @@ class ScreenPopupFolder(IEquatable, IEngineeringObject, IInternalObjectAccess): 
     @property
     def Name(self) -> str:
         """
-        The name of the screen popup folder
+        The name of the screen popup folder
+
         Get: Name(self: ScreenPopupFolder) -> str
         """
         ...
@@ -430,7 +512,8 @@ class ScreenPopupFolder(IEquatable, IEngineeringObject, IInternalObjectAccess): 
     @property
     def Parent(self) -> IEngineeringObject:
         """
-        EOM parent of this object
+        EOM parent of this object
+
         Get: Parent(self: ScreenPopupFolder) -> IEngineeringObject
         """
         ...
@@ -438,7 +521,8 @@ class ScreenPopupFolder(IEquatable, IEngineeringObject, IInternalObjectAccess): 
     @property
     def ScreenPopups(self) -> ScreenPopupComposition:
         """
-        Composition of screen popups
+        Composition of screen popups
+
         Get: ScreenPopups(self: ScreenPopupFolder) -> ScreenPopupComposition
         """
         ...
@@ -446,16 +530,20 @@ class ScreenPopupFolder(IEquatable, IEngineeringObject, IInternalObjectAccess): 
 
     def GetHashCode(self) -> int:
         """
-        GetHashCode(self: ScreenPopupFolder) -> int
-            Returns a hash code for this instance.
+        GetHashCode(self: ScreenPopupFolder) -> int
+
+            Returns a hash code for this instance.
+
             Returns: A hash code for this instance, suitable for use in hashing algorithms and data structures like a hash table.
         """
         ...
 
     def ToString(self) -> str:
         """
-        ToString(self: ScreenPopupFolder) -> str
-            Returns a System.String that represents the current System.Object.
+        ToString(self: ScreenPopupFolder) -> str
+
+            Returns a System.String that represents the current System.Object.
+
             Returns: A System.String that represents the current System.Object.
         """
         ...
@@ -470,9 +558,10 @@ class ScreenPopupSystemFolder(ScreenPopupFolder, IMasterCopyTarget): # skipped b
 
 class ScreenPopupUserFolder(ScreenPopupFolder, IMasterCopySource, IMasterCopyTarget): # skipped bases: <type 'IInternalInstanceAccess'>, <type 'IEngineeringInstance'>, <type 'IEngineeringObject'>, <type 'IInternalObjectAccess'>, <type 'IEquatable[object]'>, <type 'IInternalBaseAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'object'>
     """ User folder containing screen popups """
-    def Delete(self): # -> 
+    def Delete(self): # ->
         """
-        Delete(self: ScreenPopupUserFolder)
+        Delete(self: ScreenPopupUserFolder)
+
             Deletes this instance.
         """
         ...
@@ -483,7 +572,8 @@ class ScreenPopupUserFolderComposition(IInternalCompositionAccess, IEngineeringC
     @property
     def Parent(self) -> IEngineeringObject:
         """
-        Gets the parent.
+        Gets the parent.
+
         Get: Parent(self: ScreenPopupUserFolderComposition) -> IEngineeringObject
         """
         ...
@@ -491,25 +581,32 @@ class ScreenPopupUserFolderComposition(IInternalCompositionAccess, IEngineeringC
 
     def Find(self, name:str) -> ScreenPopupUserFolder:
         """
-        Find(self: ScreenPopupUserFolderComposition, name: str) -> ScreenPopupUserFolder
-            Finds a given screen popup user folder
-            name: Name to find
+        Find(self: ScreenPopupUserFolderComposition, name: str) -> ScreenPopupUserFolder
+
+            Finds a given screen popup user folder
+
+            name: Name to find
+
             Returns: Siemens.Engineering.Hmi.Screen.ScreenPopupUserFolder
         """
         ...
 
     def GetHashCode(self) -> int:
         """
-        GetHashCode(self: ScreenPopupUserFolderComposition) -> int
-            Returns a hash code for this instance.
+        GetHashCode(self: ScreenPopupUserFolderComposition) -> int
+
+            Returns a hash code for this instance.
+
             Returns: A hash code for this instance, suitable for use in hashing algorithms and data structures like a hash table.
         """
         ...
 
     def ToString(self) -> str:
         """
-        ToString(self: ScreenPopupUserFolderComposition) -> str
-            Returns a System.String that represents the current System.Object.
+        ToString(self: ScreenPopupUserFolderComposition) -> str
+
+            Returns a System.String that represents the current System.Object.
+
             Returns: A System.String that represents the current System.Object.
         """
         ...
@@ -527,7 +624,8 @@ class ScreenSlidein(IEquatable, IEngineeringObject, IInternalObjectAccess): # sk
     @property
     def Parent(self) -> IEngineeringObject:
         """
-        EOM parent of this object
+        EOM parent of this object
+
         Get: Parent(self: ScreenSlidein) -> IEngineeringObject
         """
         ...
@@ -535,33 +633,41 @@ class ScreenSlidein(IEquatable, IEngineeringObject, IInternalObjectAccess): # sk
     @property
     def SlideinType(self) -> SlideinType:
         """
-        Type of a Slide-In screen.
+        Type of a Slide-In screen.
+
         Get: SlideinType(self: ScreenSlidein) -> SlideinType
         """
         ...
 
 
-    def Export(self, path:FileInfo, exportOptions:ExportOptions): # -> 
+    def Export(self, path:FileInfo, exportOptions:ExportOptions): # ->
         """
-        Export(self: ScreenSlidein, path: FileInfo, exportOptions: ExportOptions)
-            Common export
-            path: Path to the Simatic ML file
+        Export(self: ScreenSlidein, path: FileInfo, exportOptions: ExportOptions)
+
+            Common export
+
+            path: Path to the Simatic ML file
+
             exportOptions: Determines whether the default values are exported or not
         """
         ...
 
     def GetHashCode(self) -> int:
         """
-        GetHashCode(self: ScreenSlidein) -> int
-            Returns a hash code for this instance.
+        GetHashCode(self: ScreenSlidein) -> int
+
+            Returns a hash code for this instance.
+
             Returns: A hash code for this instance, suitable for use in hashing algorithms and data structures like a hash table.
         """
         ...
 
     def ToString(self) -> str:
         """
-        ToString(self: ScreenSlidein) -> str
-            Returns a System.String that represents the current System.Object.
+        ToString(self: ScreenSlidein) -> str
+
+            Returns a System.String that represents the current System.Object.
+
             Returns: A System.String that represents the current System.Object.
         """
         ...
@@ -575,7 +681,8 @@ class ScreenSlideinComposition(IInternalCompositionAccess, IEngineeringCompositi
     @property
     def Parent(self) -> IEngineeringObject:
         """
-        Gets the parent.
+        Gets the parent.
+
         Get: Parent(self: ScreenSlideinComposition) -> IEngineeringObject
         """
         ...
@@ -583,35 +690,46 @@ class ScreenSlideinComposition(IInternalCompositionAccess, IEngineeringCompositi
 
     def Find(self, slideinType:SlideinType) -> ScreenSlidein:
         """
-        Find(self: ScreenSlideinComposition, slideinType: SlideinType) -> ScreenSlidein
-            Find a slidein screen.
-            slideinType: Slidein to find
+        Find(self: ScreenSlideinComposition, slideinType: SlideinType) -> ScreenSlidein
+
+            Find a slidein screen.
+
+            slideinType: Slidein to find
+
             Returns: Siemens.Engineering.Hmi.Screen.ScreenSlidein
         """
         ...
 
     def GetHashCode(self) -> int:
         """
-        GetHashCode(self: ScreenSlideinComposition) -> int
-            Returns a hash code for this instance.
+        GetHashCode(self: ScreenSlideinComposition) -> int
+
+            Returns a hash code for this instance.
+
             Returns: A hash code for this instance, suitable for use in hashing algorithms and data structures like a hash table.
         """
         ...
 
     def Import(self, path:FileInfo, importOptions:ImportOptions) -> IList:
         """
-        Import(self: ScreenSlideinComposition, path: FileInfo, importOptions: ImportOptions) -> IList[ScreenSlidein]
-            Import Action
-            path: Path to the Simatic ML file
-            importOptions: Options to use for the Import
+        Import(self: ScreenSlideinComposition, path: FileInfo, importOptions: ImportOptions) -> IList[ScreenSlidein]
+
+            Import Action
+
+            path: Path to the Simatic ML file
+
+            importOptions: Options to use for the Import
+
             Returns: System.Collections.Generic.IList<Siemens.Engineering.Hmi.Screen.ScreenSlidein>
         """
         ...
 
     def ToString(self) -> str:
         """
-        ToString(self: ScreenSlideinComposition) -> str
-            Returns a System.String that represents the current System.Object.
+        ToString(self: ScreenSlideinComposition) -> str
+
+            Returns a System.String that represents the current System.Object.
+
             Returns: A System.String that represents the current System.Object.
         """
         ...
@@ -629,7 +747,8 @@ class ScreenSlideinSystemFolder(IEquatable, IEngineeringObject, IInternalObjectA
     @property
     def Parent(self) -> IEngineeringObject:
         """
-        EOM parent of this object
+        EOM parent of this object
+
         Get: Parent(self: ScreenSlideinSystemFolder) -> IEngineeringObject
         """
         ...
@@ -637,7 +756,8 @@ class ScreenSlideinSystemFolder(IEquatable, IEngineeringObject, IInternalObjectA
     @property
     def ScreenSlideins(self) -> ScreenSlideinComposition:
         """
-        Returns a collection of slide-in screens in that folder.
+        Returns a collection of slide-in screens in that folder.
+
         Get: ScreenSlideins(self: ScreenSlideinSystemFolder) -> ScreenSlideinComposition
         """
         ...
@@ -645,16 +765,20 @@ class ScreenSlideinSystemFolder(IEquatable, IEngineeringObject, IInternalObjectA
 
     def GetHashCode(self) -> int:
         """
-        GetHashCode(self: ScreenSlideinSystemFolder) -> int
-            Returns a hash code for this instance.
+        GetHashCode(self: ScreenSlideinSystemFolder) -> int
+
+            Returns a hash code for this instance.
+
             Returns: A hash code for this instance, suitable for use in hashing algorithms and data structures like a hash table.
         """
         ...
 
     def ToString(self) -> str:
         """
-        ToString(self: ScreenSlideinSystemFolder) -> str
-            Returns a System.String that represents the current System.Object.
+        ToString(self: ScreenSlideinSystemFolder) -> str
+
+            Returns a System.String that represents the current System.Object.
+
             Returns: A System.String that represents the current System.Object.
         """
         ...
@@ -672,7 +796,8 @@ class ScreenTemplate(IEquatable, IEngineeringObject, IMasterCopySource, IInterna
     @property
     def Name(self) -> str:
         """
-        The name of the screen template
+        The name of the screen template
+
         Get: Name(self: ScreenTemplate) -> str
         """
         ...
@@ -680,40 +805,49 @@ class ScreenTemplate(IEquatable, IEngineeringObject, IMasterCopySource, IInterna
     @property
     def Parent(self) -> IEngineeringObject:
         """
-        EOM parent of this object
+        EOM parent of this object
+
         Get: Parent(self: ScreenTemplate) -> IEngineeringObject
         """
         ...
 
 
-    def Delete(self): # -> 
+    def Delete(self): # ->
         """
-        Delete(self: ScreenTemplate)
+        Delete(self: ScreenTemplate)
+
             Deletes this instance.
         """
         ...
 
-    def Export(self, path:FileInfo, exportOptions:ExportOptions): # -> 
+    def Export(self, path:FileInfo, exportOptions:ExportOptions): # ->
         """
-        Export(self: ScreenTemplate, path: FileInfo, exportOptions: ExportOptions)
-            Simatic ML export of a screen template
-            path: Path to the Simatic ML file
+        Export(self: ScreenTemplate, path: FileInfo, exportOptions: ExportOptions)
+
+            Simatic ML export of a screen template
+
+            path: Path to the Simatic ML file
+
             exportOptions: Option to use for export (default, readonly, etc.)
         """
         ...
 
     def GetHashCode(self) -> int:
         """
-        GetHashCode(self: ScreenTemplate) -> int
-            Returns a hash code for this instance.
+        GetHashCode(self: ScreenTemplate) -> int
+
+            Returns a hash code for this instance.
+
             Returns: A hash code for this instance, suitable for use in hashing algorithms and data structures like a hash table.
         """
         ...
 
     def ToString(self) -> str:
         """
-        ToString(self: ScreenTemplate) -> str
-            Returns a System.String that represents the current System.Object.
+        ToString(self: ScreenTemplate) -> str
+
+            Returns a System.String that represents the current System.Object.
+
             Returns: A System.String that represents the current System.Object.
         """
         ...
@@ -727,7 +861,8 @@ class ScreenTemplateComposition(IInternalCompositionAccess, IEngineeringComposit
     @property
     def Parent(self) -> IEngineeringObject:
         """
-        Gets the parent.
+        Gets the parent.
+
         Get: Parent(self: ScreenTemplateComposition) -> IEngineeringObject
         """
         ...
@@ -735,44 +870,58 @@ class ScreenTemplateComposition(IInternalCompositionAccess, IEngineeringComposit
 
     def CreateFrom(self, sourceMasterCopy:MasterCopy) -> ScreenTemplate:
         """
-        CreateFrom(self: ScreenTemplateComposition, sourceMasterCopy: MasterCopy) -> ScreenTemplate
-            Create ScreenTemplate from MasterCopy
-            sourceMasterCopy: The source master copy
+        CreateFrom(self: ScreenTemplateComposition, sourceMasterCopy: MasterCopy) -> ScreenTemplate
+
+            Create ScreenTemplate from MasterCopy
+
+            sourceMasterCopy: The source master copy
+
             Returns: Siemens.Engineering.Hmi.Screen.ScreenTemplate
         """
         ...
 
     def Find(self, name:str) -> ScreenTemplate:
         """
-        Find(self: ScreenTemplateComposition, name: str) -> ScreenTemplate
-            Finds a given screen template
-            name: Name to find
+        Find(self: ScreenTemplateComposition, name: str) -> ScreenTemplate
+
+            Finds a given screen template
+
+            name: Name to find
+
             Returns: Siemens.Engineering.Hmi.Screen.ScreenTemplate
         """
         ...
 
     def GetHashCode(self) -> int:
         """
-        GetHashCode(self: ScreenTemplateComposition) -> int
-            Returns a hash code for this instance.
+        GetHashCode(self: ScreenTemplateComposition) -> int
+
+            Returns a hash code for this instance.
+
             Returns: A hash code for this instance, suitable for use in hashing algorithms and data structures like a hash table.
         """
         ...
 
     def Import(self, path:FileInfo, importOptions:ImportOptions) -> IList:
         """
-        Import(self: ScreenTemplateComposition, path: FileInfo, importOptions: ImportOptions) -> IList[ScreenTemplate]
-            Simatic ML import of a screen template
-            path: Path to the Simatic ML file
-            importOptions: Options to use for Import
+        Import(self: ScreenTemplateComposition, path: FileInfo, importOptions: ImportOptions) -> IList[ScreenTemplate]
+
+            Simatic ML import of a screen template
+
+            path: Path to the Simatic ML file
+
+            importOptions: Options to use for Import
+
             Returns: System.Collections.Generic.IList<Siemens.Engineering.Hmi.Screen.ScreenTemplate>
         """
         ...
 
     def ToString(self) -> str:
         """
-        ToString(self: ScreenTemplateComposition) -> str
-            Returns a System.String that represents the current System.Object.
+        ToString(self: ScreenTemplateComposition) -> str
+
+            Returns a System.String that represents the current System.Object.
+
             Returns: A System.String that represents the current System.Object.
         """
         ...
@@ -790,7 +939,8 @@ class ScreenTemplateFolder(IEquatable, IEngineeringObject, IInternalObjectAccess
     @property
     def Folders(self) -> ScreenTemplateUserFolderComposition:
         """
-        Composition of screen template user folders
+        Composition of screen template user folders
+
         Get: Folders(self: ScreenTemplateFolder) -> ScreenTemplateUserFolderComposition
         """
         ...
@@ -798,7 +948,8 @@ class ScreenTemplateFolder(IEquatable, IEngineeringObject, IInternalObjectAccess
     @property
     def Name(self) -> str:
         """
-        The name of the screen template folder
+        The name of the screen template folder
+
         Get: Name(self: ScreenTemplateFolder) -> str
         """
         ...
@@ -806,7 +957,8 @@ class ScreenTemplateFolder(IEquatable, IEngineeringObject, IInternalObjectAccess
     @property
     def Parent(self) -> IEngineeringObject:
         """
-        EOM parent of this object
+        EOM parent of this object
+
         Get: Parent(self: ScreenTemplateFolder) -> IEngineeringObject
         """
         ...
@@ -814,7 +966,8 @@ class ScreenTemplateFolder(IEquatable, IEngineeringObject, IInternalObjectAccess
     @property
     def ScreenTemplates(self) -> ScreenTemplateComposition:
         """
-        Composition of screen templates
+        Composition of screen templates
+
         Get: ScreenTemplates(self: ScreenTemplateFolder) -> ScreenTemplateComposition
         """
         ...
@@ -822,16 +975,20 @@ class ScreenTemplateFolder(IEquatable, IEngineeringObject, IInternalObjectAccess
 
     def GetHashCode(self) -> int:
         """
-        GetHashCode(self: ScreenTemplateFolder) -> int
-            Returns a hash code for this instance.
+        GetHashCode(self: ScreenTemplateFolder) -> int
+
+            Returns a hash code for this instance.
+
             Returns: A hash code for this instance, suitable for use in hashing algorithms and data structures like a hash table.
         """
         ...
 
     def ToString(self) -> str:
         """
-        ToString(self: ScreenTemplateFolder) -> str
-            Returns a System.String that represents the current System.Object.
+        ToString(self: ScreenTemplateFolder) -> str
+
+            Returns a System.String that represents the current System.Object.
+
             Returns: A System.String that represents the current System.Object.
         """
         ...
@@ -846,9 +1003,10 @@ class ScreenTemplateSystemFolder(ScreenTemplateFolder, IMasterCopyTarget): # ski
 
 class ScreenTemplateUserFolder(ScreenTemplateFolder, IMasterCopySource, IMasterCopyTarget): # skipped bases: <type 'IInternalInstanceAccess'>, <type 'IEngineeringInstance'>, <type 'IEngineeringObject'>, <type 'IInternalObjectAccess'>, <type 'IEquatable[object]'>, <type 'IInternalBaseAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'object'>
     """ User folder containing screen templates """
-    def Delete(self): # -> 
+    def Delete(self): # ->
         """
-        Delete(self: ScreenTemplateUserFolder)
+        Delete(self: ScreenTemplateUserFolder)
+
             Deletes this instance.
         """
         ...
@@ -859,7 +1017,8 @@ class ScreenTemplateUserFolderComposition(IInternalCompositionAccess, IEngineeri
     @property
     def Parent(self) -> IEngineeringObject:
         """
-        Gets the parent.
+        Gets the parent.
+
         Get: Parent(self: ScreenTemplateUserFolderComposition) -> IEngineeringObject
         """
         ...
@@ -867,25 +1026,32 @@ class ScreenTemplateUserFolderComposition(IInternalCompositionAccess, IEngineeri
 
     def Find(self, name:str) -> ScreenTemplateUserFolder:
         """
-        Find(self: ScreenTemplateUserFolderComposition, name: str) -> ScreenTemplateUserFolder
-            Finds a given screen template user folder
-            name: Name to find
+        Find(self: ScreenTemplateUserFolderComposition, name: str) -> ScreenTemplateUserFolder
+
+            Finds a given screen template user folder
+
+            name: Name to find
+
             Returns: Siemens.Engineering.Hmi.Screen.ScreenTemplateUserFolder
         """
         ...
 
     def GetHashCode(self) -> int:
         """
-        GetHashCode(self: ScreenTemplateUserFolderComposition) -> int
-            Returns a hash code for this instance.
+        GetHashCode(self: ScreenTemplateUserFolderComposition) -> int
+
+            Returns a hash code for this instance.
+
             Returns: A hash code for this instance, suitable for use in hashing algorithms and data structures like a hash table.
         """
         ...
 
     def ToString(self) -> str:
         """
-        ToString(self: ScreenTemplateUserFolderComposition) -> str
-            Returns a System.String that represents the current System.Object.
+        ToString(self: ScreenTemplateUserFolderComposition) -> str
+
+            Returns a System.String that represents the current System.Object.
+
             Returns: A System.String that represents the current System.Object.
         """
         ...
@@ -900,9 +1066,10 @@ class ScreenTemplateUserFolderComposition(IInternalCompositionAccess, IEngineeri
 
 class ScreenUserFolder(ScreenFolder, ILibraryTypeInstantiationTarget, IMasterCopySource, IMasterCopyTarget): # skipped bases: <type 'IInternalInstanceAccess'>, <type 'IEngineeringInstance'>, <type 'IEngineeringObject'>, <type 'IInternalObjectAccess'>, <type 'IEquatable[object]'>, <type 'IInternalBaseAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'object'>
     """ User folder containing screens """
-    def Delete(self): # -> 
+    def Delete(self): # ->
         """
-        Delete(self: ScreenUserFolder)
+        Delete(self: ScreenUserFolder)
+
             Deletes this instance.
         """
         ...
@@ -913,7 +1080,8 @@ class ScreenUserFolderComposition(IInternalCompositionAccess, IEngineeringCompos
     @property
     def Parent(self) -> IEngineeringObject:
         """
-        Gets the parent.
+        Gets the parent.
+
         Get: Parent(self: ScreenUserFolderComposition) -> IEngineeringObject
         """
         ...
@@ -921,25 +1089,32 @@ class ScreenUserFolderComposition(IInternalCompositionAccess, IEngineeringCompos
 
     def Find(self, name:str) -> ScreenUserFolder:
         """
-        Find(self: ScreenUserFolderComposition, name: str) -> ScreenUserFolder
-            Finds a given screen user folder
-            name: Name to find
+        Find(self: ScreenUserFolderComposition, name: str) -> ScreenUserFolder
+
+            Finds a given screen user folder
+
+            name: Name to find
+
             Returns: Siemens.Engineering.Hmi.Screen.ScreenUserFolder
         """
         ...
 
     def GetHashCode(self) -> int:
         """
-        GetHashCode(self: ScreenUserFolderComposition) -> int
-            Returns a hash code for this instance.
+        GetHashCode(self: ScreenUserFolderComposition) -> int
+
+            Returns a hash code for this instance.
+
             Returns: A hash code for this instance, suitable for use in hashing algorithms and data structures like a hash table.
         """
         ...
 
     def ToString(self) -> str:
         """
-        ToString(self: ScreenUserFolderComposition) -> str
-            Returns a System.String that represents the current System.Object.
+        ToString(self: ScreenUserFolderComposition) -> str
+
+            Returns a System.String that represents the current System.Object.
+
             Returns: A System.String that represents the current System.Object.
         """
         ...
@@ -954,7 +1129,8 @@ class ScreenUserFolderComposition(IInternalCompositionAccess, IEngineeringCompos
 
 class SlideinType(Enum): # skipped bases: <type 'IConvertible'>, <type 'IComparable'>, <type 'IFormattable'>, <type 'object'>
     """
-    Defines the available Slide-In screen types.
+    Defines the available Slide-In screen types.
+
     enum SlideinType, values: Bottom (1), Left (2), Right (3), Top (0)
     """
     Bottom: SlideinType = ...
@@ -982,12 +1158,11 @@ class StyleSheetLibraryTypeVersion(LibraryTypeVersion): # skipped bases: <type '
 
 class VisibilityModes(Enum): # skipped bases: <type 'IConvertible'>, <type 'IComparable'>, <type 'IFormattable'>, <type 'object'>
     """
-    Defindes the VisibilityModes
+    Defindes the VisibilityModes
+
     enum VisibilityModes, values: FadeOut (0), ShowAlways (1), ShowNever (2)
     """
     FadeOut: VisibilityModes = ...
     ShowAlways: VisibilityModes = ...
     ShowNever: VisibilityModes = ...
     value__ = ...
-
-

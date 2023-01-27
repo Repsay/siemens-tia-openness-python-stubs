@@ -4,15 +4,15 @@
 # by generator 1.145
 """ no doc """
 from __future__ import annotations
-from Siemens.Engineering import (ExportOptions, IEngineeringComposition, 
+from Siemens.Engineering import (ExportOptions, IEngineeringComposition,
     IEngineeringObject, IEngineeringServiceProvider, ImportOptions)
 
 from Siemens.Engineering.Hmi import ILimit
 
-from Siemens.Engineering.Library.MasterCopies import (IMasterCopySource, 
+from Siemens.Engineering.Library.MasterCopies import (IMasterCopySource,
     IMasterCopyTarget, MasterCopy)
 
-from Siemens.Engineering.Library.Types import (LibraryType, 
+from Siemens.Engineering.Library.Types import (LibraryType,
     LibraryTypeVersion)
 
 from System import IEquatable
@@ -24,6 +24,7 @@ from System.IO import FileInfo
 """The following names are not found in the module: (
     IInternalCompositionAccess, IInternalObjectAccess)
 """
+from Siemens import IInternalCompositionAccess, IInternalObjectAccess
 
 # no functions
 # classes
@@ -41,7 +42,8 @@ class Tag(IInternalObjectAccess, IEngineeringServiceProvider, IEngineeringObject
     @property
     def Name(self) -> str:
         """
-        The name of the tag
+        The name of the tag
+
         Get: Name(self: Tag) -> str
         """
         ...
@@ -49,40 +51,49 @@ class Tag(IInternalObjectAccess, IEngineeringServiceProvider, IEngineeringObject
     @property
     def Parent(self) -> IEngineeringObject:
         """
-        EOM parent of this object
+        EOM parent of this object
+
         Get: Parent(self: Tag) -> IEngineeringObject
         """
         ...
 
 
-    def Delete(self): # -> 
+    def Delete(self): # ->
         """
-        Delete(self: Tag)
+        Delete(self: Tag)
+
             Deletes this instance.
         """
         ...
 
-    def Export(self, path:FileInfo, exportOptions:ExportOptions): # -> 
+    def Export(self, path:FileInfo, exportOptions:ExportOptions): # ->
         """
-        Export(self: Tag, path: FileInfo, exportOptions: ExportOptions)
-            Simatic ML export of a tag
-            path: Path to the Simatic ML file
+        Export(self: Tag, path: FileInfo, exportOptions: ExportOptions)
+
+            Simatic ML export of a tag
+
+            path: Path to the Simatic ML file
+
             exportOptions: Option to use for export (default, readonly, etc.)
         """
         ...
 
     def GetHashCode(self) -> int:
         """
-        GetHashCode(self: Tag) -> int
-            Returns a hash code for this instance.
+        GetHashCode(self: Tag) -> int
+
+            Returns a hash code for this instance.
+
             Returns: A hash code for this instance, suitable for use in hashing algorithms and data structures like a hash table.
         """
         ...
 
     def ToString(self) -> str:
         """
-        ToString(self: Tag) -> str
-            Returns a System.String that represents the current System.Object.
+        ToString(self: Tag) -> str
+
+            Returns a System.String that represents the current System.Object.
+
             Returns: A System.String that represents the current System.Object.
         """
         ...
@@ -96,7 +107,8 @@ class TagComposition(IInternalCompositionAccess, IEngineeringComposition, IEquat
     @property
     def Parent(self) -> IEngineeringObject:
         """
-        Gets the parent.
+        Gets the parent.
+
         Get: Parent(self: TagComposition) -> IEngineeringObject
         """
         ...
@@ -104,44 +116,58 @@ class TagComposition(IInternalCompositionAccess, IEngineeringComposition, IEquat
 
     def CreateFrom(self, sourceMasterCopy:MasterCopy) -> Tag:
         """
-        CreateFrom(self: TagComposition, sourceMasterCopy: MasterCopy) -> Tag
-            Create Tag from MasterCopy
-            sourceMasterCopy: The source master copy
+        CreateFrom(self: TagComposition, sourceMasterCopy: MasterCopy) -> Tag
+
+            Create Tag from MasterCopy
+
+            sourceMasterCopy: The source master copy
+
             Returns: Siemens.Engineering.Hmi.Tag.Tag
         """
         ...
 
     def Find(self, name:str) -> Tag:
         """
-        Find(self: TagComposition, name: str) -> Tag
-            Finds a given tag
-            name: Name to find
+        Find(self: TagComposition, name: str) -> Tag
+
+            Finds a given tag
+
+            name: Name to find
+
             Returns: Siemens.Engineering.Hmi.Tag.Tag
         """
         ...
 
     def GetHashCode(self) -> int:
         """
-        GetHashCode(self: TagComposition) -> int
-            Returns a hash code for this instance.
+        GetHashCode(self: TagComposition) -> int
+
+            Returns a hash code for this instance.
+
             Returns: A hash code for this instance, suitable for use in hashing algorithms and data structures like a hash table.
         """
         ...
 
     def Import(self, path:FileInfo, importOptions:ImportOptions) -> IList:
         """
-        Import(self: TagComposition, path: FileInfo, importOptions: ImportOptions) -> IList[Tag]
-            Simatic ML import of a tag
-            path: Path to the Simatic ML file
-            importOptions: Options to use for Import
+        Import(self: TagComposition, path: FileInfo, importOptions: ImportOptions) -> IList[Tag]
+
+            Simatic ML import of a tag
+
+            path: Path to the Simatic ML file
+
+            importOptions: Options to use for Import
+
             Returns: System.Collections.Generic.IList<Siemens.Engineering.Hmi.Tag.Tag>
         """
         ...
 
     def ToString(self) -> str:
         """
-        ToString(self: TagComposition) -> str
-            Returns a System.String that represents the current System.Object.
+        ToString(self: TagComposition) -> str
+
+            Returns a System.String that represents the current System.Object.
+
             Returns: A System.String that represents the current System.Object.
         """
         ...
@@ -159,7 +185,8 @@ class TagFolder(IEquatable, IEngineeringObject, IInternalObjectAccess): # skippe
     @property
     def Folders(self) -> TagUserFolderComposition:
         """
-        Composition of tag user folders
+        Composition of tag user folders
+
         Get: Folders(self: TagFolder) -> TagUserFolderComposition
         """
         ...
@@ -167,7 +194,8 @@ class TagFolder(IEquatable, IEngineeringObject, IInternalObjectAccess): # skippe
     @property
     def Name(self) -> str:
         """
-        The name of the tag folder
+        The name of the tag folder
+
         Get: Name(self: TagFolder) -> str
         """
         ...
@@ -175,7 +203,8 @@ class TagFolder(IEquatable, IEngineeringObject, IInternalObjectAccess): # skippe
     @property
     def Parent(self) -> IEngineeringObject:
         """
-        EOM parent of this object
+        EOM parent of this object
+
         Get: Parent(self: TagFolder) -> IEngineeringObject
         """
         ...
@@ -183,7 +212,8 @@ class TagFolder(IEquatable, IEngineeringObject, IInternalObjectAccess): # skippe
     @property
     def TagTables(self) -> TagTableComposition:
         """
-        Composition of Hmi tag tables
+        Composition of Hmi tag tables
+
         Get: TagTables(self: TagFolder) -> TagTableComposition
         """
         ...
@@ -191,16 +221,20 @@ class TagFolder(IEquatable, IEngineeringObject, IInternalObjectAccess): # skippe
 
     def GetHashCode(self) -> int:
         """
-        GetHashCode(self: TagFolder) -> int
-            Returns a hash code for this instance.
+        GetHashCode(self: TagFolder) -> int
+
+            Returns a hash code for this instance.
+
             Returns: A hash code for this instance, suitable for use in hashing algorithms and data structures like a hash table.
         """
         ...
 
     def ToString(self) -> str:
         """
-        ToString(self: TagFolder) -> str
-            Returns a System.String that represents the current System.Object.
+        ToString(self: TagFolder) -> str
+
+            Returns a System.String that represents the current System.Object.
+
             Returns: A System.String that represents the current System.Object.
         """
         ...
@@ -214,7 +248,8 @@ class TagSystemFolder(IMasterCopyTarget, TagFolder): # skipped bases: <type 'IIn
     @property
     def DefaultTagTable(self) -> TagTable:
         """
-        Get the default Hmi tag table
+        Get the default Hmi tag table
+
         Get: DefaultTagTable(self: TagSystemFolder) -> TagTable
         """
         ...
@@ -226,7 +261,8 @@ class TagTable(IEquatable, IEngineeringObject, IMasterCopySource, IMasterCopyTar
     @property
     def IsSystemObject(self) -> bool:
         """
-        Gets a value that identifies this is the default tag table
+        Gets a value that identifies this is the default tag table
+
         Get: IsSystemObject(self: TagTable) -> bool
         """
         ...
@@ -234,7 +270,8 @@ class TagTable(IEquatable, IEngineeringObject, IMasterCopySource, IMasterCopyTar
     @property
     def Name(self) -> str:
         """
-        The name of the tag table
+        The name of the tag table
+
         Get: Name(self: TagTable) -> str
         """
         ...
@@ -242,7 +279,8 @@ class TagTable(IEquatable, IEngineeringObject, IMasterCopySource, IMasterCopyTar
     @property
     def Parent(self) -> IEngineeringObject:
         """
-        EOM parent of this object
+        EOM parent of this object
+
         Get: Parent(self: TagTable) -> IEngineeringObject
         """
         ...
@@ -250,40 +288,49 @@ class TagTable(IEquatable, IEngineeringObject, IMasterCopySource, IMasterCopyTar
     @property
     def Tags(self) -> TagComposition:
         """
-        Composition of Hmi tags
+        Composition of Hmi tags
+
         Get: Tags(self: TagTable) -> TagComposition
         """
         ...
 
 
-    def Delete(self): # -> 
+    def Delete(self): # ->
         """
-        Delete(self: TagTable)
+        Delete(self: TagTable)
+
             Deletes this instance.
         """
         ...
 
-    def Export(self, path:FileInfo, exportOptions:ExportOptions): # -> 
+    def Export(self, path:FileInfo, exportOptions:ExportOptions): # ->
         """
-        Export(self: TagTable, path: FileInfo, exportOptions: ExportOptions)
-            Simatic ML export of a tag table
-            path: Path to the Simatic ML file
+        Export(self: TagTable, path: FileInfo, exportOptions: ExportOptions)
+
+            Simatic ML export of a tag table
+
+            path: Path to the Simatic ML file
+
             exportOptions: Option to use for export (default, readonly, etc.)
         """
         ...
 
     def GetHashCode(self) -> int:
         """
-        GetHashCode(self: TagTable) -> int
-            Returns a hash code for this instance.
+        GetHashCode(self: TagTable) -> int
+
+            Returns a hash code for this instance.
+
             Returns: A hash code for this instance, suitable for use in hashing algorithms and data structures like a hash table.
         """
         ...
 
     def ToString(self) -> str:
         """
-        ToString(self: TagTable) -> str
-            Returns a System.String that represents the current System.Object.
+        ToString(self: TagTable) -> str
+
+            Returns a System.String that represents the current System.Object.
+
             Returns: A System.String that represents the current System.Object.
         """
         ...
@@ -297,7 +344,8 @@ class TagTableComposition(IInternalCompositionAccess, IEngineeringComposition, I
     @property
     def Parent(self) -> IEngineeringObject:
         """
-        Gets the parent.
+        Gets the parent.
+
         Get: Parent(self: TagTableComposition) -> IEngineeringObject
         """
         ...
@@ -305,44 +353,58 @@ class TagTableComposition(IInternalCompositionAccess, IEngineeringComposition, I
 
     def CreateFrom(self, sourceMasterCopy:MasterCopy) -> TagTable:
         """
-        CreateFrom(self: TagTableComposition, sourceMasterCopy: MasterCopy) -> TagTable
-            Create TagTable from MasterCopy
-            sourceMasterCopy: The source master copy
+        CreateFrom(self: TagTableComposition, sourceMasterCopy: MasterCopy) -> TagTable
+
+            Create TagTable from MasterCopy
+
+            sourceMasterCopy: The source master copy
+
             Returns: Siemens.Engineering.Hmi.Tag.TagTable
         """
         ...
 
     def Find(self, name:str) -> TagTable:
         """
-        Find(self: TagTableComposition, name: str) -> TagTable
-            Finds a given tag table
-            name: Name to find
+        Find(self: TagTableComposition, name: str) -> TagTable
+
+            Finds a given tag table
+
+            name: Name to find
+
             Returns: Siemens.Engineering.Hmi.Tag.TagTable
         """
         ...
 
     def GetHashCode(self) -> int:
         """
-        GetHashCode(self: TagTableComposition) -> int
-            Returns a hash code for this instance.
+        GetHashCode(self: TagTableComposition) -> int
+
+            Returns a hash code for this instance.
+
             Returns: A hash code for this instance, suitable for use in hashing algorithms and data structures like a hash table.
         """
         ...
 
     def Import(self, path:FileInfo, importOptions:ImportOptions) -> IList:
         """
-        Import(self: TagTableComposition, path: FileInfo, importOptions: ImportOptions) -> IList[TagTable]
-            Simatic ML import of a tag table
-            path: Path to the Simatic ML file
-            importOptions: Options to use for Import
+        Import(self: TagTableComposition, path: FileInfo, importOptions: ImportOptions) -> IList[TagTable]
+
+            Simatic ML import of a tag table
+
+            path: Path to the Simatic ML file
+
+            importOptions: Options to use for Import
+
             Returns: System.Collections.Generic.IList<Siemens.Engineering.Hmi.Tag.TagTable>
         """
         ...
 
     def ToString(self) -> str:
         """
-        ToString(self: TagTableComposition) -> str
-            Returns a System.String that represents the current System.Object.
+        ToString(self: TagTableComposition) -> str
+
+            Returns a System.String that represents the current System.Object.
+
             Returns: A System.String that represents the current System.Object.
         """
         ...
@@ -357,9 +419,10 @@ class TagTableComposition(IInternalCompositionAccess, IEngineeringComposition, I
 
 class TagUserFolder(IMasterCopySource, TagFolder, IMasterCopyTarget): # skipped bases: <type 'IInternalInstanceAccess'>, <type 'IEngineeringInstance'>, <type 'IEngineeringObject'>, <type 'IInternalObjectAccess'>, <type 'IEquatable[object]'>, <type 'IInternalBaseAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'object'>
     """ User folder containing Hmi tag tables & Hmi tag user folders """
-    def Delete(self): # -> 
+    def Delete(self): # ->
         """
-        Delete(self: TagUserFolder)
+        Delete(self: TagUserFolder)
+
             Deletes this instance.
         """
         ...
@@ -370,7 +433,8 @@ class TagUserFolderComposition(IInternalCompositionAccess, IEngineeringCompositi
     @property
     def Parent(self) -> IEngineeringObject:
         """
-        Gets the parent.
+        Gets the parent.
+
         Get: Parent(self: TagUserFolderComposition) -> IEngineeringObject
         """
         ...
@@ -378,25 +442,32 @@ class TagUserFolderComposition(IInternalCompositionAccess, IEngineeringCompositi
 
     def Find(self, name:str) -> TagUserFolder:
         """
-        Find(self: TagUserFolderComposition, name: str) -> TagUserFolder
-            Finds a given tag user folder
-            name: Name to find
+        Find(self: TagUserFolderComposition, name: str) -> TagUserFolder
+
+            Finds a given tag user folder
+
+            name: Name to find
+
             Returns: Siemens.Engineering.Hmi.Tag.TagUserFolder
         """
         ...
 
     def GetHashCode(self) -> int:
         """
-        GetHashCode(self: TagUserFolderComposition) -> int
-            Returns a hash code for this instance.
+        GetHashCode(self: TagUserFolderComposition) -> int
+
+            Returns a hash code for this instance.
+
             Returns: A hash code for this instance, suitable for use in hashing algorithms and data structures like a hash table.
         """
         ...
 
     def ToString(self) -> str:
         """
-        ToString(self: TagUserFolderComposition) -> str
-            Returns a System.String that represents the current System.Object.
+        ToString(self: TagUserFolderComposition) -> str
+
+            Returns a System.String that represents the current System.Object.
+
             Returns: A System.String that represents the current System.Object.
         """
         ...
@@ -407,5 +478,3 @@ class TagUserFolderComposition(IInternalCompositionAccess, IEngineeringCompositi
 
     def __ne__(self, *args): #cannot find CLR method
         ...
-
-

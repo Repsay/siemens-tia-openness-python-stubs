@@ -15,6 +15,8 @@ from System.Security import SecureString
 """The following names are not found in the module: IInternalObjectAccess
 """
 
+from Siemens import IInternalObjectAccess
+
 # no functions
 # classes
 
@@ -22,45 +24,53 @@ class ProtectionProviderBase(IEquatable, IEngineeringService, IInternalObjectAcc
     """ Defines the contract of a Protection Provider, should be used as the base class for client-specific ProtectionProviders """
     def GetHashCode(self) -> int:
         """
-        GetHashCode(self: ProtectionProviderBase) -> int
-            Returns a hash code for this instance.
+        GetHashCode(self: ProtectionProviderBase) -> int
+
+            Returns a hash code for this instance.
+
             Returns: A hash code for this instance, suitable for use in hashing algorithms and data structures like a hash table.
         """
         ...
 
     def GetInvalidPasswordCharacters(self) -> IEnumerable:
         """
-        GetInvalidPasswordCharacters(self: ProtectionProviderBase) -> IEnumerable[Char]
-            Gets the invalid characters from the user password input
+        GetInvalidPasswordCharacters(self: ProtectionProviderBase) -> IEnumerable[Char]
+
+            Gets the invalid characters from the user password input
+
             Returns: System.Collections.Generic.IEnumerable<System.Char>
         """
         ...
 
-    def Protect(self, newPassword:SecureString): # -> 
+    def Protect(self, newPassword:SecureString): # ->
         """
-        Protect(self: ProtectionProviderBase, newPassword: SecureString)
-            Sets protection for the underlying object
+        Protect(self: ProtectionProviderBase, newPassword: SecureString)
+
+            Sets protection for the underlying object
+
             newPassword: the password to protect the object with
         """
         ...
 
     def ToString(self) -> str:
         """
-        ToString(self: ProtectionProviderBase) -> str
-            Returns a System.String that represents the current System.Object.
+        ToString(self: ProtectionProviderBase) -> str
+
+            Returns a System.String that represents the current System.Object.
+
             Returns: A System.String that represents the current System.Object.
         """
         ...
 
-    def Unprotect(self, currentPassword:SecureString): # -> 
+    def Unprotect(self, currentPassword:SecureString): # ->
         """
-        Unprotect(self: ProtectionProviderBase, currentPassword: SecureString)
-            Removes protection from the underlying object
+        Unprotect(self: ProtectionProviderBase, currentPassword: SecureString)
+
+            Removes protection from the underlying object
+
             currentPassword: the password the underlying object is currently protected with
         """
         ...
 
     def __ne__(self, *args): #cannot find CLR method
         ...
-
-

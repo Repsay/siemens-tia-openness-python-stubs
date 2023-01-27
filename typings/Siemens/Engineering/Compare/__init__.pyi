@@ -12,6 +12,8 @@ from System import Enum, IEquatable
     IInternalCompositionAccess, IInternalObjectAccess, field#)
 """
 
+from Siemens import IInternalCompositionAccess, IInternalObjectAccess
+
 # no functions
 # classes
 
@@ -20,7 +22,8 @@ class CompareResult(IEquatable, IEngineeringObject, IInternalObjectAccess): # sk
     @property
     def Parent(self) -> IEngineeringObject:
         """
-        EOM parent of this object
+        EOM parent of this object
+
         Get: Parent(self: CompareResult) -> IEngineeringObject
         """
         ...
@@ -28,7 +31,8 @@ class CompareResult(IEquatable, IEngineeringObject, IInternalObjectAccess): # sk
     @property
     def RootElement(self) -> CompareResultElement:
         """
-        Browse to the element containing the result of a given compare scenario
+        Browse to the element containing the result of a given compare scenario
+
         Get: RootElement(self: CompareResult) -> CompareResultElement
         """
         ...
@@ -36,16 +40,20 @@ class CompareResult(IEquatable, IEngineeringObject, IInternalObjectAccess): # sk
 
     def GetHashCode(self) -> int:
         """
-        GetHashCode(self: CompareResult) -> int
-            Returns a hash code for this instance.
+        GetHashCode(self: CompareResult) -> int
+
+            Returns a hash code for this instance.
+
             Returns: A hash code for this instance, suitable for use in hashing algorithms and data structures like a hash table.
         """
         ...
 
     def ToString(self) -> str:
         """
-        ToString(self: CompareResult) -> str
-            Returns a System.String that represents the current System.Object.
+        ToString(self: CompareResult) -> str
+
+            Returns a System.String that represents the current System.Object.
+
             Returns: A System.String that represents the current System.Object.
         """
         ...
@@ -59,7 +67,8 @@ class CompareResultElement(IEquatable, IEngineeringObject, IInternalObjectAccess
     @property
     def ComparisonResult(self) -> CompareResultState:
         """
-        The result of a comparison
+        The result of a comparison
+
         Get: ComparisonResult(self: CompareResultElement) -> CompareResultState
         """
         ...
@@ -67,7 +76,8 @@ class CompareResultElement(IEquatable, IEngineeringObject, IInternalObjectAccess
     @property
     def DetailedInformation(self) -> str:
         """
-        Information on the result of a given compare scenario
+        Information on the result of a given compare scenario
+
         Get: DetailedInformation(self: CompareResultElement) -> str
         """
         ...
@@ -75,7 +85,8 @@ class CompareResultElement(IEquatable, IEngineeringObject, IInternalObjectAccess
     @property
     def Elements(self) -> CompareResultElementComposition:
         """
-        Browse to the collection of compare scenarios on a single element
+        Browse to the collection of compare scenarios on a single element
+
         Get: Elements(self: CompareResultElement) -> CompareResultElementComposition
         """
         ...
@@ -83,7 +94,8 @@ class CompareResultElement(IEquatable, IEngineeringObject, IInternalObjectAccess
     @property
     def LeftName(self) -> str:
         """
-        Left side name of a compare scenario on a single element
+        Left side name of a compare scenario on a single element
+
         Get: LeftName(self: CompareResultElement) -> str
         """
         ...
@@ -91,7 +103,8 @@ class CompareResultElement(IEquatable, IEngineeringObject, IInternalObjectAccess
     @property
     def Parent(self) -> IEngineeringObject:
         """
-        EOM parent of this object
+        EOM parent of this object
+
         Get: Parent(self: CompareResultElement) -> IEngineeringObject
         """
         ...
@@ -99,7 +112,8 @@ class CompareResultElement(IEquatable, IEngineeringObject, IInternalObjectAccess
     @property
     def RightName(self) -> str:
         """
-        Right side name of a compare scenario on a single element
+        Right side name of a compare scenario on a single element
+
         Get: RightName(self: CompareResultElement) -> str
         """
         ...
@@ -107,16 +121,20 @@ class CompareResultElement(IEquatable, IEngineeringObject, IInternalObjectAccess
 
     def GetHashCode(self) -> int:
         """
-        GetHashCode(self: CompareResultElement) -> int
-            Returns a hash code for this instance.
+        GetHashCode(self: CompareResultElement) -> int
+
+            Returns a hash code for this instance.
+
             Returns: A hash code for this instance, suitable for use in hashing algorithms and data structures like a hash table.
         """
         ...
 
     def ToString(self) -> str:
         """
-        ToString(self: CompareResultElement) -> str
-            Returns a System.String that represents the current System.Object.
+        ToString(self: CompareResultElement) -> str
+
+            Returns a System.String that represents the current System.Object.
+
             Returns: A System.String that represents the current System.Object.
         """
         ...
@@ -130,7 +148,8 @@ class CompareResultElementComposition(IInternalCompositionAccess, IEngineeringCo
     @property
     def Parent(self) -> IEngineeringObject:
         """
-        Gets the parent.
+        Gets the parent.
+
         Get: Parent(self: CompareResultElementComposition) -> IEngineeringObject
         """
         ...
@@ -138,16 +157,20 @@ class CompareResultElementComposition(IInternalCompositionAccess, IEngineeringCo
 
     def GetHashCode(self) -> int:
         """
-        GetHashCode(self: CompareResultElementComposition) -> int
-            Returns a hash code for this instance.
+        GetHashCode(self: CompareResultElementComposition) -> int
+
+            Returns a hash code for this instance.
+
             Returns: A hash code for this instance, suitable for use in hashing algorithms and data structures like a hash table.
         """
         ...
 
     def ToString(self) -> str:
         """
-        ToString(self: CompareResultElementComposition) -> str
-            Returns a System.String that represents the current System.Object.
+        ToString(self: CompareResultElementComposition) -> str
+
+            Returns a System.String that represents the current System.Object.
+
             Returns: A System.String that represents the current System.Object.
         """
         ...
@@ -162,7 +185,8 @@ class CompareResultElementComposition(IInternalCompositionAccess, IEngineeringCo
 
 class CompareResultState(Enum): # skipped bases: <type 'IConvertible'>, <type 'IComparable'>, <type 'IFormattable'>, <type 'object'>
     """
-    The list of possible states of a compare result
+    The list of possible states of a compare result
+
     enum CompareResultState, values: CompareIrrelevant (8), FolderContainsDifferencesOwnStateDifferent (2), FolderContentEqualOwnStateDifferent (3), FolderContentsDifferent (0), FolderContentsIdentical (1), LeftMissing (5), ObjectsDifferent (4), ObjectsIdentical (7), RightMissing (6)
     """
     CompareIrrelevant: CompareResultState = ...
@@ -175,5 +199,3 @@ class CompareResultState(Enum): # skipped bases: <type 'IConvertible'>, <type 'I
     ObjectsIdentical: CompareResultState = ...
     RightMissing: CompareResultState = ...
     value__ = ...
-
-

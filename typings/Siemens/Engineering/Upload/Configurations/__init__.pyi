@@ -10,9 +10,11 @@ from System import Enum, IEquatable
 
 from System.Security import SecureString
 
-"""The following names are not found in the module: (IInternalObjectAccess, 
+"""The following names are not found in the module: (IInternalObjectAccess,
     field#)
 """
+
+from Siemens import IInternalObjectAccess
 
 # no functions
 # classes
@@ -22,7 +24,8 @@ class UploadConfiguration(IEquatable, IEngineeringObject, IInternalObjectAccess)
     @property
     def Message(self) -> str:
         """
-        Descriptions of this onfiguration
+        Descriptions of this onfiguration
+
         Get: Message(self: UploadConfiguration) -> str
         """
         ...
@@ -30,7 +33,8 @@ class UploadConfiguration(IEquatable, IEngineeringObject, IInternalObjectAccess)
     @property
     def Parent(self) -> IEngineeringObject:
         """
-        EOM parent of this object
+        EOM parent of this object
+
         Get: Parent(self: UploadConfiguration) -> IEngineeringObject
         """
         ...
@@ -38,16 +42,20 @@ class UploadConfiguration(IEquatable, IEngineeringObject, IInternalObjectAccess)
 
     def GetHashCode(self) -> int:
         """
-        GetHashCode(self: UploadConfiguration) -> int
-            Returns a hash code for this instance.
+        GetHashCode(self: UploadConfiguration) -> int
+
+            Returns a hash code for this instance.
+
             Returns: A hash code for this instance, suitable for use in hashing algorithms and data structures like a hash table.
         """
         ...
 
     def ToString(self) -> str:
         """
-        ToString(self: UploadConfiguration) -> str
-            Returns a System.String that represents the current System.Object.
+        ToString(self: UploadConfiguration) -> str
+
+            Returns a System.String that represents the current System.Object.
+
             Returns: A System.String that represents the current System.Object.
         """
         ...
@@ -58,10 +66,12 @@ class UploadConfiguration(IEquatable, IEngineeringObject, IInternalObjectAccess)
 
 class UploadPasswordConfiguration(UploadConfiguration): # skipped bases: <type 'IInternalInstanceAccess'>, <type 'IEngineeringInstance'>, <type 'IEngineeringObject'>, <type 'IInternalObjectAccess'>, <type 'IEquatable[object]'>, <type 'IInternalBaseAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'object'>
     """ Upload password configuration. """
-    def SetPassword(self, password:SecureString): # -> 
+    def SetPassword(self, password:SecureString): # ->
         """
-        SetPassword(self: UploadPasswordConfiguration, password: SecureString)
-            Sets password
+        SetPassword(self: UploadPasswordConfiguration, password: SecureString)
+
+            Sets password
+
             password: Required password.
         """
         ...
@@ -88,8 +98,10 @@ class UploadMissingProducts(UploadSelectionConfiguration): # skipped bases: <typ
     @property
     def CurrentSelection(self) -> UploadMissingProductsSelections:
         """
-        Current selection for this configuration.
-        Get: CurrentSelection(self: UploadMissingProducts) -> UploadMissingProductsSelections
+        Current selection for this configuration.
+
+        Get: CurrentSelection(self: UploadMissingProducts) -> UploadMissingProductsSelections
+
         Set: CurrentSelection(self: UploadMissingProducts) = value
         """
         ...
@@ -98,11 +110,10 @@ class UploadMissingProducts(UploadSelectionConfiguration): # skipped bases: <typ
 
 class UploadMissingProductsSelections(Enum): # skipped bases: <type 'IConvertible'>, <type 'IComparable'>, <type 'IFormattable'>, <type 'object'>
     """
-    Available selections for UploadMissingProductsCategory configuration
+    Available selections for UploadMissingProductsCategory configuration
+
     enum UploadMissingProductsSelections, values: NoAction (0), TryUpload (1)
     """
     NoAction: UploadMissingProductsSelections = ...
     TryUpload: UploadMissingProductsSelections = ...
     value__ = ...
-
-

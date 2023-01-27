@@ -4,10 +4,10 @@
 # by generator 1.145
 """ no doc """
 from __future__ import annotations
-from Siemens.Engineering import (ExportOptions, IEngineeringComposition, 
+from Siemens.Engineering import (ExportOptions, IEngineeringComposition,
     IEngineeringObject, IEngineeringServiceProvider, ImportOptions)
 
-from Siemens.Engineering.Library.MasterCopies import (IMasterCopySource, 
+from Siemens.Engineering.Library.MasterCopies import (IMasterCopySource,
     IMasterCopyTarget, MasterCopy)
 
 from Siemens.Engineering.Library.Types import (
@@ -27,6 +27,8 @@ from System.IO import FileInfo
     IInternalCompositionAccess, IInternalObjectAccess)
 """
 
+from Siemens import IInternalCompositionAccess, IInternalObjectAccess
+
 # no functions
 # classes
 
@@ -35,7 +37,8 @@ class PlcType(IInternalObjectAccess, IEngineeringServiceProvider, IEngineeringOb
     @property
     def CreationDate(self) -> DateTime:
         """
-        Creation date of this Plc type
+        Creation date of this Plc type
+
         Get: CreationDate(self: PlcType) -> DateTime
         """
         ...
@@ -43,7 +46,8 @@ class PlcType(IInternalObjectAccess, IEngineeringServiceProvider, IEngineeringOb
     @property
     def InterfaceModifiedDate(self) -> DateTime:
         """
-        Get last breakable interface change of the PLC data type
+        Get last breakable interface change of the PLC data type
+
         Get: InterfaceModifiedDate(self: PlcType) -> DateTime
         """
         ...
@@ -51,7 +55,8 @@ class PlcType(IInternalObjectAccess, IEngineeringServiceProvider, IEngineeringOb
     @property
     def IsConsistent(self) -> bool:
         """
-        True if block and used data is consistent
+        True if block and used data is consistent
+
         Get: IsConsistent(self: PlcType) -> bool
         """
         ...
@@ -59,7 +64,8 @@ class PlcType(IInternalObjectAccess, IEngineeringServiceProvider, IEngineeringOb
     @property
     def IsKnowHowProtected(self) -> bool:
         """
-        Gets the know-how protection status of the block
+        Gets the know-how protection status of the block
+
         Get: IsKnowHowProtected(self: PlcType) -> bool
         """
         ...
@@ -67,7 +73,8 @@ class PlcType(IInternalObjectAccess, IEngineeringServiceProvider, IEngineeringOb
     @property
     def ModifiedDate(self) -> DateTime:
         """
-        Get the last non-breakable modification of the PLC data type
+        Get the last non-breakable modification of the PLC data type
+
         Get: ModifiedDate(self: PlcType) -> DateTime
         """
         ...
@@ -75,8 +82,10 @@ class PlcType(IInternalObjectAccess, IEngineeringServiceProvider, IEngineeringOb
     @property
     def Name(self) -> str:
         """
-        The name of the Plc type
-        Get: Name(self: PlcType) -> str
+        The name of the Plc type
+
+        Get: Name(self: PlcType) -> str
+
         Set: Name(self: PlcType) = value
         """
         ...
@@ -84,47 +93,57 @@ class PlcType(IInternalObjectAccess, IEngineeringServiceProvider, IEngineeringOb
     @property
     def Parent(self) -> IEngineeringObject:
         """
-        EOM parent of this object
+        EOM parent of this object
+
         Get: Parent(self: PlcType) -> IEngineeringObject
         """
         ...
 
 
-    def Delete(self): # -> 
+    def Delete(self): # ->
         """
-        Delete(self: PlcType)
+        Delete(self: PlcType)
+
             Deletes this instance.
         """
         ...
 
-    def Export(self, path:FileInfo, exportOptions:ExportOptions): # -> 
+    def Export(self, path:FileInfo, exportOptions:ExportOptions): # ->
         """
-        Export(self: PlcType, path: FileInfo, exportOptions: ExportOptions)
-            Simatic ML export of a Plc type
-            path: Path to the Simatic ML file
+        Export(self: PlcType, path: FileInfo, exportOptions: ExportOptions)
+
+            Simatic ML export of a Plc type
+
+            path: Path to the Simatic ML file
+
             exportOptions: Option to use for export (default, readonly, etc.)
         """
         ...
 
     def GetHashCode(self) -> int:
         """
-        GetHashCode(self: PlcType) -> int
-            Returns a hash code for this instance.
+        GetHashCode(self: PlcType) -> int
+
+            Returns a hash code for this instance.
+
             Returns: A hash code for this instance, suitable for use in hashing algorithms and data structures like a hash table.
         """
         ...
 
-    def ShowInEditor(self): # -> 
+    def ShowInEditor(self): # ->
         """
-        ShowInEditor(self: PlcType)
+        ShowInEditor(self: PlcType)
+
             Show the indicated item in the Plc type editor
         """
         ...
 
     def ToString(self) -> str:
         """
-        ToString(self: PlcType) -> str
-            Returns a System.String that represents the current System.Object.
+        ToString(self: PlcType) -> str
+
+            Returns a System.String that represents the current System.Object.
+
             Returns: A System.String that represents the current System.Object.
         """
         ...
@@ -142,7 +161,8 @@ class PlcSystemTypeGroup(IEquatable, IEngineeringObject, IInternalObjectAccess):
     @property
     def Name(self) -> str:
         """
-        The name of the Plc system type group
+        The name of the Plc system type group
+
         Get: Name(self: PlcSystemTypeGroup) -> str
         """
         ...
@@ -150,7 +170,8 @@ class PlcSystemTypeGroup(IEquatable, IEngineeringObject, IInternalObjectAccess):
     @property
     def Parent(self) -> IEngineeringObject:
         """
-        EOM parent of this object
+        EOM parent of this object
+
         Get: Parent(self: PlcSystemTypeGroup) -> IEngineeringObject
         """
         ...
@@ -158,7 +179,8 @@ class PlcSystemTypeGroup(IEquatable, IEngineeringObject, IInternalObjectAccess):
     @property
     def Types(self) -> PlcTypeComposition:
         """
-        Composition of Plc system types
+        Composition of Plc system types
+
         Get: Types(self: PlcSystemTypeGroup) -> PlcTypeComposition
         """
         ...
@@ -166,16 +188,20 @@ class PlcSystemTypeGroup(IEquatable, IEngineeringObject, IInternalObjectAccess):
 
     def GetHashCode(self) -> int:
         """
-        GetHashCode(self: PlcSystemTypeGroup) -> int
-            Returns a hash code for this instance.
+        GetHashCode(self: PlcSystemTypeGroup) -> int
+
+            Returns a hash code for this instance.
+
             Returns: A hash code for this instance, suitable for use in hashing algorithms and data structures like a hash table.
         """
         ...
 
     def ToString(self) -> str:
         """
-        ToString(self: PlcSystemTypeGroup) -> str
-            Returns a System.String that represents the current System.Object.
+        ToString(self: PlcSystemTypeGroup) -> str
+
+            Returns a System.String that represents the current System.Object.
+
             Returns: A System.String that represents the current System.Object.
         """
         ...
@@ -189,7 +215,8 @@ class PlcSystemTypeGroupComposition(IInternalCompositionAccess, IEngineeringComp
     @property
     def Parent(self) -> IEngineeringObject:
         """
-        Gets the parent.
+        Gets the parent.
+
         Get: Parent(self: PlcSystemTypeGroupComposition) -> IEngineeringObject
         """
         ...
@@ -197,16 +224,20 @@ class PlcSystemTypeGroupComposition(IInternalCompositionAccess, IEngineeringComp
 
     def GetHashCode(self) -> int:
         """
-        GetHashCode(self: PlcSystemTypeGroupComposition) -> int
-            Returns a hash code for this instance.
+        GetHashCode(self: PlcSystemTypeGroupComposition) -> int
+
+            Returns a hash code for this instance.
+
             Returns: A hash code for this instance, suitable for use in hashing algorithms and data structures like a hash table.
         """
         ...
 
     def ToString(self) -> str:
         """
-        ToString(self: PlcSystemTypeGroupComposition) -> str
-            Returns a System.String that represents the current System.Object.
+        ToString(self: PlcSystemTypeGroupComposition) -> str
+
+            Returns a System.String that represents the current System.Object.
+
             Returns: A System.String that represents the current System.Object.
         """
         ...
@@ -224,7 +255,8 @@ class PlcTypeComposition(IInternalCompositionAccess, IEngineeringComposition, IE
     @property
     def Parent(self) -> IEngineeringObject:
         """
-        Gets the parent.
+        Gets the parent.
+
         Get: Parent(self: PlcTypeComposition) -> IEngineeringObject
         """
         ...
@@ -232,54 +264,78 @@ class PlcTypeComposition(IInternalCompositionAccess, IEngineeringComposition, IE
 
     def CreateFrom(self, *__args:MasterCopy) -> PlcType:
         """
-        CreateFrom(self: PlcTypeComposition, sourceMasterCopy: MasterCopy) -> PlcType
-            Create PlcType from MasterCopy
-            sourceMasterCopy: The source master copy
-            Returns: Siemens.Engineering.SW.Types.PlcType
-        CreateFrom(self: PlcTypeComposition, libraryTypeVersion: PlcTypeLibraryTypeVersion) -> PlcType
-            Create plc type from type version
-            libraryTypeVersion: Library type version
+        CreateFrom(self: PlcTypeComposition, sourceMasterCopy: MasterCopy) -> PlcType
+
+            Create PlcType from MasterCopy
+
+            sourceMasterCopy: The source master copy
+
+            Returns: Siemens.Engineering.SW.Types.PlcType
+
+        CreateFrom(self: PlcTypeComposition, libraryTypeVersion: PlcTypeLibraryTypeVersion) -> PlcType
+
+            Create plc type from type version
+
+            libraryTypeVersion: Library type version
+
             Returns: Siemens.Engineering.SW.Types.PlcType
         """
         ...
 
     def Find(self, name:str) -> PlcType:
         """
-        Find(self: PlcTypeComposition, name: str) -> PlcType
-            Finds a given Plc type
-            name: Name to find
+        Find(self: PlcTypeComposition, name: str) -> PlcType
+
+            Finds a given Plc type
+
+            name: Name to find
+
             Returns: Siemens.Engineering.SW.Types.PlcType
         """
         ...
 
     def GetHashCode(self) -> int:
         """
-        GetHashCode(self: PlcTypeComposition) -> int
-            Returns a hash code for this instance.
+        GetHashCode(self: PlcTypeComposition) -> int
+
+            Returns a hash code for this instance.
+
             Returns: A hash code for this instance, suitable for use in hashing algorithms and data structures like a hash table.
         """
         ...
 
     def Import(self, path:FileInfo, importOptions:ImportOptions, swImportOptions:SWImportOptions = ...) -> IList:
         """
-        Import(self: PlcTypeComposition, path: FileInfo, importOptions: ImportOptions) -> IList[PlcType]
-            Simatic ML import of a Plc type
-            path: Path to the Simatic ML file
-            importOptions: Options to use for Import
-            Returns: System.Collections.Generic.IList<Siemens.Engineering.SW.Types.PlcType>
-        Import(self: PlcTypeComposition, path: FileInfo, importOptions: ImportOptions, swImportOptions: SWImportOptions) -> IList[PlcType]
-            Simatic ML import of a Plc type
-            path: Path to the Simatic ML file
-            importOptions: Options to use for Import
-            swImportOptions: Sw import options to use for Import
+        Import(self: PlcTypeComposition, path: FileInfo, importOptions: ImportOptions) -> IList[PlcType]
+
+            Simatic ML import of a Plc type
+
+            path: Path to the Simatic ML file
+
+            importOptions: Options to use for Import
+
+            Returns: System.Collections.Generic.IList<Siemens.Engineering.SW.Types.PlcType>
+
+        Import(self: PlcTypeComposition, path: FileInfo, importOptions: ImportOptions, swImportOptions: SWImportOptions) -> IList[PlcType]
+
+            Simatic ML import of a Plc type
+
+            path: Path to the Simatic ML file
+
+            importOptions: Options to use for Import
+
+            swImportOptions: Sw import options to use for Import
+
             Returns: System.Collections.Generic.IList<Siemens.Engineering.SW.Types.PlcType>
         """
         ...
 
     def ToString(self) -> str:
         """
-        ToString(self: PlcTypeComposition) -> str
-            Returns a System.String that represents the current System.Object.
+        ToString(self: PlcTypeComposition) -> str
+
+            Returns a System.String that represents the current System.Object.
+
             Returns: A System.String that represents the current System.Object.
         """
         ...
@@ -297,7 +353,8 @@ class PlcTypeGroup(IEquatable, IEngineeringObject, IEngineeringServiceProvider, 
     @property
     def Groups(self) -> PlcTypeUserGroupComposition:
         """
-        Composition of Plc type user groups
+        Composition of Plc type user groups
+
         Get: Groups(self: PlcTypeGroup) -> PlcTypeUserGroupComposition
         """
         ...
@@ -305,7 +362,8 @@ class PlcTypeGroup(IEquatable, IEngineeringObject, IEngineeringServiceProvider, 
     @property
     def Name(self) -> str:
         """
-        The name of the Plc type group
+        The name of the Plc type group
+
         Get: Name(self: PlcTypeGroup) -> str
         """
         ...
@@ -313,7 +371,8 @@ class PlcTypeGroup(IEquatable, IEngineeringObject, IEngineeringServiceProvider, 
     @property
     def Parent(self) -> IEngineeringObject:
         """
-        EOM parent of this object
+        EOM parent of this object
+
         Get: Parent(self: PlcTypeGroup) -> IEngineeringObject
         """
         ...
@@ -321,7 +380,8 @@ class PlcTypeGroup(IEquatable, IEngineeringObject, IEngineeringServiceProvider, 
     @property
     def Types(self) -> PlcTypeComposition:
         """
-        Composition of Plc types
+        Composition of Plc types
+
         Get: Types(self: PlcTypeGroup) -> PlcTypeComposition
         """
         ...
@@ -329,16 +389,20 @@ class PlcTypeGroup(IEquatable, IEngineeringObject, IEngineeringServiceProvider, 
 
     def GetHashCode(self) -> int:
         """
-        GetHashCode(self: PlcTypeGroup) -> int
-            Returns a hash code for this instance.
+        GetHashCode(self: PlcTypeGroup) -> int
+
+            Returns a hash code for this instance.
+
             Returns: A hash code for this instance, suitable for use in hashing algorithms and data structures like a hash table.
         """
         ...
 
     def ToString(self) -> str:
         """
-        ToString(self: PlcTypeGroup) -> str
-            Returns a System.String that represents the current System.Object.
+        ToString(self: PlcTypeGroup) -> str
+
+            Returns a System.String that represents the current System.Object.
+
             Returns: A System.String that represents the current System.Object.
         """
         ...
@@ -360,7 +424,8 @@ class PlcTypeSystemGroup(ILibraryTypeInstantiationTarget, IMasterCopyTarget, Plc
     @property
     def SystemTypeGroups(self) -> PlcSystemTypeGroupComposition:
         """
-        Composition of system data types
+        Composition of system data types
+
         Get: SystemTypeGroups(self: PlcTypeSystemGroup) -> PlcSystemTypeGroupComposition
         """
         ...
@@ -369,9 +434,10 @@ class PlcTypeSystemGroup(ILibraryTypeInstantiationTarget, IMasterCopyTarget, Plc
 
 class PlcTypeUserGroup(ILibraryTypeInstantiationTarget, IMasterCopySource, PlcTypeGroup, IMasterCopyTarget): # skipped bases: <type 'IInternalInstanceAccess'>, <type 'IEngineeringServiceProvider'>, <type 'IEngineeringInstance'>, <type 'IServiceProvider'>, <type 'IEngineeringObject'>, <type 'IInternalObjectAccess'>, <type 'IEquatable[object]'>, <type 'IInternalBaseAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'object'>
     """ User group containing Plc types & Plc type user groups """
-    def Delete(self): # -> 
+    def Delete(self): # ->
         """
-        Delete(self: PlcTypeUserGroup)
+        Delete(self: PlcTypeUserGroup)
+
             Deletes this instance.
         """
         ...
@@ -382,7 +448,8 @@ class PlcTypeUserGroupComposition(IInternalCompositionAccess, IEngineeringCompos
     @property
     def Parent(self) -> IEngineeringObject:
         """
-        Gets the parent.
+        Gets the parent.
+
         Get: Parent(self: PlcTypeUserGroupComposition) -> IEngineeringObject
         """
         ...
@@ -390,34 +457,44 @@ class PlcTypeUserGroupComposition(IInternalCompositionAccess, IEngineeringCompos
 
     def CreateFrom(self, sourceMasterCopy:MasterCopy) -> PlcTypeUserGroup:
         """
-        CreateFrom(self: PlcTypeUserGroupComposition, sourceMasterCopy: MasterCopy) -> PlcTypeUserGroup
-            Create PlcTypeUserGroup from MasterCopy
-            sourceMasterCopy: The source master copy
+        CreateFrom(self: PlcTypeUserGroupComposition, sourceMasterCopy: MasterCopy) -> PlcTypeUserGroup
+
+            Create PlcTypeUserGroup from MasterCopy
+
+            sourceMasterCopy: The source master copy
+
             Returns: Siemens.Engineering.SW.Types.PlcTypeUserGroup
         """
         ...
 
     def Find(self, name:str) -> PlcTypeUserGroup:
         """
-        Find(self: PlcTypeUserGroupComposition, name: str) -> PlcTypeUserGroup
-            Finds a given Plc type user group
-            name: Name to find
+        Find(self: PlcTypeUserGroupComposition, name: str) -> PlcTypeUserGroup
+
+            Finds a given Plc type user group
+
+            name: Name to find
+
             Returns: Siemens.Engineering.SW.Types.PlcTypeUserGroup
         """
         ...
 
     def GetHashCode(self) -> int:
         """
-        GetHashCode(self: PlcTypeUserGroupComposition) -> int
-            Returns a hash code for this instance.
+        GetHashCode(self: PlcTypeUserGroupComposition) -> int
+
+            Returns a hash code for this instance.
+
             Returns: A hash code for this instance, suitable for use in hashing algorithms and data structures like a hash table.
         """
         ...
 
     def ToString(self) -> str:
         """
-        ToString(self: PlcTypeUserGroupComposition) -> str
-            Returns a System.String that represents the current System.Object.
+        ToString(self: PlcTypeUserGroupComposition) -> str
+
+            Returns a System.String that represents the current System.Object.
+
             Returns: A System.String that represents the current System.Object.
         """
         ...
@@ -428,5 +505,3 @@ class PlcTypeUserGroupComposition(IInternalCompositionAccess, IEngineeringCompos
 
     def __ne__(self, *args): #cannot find CLR method
         ...
-
-

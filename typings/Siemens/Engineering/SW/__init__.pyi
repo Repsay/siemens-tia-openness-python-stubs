@@ -4,14 +4,14 @@
 # by generator 1.145
 """ no doc """
 from __future__ import annotations
-from Siemens.Engineering import (IEngineeringObject, IEngineeringService, 
+from Siemens.Engineering import (IEngineeringObject, IEngineeringService,
     IEngineeringServiceProvider)
 
 from Siemens.Engineering.Compare import CompareResult
 
 from Siemens.Engineering.HW import Software
 
-from Siemens.Engineering.Library.Types import (IInstanceSearchScope, 
+from Siemens.Engineering.Library.Types import (IInstanceSearchScope,
     IUpdateProjectScope)
 
 from Siemens.Engineering.SW.Blocks import PlcBlockSystemGroup
@@ -33,9 +33,11 @@ from System import Enum, IEquatable
 
 from System.Collections import IList
 
-"""The following names are not found in the module: (IInternalObjectAccess, 
+"""The following names are not found in the module: (IInternalObjectAccess,
     field#)
 """
+
+from Siemens import IInternalObjectAccess
 
 # no functions
 # classes
@@ -45,7 +47,8 @@ class Fingerprint(IEquatable, IEngineeringObject, IInternalObjectAccess): # skip
     @property
     def Id(self) -> FingerprintId:
         """
-        ID of the fingerprint
+        ID of the fingerprint
+
         Get: Id(self: Fingerprint) -> FingerprintId
         """
         ...
@@ -53,7 +56,8 @@ class Fingerprint(IEquatable, IEngineeringObject, IInternalObjectAccess): # skip
     @property
     def Parent(self) -> IEngineeringObject:
         """
-        EOM parent of this object
+        EOM parent of this object
+
         Get: Parent(self: Fingerprint) -> IEngineeringObject
         """
         ...
@@ -61,7 +65,8 @@ class Fingerprint(IEquatable, IEngineeringObject, IInternalObjectAccess): # skip
     @property
     def Value(self) -> str:
         """
-        fingerprint data
+        fingerprint data
+
         Get: Value(self: Fingerprint) -> str
         """
         ...
@@ -69,16 +74,20 @@ class Fingerprint(IEquatable, IEngineeringObject, IInternalObjectAccess): # skip
 
     def GetHashCode(self) -> int:
         """
-        GetHashCode(self: Fingerprint) -> int
-            Returns a hash code for this instance.
+        GetHashCode(self: Fingerprint) -> int
+
+            Returns a hash code for this instance.
+
             Returns: A hash code for this instance, suitable for use in hashing algorithms and data structures like a hash table.
         """
         ...
 
     def ToString(self) -> str:
         """
-        ToString(self: Fingerprint) -> str
-            Returns a System.String that represents the current System.Object.
+        ToString(self: Fingerprint) -> str
+
+            Returns a System.String that represents the current System.Object.
+
             Returns: A System.String that represents the current System.Object.
         """
         ...
@@ -89,7 +98,8 @@ class Fingerprint(IEquatable, IEngineeringObject, IInternalObjectAccess): # skip
 
 class FingerprintId(Enum): # skipped bases: <type 'IConvertible'>, <type 'IComparable'>, <type 'IFormattable'>, <type 'object'>
     """
-    fingerprint id
+    fingerprint id
+
     enum FingerprintId, values: Alarms (5), Code (0), Comments (1), Events (8), Interface (2), LibraryType (3), Properties (10), Supervisions (6), TechnologyObject (7), Texts (4), TextualInterface (9)
     """
     Alarms: FingerprintId = ...
@@ -111,7 +121,8 @@ class FingerprintProvider(IEquatable, IEngineeringObject, IEngineeringService, I
     @property
     def Parent(self) -> IEngineeringObject:
         """
-        EOM parent of this object
+        EOM parent of this object
+
         Get: Parent(self: FingerprintProvider) -> IEngineeringObject
         """
         ...
@@ -119,24 +130,30 @@ class FingerprintProvider(IEquatable, IEngineeringObject, IEngineeringService, I
 
     def GetFingerprints(self) -> IList:
         """
-        GetFingerprints(self: FingerprintProvider) -> IList[Fingerprint]
-            Read Fingerprint
+        GetFingerprints(self: FingerprintProvider) -> IList[Fingerprint]
+
+            Read Fingerprint
+
             Returns: System.Collections.Generic.IList<Siemens.Engineering.SW.Fingerprint>
         """
         ...
 
     def GetHashCode(self) -> int:
         """
-        GetHashCode(self: FingerprintProvider) -> int
-            Returns a hash code for this instance.
+        GetHashCode(self: FingerprintProvider) -> int
+
+            Returns a hash code for this instance.
+
             Returns: A hash code for this instance, suitable for use in hashing algorithms and data structures like a hash table.
         """
         ...
 
     def ToString(self) -> str:
         """
-        ToString(self: FingerprintProvider) -> str
-            Returns a System.String that represents the current System.Object.
+        ToString(self: FingerprintProvider) -> str
+
+            Returns a System.String that represents the current System.Object.
+
             Returns: A System.String that represents the current System.Object.
         """
         ...
@@ -154,7 +171,8 @@ class PlcChecksumProvider(IEquatable, IEngineeringObject, IEngineeringService, I
     @property
     def Parent(self) -> IEngineeringObject:
         """
-        EOM parent of this object
+        EOM parent of this object
+
         Get: Parent(self: PlcChecksumProvider) -> IEngineeringObject
         """
         ...
@@ -162,7 +180,8 @@ class PlcChecksumProvider(IEquatable, IEngineeringObject, IEngineeringService, I
     @property
     def Software(self) -> str:
         """
-        Software checksum
+        Software checksum
+
         Get: Software(self: PlcChecksumProvider) -> str
         """
         ...
@@ -170,16 +189,20 @@ class PlcChecksumProvider(IEquatable, IEngineeringObject, IEngineeringService, I
 
     def GetHashCode(self) -> int:
         """
-        GetHashCode(self: PlcChecksumProvider) -> int
-            Returns a hash code for this instance.
+        GetHashCode(self: PlcChecksumProvider) -> int
+
+            Returns a hash code for this instance.
+
             Returns: A hash code for this instance, suitable for use in hashing algorithms and data structures like a hash table.
         """
         ...
 
     def ToString(self) -> str:
         """
-        ToString(self: PlcChecksumProvider) -> str
-            Returns a System.String that represents the current System.Object.
+        ToString(self: PlcChecksumProvider) -> str
+
+            Returns a System.String that represents the current System.Object.
+
             Returns: A System.String that represents the current System.Object.
         """
         ...
@@ -193,7 +216,8 @@ class PlcSoftware(IInstanceSearchScope, IUpdateProjectScope, IEngineeringService
     @property
     def BlockGroup(self) -> PlcBlockSystemGroup:
         """
-        Gets the Plc block system group
+        Gets the Plc block system group
+
         Get: BlockGroup(self: PlcSoftware) -> PlcBlockSystemGroup
         """
         ...
@@ -201,7 +225,8 @@ class PlcSoftware(IInstanceSearchScope, IUpdateProjectScope, IEngineeringService
     @property
     def ExternalSourceGroup(self) -> PlcExternalSourceSystemGroup:
         """
-        Gets the Plc external source system group
+        Gets the Plc external source system group
+
         Get: ExternalSourceGroup(self: PlcSoftware) -> PlcExternalSourceSystemGroup
         """
         ...
@@ -209,7 +234,8 @@ class PlcSoftware(IInstanceSearchScope, IUpdateProjectScope, IEngineeringService
     @property
     def TagTableGroup(self) -> PlcTagTableSystemGroup:
         """
-        Get the Plc tag table system group
+        Get the Plc tag table system group
+
         Get: TagTableGroup(self: PlcSoftware) -> PlcTagTableSystemGroup
         """
         ...
@@ -217,7 +243,8 @@ class PlcSoftware(IInstanceSearchScope, IUpdateProjectScope, IEngineeringService
     @property
     def TechnologicalObjectGroup(self) -> TechnologicalInstanceDBGroup:
         """
-        This system folder can contain technological objects
+        This system folder can contain technological objects
+
         Get: TechnologicalObjectGroup(self: PlcSoftware) -> TechnologicalInstanceDBGroup
         """
         ...
@@ -225,7 +252,8 @@ class PlcSoftware(IInstanceSearchScope, IUpdateProjectScope, IEngineeringService
     @property
     def TypeGroup(self) -> PlcTypeSystemGroup:
         """
-        Gets Plc type system group
+        Gets Plc type system group
+
         Get: TypeGroup(self: PlcSoftware) -> PlcTypeSystemGroup
         """
         ...
@@ -233,7 +261,8 @@ class PlcSoftware(IInstanceSearchScope, IUpdateProjectScope, IEngineeringService
     @property
     def WatchAndForceTableGroup(self) -> PlcWatchAndForceTableSystemGroup:
         """
-        Get the Plc watch table system group
+        Get the Plc watch table system group
+
         Get: WatchAndForceTableGroup(self: PlcSoftware) -> PlcWatchAndForceTableSystemGroup
         """
         ...
@@ -241,17 +270,22 @@ class PlcSoftware(IInstanceSearchScope, IUpdateProjectScope, IEngineeringService
 
     def CompareTo(self, compareTarget:ISoftwareCompareTarget) -> CompareResult:
         """
-        CompareTo(self: PlcSoftware, compareTarget: ISoftwareCompareTarget) -> CompareResult
-            Compare the PLC software to the given target
-            compareTarget: The target to compare to the PLC software
+        CompareTo(self: PlcSoftware, compareTarget: ISoftwareCompareTarget) -> CompareResult
+
+            Compare the PLC software to the given target
+
+            compareTarget: The target to compare to the PLC software
+
             Returns: Siemens.Engineering.Compare.CompareResult
         """
         ...
 
     def CompareToOnline(self) -> CompareResult:
         """
-        CompareToOnline(self: PlcSoftware) -> CompareResult
-            Compare the PLC software to the online target
+        CompareToOnline(self: PlcSoftware) -> CompareResult
+
+            Compare the PLC software to the online target
+
             Returns: Siemens.Engineering.Compare.CompareResult
         """
         ...
@@ -259,7 +293,8 @@ class PlcSoftware(IInstanceSearchScope, IUpdateProjectScope, IEngineeringService
 
 class SWImportOptions(Enum): # skipped bases: <type 'IConvertible'>, <type 'IComparable'>, <type 'IFormattable'>, <type 'object'>
     """
-    The list of possible sw importoptions for Import
+    The list of possible sw importoptions for Import
+
     enum (flags) SWImportOptions, values: IgnoreMissingReferencedObjects (2), IgnoreStructuralChanges (1), None (0)
     """
     IgnoreMissingReferencedObjects: SWImportOptions = ...
@@ -268,4 +303,3 @@ class SWImportOptions(Enum): # skipped bases: <type 'IConvertible'>, <type 'ICom
 
 
 # variables with complex values
-

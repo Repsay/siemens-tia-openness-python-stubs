@@ -4,15 +4,15 @@
 # by generator 1.145
 """ no doc """
 from __future__ import annotations
-from Siemens.Engineering import (IEngineeringAssociation, 
+from Siemens.Engineering import (IEngineeringAssociation,
     IEngineeringComposition, IEngineeringObject, IEngineeringServiceProvider)
 
 from Siemens.Engineering.Compare import CompareResult
 
-from Siemens.Engineering.HW.Features import (AddressControllerAssociation, 
+from Siemens.Engineering.HW.Features import (AddressControllerAssociation,
     HwIdentifierControllerAssociation)
 
-from Siemens.Engineering.Library.MasterCopies import (IMasterCopySource, 
+from Siemens.Engineering.Library.MasterCopies import (IMasterCopySource,
     IMasterCopyTarget, MasterCopy)
 
 from Siemens.Engineering.SW.Blocks import OB
@@ -22,9 +22,11 @@ from System import Enum, IEquatable, Int64
 from System.Collections import IList
 
 """The following names are not found in the module: (
-    IInternalAssociationAccess, IInternalCompositionAccess, 
+    IInternalAssociationAccess, IInternalCompositionAccess,
     IInternalObjectAccess, field#)
 """
+
+from Siemens import IInternalAssociationAccess, IInternalCompositionAccess, IInternalObjectAccess
 
 # no functions
 # classes
@@ -34,7 +36,8 @@ class Address(IEquatable, IEngineeringObject, IInternalObjectAccess): # skipped 
     @property
     def AddressControllers(self) -> AddressControllerAssociation:
         """
-        Address's associated AddressControllers
+        Address's associated AddressControllers
+
         Get: AddressControllers(self: Address) -> AddressControllerAssociation
         """
         ...
@@ -42,7 +45,8 @@ class Address(IEquatable, IEngineeringObject, IInternalObjectAccess): # skipped 
     @property
     def IoType(self) -> AddressIoType:
         """
-        The IO type of the address
+        The IO type of the address
+
         Get: IoType(self: Address) -> AddressIoType
         """
         ...
@@ -50,8 +54,10 @@ class Address(IEquatable, IEngineeringObject, IInternalObjectAccess): # skipped 
     @property
     def Length(self) -> int:
         """
-        Length of the address
-        Get: Length(self: Address) -> int
+        Length of the address
+
+        Get: Length(self: Address) -> int
+
         Set: Length(self: Address) = value
         """
         ...
@@ -59,7 +65,8 @@ class Address(IEquatable, IEngineeringObject, IInternalObjectAccess): # skipped 
     @property
     def Parent(self) -> IEngineeringObject:
         """
-        EOM parent of this object
+        EOM parent of this object
+
         Get: Parent(self: Address) -> IEngineeringObject
         """
         ...
@@ -67,33 +74,41 @@ class Address(IEquatable, IEngineeringObject, IInternalObjectAccess): # skipped 
     @property
     def StartAddress(self) -> int:
         """
-        The start address of this address
-        Get: StartAddress(self: Address) -> int
+        The start address of this address
+
+        Get: StartAddress(self: Address) -> int
+
         Set: StartAddress(self: Address) = value
         """
         ...
 
 
-    def AssignProcessImageToOrganizationBlock(self, organizationBlock:OB): # -> 
+    def AssignProcessImageToOrganizationBlock(self, organizationBlock:OB): # ->
         """
-        AssignProcessImageToOrganizationBlock(self: Address, organizationBlock: OB)
-            Assign the current process image to the OB.
+        AssignProcessImageToOrganizationBlock(self: Address, organizationBlock: OB)
+
+            Assign the current process image to the OB.
+
             organizationBlock: The organizational block to assign.
         """
         ...
 
     def GetHashCode(self) -> int:
         """
-        GetHashCode(self: Address) -> int
-            Returns a hash code for this instance.
+        GetHashCode(self: Address) -> int
+
+            Returns a hash code for this instance.
+
             Returns: A hash code for this instance, suitable for use in hashing algorithms and data structures like a hash table.
         """
         ...
 
     def ToString(self) -> str:
         """
-        ToString(self: Address) -> str
-            Returns a System.String that represents the current System.Object.
+        ToString(self: Address) -> str
+
+            Returns a System.String that represents the current System.Object.
+
             Returns: A System.String that represents the current System.Object.
         """
         ...
@@ -107,7 +122,8 @@ class AddressAssociation(IEquatable, IEngineeringAssociation, IInternalAssociati
     @property
     def Parent(self) -> IEngineeringObject:
         """
-        Gets the parent..
+        Gets the parent..
+
         Get: Parent(self: AddressAssociation) -> IEngineeringObject
         """
         ...
@@ -115,16 +131,20 @@ class AddressAssociation(IEquatable, IEngineeringAssociation, IInternalAssociati
 
     def GetHashCode(self) -> int:
         """
-        GetHashCode(self: AddressAssociation) -> int
-            Returns a hash code for this instance.
+        GetHashCode(self: AddressAssociation) -> int
+
+            Returns a hash code for this instance.
+
             Returns: A hash code for this instance, suitable for use in hashing algorithms and data structures like a hash table.
         """
         ...
 
     def ToString(self) -> str:
         """
-        ToString(self: AddressAssociation) -> str
-            Returns a System.String that represents the current System.Object.
+        ToString(self: AddressAssociation) -> str
+
+            Returns a System.String that represents the current System.Object.
+
             Returns: A System.String that represents the current System.Object.
         """
         ...
@@ -142,7 +162,8 @@ class AddressComposition(IInternalCompositionAccess, IEngineeringComposition, IE
     @property
     def Parent(self) -> IEngineeringObject:
         """
-        Gets the parent.
+        Gets the parent.
+
         Get: Parent(self: AddressComposition) -> IEngineeringObject
         """
         ...
@@ -150,16 +171,20 @@ class AddressComposition(IInternalCompositionAccess, IEngineeringComposition, IE
 
     def GetHashCode(self) -> int:
         """
-        GetHashCode(self: AddressComposition) -> int
-            Returns a hash code for this instance.
+        GetHashCode(self: AddressComposition) -> int
+
+            Returns a hash code for this instance.
+
             Returns: A hash code for this instance, suitable for use in hashing algorithms and data structures like a hash table.
         """
         ...
 
     def ToString(self) -> str:
         """
-        ToString(self: AddressComposition) -> str
-            Returns a System.String that represents the current System.Object.
+        ToString(self: AddressComposition) -> str
+
+            Returns a System.String that represents the current System.Object.
+
             Returns: A System.String that represents the current System.Object.
         """
         ...
@@ -174,7 +199,8 @@ class AddressComposition(IInternalCompositionAccess, IEngineeringComposition, IE
 
 class AddressContext(Enum): # skipped bases: <type 'IConvertible'>, <type 'IComparable'>, <type 'IFormattable'>, <type 'object'>
     """
-    AddressContext of an address
+    AddressContext of an address
+
     enum AddressContext, values: Device (1), Head (2), None (0)
     """
     Device: AddressContext = ...
@@ -184,7 +210,8 @@ class AddressContext(Enum): # skipped bases: <type 'IConvertible'>, <type 'IComp
 
 class AddressIoType(Enum): # skipped bases: <type 'IConvertible'>, <type 'IComparable'>, <type 'IFormattable'>, <type 'object'>
     """
-    Address IO type
+    Address IO type
+
     enum AddressIoType, values: Diagnosis (64), Input (1), None (0), Output (2), Substitute (16)
     """
     Diagnosis: AddressIoType = ...
@@ -196,7 +223,8 @@ class AddressIoType(Enum): # skipped bases: <type 'IConvertible'>, <type 'ICompa
 
 class ApplicationControlFunction(Enum): # skipped bases: <type 'IConvertible'>, <type 'IComparable'>, <type 'IFormattable'>, <type 'object'>
     """
-    Possible values for property ApplicationControlFunction
+    Possible values for property ApplicationControlFunction
+
     enum ApplicationControlFunction, values: DahlanderReversingStarter (49), DahlanderStarter (48), DirectStarter (16), MoldedCaseCircuitBreaker (18), OverloadRelay (0), PoleChangingReversingStarter (65), PoleChangingStarter (64), Positioner1 (96), Positioner2 (97), Positioner3 (98), Positioner4 (99), Positioner5 (100), ReversingStarter (17), SoftStarter (112), SoftStarterWithReversingContactor (113), SolenoidValve (80), StarDeltaReversingStarter (33), StarDeltaStarter (32)
     """
     DahlanderReversingStarter: ApplicationControlFunction = ...
@@ -222,7 +250,8 @@ class ApplicationControlFunction(Enum): # skipped bases: <type 'IConvertible'>, 
 
 class BasicType(Enum): # skipped bases: <type 'IConvertible'>, <type 'IComparable'>, <type 'IFormattable'>, <type 'object'>
     """
-    Possible values for property BasicType
+    Possible values for property BasicType
+
     enum BasicType, values: None (0), Value1 (1), Value2 (2), Value3 (3)
     """
     Value1: BasicType = ...
@@ -233,7 +262,8 @@ class BasicType(Enum): # skipped bases: <type 'IConvertible'>, <type 'IComparabl
 
 class BaudRate(Enum): # skipped bases: <type 'IConvertible'>, <type 'IComparable'>, <type 'IFormattable'>, <type 'object'>
     """
-    Devices baud rate
+    Devices baud rate
+
     enum BaudRate, values: Baud12000000 (10), Baud1500000 (7), Baud187500 (5), Baud19200 (2), Baud3000000 (8), Baud45450 (3), Baud500000 (6), Baud6000000 (9), Baud93750 (4), Baud9600 (1), None (0)
     """
     Baud12000000: BaudRate = ...
@@ -251,7 +281,8 @@ class BaudRate(Enum): # skipped bases: <type 'IConvertible'>, <type 'IComparable
 
 class BusProfile(Enum): # skipped bases: <type 'IConvertible'>, <type 'IComparable'>, <type 'IFormattable'>, <type 'object'>
     """
-    BusProfile
+    BusProfile
+
     enum BusProfile, values: Dp (1), None (0), Standard (2), Universal (3), UserDefined (4)
     """
     Dp: BusProfile = ...
@@ -263,7 +294,8 @@ class BusProfile(Enum): # skipped bases: <type 'IConvertible'>, <type 'IComparab
 
 class CableLength(Enum): # skipped bases: <type 'IConvertible'>, <type 'IComparable'>, <type 'IFormattable'>, <type 'object'>
     """
-    Possible values for property CableLength
+    Possible values for property CableLength
+
     enum CableLength, values: Length1000m (6000), Length100m (600), Length20m (120), Length3000m (18000), Length50m (300), None (0)
     """
     Length1000m: CableLength = ...
@@ -276,7 +308,8 @@ class CableLength(Enum): # skipped bases: <type 'IConvertible'>, <type 'ICompara
 
 class CableName(Enum): # skipped bases: <type 'IConvertible'>, <type 'IComparable'>, <type 'IFormattable'>, <type 'object'>
     """
-    Cable Name
+    Cable Name
+
     enum CableName, values: Flexible_FO_Cable_62_5 (12884901890), Flexible_FO_Cable_9 (4294967298), FO_Ground_Cable (8589934595), FO_Standard_Cable_62_5 (12884901889), FO_Standard_Cable_9 (4294967297), FO_Standard_Cable_GP_50 (8589934593), FO_Trailing_Cable_GP (8589934594), GI_PCF_Standard_Cable (34359738369), GI_PCF_Trailing_Cable (34359738370), GI_POF_Standard_Cable (30064771073), GI_POF_Trailing_Cable (30064771074), None (0), PCF_Standard_Cable_GP (21474836481), PCF_Trailing_Cable_GP (21474836482), POF_Standard_Cable_GP (17179869185), POF_Trailing_Cable (17179869186)
     """
     Flexible_FO_Cable_62_5: CableName = ...
@@ -302,7 +335,8 @@ class Channel(IEquatable, IEngineeringObject, IInternalObjectAccess): # skipped 
     @property
     def IoType(self) -> ChannelIoType:
         """
-        The IO type of the channel
+        The IO type of the channel
+
         Get: IoType(self: Channel) -> ChannelIoType
         """
         ...
@@ -310,7 +344,8 @@ class Channel(IEquatable, IEngineeringObject, IInternalObjectAccess): # skipped 
     @property
     def Number(self) -> int:
         """
-        The number of this channel
+        The number of this channel
+
         Get: Number(self: Channel) -> int
         """
         ...
@@ -318,7 +353,8 @@ class Channel(IEquatable, IEngineeringObject, IInternalObjectAccess): # skipped 
     @property
     def Parent(self) -> IEngineeringObject:
         """
-        EOM parent of this object
+        EOM parent of this object
+
         Get: Parent(self: Channel) -> IEngineeringObject
         """
         ...
@@ -326,7 +362,8 @@ class Channel(IEquatable, IEngineeringObject, IInternalObjectAccess): # skipped 
     @property
     def Type(self) -> ChannelType:
         """
-        The type of this channel
+        The type of this channel
+
         Get: Type(self: Channel) -> ChannelType
         """
         ...
@@ -334,16 +371,20 @@ class Channel(IEquatable, IEngineeringObject, IInternalObjectAccess): # skipped 
 
     def GetHashCode(self) -> int:
         """
-        GetHashCode(self: Channel) -> int
-            Returns a hash code for this instance.
+        GetHashCode(self: Channel) -> int
+
+            Returns a hash code for this instance.
+
             Returns: A hash code for this instance, suitable for use in hashing algorithms and data structures like a hash table.
         """
         ...
 
     def ToString(self) -> str:
         """
-        ToString(self: Channel) -> str
-            Returns a System.String that represents the current System.Object.
+        ToString(self: Channel) -> str
+
+            Returns a System.String that represents the current System.Object.
+
             Returns: A System.String that represents the current System.Object.
         """
         ...
@@ -357,7 +398,8 @@ class ChannelComposition(IInternalCompositionAccess, IEngineeringComposition, IE
     @property
     def Parent(self) -> IEngineeringObject:
         """
-        Gets the parent.
+        Gets the parent.
+
         Get: Parent(self: ChannelComposition) -> IEngineeringObject
         """
         ...
@@ -365,27 +407,36 @@ class ChannelComposition(IInternalCompositionAccess, IEngineeringComposition, IE
 
     def Find(self, type:ChannelType, ioType:ChannelIoType, number:int) -> Channel:
         """
-        Find(self: ChannelComposition, type: ChannelType, ioType: ChannelIoType, number: int) -> Channel
-            Finds a given channel
-            type: Type to find
-            ioType: IoType to find
-            number: Number to find
+        Find(self: ChannelComposition, type: ChannelType, ioType: ChannelIoType, number: int) -> Channel
+
+            Finds a given channel
+
+            type: Type to find
+
+            ioType: IoType to find
+
+            number: Number to find
+
             Returns: Siemens.Engineering.HW.Channel
         """
         ...
 
     def GetHashCode(self) -> int:
         """
-        GetHashCode(self: ChannelComposition) -> int
-            Returns a hash code for this instance.
+        GetHashCode(self: ChannelComposition) -> int
+
+            Returns a hash code for this instance.
+
             Returns: A hash code for this instance, suitable for use in hashing algorithms and data structures like a hash table.
         """
         ...
 
     def ToString(self) -> str:
         """
-        ToString(self: ChannelComposition) -> str
-            Returns a System.String that represents the current System.Object.
+        ToString(self: ChannelComposition) -> str
+
+            Returns a System.String that represents the current System.Object.
+
             Returns: A System.String that represents the current System.Object.
         """
         ...
@@ -400,7 +451,8 @@ class ChannelComposition(IInternalCompositionAccess, IEngineeringComposition, IE
 
 class ChannelIoType(Enum): # skipped bases: <type 'IConvertible'>, <type 'IComparable'>, <type 'IFormattable'>, <type 'object'>
     """
-    Channel IO type
+    Channel IO type
+
     enum ChannelIoType, values: Complex (3), Input (1), None (0), Output (2)
     """
     Complex: ChannelIoType = ...
@@ -411,7 +463,8 @@ class ChannelIoType(Enum): # skipped bases: <type 'IConvertible'>, <type 'ICompa
 
 class ChannelType(Enum): # skipped bases: <type 'IConvertible'>, <type 'IComparable'>, <type 'IFormattable'>, <type 'object'>
     """
-    Channel type
+    Channel type
+
     enum ChannelType, values: Analog (1), Digital (2), None (0), Technology (3)
     """
     Analog: ChannelType = ...
@@ -422,7 +475,8 @@ class ChannelType(Enum): # skipped bases: <type 'IConvertible'>, <type 'ICompara
 
 class Classification(Enum): # skipped bases: <type 'IConvertible'>, <type 'IComparable'>, <type 'IFormattable'>, <type 'object'>
     """
-    Possible values for property Classification
+    Possible values for property Classification
+
     enum Classification, values: CPU (1), HM (2), None (0)
     """
     CPU: Classification = ...
@@ -432,7 +486,8 @@ class Classification(Enum): # skipped bases: <type 'IConvertible'>, <type 'IComp
 
 class CommunicationLoad(Enum): # skipped bases: <type 'IConvertible'>, <type 'IComparable'>, <type 'IFormattable'>, <type 'object'>
     """
-    Profibus Communication Load
+    Profibus Communication Load
+
     enum CommunicationLoad, values: High (3), Low (1), Medium (2), None (0)
     """
     High: CommunicationLoad = ...
@@ -443,7 +498,8 @@ class CommunicationLoad(Enum): # skipped bases: <type 'IConvertible'>, <type 'IC
 
 class ConfigurationDQOrDIGroup2(Enum): # skipped bases: <type 'IConvertible'>, <type 'IComparable'>, <type 'IFormattable'>, <type 'object'>
     """
-    Possible values for property ConfigurationDQOrDIGroup2
+    Possible values for property ConfigurationDQOrDIGroup2
+
     enum ConfigurationDQOrDIGroup2, values: IncrementalEncoderABPhaseShifted (2), TimerDi2WithEnableInputDi3 (1), TimerDq2WithEnableInputDi2 (3), TimerDqWithEnableInput (4), UseInputOrOutputIndividually (0)
     """
     IncrementalEncoderABPhaseShifted: ConfigurationDQOrDIGroup2 = ...
@@ -456,7 +512,8 @@ class ConfigurationDQOrDIGroup2(Enum): # skipped bases: <type 'IConvertible'>, <
 
 class ControlFunctionCurrentMeasuringModuleInstalled(Enum): # skipped bases: <type 'IConvertible'>, <type 'IComparable'>, <type 'IFormattable'>, <type 'object'>
     """
-    Possible values for property ControlFunctionCurrentMeasuringModuleInstalled
+    Possible values for property ControlFunctionCurrentMeasuringModuleInstalled
+
     enum ControlFunctionCurrentMeasuringModuleInstalled, values: Delta (0), IncomingCable (1)
     """
     Delta: ControlFunctionCurrentMeasuringModuleInstalled = ...
@@ -466,7 +523,8 @@ class ControlFunctionCurrentMeasuringModuleInstalled(Enum): # skipped bases: <ty
 
 class ControlFunctionFeedbackCLOSEDFC(Enum): # skipped bases: <type 'IConvertible'>, <type 'IComparable'>, <type 'IFormattable'>, <type 'object'>
     """
-    Possible values for property ControlFunctionFeedbackCLOSEDFC
+    Possible values for property ControlFunctionFeedbackCLOSEDFC
+
     enum ControlFunctionFeedbackCLOSEDFC, values: AcyclicReceiveBit00 (40), AcyclicReceiveBit01 (41), AcyclicReceiveBit02 (42), AcyclicReceiveBit03 (43), AcyclicReceiveBit04 (44), AcyclicReceiveBit05 (45), AcyclicReceiveBit06 (46), AcyclicReceiveBit07 (47), AcyclicReceiveBit10 (48), AcyclicReceiveBit11 (49), AcyclicReceiveBit12 (50), AcyclicReceiveBit13 (51), AcyclicReceiveBit14 (52), AcyclicReceiveBit15 (53), AcyclicReceiveBit16 (54), AcyclicReceiveBit17 (55), BUInput1 (9), BUInput2 (10), BUInput3 (11), BUInput4 (12), BUTestResetButton (8), ContactorControl1QE1 (80), ContactorControl2QE2 (81), ContactorControl3QE3 (82), ContactorControl4QE4 (83), ContactorControl5QE5 (84), Counter1Output (236), Counter2Output (237), Counter3Output (238), Counter4Output (239), Counter5Output (228), Counter6Output (229), CyclicReceiveBit00 (56), CyclicReceiveBit01 (57), CyclicReceiveBit02 (58), CyclicReceiveBit03 (59), CyclicReceiveBit04 (60), CyclicReceiveBit05 (61), CyclicReceiveBit06 (62), CyclicReceiveBit07 (63), CyclicReceiveBit10 (64), CyclicReceiveBit11 (65), CyclicReceiveBit12 (66), CyclicReceiveBit13 (67), CyclicReceiveBit14 (68), CyclicReceiveBit15 (69), CyclicReceiveBit16 (70), CyclicReceiveBit17 (71), DisplayQLAOff (90), DisplayQLEForward (91), DisplayQLEForwardFast (92), DisplayQLEReverse (89), DisplayQLEReverseFast (88), DisplayQLSFault (93), DM1Input1 (16), DM1Input2 (17), DM1Input3 (18), DM1Input4 (19), DM1SensorChannel1 (24), DM1SensorChannel2 (25), DM2Input1 (20), DM2Input2 (21), DM2Input3 (22), DM2Input4 (23), EnabledControlCommandOff (74), EnabledControlCommandOnForward (75), EnabledControlCommandOnForwardFast (76), EnabledControlCommandOnReverse (73), EnabledControlCommandOnReverseFast (72), EventAM1OpenCircuit (180), EventAM1TripLevel0420mAGt (158), EventAM1TripLevel0420mALt (159), EventAM1WarningLevel0420mAGt (150), EventAM1WarningLevel0420mALt (151), EventAM2OpenCircuit (179), EventAM2TripLevel0420mAGt (6), EventAM2TripLevel0420mALt (7), EventAM2WarningLevel0420mAGt (4), EventAM2WarningLevel0420mALt (5), EventConfiguredOperatorPanelMissing (188), EventDMFLOCALOk (186), EventExternalFault1 (172), EventExternalFault2 (173), EventExternalFault3 (174), EventExternalFault4 (175), EventExternalFault5 (176), EventExternalFault6 (177), EventExternalGroundFault (133), EventExternalGroundFaultWarning (134), EventInternalGroundFault (132), EventJustOneStartPossible (165), EventLimitMonitor1 (168), EventLimitMonitor2 (169), EventLimitMonitor3 (170), EventLimitMonitor4 (171), EventLimitMonitor5 (38), EventLimitMonitor6 (39), EventMonitoringPeriodForMandatoryTestingTestRequirement (182), EventMotorOperatingHoursGt (166), EventNoStartPermitted (163), EventNumberOfStartsGt (164), EventOverload (130), EventOverloadAndPhaseFailure (131), EventPrewarningOverload (128), EventPROFIsafeActive (187), EventSafetyrelatedTripping (181), EventStalledRotor (160), EventStopTimeGt (167), EventThermistorOpenCircuit (137), EventThermistorShortCircuit (136), EventThermistorTripLevel (135), EventTimestampfctActiveAndOk (184), EventTM1OutOfRange (141), EventTM1SensorFault (140), EventTM1TripLevelTGt (139), EventTM1WarningLevelTGt (138), EventTM2OutOfRange (29), EventTM2SensorFault (28), EventTM2TripLevelTGt (31), EventTM2WarningLevelTGt (30), EventTripLevelCosPhiLt (156), EventTripLevelIGt (152), EventTripLevelILt (153), EventTripLevelPGt (154), EventTripLevelPLt (155), EventTripLevelULt (157), EventUnbalance (129), EventWarningLevelCosPhiLt (148), EventWarningLevelIGt (144), EventWarningLevelILt (145), EventWarningLevelPGt (146), EventWarningLevelPLt (147), EventWarningLevelULt (149), FaultAntivalence (208), FaultBus (197), FaultConfigurationError (195), FaultDouble0 (205), FaultDouble1 (206), FaultEndPosition (207), FaultExecutionOnCommand (200), FaultExecutionSTOPCommand (201), FaultFeedbackOff (203), FaultFeedbackOn (202), FaultHardwareFaultBasicUnit (192), FaultModuleFault (193), FaultOperationalProtectionOff (211), FaultParameterization (196), FaultPLCPCS (198), FaultPowerFailure (210), FaultStalledPositioner (204), FaultTemporaryComponents (194), FaultTestPositionFeedback (209), FixedLevel0 (1), FixedLevel1 (2), Flashing1Output (248), Flashing2Output (249), Flashing3Output (250), Flicker1Output (251), Flicker2Output (252), Flicker3Output (253), NonvolatileElement1Output (244), NonvolatileElement2Output (245), NonvolatileElement3Output (246), NonvolatileElement4Output (247), NotConnected (0), OPButton1 (33), OPButton2 (34), OPButton3 (35), OPButton4 (36), OPTestResetButton (32), PWMOutput (254), SignalConditioning1Output (240), SignalConditioning2Output (241), SignalConditioning3Output (242), SignalConditioning4Output (243), SignalConditioning5Output (214), SignalConditioning6Output (215), StatusBusOk (99), StatusChangeoverPauseActive (111), StatusCoolingDownPeriodActive (122), StatusCurrentFlowing (101), StatusDeviceOk (98), StatusDeviceTestActive (124), StatusEmergencyStartExecuted (121), StatusEnablingCircuitClosed (127), StatusFeedbackCLOSED (114), StatusFeedbackOPEN (115), StatusGroupFault (96), StatusGroupWarning (97), StatusInterlockingTimeActive (110), StatusOff (106), StatusOnForward (107), StatusOnForwardFast (108), StatusOnReverse (105), StatusOnReverseFast (104), StatusOperationalProtectionOff (119), StatusPauseTimeActive (123), StatusPhaseSequence123 (125), StatusPhaseSequence321 (126), StatusPLCPCSInRun (100), StatusPositionerRunsInCLOSEDDirection (113), StatusPositionerRunsInOPENDirection (112), StatusPROFIenergyCommandStartPausePending (102), StatusRemoteMode (120), StatusStartActive (109), StatusTestPosition (118), StatusTorqueCLOSED (116), StatusTorqueOPEN (117), Timer1Output (232), Timer2Output (233), Timer3Output (234), Timer4Output (235), Timer5Output (230), Timer6Output (231), TruthTable10Output (226), TruthTable11Output (227), TruthTable1Output (216), TruthTable2Output (217), TruthTable3Output (218), TruthTable4Output (219), TruthTable5Output (220), TruthTable6Output (221), TruthTable7Output (222), TruthTable8Output (223), TruthTable9Output1 (224), TruthTable9Output2 (225), WarningFeedbackCircuit (190), WarningSimultaneity (191)
     """
     AcyclicReceiveBit00: ControlFunctionFeedbackCLOSEDFC = ...
@@ -702,7 +760,8 @@ class ControlFunctionFeedbackCLOSEDFC(Enum): # skipped bases: <type 'IConvertibl
 
 class ControlFunctionFeedbackON(Enum): # skipped bases: <type 'IConvertible'>, <type 'IComparable'>, <type 'IFormattable'>, <type 'object'>
     """
-    Possible values for property ControlFunctionFeedbackON
+    Possible values for property ControlFunctionFeedbackON
+
     enum ControlFunctionFeedbackON, values: AcyclicReceiveBit00 (40), AcyclicReceiveBit01 (41), AcyclicReceiveBit02 (42), AcyclicReceiveBit03 (43), AcyclicReceiveBit04 (44), AcyclicReceiveBit05 (45), AcyclicReceiveBit06 (46), AcyclicReceiveBit07 (47), AcyclicReceiveBit10 (48), AcyclicReceiveBit11 (49), AcyclicReceiveBit12 (50), AcyclicReceiveBit13 (51), AcyclicReceiveBit14 (52), AcyclicReceiveBit15 (53), AcyclicReceiveBit16 (54), AcyclicReceiveBit17 (55), BUInput1 (9), BUInput2 (10), BUInput3 (11), BUInput4 (12), BUTestResetButton (8), ContactorControl1QE1 (80), ContactorControl2QE2 (81), ContactorControl3QE3 (82), ContactorControl4QE4 (83), ContactorControl5QE5 (84), Counter1Output (236), Counter2Output (237), Counter3Output (238), Counter4Output (239), Counter5Output (228), Counter6Output (229), CyclicReceiveBit00 (56), CyclicReceiveBit01 (57), CyclicReceiveBit02 (58), CyclicReceiveBit03 (59), CyclicReceiveBit04 (60), CyclicReceiveBit05 (61), CyclicReceiveBit06 (62), CyclicReceiveBit07 (63), CyclicReceiveBit10 (64), CyclicReceiveBit11 (65), CyclicReceiveBit12 (66), CyclicReceiveBit13 (67), CyclicReceiveBit14 (68), CyclicReceiveBit15 (69), CyclicReceiveBit16 (70), CyclicReceiveBit17 (71), DisplayQLAOff (90), DisplayQLEForward (91), DisplayQLEForwardFast (92), DisplayQLEReverse (89), DisplayQLEReverseFast (88), DisplayQLSFault (93), DM1Input1 (16), DM1Input2 (17), DM1Input3 (18), DM1Input4 (19), DM1SensorChannel1 (24), DM1SensorChannel2 (25), DM2Input1 (20), DM2Input2 (21), DM2Input3 (22), DM2Input4 (23), EnabledControlCommandOff (74), EnabledControlCommandOnForward (75), EnabledControlCommandOnForwardFast (76), EnabledControlCommandOnReverse (73), EnabledControlCommandOnReverseFast (72), EventAM1OpenCircuit (180), EventAM1TripLevel0420mAGt (158), EventAM1TripLevel0420mALt (159), EventAM1WarningLevel0420mAGt (150), EventAM1WarningLevel0420mALt (151), EventAM2OpenCircuit (179), EventAM2TripLevel0420mAGt (6), EventAM2TripLevel0420mALt (7), EventAM2WarningLevel0420mAGt (4), EventAM2WarningLevel0420mALt (5), EventConfiguredOperatorPanelMissing (188), EventDMFLOCALOk (186), EventExternalFault1 (172), EventExternalFault2 (173), EventExternalFault3 (174), EventExternalFault4 (175), EventExternalFault5 (176), EventExternalFault6 (177), EventExternalGroundFault (133), EventExternalGroundFaultWarning (134), EventInternalGroundFault (132), EventJustOneStartPossible (165), EventLimitMonitor1 (168), EventLimitMonitor2 (169), EventLimitMonitor3 (170), EventLimitMonitor4 (171), EventLimitMonitor5 (38), EventLimitMonitor6 (39), EventMonitoringPeriodForMandatoryTestingTestRequirement (182), EventMotorOperatingHoursGt (166), EventNoStartPermitted (163), EventNumberOfStartsGt (164), EventOverload (130), EventOverloadAndPhaseFailure (131), EventPrewarningOverload (128), EventPROFIsafeActive (187), EventSafetyrelatedTripping (181), EventStalledRotor (160), EventStopTimeGt (167), EventThermistorOpenCircuit (137), EventThermistorShortCircuit (136), EventThermistorTripLevel (135), EventTimestampfctActiveAndOk (184), EventTM1OutOfRange (141), EventTM1SensorFault (140), EventTM1TripLevelTGt (139), EventTM1WarningLevelTGt (138), EventTM2OutOfRange (29), EventTM2SensorFault (28), EventTM2TripLevelTGt (31), EventTM2WarningLevelTGt (30), EventTripLevelCosPhiLt (156), EventTripLevelIGt (152), EventTripLevelILt (153), EventTripLevelPGt (154), EventTripLevelPLt (155), EventTripLevelULt (157), EventUnbalance (129), EventWarningLevelCosPhiLt (148), EventWarningLevelIGt (144), EventWarningLevelILt (145), EventWarningLevelPGt (146), EventWarningLevelPLt (147), EventWarningLevelULt (149), FaultAntivalence (208), FaultBus (197), FaultConfigurationError (195), FaultDouble0 (205), FaultDouble1 (206), FaultEndPosition (207), FaultExecutionOnCommand (200), FaultExecutionSTOPCommand (201), FaultFeedbackOff (203), FaultFeedbackOn (202), FaultHardwareFaultBasicUnit (192), FaultModuleFault (193), FaultOperationalProtectionOff (211), FaultParameterization (196), FaultPLCPCS (198), FaultPowerFailure (210), FaultStalledPositioner (204), FaultTemporaryComponents (194), FaultTestPositionFeedback (209), FixedLevel0 (1), FixedLevel1 (2), Flashing1Output (248), Flashing2Output (249), Flashing3Output (250), Flicker1Output (251), Flicker2Output (252), Flicker3Output (253), NonvolatileElement1Output (244), NonvolatileElement2Output (245), NonvolatileElement3Output (246), NonvolatileElement4Output (247), NotConnected (0), OPButton1 (33), OPButton2 (34), OPButton3 (35), OPButton4 (36), OPTestResetButton (32), PWMOutput (254), SignalConditioning1Output (240), SignalConditioning2Output (241), SignalConditioning3Output (242), SignalConditioning4Output (243), SignalConditioning5Output (214), SignalConditioning6Output (215), StatusBusOk (99), StatusChangeoverPauseActive (111), StatusCoolingDownPeriodActive (122), StatusCurrentFlowing (101), StatusDeviceOk (98), StatusDeviceTestActive (124), StatusEmergencyStartExecuted (121), StatusEnablingCircuitClosed (127), StatusFeedbackCLOSED (114), StatusFeedbackOPEN (115), StatusGroupFault (96), StatusGroupWarning (97), StatusInterlockingTimeActive (110), StatusOff (106), StatusOnForward (107), StatusOnForwardFast (108), StatusOnReverse (105), StatusOnReverseFast (104), StatusOperationalProtectionOff (119), StatusPauseTimeActive (123), StatusPhaseSequence123 (125), StatusPhaseSequence321 (126), StatusPLCPCSInRun (100), StatusPositionerRunsInCLOSEDDirection (113), StatusPositionerRunsInOPENDirection (112), StatusPROFIenergyCommandStartPausePending (102), StatusRemoteMode (120), StatusStartActive (109), StatusTestPosition (118), StatusTorqueCLOSED (116), StatusTorqueOPEN (117), Timer1Output (232), Timer2Output (233), Timer3Output (234), Timer4Output (235), Timer5Output (230), Timer6Output (231), TruthTable10Output (226), TruthTable11Output (227), TruthTable1Output (216), TruthTable2Output (217), TruthTable3Output (218), TruthTable4Output (219), TruthTable5Output (220), TruthTable6Output (221), TruthTable7Output (222), TruthTable8Output (223), TruthTable9Output1 (224), TruthTable9Output2 (225), WarningFeedbackCircuit (190), WarningSimultaneity (191)
     """
     AcyclicReceiveBit00: ControlFunctionFeedbackON = ...
@@ -938,7 +997,8 @@ class ControlFunctionFeedbackON(Enum): # skipped bases: <type 'IConvertible'>, <
 
 class ControlFunctionFeedbackOPENFO(Enum): # skipped bases: <type 'IConvertible'>, <type 'IComparable'>, <type 'IFormattable'>, <type 'object'>
     """
-    Possible values for property ControlFunctionFeedbackOPENFO
+    Possible values for property ControlFunctionFeedbackOPENFO
+
     enum ControlFunctionFeedbackOPENFO, values: AcyclicReceiveBit00 (40), AcyclicReceiveBit01 (41), AcyclicReceiveBit02 (42), AcyclicReceiveBit03 (43), AcyclicReceiveBit04 (44), AcyclicReceiveBit05 (45), AcyclicReceiveBit06 (46), AcyclicReceiveBit07 (47), AcyclicReceiveBit10 (48), AcyclicReceiveBit11 (49), AcyclicReceiveBit12 (50), AcyclicReceiveBit13 (51), AcyclicReceiveBit14 (52), AcyclicReceiveBit15 (53), AcyclicReceiveBit16 (54), AcyclicReceiveBit17 (55), BUInput1 (9), BUInput2 (10), BUInput3 (11), BUInput4 (12), BUTestResetButton (8), ContactorControl1QE1 (80), ContactorControl2QE2 (81), ContactorControl3QE3 (82), ContactorControl4QE4 (83), ContactorControl5QE5 (84), Counter1Output (236), Counter2Output (237), Counter3Output (238), Counter4Output (239), Counter5Output (228), Counter6Output (229), CyclicReceiveBit00 (56), CyclicReceiveBit01 (57), CyclicReceiveBit02 (58), CyclicReceiveBit03 (59), CyclicReceiveBit04 (60), CyclicReceiveBit05 (61), CyclicReceiveBit06 (62), CyclicReceiveBit07 (63), CyclicReceiveBit10 (64), CyclicReceiveBit11 (65), CyclicReceiveBit12 (66), CyclicReceiveBit13 (67), CyclicReceiveBit14 (68), CyclicReceiveBit15 (69), CyclicReceiveBit16 (70), CyclicReceiveBit17 (71), DisplayQLAOff (90), DisplayQLEForward (91), DisplayQLEForwardFast (92), DisplayQLEReverse (89), DisplayQLEReverseFast (88), DisplayQLSFault (93), DM1Input1 (16), DM1Input2 (17), DM1Input3 (18), DM1Input4 (19), DM1SensorChannel1 (24), DM1SensorChannel2 (25), DM2Input1 (20), DM2Input2 (21), DM2Input3 (22), DM2Input4 (23), EnabledControlCommandOff (74), EnabledControlCommandOnForward (75), EnabledControlCommandOnForwardFast (76), EnabledControlCommandOnReverse (73), EnabledControlCommandOnReverseFast (72), EventAM1OpenCircuit (180), EventAM1TripLevel0420mAGt (158), EventAM1TripLevel0420mALt (159), EventAM1WarningLevel0420mAGt (150), EventAM1WarningLevel0420mALt (151), EventAM2OpenCircuit (179), EventAM2TripLevel0420mAGt (6), EventAM2TripLevel0420mALt (7), EventAM2WarningLevel0420mAGt (4), EventAM2WarningLevel0420mALt (5), EventConfiguredOperatorPanelMissing (188), EventDMFLOCALOk (186), EventExternalFault1 (172), EventExternalFault2 (173), EventExternalFault3 (174), EventExternalFault4 (175), EventExternalFault5 (176), EventExternalFault6 (177), EventExternalGroundFault (133), EventExternalGroundFaultWarning (134), EventInternalGroundFault (132), EventJustOneStartPossible (165), EventLimitMonitor1 (168), EventLimitMonitor2 (169), EventLimitMonitor3 (170), EventLimitMonitor4 (171), EventLimitMonitor5 (38), EventLimitMonitor6 (39), EventMonitoringPeriodForMandatoryTestingTestRequirement (182), EventMotorOperatingHoursGt (166), EventNoStartPermitted (163), EventNumberOfStartsGt (164), EventOverload (130), EventOverloadAndPhaseFailure (131), EventPrewarningOverload (128), EventPROFIsafeActive (187), EventSafetyrelatedTripping (181), EventStalledRotor (160), EventStopTimeGt (167), EventThermistorOpenCircuit (137), EventThermistorShortCircuit (136), EventThermistorTripLevel (135), EventTimestampfctActiveAndOk (184), EventTM1OutOfRange (141), EventTM1SensorFault (140), EventTM1TripLevelTGt (139), EventTM1WarningLevelTGt (138), EventTM2OutOfRange (29), EventTM2SensorFault (28), EventTM2TripLevelTGt (31), EventTM2WarningLevelTGt (30), EventTripLevelCosPhiLt (156), EventTripLevelIGt (152), EventTripLevelILt (153), EventTripLevelPGt (154), EventTripLevelPLt (155), EventTripLevelULt (157), EventUnbalance (129), EventWarningLevelCosPhiLt (148), EventWarningLevelIGt (144), EventWarningLevelILt (145), EventWarningLevelPGt (146), EventWarningLevelPLt (147), EventWarningLevelULt (149), FaultAntivalence (208), FaultBus (197), FaultConfigurationError (195), FaultDouble0 (205), FaultDouble1 (206), FaultEndPosition (207), FaultExecutionOnCommand (200), FaultExecutionSTOPCommand (201), FaultFeedbackOff (203), FaultFeedbackOn (202), FaultHardwareFaultBasicUnit (192), FaultModuleFault (193), FaultOperationalProtectionOff (211), FaultParameterization (196), FaultPLCPCS (198), FaultPowerFailure (210), FaultStalledPositioner (204), FaultTemporaryComponents (194), FaultTestPositionFeedback (209), FixedLevel0 (1), FixedLevel1 (2), Flashing1Output (248), Flashing2Output (249), Flashing3Output (250), Flicker1Output (251), Flicker2Output (252), Flicker3Output (253), NonvolatileElement1Output (244), NonvolatileElement2Output (245), NonvolatileElement3Output (246), NonvolatileElement4Output (247), NotConnected (0), OPButton1 (33), OPButton2 (34), OPButton3 (35), OPButton4 (36), OPTestResetButton (32), PWMOutput (254), SignalConditioning1Output (240), SignalConditioning2Output (241), SignalConditioning3Output (242), SignalConditioning4Output (243), SignalConditioning5Output (214), SignalConditioning6Output (215), StatusBusOk (99), StatusChangeoverPauseActive (111), StatusCoolingDownPeriodActive (122), StatusCurrentFlowing (101), StatusDeviceOk (98), StatusDeviceTestActive (124), StatusEmergencyStartExecuted (121), StatusEnablingCircuitClosed (127), StatusFeedbackCLOSED (114), StatusFeedbackOPEN (115), StatusGroupFault (96), StatusGroupWarning (97), StatusInterlockingTimeActive (110), StatusOff (106), StatusOnForward (107), StatusOnForwardFast (108), StatusOnReverse (105), StatusOnReverseFast (104), StatusOperationalProtectionOff (119), StatusPauseTimeActive (123), StatusPhaseSequence123 (125), StatusPhaseSequence321 (126), StatusPLCPCSInRun (100), StatusPositionerRunsInCLOSEDDirection (113), StatusPositionerRunsInOPENDirection (112), StatusPROFIenergyCommandStartPausePending (102), StatusRemoteMode (120), StatusStartActive (109), StatusTestPosition (118), StatusTorqueCLOSED (116), StatusTorqueOPEN (117), Timer1Output (232), Timer2Output (233), Timer3Output (234), Timer4Output (235), Timer5Output (230), Timer6Output (231), TruthTable10Output (226), TruthTable11Output (227), TruthTable1Output (216), TruthTable2Output (217), TruthTable3Output (218), TruthTable4Output (219), TruthTable5Output (220), TruthTable6Output (221), TruthTable7Output (222), TruthTable8Output (223), TruthTable9Output1 (224), TruthTable9Output2 (225), WarningFeedbackCircuit (190), WarningSimultaneity (191)
     """
     AcyclicReceiveBit00: ControlFunctionFeedbackOPENFO = ...
@@ -1174,7 +1234,8 @@ class ControlFunctionFeedbackOPENFO(Enum): # skipped bases: <type 'IConvertible'
 
 class ControlFunctionForward(Enum): # skipped bases: <type 'IConvertible'>, <type 'IComparable'>, <type 'IFormattable'>, <type 'object'>
     """
-    Possible values for property ControlFunctionForward
+    Possible values for property ControlFunctionForward
+
     enum ControlFunctionForward, values: AcyclicReceiveBit00 (40), AcyclicReceiveBit01 (41), AcyclicReceiveBit02 (42), AcyclicReceiveBit03 (43), AcyclicReceiveBit04 (44), AcyclicReceiveBit05 (45), AcyclicReceiveBit06 (46), AcyclicReceiveBit07 (47), AcyclicReceiveBit10 (48), AcyclicReceiveBit11 (49), AcyclicReceiveBit12 (50), AcyclicReceiveBit13 (51), AcyclicReceiveBit14 (52), AcyclicReceiveBit15 (53), AcyclicReceiveBit16 (54), AcyclicReceiveBit17 (55), BUInput1 (9), BUInput2 (10), BUInput3 (11), BUInput4 (12), BUTestResetButton (8), ContactorControl1QE1 (80), ContactorControl2QE2 (81), ContactorControl3QE3 (82), ContactorControl4QE4 (83), ContactorControl5QE5 (84), Counter1Output (236), Counter2Output (237), Counter3Output (238), Counter4Output (239), Counter5Output (228), Counter6Output (229), CyclicReceiveBit00 (56), CyclicReceiveBit01 (57), CyclicReceiveBit02 (58), CyclicReceiveBit03 (59), CyclicReceiveBit04 (60), CyclicReceiveBit05 (61), CyclicReceiveBit06 (62), CyclicReceiveBit07 (63), CyclicReceiveBit10 (64), CyclicReceiveBit11 (65), CyclicReceiveBit12 (66), CyclicReceiveBit13 (67), CyclicReceiveBit14 (68), CyclicReceiveBit15 (69), CyclicReceiveBit16 (70), CyclicReceiveBit17 (71), DisplayQLAOff (90), DisplayQLEForward (91), DisplayQLEForwardFast (92), DisplayQLEReverse (89), DisplayQLEReverseFast (88), DisplayQLSFault (93), DM1Input1 (16), DM1Input2 (17), DM1Input3 (18), DM1Input4 (19), DM1SensorChannel1 (24), DM1SensorChannel2 (25), DM2Input1 (20), DM2Input2 (21), DM2Input3 (22), DM2Input4 (23), EnabledControlCommandOff (74), EnabledControlCommandOnForward (75), EnabledControlCommandOnForwardFast (76), EnabledControlCommandOnReverse (73), EnabledControlCommandOnReverseFast (72), EventAM1OpenCircuit (180), EventAM1TripLevel0420mAGt (158), EventAM1TripLevel0420mALt (159), EventAM1WarningLevel0420mAGt (150), EventAM1WarningLevel0420mALt (151), EventAM2OpenCircuit (179), EventAM2TripLevel0420mAGt (6), EventAM2TripLevel0420mALt (7), EventAM2WarningLevel0420mAGt (4), EventAM2WarningLevel0420mALt (5), EventConfiguredOperatorPanelMissing (188), EventDMFLOCALOk (186), EventExternalFault1 (172), EventExternalFault2 (173), EventExternalFault3 (174), EventExternalFault4 (175), EventExternalFault5 (176), EventExternalFault6 (177), EventExternalGroundFault (133), EventExternalGroundFaultWarning (134), EventInternalGroundFault (132), EventJustOneStartPossible (165), EventLimitMonitor1 (168), EventLimitMonitor2 (169), EventLimitMonitor3 (170), EventLimitMonitor4 (171), EventLimitMonitor5 (38), EventLimitMonitor6 (39), EventMonitoringPeriodForMandatoryTestingTestRequirement (182), EventMotorOperatingHoursGt (166), EventNoStartPermitted (163), EventNumberOfStartsGt (164), EventOverload (130), EventOverloadAndPhaseFailure (131), EventPrewarningOverload (128), EventPROFIsafeActive (187), EventSafetyrelatedTripping (181), EventStalledRotor (160), EventStopTimeGt (167), EventThermistorOpenCircuit (137), EventThermistorShortCircuit (136), EventThermistorTripLevel (135), EventTimestampfctActiveAndOk (184), EventTM1OutOfRange (141), EventTM1SensorFault (140), EventTM1TripLevelTGt (139), EventTM1WarningLevelTGt (138), EventTM2OutOfRange (29), EventTM2SensorFault (28), EventTM2TripLevelTGt (31), EventTM2WarningLevelTGt (30), EventTripLevelCosPhiLt (156), EventTripLevelIGt (152), EventTripLevelILt (153), EventTripLevelPGt (154), EventTripLevelPLt (155), EventTripLevelULt (157), EventUnbalance (129), EventWarningLevelCosPhiLt (148), EventWarningLevelIGt (144), EventWarningLevelILt (145), EventWarningLevelPGt (146), EventWarningLevelPLt (147), EventWarningLevelULt (149), FaultAntivalence (208), FaultBus (197), FaultConfigurationError (195), FaultDouble0 (205), FaultDouble1 (206), FaultEndPosition (207), FaultExecutionOnCommand (200), FaultExecutionSTOPCommand (201), FaultFeedbackOff (203), FaultFeedbackOn (202), FaultHardwareFaultBasicUnit (192), FaultModuleFault (193), FaultOperationalProtectionOff (211), FaultParameterization (196), FaultPLCPCS (198), FaultPowerFailure (210), FaultStalledPositioner (204), FaultTemporaryComponents (194), FaultTestPositionFeedback (209), FixedLevel0 (1), FixedLevel1 (2), Flashing1Output (248), Flashing2Output (249), Flashing3Output (250), Flicker1Output (251), Flicker2Output (252), Flicker3Output (253), NonvolatileElement1Output (244), NonvolatileElement2Output (245), NonvolatileElement3Output (246), NonvolatileElement4Output (247), NotConnected (0), OPButton1 (33), OPButton2 (34), OPButton3 (35), OPButton4 (36), OPTestResetButton (32), PWMOutput (254), SignalConditioning1Output (240), SignalConditioning2Output (241), SignalConditioning3Output (242), SignalConditioning4Output (243), SignalConditioning5Output (214), SignalConditioning6Output (215), StatusBusOk (99), StatusChangeoverPauseActive (111), StatusCoolingDownPeriodActive (122), StatusCurrentFlowing (101), StatusDeviceOk (98), StatusDeviceTestActive (124), StatusEmergencyStartExecuted (121), StatusEnablingCircuitClosed (127), StatusFeedbackCLOSED (114), StatusFeedbackOPEN (115), StatusGroupFault (96), StatusGroupWarning (97), StatusInterlockingTimeActive (110), StatusOff (106), StatusOnForward (107), StatusOnForwardFast (108), StatusOnReverse (105), StatusOnReverseFast (104), StatusOperationalProtectionOff (119), StatusPauseTimeActive (123), StatusPhaseSequence123 (125), StatusPhaseSequence321 (126), StatusPLCPCSInRun (100), StatusPositionerRunsInCLOSEDDirection (113), StatusPositionerRunsInOPENDirection (112), StatusPROFIenergyCommandStartPausePending (102), StatusRemoteMode (120), StatusStartActive (109), StatusTestPosition (118), StatusTorqueCLOSED (116), StatusTorqueOPEN (117), Timer1Output (232), Timer2Output (233), Timer3Output (234), Timer4Output (235), Timer5Output (230), Timer6Output (231), TruthTable10Output (226), TruthTable11Output (227), TruthTable1Output (216), TruthTable2Output (217), TruthTable3Output (218), TruthTable4Output (219), TruthTable5Output (220), TruthTable6Output (221), TruthTable7Output (222), TruthTable8Output (223), TruthTable9Output1 (224), TruthTable9Output2 (225), WarningFeedbackCircuit (190), WarningSimultaneity (191)
     """
     AcyclicReceiveBit00: ControlFunctionForward = ...
@@ -1410,7 +1471,8 @@ class ControlFunctionForward(Enum): # skipped bases: <type 'IConvertible'>, <typ
 
 class ControlFunctionForwardFast(Enum): # skipped bases: <type 'IConvertible'>, <type 'IComparable'>, <type 'IFormattable'>, <type 'object'>
     """
-    Possible values for property ControlFunctionForwardFast
+    Possible values for property ControlFunctionForwardFast
+
     enum ControlFunctionForwardFast, values: AcyclicReceiveBit00 (40), AcyclicReceiveBit01 (41), AcyclicReceiveBit02 (42), AcyclicReceiveBit03 (43), AcyclicReceiveBit04 (44), AcyclicReceiveBit05 (45), AcyclicReceiveBit06 (46), AcyclicReceiveBit07 (47), AcyclicReceiveBit10 (48), AcyclicReceiveBit11 (49), AcyclicReceiveBit12 (50), AcyclicReceiveBit13 (51), AcyclicReceiveBit14 (52), AcyclicReceiveBit15 (53), AcyclicReceiveBit16 (54), AcyclicReceiveBit17 (55), BUInput1 (9), BUInput2 (10), BUInput3 (11), BUInput4 (12), BUTestResetButton (8), ContactorControl1QE1 (80), ContactorControl2QE2 (81), ContactorControl3QE3 (82), ContactorControl4QE4 (83), ContactorControl5QE5 (84), Counter1Output (236), Counter2Output (237), Counter3Output (238), Counter4Output (239), Counter5Output (228), Counter6Output (229), CyclicReceiveBit00 (56), CyclicReceiveBit01 (57), CyclicReceiveBit02 (58), CyclicReceiveBit03 (59), CyclicReceiveBit04 (60), CyclicReceiveBit05 (61), CyclicReceiveBit06 (62), CyclicReceiveBit07 (63), CyclicReceiveBit10 (64), CyclicReceiveBit11 (65), CyclicReceiveBit12 (66), CyclicReceiveBit13 (67), CyclicReceiveBit14 (68), CyclicReceiveBit15 (69), CyclicReceiveBit16 (70), CyclicReceiveBit17 (71), DisplayQLAOff (90), DisplayQLEForward (91), DisplayQLEForwardFast (92), DisplayQLEReverse (89), DisplayQLEReverseFast (88), DisplayQLSFault (93), DM1Input1 (16), DM1Input2 (17), DM1Input3 (18), DM1Input4 (19), DM1SensorChannel1 (24), DM1SensorChannel2 (25), DM2Input1 (20), DM2Input2 (21), DM2Input3 (22), DM2Input4 (23), EnabledControlCommandOff (74), EnabledControlCommandOnForward (75), EnabledControlCommandOnForwardFast (76), EnabledControlCommandOnReverse (73), EnabledControlCommandOnReverseFast (72), EventAM1OpenCircuit (180), EventAM1TripLevel0420mAGt (158), EventAM1TripLevel0420mALt (159), EventAM1WarningLevel0420mAGt (150), EventAM1WarningLevel0420mALt (151), EventAM2OpenCircuit (179), EventAM2TripLevel0420mAGt (6), EventAM2TripLevel0420mALt (7), EventAM2WarningLevel0420mAGt (4), EventAM2WarningLevel0420mALt (5), EventConfiguredOperatorPanelMissing (188), EventDMFLOCALOk (186), EventExternalFault1 (172), EventExternalFault2 (173), EventExternalFault3 (174), EventExternalFault4 (175), EventExternalFault5 (176), EventExternalFault6 (177), EventExternalGroundFault (133), EventExternalGroundFaultWarning (134), EventInternalGroundFault (132), EventJustOneStartPossible (165), EventLimitMonitor1 (168), EventLimitMonitor2 (169), EventLimitMonitor3 (170), EventLimitMonitor4 (171), EventLimitMonitor5 (38), EventLimitMonitor6 (39), EventMonitoringPeriodForMandatoryTestingTestRequirement (182), EventMotorOperatingHoursGt (166), EventNoStartPermitted (163), EventNumberOfStartsGt (164), EventOverload (130), EventOverloadAndPhaseFailure (131), EventPrewarningOverload (128), EventPROFIsafeActive (187), EventSafetyrelatedTripping (181), EventStalledRotor (160), EventStopTimeGt (167), EventThermistorOpenCircuit (137), EventThermistorShortCircuit (136), EventThermistorTripLevel (135), EventTimestampfctActiveAndOk (184), EventTM1OutOfRange (141), EventTM1SensorFault (140), EventTM1TripLevelTGt (139), EventTM1WarningLevelTGt (138), EventTM2OutOfRange (29), EventTM2SensorFault (28), EventTM2TripLevelTGt (31), EventTM2WarningLevelTGt (30), EventTripLevelCosPhiLt (156), EventTripLevelIGt (152), EventTripLevelILt (153), EventTripLevelPGt (154), EventTripLevelPLt (155), EventTripLevelULt (157), EventUnbalance (129), EventWarningLevelCosPhiLt (148), EventWarningLevelIGt (144), EventWarningLevelILt (145), EventWarningLevelPGt (146), EventWarningLevelPLt (147), EventWarningLevelULt (149), FaultAntivalence (208), FaultBus (197), FaultConfigurationError (195), FaultDouble0 (205), FaultDouble1 (206), FaultEndPosition (207), FaultExecutionOnCommand (200), FaultExecutionSTOPCommand (201), FaultFeedbackOff (203), FaultFeedbackOn (202), FaultHardwareFaultBasicUnit (192), FaultModuleFault (193), FaultOperationalProtectionOff (211), FaultParameterization (196), FaultPLCPCS (198), FaultPowerFailure (210), FaultStalledPositioner (204), FaultTemporaryComponents (194), FaultTestPositionFeedback (209), FixedLevel0 (1), FixedLevel1 (2), Flashing1Output (248), Flashing2Output (249), Flashing3Output (250), Flicker1Output (251), Flicker2Output (252), Flicker3Output (253), NonvolatileElement1Output (244), NonvolatileElement2Output (245), NonvolatileElement3Output (246), NonvolatileElement4Output (247), NotConnected (0), OPButton1 (33), OPButton2 (34), OPButton3 (35), OPButton4 (36), OPTestResetButton (32), PWMOutput (254), SignalConditioning1Output (240), SignalConditioning2Output (241), SignalConditioning3Output (242), SignalConditioning4Output (243), SignalConditioning5Output (214), SignalConditioning6Output (215), StatusBusOk (99), StatusChangeoverPauseActive (111), StatusCoolingDownPeriodActive (122), StatusCurrentFlowing (101), StatusDeviceOk (98), StatusDeviceTestActive (124), StatusEmergencyStartExecuted (121), StatusEnablingCircuitClosed (127), StatusFeedbackCLOSED (114), StatusFeedbackOPEN (115), StatusGroupFault (96), StatusGroupWarning (97), StatusInterlockingTimeActive (110), StatusOff (106), StatusOnForward (107), StatusOnForwardFast (108), StatusOnReverse (105), StatusOnReverseFast (104), StatusOperationalProtectionOff (119), StatusPauseTimeActive (123), StatusPhaseSequence123 (125), StatusPhaseSequence321 (126), StatusPLCPCSInRun (100), StatusPositionerRunsInCLOSEDDirection (113), StatusPositionerRunsInOPENDirection (112), StatusPROFIenergyCommandStartPausePending (102), StatusRemoteMode (120), StatusStartActive (109), StatusTestPosition (118), StatusTorqueCLOSED (116), StatusTorqueOPEN (117), Timer1Output (232), Timer2Output (233), Timer3Output (234), Timer4Output (235), Timer5Output (230), Timer6Output (231), TruthTable10Output (226), TruthTable11Output (227), TruthTable1Output (216), TruthTable2Output (217), TruthTable3Output (218), TruthTable4Output (219), TruthTable5Output (220), TruthTable6Output (221), TruthTable7Output (222), TruthTable8Output (223), TruthTable9Output1 (224), TruthTable9Output2 (225), WarningFeedbackCircuit (190), WarningSimultaneity (191)
     """
     AcyclicReceiveBit00: ControlFunctionForwardFast = ...
@@ -1646,7 +1708,8 @@ class ControlFunctionForwardFast(Enum): # skipped bases: <type 'IConvertible'>, 
 
 class ControlFunctionOFF(Enum): # skipped bases: <type 'IConvertible'>, <type 'IComparable'>, <type 'IFormattable'>, <type 'object'>
     """
-    Possible values for property ControlFunctionOFF
+    Possible values for property ControlFunctionOFF
+
     enum ControlFunctionOFF, values: AcyclicReceiveBit00 (40), AcyclicReceiveBit01 (41), AcyclicReceiveBit02 (42), AcyclicReceiveBit03 (43), AcyclicReceiveBit04 (44), AcyclicReceiveBit05 (45), AcyclicReceiveBit06 (46), AcyclicReceiveBit07 (47), AcyclicReceiveBit10 (48), AcyclicReceiveBit11 (49), AcyclicReceiveBit12 (50), AcyclicReceiveBit13 (51), AcyclicReceiveBit14 (52), AcyclicReceiveBit15 (53), AcyclicReceiveBit16 (54), AcyclicReceiveBit17 (55), BUInput1 (9), BUInput2 (10), BUInput3 (11), BUInput4 (12), BUTestResetButton (8), ContactorControl1QE1 (80), ContactorControl2QE2 (81), ContactorControl3QE3 (82), ContactorControl4QE4 (83), ContactorControl5QE5 (84), Counter1Output (236), Counter2Output (237), Counter3Output (238), Counter4Output (239), Counter5Output (228), Counter6Output (229), CyclicReceiveBit00 (56), CyclicReceiveBit01 (57), CyclicReceiveBit02 (58), CyclicReceiveBit03 (59), CyclicReceiveBit04 (60), CyclicReceiveBit05 (61), CyclicReceiveBit06 (62), CyclicReceiveBit07 (63), CyclicReceiveBit10 (64), CyclicReceiveBit11 (65), CyclicReceiveBit12 (66), CyclicReceiveBit13 (67), CyclicReceiveBit14 (68), CyclicReceiveBit15 (69), CyclicReceiveBit16 (70), CyclicReceiveBit17 (71), DisplayQLAOff (90), DisplayQLEForward (91), DisplayQLEForwardFast (92), DisplayQLEReverse (89), DisplayQLEReverseFast (88), DisplayQLSFault (93), DM1Input1 (16), DM1Input2 (17), DM1Input3 (18), DM1Input4 (19), DM1SensorChannel1 (24), DM1SensorChannel2 (25), DM2Input1 (20), DM2Input2 (21), DM2Input3 (22), DM2Input4 (23), EnabledControlCommandOff (74), EnabledControlCommandOnForward (75), EnabledControlCommandOnForwardFast (76), EnabledControlCommandOnReverse (73), EnabledControlCommandOnReverseFast (72), EventAM1OpenCircuit (180), EventAM1TripLevel0420mAGt (158), EventAM1TripLevel0420mALt (159), EventAM1WarningLevel0420mAGt (150), EventAM1WarningLevel0420mALt (151), EventAM2OpenCircuit (179), EventAM2TripLevel0420mAGt (6), EventAM2TripLevel0420mALt (7), EventAM2WarningLevel0420mAGt (4), EventAM2WarningLevel0420mALt (5), EventConfiguredOperatorPanelMissing (188), EventDMFLOCALOk (186), EventExternalFault1 (172), EventExternalFault2 (173), EventExternalFault3 (174), EventExternalFault4 (175), EventExternalFault5 (176), EventExternalFault6 (177), EventExternalGroundFault (133), EventExternalGroundFaultWarning (134), EventInternalGroundFault (132), EventJustOneStartPossible (165), EventLimitMonitor1 (168), EventLimitMonitor2 (169), EventLimitMonitor3 (170), EventLimitMonitor4 (171), EventLimitMonitor5 (38), EventLimitMonitor6 (39), EventMonitoringPeriodForMandatoryTestingTestRequirement (182), EventMotorOperatingHoursGt (166), EventNoStartPermitted (163), EventNumberOfStartsGt (164), EventOverload (130), EventOverloadAndPhaseFailure (131), EventPrewarningOverload (128), EventPROFIsafeActive (187), EventSafetyrelatedTripping (181), EventStalledRotor (160), EventStopTimeGt (167), EventThermistorOpenCircuit (137), EventThermistorShortCircuit (136), EventThermistorTripLevel (135), EventTimestampfctActiveAndOk (184), EventTM1OutOfRange (141), EventTM1SensorFault (140), EventTM1TripLevelTGt (139), EventTM1WarningLevelTGt (138), EventTM2OutOfRange (29), EventTM2SensorFault (28), EventTM2TripLevelTGt (31), EventTM2WarningLevelTGt (30), EventTripLevelCosPhiLt (156), EventTripLevelIGt (152), EventTripLevelILt (153), EventTripLevelPGt (154), EventTripLevelPLt (155), EventTripLevelULt (157), EventUnbalance (129), EventWarningLevelCosPhiLt (148), EventWarningLevelIGt (144), EventWarningLevelILt (145), EventWarningLevelPGt (146), EventWarningLevelPLt (147), EventWarningLevelULt (149), FaultAntivalence (208), FaultBus (197), FaultConfigurationError (195), FaultDouble0 (205), FaultDouble1 (206), FaultEndPosition (207), FaultExecutionOnCommand (200), FaultExecutionSTOPCommand (201), FaultFeedbackOff (203), FaultFeedbackOn (202), FaultHardwareFaultBasicUnit (192), FaultModuleFault (193), FaultOperationalProtectionOff (211), FaultParameterization (196), FaultPLCPCS (198), FaultPowerFailure (210), FaultStalledPositioner (204), FaultTemporaryComponents (194), FaultTestPositionFeedback (209), FixedLevel0 (1), FixedLevel1 (2), Flashing1Output (248), Flashing2Output (249), Flashing3Output (250), Flicker1Output (251), Flicker2Output (252), Flicker3Output (253), NonvolatileElement1Output (244), NonvolatileElement2Output (245), NonvolatileElement3Output (246), NonvolatileElement4Output (247), NotConnected (0), OPButton1 (33), OPButton2 (34), OPButton3 (35), OPButton4 (36), OPTestResetButton (32), PWMOutput (254), SignalConditioning1Output (240), SignalConditioning2Output (241), SignalConditioning3Output (242), SignalConditioning4Output (243), SignalConditioning5Output (214), SignalConditioning6Output (215), StatusBusOk (99), StatusChangeoverPauseActive (111), StatusCoolingDownPeriodActive (122), StatusCurrentFlowing (101), StatusDeviceOk (98), StatusDeviceTestActive (124), StatusEmergencyStartExecuted (121), StatusEnablingCircuitClosed (127), StatusFeedbackCLOSED (114), StatusFeedbackOPEN (115), StatusGroupFault (96), StatusGroupWarning (97), StatusInterlockingTimeActive (110), StatusOff (106), StatusOnForward (107), StatusOnForwardFast (108), StatusOnReverse (105), StatusOnReverseFast (104), StatusOperationalProtectionOff (119), StatusPauseTimeActive (123), StatusPhaseSequence123 (125), StatusPhaseSequence321 (126), StatusPLCPCSInRun (100), StatusPositionerRunsInCLOSEDDirection (113), StatusPositionerRunsInOPENDirection (112), StatusPROFIenergyCommandStartPausePending (102), StatusRemoteMode (120), StatusStartActive (109), StatusTestPosition (118), StatusTorqueCLOSED (116), StatusTorqueOPEN (117), Timer1Output (232), Timer2Output (233), Timer3Output (234), Timer4Output (235), Timer5Output (230), Timer6Output (231), TruthTable10Output (226), TruthTable11Output (227), TruthTable1Output (216), TruthTable2Output (217), TruthTable3Output (218), TruthTable4Output (219), TruthTable5Output (220), TruthTable6Output (221), TruthTable7Output (222), TruthTable8Output (223), TruthTable9Output1 (224), TruthTable9Output2 (225), WarningFeedbackCircuit (190), WarningSimultaneity (191)
     """
     AcyclicReceiveBit00: ControlFunctionOFF = ...
@@ -1882,7 +1945,8 @@ class ControlFunctionOFF(Enum): # skipped bases: <type 'IConvertible'>, <type 'I
 
 class ControlFunctionReverse(Enum): # skipped bases: <type 'IConvertible'>, <type 'IComparable'>, <type 'IFormattable'>, <type 'object'>
     """
-    Possible values for property ControlFunctionReverse
+    Possible values for property ControlFunctionReverse
+
     enum ControlFunctionReverse, values: AcyclicReceiveBit00 (40), AcyclicReceiveBit01 (41), AcyclicReceiveBit02 (42), AcyclicReceiveBit03 (43), AcyclicReceiveBit04 (44), AcyclicReceiveBit05 (45), AcyclicReceiveBit06 (46), AcyclicReceiveBit07 (47), AcyclicReceiveBit10 (48), AcyclicReceiveBit11 (49), AcyclicReceiveBit12 (50), AcyclicReceiveBit13 (51), AcyclicReceiveBit14 (52), AcyclicReceiveBit15 (53), AcyclicReceiveBit16 (54), AcyclicReceiveBit17 (55), BUInput1 (9), BUInput2 (10), BUInput3 (11), BUInput4 (12), BUTestResetButton (8), ContactorControl1QE1 (80), ContactorControl2QE2 (81), ContactorControl3QE3 (82), ContactorControl4QE4 (83), ContactorControl5QE5 (84), Counter1Output (236), Counter2Output (237), Counter3Output (238), Counter4Output (239), Counter5Output (228), Counter6Output (229), CyclicReceiveBit00 (56), CyclicReceiveBit01 (57), CyclicReceiveBit02 (58), CyclicReceiveBit03 (59), CyclicReceiveBit04 (60), CyclicReceiveBit05 (61), CyclicReceiveBit06 (62), CyclicReceiveBit07 (63), CyclicReceiveBit10 (64), CyclicReceiveBit11 (65), CyclicReceiveBit12 (66), CyclicReceiveBit13 (67), CyclicReceiveBit14 (68), CyclicReceiveBit15 (69), CyclicReceiveBit16 (70), CyclicReceiveBit17 (71), DisplayQLAOff (90), DisplayQLEForward (91), DisplayQLEForwardFast (92), DisplayQLEReverse (89), DisplayQLEReverseFast (88), DisplayQLSFault (93), DM1Input1 (16), DM1Input2 (17), DM1Input3 (18), DM1Input4 (19), DM1SensorChannel1 (24), DM1SensorChannel2 (25), DM2Input1 (20), DM2Input2 (21), DM2Input3 (22), DM2Input4 (23), EnabledControlCommandOff (74), EnabledControlCommandOnForward (75), EnabledControlCommandOnForwardFast (76), EnabledControlCommandOnReverse (73), EnabledControlCommandOnReverseFast (72), EventAM1OpenCircuit (180), EventAM1TripLevel0420mAGt (158), EventAM1TripLevel0420mALt (159), EventAM1WarningLevel0420mAGt (150), EventAM1WarningLevel0420mALt (151), EventAM2OpenCircuit (179), EventAM2TripLevel0420mAGt (6), EventAM2TripLevel0420mALt (7), EventAM2WarningLevel0420mAGt (4), EventAM2WarningLevel0420mALt (5), EventConfiguredOperatorPanelMissing (188), EventDMFLOCALOk (186), EventExternalFault1 (172), EventExternalFault2 (173), EventExternalFault3 (174), EventExternalFault4 (175), EventExternalFault5 (176), EventExternalFault6 (177), EventExternalGroundFault (133), EventExternalGroundFaultWarning (134), EventInternalGroundFault (132), EventJustOneStartPossible (165), EventLimitMonitor1 (168), EventLimitMonitor2 (169), EventLimitMonitor3 (170), EventLimitMonitor4 (171), EventLimitMonitor5 (38), EventLimitMonitor6 (39), EventMonitoringPeriodForMandatoryTestingTestRequirement (182), EventMotorOperatingHoursGt (166), EventNoStartPermitted (163), EventNumberOfStartsGt (164), EventOverload (130), EventOverloadAndPhaseFailure (131), EventPrewarningOverload (128), EventPROFIsafeActive (187), EventSafetyrelatedTripping (181), EventStalledRotor (160), EventStopTimeGt (167), EventThermistorOpenCircuit (137), EventThermistorShortCircuit (136), EventThermistorTripLevel (135), EventTimestampfctActiveAndOk (184), EventTM1OutOfRange (141), EventTM1SensorFault (140), EventTM1TripLevelTGt (139), EventTM1WarningLevelTGt (138), EventTM2OutOfRange (29), EventTM2SensorFault (28), EventTM2TripLevelTGt (31), EventTM2WarningLevelTGt (30), EventTripLevelCosPhiLt (156), EventTripLevelIGt (152), EventTripLevelILt (153), EventTripLevelPGt (154), EventTripLevelPLt (155), EventTripLevelULt (157), EventUnbalance (129), EventWarningLevelCosPhiLt (148), EventWarningLevelIGt (144), EventWarningLevelILt (145), EventWarningLevelPGt (146), EventWarningLevelPLt (147), EventWarningLevelULt (149), FaultAntivalence (208), FaultBus (197), FaultConfigurationError (195), FaultDouble0 (205), FaultDouble1 (206), FaultEndPosition (207), FaultExecutionOnCommand (200), FaultExecutionSTOPCommand (201), FaultFeedbackOff (203), FaultFeedbackOn (202), FaultHardwareFaultBasicUnit (192), FaultModuleFault (193), FaultOperationalProtectionOff (211), FaultParameterization (196), FaultPLCPCS (198), FaultPowerFailure (210), FaultStalledPositioner (204), FaultTemporaryComponents (194), FaultTestPositionFeedback (209), FixedLevel0 (1), FixedLevel1 (2), Flashing1Output (248), Flashing2Output (249), Flashing3Output (250), Flicker1Output (251), Flicker2Output (252), Flicker3Output (253), NonvolatileElement1Output (244), NonvolatileElement2Output (245), NonvolatileElement3Output (246), NonvolatileElement4Output (247), NotConnected (0), OPButton1 (33), OPButton2 (34), OPButton3 (35), OPButton4 (36), OPTestResetButton (32), PWMOutput (254), SignalConditioning1Output (240), SignalConditioning2Output (241), SignalConditioning3Output (242), SignalConditioning4Output (243), SignalConditioning5Output (214), SignalConditioning6Output (215), StatusBusOk (99), StatusChangeoverPauseActive (111), StatusCoolingDownPeriodActive (122), StatusCurrentFlowing (101), StatusDeviceOk (98), StatusDeviceTestActive (124), StatusEmergencyStartExecuted (121), StatusEnablingCircuitClosed (127), StatusFeedbackCLOSED (114), StatusFeedbackOPEN (115), StatusGroupFault (96), StatusGroupWarning (97), StatusInterlockingTimeActive (110), StatusOff (106), StatusOnForward (107), StatusOnForwardFast (108), StatusOnReverse (105), StatusOnReverseFast (104), StatusOperationalProtectionOff (119), StatusPauseTimeActive (123), StatusPhaseSequence123 (125), StatusPhaseSequence321 (126), StatusPLCPCSInRun (100), StatusPositionerRunsInCLOSEDDirection (113), StatusPositionerRunsInOPENDirection (112), StatusPROFIenergyCommandStartPausePending (102), StatusRemoteMode (120), StatusStartActive (109), StatusTestPosition (118), StatusTorqueCLOSED (116), StatusTorqueOPEN (117), Timer1Output (232), Timer2Output (233), Timer3Output (234), Timer4Output (235), Timer5Output (230), Timer6Output (231), TruthTable10Output (226), TruthTable11Output (227), TruthTable1Output (216), TruthTable2Output (217), TruthTable3Output (218), TruthTable4Output (219), TruthTable5Output (220), TruthTable6Output (221), TruthTable7Output (222), TruthTable8Output (223), TruthTable9Output1 (224), TruthTable9Output2 (225), WarningFeedbackCircuit (190), WarningSimultaneity (191)
     """
     AcyclicReceiveBit00: ControlFunctionReverse = ...
@@ -2118,7 +2182,8 @@ class ControlFunctionReverse(Enum): # skipped bases: <type 'IConvertible'>, <typ
 
 class ControlFunctionReverseFast(Enum): # skipped bases: <type 'IConvertible'>, <type 'IComparable'>, <type 'IFormattable'>, <type 'object'>
     """
-    Possible values for property ControlFunctionReverseFast
+    Possible values for property ControlFunctionReverseFast
+
     enum ControlFunctionReverseFast, values: AcyclicReceiveBit00 (40), AcyclicReceiveBit01 (41), AcyclicReceiveBit02 (42), AcyclicReceiveBit03 (43), AcyclicReceiveBit04 (44), AcyclicReceiveBit05 (45), AcyclicReceiveBit06 (46), AcyclicReceiveBit07 (47), AcyclicReceiveBit10 (48), AcyclicReceiveBit11 (49), AcyclicReceiveBit12 (50), AcyclicReceiveBit13 (51), AcyclicReceiveBit14 (52), AcyclicReceiveBit15 (53), AcyclicReceiveBit16 (54), AcyclicReceiveBit17 (55), BUInput1 (9), BUInput2 (10), BUInput3 (11), BUInput4 (12), BUTestResetButton (8), ContactorControl1QE1 (80), ContactorControl2QE2 (81), ContactorControl3QE3 (82), ContactorControl4QE4 (83), ContactorControl5QE5 (84), Counter1Output (236), Counter2Output (237), Counter3Output (238), Counter4Output (239), Counter5Output (228), Counter6Output (229), CyclicReceiveBit00 (56), CyclicReceiveBit01 (57), CyclicReceiveBit02 (58), CyclicReceiveBit03 (59), CyclicReceiveBit04 (60), CyclicReceiveBit05 (61), CyclicReceiveBit06 (62), CyclicReceiveBit07 (63), CyclicReceiveBit10 (64), CyclicReceiveBit11 (65), CyclicReceiveBit12 (66), CyclicReceiveBit13 (67), CyclicReceiveBit14 (68), CyclicReceiveBit15 (69), CyclicReceiveBit16 (70), CyclicReceiveBit17 (71), DisplayQLAOff (90), DisplayQLEForward (91), DisplayQLEForwardFast (92), DisplayQLEReverse (89), DisplayQLEReverseFast (88), DisplayQLSFault (93), DM1Input1 (16), DM1Input2 (17), DM1Input3 (18), DM1Input4 (19), DM1SensorChannel1 (24), DM1SensorChannel2 (25), DM2Input1 (20), DM2Input2 (21), DM2Input3 (22), DM2Input4 (23), EnabledControlCommandOff (74), EnabledControlCommandOnForward (75), EnabledControlCommandOnForwardFast (76), EnabledControlCommandOnReverse (73), EnabledControlCommandOnReverseFast (72), EventAM1OpenCircuit (180), EventAM1TripLevel0420mAGt (158), EventAM1TripLevel0420mALt (159), EventAM1WarningLevel0420mAGt (150), EventAM1WarningLevel0420mALt (151), EventAM2OpenCircuit (179), EventAM2TripLevel0420mAGt (6), EventAM2TripLevel0420mALt (7), EventAM2WarningLevel0420mAGt (4), EventAM2WarningLevel0420mALt (5), EventConfiguredOperatorPanelMissing (188), EventDMFLOCALOk (186), EventExternalFault1 (172), EventExternalFault2 (173), EventExternalFault3 (174), EventExternalFault4 (175), EventExternalFault5 (176), EventExternalFault6 (177), EventExternalGroundFault (133), EventExternalGroundFaultWarning (134), EventInternalGroundFault (132), EventJustOneStartPossible (165), EventLimitMonitor1 (168), EventLimitMonitor2 (169), EventLimitMonitor3 (170), EventLimitMonitor4 (171), EventLimitMonitor5 (38), EventLimitMonitor6 (39), EventMonitoringPeriodForMandatoryTestingTestRequirement (182), EventMotorOperatingHoursGt (166), EventNoStartPermitted (163), EventNumberOfStartsGt (164), EventOverload (130), EventOverloadAndPhaseFailure (131), EventPrewarningOverload (128), EventPROFIsafeActive (187), EventSafetyrelatedTripping (181), EventStalledRotor (160), EventStopTimeGt (167), EventThermistorOpenCircuit (137), EventThermistorShortCircuit (136), EventThermistorTripLevel (135), EventTimestampfctActiveAndOk (184), EventTM1OutOfRange (141), EventTM1SensorFault (140), EventTM1TripLevelTGt (139), EventTM1WarningLevelTGt (138), EventTM2OutOfRange (29), EventTM2SensorFault (28), EventTM2TripLevelTGt (31), EventTM2WarningLevelTGt (30), EventTripLevelCosPhiLt (156), EventTripLevelIGt (152), EventTripLevelILt (153), EventTripLevelPGt (154), EventTripLevelPLt (155), EventTripLevelULt (157), EventUnbalance (129), EventWarningLevelCosPhiLt (148), EventWarningLevelIGt (144), EventWarningLevelILt (145), EventWarningLevelPGt (146), EventWarningLevelPLt (147), EventWarningLevelULt (149), FaultAntivalence (208), FaultBus (197), FaultConfigurationError (195), FaultDouble0 (205), FaultDouble1 (206), FaultEndPosition (207), FaultExecutionOnCommand (200), FaultExecutionSTOPCommand (201), FaultFeedbackOff (203), FaultFeedbackOn (202), FaultHardwareFaultBasicUnit (192), FaultModuleFault (193), FaultOperationalProtectionOff (211), FaultParameterization (196), FaultPLCPCS (198), FaultPowerFailure (210), FaultStalledPositioner (204), FaultTemporaryComponents (194), FaultTestPositionFeedback (209), FixedLevel0 (1), FixedLevel1 (2), Flashing1Output (248), Flashing2Output (249), Flashing3Output (250), Flicker1Output (251), Flicker2Output (252), Flicker3Output (253), NonvolatileElement1Output (244), NonvolatileElement2Output (245), NonvolatileElement3Output (246), NonvolatileElement4Output (247), NotConnected (0), OPButton1 (33), OPButton2 (34), OPButton3 (35), OPButton4 (36), OPTestResetButton (32), PWMOutput (254), SignalConditioning1Output (240), SignalConditioning2Output (241), SignalConditioning3Output (242), SignalConditioning4Output (243), SignalConditioning5Output (214), SignalConditioning6Output (215), StatusBusOk (99), StatusChangeoverPauseActive (111), StatusCoolingDownPeriodActive (122), StatusCurrentFlowing (101), StatusDeviceOk (98), StatusDeviceTestActive (124), StatusEmergencyStartExecuted (121), StatusEnablingCircuitClosed (127), StatusFeedbackCLOSED (114), StatusFeedbackOPEN (115), StatusGroupFault (96), StatusGroupWarning (97), StatusInterlockingTimeActive (110), StatusOff (106), StatusOnForward (107), StatusOnForwardFast (108), StatusOnReverse (105), StatusOnReverseFast (104), StatusOperationalProtectionOff (119), StatusPauseTimeActive (123), StatusPhaseSequence123 (125), StatusPhaseSequence321 (126), StatusPLCPCSInRun (100), StatusPositionerRunsInCLOSEDDirection (113), StatusPositionerRunsInOPENDirection (112), StatusPROFIenergyCommandStartPausePending (102), StatusRemoteMode (120), StatusStartActive (109), StatusTestPosition (118), StatusTorqueCLOSED (116), StatusTorqueOPEN (117), Timer1Output (232), Timer2Output (233), Timer3Output (234), Timer4Output (235), Timer5Output (230), Timer6Output (231), TruthTable10Output (226), TruthTable11Output (227), TruthTable1Output (216), TruthTable2Output (217), TruthTable3Output (218), TruthTable4Output (219), TruthTable5Output (220), TruthTable6Output (221), TruthTable7Output (222), TruthTable8Output (223), TruthTable9Output1 (224), TruthTable9Output2 (225), WarningFeedbackCircuit (190), WarningSimultaneity (191)
     """
     AcyclicReceiveBit00: ControlFunctionReverseFast = ...
@@ -2354,7 +2419,8 @@ class ControlFunctionReverseFast(Enum): # skipped bases: <type 'IConvertible'>, 
 
 class ControlFunctionTorqueCLOSEDTC(Enum): # skipped bases: <type 'IConvertible'>, <type 'IComparable'>, <type 'IFormattable'>, <type 'object'>
     """
-    Possible values for property ControlFunctionTorqueCLOSEDTC
+    Possible values for property ControlFunctionTorqueCLOSEDTC
+
     enum ControlFunctionTorqueCLOSEDTC, values: AcyclicReceiveBit00 (40), AcyclicReceiveBit01 (41), AcyclicReceiveBit02 (42), AcyclicReceiveBit03 (43), AcyclicReceiveBit04 (44), AcyclicReceiveBit05 (45), AcyclicReceiveBit06 (46), AcyclicReceiveBit07 (47), AcyclicReceiveBit10 (48), AcyclicReceiveBit11 (49), AcyclicReceiveBit12 (50), AcyclicReceiveBit13 (51), AcyclicReceiveBit14 (52), AcyclicReceiveBit15 (53), AcyclicReceiveBit16 (54), AcyclicReceiveBit17 (55), BUInput1 (9), BUInput2 (10), BUInput3 (11), BUInput4 (12), BUTestResetButton (8), ContactorControl1QE1 (80), ContactorControl2QE2 (81), ContactorControl3QE3 (82), ContactorControl4QE4 (83), ContactorControl5QE5 (84), Counter1Output (236), Counter2Output (237), Counter3Output (238), Counter4Output (239), Counter5Output (228), Counter6Output (229), CyclicReceiveBit00 (56), CyclicReceiveBit01 (57), CyclicReceiveBit02 (58), CyclicReceiveBit03 (59), CyclicReceiveBit04 (60), CyclicReceiveBit05 (61), CyclicReceiveBit06 (62), CyclicReceiveBit07 (63), CyclicReceiveBit10 (64), CyclicReceiveBit11 (65), CyclicReceiveBit12 (66), CyclicReceiveBit13 (67), CyclicReceiveBit14 (68), CyclicReceiveBit15 (69), CyclicReceiveBit16 (70), CyclicReceiveBit17 (71), DisplayQLAOff (90), DisplayQLEForward (91), DisplayQLEForwardFast (92), DisplayQLEReverse (89), DisplayQLEReverseFast (88), DisplayQLSFault (93), DM1Input1 (16), DM1Input2 (17), DM1Input3 (18), DM1Input4 (19), DM1SensorChannel1 (24), DM1SensorChannel2 (25), DM2Input1 (20), DM2Input2 (21), DM2Input3 (22), DM2Input4 (23), EnabledControlCommandOff (74), EnabledControlCommandOnForward (75), EnabledControlCommandOnForwardFast (76), EnabledControlCommandOnReverse (73), EnabledControlCommandOnReverseFast (72), EventAM1OpenCircuit (180), EventAM1TripLevel0420mAGt (158), EventAM1TripLevel0420mALt (159), EventAM1WarningLevel0420mAGt (150), EventAM1WarningLevel0420mALt (151), EventAM2OpenCircuit (179), EventAM2TripLevel0420mAGt (6), EventAM2TripLevel0420mALt (7), EventAM2WarningLevel0420mAGt (4), EventAM2WarningLevel0420mALt (5), EventConfiguredOperatorPanelMissing (188), EventDMFLOCALOk (186), EventExternalFault1 (172), EventExternalFault2 (173), EventExternalFault3 (174), EventExternalFault4 (175), EventExternalFault5 (176), EventExternalFault6 (177), EventExternalGroundFault (133), EventExternalGroundFaultWarning (134), EventInternalGroundFault (132), EventJustOneStartPossible (165), EventLimitMonitor1 (168), EventLimitMonitor2 (169), EventLimitMonitor3 (170), EventLimitMonitor4 (171), EventLimitMonitor5 (38), EventLimitMonitor6 (39), EventMonitoringPeriodForMandatoryTestingTestRequirement (182), EventMotorOperatingHoursGt (166), EventNoStartPermitted (163), EventNumberOfStartsGt (164), EventOverload (130), EventOverloadAndPhaseFailure (131), EventPrewarningOverload (128), EventPROFIsafeActive (187), EventSafetyrelatedTripping (181), EventStalledRotor (160), EventStopTimeGt (167), EventThermistorOpenCircuit (137), EventThermistorShortCircuit (136), EventThermistorTripLevel (135), EventTimestampfctActiveAndOk (184), EventTM1OutOfRange (141), EventTM1SensorFault (140), EventTM1TripLevelTGt (139), EventTM1WarningLevelTGt (138), EventTM2OutOfRange (29), EventTM2SensorFault (28), EventTM2TripLevelTGt (31), EventTM2WarningLevelTGt (30), EventTripLevelCosPhiLt (156), EventTripLevelIGt (152), EventTripLevelILt (153), EventTripLevelPGt (154), EventTripLevelPLt (155), EventTripLevelULt (157), EventUnbalance (129), EventWarningLevelCosPhiLt (148), EventWarningLevelIGt (144), EventWarningLevelILt (145), EventWarningLevelPGt (146), EventWarningLevelPLt (147), EventWarningLevelULt (149), FaultAntivalence (208), FaultBus (197), FaultConfigurationError (195), FaultDouble0 (205), FaultDouble1 (206), FaultEndPosition (207), FaultExecutionOnCommand (200), FaultExecutionSTOPCommand (201), FaultFeedbackOff (203), FaultFeedbackOn (202), FaultHardwareFaultBasicUnit (192), FaultModuleFault (193), FaultOperationalProtectionOff (211), FaultParameterization (196), FaultPLCPCS (198), FaultPowerFailure (210), FaultStalledPositioner (204), FaultTemporaryComponents (194), FaultTestPositionFeedback (209), FixedLevel0 (1), FixedLevel1 (2), Flashing1Output (248), Flashing2Output (249), Flashing3Output (250), Flicker1Output (251), Flicker2Output (252), Flicker3Output (253), NonvolatileElement1Output (244), NonvolatileElement2Output (245), NonvolatileElement3Output (246), NonvolatileElement4Output (247), NotConnected (0), OPButton1 (33), OPButton2 (34), OPButton3 (35), OPButton4 (36), OPTestResetButton (32), PWMOutput (254), SignalConditioning1Output (240), SignalConditioning2Output (241), SignalConditioning3Output (242), SignalConditioning4Output (243), SignalConditioning5Output (214), SignalConditioning6Output (215), StatusBusOk (99), StatusChangeoverPauseActive (111), StatusCoolingDownPeriodActive (122), StatusCurrentFlowing (101), StatusDeviceOk (98), StatusDeviceTestActive (124), StatusEmergencyStartExecuted (121), StatusEnablingCircuitClosed (127), StatusFeedbackCLOSED (114), StatusFeedbackOPEN (115), StatusGroupFault (96), StatusGroupWarning (97), StatusInterlockingTimeActive (110), StatusOff (106), StatusOnForward (107), StatusOnForwardFast (108), StatusOnReverse (105), StatusOnReverseFast (104), StatusOperationalProtectionOff (119), StatusPauseTimeActive (123), StatusPhaseSequence123 (125), StatusPhaseSequence321 (126), StatusPLCPCSInRun (100), StatusPositionerRunsInCLOSEDDirection (113), StatusPositionerRunsInOPENDirection (112), StatusPROFIenergyCommandStartPausePending (102), StatusRemoteMode (120), StatusStartActive (109), StatusTestPosition (118), StatusTorqueCLOSED (116), StatusTorqueOPEN (117), Timer1Output (232), Timer2Output (233), Timer3Output (234), Timer4Output (235), Timer5Output (230), Timer6Output (231), TruthTable10Output (226), TruthTable11Output (227), TruthTable1Output (216), TruthTable2Output (217), TruthTable3Output (218), TruthTable4Output (219), TruthTable5Output (220), TruthTable6Output (221), TruthTable7Output (222), TruthTable8Output (223), TruthTable9Output1 (224), TruthTable9Output2 (225), WarningFeedbackCircuit (190), WarningSimultaneity (191)
     """
     AcyclicReceiveBit00: ControlFunctionTorqueCLOSEDTC = ...
@@ -2590,7 +2656,8 @@ class ControlFunctionTorqueCLOSEDTC(Enum): # skipped bases: <type 'IConvertible'
 
 class ControlFunctionTorqueOPENTO(Enum): # skipped bases: <type 'IConvertible'>, <type 'IComparable'>, <type 'IFormattable'>, <type 'object'>
     """
-    Possible values for property ControlFunctionTorqueOPENTO
+    Possible values for property ControlFunctionTorqueOPENTO
+
     enum ControlFunctionTorqueOPENTO, values: AcyclicReceiveBit00 (40), AcyclicReceiveBit01 (41), AcyclicReceiveBit02 (42), AcyclicReceiveBit03 (43), AcyclicReceiveBit04 (44), AcyclicReceiveBit05 (45), AcyclicReceiveBit06 (46), AcyclicReceiveBit07 (47), AcyclicReceiveBit10 (48), AcyclicReceiveBit11 (49), AcyclicReceiveBit12 (50), AcyclicReceiveBit13 (51), AcyclicReceiveBit14 (52), AcyclicReceiveBit15 (53), AcyclicReceiveBit16 (54), AcyclicReceiveBit17 (55), BUInput1 (9), BUInput2 (10), BUInput3 (11), BUInput4 (12), BUTestResetButton (8), ContactorControl1QE1 (80), ContactorControl2QE2 (81), ContactorControl3QE3 (82), ContactorControl4QE4 (83), ContactorControl5QE5 (84), Counter1Output (236), Counter2Output (237), Counter3Output (238), Counter4Output (239), Counter5Output (228), Counter6Output (229), CyclicReceiveBit00 (56), CyclicReceiveBit01 (57), CyclicReceiveBit02 (58), CyclicReceiveBit03 (59), CyclicReceiveBit04 (60), CyclicReceiveBit05 (61), CyclicReceiveBit06 (62), CyclicReceiveBit07 (63), CyclicReceiveBit10 (64), CyclicReceiveBit11 (65), CyclicReceiveBit12 (66), CyclicReceiveBit13 (67), CyclicReceiveBit14 (68), CyclicReceiveBit15 (69), CyclicReceiveBit16 (70), CyclicReceiveBit17 (71), DisplayQLAOff (90), DisplayQLEForward (91), DisplayQLEForwardFast (92), DisplayQLEReverse (89), DisplayQLEReverseFast (88), DisplayQLSFault (93), DM1Input1 (16), DM1Input2 (17), DM1Input3 (18), DM1Input4 (19), DM1SensorChannel1 (24), DM1SensorChannel2 (25), DM2Input1 (20), DM2Input2 (21), DM2Input3 (22), DM2Input4 (23), EnabledControlCommandOff (74), EnabledControlCommandOnForward (75), EnabledControlCommandOnForwardFast (76), EnabledControlCommandOnReverse (73), EnabledControlCommandOnReverseFast (72), EventAM1OpenCircuit (180), EventAM1TripLevel0420mAGt (158), EventAM1TripLevel0420mALt (159), EventAM1WarningLevel0420mAGt (150), EventAM1WarningLevel0420mALt (151), EventAM2OpenCircuit (179), EventAM2TripLevel0420mAGt (6), EventAM2TripLevel0420mALt (7), EventAM2WarningLevel0420mAGt (4), EventAM2WarningLevel0420mALt (5), EventConfiguredOperatorPanelMissing (188), EventDMFLOCALOk (186), EventExternalFault1 (172), EventExternalFault2 (173), EventExternalFault3 (174), EventExternalFault4 (175), EventExternalFault5 (176), EventExternalFault6 (177), EventExternalGroundFault (133), EventExternalGroundFaultWarning (134), EventInternalGroundFault (132), EventJustOneStartPossible (165), EventLimitMonitor1 (168), EventLimitMonitor2 (169), EventLimitMonitor3 (170), EventLimitMonitor4 (171), EventLimitMonitor5 (38), EventLimitMonitor6 (39), EventMonitoringPeriodForMandatoryTestingTestRequirement (182), EventMotorOperatingHoursGt (166), EventNoStartPermitted (163), EventNumberOfStartsGt (164), EventOverload (130), EventOverloadAndPhaseFailure (131), EventPrewarningOverload (128), EventPROFIsafeActive (187), EventSafetyrelatedTripping (181), EventStalledRotor (160), EventStopTimeGt (167), EventThermistorOpenCircuit (137), EventThermistorShortCircuit (136), EventThermistorTripLevel (135), EventTimestampfctActiveAndOk (184), EventTM1OutOfRange (141), EventTM1SensorFault (140), EventTM1TripLevelTGt (139), EventTM1WarningLevelTGt (138), EventTM2OutOfRange (29), EventTM2SensorFault (28), EventTM2TripLevelTGt (31), EventTM2WarningLevelTGt (30), EventTripLevelCosPhiLt (156), EventTripLevelIGt (152), EventTripLevelILt (153), EventTripLevelPGt (154), EventTripLevelPLt (155), EventTripLevelULt (157), EventUnbalance (129), EventWarningLevelCosPhiLt (148), EventWarningLevelIGt (144), EventWarningLevelILt (145), EventWarningLevelPGt (146), EventWarningLevelPLt (147), EventWarningLevelULt (149), FaultAntivalence (208), FaultBus (197), FaultConfigurationError (195), FaultDouble0 (205), FaultDouble1 (206), FaultEndPosition (207), FaultExecutionOnCommand (200), FaultExecutionSTOPCommand (201), FaultFeedbackOff (203), FaultFeedbackOn (202), FaultHardwareFaultBasicUnit (192), FaultModuleFault (193), FaultOperationalProtectionOff (211), FaultParameterization (196), FaultPLCPCS (198), FaultPowerFailure (210), FaultStalledPositioner (204), FaultTemporaryComponents (194), FaultTestPositionFeedback (209), FixedLevel0 (1), FixedLevel1 (2), Flashing1Output (248), Flashing2Output (249), Flashing3Output (250), Flicker1Output (251), Flicker2Output (252), Flicker3Output (253), NonvolatileElement1Output (244), NonvolatileElement2Output (245), NonvolatileElement3Output (246), NonvolatileElement4Output (247), NotConnected (0), OPButton1 (33), OPButton2 (34), OPButton3 (35), OPButton4 (36), OPTestResetButton (32), PWMOutput (254), SignalConditioning1Output (240), SignalConditioning2Output (241), SignalConditioning3Output (242), SignalConditioning4Output (243), SignalConditioning5Output (214), SignalConditioning6Output (215), StatusBusOk (99), StatusChangeoverPauseActive (111), StatusCoolingDownPeriodActive (122), StatusCurrentFlowing (101), StatusDeviceOk (98), StatusDeviceTestActive (124), StatusEmergencyStartExecuted (121), StatusEnablingCircuitClosed (127), StatusFeedbackCLOSED (114), StatusFeedbackOPEN (115), StatusGroupFault (96), StatusGroupWarning (97), StatusInterlockingTimeActive (110), StatusOff (106), StatusOnForward (107), StatusOnForwardFast (108), StatusOnReverse (105), StatusOnReverseFast (104), StatusOperationalProtectionOff (119), StatusPauseTimeActive (123), StatusPhaseSequence123 (125), StatusPhaseSequence321 (126), StatusPLCPCSInRun (100), StatusPositionerRunsInCLOSEDDirection (113), StatusPositionerRunsInOPENDirection (112), StatusPROFIenergyCommandStartPausePending (102), StatusRemoteMode (120), StatusStartActive (109), StatusTestPosition (118), StatusTorqueCLOSED (116), StatusTorqueOPEN (117), Timer1Output (232), Timer2Output (233), Timer3Output (234), Timer4Output (235), Timer5Output (230), Timer6Output (231), TruthTable10Output (226), TruthTable11Output (227), TruthTable1Output (216), TruthTable2Output (217), TruthTable3Output (218), TruthTable4Output (219), TruthTable5Output (220), TruthTable6Output (221), TruthTable7Output (222), TruthTable8Output (223), TruthTable9Output1 (224), TruthTable9Output2 (225), WarningFeedbackCircuit (190), WarningSimultaneity (191)
     """
     AcyclicReceiveBit00: ControlFunctionTorqueOPENTO = ...
@@ -2826,7 +2893,8 @@ class ControlFunctionTorqueOPENTO(Enum): # skipped bases: <type 'IConvertible'>,
 
 class ControlStationModeSelectorS1(Enum): # skipped bases: <type 'IConvertible'>, <type 'IComparable'>, <type 'IFormattable'>, <type 'object'>
     """
-    Possible values for property ControlStationModeSelectorS1
+    Possible values for property ControlStationModeSelectorS1
+
     enum ControlStationModeSelectorS1, values: AcyclicReceiveBit00 (40), AcyclicReceiveBit01 (41), AcyclicReceiveBit02 (42), AcyclicReceiveBit03 (43), AcyclicReceiveBit04 (44), AcyclicReceiveBit05 (45), AcyclicReceiveBit06 (46), AcyclicReceiveBit07 (47), AcyclicReceiveBit10 (48), AcyclicReceiveBit11 (49), AcyclicReceiveBit12 (50), AcyclicReceiveBit13 (51), AcyclicReceiveBit14 (52), AcyclicReceiveBit15 (53), AcyclicReceiveBit16 (54), AcyclicReceiveBit17 (55), BUInput1 (9), BUInput2 (10), BUInput3 (11), BUInput4 (12), BUTestResetButton (8), ContactorControl1QE1 (80), ContactorControl2QE2 (81), ContactorControl3QE3 (82), ContactorControl4QE4 (83), ContactorControl5QE5 (84), Counter1Output (236), Counter2Output (237), Counter3Output (238), Counter4Output (239), Counter5Output (228), Counter6Output (229), CyclicReceiveBit00 (56), CyclicReceiveBit01 (57), CyclicReceiveBit02 (58), CyclicReceiveBit03 (59), CyclicReceiveBit04 (60), CyclicReceiveBit05 (61), CyclicReceiveBit06 (62), CyclicReceiveBit07 (63), CyclicReceiveBit10 (64), CyclicReceiveBit11 (65), CyclicReceiveBit12 (66), CyclicReceiveBit13 (67), CyclicReceiveBit14 (68), CyclicReceiveBit15 (69), CyclicReceiveBit16 (70), CyclicReceiveBit17 (71), DisplayQLAOff (90), DisplayQLEForward (91), DisplayQLEForwardFast (92), DisplayQLEReverse (89), DisplayQLEReverseFast (88), DisplayQLSFault (93), DM1Input1 (16), DM1Input2 (17), DM1Input3 (18), DM1Input4 (19), DM1SensorChannel1 (24), DM1SensorChannel2 (25), DM2Input1 (20), DM2Input2 (21), DM2Input3 (22), DM2Input4 (23), EnabledControlCommandOff (74), EnabledControlCommandOnForward (75), EnabledControlCommandOnForwardFast (76), EnabledControlCommandOnReverse (73), EnabledControlCommandOnReverseFast (72), EventAM1OpenCircuit (180), EventAM1TripLevel0420mAGt (158), EventAM1TripLevel0420mALt (159), EventAM1WarningLevel0420mAGt (150), EventAM1WarningLevel0420mALt (151), EventAM2OpenCircuit (179), EventAM2TripLevel0420mAGt (6), EventAM2TripLevel0420mALt (7), EventAM2WarningLevel0420mAGt (4), EventAM2WarningLevel0420mALt (5), EventConfiguredOperatorPanelMissing (188), EventDMFLOCALOk (186), EventExternalFault1 (172), EventExternalFault2 (173), EventExternalFault3 (174), EventExternalFault4 (175), EventExternalFault5 (176), EventExternalFault6 (177), EventExternalGroundFault (133), EventExternalGroundFaultWarning (134), EventInternalGroundFault (132), EventJustOneStartPossible (165), EventLimitMonitor1 (168), EventLimitMonitor2 (169), EventLimitMonitor3 (170), EventLimitMonitor4 (171), EventLimitMonitor5 (38), EventLimitMonitor6 (39), EventMonitoringPeriodForMandatoryTestingTestRequirement (182), EventMotorOperatingHoursGt (166), EventNoStartPermitted (163), EventNumberOfStartsGt (164), EventOverload (130), EventOverloadAndPhaseFailure (131), EventPrewarningOverload (128), EventPROFIsafeActive (187), EventSafetyrelatedTripping (181), EventStalledRotor (160), EventStopTimeGt (167), EventThermistorOpenCircuit (137), EventThermistorShortCircuit (136), EventThermistorTripLevel (135), EventTimestampfctActiveAndOk (184), EventTM1OutOfRange (141), EventTM1SensorFault (140), EventTM1TripLevelTGt (139), EventTM1WarningLevelTGt (138), EventTM2OutOfRange (29), EventTM2SensorFault (28), EventTM2TripLevelTGt (31), EventTM2WarningLevelTGt (30), EventTripLevelCosPhiLt (156), EventTripLevelIGt (152), EventTripLevelILt (153), EventTripLevelPGt (154), EventTripLevelPLt (155), EventTripLevelULt (157), EventUnbalance (129), EventWarningLevelCosPhiLt (148), EventWarningLevelIGt (144), EventWarningLevelILt (145), EventWarningLevelPGt (146), EventWarningLevelPLt (147), EventWarningLevelULt (149), FaultAntivalence (208), FaultBus (197), FaultConfigurationError (195), FaultDouble0 (205), FaultDouble1 (206), FaultEndPosition (207), FaultExecutionOnCommand (200), FaultExecutionSTOPCommand (201), FaultFeedbackOff (203), FaultFeedbackOn (202), FaultHardwareFaultBasicUnit (192), FaultModuleFault (193), FaultOperationalProtectionOff (211), FaultParameterization (196), FaultPLCPCS (198), FaultPowerFailure (210), FaultStalledPositioner (204), FaultTemporaryComponents (194), FaultTestPositionFeedback (209), FixedLevel0 (1), FixedLevel1 (2), Flashing1Output (248), Flashing2Output (249), Flashing3Output (250), Flicker1Output (251), Flicker2Output (252), Flicker3Output (253), NonvolatileElement1Output (244), NonvolatileElement2Output (245), NonvolatileElement3Output (246), NonvolatileElement4Output (247), NotConnected (0), OPButton1 (33), OPButton2 (34), OPButton3 (35), OPButton4 (36), OPTestResetButton (32), PWMOutput (254), SignalConditioning1Output (240), SignalConditioning2Output (241), SignalConditioning3Output (242), SignalConditioning4Output (243), SignalConditioning5Output (214), SignalConditioning6Output (215), StatusBusOk (99), StatusChangeoverPauseActive (111), StatusCoolingDownPeriodActive (122), StatusCurrentFlowing (101), StatusDeviceOk (98), StatusDeviceTestActive (124), StatusEmergencyStartExecuted (121), StatusEnablingCircuitClosed (127), StatusFeedbackCLOSED (114), StatusFeedbackOPEN (115), StatusGroupFault (96), StatusGroupWarning (97), StatusInterlockingTimeActive (110), StatusOff (106), StatusOnForward (107), StatusOnForwardFast (108), StatusOnReverse (105), StatusOnReverseFast (104), StatusOperationalProtectionOff (119), StatusPauseTimeActive (123), StatusPhaseSequence123 (125), StatusPhaseSequence321 (126), StatusPLCPCSInRun (100), StatusPositionerRunsInCLOSEDDirection (113), StatusPositionerRunsInOPENDirection (112), StatusPROFIenergyCommandStartPausePending (102), StatusRemoteMode (120), StatusStartActive (109), StatusTestPosition (118), StatusTorqueCLOSED (116), StatusTorqueOPEN (117), Timer1Output (232), Timer2Output (233), Timer3Output (234), Timer4Output (235), Timer5Output (230), Timer6Output (231), TruthTable10Output (226), TruthTable11Output (227), TruthTable1Output (216), TruthTable2Output (217), TruthTable3Output (218), TruthTable4Output (219), TruthTable5Output (220), TruthTable6Output (221), TruthTable7Output (222), TruthTable8Output (223), TruthTable9Output1 (224), TruthTable9Output2 (225), WarningFeedbackCircuit (190), WarningSimultaneity (191)
     """
     AcyclicReceiveBit00: ControlStationModeSelectorS1 = ...
@@ -3062,7 +3130,8 @@ class ControlStationModeSelectorS1(Enum): # skipped bases: <type 'IConvertible'>
 
 class ControlStationModeSelectorS2(Enum): # skipped bases: <type 'IConvertible'>, <type 'IComparable'>, <type 'IFormattable'>, <type 'object'>
     """
-    Possible values for property ControlStationModeSelectorS2
+    Possible values for property ControlStationModeSelectorS2
+
     enum ControlStationModeSelectorS2, values: AcyclicReceiveBit00 (40), AcyclicReceiveBit01 (41), AcyclicReceiveBit02 (42), AcyclicReceiveBit03 (43), AcyclicReceiveBit04 (44), AcyclicReceiveBit05 (45), AcyclicReceiveBit06 (46), AcyclicReceiveBit07 (47), AcyclicReceiveBit10 (48), AcyclicReceiveBit11 (49), AcyclicReceiveBit12 (50), AcyclicReceiveBit13 (51), AcyclicReceiveBit14 (52), AcyclicReceiveBit15 (53), AcyclicReceiveBit16 (54), AcyclicReceiveBit17 (55), BUInput1 (9), BUInput2 (10), BUInput3 (11), BUInput4 (12), BUTestResetButton (8), ContactorControl1QE1 (80), ContactorControl2QE2 (81), ContactorControl3QE3 (82), ContactorControl4QE4 (83), ContactorControl5QE5 (84), Counter1Output (236), Counter2Output (237), Counter3Output (238), Counter4Output (239), Counter5Output (228), Counter6Output (229), CyclicReceiveBit00 (56), CyclicReceiveBit01 (57), CyclicReceiveBit02 (58), CyclicReceiveBit03 (59), CyclicReceiveBit04 (60), CyclicReceiveBit05 (61), CyclicReceiveBit06 (62), CyclicReceiveBit07 (63), CyclicReceiveBit10 (64), CyclicReceiveBit11 (65), CyclicReceiveBit12 (66), CyclicReceiveBit13 (67), CyclicReceiveBit14 (68), CyclicReceiveBit15 (69), CyclicReceiveBit16 (70), CyclicReceiveBit17 (71), DisplayQLAOff (90), DisplayQLEForward (91), DisplayQLEForwardFast (92), DisplayQLEReverse (89), DisplayQLEReverseFast (88), DisplayQLSFault (93), DM1Input1 (16), DM1Input2 (17), DM1Input3 (18), DM1Input4 (19), DM1SensorChannel1 (24), DM1SensorChannel2 (25), DM2Input1 (20), DM2Input2 (21), DM2Input3 (22), DM2Input4 (23), EnabledControlCommandOff (74), EnabledControlCommandOnForward (75), EnabledControlCommandOnForwardFast (76), EnabledControlCommandOnReverse (73), EnabledControlCommandOnReverseFast (72), EventAM1OpenCircuit (180), EventAM1TripLevel0420mAGt (158), EventAM1TripLevel0420mALt (159), EventAM1WarningLevel0420mAGt (150), EventAM1WarningLevel0420mALt (151), EventAM2OpenCircuit (179), EventAM2TripLevel0420mAGt (6), EventAM2TripLevel0420mALt (7), EventAM2WarningLevel0420mAGt (4), EventAM2WarningLevel0420mALt (5), EventConfiguredOperatorPanelMissing (188), EventDMFLOCALOk (186), EventExternalFault1 (172), EventExternalFault2 (173), EventExternalFault3 (174), EventExternalFault4 (175), EventExternalFault5 (176), EventExternalFault6 (177), EventExternalGroundFault (133), EventExternalGroundFaultWarning (134), EventInternalGroundFault (132), EventJustOneStartPossible (165), EventLimitMonitor1 (168), EventLimitMonitor2 (169), EventLimitMonitor3 (170), EventLimitMonitor4 (171), EventLimitMonitor5 (38), EventLimitMonitor6 (39), EventMonitoringPeriodForMandatoryTestingTestRequirement (182), EventMotorOperatingHoursGt (166), EventNoStartPermitted (163), EventNumberOfStartsGt (164), EventOverload (130), EventOverloadAndPhaseFailure (131), EventPrewarningOverload (128), EventPROFIsafeActive (187), EventSafetyrelatedTripping (181), EventStalledRotor (160), EventStopTimeGt (167), EventThermistorOpenCircuit (137), EventThermistorShortCircuit (136), EventThermistorTripLevel (135), EventTimestampfctActiveAndOk (184), EventTM1OutOfRange (141), EventTM1SensorFault (140), EventTM1TripLevelTGt (139), EventTM1WarningLevelTGt (138), EventTM2OutOfRange (29), EventTM2SensorFault (28), EventTM2TripLevelTGt (31), EventTM2WarningLevelTGt (30), EventTripLevelCosPhiLt (156), EventTripLevelIGt (152), EventTripLevelILt (153), EventTripLevelPGt (154), EventTripLevelPLt (155), EventTripLevelULt (157), EventUnbalance (129), EventWarningLevelCosPhiLt (148), EventWarningLevelIGt (144), EventWarningLevelILt (145), EventWarningLevelPGt (146), EventWarningLevelPLt (147), EventWarningLevelULt (149), FaultAntivalence (208), FaultBus (197), FaultConfigurationError (195), FaultDouble0 (205), FaultDouble1 (206), FaultEndPosition (207), FaultExecutionOnCommand (200), FaultExecutionSTOPCommand (201), FaultFeedbackOff (203), FaultFeedbackOn (202), FaultHardwareFaultBasicUnit (192), FaultModuleFault (193), FaultOperationalProtectionOff (211), FaultParameterization (196), FaultPLCPCS (198), FaultPowerFailure (210), FaultStalledPositioner (204), FaultTemporaryComponents (194), FaultTestPositionFeedback (209), FixedLevel0 (1), FixedLevel1 (2), Flashing1Output (248), Flashing2Output (249), Flashing3Output (250), Flicker1Output (251), Flicker2Output (252), Flicker3Output (253), NonvolatileElement1Output (244), NonvolatileElement2Output (245), NonvolatileElement3Output (246), NonvolatileElement4Output (247), NotConnected (0), OPButton1 (33), OPButton2 (34), OPButton3 (35), OPButton4 (36), OPTestResetButton (32), PWMOutput (254), SignalConditioning1Output (240), SignalConditioning2Output (241), SignalConditioning3Output (242), SignalConditioning4Output (243), SignalConditioning5Output (214), SignalConditioning6Output (215), StatusBusOk (99), StatusChangeoverPauseActive (111), StatusCoolingDownPeriodActive (122), StatusCurrentFlowing (101), StatusDeviceOk (98), StatusDeviceTestActive (124), StatusEmergencyStartExecuted (121), StatusEnablingCircuitClosed (127), StatusFeedbackCLOSED (114), StatusFeedbackOPEN (115), StatusGroupFault (96), StatusGroupWarning (97), StatusInterlockingTimeActive (110), StatusOff (106), StatusOnForward (107), StatusOnForwardFast (108), StatusOnReverse (105), StatusOnReverseFast (104), StatusOperationalProtectionOff (119), StatusPauseTimeActive (123), StatusPhaseSequence123 (125), StatusPhaseSequence321 (126), StatusPLCPCSInRun (100), StatusPositionerRunsInCLOSEDDirection (113), StatusPositionerRunsInOPENDirection (112), StatusPROFIenergyCommandStartPausePending (102), StatusRemoteMode (120), StatusStartActive (109), StatusTestPosition (118), StatusTorqueCLOSED (116), StatusTorqueOPEN (117), Timer1Output (232), Timer2Output (233), Timer3Output (234), Timer4Output (235), Timer5Output (230), Timer6Output (231), TruthTable10Output (226), TruthTable11Output (227), TruthTable1Output (216), TruthTable2Output (217), TruthTable3Output (218), TruthTable4Output (219), TruthTable5Output (220), TruthTable6Output (221), TruthTable7Output (222), TruthTable8Output (223), TruthTable9Output1 (224), TruthTable9Output2 (225), WarningFeedbackCircuit (190), WarningSimultaneity (191)
     """
     AcyclicReceiveBit00: ControlStationModeSelectorS2 = ...
@@ -3298,7 +3367,8 @@ class ControlStationModeSelectorS2(Enum): # skipped bases: <type 'IConvertible'>
 
 class CounterMode(Enum): # skipped bases: <type 'IConvertible'>, <type 'IComparable'>, <type 'IFormattable'>, <type 'object'>
     """
-    Possible values for property CounterMode
+    Possible values for property CounterMode
+
     enum CounterMode, values: CascadingFunction (2), ContinuouslyCountFunction (4), NormalCountFunction (1), OnceCountFunction (3), PeriodicCountFunction (0)
     """
     CascadingFunction: CounterMode = ...
@@ -3318,7 +3388,8 @@ class HardwareObject(IEquatable, IEngineeringObject, IHardwareCompareTarget, IIn
     @property
     def DeviceItems(self) -> DeviceItemComposition:
         """
-        Composition of device items
+        Composition of device items
+
         Get: DeviceItems(self: HardwareObject) -> DeviceItemComposition
         """
         ...
@@ -3326,7 +3397,8 @@ class HardwareObject(IEquatable, IEngineeringObject, IHardwareCompareTarget, IIn
     @property
     def HwIdentifiers(self) -> HwIdentifierComposition:
         """
-        Composition of HW identifiers
+        Composition of HW identifiers
+
         Get: HwIdentifiers(self: HardwareObject) -> HwIdentifierComposition
         """
         ...
@@ -3334,7 +3406,8 @@ class HardwareObject(IEquatable, IEngineeringObject, IHardwareCompareTarget, IIn
     @property
     def Items(self) -> DeviceItemAssociation:
         """
-        Associated device items for this device
+        Associated device items for this device
+
         Get: Items(self: HardwareObject) -> DeviceItemAssociation
         """
         ...
@@ -3342,8 +3415,10 @@ class HardwareObject(IEquatable, IEngineeringObject, IHardwareCompareTarget, IIn
     @property
     def Name(self) -> str:
         """
-        The name of the device
-        Get: Name(self: HardwareObject) -> str
+        The name of the device
+
+        Get: Name(self: HardwareObject) -> str
+
         Set: Name(self: HardwareObject) = value
         """
         ...
@@ -3351,7 +3426,8 @@ class HardwareObject(IEquatable, IEngineeringObject, IHardwareCompareTarget, IIn
     @property
     def Parent(self) -> IEngineeringObject:
         """
-        EOM parent of this object
+        EOM parent of this object
+
         Get: Parent(self: HardwareObject) -> IEngineeringObject
         """
         ...
@@ -3359,7 +3435,8 @@ class HardwareObject(IEquatable, IEngineeringObject, IHardwareCompareTarget, IIn
     @property
     def TypeIdentifier(self) -> str:
         """
-        The type identifier of this device
+        The type identifier of this device
+
         Get: TypeIdentifier(self: HardwareObject) -> str
         """
         ...
@@ -3367,95 +3444,130 @@ class HardwareObject(IEquatable, IEngineeringObject, IHardwareCompareTarget, IIn
 
     def CanPlugCopy(self, deviceItem:DeviceItem, positionNumber:int) -> bool:
         """
-        CanPlugCopy(self: HardwareObject, deviceItem: DeviceItem, positionNumber: int) -> bool
-            Determines if plug can be copied
-            deviceItem: Device for which the Plug will be moved
-            positionNumber: The position number where to create the plug
+        CanPlugCopy(self: HardwareObject, deviceItem: DeviceItem, positionNumber: int) -> bool
+
+            Determines if plug can be copied
+
+            deviceItem: Device for which the Plug will be moved
+
+            positionNumber: The position number where to create the plug
+
             Returns: System.Boolean
         """
         ...
 
     def CanPlugMove(self, deviceItem:DeviceItem, positionNumber:int) -> bool:
         """
-        CanPlugMove(self: HardwareObject, deviceItem: DeviceItem, positionNumber: int) -> bool
-            Determines if plug can be moved
-            deviceItem: Device for which the Plug will be moved
-            positionNumber: The position number where to create the plug
+        CanPlugMove(self: HardwareObject, deviceItem: DeviceItem, positionNumber: int) -> bool
+
+            Determines if plug can be moved
+
+            deviceItem: Device for which the Plug will be moved
+
+            positionNumber: The position number where to create the plug
+
             Returns: System.Boolean
         """
         ...
 
     def CanPlugNew(self, typeIdentifier:str, name:str, positionNumber:int) -> bool:
         """
-        CanPlugNew(self: HardwareObject, typeIdentifier: str, name: str, positionNumber: int) -> bool
-            Determines if plug can be created
-            typeIdentifier: The type identifier to use to create the plug
-            name: The name of the plug to create
-            positionNumber: The position number where to create the plug
+        CanPlugNew(self: HardwareObject, typeIdentifier: str, name: str, positionNumber: int) -> bool
+
+            Determines if plug can be created
+
+            typeIdentifier: The type identifier to use to create the plug
+
+            name: The name of the plug to create
+
+            positionNumber: The position number where to create the plug
+
             Returns: System.Boolean
         """
         ...
 
     def CompareTo(self, compareTarget:IHardwareCompareTarget) -> CompareResult:
         """
-        CompareTo(self: HardwareObject, compareTarget: IHardwareCompareTarget) -> CompareResult
-            Compare the hardware object vs the given target
-            compareTarget: The target to compare to the hardware object
+        CompareTo(self: HardwareObject, compareTarget: IHardwareCompareTarget) -> CompareResult
+
+            Compare the hardware object vs the given target
+
+            compareTarget: The target to compare to the hardware object
+
             Returns: Siemens.Engineering.Compare.CompareResult
         """
         ...
 
     def GetHashCode(self) -> int:
         """
-        GetHashCode(self: HardwareObject) -> int
-            Returns a hash code for this instance.
+        GetHashCode(self: HardwareObject) -> int
+
+            Returns a hash code for this instance.
+
             Returns: A hash code for this instance, suitable for use in hashing algorithms and data structures like a hash table.
         """
         ...
 
     def GetPlugLocations(self) -> IList:
         """
-        GetPlugLocations(self: HardwareObject) -> IList[PlugLocation]
-            Determine some information about free slots.
+        GetPlugLocations(self: HardwareObject) -> IList[PlugLocation]
+
+            Determine some information about free slots.
+
             Returns: System.Collections.Generic.IList<Siemens.Engineering.HW.Extensions.PlugLocation>
         """
         ...
 
     def PlugCopy(self, deviceItem:DeviceItem, positionNumber:int) -> DeviceItem:
         """
-        PlugCopy(self: HardwareObject, deviceItem: DeviceItem, positionNumber: int) -> DeviceItem
-            Copies a plug to a given device
-            deviceItem: Device for which the Plug will be moved
-            positionNumber: The position number where to create the plug
+        PlugCopy(self: HardwareObject, deviceItem: DeviceItem, positionNumber: int) -> DeviceItem
+
+            Copies a plug to a given device
+
+            deviceItem: Device for which the Plug will be moved
+
+            positionNumber: The position number where to create the plug
+
             Returns: Siemens.Engineering.HW.DeviceItem
         """
         ...
 
     def PlugMove(self, deviceItem:DeviceItem, positionNumber:int) -> DeviceItem:
         """
-        PlugMove(self: HardwareObject, deviceItem: DeviceItem, positionNumber: int) -> DeviceItem
-            Moves a plug to a given device
-            deviceItem: Device for which the Plug will be moved
-            positionNumber: The position number where to create the plug
+        PlugMove(self: HardwareObject, deviceItem: DeviceItem, positionNumber: int) -> DeviceItem
+
+            Moves a plug to a given device
+
+            deviceItem: Device for which the Plug will be moved
+
+            positionNumber: The position number where to create the plug
+
             Returns: Siemens.Engineering.HW.DeviceItem
         """
         ...
 
     def PlugNew(self, typeIdentifier:str, name:str, positionNumber:int) -> DeviceItem:
         """
-        PlugNew(self: HardwareObject, typeIdentifier: str, name: str, positionNumber: int) -> DeviceItem
-            Creates and plugs a device item in a given hardware object.
-            typeIdentifier: The type identifier of the device item to create.
-            name: The name of the device item to create.
-            positionNumber: The position number where to plug the created device item
+        PlugNew(self: HardwareObject, typeIdentifier: str, name: str, positionNumber: int) -> DeviceItem
+
+            Creates and plugs a device item in a given hardware object.
+
+            typeIdentifier: The type identifier of the device item to create.
+
+            name: The name of the device item to create.
+
+            positionNumber: The position number where to plug the created device item
+
             Returns: Siemens.Engineering.HW.DeviceItem
         """
         ...
 
     def ToString(self) -> str:
         """
-        ToString(self: HardwareObject) -> str
-            Returns a System.String that represents the current System.Object.
+        ToString(self: HardwareObject) -> str
+
+            Returns a System.String that represents the current System.Object.
+
             Returns: A System.String that represents the current System.Object.
         """
         ...
@@ -3469,7 +3581,8 @@ class Device(IEngineeringServiceProvider, IMasterCopySource, IMasterCopyTarget, 
     @property
     def IsGsd(self) -> bool:
         """
-        Indicates if this device is a Gsd device
+        Indicates if this device is a Gsd device
+
         Get: IsGsd(self: Device) -> bool
         """
         ...
@@ -3477,23 +3590,27 @@ class Device(IEngineeringServiceProvider, IMasterCopySource, IMasterCopyTarget, 
     @property
     def UnpluggedItems(self) -> DeviceItemAssociation:
         """
-        Associate unplugged items
+        Associate unplugged items
+
         Get: UnpluggedItems(self: Device) -> DeviceItemAssociation
         """
         ...
 
 
-    def Delete(self): # -> 
+    def Delete(self): # ->
         """
-        Delete(self: Device)
+        Delete(self: Device)
+
             Deletes this instance.
         """
         ...
 
-    def ShowInEditor(self, view:View): # -> 
+    def ShowInEditor(self, view:View): # ->
         """
-        ShowInEditor(self: Device, view: View)
-            Show the indicated item in the HW editor
+        ShowInEditor(self: Device, view: View)
+
+            Show the indicated item in the HW editor
+
             view: Which view of the HW editor to show
         """
         ...
@@ -3504,7 +3621,8 @@ class DeviceComposition(IInternalCompositionAccess, IEngineeringComposition, IEq
     @property
     def Parent(self) -> IEngineeringObject:
         """
-        Gets the parent.
+        Gets the parent.
+
         Get: Parent(self: DeviceComposition) -> IEngineeringObject
         """
         ...
@@ -3512,45 +3630,60 @@ class DeviceComposition(IInternalCompositionAccess, IEngineeringComposition, IEq
 
     def CreateFrom(self, masterCopy:MasterCopy) -> Device:
         """
-        CreateFrom(self: DeviceComposition, masterCopy: MasterCopy) -> Device
-            Create device from MasterCopy
-            masterCopy: The source master copy
+        CreateFrom(self: DeviceComposition, masterCopy: MasterCopy) -> Device
+
+            Create device from MasterCopy
+
+            masterCopy: The source master copy
+
             Returns: Siemens.Engineering.HW.Device
         """
         ...
 
     def CreateWithItem(self, typeIdentifier:str, name:str, deviceName:str) -> Device:
         """
-        CreateWithItem(self: DeviceComposition, typeIdentifier: str, name: str, deviceName: str) -> Device
-            Create a device with subcomponents
-            typeIdentifier: Type identifier of the device to be created with sub items
-            name: Name of the device to be created with sub items
-            deviceName: The name of the device to create with subcomponents
+        CreateWithItem(self: DeviceComposition, typeIdentifier: str, name: str, deviceName: str) -> Device
+
+            Create a device with subcomponents
+
+            typeIdentifier: Type identifier of the device to be created with sub items
+
+            name: Name of the device to be created with sub items
+
+            deviceName: The name of the device to create with subcomponents
+
             Returns: Siemens.Engineering.HW.Device
         """
         ...
 
     def Find(self, name:str) -> Device:
         """
-        Find(self: DeviceComposition, name: str) -> Device
-            Finds a given device
-            name: Name to find
+        Find(self: DeviceComposition, name: str) -> Device
+
+            Finds a given device
+
+            name: Name to find
+
             Returns: Siemens.Engineering.HW.Device
         """
         ...
 
     def GetHashCode(self) -> int:
         """
-        GetHashCode(self: DeviceComposition) -> int
-            Returns a hash code for this instance.
+        GetHashCode(self: DeviceComposition) -> int
+
+            Returns a hash code for this instance.
+
             Returns: A hash code for this instance, suitable for use in hashing algorithms and data structures like a hash table.
         """
         ...
 
     def ToString(self) -> str:
         """
-        ToString(self: DeviceComposition) -> str
-            Returns a System.String that represents the current System.Object.
+        ToString(self: DeviceComposition) -> str
+
+            Returns a System.String that represents the current System.Object.
+
             Returns: A System.String that represents the current System.Object.
         """
         ...
@@ -3568,7 +3701,8 @@ class DeviceGroup(IEquatable, IEngineeringObject, IEngineeringServiceProvider, I
     @property
     def Devices(self) -> DeviceComposition:
         """
-        Composition of devices
+        Composition of devices
+
         Get: Devices(self: DeviceGroup) -> DeviceComposition
         """
         ...
@@ -3576,7 +3710,8 @@ class DeviceGroup(IEquatable, IEngineeringObject, IEngineeringServiceProvider, I
     @property
     def Name(self) -> str:
         """
-        The name of the device group
+        The name of the device group
+
         Get: Name(self: DeviceGroup) -> str
         """
         ...
@@ -3584,7 +3719,8 @@ class DeviceGroup(IEquatable, IEngineeringObject, IEngineeringServiceProvider, I
     @property
     def Parent(self) -> IEngineeringObject:
         """
-        EOM parent of this object
+        EOM parent of this object
+
         Get: Parent(self: DeviceGroup) -> IEngineeringObject
         """
         ...
@@ -3592,16 +3728,20 @@ class DeviceGroup(IEquatable, IEngineeringObject, IEngineeringServiceProvider, I
 
     def GetHashCode(self) -> int:
         """
-        GetHashCode(self: DeviceGroup) -> int
-            Returns a hash code for this instance.
+        GetHashCode(self: DeviceGroup) -> int
+
+            Returns a hash code for this instance.
+
             Returns: A hash code for this instance, suitable for use in hashing algorithms and data structures like a hash table.
         """
         ...
 
     def ToString(self) -> str:
         """
-        ToString(self: DeviceGroup) -> str
-            Returns a System.String that represents the current System.Object.
+        ToString(self: DeviceGroup) -> str
+
+            Returns a System.String that represents the current System.Object.
+
             Returns: A System.String that represents the current System.Object.
         """
         ...
@@ -3615,7 +3755,8 @@ class DeviceItem(IEngineeringServiceProvider, IMasterCopySource, HardwareObject)
     @property
     def Addresses(self) -> AddressComposition:
         """
-        Composition of addresses
+        Composition of addresses
+
         Get: Addresses(self: DeviceItem) -> AddressComposition
         """
         ...
@@ -3623,7 +3764,8 @@ class DeviceItem(IEngineeringServiceProvider, IMasterCopySource, HardwareObject)
     @property
     def Channels(self) -> ChannelComposition:
         """
-        Composition of channels
+        Composition of channels
+
         Get: Channels(self: DeviceItem) -> ChannelComposition
         """
         ...
@@ -3631,7 +3773,8 @@ class DeviceItem(IEngineeringServiceProvider, IMasterCopySource, HardwareObject)
     @property
     def Classification(self) -> DeviceItemClassifications:
         """
-        The classifications a device item can belong to; Flags-enum
+        The classifications a device item can belong to; Flags-enum
+
         Get: Classification(self: DeviceItem) -> DeviceItemClassifications
         """
         ...
@@ -3639,7 +3782,8 @@ class DeviceItem(IEngineeringServiceProvider, IMasterCopySource, HardwareObject)
     @property
     def Container(self) -> HardwareObject:
         """
-        This is the object where other DeviceItems are placed
+        This is the object where other DeviceItems are placed
+
         Get: Container(self: DeviceItem) -> HardwareObject
         """
         ...
@@ -3647,7 +3791,8 @@ class DeviceItem(IEngineeringServiceProvider, IMasterCopySource, HardwareObject)
     @property
     def IsBuiltIn(self) -> bool:
         """
-        Indicates if the device item is built into the device
+        Indicates if the device item is built into the device
+
         Get: IsBuiltIn(self: DeviceItem) -> bool
         """
         ...
@@ -3655,7 +3800,8 @@ class DeviceItem(IEngineeringServiceProvider, IMasterCopySource, HardwareObject)
     @property
     def IsPlugged(self) -> bool:
         """
-        Indicates if this device item is plugged into a device
+        Indicates if this device item is plugged into a device
+
         Get: IsPlugged(self: DeviceItem) -> bool
         """
         ...
@@ -3663,15 +3809,17 @@ class DeviceItem(IEngineeringServiceProvider, IMasterCopySource, HardwareObject)
     @property
     def PositionNumber(self) -> int:
         """
-        Position number of this device item
+        Position number of this device item
+
         Get: PositionNumber(self: DeviceItem) -> int
         """
         ...
 
 
-    def Delete(self): # -> 
+    def Delete(self): # ->
         """
-        Delete(self: DeviceItem)
+        Delete(self: DeviceItem)
+
             Deletes this instance.
         """
         ...
@@ -3682,7 +3830,8 @@ class DeviceItemAssociation(IEquatable, IEngineeringAssociation, IInternalAssoci
     @property
     def Parent(self) -> IEngineeringObject:
         """
-        Gets the parent..
+        Gets the parent..
+
         Get: Parent(self: DeviceItemAssociation) -> IEngineeringObject
         """
         ...
@@ -3690,16 +3839,20 @@ class DeviceItemAssociation(IEquatable, IEngineeringAssociation, IInternalAssoci
 
     def GetHashCode(self) -> int:
         """
-        GetHashCode(self: DeviceItemAssociation) -> int
-            Returns a hash code for this instance.
+        GetHashCode(self: DeviceItemAssociation) -> int
+
+            Returns a hash code for this instance.
+
             Returns: A hash code for this instance, suitable for use in hashing algorithms and data structures like a hash table.
         """
         ...
 
     def ToString(self) -> str:
         """
-        ToString(self: DeviceItemAssociation) -> str
-            Returns a System.String that represents the current System.Object.
+        ToString(self: DeviceItemAssociation) -> str
+
+            Returns a System.String that represents the current System.Object.
+
             Returns: A System.String that represents the current System.Object.
         """
         ...
@@ -3714,7 +3867,8 @@ class DeviceItemAssociation(IEquatable, IEngineeringAssociation, IInternalAssoci
 
 class DeviceItemClassifications(Enum): # skipped bases: <type 'IConvertible'>, <type 'IComparable'>, <type 'IFormattable'>, <type 'object'>
     """
-    The classifications a device item can belong to; Flags-enum.
+    The classifications a device item can belong to; Flags-enum.
+
     enum (flags) DeviceItemClassifications, values: CPU (1), HM (2), None (0)
     """
     CPU: DeviceItemClassifications = ...
@@ -3727,7 +3881,8 @@ class DeviceItemComposition(IInternalCompositionAccess, IEngineeringComposition,
     @property
     def Parent(self) -> IEngineeringObject:
         """
-        Gets the parent.
+        Gets the parent.
+
         Get: Parent(self: DeviceItemComposition) -> IEngineeringObject
         """
         ...
@@ -3735,25 +3890,32 @@ class DeviceItemComposition(IInternalCompositionAccess, IEngineeringComposition,
 
     def CreateFrom(self, masterCopy:MasterCopy) -> DeviceItem:
         """
-        CreateFrom(self: DeviceItemComposition, masterCopy: MasterCopy) -> DeviceItem
-            Create device item from MasterCopy
-            masterCopy: The source MasterCopy
+        CreateFrom(self: DeviceItemComposition, masterCopy: MasterCopy) -> DeviceItem
+
+            Create device item from MasterCopy
+
+            masterCopy: The source MasterCopy
+
             Returns: Siemens.Engineering.HW.DeviceItem
         """
         ...
 
     def GetHashCode(self) -> int:
         """
-        GetHashCode(self: DeviceItemComposition) -> int
-            Returns a hash code for this instance.
+        GetHashCode(self: DeviceItemComposition) -> int
+
+            Returns a hash code for this instance.
+
             Returns: A hash code for this instance, suitable for use in hashing algorithms and data structures like a hash table.
         """
         ...
 
     def ToString(self) -> str:
         """
-        ToString(self: DeviceItemComposition) -> str
-            Returns a System.String that represents the current System.Object.
+        ToString(self: DeviceItemComposition) -> str
+
+            Returns a System.String that represents the current System.Object.
+
             Returns: A System.String that represents the current System.Object.
         """
         ...
@@ -3775,15 +3937,17 @@ class DeviceUserGroup(DeviceGroup, IMasterCopySource, IMasterCopyTarget): # skip
     @property
     def Groups(self) -> DeviceUserGroupComposition:
         """
-        Composition of device user groups
+        Composition of device user groups
+
         Get: Groups(self: DeviceUserGroup) -> DeviceUserGroupComposition
         """
         ...
 
 
-    def Delete(self): # -> 
+    def Delete(self): # ->
         """
-        Delete(self: DeviceUserGroup)
+        Delete(self: DeviceUserGroup)
+
             Deletes this instance.
         """
         ...
@@ -3794,7 +3958,8 @@ class DeviceUserGroupComposition(IInternalCompositionAccess, IEngineeringComposi
     @property
     def Parent(self) -> IEngineeringObject:
         """
-        Gets the parent.
+        Gets the parent.
+
         Get: Parent(self: DeviceUserGroupComposition) -> IEngineeringObject
         """
         ...
@@ -3802,34 +3967,44 @@ class DeviceUserGroupComposition(IInternalCompositionAccess, IEngineeringComposi
 
     def CreateFrom(self, masterCopy:MasterCopy) -> DeviceUserGroup:
         """
-        CreateFrom(self: DeviceUserGroupComposition, masterCopy: MasterCopy) -> DeviceUserGroup
-            Create device user group from MasterCopy
-            masterCopy: The source MasterCopy
+        CreateFrom(self: DeviceUserGroupComposition, masterCopy: MasterCopy) -> DeviceUserGroup
+
+            Create device user group from MasterCopy
+
+            masterCopy: The source MasterCopy
+
             Returns: Siemens.Engineering.HW.DeviceUserGroup
         """
         ...
 
     def Find(self, name:str) -> DeviceUserGroup:
         """
-        Find(self: DeviceUserGroupComposition, name: str) -> DeviceUserGroup
-            Finds a given device user group
-            name: Name to find
+        Find(self: DeviceUserGroupComposition, name: str) -> DeviceUserGroup
+
+            Finds a given device user group
+
+            name: Name to find
+
             Returns: Siemens.Engineering.HW.DeviceUserGroup
         """
         ...
 
     def GetHashCode(self) -> int:
         """
-        GetHashCode(self: DeviceUserGroupComposition) -> int
-            Returns a hash code for this instance.
+        GetHashCode(self: DeviceUserGroupComposition) -> int
+
+            Returns a hash code for this instance.
+
             Returns: A hash code for this instance, suitable for use in hashing algorithms and data structures like a hash table.
         """
         ...
 
     def ToString(self) -> str:
         """
-        ToString(self: DeviceUserGroupComposition) -> str
-            Returns a System.String that represents the current System.Object.
+        ToString(self: DeviceUserGroupComposition) -> str
+
+            Returns a System.String that represents the current System.Object.
+
             Returns: A System.String that represents the current System.Object.
         """
         ...
@@ -3844,7 +4019,8 @@ class DeviceUserGroupComposition(IInternalCompositionAccess, IEngineeringComposi
 
 class Failsafe_BehaviorAfterChannelFault(Enum): # skipped bases: <type 'IConvertible'>, <type 'IComparable'>, <type 'IFormattable'>, <type 'object'>
     """
-    Possible values for property Failsafe_BehaviorAfterChannelFault
+    Possible values for property Failsafe_BehaviorAfterChannelFault
+
     enum Failsafe_BehaviorAfterChannelFault, values: PassivateChannel (1), PassivateTheEntireModule (0)
     """
     PassivateChannel: Failsafe_BehaviorAfterChannelFault = ...
@@ -3854,7 +4030,8 @@ class Failsafe_BehaviorAfterChannelFault(Enum): # skipped bases: <type 'IConvert
 
 class Failsafe_ChannelFailureAcknowledge(Enum): # skipped bases: <type 'IConvertible'>, <type 'IComparable'>, <type 'IFormattable'>, <type 'object'>
     """
-    Possible values for property Failsafe_ChannelFailureAcknowledge
+    Possible values for property Failsafe_ChannelFailureAcknowledge
+
     enum Failsafe_ChannelFailureAcknowledge, values: Automatic (1), Manual (0)
     """
     Automatic: Failsafe_ChannelFailureAcknowledge = ...
@@ -3864,7 +4041,8 @@ class Failsafe_ChannelFailureAcknowledge(Enum): # skipped bases: <type 'IConvert
 
 class Failsafe_ControlOfOutput(Enum): # skipped bases: <type 'IConvertible'>, <type 'IComparable'>, <type 'IFormattable'>, <type 'object'>
     """
-    Possible values for property Failsafe_ControlOfOutput
+    Possible values for property Failsafe_ControlOfOutput
+
     enum Failsafe_ControlOfOutput, values: FCPU (0), FCPUAndOnboardFDI (1)
     """
     FCPU: Failsafe_ControlOfOutput = ...
@@ -3874,7 +4052,8 @@ class Failsafe_ControlOfOutput(Enum): # skipped bases: <type 'IConvertible'>, <t
 
 class Failsafe_DiscrepancyBehavior(Enum): # skipped bases: <type 'IConvertible'>, <type 'IComparable'>, <type 'IFormattable'>, <type 'object'>
     """
-    Possible values for property Failsafe_DiscrepancyBehavior
+    Possible values for property Failsafe_DiscrepancyBehavior
+
     enum Failsafe_DiscrepancyBehavior, values: SupplyLastValidValue (0), SupplyValue0 (1)
     """
     SupplyLastValidValue: Failsafe_DiscrepancyBehavior = ...
@@ -3884,7 +4063,8 @@ class Failsafe_DiscrepancyBehavior(Enum): # skipped bases: <type 'IConvertible'>
 
 class Failsafe_DiscrepancyMonitoring(Enum): # skipped bases: <type 'IConvertible'>, <type 'IComparable'>, <type 'IFormattable'>, <type 'object'>
     """
-    Possible values for property Failsafe_DiscrepancyMonitoring
+    Possible values for property Failsafe_DiscrepancyMonitoring
+
     enum Failsafe_DiscrepancyMonitoring, values: Active (1), Deactivated (0)
     """
     Active: Failsafe_DiscrepancyMonitoring = ...
@@ -3894,7 +4074,8 @@ class Failsafe_DiscrepancyMonitoring(Enum): # skipped bases: <type 'IConvertible
 
 class Failsafe_FCheckiPar(Enum): # skipped bases: <type 'IConvertible'>, <type 'IComparable'>, <type 'IFormattable'>, <type 'object'>
     """
-    Possible values for property Failsafe_FCheckiPar
+    Possible values for property Failsafe_FCheckiPar
+
     enum Failsafe_FCheckiPar, values: Check (1), NoCheck (0)
     """
     Check: Failsafe_FCheckiPar = ...
@@ -3904,7 +4085,8 @@ class Failsafe_FCheckiPar(Enum): # skipped bases: <type 'IConvertible'>, <type '
 
 class Failsafe_FCheckSeqNr(Enum): # skipped bases: <type 'IConvertible'>, <type 'IComparable'>, <type 'IFormattable'>, <type 'object'>
     """
-    Possible values for property Failsafe_FCheckSeqNr
+    Possible values for property Failsafe_FCheckSeqNr
+
     enum Failsafe_FCheckSeqNr, values: Check (1), NoCheck (0)
     """
     Check: Failsafe_FCheckSeqNr = ...
@@ -3914,7 +4096,8 @@ class Failsafe_FCheckSeqNr(Enum): # skipped bases: <type 'IConvertible'>, <type 
 
 class Failsafe_FCRCSeed(Enum): # skipped bases: <type 'IConvertible'>, <type 'IComparable'>, <type 'IFormattable'>, <type 'object'>
     """
-    Possible values for property Failsafe_FCRCSeed
+    Possible values for property Failsafe_FCRCSeed
+
     enum Failsafe_FCRCSeed, values: CRCSeed16 (0), CRCSeed32 (1)
     """
     CRCSeed16: Failsafe_FCRCSeed = ...
@@ -3924,7 +4107,8 @@ class Failsafe_FCRCSeed(Enum): # skipped bases: <type 'IConvertible'>, <type 'IC
 
 class Failsafe_FParVersion(Enum): # skipped bases: <type 'IConvertible'>, <type 'IComparable'>, <type 'IFormattable'>, <type 'object'>
     """
-    Possible values for property Failsafe_FParVersion
+    Possible values for property Failsafe_FParVersion
+
     enum Failsafe_FParVersion, values: V1mode (0), V2mode (1)
     """
     V1mode: Failsafe_FParVersion = ...
@@ -3934,7 +4118,8 @@ class Failsafe_FParVersion(Enum): # skipped bases: <type 'IConvertible'>, <type 
 
 class Failsafe_FPassivation(Enum): # skipped bases: <type 'IConvertible'>, <type 'IComparable'>, <type 'IFormattable'>, <type 'object'>
     """
-    Possible values for property Failsafe_FPassivation
+    Possible values for property Failsafe_FPassivation
+
     enum Failsafe_FPassivation, values: Channel (1), DeviceModule (0)
     """
     Channel: Failsafe_FPassivation = ...
@@ -3944,7 +4129,8 @@ class Failsafe_FPassivation(Enum): # skipped bases: <type 'IConvertible'>, <type
 
 class Failsafe_FSIL(Enum): # skipped bases: <type 'IConvertible'>, <type 'IComparable'>, <type 'IFormattable'>, <type 'object'>
     """
-    Possible values for property Failsafe_FSIL
+    Possible values for property Failsafe_FSIL
+
     enum Failsafe_FSIL, values: NoSIL (3), SIL1 (0), SIL2 (1), SIL3 (2)
     """
     NoSIL: Failsafe_FSIL = ...
@@ -3956,7 +4142,8 @@ class Failsafe_FSIL(Enum): # skipped bases: <type 'IConvertible'>, <type 'ICompa
 
 class Failsafe_F_CRC_Length(Enum): # skipped bases: <type 'IConvertible'>, <type 'IComparable'>, <type 'IFormattable'>, <type 'object'>
     """
-    Possible values for property Failsafe_F_CRC_Length
+    Possible values for property Failsafe_F_CRC_Length
+
     enum Failsafe_F_CRC_Length, values: FourByteCRC (2), ThreeByteCRC (0), TwoByteCRC (1)
     """
     FourByteCRC: Failsafe_F_CRC_Length = ...
@@ -3967,7 +4154,8 @@ class Failsafe_F_CRC_Length(Enum): # skipped bases: <type 'IConvertible'>, <type
 
 class Failsafe_InputDelay(Enum): # skipped bases: <type 'IConvertible'>, <type 'IComparable'>, <type 'IFormattable'>, <type 'object'>
     """
-    Possible values for property Failsafe_InputDelay
+    Possible values for property Failsafe_InputDelay
+
     enum Failsafe_InputDelay, values: Value0dot4ms (1), Value0dot8ms (2), Value0ms (0), Value100ms (100), Value10ms (10), Value110ms (110), Value120ms (120), Value12dot8ms (12), Value130ms (130), Value140ms (140), Value150ms (150), Value1dot6ms (3), Value20ms (20), Value3dot2ms (4), Value50ms (50), Value60ms (60), Value6dot4ms (6), Value70ms (70), Value80ms (80), Value90ms (90)
     """
     Value0dot4ms: Failsafe_InputDelay = ...
@@ -3995,7 +4183,8 @@ class Failsafe_InputDelay(Enum): # skipped bases: <type 'IConvertible'>, <type '
 
 class Failsafe_ManualAssignmentFIODBNumber(Enum): # skipped bases: <type 'IConvertible'>, <type 'IComparable'>, <type 'IFormattable'>, <type 'object'>
     """
-    Possible values for property Failsafe_ManualAssignmentFIODBNumber
+    Possible values for property Failsafe_ManualAssignmentFIODBNumber
+
     enum Failsafe_ManualAssignmentFIODBNumber, values: Automatic (0), Manual (1)
     """
     Automatic: Failsafe_ManualAssignmentFIODBNumber = ...
@@ -4005,7 +4194,8 @@ class Failsafe_ManualAssignmentFIODBNumber(Enum): # skipped bases: <type 'IConve
 
 class Failsafe_MaximumTestPeriod(Enum): # skipped bases: <type 'IConvertible'>, <type 'IComparable'>, <type 'IFormattable'>, <type 'object'>
     """
-    Possible values for property Failsafe_MaximumTestPeriod
+    Possible values for property Failsafe_MaximumTestPeriod
+
     enum Failsafe_MaximumTestPeriod, values: Value1000sec (1), Value100sec (0)
     """
     Value1000sec: Failsafe_MaximumTestPeriod = ...
@@ -4015,7 +4205,8 @@ class Failsafe_MaximumTestPeriod(Enum): # skipped bases: <type 'IConvertible'>, 
 
 class Failsafe_MaxReadbackTimeLightTestAndDarkTest(Enum): # skipped bases: <type 'IConvertible'>, <type 'IComparable'>, <type 'IFormattable'>, <type 'object'>
     """
-    Possible values for property Failsafe_MaxReadbackTimeLightTestAndDarkTest
+    Possible values for property Failsafe_MaxReadbackTimeLightTestAndDarkTest
+
     enum Failsafe_MaxReadbackTimeLightTestAndDarkTest, values: Value08Or10ms (0), Value30Or50ms (1)
     """
     Value08Or10ms: Failsafe_MaxReadbackTimeLightTestAndDarkTest = ...
@@ -4025,7 +4216,8 @@ class Failsafe_MaxReadbackTimeLightTestAndDarkTest(Enum): # skipped bases: <type
 
 class Failsafe_OutputType(Enum): # skipped bases: <type 'IConvertible'>, <type 'IComparable'>, <type 'IFormattable'>, <type 'object'>
     """
-    Possible values for property Failsafe_OutputType
+    Possible values for property Failsafe_OutputType
+
     enum Failsafe_OutputType, values: PMSwitching (0), PPSwitching (1)
     """
     PMSwitching: Failsafe_OutputType = ...
@@ -4035,7 +4227,8 @@ class Failsafe_OutputType(Enum): # skipped bases: <type 'IConvertible'>, <type '
 
 class Failsafe_ReintegrationAfterChannelFault(Enum): # skipped bases: <type 'IConvertible'>, <type 'IComparable'>, <type 'IFormattable'>, <type 'object'>
     """
-    Possible values for property Failsafe_ReintegrationAfterChannelFault
+    Possible values for property Failsafe_ReintegrationAfterChannelFault
+
     enum Failsafe_ReintegrationAfterChannelFault, values: Adjustable (0), AllChannelsAutomatically (1), AllChannelsManually (2)
     """
     Adjustable: Failsafe_ReintegrationAfterChannelFault = ...
@@ -4046,7 +4239,8 @@ class Failsafe_ReintegrationAfterChannelFault(Enum): # skipped bases: <type 'ICo
 
 class Failsafe_ReintegrationAfterDiscrepancyError(Enum): # skipped bases: <type 'IConvertible'>, <type 'IComparable'>, <type 'IFormattable'>, <type 'object'>
     """
-    Possible values for property Failsafe_ReintegrationAfterDiscrepancyError
+    Possible values for property Failsafe_ReintegrationAfterDiscrepancyError
+
     enum Failsafe_ReintegrationAfterDiscrepancyError, values: Test0SignalNecessary (1), Test0SignalNotNecessary (0)
     """
     Test0SignalNecessary: Failsafe_ReintegrationAfterDiscrepancyError = ...
@@ -4056,7 +4250,8 @@ class Failsafe_ReintegrationAfterDiscrepancyError(Enum): # skipped bases: <type 
 
 class Failsafe_SensorEvaluation(Enum): # skipped bases: <type 'IConvertible'>, <type 'IComparable'>, <type 'IFormattable'>, <type 'object'>
     """
-    Possible values for property Failsafe_SensorEvaluation
+    Possible values for property Failsafe_SensorEvaluation
+
     enum Failsafe_SensorEvaluation, values: Value1oo1Evaluation (0), Value1oo2EvaluationEquivalent (1), Value1oo2EvaluationNonEquivalent (2)
     """
     Value1oo1Evaluation: Failsafe_SensorEvaluation = ...
@@ -4067,7 +4262,8 @@ class Failsafe_SensorEvaluation(Enum): # skipped bases: <type 'IConvertible'>, <
 
 class Failsafe_SensorSupply(Enum): # skipped bases: <type 'IConvertible'>, <type 'IComparable'>, <type 'IFormattable'>, <type 'object'>
     """
-    Possible values for property Failsafe_SensorSupply
+    Possible values for property Failsafe_SensorSupply
+
     enum Failsafe_SensorSupply, values: ExternalSensorSupply (8), SensorSupply0 (0), SensorSupply1 (1), SensorSupply2 (2), SensorSupply3 (3), SensorSupply4 (4), SensorSupply5 (5), SensorSupply6 (6), SensorSupply7 (7)
     """
     ExternalSensorSupply: Failsafe_SensorSupply = ...
@@ -4084,7 +4280,8 @@ class Failsafe_SensorSupply(Enum): # skipped bases: <type 'IConvertible'>, <type
 
 class Failsafe_SequenceMonitoring(Enum): # skipped bases: <type 'IConvertible'>, <type 'IComparable'>, <type 'IFormattable'>, <type 'object'>
     """
-    Possible values for property Failsafe_SequenceMonitoring
+    Possible values for property Failsafe_SequenceMonitoring
+
     enum Failsafe_SequenceMonitoring, values: Deactivated (0), SequenceMonitoringAscending (1), SequenceMonitoringDescending (2)
     """
     Deactivated: Failsafe_SequenceMonitoring = ...
@@ -4095,7 +4292,8 @@ class Failsafe_SequenceMonitoring(Enum): # skipped bases: <type 'IConvertible'>,
 
 class HardwareResource(Enum): # skipped bases: <type 'IConvertible'>, <type 'IComparable'>, <type 'IFormattable'>, <type 'object'>
     """
-    Hardware Resources that are assignable for interfaces
+    Hardware Resources that are assignable for interfaces
+
     enum HardwareResource, values: Undefined (0), X1 (1), X101 (101), X102 (102), X103 (103), X104 (104), X105 (105), X106 (106), X107 (107), X108 (108), X109 (109), X110 (110), X111 (111), X2 (2), X3 (3), X4 (4)
     """
     Undefined: HardwareResource = ...
@@ -4122,7 +4320,8 @@ class HwIdentifier(IEquatable, IEngineeringObject, IInternalObjectAccess): # ski
     @property
     def HwIdentifierControllers(self) -> HwIdentifierControllerAssociation:
         """
-        Associated Hw identifier controllers
+        Associated Hw identifier controllers
+
         Get: HwIdentifierControllers(self: HwIdentifier) -> HwIdentifierControllerAssociation
         """
         ...
@@ -4130,7 +4329,8 @@ class HwIdentifier(IEquatable, IEngineeringObject, IInternalObjectAccess): # ski
     @property
     def Identifier(self) -> Int64:
         """
-        Identifier for this HW identifier
+        Identifier for this HW identifier
+
         Get: Identifier(self: HwIdentifier) -> Int64
         """
         ...
@@ -4138,7 +4338,8 @@ class HwIdentifier(IEquatable, IEngineeringObject, IInternalObjectAccess): # ski
     @property
     def Parent(self) -> IEngineeringObject:
         """
-        EOM parent of this object
+        EOM parent of this object
+
         Get: Parent(self: HwIdentifier) -> IEngineeringObject
         """
         ...
@@ -4146,16 +4347,20 @@ class HwIdentifier(IEquatable, IEngineeringObject, IInternalObjectAccess): # ski
 
     def GetHashCode(self) -> int:
         """
-        GetHashCode(self: HwIdentifier) -> int
-            Returns a hash code for this instance.
+        GetHashCode(self: HwIdentifier) -> int
+
+            Returns a hash code for this instance.
+
             Returns: A hash code for this instance, suitable for use in hashing algorithms and data structures like a hash table.
         """
         ...
 
     def ToString(self) -> str:
         """
-        ToString(self: HwIdentifier) -> str
-            Returns a System.String that represents the current System.Object.
+        ToString(self: HwIdentifier) -> str
+
+            Returns a System.String that represents the current System.Object.
+
             Returns: A System.String that represents the current System.Object.
         """
         ...
@@ -4169,7 +4374,8 @@ class HwIdentifierAssociation(IEquatable, IEngineeringAssociation, IInternalAsso
     @property
     def Parent(self) -> IEngineeringObject:
         """
-        Gets the parent..
+        Gets the parent..
+
         Get: Parent(self: HwIdentifierAssociation) -> IEngineeringObject
         """
         ...
@@ -4177,16 +4383,20 @@ class HwIdentifierAssociation(IEquatable, IEngineeringAssociation, IInternalAsso
 
     def GetHashCode(self) -> int:
         """
-        GetHashCode(self: HwIdentifierAssociation) -> int
-            Returns a hash code for this instance.
+        GetHashCode(self: HwIdentifierAssociation) -> int
+
+            Returns a hash code for this instance.
+
             Returns: A hash code for this instance, suitable for use in hashing algorithms and data structures like a hash table.
         """
         ...
 
     def ToString(self) -> str:
         """
-        ToString(self: HwIdentifierAssociation) -> str
-            Returns a System.String that represents the current System.Object.
+        ToString(self: HwIdentifierAssociation) -> str
+
+            Returns a System.String that represents the current System.Object.
+
             Returns: A System.String that represents the current System.Object.
         """
         ...
@@ -4204,7 +4414,8 @@ class HwIdentifierComposition(IInternalCompositionAccess, IEngineeringCompositio
     @property
     def Parent(self) -> IEngineeringObject:
         """
-        Gets the parent.
+        Gets the parent.
+
         Get: Parent(self: HwIdentifierComposition) -> IEngineeringObject
         """
         ...
@@ -4212,16 +4423,20 @@ class HwIdentifierComposition(IInternalCompositionAccess, IEngineeringCompositio
 
     def GetHashCode(self) -> int:
         """
-        GetHashCode(self: HwIdentifierComposition) -> int
-            Returns a hash code for this instance.
+        GetHashCode(self: HwIdentifierComposition) -> int
+
+            Returns a hash code for this instance.
+
             Returns: A hash code for this instance, suitable for use in hashing algorithms and data structures like a hash table.
         """
         ...
 
     def ToString(self) -> str:
         """
-        ToString(self: HwIdentifierComposition) -> str
-            Returns a System.String that represents the current System.Object.
+        ToString(self: HwIdentifierComposition) -> str
+
+            Returns a System.String that represents the current System.Object.
+
             Returns: A System.String that represents the current System.Object.
         """
         ...
@@ -4236,7 +4451,8 @@ class HwIdentifierComposition(IInternalCompositionAccess, IEngineeringCompositio
 
 class InterfaceOperatingModes(Enum): # skipped bases: <type 'IConvertible'>, <type 'IComparable'>, <type 'IFormattable'>, <type 'object'>
     """
-    Possible values for property InterfaceOperatingModes
+    Possible values for property InterfaceOperatingModes
+
     enum (flags) InterfaceOperatingModes, values: IoController (1), IoDevice (2), None (0)
     """
     IoController: InterfaceOperatingModes = ...
@@ -4246,7 +4462,8 @@ class InterfaceOperatingModes(Enum): # skipped bases: <type 'IConvertible'>, <ty
 
 class InterfaceType(Enum): # skipped bases: <type 'IConvertible'>, <type 'IComparable'>, <type 'IFormattable'>, <type 'object'>
     """
-    Possible values for property InterfaceType
+    Possible values for property InterfaceType
+
     enum InterfaceType, values: Asi (4), Ethernet (3), Link (6), Mpi (2), PcInternal (7), Profibus (1), ProfibusIntegrated (8), Ptp (5), Unknown (0)
     """
     Asi: InterfaceType = ...
@@ -4266,7 +4483,8 @@ class IoConnector(IEquatable, IEngineeringObject, IInternalObjectAccess): # skip
     @property
     def ConnectedToIoSystem(self) -> IoSystem:
         """
-        The connected IO system
+        The connected IO system
+
         Get: ConnectedToIoSystem(self: IoConnector) -> IoSystem
         """
         ...
@@ -4274,47 +4492,57 @@ class IoConnector(IEquatable, IEngineeringObject, IInternalObjectAccess): # skip
     @property
     def Parent(self) -> IEngineeringObject:
         """
-        EOM parent of this object
+        EOM parent of this object
+
         Get: Parent(self: IoConnector) -> IEngineeringObject
         """
         ...
 
 
-    def ConnectToIoSystem(self, ioSystem:IoSystem): # -> 
+    def ConnectToIoSystem(self, ioSystem:IoSystem): # ->
         """
-        ConnectToIoSystem(self: IoConnector, ioSystem: IoSystem)
-            Connects to the IO System
+        ConnectToIoSystem(self: IoConnector, ioSystem: IoSystem)
+
+            Connects to the IO System
+
             ioSystem: The IO system to be connected
         """
         ...
 
-    def DisconnectFromIoSystem(self): # -> 
+    def DisconnectFromIoSystem(self): # ->
         """
-        DisconnectFromIoSystem(self: IoConnector)
+        DisconnectFromIoSystem(self: IoConnector)
+
             Disconnects a device from the given IO system
         """
         ...
 
     def GetHashCode(self) -> int:
         """
-        GetHashCode(self: IoConnector) -> int
-            Returns a hash code for this instance.
+        GetHashCode(self: IoConnector) -> int
+
+            Returns a hash code for this instance.
+
             Returns: A hash code for this instance, suitable for use in hashing algorithms and data structures like a hash table.
         """
         ...
 
     def GetIoController(self) -> IoController:
         """
-        GetIoController(self: IoConnector) -> IoController
-            Returns the IO controller for this connector
+        GetIoController(self: IoConnector) -> IoController
+
+            Returns the IO controller for this connector
+
             Returns: Siemens.Engineering.HW.IoController
         """
         ...
 
     def ToString(self) -> str:
         """
-        ToString(self: IoConnector) -> str
-            Returns a System.String that represents the current System.Object.
+        ToString(self: IoConnector) -> str
+
+            Returns a System.String that represents the current System.Object.
+
             Returns: A System.String that represents the current System.Object.
         """
         ...
@@ -4328,7 +4556,8 @@ class IoConnectorAssociation(IEquatable, IEngineeringAssociation, IInternalAssoc
     @property
     def Parent(self) -> IEngineeringObject:
         """
-        Gets the parent..
+        Gets the parent..
+
         Get: Parent(self: IoConnectorAssociation) -> IEngineeringObject
         """
         ...
@@ -4336,16 +4565,20 @@ class IoConnectorAssociation(IEquatable, IEngineeringAssociation, IInternalAssoc
 
     def GetHashCode(self) -> int:
         """
-        GetHashCode(self: IoConnectorAssociation) -> int
-            Returns a hash code for this instance.
+        GetHashCode(self: IoConnectorAssociation) -> int
+
+            Returns a hash code for this instance.
+
             Returns: A hash code for this instance, suitable for use in hashing algorithms and data structures like a hash table.
         """
         ...
 
     def ToString(self) -> str:
         """
-        ToString(self: IoConnectorAssociation) -> str
-            Returns a System.String that represents the current System.Object.
+        ToString(self: IoConnectorAssociation) -> str
+
+            Returns a System.String that represents the current System.Object.
+
             Returns: A System.String that represents the current System.Object.
         """
         ...
@@ -4363,7 +4596,8 @@ class IoConnectorComposition(IInternalCompositionAccess, IEngineeringComposition
     @property
     def Parent(self) -> IEngineeringObject:
         """
-        Gets the parent.
+        Gets the parent.
+
         Get: Parent(self: IoConnectorComposition) -> IEngineeringObject
         """
         ...
@@ -4371,16 +4605,20 @@ class IoConnectorComposition(IInternalCompositionAccess, IEngineeringComposition
 
     def GetHashCode(self) -> int:
         """
-        GetHashCode(self: IoConnectorComposition) -> int
-            Returns a hash code for this instance.
+        GetHashCode(self: IoConnectorComposition) -> int
+
+            Returns a hash code for this instance.
+
             Returns: A hash code for this instance, suitable for use in hashing algorithms and data structures like a hash table.
         """
         ...
 
     def ToString(self) -> str:
         """
-        ToString(self: IoConnectorComposition) -> str
-            Returns a System.String that represents the current System.Object.
+        ToString(self: IoConnectorComposition) -> str
+
+            Returns a System.String that represents the current System.Object.
+
             Returns: A System.String that represents the current System.Object.
         """
         ...
@@ -4398,7 +4636,8 @@ class IoController(IEquatable, IEngineeringObject, IInternalObjectAccess): # ski
     @property
     def Addresses(self) -> AddressComposition:
         """
-        Composition of addresses
+        Composition of addresses
+
         Get: Addresses(self: IoController) -> AddressComposition
         """
         ...
@@ -4406,7 +4645,8 @@ class IoController(IEquatable, IEngineeringObject, IInternalObjectAccess): # ski
     @property
     def IoSystem(self) -> IoSystem:
         """
-        Composition of IO system
+        Composition of IO system
+
         Get: IoSystem(self: IoController) -> IoSystem
         """
         ...
@@ -4414,7 +4654,8 @@ class IoController(IEquatable, IEngineeringObject, IInternalObjectAccess): # ski
     @property
     def Parent(self) -> IEngineeringObject:
         """
-        EOM parent of this object
+        EOM parent of this object
+
         Get: Parent(self: IoController) -> IEngineeringObject
         """
         ...
@@ -4422,25 +4663,32 @@ class IoController(IEquatable, IEngineeringObject, IInternalObjectAccess): # ski
 
     def CreateIoSystem(self, name:str) -> IoSystem:
         """
-        CreateIoSystem(self: IoController, name: str) -> IoSystem
-            Creates an IO system
-            name: The name of the IO system to be created
+        CreateIoSystem(self: IoController, name: str) -> IoSystem
+
+            Creates an IO system
+
+            name: The name of the IO system to be created
+
             Returns: Siemens.Engineering.HW.IoSystem
         """
         ...
 
     def GetHashCode(self) -> int:
         """
-        GetHashCode(self: IoController) -> int
-            Returns a hash code for this instance.
+        GetHashCode(self: IoController) -> int
+
+            Returns a hash code for this instance.
+
             Returns: A hash code for this instance, suitable for use in hashing algorithms and data structures like a hash table.
         """
         ...
 
     def ToString(self) -> str:
         """
-        ToString(self: IoController) -> str
-            Returns a System.String that represents the current System.Object.
+        ToString(self: IoController) -> str
+
+            Returns a System.String that represents the current System.Object.
+
             Returns: A System.String that represents the current System.Object.
         """
         ...
@@ -4454,7 +4702,8 @@ class IoControllerComposition(IInternalCompositionAccess, IEngineeringCompositio
     @property
     def Parent(self) -> IEngineeringObject:
         """
-        Gets the parent.
+        Gets the parent.
+
         Get: Parent(self: IoControllerComposition) -> IEngineeringObject
         """
         ...
@@ -4462,16 +4711,20 @@ class IoControllerComposition(IInternalCompositionAccess, IEngineeringCompositio
 
     def GetHashCode(self) -> int:
         """
-        GetHashCode(self: IoControllerComposition) -> int
-            Returns a hash code for this instance.
+        GetHashCode(self: IoControllerComposition) -> int
+
+            Returns a hash code for this instance.
+
             Returns: A hash code for this instance, suitable for use in hashing algorithms and data structures like a hash table.
         """
         ...
 
     def ToString(self) -> str:
         """
-        ToString(self: IoControllerComposition) -> str
-            Returns a System.String that represents the current System.Object.
+        ToString(self: IoControllerComposition) -> str
+
+            Returns a System.String that represents the current System.Object.
+
             Returns: A System.String that represents the current System.Object.
         """
         ...
@@ -4489,7 +4742,8 @@ class IoSystem(IEquatable, IEngineeringObject, IInternalObjectAccess): # skipped
     @property
     def ConnectedIoDevices(self) -> IoConnectorAssociation:
         """
-        The connected IO devices
+        The connected IO devices
+
         Get: ConnectedIoDevices(self: IoSystem) -> IoConnectorAssociation
         """
         ...
@@ -4497,7 +4751,8 @@ class IoSystem(IEquatable, IEngineeringObject, IInternalObjectAccess): # skipped
     @property
     def HwIdentifiers(self) -> HwIdentifierComposition:
         """
-        Composition of HW identifiers
+        Composition of HW identifiers
+
         Get: HwIdentifiers(self: IoSystem) -> HwIdentifierComposition
         """
         ...
@@ -4505,8 +4760,10 @@ class IoSystem(IEquatable, IEngineeringObject, IInternalObjectAccess): # skipped
     @property
     def Name(self) -> str:
         """
-        The name of the IO system
-        Get: Name(self: IoSystem) -> str
+        The name of the IO system
+
+        Get: Name(self: IoSystem) -> str
+
         Set: Name(self: IoSystem) = value
         """
         ...
@@ -4514,8 +4771,10 @@ class IoSystem(IEquatable, IEngineeringObject, IInternalObjectAccess): # skipped
     @property
     def Number(self) -> int:
         """
-        The number of this IO system
-        Get: Number(self: IoSystem) -> int
+        The number of this IO system
+
+        Get: Number(self: IoSystem) -> int
+
         Set: Number(self: IoSystem) = value
         """
         ...
@@ -4523,7 +4782,8 @@ class IoSystem(IEquatable, IEngineeringObject, IInternalObjectAccess): # skipped
     @property
     def Parent(self) -> IEngineeringObject:
         """
-        EOM parent of this object
+        EOM parent of this object
+
         Get: Parent(self: IoSystem) -> IEngineeringObject
         """
         ...
@@ -4531,31 +4791,37 @@ class IoSystem(IEquatable, IEngineeringObject, IInternalObjectAccess): # skipped
     @property
     def Subnet(self) -> Subnet:
         """
-        Associated Subnet
+        Associated Subnet
+
         Get: Subnet(self: IoSystem) -> Subnet
         """
         ...
 
 
-    def Delete(self): # -> 
+    def Delete(self): # ->
         """
-        Delete(self: IoSystem)
+        Delete(self: IoSystem)
+
             Deletes this instance.
         """
         ...
 
     def GetHashCode(self) -> int:
         """
-        GetHashCode(self: IoSystem) -> int
-            Returns a hash code for this instance.
+        GetHashCode(self: IoSystem) -> int
+
+            Returns a hash code for this instance.
+
             Returns: A hash code for this instance, suitable for use in hashing algorithms and data structures like a hash table.
         """
         ...
 
     def ToString(self) -> str:
         """
-        ToString(self: IoSystem) -> str
-            Returns a System.String that represents the current System.Object.
+        ToString(self: IoSystem) -> str
+
+            Returns a System.String that represents the current System.Object.
+
             Returns: A System.String that represents the current System.Object.
         """
         ...
@@ -4569,7 +4835,8 @@ class IoSystemAssociation(IEquatable, IEngineeringAssociation, IInternalAssociat
     @property
     def Parent(self) -> IEngineeringObject:
         """
-        Gets the parent..
+        Gets the parent..
+
         Get: Parent(self: IoSystemAssociation) -> IEngineeringObject
         """
         ...
@@ -4577,16 +4844,20 @@ class IoSystemAssociation(IEquatable, IEngineeringAssociation, IInternalAssociat
 
     def GetHashCode(self) -> int:
         """
-        GetHashCode(self: IoSystemAssociation) -> int
-            Returns a hash code for this instance.
+        GetHashCode(self: IoSystemAssociation) -> int
+
+            Returns a hash code for this instance.
+
             Returns: A hash code for this instance, suitable for use in hashing algorithms and data structures like a hash table.
         """
         ...
 
     def ToString(self) -> str:
         """
-        ToString(self: IoSystemAssociation) -> str
-            Returns a System.String that represents the current System.Object.
+        ToString(self: IoSystemAssociation) -> str
+
+            Returns a System.String that represents the current System.Object.
+
             Returns: A System.String that represents the current System.Object.
         """
         ...
@@ -4601,7 +4872,8 @@ class IoSystemAssociation(IEquatable, IEngineeringAssociation, IInternalAssociat
 
 class IpProtocolSelection(Enum): # skipped bases: <type 'IConvertible'>, <type 'IComparable'>, <type 'IFormattable'>, <type 'object'>
     """
-    IP protocol selection
+    IP protocol selection
+
     enum IpProtocolSelection, values: Dhcp (1), None (-1), OtherPath (3), Project (0), UserProgram (2), ViaIoController (4)
     """
     Dhcp: IpProtocolSelection = ...
@@ -4614,7 +4886,8 @@ class IpProtocolSelection(Enum): # skipped bases: <type 'IConvertible'>, <type '
 
 class IsochronousTiToCalculationMode(Enum): # skipped bases: <type 'IConvertible'>, <type 'IComparable'>, <type 'IFormattable'>, <type 'object'>
     """
-    Possible values for property IsochronousTiToCalculationMode
+    Possible values for property IsochronousTiToCalculationMode
+
     enum IsochronousTiToCalculationMode, values: AutomaticMinimum (3), FromOB (1), FromSubnet (2), Manual (4), None (0)
     """
     AutomaticMinimum: IsochronousTiToCalculationMode = ...
@@ -4626,7 +4899,8 @@ class IsochronousTiToCalculationMode(Enum): # skipped bases: <type 'IConvertible
 
 class LengthOfIORange(Enum): # skipped bases: <type 'IConvertible'>, <type 'IComparable'>, <type 'IFormattable'>, <type 'object'>
     """
-    Possible values for property LengthOfIORange
+    Possible values for property LengthOfIORange
+
     enum LengthOfIORange, values: None (0), Value128Byte (128), Value12Byte (12), Value160Byte (160), Value16Byte (16), Value192Byte (192), Value20Byte (20), Value224Byte (224), Value24Byte (24), Value256Byte (256), Value288Byte (288), Value28Byte (28), Value32Byte (32), Value4Byte (4), Value64Byte (64), Value8Byte (8), Value96Byte (96)
     """
     Value128Byte: LengthOfIORange = ...
@@ -4650,7 +4924,8 @@ class LengthOfIORange(Enum): # skipped bases: <type 'IConvertible'>, <type 'ICom
 
 class MeasuringTemperatureCoefficient(Enum): # skipped bases: <type 'IConvertible'>, <type 'IComparable'>, <type 'IFormattable'>, <type 'object'>
     """
-    Possible values for property MeasuringTemperatureCoefficient
+    Possible values for property MeasuringTemperatureCoefficient
+
     enum MeasuringTemperatureCoefficient, values: Cu0Dot00426 (17), Cu0Dot00427 (12), Cu0Dot00428 (13), Deactivated (0), LgNi0Dot005 (10), Ni0Dot005000 (16), Ni0Dot006170 (18), Ni0Dot006180 (7), Ni0Dot006720 (8), Pt0Dot003850 (9), Pt0Dot00385055 (6), Pt0Dot003850Its90 (5), Pt0Dot003851 (4), Pt0Dot003902 (2), Pt0Dot003910 (11), Pt0Dot003916 (1), Pt0Dot003920 (3)
     """
     Cu0Dot00426: MeasuringTemperatureCoefficient = ...
@@ -4675,7 +4950,8 @@ class MeasuringTemperatureCoefficient(Enum): # skipped bases: <type 'IConvertibl
 
 class MediaRedundancyRole(Enum): # skipped bases: <type 'IConvertible'>, <type 'IComparable'>, <type 'IFormattable'>, <type 'object'>
     """
-    Media Redundancy Role
+    Media Redundancy Role
+
     enum MediaRedundancyRole, values: Client (2), Manager (1), ManagerAuto (3), NotInRing (0)
     """
     Client: MediaRedundancyRole = ...
@@ -4687,7 +4963,8 @@ class MediaRedundancyRole(Enum): # skipped bases: <type 'IConvertible'>, <type '
 
 class MediumAttachmentType(Enum): # skipped bases: <type 'IConvertible'>, <type 'IComparable'>, <type 'IFormattable'>, <type 'object'>
     """
-    Possible values for property MediumAttachmentType
+    Possible values for property MediumAttachmentType
+
     enum MediumAttachmentType, values: Copper (1), FiberOptic (2), None (0)
     """
     Copper: MediumAttachmentType = ...
@@ -4697,7 +4974,8 @@ class MediumAttachmentType(Enum): # skipped bases: <type 'IConvertible'>, <type 
 
 class MotorProtectionClass(Enum): # skipped bases: <type 'IConvertible'>, <type 'IComparable'>, <type 'IFormattable'>, <type 'object'>
     """
-    Possible values for property MotorProtectionClass
+    Possible values for property MotorProtectionClass
+
     enum MotorProtectionClass, values: None (0), Value10 (10), Value15 (15), Value20 (20), Value25 (25), Value30 (30), Value35 (35), Value40 (40), Value5 (5), Value7 (7)
     """
     Value10: MotorProtectionClass = ...
@@ -4714,7 +4992,8 @@ class MotorProtectionClass(Enum): # skipped bases: <type 'IConvertible'>, <type 
 
 class MotorProtectionReset(Enum): # skipped bases: <type 'IConvertible'>, <type 'IComparable'>, <type 'IFormattable'>, <type 'object'>
     """
-    Possible values for property MotorProtectionReset
+    Possible values for property MotorProtectionReset
+
     enum MotorProtectionReset, values: Auto (1), Manual (0)
     """
     Auto: MotorProtectionReset = ...
@@ -4724,7 +5003,8 @@ class MotorProtectionReset(Enum): # skipped bases: <type 'IConvertible'>, <type 
 
 class MotorProtectionResponseToPrewarning(Enum): # skipped bases: <type 'IConvertible'>, <type 'IComparable'>, <type 'IFormattable'>, <type 'object'>
     """
-    Possible values for property MotorProtectionResponseToPrewarning
+    Possible values for property MotorProtectionResponseToPrewarning
+
     enum MotorProtectionResponseToPrewarning, values: Deactivated (0), Signal (1), Trip (3), Warn (2)
     """
     Deactivated: MotorProtectionResponseToPrewarning = ...
@@ -4736,7 +5016,8 @@ class MotorProtectionResponseToPrewarning(Enum): # skipped bases: <type 'IConver
 
 class MotorProtectionResponseToTripLevel(Enum): # skipped bases: <type 'IConvertible'>, <type 'IComparable'>, <type 'IFormattable'>, <type 'object'>
     """
-    Possible values for property MotorProtectionResponseToTripLevel
+    Possible values for property MotorProtectionResponseToTripLevel
+
     enum MotorProtectionResponseToTripLevel, values: Deactivated (0), Signal (1), Trip (3), Warn (2)
     """
     Deactivated: MotorProtectionResponseToTripLevel = ...
@@ -4748,7 +5029,8 @@ class MotorProtectionResponseToTripLevel(Enum): # skipped bases: <type 'IConvert
 
 class MotorProtectionStalledRotorResponse(Enum): # skipped bases: <type 'IConvertible'>, <type 'IComparable'>, <type 'IFormattable'>, <type 'object'>
     """
-    Possible values for property MotorProtectionStalledRotorResponse
+    Possible values for property MotorProtectionStalledRotorResponse
+
     enum MotorProtectionStalledRotorResponse, values: Deactivated (0), Signal (1), Trip (3), Warn (2)
     """
     Deactivated: MotorProtectionStalledRotorResponse = ...
@@ -4760,7 +5042,8 @@ class MotorProtectionStalledRotorResponse(Enum): # skipped bases: <type 'IConver
 
 class MotorProtectionTypeOfLoad(Enum): # skipped bases: <type 'IConvertible'>, <type 'IComparable'>, <type 'IFormattable'>, <type 'object'>
     """
-    Possible values for property MotorProtectionTypeOfLoad
+    Possible values for property MotorProtectionTypeOfLoad
+
     enum MotorProtectionTypeOfLoad, values: OnePhase (1), TriPhase (0)
     """
     OnePhase: MotorProtectionTypeOfLoad = ...
@@ -4770,7 +5053,8 @@ class MotorProtectionTypeOfLoad(Enum): # skipped bases: <type 'IConvertible'>, <
 
 class MotorProtectionUnbalanceResponse(Enum): # skipped bases: <type 'IConvertible'>, <type 'IComparable'>, <type 'IFormattable'>, <type 'object'>
     """
-    Possible values for property MotorProtectionUnbalanceResponse
+    Possible values for property MotorProtectionUnbalanceResponse
+
     enum MotorProtectionUnbalanceResponse, values: Deactivated (0), Signal (1), Trip (3), Warn (2)
     """
     Deactivated: MotorProtectionUnbalanceResponse = ...
@@ -4782,7 +5066,8 @@ class MotorProtectionUnbalanceResponse(Enum): # skipped bases: <type 'IConvertib
 
 class NetType(Enum): # skipped bases: <type 'IConvertible'>, <type 'IComparable'>, <type 'IFormattable'>, <type 'object'>
     """
-    Network type
+    Network type
+
     enum NetType, values: Asi (4), Ethernet (3), Link (6), Mpi (2), PcInternal (7), Profibus (1), ProfibusIntegrated (8), Ptp (5), Unknown (0), Wan (9)
     """
     Asi: NetType = ...
@@ -4803,7 +5088,8 @@ class Node(IEquatable, IEngineeringObject, IEngineeringServiceProvider, IInterna
     @property
     def ConnectedSubnet(self) -> Subnet:
         """
-        The connected subnet
+        The connected subnet
+
         Get: ConnectedSubnet(self: Node) -> Subnet
         """
         ...
@@ -4811,7 +5097,8 @@ class Node(IEquatable, IEngineeringObject, IEngineeringServiceProvider, IInterna
     @property
     def Name(self) -> str:
         """
-        The name of the node
+        The name of the node
+
         Get: Name(self: Node) -> str
         """
         ...
@@ -4819,7 +5106,8 @@ class Node(IEquatable, IEngineeringObject, IEngineeringServiceProvider, IInterna
     @property
     def NodeId(self) -> str:
         """
-        The id of this node
+        The id of this node
+
         Get: NodeId(self: Node) -> str
         """
         ...
@@ -4827,8 +5115,10 @@ class Node(IEquatable, IEngineeringObject, IEngineeringServiceProvider, IInterna
     @property
     def NodeType(self) -> NetType:
         """
-        Particular type e.g. Industrial Ethernet or Wireless LAN
-        Get: NodeType(self: Node) -> NetType
+        Particular type e.g. Industrial Ethernet or Wireless LAN
+
+        Get: NodeType(self: Node) -> NetType
+
         Set: NodeType(self: Node) = value
         """
         ...
@@ -4836,48 +5126,59 @@ class Node(IEquatable, IEngineeringObject, IEngineeringServiceProvider, IInterna
     @property
     def Parent(self) -> IEngineeringObject:
         """
-        EOM parent of this object
+        EOM parent of this object
+
         Get: Parent(self: Node) -> IEngineeringObject
         """
         ...
 
 
-    def ConnectToSubnet(self, subnet:Subnet): # -> 
+    def ConnectToSubnet(self, subnet:Subnet): # ->
         """
-        ConnectToSubnet(self: Node, subnet: Subnet)
-            Connects to the Subnet
+        ConnectToSubnet(self: Node, subnet: Subnet)
+
+            Connects to the Subnet
+
             subnet: The subnet to be connected
         """
         ...
 
     def CreateAndConnectToSubnet(self, name:str) -> Subnet:
         """
-        CreateAndConnectToSubnet(self: Node, name: str) -> Subnet
-            Create and connect to a subnet
-            name: The name of the Subnet to create and connect
+        CreateAndConnectToSubnet(self: Node, name: str) -> Subnet
+
+            Create and connect to a subnet
+
+            name: The name of the Subnet to create and connect
+
             Returns: Siemens.Engineering.HW.Subnet
         """
         ...
 
-    def DisconnectFromSubnet(self): # -> 
+    def DisconnectFromSubnet(self): # ->
         """
-        DisconnectFromSubnet(self: Node)
+        DisconnectFromSubnet(self: Node)
+
             Disconnects a device from the given Subnet
         """
         ...
 
     def GetHashCode(self) -> int:
         """
-        GetHashCode(self: Node) -> int
-            Returns a hash code for this instance.
+        GetHashCode(self: Node) -> int
+
+            Returns a hash code for this instance.
+
             Returns: A hash code for this instance, suitable for use in hashing algorithms and data structures like a hash table.
         """
         ...
 
     def ToString(self) -> str:
         """
-        ToString(self: Node) -> str
-            Returns a System.String that represents the current System.Object.
+        ToString(self: Node) -> str
+
+            Returns a System.String that represents the current System.Object.
+
             Returns: A System.String that represents the current System.Object.
         """
         ...
@@ -4891,7 +5192,8 @@ class NodeAssociation(IEquatable, IEngineeringAssociation, IInternalAssociationA
     @property
     def Parent(self) -> IEngineeringObject:
         """
-        Gets the parent..
+        Gets the parent..
+
         Get: Parent(self: NodeAssociation) -> IEngineeringObject
         """
         ...
@@ -4899,16 +5201,20 @@ class NodeAssociation(IEquatable, IEngineeringAssociation, IInternalAssociationA
 
     def GetHashCode(self) -> int:
         """
-        GetHashCode(self: NodeAssociation) -> int
-            Returns a hash code for this instance.
+        GetHashCode(self: NodeAssociation) -> int
+
+            Returns a hash code for this instance.
+
             Returns: A hash code for this instance, suitable for use in hashing algorithms and data structures like a hash table.
         """
         ...
 
     def ToString(self) -> str:
         """
-        ToString(self: NodeAssociation) -> str
-            Returns a System.String that represents the current System.Object.
+        ToString(self: NodeAssociation) -> str
+
+            Returns a System.String that represents the current System.Object.
+
             Returns: A System.String that represents the current System.Object.
         """
         ...
@@ -4926,7 +5232,8 @@ class NodeComposition(IInternalCompositionAccess, IEngineeringComposition, IEqua
     @property
     def Parent(self) -> IEngineeringObject:
         """
-        Gets the parent.
+        Gets the parent.
+
         Get: Parent(self: NodeComposition) -> IEngineeringObject
         """
         ...
@@ -4934,25 +5241,32 @@ class NodeComposition(IInternalCompositionAccess, IEngineeringComposition, IEqua
 
     def Find(self, name:str) -> Node:
         """
-        Find(self: NodeComposition, name: str) -> Node
-            Finds a given node
-            name: The name of the Node instance to find
+        Find(self: NodeComposition, name: str) -> Node
+
+            Finds a given node
+
+            name: The name of the Node instance to find
+
             Returns: Siemens.Engineering.HW.Node
         """
         ...
 
     def GetHashCode(self) -> int:
         """
-        GetHashCode(self: NodeComposition) -> int
-            Returns a hash code for this instance.
+        GetHashCode(self: NodeComposition) -> int
+
+            Returns a hash code for this instance.
+
             Returns: A hash code for this instance, suitable for use in hashing algorithms and data structures like a hash table.
         """
         ...
 
     def ToString(self) -> str:
         """
-        ToString(self: NodeComposition) -> str
-            Returns a System.String that represents the current System.Object.
+        ToString(self: NodeComposition) -> str
+
+            Returns a System.String that represents the current System.Object.
+
             Returns: A System.String that represents the current System.Object.
         """
         ...
@@ -4967,7 +5281,8 @@ class NodeComposition(IInternalCompositionAccess, IEngineeringComposition, IEqua
 
 class OpcUaSecurityPolicies(Enum): # skipped bases: <type 'IConvertible'>, <type 'IComparable'>, <type 'IFormattable'>, <type 'object'>
     """
-    Possible values for property OpcUaSecurityPolicies
+    Possible values for property OpcUaSecurityPolicies
+
     enum (flags) OpcUaSecurityPolicies, values: None (0), OpcUaSecurityPolicies128RSAS (2), OpcUaSecurityPolicies128RSASE (4), OpcUaSecurityPolicies256S (8), OpcUaSecurityPolicies256SE (16), OpcUaSecurityPolicies256SHAS (32), OpcUaSecurityPolicies256SHASE (64), OpcUaSecurityPoliciesNone (1)
     """
     OpcUaSecurityPolicies128RSAS: OpcUaSecurityPolicies = ...
@@ -4982,7 +5297,8 @@ class OpcUaSecurityPolicies(Enum): # skipped bases: <type 'IConvertible'>, <type
 
 class OperatingHoursMonitoringResponse(Enum): # skipped bases: <type 'IConvertible'>, <type 'IComparable'>, <type 'IFormattable'>, <type 'object'>
     """
-    Possible values for property OperatingHoursMonitoringResponse
+    Possible values for property OperatingHoursMonitoringResponse
+
     enum OperatingHoursMonitoringResponse, values: Deactivated (0), Signal (1), Warn (2)
     """
     Deactivated: OperatingHoursMonitoringResponse = ...
@@ -4993,7 +5309,8 @@ class OperatingHoursMonitoringResponse(Enum): # skipped bases: <type 'IConvertib
 
 class OperatingMode(Enum): # skipped bases: <type 'IConvertible'>, <type 'IComparable'>, <type 'IFormattable'>, <type 'object'>
     """
-    Possible values for property OperatingMode
+    Possible values for property OperatingMode
+
     enum OperatingMode, values: AnalogMode (67), Axis (270), ButtonHga (60), CascadingFunction (51), ConstantCurrent (255), Control (54), CountContinuously (2), Counting (23), CountOnce (3), CountPeriodically (4), D (256), Deactivated (281), DigitalInput (52), DigitalOutput (276), DiOversampling (24), DoOversampling (56), DosingMode (33), ElectronicShutdown (68), FastMode (1), FillLevel (62), FrequencyMeasurement (5), FrequencyOutput (266), FullDuplex4WireOperation (19), FullDuplex4WireOperationMultipointMaster (22), FullDuplex4WireOperationMultipointSlave (21), FullDuplex4WireOperationPtPConnection (25), HalfAndFullDuplex (55), HalfDuplex2WireOperation (20), I (257), Id (258), IncrementalEncoderABPhaseShifted (275), ManualOperation (278), Measuring (49), ModularCamControl (75), MotionControl (269), None (9), OnOffDelay (265), Oversampling (10), P (259), Pd (260), PeriodMeasurement (31), Pi (261), Pid (262), PositionFeedback (50), PositioningWithAnalogOutputs (18), PositioningWithDigitalOutputs (17), PulseOutput (264), PulseTrain (263), PulseTrainABphaseshifted (272), PulseTrainABphaseshiftedFourfold (271), PulseTrainAcountupBcountdown (273), PulseTrainApulseBdirection (274), PulseWidthModulation (7), PwmWithDcMotor (267), ReflectionBarrier (64), Reserved2 (61), Reserved6 (65), Reserved7 (66), RotationalSpeedMeasurement (32), Rs232c (268), SlowMode (0), StandardMode (57), TechnologyObject (277), TimerDI (34), TimerDQ (8), Toggle0Dot1Hz (26), Toggle0Dot5Hz (27), Toggle1Hz (6), Toggle2Hz (28), Trace (53), Value2Channels (38), Value4Channels (39), Value4ChannelsHardwareFilter (35), Value8ARo (40), Value8ARoS (48), Value8ChannelsHardwareFilter (36), Value8ChannelsSoftwareFilter (37), Window (63), WriteRead (30), WriteReadNeg (29)
     """
     AnalogMode: OperatingMode = ...
@@ -5080,7 +5397,8 @@ class OperatingMode(Enum): # skipped bases: <type 'IConvertible'>, <type 'ICompa
 
 class OperatingRange(Enum): # skipped bases: <type 'IConvertible'>, <type 'IComparable'>, <type 'IFormattable'>, <type 'object'>
     """
-    Possible values for property OperatingRange
+    Possible values for property OperatingRange
+
     enum OperatingRange, values: Cu100ClimaticRange (95), Cu100GostClimaticRange (78), Cu100GostStandardRange (79), Cu100StandardRange (96), Cu10ClimaticRange (74), Cu10GostClimaticRange (75), Cu10GostStandardRange (76), Cu10StandardRange (77), Cu50ClimaticRange (97), Cu50GostClimaticRange (80), Cu50GostStandardRange (81), Cu50StandardRange (98), Deactivated (0), Kty83slash110Silicon (70), Kty84slash130Silicon (71), LgNi1000ClimaticRange (60), LgNi1000StandardRange (61), Ni1000ClimaticRange (45), Ni1000StandardRange (51), Ni100ClimaticRange (44), Ni100GostClimaticRange (82), Ni100GostStandardRange (35), Ni100StandardRange (50), Ni10ClimaticRange (99), Ni10StandardRange (100), Ni120ClimaticRange (55), Ni120StandardRange (56), Ni200ClimaticRange (57), Ni200StandardRange (58), Ni500ClimaticRange (19), Ni500StandardRange (59), PlusMinus100mV (4), PlusMinus10mA (14), PlusMinus10V (11), PlusMinus1V (7), PlusMinus20mA (17), PlusMinus250mV (5), PlusMinus25mV (1), PlusMinus2dot5V (8), PlusMinus3dot2mA (12), PlusMinus500mV (6), PlusMinus50mV (2), PlusMinus5mA (13), PlusMinus5V (9), PlusMinus80mV (3), Pt1000ClimaticRange (43), Pt1000StandardRange (49), Pt100ClimaticRange (40), Pt100GostClimaticRange (85), Pt100GostStandardRange (86), Pt100StandardRange (46), Pt10ClimaticRange (101), Pt10GostClimaticRange (83), Pt10GostStandardRange (84), Pt10StandardRange (102), Pt200ClimaticRange (41), Pt200StandardRange (47), Pt500ClimaticRange (42), Pt500GostClimaticRange (89), Pt500GostStandardRange (90), Pt500StandardRange (48), Pt50ClimaticRange (103), Pt50GostClimaticRange (87), Pt50GostStandardRange (88), Pt50StandardRange (104), PTC (53), TypeB (20), TypeC (72), TypeE (22), TypeJ (25), TypeK (28), TypeL (26), TypeN (21), TypeR (23), TypeS (24), TypeT (27), TypeTxk (105), TypeTxkOrXkL (94), TypeTxKslashXKL (73), TypeU (29), Value0To10V (52), Value0To20mA (15), Value0To2V (92), Value1000Ohm (93), Value10KiloOhm (91), Value150Ohm (31), Value1To5mA (18), Value1To5V (10), Value300Ohm (32), Value3KiloOhm (54), Value48Ohm (30), Value4To20mA (16), Value600Ohm (33), Value6KiloOhm (34)
     """
     Cu100ClimaticRange: OperatingRange = ...
@@ -5182,7 +5500,8 @@ class OperatingRange(Enum): # skipped bases: <type 'IConvertible'>, <type 'IComp
 
 class OperatingType(Enum): # skipped bases: <type 'IConvertible'>, <type 'IComparable'>, <type 'IFormattable'>, <type 'object'>
     """
-    Possible values for property OperatingType
+    Possible values for property OperatingType
+
     enum OperatingType, values: Current (2), Current2WireTransducer (4), Current4WireTransducer (3), Deactivated (0), Hart (24), Resistance (18), Resistor2Wire (7), Resistor3Wire (6), Resistor4Wire (5), RtdThermalResistorLinear (19), ThermalResistor2Wire (25), ThermalResistor3Wire (9), ThermalResistor4Wire (8), Thermocouple (10), Thermocouple0CCompLinear (22), Thermocouple50CCompLinear (23), ThermocoupleExtComp (11), ThermocoupleExtCompLinear (14), ThermocoupleIntComp (21), ThermocoupleIntCompLinear (13), Voltage (1)
     """
     Current: OperatingType = ...
@@ -5211,7 +5530,8 @@ class OperatingType(Enum): # skipped bases: <type 'IConvertible'>, <type 'ICompa
 
 class OperatingTypeAndRange(Enum): # skipped bases: <type 'IConvertible'>, <type 'IComparable'>, <type 'IFormattable'>, <type 'object'>
     """
-    Possible values for property OperatingTypeAndRange
+    Possible values for property OperatingTypeAndRange
+
     enum OperatingTypeAndRange, values: Current0To20mA (2), Current2WireTransducer4To20mA (3), Current4To20mA (10), Current4WireTransducer4To20mA (20), Current4WireTransducerPlusMinus20mA (4), CurrentPlusMinus20mA (11), Deactivated (0), ThermocoupleTypeB (12), ThermocoupleTypeC (21), ThermocoupleTypeE (13), ThermocoupleTypeJ (14), ThermocoupleTypeK (8), ThermocoupleTypeL (15), ThermocoupleTypeN (16), ThermocoupleTypeR (17), ThermocoupleTypeS (18), ThermocoupleTypeT (19), Voltage1To5V (7), VoltagePlusMinus10V (9), VoltagePlusMinus2dot5V (5), VoltagePlusMinus5V (6), VoltagePlusMinus80mV (1)
     """
     Current0To20mA: OperatingTypeAndRange = ...
@@ -5241,7 +5561,8 @@ class OperatingTypeAndRange(Enum): # skipped bases: <type 'IConvertible'>, <type
 
 class PcInterfaceAssignmentMode(Enum): # skipped bases: <type 'IConvertible'>, <type 'IComparable'>, <type 'IFormattable'>, <type 'object'>
     """
-    Interface assignment type for assignable interfaces
+    Interface assignment type for assignable interfaces
+
     enum PcInterfaceAssignmentMode, values: None (0), PcStation (1), SoftwarePlc (2)
     """
     PcStation: PcInterfaceAssignmentMode = ...
@@ -5251,7 +5572,8 @@ class PcInterfaceAssignmentMode(Enum): # skipped bases: <type 'IConvertible'>, <
 
 class PcStationType(Enum): # skipped bases: <type 'IConvertible'>, <type 'IComparable'>, <type 'IFormattable'>, <type 'object'>
     """
-    Possible values for property PcStationType
+    Possible values for property PcStationType
+
     enum PcStationType, values: NotInstalled (0), PcStationV1Dot0 (1), PcStationV2Dot0 (2), PcStationV2Dot1 (3), PcStationV2Dot2 (4), PcStationV2Dot3 (5), PcStationV2Dot4 (6), PcStationV2Dot7 (7)
     """
     NotInstalled: PcStationType = ...
@@ -5267,7 +5589,8 @@ class PcStationType(Enum): # skipped bases: <type 'IConvertible'>, <type 'ICompa
 
 class PlcProtectionAccessLevel(Enum): # skipped bases: <type 'IConvertible'>, <type 'IComparable'>, <type 'IFormattable'>, <type 'object'>
     """
-    Access Level entries -enum
+    Access Level entries -enum
+
     enum (flags) PlcProtectionAccessLevel, values: FullAccess (1), FullAccessIncludingFailsafe (5), HMIAccess (3), NoAccess (4), None (0), ReadAccess (2)
     """
     FullAccess: PlcProtectionAccessLevel = ...
@@ -5280,7 +5603,8 @@ class PlcProtectionAccessLevel(Enum): # skipped bases: <type 'IConvertible'>, <t
 
 class ResponseToOvershoot(Enum): # skipped bases: <type 'IConvertible'>, <type 'IComparable'>, <type 'IFormattable'>, <type 'object'>
     """
-    Possible values for property ResponseToOvershoot
+    Possible values for property ResponseToOvershoot
+
     enum ResponseToOvershoot, values: Deactivated (0), Signal (1), Trip (3), Warn (2)
     """
     Deactivated: ResponseToOvershoot = ...
@@ -5292,7 +5616,8 @@ class ResponseToOvershoot(Enum): # skipped bases: <type 'IConvertible'>, <type '
 
 class ResponseToPrewarning(Enum): # skipped bases: <type 'IConvertible'>, <type 'IComparable'>, <type 'IFormattable'>, <type 'object'>
     """
-    Possible values for property ResponseToPrewarning
+    Possible values for property ResponseToPrewarning
+
     enum ResponseToPrewarning, values: Deactivated (0), Signal (1), Warn (2)
     """
     Deactivated: ResponseToPrewarning = ...
@@ -5303,7 +5628,8 @@ class ResponseToPrewarning(Enum): # skipped bases: <type 'IConvertible'>, <type 
 
 class RetentiveDataMemoryUsage(Enum): # skipped bases: <type 'IConvertible'>, <type 'IComparable'>, <type 'IFormattable'>, <type 'object'>
     """
-    Possible values for property RetentiveDataMemoryUsage
+    Possible values for property RetentiveDataMemoryUsage
+
     enum RetentiveDataMemoryUsage, values: NvramOfThePcSystem (1), PcMassStorage (0)
     """
     NvramOfThePcSystem: RetentiveDataMemoryUsage = ...
@@ -5313,7 +5639,8 @@ class RetentiveDataMemoryUsage(Enum): # skipped bases: <type 'IConvertible'>, <t
 
 class RtClass(Enum): # skipped bases: <type 'IConvertible'>, <type 'IComparable'>, <type 'IFormattable'>, <type 'object'>
     """
-    Possible values for property RtClass
+    Possible values for property RtClass
+
     enum RtClass, values: IRT (2), None (0), RT (1)
     """
     IRT: RtClass = ...
@@ -5323,7 +5650,8 @@ class RtClass(Enum): # skipped bases: <type 'IConvertible'>, <type 'IComparable'
 
 class SignalDelaySelection(Enum): # skipped bases: <type 'IConvertible'>, <type 'IComparable'>, <type 'IFormattable'>, <type 'object'>
     """
-    Possible values for property SignalDelaySelection
+    Possible values for property SignalDelaySelection
+
     enum SignalDelaySelection, values: CableLength (1), None (0), SignalDelayTime (2)
     """
     CableLength: SignalDelaySelection = ...
@@ -5336,7 +5664,8 @@ class Software(IEquatable, IEngineeringObject, IInternalObjectAccess): # skipped
     @property
     def Name(self) -> str:
         """
-        The name of the software base
+        The name of the software base
+
         Get: Name(self: Software) -> str
         """
         ...
@@ -5344,7 +5673,8 @@ class Software(IEquatable, IEngineeringObject, IInternalObjectAccess): # skipped
     @property
     def Parent(self) -> IEngineeringObject:
         """
-        EOM parent of this object
+        EOM parent of this object
+
         Get: Parent(self: Software) -> IEngineeringObject
         """
         ...
@@ -5352,16 +5682,20 @@ class Software(IEquatable, IEngineeringObject, IInternalObjectAccess): # skipped
 
     def GetHashCode(self) -> int:
         """
-        GetHashCode(self: Software) -> int
-            Returns a hash code for this instance.
+        GetHashCode(self: Software) -> int
+
+            Returns a hash code for this instance.
+
             Returns: A hash code for this instance, suitable for use in hashing algorithms and data structures like a hash table.
         """
         ...
 
     def ToString(self) -> str:
         """
-        ToString(self: Software) -> str
-            Returns a System.String that represents the current System.Object.
+        ToString(self: Software) -> str
+
+            Returns a System.String that represents the current System.Object.
+
             Returns: A System.String that represents the current System.Object.
         """
         ...
@@ -5372,7 +5706,8 @@ class Software(IEquatable, IEngineeringObject, IInternalObjectAccess): # skipped
 
 class StopTimeOperatingHoursMonitoringResponse(Enum): # skipped bases: <type 'IConvertible'>, <type 'IComparable'>, <type 'IFormattable'>, <type 'object'>
     """
-    Possible values for property StopTimeOperatingHoursMonitoringResponse
+    Possible values for property StopTimeOperatingHoursMonitoringResponse
+
     enum StopTimeOperatingHoursMonitoringResponse, values: Deactivated (0), Signal (1), Warn (2)
     """
     Deactivated: StopTimeOperatingHoursMonitoringResponse = ...
@@ -5386,7 +5721,8 @@ class Subnet(IEquatable, IEngineeringObject, IEngineeringServiceProvider, IMaste
     @property
     def IoSystems(self) -> IoSystemAssociation:
         """
-        Associated IO systems
+        Associated IO systems
+
         Get: IoSystems(self: Subnet) -> IoSystemAssociation
         """
         ...
@@ -5394,8 +5730,10 @@ class Subnet(IEquatable, IEngineeringObject, IEngineeringServiceProvider, IMaste
     @property
     def Name(self) -> str:
         """
-        The name of the Subnet
-        Get: Name(self: Subnet) -> str
+        The name of the Subnet
+
+        Get: Name(self: Subnet) -> str
+
         Set: Name(self: Subnet) = value
         """
         ...
@@ -5403,7 +5741,8 @@ class Subnet(IEquatable, IEngineeringObject, IEngineeringServiceProvider, IMaste
     @property
     def NetType(self) -> NetType:
         """
-        Particular subnet net type
+        Particular subnet net type
+
         Get: NetType(self: Subnet) -> NetType
         """
         ...
@@ -5411,7 +5750,8 @@ class Subnet(IEquatable, IEngineeringObject, IEngineeringServiceProvider, IMaste
     @property
     def Nodes(self) -> NodeAssociation:
         """
-        Associated nodes
+        Associated nodes
+
         Get: Nodes(self: Subnet) -> NodeAssociation
         """
         ...
@@ -5419,7 +5759,8 @@ class Subnet(IEquatable, IEngineeringObject, IEngineeringServiceProvider, IMaste
     @property
     def Parent(self) -> IEngineeringObject:
         """
-        EOM parent of this object
+        EOM parent of this object
+
         Get: Parent(self: Subnet) -> IEngineeringObject
         """
         ...
@@ -5427,31 +5768,37 @@ class Subnet(IEquatable, IEngineeringObject, IEngineeringServiceProvider, IMaste
     @property
     def TypeIdentifier(self) -> str:
         """
-        The type identifier of this Subnet
+        The type identifier of this Subnet
+
         Get: TypeIdentifier(self: Subnet) -> str
         """
         ...
 
 
-    def Delete(self): # -> 
+    def Delete(self): # ->
         """
-        Delete(self: Subnet)
+        Delete(self: Subnet)
+
             Deletes this instance.
         """
         ...
 
     def GetHashCode(self) -> int:
         """
-        GetHashCode(self: Subnet) -> int
-            Returns a hash code for this instance.
+        GetHashCode(self: Subnet) -> int
+
+            Returns a hash code for this instance.
+
             Returns: A hash code for this instance, suitable for use in hashing algorithms and data structures like a hash table.
         """
         ...
 
     def ToString(self) -> str:
         """
-        ToString(self: Subnet) -> str
-            Returns a System.String that represents the current System.Object.
+        ToString(self: Subnet) -> str
+
+            Returns a System.String that represents the current System.Object.
+
             Returns: A System.String that represents the current System.Object.
         """
         ...
@@ -5465,7 +5812,8 @@ class SubnetComposition(IInternalCompositionAccess, IEngineeringComposition, IEq
     @property
     def Parent(self) -> IEngineeringObject:
         """
-        Gets the parent.
+        Gets the parent.
+
         Get: Parent(self: SubnetComposition) -> IEngineeringObject
         """
         ...
@@ -5473,34 +5821,44 @@ class SubnetComposition(IInternalCompositionAccess, IEngineeringComposition, IEq
 
     def CreateFrom(self, masterCopy:MasterCopy) -> Subnet:
         """
-        CreateFrom(self: SubnetComposition, masterCopy: MasterCopy) -> Subnet
-            Create subnet from MasterCopy
-            masterCopy: The source MasterCopy
+        CreateFrom(self: SubnetComposition, masterCopy: MasterCopy) -> Subnet
+
+            Create subnet from MasterCopy
+
+            masterCopy: The source MasterCopy
+
             Returns: Siemens.Engineering.HW.Subnet
         """
         ...
 
     def Find(self, name:str) -> Subnet:
         """
-        Find(self: SubnetComposition, name: str) -> Subnet
-            Finds a given Subnet
-            name: Name to find
+        Find(self: SubnetComposition, name: str) -> Subnet
+
+            Finds a given Subnet
+
+            name: Name to find
+
             Returns: Siemens.Engineering.HW.Subnet
         """
         ...
 
     def GetHashCode(self) -> int:
         """
-        GetHashCode(self: SubnetComposition) -> int
-            Returns a hash code for this instance.
+        GetHashCode(self: SubnetComposition) -> int
+
+            Returns a hash code for this instance.
+
             Returns: A hash code for this instance, suitable for use in hashing algorithms and data structures like a hash table.
         """
         ...
 
     def ToString(self) -> str:
         """
-        ToString(self: SubnetComposition) -> str
-            Returns a System.String that represents the current System.Object.
+        ToString(self: SubnetComposition) -> str
+
+            Returns a System.String that represents the current System.Object.
+
             Returns: A System.String that represents the current System.Object.
         """
         ...
@@ -5515,7 +5873,8 @@ class SubnetComposition(IInternalCompositionAccess, IEngineeringComposition, IEq
 
 class SyncRole(Enum): # skipped bases: <type 'IConvertible'>, <type 'IComparable'>, <type 'IFormattable'>, <type 'object'>
     """
-    Possible values for property SyncRole
+    Possible values for property SyncRole
+
     enum SyncRole, values: NotSynchronized (0), RedundantSyncMaster (4), SyncMaster (1), SyncSlave (2)
     """
     NotSynchronized: SyncRole = ...
@@ -5527,7 +5886,8 @@ class SyncRole(Enum): # skipped bases: <type 'IConvertible'>, <type 'IComparable
 
 class TemperatureUnit(Enum): # skipped bases: <type 'IConvertible'>, <type 'IComparable'>, <type 'IFormattable'>, <type 'object'>
     """
-    Possible values for property TemperatureUnit
+    Possible values for property TemperatureUnit
+
     enum TemperatureUnit, values: Deactivated (0), DegreesCelsius (1), DegreesFahrenheit (2), Kelvin (3)
     """
     Deactivated: TemperatureUnit = ...
@@ -5539,7 +5899,8 @@ class TemperatureUnit(Enum): # skipped bases: <type 'IConvertible'>, <type 'ICom
 
 class ThermistorResponseToSensorFault(Enum): # skipped bases: <type 'IConvertible'>, <type 'IComparable'>, <type 'IFormattable'>, <type 'object'>
     """
-    Possible values for property ThermistorResponseToSensorFault
+    Possible values for property ThermistorResponseToSensorFault
+
     enum ThermistorResponseToSensorFault, values: Deactivated (0), Signal (1), Trip (3), Warn (2)
     """
     Deactivated: ThermistorResponseToSensorFault = ...
@@ -5551,7 +5912,8 @@ class ThermistorResponseToSensorFault(Enum): # skipped bases: <type 'IConvertibl
 
 class ThermistorResponseToTripLevel(Enum): # skipped bases: <type 'IConvertible'>, <type 'IComparable'>, <type 'IFormattable'>, <type 'object'>
     """
-    Possible values for property ThermistorResponseToTripLevel
+    Possible values for property ThermistorResponseToTripLevel
+
     enum ThermistorResponseToTripLevel, values: None (0), Signal (1), Trip (3), Warn (2)
     """
     Signal: ThermistorResponseToTripLevel = ...
@@ -5565,8 +5927,10 @@ class TransferArea(IEquatable, IEngineeringObject, IInternalObjectAccess): # ski
     @property
     def Direction(self) -> TransferAreaDirection:
         """
-        Direction of data communication between local and partner device
-        Get: Direction(self: TransferArea) -> TransferAreaDirection
+        Direction of data communication between local and partner device
+
+        Get: Direction(self: TransferArea) -> TransferAreaDirection
+
         Set: Direction(self: TransferArea) = value
         """
         ...
@@ -5574,7 +5938,8 @@ class TransferArea(IEquatable, IEngineeringObject, IInternalObjectAccess): # ski
     @property
     def LocalAddresses(self) -> AddressComposition:
         """
-        Local addresses of a transfer area
+        Local addresses of a transfer area
+
         Get: LocalAddresses(self: TransferArea) -> AddressComposition
         """
         ...
@@ -5582,8 +5947,10 @@ class TransferArea(IEquatable, IEngineeringObject, IInternalObjectAccess): # ski
     @property
     def LocalToPartnerLength(self) -> int:
         """
-        Length of transferred data from local to partner device
-        Get: LocalToPartnerLength(self: TransferArea) -> int
+        Length of transferred data from local to partner device
+
+        Get: LocalToPartnerLength(self: TransferArea) -> int
+
         Set: LocalToPartnerLength(self: TransferArea) = value
         """
         ...
@@ -5591,8 +5958,10 @@ class TransferArea(IEquatable, IEngineeringObject, IInternalObjectAccess): # ski
     @property
     def Name(self) -> str:
         """
-        Name of the transfer area
-        Get: Name(self: TransferArea) -> str
+        Name of the transfer area
+
+        Get: Name(self: TransferArea) -> str
+
         Set: Name(self: TransferArea) = value
         """
         ...
@@ -5600,7 +5969,8 @@ class TransferArea(IEquatable, IEngineeringObject, IInternalObjectAccess): # ski
     @property
     def Parent(self) -> IEngineeringObject:
         """
-        EOM parent of this object
+        EOM parent of this object
+
         Get: Parent(self: TransferArea) -> IEngineeringObject
         """
         ...
@@ -5608,7 +5978,8 @@ class TransferArea(IEquatable, IEngineeringObject, IInternalObjectAccess): # ski
     @property
     def PartnerAddresses(self) -> AddressComposition:
         """
-        Partner addresses of a transfer area
+        Partner addresses of a transfer area
+
         Get: PartnerAddresses(self: TransferArea) -> AddressComposition
         """
         ...
@@ -5616,8 +5987,10 @@ class TransferArea(IEquatable, IEngineeringObject, IInternalObjectAccess): # ski
     @property
     def PartnerToLocalLength(self) -> int:
         """
-        Length of transferred data from partner to local device
-        Get: PartnerToLocalLength(self: TransferArea) -> int
+        Length of transferred data from partner to local device
+
+        Get: PartnerToLocalLength(self: TransferArea) -> int
+
         Set: PartnerToLocalLength(self: TransferArea) = value
         """
         ...
@@ -5625,7 +5998,8 @@ class TransferArea(IEquatable, IEngineeringObject, IInternalObjectAccess): # ski
     @property
     def PositionNumber(self) -> int:
         """
-        Subslotnumber / Slotnumber of transfer area
+        Subslotnumber / Slotnumber of transfer area
+
         Get: PositionNumber(self: TransferArea) -> int
         """
         ...
@@ -5633,7 +6007,8 @@ class TransferArea(IEquatable, IEngineeringObject, IInternalObjectAccess): # ski
     @property
     def TransferAreaMappingRules(self) -> TransferAreaMappingRuleComposition:
         """
-        Mapping rules for transfer areas
+        Mapping rules for transfer areas
+
         Get: TransferAreaMappingRules(self: TransferArea) -> TransferAreaMappingRuleComposition
         """
         ...
@@ -5641,32 +6016,39 @@ class TransferArea(IEquatable, IEngineeringObject, IInternalObjectAccess): # ski
     @property
     def Type(self) -> TransferAreaType:
         """
-        Transfer area type
-        Get: Type(self: TransferArea) -> TransferAreaType
+        Transfer area type
+
+        Get: Type(self: TransferArea) -> TransferAreaType
+
         Set: Type(self: TransferArea) = value
         """
         ...
 
 
-    def Delete(self): # -> 
+    def Delete(self): # ->
         """
-        Delete(self: TransferArea)
+        Delete(self: TransferArea)
+
             Deletes this instance.
         """
         ...
 
     def GetHashCode(self) -> int:
         """
-        GetHashCode(self: TransferArea) -> int
-            Returns a hash code for this instance.
+        GetHashCode(self: TransferArea) -> int
+
+            Returns a hash code for this instance.
+
             Returns: A hash code for this instance, suitable for use in hashing algorithms and data structures like a hash table.
         """
         ...
 
     def ToString(self) -> str:
         """
-        ToString(self: TransferArea) -> str
-            Returns a System.String that represents the current System.Object.
+        ToString(self: TransferArea) -> str
+
+            Returns a System.String that represents the current System.Object.
+
             Returns: A System.String that represents the current System.Object.
         """
         ...
@@ -5680,7 +6062,8 @@ class TransferAreaComposition(IInternalCompositionAccess, IEngineeringCompositio
     @property
     def Parent(self) -> IEngineeringObject:
         """
-        Gets the parent.
+        Gets the parent.
+
         Get: Parent(self: TransferAreaComposition) -> IEngineeringObject
         """
         ...
@@ -5688,25 +6071,32 @@ class TransferAreaComposition(IInternalCompositionAccess, IEngineeringCompositio
 
     def Find(self, positionNumber:int) -> TransferArea:
         """
-        Find(self: TransferAreaComposition, positionNumber: int) -> TransferArea
-            Find a transfer area by position number
-            positionNumber: Subslotnumber / Slotnumber of transfer area
+        Find(self: TransferAreaComposition, positionNumber: int) -> TransferArea
+
+            Find a transfer area by position number
+
+            positionNumber: Subslotnumber / Slotnumber of transfer area
+
             Returns: Siemens.Engineering.HW.TransferArea
         """
         ...
 
     def GetHashCode(self) -> int:
         """
-        GetHashCode(self: TransferAreaComposition) -> int
-            Returns a hash code for this instance.
+        GetHashCode(self: TransferAreaComposition) -> int
+
+            Returns a hash code for this instance.
+
             Returns: A hash code for this instance, suitable for use in hashing algorithms and data structures like a hash table.
         """
         ...
 
     def ToString(self) -> str:
         """
-        ToString(self: TransferAreaComposition) -> str
-            Returns a System.String that represents the current System.Object.
+        ToString(self: TransferAreaComposition) -> str
+
+            Returns a System.String that represents the current System.Object.
+
             Returns: A System.String that represents the current System.Object.
         """
         ...
@@ -5721,7 +6111,8 @@ class TransferAreaComposition(IInternalCompositionAccess, IEngineeringCompositio
 
 class TransferAreaDirection(Enum): # skipped bases: <type 'IConvertible'>, <type 'IComparable'>, <type 'IFormattable'>, <type 'object'>
     """
-    Direction of data communication between local and partner device
+    Direction of data communication between local and partner device
+
     enum (flags) TransferAreaDirection, values: Bidirectional (3), LocalToPartner (1), None (0), PartnerToLocal (2)
     """
     Bidirectional: TransferAreaDirection = ...
@@ -5735,8 +6126,10 @@ class TransferAreaMappingRule(IEquatable, IEngineeringObject, IInternalObjectAcc
     @property
     def Begin(self) -> int:
         """
-        Bit address of the begin of the mapped data
-        Get: Begin(self: TransferAreaMappingRule) -> int
+        Bit address of the begin of the mapped data
+
+        Get: Begin(self: TransferAreaMappingRule) -> int
+
         Set: Begin(self: TransferAreaMappingRule) = value
         """
         ...
@@ -5744,17 +6137,21 @@ class TransferAreaMappingRule(IEquatable, IEngineeringObject, IInternalObjectAcc
     @property
     def End(self) -> int:
         """
-        Bit address of the end of the mapped data
-        Get: End(self: TransferAreaMappingRule) -> int
+        Bit address of the end of the mapped data
+
+        Get: End(self: TransferAreaMappingRule) -> int
+
         Set: End(self: TransferAreaMappingRule) = value
         """
         ...
 
     @property
-    def IoType(self): # -> 
+    def IoType(self): # ->
         """
-        Type of data to be mapped (Input or Output)
-        Get: IoType(self: TransferAreaMappingRule) -> AddressIoType
+        Type of data to be mapped (Input or Output)
+
+        Get: IoType(self: TransferAreaMappingRule) -> AddressIoType
+
         Set: IoType(self: TransferAreaMappingRule) = value
         """
         ...
@@ -5762,8 +6159,10 @@ class TransferAreaMappingRule(IEquatable, IEngineeringObject, IInternalObjectAcc
     @property
     def Offset(self) -> int:
         """
-        Offset of the transfered data
-        Get: Offset(self: TransferAreaMappingRule) -> int
+        Offset of the transfered data
+
+        Get: Offset(self: TransferAreaMappingRule) -> int
+
         Set: Offset(self: TransferAreaMappingRule) = value
         """
         ...
@@ -5771,7 +6170,8 @@ class TransferAreaMappingRule(IEquatable, IEngineeringObject, IInternalObjectAcc
     @property
     def Parent(self) -> IEngineeringObject:
         """
-        EOM parent of this object
+        EOM parent of this object
+
         Get: Parent(self: TransferAreaMappingRule) -> IEngineeringObject
         """
         ...
@@ -5779,7 +6179,8 @@ class TransferAreaMappingRule(IEquatable, IEngineeringObject, IInternalObjectAcc
     @property
     def PositionNumber(self) -> int:
         """
-        Transfer area mapping rule number
+        Transfer area mapping rule number
+
         Get: PositionNumber(self: TransferAreaMappingRule) -> int
         """
         ...
@@ -5787,32 +6188,39 @@ class TransferAreaMappingRule(IEquatable, IEngineeringObject, IInternalObjectAcc
     @property
     def Target(self) -> DeviceItem:
         """
-        I/O module or sub-module to be mapped
-        Get: Target(self: TransferAreaMappingRule) -> DeviceItem
+        I/O module or sub-module to be mapped
+
+        Get: Target(self: TransferAreaMappingRule) -> DeviceItem
+
         Set: Target(self: TransferAreaMappingRule) = value
         """
         ...
 
 
-    def Delete(self): # -> 
+    def Delete(self): # ->
         """
-        Delete(self: TransferAreaMappingRule)
+        Delete(self: TransferAreaMappingRule)
+
             Deletes this instance.
         """
         ...
 
     def GetHashCode(self) -> int:
         """
-        GetHashCode(self: TransferAreaMappingRule) -> int
-            Returns a hash code for this instance.
+        GetHashCode(self: TransferAreaMappingRule) -> int
+
+            Returns a hash code for this instance.
+
             Returns: A hash code for this instance, suitable for use in hashing algorithms and data structures like a hash table.
         """
         ...
 
     def ToString(self) -> str:
         """
-        ToString(self: TransferAreaMappingRule) -> str
-            Returns a System.String that represents the current System.Object.
+        ToString(self: TransferAreaMappingRule) -> str
+
+            Returns a System.String that represents the current System.Object.
+
             Returns: A System.String that represents the current System.Object.
         """
         ...
@@ -5826,7 +6234,8 @@ class TransferAreaMappingRuleComposition(IInternalCompositionAccess, IEngineerin
     @property
     def Parent(self) -> IEngineeringObject:
         """
-        Gets the parent.
+        Gets the parent.
+
         Get: Parent(self: TransferAreaMappingRuleComposition) -> IEngineeringObject
         """
         ...
@@ -5834,16 +6243,20 @@ class TransferAreaMappingRuleComposition(IInternalCompositionAccess, IEngineerin
 
     def GetHashCode(self) -> int:
         """
-        GetHashCode(self: TransferAreaMappingRuleComposition) -> int
-            Returns a hash code for this instance.
+        GetHashCode(self: TransferAreaMappingRuleComposition) -> int
+
+            Returns a hash code for this instance.
+
             Returns: A hash code for this instance, suitable for use in hashing algorithms and data structures like a hash table.
         """
         ...
 
     def ToString(self) -> str:
         """
-        ToString(self: TransferAreaMappingRuleComposition) -> str
-            Returns a System.String that represents the current System.Object.
+        ToString(self: TransferAreaMappingRuleComposition) -> str
+
+            Returns a System.String that represents the current System.Object.
+
             Returns: A System.String that represents the current System.Object.
         """
         ...
@@ -5858,7 +6271,8 @@ class TransferAreaMappingRuleComposition(IInternalCompositionAccess, IEngineerin
 
 class TransferAreaType(Enum): # skipped bases: <type 'IConvertible'>, <type 'IComparable'>, <type 'IFormattable'>, <type 'object'>
     """
-    Type of transfer area
+    Type of transfer area
+
     enum TransferAreaType, values: CD (2), F_PS (3), MS (1), None (0), TM (4)
     """
     CD: TransferAreaType = ...
@@ -5870,7 +6284,8 @@ class TransferAreaType(Enum): # skipped bases: <type 'IConvertible'>, <type 'ICo
 
 class TransmissionRateAndDuplex(Enum): # skipped bases: <type 'IConvertible'>, <type 'IComparable'>, <type 'IFormattable'>, <type 'object'>
     """
-    Possible values for property TransmissionRateAndDuplex
+    Possible values for property TransmissionRateAndDuplex
+
     enum TransmissionRateAndDuplex, values: AsyncFiber10MbpsFullDuplex (13), AsyncFiber10MbpsHalfDuplex (12), AUI10Mbps (1), Automatic (8), FO10000MbpsFullDuplex (31), FO1000MbpsFullDuplex (26), FO1000MbpsFullDuplexLD (24), FO100MbpsFullDuplex (18), FO100MbpsFullDuplexLD (46), None (0), POFPCF100MbpsFullDuplex (54), TP1000MbpsFullDuplex (30), TP100MbpsFullDuplex (16), TP100MbpsHalfDuplex (15), TP10MbpsFullDuplex (11), TP10MbpsHalfDuplex (10), X1000MbpsFullDuplex (22)
     """
     AsyncFiber10MbpsFullDuplex: TransmissionRateAndDuplex = ...
@@ -5894,7 +6309,8 @@ class TransmissionRateAndDuplex(Enum): # skipped bases: <type 'IConvertible'>, <
 
 class TypeOfConsumerLoad(Enum): # skipped bases: <type 'IConvertible'>, <type 'IComparable'>, <type 'IFormattable'>, <type 'object'>
     """
-    Possible values for property TypeOfConsumerLoad
+    Possible values for property TypeOfConsumerLoad
+
     enum TypeOfConsumerLoad, values: Motor (0), ResistiveLoad (1)
     """
     Motor: TypeOfConsumerLoad = ...
@@ -5904,7 +6320,8 @@ class TypeOfConsumerLoad(Enum): # skipped bases: <type 'IConvertible'>, <type 'I
 
 class View(Enum): # skipped bases: <type 'IConvertible'>, <type 'IComparable'>, <type 'IFormattable'>, <type 'object'>
     """
-    The list of possible views in the HW editor
+    The list of possible views in the HW editor
+
     enum View, values: Device (0), Network (1), Topology (2)
     """
     Device: View = ...
@@ -5914,4 +6331,3 @@ class View(Enum): # skipped bases: <type 'IConvertible'>, <type 'IComparable'>, 
 
 
 # variables with complex values
-

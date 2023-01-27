@@ -4,7 +4,7 @@
 # by generator 1.145
 """ no doc """
 from __future__ import annotations
-from Siemens.Engineering import (IEngineeringComposition, IEngineeringObject, 
+from Siemens.Engineering import (IEngineeringComposition, IEngineeringObject,
     IEngineeringService, MultilingualText)
 
 from System import DateTime, IEquatable
@@ -15,6 +15,8 @@ from System.IO import FileInfo
     IInternalCompositionAccess, IInternalObjectAccess)
 """
 
+from Siemens import IInternalCompositionAccess, IInternalObjectAccess
+
 # no functions
 # classes
 
@@ -23,7 +25,8 @@ class OpcUaCommunicationGroup(IEquatable, IEngineeringObject, IInternalObjectAcc
     @property
     def Parent(self) -> IEngineeringObject:
         """
-        EOM parent of this object
+        EOM parent of this object
+
         Get: Parent(self: OpcUaCommunicationGroup) -> IEngineeringObject
         """
         ...
@@ -31,7 +34,8 @@ class OpcUaCommunicationGroup(IEquatable, IEngineeringObject, IInternalObjectAcc
     @property
     def ServerInterfaceGroup(self) -> ServerInterfaceGroup:
         """
-        OPCUA Server Interface Folder
+        OPCUA Server Interface Folder
+
         Get: ServerInterfaceGroup(self: OpcUaCommunicationGroup) -> ServerInterfaceGroup
         """
         ...
@@ -39,16 +43,20 @@ class OpcUaCommunicationGroup(IEquatable, IEngineeringObject, IInternalObjectAcc
 
     def GetHashCode(self) -> int:
         """
-        GetHashCode(self: OpcUaCommunicationGroup) -> int
-            Returns a hash code for this instance.
+        GetHashCode(self: OpcUaCommunicationGroup) -> int
+
+            Returns a hash code for this instance.
+
             Returns: A hash code for this instance, suitable for use in hashing algorithms and data structures like a hash table.
         """
         ...
 
     def ToString(self) -> str:
         """
-        ToString(self: OpcUaCommunicationGroup) -> str
-            Returns a System.String that represents the current System.Object.
+        ToString(self: OpcUaCommunicationGroup) -> str
+
+            Returns a System.String that represents the current System.Object.
+
             Returns: A System.String that represents the current System.Object.
         """
         ...
@@ -62,7 +70,8 @@ class OpcUaProvider(IEquatable, IEngineeringObject, IEngineeringService, IIntern
     @property
     def CommunicationGroup(self) -> OpcUaCommunicationGroup:
         """
-        Access the OpcUa Communication Folder
+        Access the OpcUa Communication Folder
+
         Get: CommunicationGroup(self: OpcUaProvider) -> OpcUaCommunicationGroup
         """
         ...
@@ -70,7 +79,8 @@ class OpcUaProvider(IEquatable, IEngineeringObject, IEngineeringService, IIntern
     @property
     def Parent(self) -> IEngineeringObject:
         """
-        EOM parent of this object
+        EOM parent of this object
+
         Get: Parent(self: OpcUaProvider) -> IEngineeringObject
         """
         ...
@@ -78,16 +88,20 @@ class OpcUaProvider(IEquatable, IEngineeringObject, IEngineeringService, IIntern
 
     def GetHashCode(self) -> int:
         """
-        GetHashCode(self: OpcUaProvider) -> int
-            Returns a hash code for this instance.
+        GetHashCode(self: OpcUaProvider) -> int
+
+            Returns a hash code for this instance.
+
             Returns: A hash code for this instance, suitable for use in hashing algorithms and data structures like a hash table.
         """
         ...
 
     def ToString(self) -> str:
         """
-        ToString(self: OpcUaProvider) -> str
-            Returns a System.String that represents the current System.Object.
+        ToString(self: OpcUaProvider) -> str
+
+            Returns a System.String that represents the current System.Object.
+
             Returns: A System.String that represents the current System.Object.
         """
         ...
@@ -101,8 +115,10 @@ class ServerInterface(IEquatable, IEngineeringObject, IInternalObjectAccess): # 
     @property
     def Author(self) -> str:
         """
-        Author
-        Get: Author(self: ServerInterface) -> str
+        Author
+
+        Get: Author(self: ServerInterface) -> str
+
         Set: Author(self: ServerInterface) = value
         """
         ...
@@ -110,7 +126,8 @@ class ServerInterface(IEquatable, IEngineeringObject, IInternalObjectAccess): # 
     @property
     def Comment(self) -> MultilingualText:
         """
-        Comment
+        Comment
+
         Get: Comment(self: ServerInterface) -> MultilingualText
         """
         ...
@@ -118,7 +135,8 @@ class ServerInterface(IEquatable, IEngineeringObject, IInternalObjectAccess): # 
     @property
     def CreationTime(self) -> DateTime:
         """
-        Creation time
+        Creation time
+
         Get: CreationTime(self: ServerInterface) -> DateTime
         """
         ...
@@ -126,8 +144,10 @@ class ServerInterface(IEquatable, IEngineeringObject, IInternalObjectAccess): # 
     @property
     def Enabled(self) -> bool:
         """
-        Enable server interface and download to PLC
-        Get: Enabled(self: ServerInterface) -> bool
+        Enable server interface and download to PLC
+
+        Get: Enabled(self: ServerInterface) -> bool
+
         Set: Enabled(self: ServerInterface) = value
         """
         ...
@@ -135,7 +155,8 @@ class ServerInterface(IEquatable, IEngineeringObject, IInternalObjectAccess): # 
     @property
     def LastModified(self) -> DateTime:
         """
-        Last modified time
+        Last modified time
+
         Get: LastModified(self: ServerInterface) -> DateTime
         """
         ...
@@ -143,7 +164,8 @@ class ServerInterface(IEquatable, IEngineeringObject, IInternalObjectAccess): # 
     @property
     def Name(self) -> str:
         """
-        Name
+        Name
+
         Get: Name(self: ServerInterface) -> str
         """
         ...
@@ -151,47 +173,57 @@ class ServerInterface(IEquatable, IEngineeringObject, IInternalObjectAccess): # 
     @property
     def Parent(self) -> IEngineeringObject:
         """
-        EOM parent of this object
+        EOM parent of this object
+
         Get: Parent(self: ServerInterface) -> IEngineeringObject
         """
         ...
 
 
-    def Delete(self): # -> 
+    def Delete(self): # ->
         """
-        Delete(self: ServerInterface)
+        Delete(self: ServerInterface)
+
             Deletes this instance.
         """
         ...
 
-    def Export(self, filePath:FileInfo): # -> 
+    def Export(self, filePath:FileInfo): # ->
         """
-        Export(self: ServerInterface, filePath: FileInfo)
-            Exports the original XML File
+        Export(self: ServerInterface, filePath: FileInfo)
+
+            Exports the original XML File
+
             filePath: Path to the location to save
         """
         ...
 
     def GetHashCode(self) -> int:
         """
-        GetHashCode(self: ServerInterface) -> int
-            Returns a hash code for this instance.
+        GetHashCode(self: ServerInterface) -> int
+
+            Returns a hash code for this instance.
+
             Returns: A hash code for this instance, suitable for use in hashing algorithms and data structures like a hash table.
         """
         ...
 
-    def Import(self, filePath:FileInfo): # -> 
+    def Import(self, filePath:FileInfo): # ->
         """
-        Import(self: ServerInterface, filePath: FileInfo)
-            Import file
+        Import(self: ServerInterface, filePath: FileInfo)
+
+            Import file
+
             filePath: Path to file
         """
         ...
 
     def ToString(self) -> str:
         """
-        ToString(self: ServerInterface) -> str
-            Returns a System.String that represents the current System.Object.
+        ToString(self: ServerInterface) -> str
+
+            Returns a System.String that represents the current System.Object.
+
             Returns: A System.String that represents the current System.Object.
         """
         ...
@@ -205,7 +237,8 @@ class ServerInterfaceComposition(IInternalCompositionAccess, IEngineeringComposi
     @property
     def Parent(self) -> IEngineeringObject:
         """
-        Gets the parent.
+        Gets the parent.
+
         Get: Parent(self: ServerInterfaceComposition) -> IEngineeringObject
         """
         ...
@@ -213,16 +246,20 @@ class ServerInterfaceComposition(IInternalCompositionAccess, IEngineeringComposi
 
     def GetHashCode(self) -> int:
         """
-        GetHashCode(self: ServerInterfaceComposition) -> int
-            Returns a hash code for this instance.
+        GetHashCode(self: ServerInterfaceComposition) -> int
+
+            Returns a hash code for this instance.
+
             Returns: A hash code for this instance, suitable for use in hashing algorithms and data structures like a hash table.
         """
         ...
 
     def ToString(self) -> str:
         """
-        ToString(self: ServerInterfaceComposition) -> str
-            Returns a System.String that represents the current System.Object.
+        ToString(self: ServerInterfaceComposition) -> str
+
+            Returns a System.String that represents the current System.Object.
+
             Returns: A System.String that represents the current System.Object.
         """
         ...
@@ -240,7 +277,8 @@ class ServerInterfaceGroup(IEquatable, IEngineeringObject, IInternalObjectAccess
     @property
     def Parent(self) -> IEngineeringObject:
         """
-        EOM parent of this object
+        EOM parent of this object
+
         Get: Parent(self: ServerInterfaceGroup) -> IEngineeringObject
         """
         ...
@@ -248,7 +286,8 @@ class ServerInterfaceGroup(IEquatable, IEngineeringObject, IInternalObjectAccess
     @property
     def ServerInterfaces(self) -> ServerInterfaceComposition:
         """
-        Returns a list of Server Interfaces
+        Returns a list of Server Interfaces
+
         Get: ServerInterfaces(self: ServerInterfaceGroup) -> ServerInterfaceComposition
         """
         ...
@@ -256,21 +295,23 @@ class ServerInterfaceGroup(IEquatable, IEngineeringObject, IInternalObjectAccess
 
     def GetHashCode(self) -> int:
         """
-        GetHashCode(self: ServerInterfaceGroup) -> int
-            Returns a hash code for this instance.
+        GetHashCode(self: ServerInterfaceGroup) -> int
+
+            Returns a hash code for this instance.
+
             Returns: A hash code for this instance, suitable for use in hashing algorithms and data structures like a hash table.
         """
         ...
 
     def ToString(self) -> str:
         """
-        ToString(self: ServerInterfaceGroup) -> str
-            Returns a System.String that represents the current System.Object.
+        ToString(self: ServerInterfaceGroup) -> str
+
+            Returns a System.String that represents the current System.Object.
+
             Returns: A System.String that represents the current System.Object.
         """
         ...
 
     def __ne__(self, *args): #cannot find CLR method
         ...
-
-
