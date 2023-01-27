@@ -559,3 +559,174 @@ The following new features and innovations are available in TIA Portal Openness 
 - TiaPortal.GetProcesses() method
 - TiaPortalProcess.Attach() method
 - TiaPortalProcess.Attaching other
+
+## Openness v15.1
+
+The following new features and innovations are available in TIA Portal Openness V15.1. You can find additional details on the various topics in the individual sections of the product documentation.
+
+- Accessing projects
+  - Multiple projects in a TIA Portal instance can be opened via Openness.
+  - Projects can be archived and restored via Openness.
+  - For UMAC-protected projects Openness enables read access to objects. The same restrictions apply to this type of access as for a user with the "Read only" authorization.
+- Online/offline comparison
+  - The online and offline comparison of data is possible via Openness.
+- Accessing protection levels
+  - A protection level can be set or removed for blocks.
+- Accessing fingerprints
+  - The fingerprint can be queried for blocks and PLC data types (UDTs).
+- Accessing names
+  - The name can be set for blocks, data blocks and UDTs.
+- Fault-tolerant import
+  - In addition to the strict import that can still be used, a fault-tolerant import is now available. The import is still possible even if linked user data types or called blocks do not match, for example.
+- Export and import
+  - Watch tables as well as force tables can be exported and imported. Snapshots of the current values can be exported as XML from an offline DB. This means different snapshots can be compared with the help of the XML files.
+- ET200SP
+  - Read and write access is possible for most attributes of the ET200SP modules.
+- R/H systems
+  - Download to the primary PLC and the backup PLC is possible for R/H systems.
+- Fail-safe PLC
+  - The upload is now also possible indirectly via NAT router. Recipes, archives, user files and the passwords of the protection levels are also taken into account during the upload.
+
+### New Features/Files
+
+- AdvancedProtection
+- SiVArc
+- SW.OpcUa
+- SW.WatchAndForceTables
+- Upload
+- Upload.Configurations
+
+### Added
+
+- Compare.CompareResultState.CompareIrrelevant enum option -> 8
+- Compare.CompareResultState.FolderContainsDifferencesOwnStateDifferent enum option -> 2
+- Compare.CompareResultState.FolderContentEqualOwnStateDifferent enum option -> 3
+- Connection.ConfigurationAddress.Address property -> The nodeaddress as string
+- Connection.ConfigurationPcInterface.Addresses property -> Composition of configurationAddress
+- Download.Configurations.ExpandDownload class -> The download must be expanded beyond your selection.
+- Download.Configurations.ExpandDownloadSelections enum -> Available selections for the expand download.
+- Download.Configurations.StartBackupModules class -> Start modules after downloading to device.
+- Download.Configurations.StartBackupModulesSelections enum -> Available selections for the start backup modules.
+- Download.Configurations.StopHSystem class -> The modules are stopped for downloading to device.
+- Download.Configurations.StopHSystemOrModule class -> The modules are stopped for downloading to device.
+- Download.Configurations.StopHSystemOrModuleSelections enum -> Available selections for the stop H system or module.
+- Download.Configurations.StopHSystemSelections enum -> Available selections for the stop H system.
+- Download.Configurations.SwitchBackupToPrimary class -> Start modules after downloading device
+- Download.Configurations.SwitchBackupToPrimarySelections enum -> Available selections for the switch backup to primary.
+- Download.Configurations.WaitOnReboot class -> Wait for the reboot of the device.
+- Download.Configurations.WaitOnRebootSelections enum -> Available selections for the wait on reboot.
+- Download.RHDownloadProvider class -> Service provides download functionality for R/H systems
+- HW.Features.FrontPanelDisplay class -> Represents a front panel display.
+- HW.Features.NetworkInterface.TransferAreas property -> Composition of transferArea
+- HW.Features.PcInterfaceAssignment class -> Represents a PC interface assignment.
+- HW.Features.PlcAccessLevelProvider class -> Service provides access to PLC Plus access levels.
+- HW.Utilities.CardReaderPscProvider class -> Card reader provider utility for PSC.
+- HW.ApplicationControlFunction enum -> Possible values for property ApplicationControlFunction
+- HW.BasicType enum -> Possible values for property BasicType
+- HW.Classification enum -> Possible values for property Classification
+- HW.ConfigurationDQOrDIGroup2 enum -> Possible values for property ConfigurationDQOrDIGroup2
+- HW.ControlFunctionCurrentMeasuringModuleInstalled enum -> Possible values for property ControlFunctionCurrentMeasuringModuleInstalled
+- HW.ControlFunctionFeedbackCLOSEDFC enum -> Possible values for property ControlFunctionFeedbackCLOSEDFC
+- HW.ControlFunctionFeedbackON enum -> Possible values for property ControlFunctionFeedbackON
+- HW.ControlFunctionFeedbackOPENFO enum -> Possible values for property ControlFunctionFeedbackOPENFO
+- HW.ControlFunctionForward enum -> Possible values for property ControlFunctionForward
+- HW.ControlFunctionForwardFast enum -> Possible values for property ControlFunctionForwardFast
+- HW.ControlFunctionOFF enum -> Possible values for property ControlFunctionOFF
+- HW.ControlFunctionReverse - enum -> Possible values for property ControlFunctionReverse
+- HW.ControlFunctionReverseFast enum -> Possible values for property ControlFunctionReverseFast
+- HW.ControlFunctionTorqueCLOSEDTC enum -> Possible values for property ControlFunctionTorqueCLOSEDTC
+- HW.ControlFunctionTorqueOPENTO enum -> Possible values for property ControlFunctionTorqueOPENTO
+- HW.ControlStationModeSelectorS1 enum -> Possible values for property ControlStationModeSelectorS1
+- HW.ControlStationModeSelectorS2 enum -> Possible values for property ControlStationModeSelectorS2
+- HW.CounterMode enum -> Possible values for property CounterMode
+- HW.IHardwareCompareTarget class -> Access to the device/device item in a HW compare scenario
+- HW.HardwareObject.CompareTo() method -> Compare the hardware object vs the given target
+- HW.Failsafe_BehaviorAfterChannelFault enum -> Possible values for property Failsafe_BehaviorAfterChannelFault
+- HW.Failsafe_ChannelFailureAcknowledge enum -> Possible values for property Failsafe_ChannelFailureAcknowledge
+- HW.Failsafe_ControlOfOutput enum -> Possible values for property Failsafe_ControlOfOutput
+- HW.Failsafe_DiscrepancyBehavior enum -> Possible values for property Failsafe_DiscrepancyBehavior
+- HW.Failsafe_DiscrepancyMonitoring enum -> Possible values for property Failsafe_DiscrepancyMonitoring
+- HW.Failsafe_FCheckiPar enum -> Possible values for property Failsafe_FCheckiPar
+- HW.Failsafe_FCheckSeqNr enum -> Possible values for property Failsafe_FCheckSeqNr
+- HW.Failsafe_FCRCSeed enum -> Possible values for property Failsafe_FCRCSeed
+- HW.Failsafe_FparVersion enum -> Possible values for property Failsafe_FparVersion
+- HW.Failsafe_Fpassivation enum -> Possible values for property Failsafe_Fpassivation
+- HW.Failsafe_FSIL enum -> Possible values for property Failsafe_FSIL
+- HW.Failsafe_F_CRC_Length enum -> Possible values for property Failsafe_F_CRC_Length
+- HW.Failsafe_InputDelay enum -> Possible values for property Failsafe_InputDelay
+- HW.Failsafe_ManualAssignmentFIODBNumber enum -> Possible values for property Failsafe_ManualAssignmentFIODBNumber
+- HW.Failsafe_MaximumTestPeriod enum -> Possible values for property Failsafe_MaximumTestPeriod
+- HW.Failsafe_MaxReadbackTimelightTestAndDarkTest enum -> Possible values for property Failsafe_MaxReadbackTimelightTestAndDarkTest
+- HW.Failsafe_OutputType enum -> Possible values for property Failsafe_OutputType
+- HW.Failsafe_ReintegrationAfterDiscrepancyError enum -> Possible values for property Failsafe_ReintegrationAfterDiscrepancyError
+- HW.Failsafe_SensorEvaluation enum -> Possible values for property Failsafe_SensorEvaluation
+- HW.Failsafe_SensorSupply enum -> Possible values for property Failsafe_SensorSupply
+- HW.Failsafe_SequenceMonitoring enum -> Possible values for property Failsafe_SequenceMonitoring
+- HW.HardwareResource enum -> Possible values for property HardwareResource
+- HW.InterfaceType enum -> Possible values for property InterfaceType
+- HW.LengthOfIORange enum -> Possible values for property LengthOfIORange
+- HW.MeasuringTemperatureCoefficient enum -> Possible values for property MeasuringTemperatureCoefficient
+- HW.MotorProtectionClass enum -> Possible values for property MotorProtectionClass
+- HW.MotorProtectionReset  enum -> Possible values for property MotorProtectionReset
+- HW.MotorProtectionResponseToPrewarning enum -> Possible values for property MotorProtectionResponseToPrewarning
+- HW.MotorProtectionResponseToTripLevel enum -> Possible values for property MotorProtectionResponseToTripLevel
+- HW.MotorProtectionStalledRotorResponse enum -> Possible values for property MotorProtectionStalledRotorResponse
+- HW.MotorProtectionTypeOfLoad enum -> Possible values for property MotorProtectionTypeOfLoad
+- HW.MotorProtectionUnbalanceResponse enum -> Possible values for property MotorProtectionUnbalanceResponse
+- HW.OpcUaSecurityPolicies enum -> Possible values for property OpcUaSecurityPolicies
+- HW.OperatingHoursMonitoringResponse enum -> Possible values for property OperatingHoursMonitoringResponse
+- HW.OperatingMode enum -> Possible values for property OperatingMode
+- HW.OperatingRange enum -> Possible values for property OperatingRange
+- HW.OperatingType enum -> Possible values for property OperatingType
+- HW.OperatingTypeAndRange enum -> Possible values for property OperatingTypeAndRange
+- HW.PcInterfaceAssignmentMode enum -> Possible values for property PcInterfaceAssignmentMode
+- HW.PcStationType enum -> Possible values for property PcStationType
+- HW.PlcProtectionAccessLevel enum -> Possible values for property PlcProtectionAccessLevel
+- HW.ResponseToOvershoot enum -> Possible values for property ResponseToOvershoot
+- HW.ResponseToPrewarning enum -> Possible values for property ResponseToPrewarning
+- HW.RetentiveDataMemoryUsage enum -> Possible values for property RetentiveDataMemoryUsage
+- HW.StopTimeOperatingHoursMonitoringResponse enum -> Possible values for property StopTimeOperatingHoursMonitoringResponse
+- HW.TemperatureUnit enum -> Possible values for property TemperatureUnit
+- HW.ThermistorResponseToSensorFault enum -> Possible values for property ThermistorResponseToSensorFault
+- HW.ThermistorResponseToTripLevel enum -> Possible values for property ThermistorResponseToTripLevel
+- HW.TransferArea class -> Addressmapping between local I-Slave / I-device and remote partner
+- HW.TransferAreaComposition class -> Composition of the transfer area
+- HW.TransferAreaDirection enum -> Possible values for property TransferAreaDirection
+- HW.TransferAreaMappingRule class -> Mapping rule for the transfer area
+- HW.TransferAreaMappingRuleComposition class -> Composition of the mapping rule
+- HW.TransferAreaType enum -> Possible values for property TransferAreaType
+- HW.TypeOfConsumerLoad enum -> Possible values for property TypeOfConsumerLoad
+- Library.Types.LibraryTypeVersion.Export() method -> Export the library type version to a file
+- Library.GlobalLibrary.LanguageSettings property -> Language settings for the global library
+- Library.GlobalLibraryComposition.Retrieve() method -> Retrieves an archived library
+- Library.GlobalLibraryComposition.RetrieveWithUpgrade() method -> Retrieves a library from an archive and upgrades it to the current version
+- Library.LibraryArchivationMode enum -> Possible values for property LibraryArchivationMode
+- Library.UserGlobalLibrary.Archive() method -> Archives the user global library
+- Library.UserGlobalLibrary.SaveAs() method -> Save a User Library to another location
+- Online.RHOnlineProvider class -> Service provides online functionality for R/H systems
+- SW.Blocks.InterfaceSnapshot class -> Provides Snapshot Value functionality.
+- SW.Blocks.PlcBlockProtectionProvider class -> Provides protection services.
+- SW.ExternalSources.GenerateBlockOption enum -> Possible values for property GenerateBlockOption
+- SW.Fingerprint class -> Fingerprint of a PLC program
+- SW.FingerprintId enum -> Possible values for property FingerprintId
+- SW.FingerprintProvider class -> Provides fingerprint services.
+- SW.PlcSoftware.WatchAndForceTableGroup property -> Get the Plc watch table system group
+- SW.SWImportOptions enum -> Possible values for property SWImportOptions
+- Project.IsPrimary property -> Indicates if the project is the primary project
+- Project.Archive() method -> Archives the project
+- Project.SaveAs() method -> Save a project to another location
+- ProjectArchivationMode enum -> Possible values for property ProjectArchivationMode
+- ProjectComposition.Retrieve() method -> Retrieves an archived project
+- ProjectComposition.RetrieveWithUpgrade() method -> Retrieves a project from an archive and upgrades it to the current version
+- ProjectOpenMode enum -> Possible values for property ProjectOpenMode
+
+### Changed
+
+- HW.HardwareObject class -> Added base class IHardwareCompareTarget
+- HW.DeviceGroup class -> Added base class IEngineeringServiceProvider
+- HW.TransmissionRateAndDuplex.POFPCF100MbpsFullDuplexLD enum option renamed to: POFPCF100MbpsFullDuplex
+- SW.Blocks.PlcBlockComposition.Import() method -> Added optional parameter: swImportOptions
+- SW.ExternalSources.PlcExternalSource.GenerateBlocksFromSource() method -> Added optional parameter: generateBlockOption
+- SW.Types.PlcTypeComposition.Import() method -> Added optional parameter: swImportOptions
+- ProjectComposition.Open() method -> Added optional parameter: projectOpenMode
+- ProjectComposition.OpenWithUpgrade() method -> Added optional parameter: projectOpenMode
