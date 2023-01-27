@@ -1,6 +1,6 @@
 # encoding: utf-8
 # module Siemens.Engineering.SW.TechnologicalObjects.Motion calls itself Motion
-# from Siemens.Engineering, Version=17.0.0.0, Culture=neutral, PublicKeyToken=d29ec89bac048f84, Siemens.Engineering.AddIn, Version=17.0.0.0, Culture=neutral, PublicKeyToken=65b871d8372d6a8f
+# from Siemens.Engineering, Version=16.0.0.0, Culture=neutral, PublicKeyToken=d29ec89bac048f84, Siemens.Engineering.AddIn, Version=16.0.0.0, Culture=neutral, PublicKeyToken=65b871d8372d6a8f
 # by generator 1.145
 """ no doc """
 from __future__ import annotations
@@ -27,7 +27,7 @@ from Siemens import IInternalCompositionAccess, IInternalObjectAccess
 # no functions
 # classes
 
-class AxisEncoderHardwareConnectionInterface(IEquatable, IEngineeringObject, IInternalObjectAccess): # skipped bases: <type 'IEngineeringCompositionOrObject'>, <type 'IInternalBaseAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringInstance'>, <type 'object'>
+class AxisEncoderHardwareConnectionInterface(IEquatable, IEngineeringObject, IInternalObjectAccess): # skipped bases: <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'IEngineeringInstance'>, <type 'IInternalBaseAccess'>, <type 'object'>
     """ Handles connections to hardware objects for axis and encoder TechnologicalInstanceDBs """
     @property
     def Channel(self) -> Channel:
@@ -226,7 +226,7 @@ class AxisEncoderHardwareConnectionInterface(IEquatable, IEngineeringObject, IIn
         ...
 
 
-class AxisEncoderHardwareConnectionInterfaceComposition(IInternalCompositionAccess, IEngineeringComposition, IEquatable): # skipped bases: <type 'IEngineeringInstance'>, <type 'IEnumerable'>, <type 'IInternalBaseAccess'>, <type 'IInternalCollectionAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'object'>
+class AxisEncoderHardwareConnectionInterfaceComposition(IInternalCompositionAccess, IEngineeringComposition, IEquatable): # skipped bases: <type 'IEnumerable'>, <type 'IEngineeringInstance'>, <type 'IInternalBaseAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'IInternalCollectionAccess'>, <type 'object'>
     """ AxisEncoderHardwareConnectionInterface Composition """
     @property
     def Parent(self) -> IEngineeringObject:
@@ -266,7 +266,7 @@ class AxisEncoderHardwareConnectionInterfaceComposition(IInternalCompositionAcce
         ...
 
 
-class AxisHardwareConnectionProvider(IEquatable, IEngineeringObject, IEngineeringService, IInternalObjectAccess): # skipped bases: <type 'IEngineeringCompositionOrObject'>, <type 'IInternalBaseAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringInstance'>, <type 'object'>
+class AxisHardwareConnectionProvider(IEquatable, IEngineeringObject, IEngineeringService, IInternalObjectAccess): # skipped bases: <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'IEngineeringInstance'>, <type 'IInternalBaseAccess'>, <type 'object'>
     """ Handles connections to hardware objects for axis TechnologicalInstanceDBs """
     @property
     def ActorInterface(self) -> AxisEncoderHardwareConnectionInterface:
@@ -329,7 +329,7 @@ class AxisHardwareConnectionProvider(IEquatable, IEngineeringObject, IEngineerin
         ...
 
 
-class CamDataFormat(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class CamDataFormat(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Describes the format in which a cam object should be Exportet/Imported
 
@@ -341,7 +341,7 @@ class CamDataFormat(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormat
     value__ = ...
 
 
-class CamDataFormatSeparator(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class CamDataFormatSeparator(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Describes a Seperator with which the data should be seperated on Import/Export
 
@@ -352,7 +352,7 @@ class CamDataFormatSeparator(Enum): # skipped bases: <type 'IComparable'>, <type
     value__ = ...
 
 
-class CamDataSupport(IEquatable, IEngineeringObject, IEngineeringService, IInternalObjectAccess): # skipped bases: <type 'IEngineeringCompositionOrObject'>, <type 'IInternalBaseAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringInstance'>, <type 'object'>
+class CamDataSupport(IEquatable, IEngineeringObject, IEngineeringService, IInternalObjectAccess): # skipped bases: <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'IEngineeringInstance'>, <type 'IInternalBaseAccess'>, <type 'object'>
     """ Handles import export commands for Cam """
     @property
     def Parent(self) -> IEngineeringObject:
@@ -448,7 +448,7 @@ class CamDataSupport(IEquatable, IEngineeringObject, IEngineeringService, IInter
         ...
 
 
-class ConnectOption(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class ConnectOption(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Describes additional options for making a connection
 
@@ -459,7 +459,7 @@ class ConnectOption(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormat
     value__ = ...
 
 
-class ConveyorTrackingLeadingValues(IEquatable, IEngineeringObject, IEngineeringService, IInternalObjectAccess): # skipped bases: <type 'IEngineeringCompositionOrObject'>, <type 'IInternalBaseAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringInstance'>, <type 'object'>
+class ConveyorTrackingLeadingValues(IEquatable, IEngineeringObject, IEngineeringService, IInternalObjectAccess): # skipped bases: <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'IEngineeringInstance'>, <type 'IInternalBaseAccess'>, <type 'object'>
     """ Handles connections between Kinematics Technological Objects and their master values """
     @property
     def ActualValueCoupling(self) -> TechnologicalInstanceDBAssociation:
@@ -522,7 +522,7 @@ class ConveyorTrackingLeadingValues(IEquatable, IEngineeringObject, IEngineering
         ...
 
 
-class EncoderHardwareConnectionProvider(IEquatable, IEngineeringObject, IEngineeringService, IInternalObjectAccess): # skipped bases: <type 'IEngineeringCompositionOrObject'>, <type 'IInternalBaseAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringInstance'>, <type 'object'>
+class EncoderHardwareConnectionProvider(IEquatable, IEngineeringObject, IEngineeringService, IInternalObjectAccess): # skipped bases: <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'IEngineeringInstance'>, <type 'IInternalBaseAccess'>, <type 'object'>
     """ Handles connections to hardware objects for encoder TechnologicalInstanceDBs """
     @property
     def Parent(self) -> IEngineeringObject:
@@ -567,7 +567,7 @@ class EncoderHardwareConnectionProvider(IEquatable, IEngineeringObject, IEnginee
         ...
 
 
-class MeasuringInputHardwareConnectionProvider(IEquatable, IEngineeringObject, IEngineeringService, IInternalObjectAccess): # skipped bases: <type 'IEngineeringCompositionOrObject'>, <type 'IInternalBaseAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringInstance'>, <type 'object'>
+class MeasuringInputHardwareConnectionProvider(IEquatable, IEngineeringObject, IEngineeringService, IInternalObjectAccess): # skipped bases: <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'IEngineeringInstance'>, <type 'IInternalBaseAccess'>, <type 'object'>
     """ Handles connections to hardware objects for measuring input TechnologicalInstanceDBs """
     @property
     def Channel(self) -> Channel:
@@ -680,7 +680,7 @@ class MeasuringInputHardwareConnectionProvider(IEquatable, IEngineeringObject, I
         ...
 
 
-class OutputCamHardwareConnectionProvider(IEquatable, IEngineeringObject, IEngineeringService, IInternalObjectAccess): # skipped bases: <type 'IEngineeringCompositionOrObject'>, <type 'IInternalBaseAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringInstance'>, <type 'object'>
+class OutputCamHardwareConnectionProvider(IEquatable, IEngineeringObject, IEngineeringService, IInternalObjectAccess): # skipped bases: <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'IEngineeringInstance'>, <type 'IInternalBaseAccess'>, <type 'object'>
     """ Handles connections to hardware objects for output cam and cam track TechnologicalInstanceDBs """
     @property
     def Channel(self) -> Channel:
@@ -782,7 +782,7 @@ class OutputCamHardwareConnectionProvider(IEquatable, IEngineeringObject, IEngin
         ...
 
 
-class OutputCamMeasuringInputContainer(IEquatable, IEngineeringObject, IEngineeringService, IInternalObjectAccess): # skipped bases: <type 'IEngineeringCompositionOrObject'>, <type 'IInternalBaseAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringInstance'>, <type 'object'>
+class OutputCamMeasuringInputContainer(IEquatable, IEngineeringObject, IEngineeringService, IInternalObjectAccess): # skipped bases: <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'IEngineeringInstance'>, <type 'IInternalBaseAccess'>, <type 'object'>
     """ Container for output cam, cam track and measuring input TOs """
     @property
     def MeasuringInputs(self) -> TechnologicalInstanceDBComposition:
@@ -836,7 +836,7 @@ class OutputCamMeasuringInputContainer(IEquatable, IEngineeringObject, IEngineer
         ...
 
 
-class SynchronousAxisMasterValues(IEquatable, IEngineeringObject, IEngineeringService, IInternalObjectAccess): # skipped bases: <type 'IEngineeringCompositionOrObject'>, <type 'IInternalBaseAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringInstance'>, <type 'object'>
+class SynchronousAxisMasterValues(IEquatable, IEngineeringObject, IEngineeringService, IInternalObjectAccess): # skipped bases: <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'IEngineeringInstance'>, <type 'IInternalBaseAccess'>, <type 'object'>
     """ Handles connections between SynchronousAxis Technological Objects and their master values """
     @property
     def ActualValueCoupling(self) -> TechnologicalInstanceDBAssociation:
@@ -899,7 +899,7 @@ class SynchronousAxisMasterValues(IEquatable, IEngineeringObject, IEngineeringSe
         ...
 
 
-class TorqueHardwareConnectionInterface(IEquatable, IEngineeringObject, IInternalObjectAccess): # skipped bases: <type 'IEngineeringCompositionOrObject'>, <type 'IInternalBaseAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringInstance'>, <type 'object'>
+class TorqueHardwareConnectionInterface(IEquatable, IEngineeringObject, IInternalObjectAccess): # skipped bases: <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'IEngineeringInstance'>, <type 'IInternalBaseAccess'>, <type 'object'>
     """ Handles connections to Torque possible hardware objects for axis and encoder TechnologicalInstanceDBs """
     @property
     def ConnectOption(self) -> ConnectOption:

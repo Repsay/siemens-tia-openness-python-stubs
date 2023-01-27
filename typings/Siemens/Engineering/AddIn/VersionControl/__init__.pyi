@@ -1,6 +1,6 @@
 # encoding: utf-8
 # module Siemens.Engineering.AddIn.VersionControl calls itself VersionControl
-# from Siemens.Engineering.AddIn, Version=17.0.0.0, Culture=neutral, PublicKeyToken=65b871d8372d6a8f
+# from Siemens.Engineering.AddIn, Version=16.0.0.0, Culture=neutral, PublicKeyToken=65b871d8372d6a8f
 # by generator 1.145
 """ no doc """
 from __future__ import annotations
@@ -23,7 +23,7 @@ from Siemens import IInternalObjectAccess
 # no functions
 # classes
 
-class ExportResult(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class ExportResult(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Result of export indicating whether the export was successful
 
@@ -35,7 +35,7 @@ class ExportResult(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormatt
     value__ = ...
 
 
-class ExportStatus(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class ExportStatus(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Export status
 
@@ -47,7 +47,7 @@ class ExportStatus(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormatt
     value__ = ...
 
 
-class InitialPostExportInfo(IEquatable, IEngineeringObject, IInternalObjectAccess): # skipped bases: <type 'IEngineeringCompositionOrObject'>, <type 'IInternalBaseAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringInstance'>, <type 'object'>
+class InitialPostExportInfo(IEquatable, IEngineeringObject, IInternalObjectAccess): # skipped bases: <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'IEngineeringInstance'>, <type 'IInternalBaseAccess'>, <type 'object'>
     """ Info object passed to VCI repository add-ins during synchronization post-export """
     @property
     def ExportStatus(self) -> ExportStatus:
@@ -110,7 +110,7 @@ class InitialPostExportInfo(IEquatable, IEngineeringObject, IInternalObjectAcces
         ...
 
 
-class InitialPreExportInfo(IEquatable, IEngineeringObject, IInternalObjectAccess): # skipped bases: <type 'IEngineeringCompositionOrObject'>, <type 'IInternalBaseAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringInstance'>, <type 'object'>
+class InitialPreExportInfo(IEquatable, IEngineeringObject, IInternalObjectAccess): # skipped bases: <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'IEngineeringInstance'>, <type 'IInternalBaseAccess'>, <type 'object'>
     """ Info object passed to VCI repository add-ins during drag/drop pre-export """
     @property
     def FileToExportTo(self) -> FileInfo:
@@ -155,7 +155,7 @@ class InitialPreExportInfo(IEquatable, IEngineeringObject, IInternalObjectAccess
         ...
 
 
-class SyncPostExportInfo(IEquatable, IEngineeringObject, IInternalObjectAccess): # skipped bases: <type 'IEngineeringCompositionOrObject'>, <type 'IInternalBaseAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringInstance'>, <type 'object'>
+class SyncPostExportInfo(IEquatable, IEngineeringObject, IInternalObjectAccess): # skipped bases: <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'IEngineeringInstance'>, <type 'IInternalBaseAccess'>, <type 'object'>
     """ Info object passed to VCI repository add-ins during synchronization post-export """
     @property
     def ExportStatus(self) -> ExportStatus:
@@ -209,7 +209,7 @@ class SyncPostExportInfo(IEquatable, IEngineeringObject, IInternalObjectAccess):
         ...
 
 
-class SyncPreExportInfo(IEquatable, IEngineeringObject, IInternalObjectAccess): # skipped bases: <type 'IEngineeringCompositionOrObject'>, <type 'IInternalBaseAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringInstance'>, <type 'object'>
+class SyncPreExportInfo(IEquatable, IEngineeringObject, IInternalObjectAccess): # skipped bases: <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'IEngineeringInstance'>, <type 'IInternalBaseAccess'>, <type 'object'>
     """ Info object passed to VCI repository add-ins during synchronization pre-export """
     @property
     def Parent(self) -> IEngineeringObject:
@@ -267,7 +267,7 @@ class VciEditorAddInProvider(IDisposable): # skipped bases: <type 'object'>
         ...
 
 
-class VciInitialExportAddInContext(IEquatable, IEngineeringObject, IInternalObjectAccess): # skipped bases: <type 'IEngineeringCompositionOrObject'>, <type 'IInternalBaseAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringInstance'>, <type 'object'>
+class VciInitialExportAddInContext(IEquatable, IEngineeringObject, IInternalObjectAccess): # skipped bases: <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'IEngineeringInstance'>, <type 'IInternalBaseAccess'>, <type 'object'>
     """ Context object used by VCI to provide the user's currently configured workspace to the VCI repository add-in """
     @property
     def CurrentWorkspace(self) -> Workspace:
@@ -353,7 +353,7 @@ class VciRepositoryAddInProvider(IDisposable): # skipped bases: <type 'object'>
         ...
 
 
-class VciSyncExportAddInContext(IEquatable, IEngineeringObject, IInternalObjectAccess): # skipped bases: <type 'IEngineeringCompositionOrObject'>, <type 'IInternalBaseAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringInstance'>, <type 'object'>
+class VciSyncExportAddInContext(IEquatable, IEngineeringObject, IInternalObjectAccess): # skipped bases: <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'IEngineeringInstance'>, <type 'IInternalBaseAccess'>, <type 'object'>
     """ Context object used by VCI to provide the user's currently configured workspace to the VCI repository add-in """
     @property
     def CurrentWorkspace(self) -> Workspace:
@@ -437,7 +437,7 @@ class VciWorkspaceViewAddInProvider(IDisposable): # skipped bases: <type 'object
         ...
 
 
-class WorkspaceFile(IEquatable, IEngineeringObject, IInternalObjectAccess): # skipped bases: <type 'IEngineeringCompositionOrObject'>, <type 'IInternalBaseAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringInstance'>, <type 'object'>
+class WorkspaceFile(IEquatable, IEngineeringObject, IInternalObjectAccess): # skipped bases: <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'IEngineeringInstance'>, <type 'IInternalBaseAccess'>, <type 'object'>
     """ Represents """
     @property
     def FileInfo(self) -> FileInfo:
@@ -491,7 +491,7 @@ class WorkspaceFile(IEquatable, IEngineeringObject, IInternalObjectAccess): # sk
         ...
 
 
-class WorkspaceFolder(IEquatable, IEngineeringObject, IInternalObjectAccess): # skipped bases: <type 'IEngineeringCompositionOrObject'>, <type 'IInternalBaseAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringInstance'>, <type 'object'>
+class WorkspaceFolder(IEquatable, IEngineeringObject, IInternalObjectAccess): # skipped bases: <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'IEngineeringInstance'>, <type 'IInternalBaseAccess'>, <type 'object'>
     """ Represents a subfolder browsable in the workspace view """
     @property
     def DirectoryInfo(self) -> DirectoryInfo:

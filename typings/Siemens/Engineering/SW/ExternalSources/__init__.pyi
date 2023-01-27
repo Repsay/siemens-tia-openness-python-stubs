@@ -1,6 +1,6 @@
 # encoding: utf-8
 # module Siemens.Engineering.SW.ExternalSources calls itself ExternalSources
-# from Siemens.Engineering, Version=17.0.0.0, Culture=neutral, PublicKeyToken=d29ec89bac048f84, Siemens.Engineering.AddIn, Version=17.0.0.0, Culture=neutral, PublicKeyToken=65b871d8372d6a8f
+# from Siemens.Engineering, Version=16.0.0.0, Culture=neutral, PublicKeyToken=d29ec89bac048f84, Siemens.Engineering.AddIn, Version=16.0.0.0, Culture=neutral, PublicKeyToken=65b871d8372d6a8f
 # by generator 1.145
 """ no doc """
 from __future__ import annotations
@@ -24,7 +24,7 @@ from Siemens import IInternalCompositionAccess, IInternalObjectAccess
 # no functions
 # classes
 
-class GenerateBlockOption(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class GenerateBlockOption(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Lists the possible options for block generation from source
 
@@ -34,7 +34,7 @@ class GenerateBlockOption(Enum): # skipped bases: <type 'IComparable'>, <type 'I
     value__ = ...
 
 
-class GenerateOptions(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class GenerateOptions(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Options for source generation
 
@@ -48,7 +48,7 @@ class IGenerateSource: # skipped bases: <type 'object'>
     """ Can generate source. """
     pass
 
-class PlcExternalSource(IEquatable, IEngineeringObject, IMasterCopySource, IInternalObjectAccess): # skipped bases: <type 'IEngineeringCompositionOrObject'>, <type 'IInternalBaseAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringInstance'>, <type 'object'>
+class PlcExternalSource(IEquatable, IEngineeringObject, IMasterCopySource, IInternalObjectAccess): # skipped bases: <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'IEngineeringInstance'>, <type 'IInternalBaseAccess'>, <type 'object'>
     """ Represents a Plc external source """
     @property
     def Name(self) -> str:
@@ -77,7 +77,7 @@ class PlcExternalSource(IEquatable, IEngineeringObject, IMasterCopySource, IInte
         """
         ...
 
-    def GenerateBlocksFromSource(self, *__args:GenerateBlockOption) -> IList:
+    def GenerateBlocksFromSource(self, generateBlockOption:GenerateBlockOption = ...) -> IList:
         """
         GenerateBlocksFromSource(self: PlcExternalSource)
 
@@ -88,26 +88,6 @@ class PlcExternalSource(IEquatable, IEngineeringObject, IMasterCopySource, IInte
             Creates a block or blocks from the current source file object
 
             generateBlockOption: Option to use for block generation from source
-
-            Returns: System.Collections.Generic.IList<Siemens.Engineering.IEngineeringObject>
-
-        GenerateBlocksFromSource(self: PlcExternalSource, groupName: PlcBlockUserGroup, generateBlockOption: GenerateBlockOption) -> IList[IEngineeringObject]
-
-            Creates a block or blocks from the current source file object under block user group
-
-            groupName: block user group information
-
-            generateBlockOption: Option to use for block generation from source
-
-            Returns: System.Collections.Generic.IList<Siemens.Engineering.IEngineeringObject>
-
-        GenerateBlocksFromSource(self: PlcExternalSource, groupName: PlcTypeUserGroup, generateBlockOption: GenerateBlockOption) -> IList[IEngineeringObject]
-
-            Creates a type or types from the current source file object under type user groups
-
-            groupName: type user group information
-
-            generateBlockOption: Option to use for type generation from source
 
             Returns: System.Collections.Generic.IList<Siemens.Engineering.IEngineeringObject>
         """
@@ -137,7 +117,7 @@ class PlcExternalSource(IEquatable, IEngineeringObject, IMasterCopySource, IInte
         ...
 
 
-class PlcExternalSourceComposition(IInternalCompositionAccess, IEngineeringComposition, IEquatable): # skipped bases: <type 'IEngineeringInstance'>, <type 'IEnumerable'>, <type 'IInternalBaseAccess'>, <type 'IInternalCollectionAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'object'>
+class PlcExternalSourceComposition(IInternalCompositionAccess, IEngineeringComposition, IEquatable): # skipped bases: <type 'IEnumerable'>, <type 'IEngineeringInstance'>, <type 'IInternalBaseAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'IInternalCollectionAccess'>, <type 'object'>
     """ Composition of PlcExternalSources """
     @property
     def Parent(self) -> IEngineeringObject:
@@ -215,7 +195,7 @@ class PlcExternalSourceComposition(IInternalCompositionAccess, IEngineeringCompo
         ...
 
 
-class PlcExternalSourceGroup(IEquatable, IEngineeringObject, IInternalObjectAccess): # skipped bases: <type 'IEngineeringCompositionOrObject'>, <type 'IInternalBaseAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringInstance'>, <type 'object'>
+class PlcExternalSourceGroup(IEquatable, IEngineeringObject, IInternalObjectAccess): # skipped bases: <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'IEngineeringInstance'>, <type 'IInternalBaseAccess'>, <type 'object'>
     """ Group containing Plc external sources & Plc external source user groups """
     @property
     def ExternalSources(self) -> PlcExternalSourceComposition:
@@ -278,14 +258,14 @@ class PlcExternalSourceGroup(IEquatable, IEngineeringObject, IInternalObjectAcce
         ...
 
 
-class PlcExternalSourceSystemGroup(PlcExternalSourceGroup): # skipped bases: <type 'IInternalObjectAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'IEquatable[object]'>, <type 'IEngineeringObject'>, <type 'IInternalBaseAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringInstance'>, <type 'object'>
+class PlcExternalSourceSystemGroup(PlcExternalSourceGroup): # skipped bases: <type 'IEngineeringObject'>, <type 'IEngineeringInstance'>, <type 'IInternalBaseAccess'>, <type 'IInternalObjectAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'IEquatable[object]'>, <type 'object'>
     """ System group containing Plc external sources & Plc external source user groups """
     def GenerateSource(self, blocks:IEnumerable, sourceFile:FileInfo, generateOption:GenerateOptions = ...): # ->
         """ GenerateSource(self: PlcExternalSourceSystemGroup, blocks: IEnumerable[IGenerateSource], sourceFile: FileInfo)GenerateSource(self: PlcExternalSourceSystemGroup, blocks: IEnumerable[IGenerateSource], sourceFile: FileInfo, generateOption: GenerateOptions) """
         ...
 
 
-class PlcExternalSourceUserGroup(PlcExternalSourceGroup): # skipped bases: <type 'IInternalObjectAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'IEquatable[object]'>, <type 'IEngineeringObject'>, <type 'IInternalBaseAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringInstance'>, <type 'object'>
+class PlcExternalSourceUserGroup(PlcExternalSourceGroup): # skipped bases: <type 'IEngineeringObject'>, <type 'IEngineeringInstance'>, <type 'IInternalBaseAccess'>, <type 'IInternalObjectAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'IEquatable[object]'>, <type 'object'>
     """ User group containing Plc external sources & Plc external source user groups """
     def Delete(self): # ->
         """
@@ -296,7 +276,7 @@ class PlcExternalSourceUserGroup(PlcExternalSourceGroup): # skipped bases: <type
         ...
 
 
-class PlcExternalSourceUserGroupComposition(IInternalCompositionAccess, IEngineeringComposition, IEquatable): # skipped bases: <type 'IEngineeringInstance'>, <type 'IEnumerable'>, <type 'IInternalBaseAccess'>, <type 'IInternalCollectionAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'object'>
+class PlcExternalSourceUserGroupComposition(IInternalCompositionAccess, IEngineeringComposition, IEquatable): # skipped bases: <type 'IEnumerable'>, <type 'IEngineeringInstance'>, <type 'IInternalBaseAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'IInternalCollectionAccess'>, <type 'object'>
     """ Composition of PlcExternalSourceUserGroups """
     @property
     def Parent(self) -> IEngineeringObject:

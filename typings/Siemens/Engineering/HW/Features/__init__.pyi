@@ -1,6 +1,6 @@
 # encoding: utf-8
 # module Siemens.Engineering.HW.Features calls itself Features
-# from Siemens.Engineering, Version=17.0.0.0, Culture=neutral, PublicKeyToken=d29ec89bac048f84, Siemens.Engineering.AddIn, Version=17.0.0.0, Culture=neutral, PublicKeyToken=65b871d8372d6a8f
+# from Siemens.Engineering, Version=16.0.0.0, Culture=neutral, PublicKeyToken=d29ec89bac048f84, Siemens.Engineering.AddIn, Version=16.0.0.0, Culture=neutral, PublicKeyToken=65b871d8372d6a8f
 # by generator 1.145
 """ no doc """
 from __future__ import annotations
@@ -10,12 +10,11 @@ from Siemens.Engineering import (IEngineeringAssociation, IEngineeringObject,
 from Siemens.Engineering.HW import (AddressAssociation, Device, DeviceItem,
     ForceTableAccessRuleComposition, HardwareResource,
     HwIdentifierAssociation, ISyncDomainParticipant, InterfaceOperatingModes,
-    IoConnectorComposition, IoControllerComposition,
-    MasterSecretConfiguration, MrpDomainComposition, NetType, NodeComposition,
-    OpcUaUserComposition, PcInterfaceAssignmentMode, PlcProtectionAccessLevel,
-    Software, Subnet, SubnetComposition, SyncDomainComposition,
-    TransferAreaComposition, WatchTableAccessRuleComposition,
-    WebserverUserComposition)
+    IoConnectorComposition, IoControllerComposition, MrpDomainComposition,
+    NetType, NodeComposition, OpcUaUserComposition, PcInterfaceAssignmentMode,
+    PlcProtectionAccessLevel, Software, Subnet, SubnetComposition,
+    SyncDomainComposition, TransferAreaComposition,
+    WatchTableAccessRuleComposition, WebserverUserComposition)
 
 from System import Array, Enum, IEquatable
 
@@ -34,7 +33,7 @@ from Siemens import IInternalAssociationAccess, IInternalObjectAccess
 # no functions
 # classes
 
-class HardwareFeature(IEquatable, IEngineeringObject, IInternalObjectAccess): # skipped bases: <type 'IEngineeringCompositionOrObject'>, <type 'IInternalBaseAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringInstance'>, <type 'object'>
+class HardwareFeature(IEquatable, IEngineeringObject, IInternalObjectAccess): # skipped bases: <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'IEngineeringInstance'>, <type 'IInternalBaseAccess'>, <type 'object'>
     """ Base class for all HW related services """
     @property
     def Parent(self) -> IEngineeringObject:
@@ -70,7 +69,7 @@ class HardwareFeature(IEquatable, IEngineeringObject, IInternalObjectAccess): # 
         ...
 
 
-class DeviceItemFeature(HardwareFeature): # skipped bases: <type 'IInternalObjectAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'IEquatable[object]'>, <type 'IEngineeringObject'>, <type 'IInternalBaseAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringInstance'>, <type 'object'>
+class DeviceItemFeature(HardwareFeature): # skipped bases: <type 'IEngineeringObject'>, <type 'IEngineeringInstance'>, <type 'IInternalBaseAccess'>, <type 'IInternalObjectAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'IEquatable[object]'>, <type 'object'>
     """ Base class for all DeviceItem related services """
     @property
     def OwnedBy(self) -> DeviceItem:
@@ -83,7 +82,7 @@ class DeviceItemFeature(HardwareFeature): # skipped bases: <type 'IInternalObjec
 
 
 
-class AddressController(IEngineeringService, DeviceItemFeature): # skipped bases: <type 'IInternalObjectAccess'>, <type 'IEngineeringInstance'>, <type 'IEquatable[object]'>, <type 'IEngineeringObject'>, <type 'IInternalBaseAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'object'>
+class AddressController(IEngineeringService, DeviceItemFeature): # skipped bases: <type 'IEngineeringObject'>, <type 'IEngineeringInstance'>, <type 'IInternalBaseAccess'>, <type 'IInternalObjectAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'IEquatable[object]'>, <type 'object'>
     """ Address controller device """
     @property
     def RegisteredAddresses(self) -> AddressAssociation:
@@ -96,7 +95,7 @@ class AddressController(IEngineeringService, DeviceItemFeature): # skipped bases
 
 
 
-class AddressControllerAssociation(IEquatable, IEngineeringAssociation, IInternalAssociationAccess): # skipped bases: <type 'IInternalBaseAccess'>, <type 'IEnumerable'>, <type 'IInternalCollectionAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringInstance'>, <type 'object'>
+class AddressControllerAssociation(IEquatable, IEngineeringAssociation, IInternalAssociationAccess): # skipped bases: <type 'IInternalCollectionAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEnumerable'>, <type 'IEngineeringInstance'>, <type 'IInternalBaseAccess'>, <type 'object'>
     """ Associated address controllers """
     @property
     def Parent(self) -> IEngineeringObject:
@@ -136,7 +135,7 @@ class AddressControllerAssociation(IEquatable, IEngineeringAssociation, IInterna
         ...
 
 
-class DeviceFeature(HardwareFeature): # skipped bases: <type 'IInternalObjectAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'IEquatable[object]'>, <type 'IEngineeringObject'>, <type 'IInternalBaseAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringInstance'>, <type 'object'>
+class DeviceFeature(HardwareFeature): # skipped bases: <type 'IEngineeringObject'>, <type 'IEngineeringInstance'>, <type 'IInternalBaseAccess'>, <type 'IInternalObjectAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'IEquatable[object]'>, <type 'object'>
     """ Base class for all Device related services """
     @property
     def OwnedBy(self) -> Device:
@@ -149,7 +148,7 @@ class DeviceFeature(HardwareFeature): # skipped bases: <type 'IInternalObjectAcc
 
 
 
-class DisplayProtection(IEngineeringService, DeviceItemFeature): # skipped bases: <type 'IInternalObjectAccess'>, <type 'IEngineeringInstance'>, <type 'IEquatable[object]'>, <type 'IEngineeringObject'>, <type 'IInternalBaseAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'object'>
+class DisplayProtection(IEngineeringService, DeviceItemFeature): # skipped bases: <type 'IEngineeringObject'>, <type 'IEngineeringInstance'>, <type 'IInternalBaseAccess'>, <type 'IInternalObjectAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'IEquatable[object]'>, <type 'object'>
     """ Represents the Display Protection Service """
     def SetPassword(self, password:SecureString): # ->
         """
@@ -162,7 +161,7 @@ class DisplayProtection(IEngineeringService, DeviceItemFeature): # skipped bases
         ...
 
 
-class FrontPanelDisplay(IEngineeringService, DeviceItemFeature): # skipped bases: <type 'IInternalObjectAccess'>, <type 'IEngineeringInstance'>, <type 'IEquatable[object]'>, <type 'IEngineeringObject'>, <type 'IInternalBaseAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'object'>
+class FrontPanelDisplay(IEngineeringService, DeviceItemFeature): # skipped bases: <type 'IEngineeringObject'>, <type 'IEngineeringInstance'>, <type 'IInternalBaseAccess'>, <type 'IInternalObjectAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'IEquatable[object]'>, <type 'object'>
     """ Represents the Front Panel Display """
     @property
     def AdaptLogoActivated(self) -> bool:
@@ -247,11 +246,11 @@ class IGsdObject: # skipped bases: <type 'object'>
 
 
 
-class GsdDevice(IEngineeringService, IGsdObject, DeviceFeature): # skipped bases: <type 'IInternalObjectAccess'>, <type 'IEngineeringInstance'>, <type 'IEquatable[object]'>, <type 'IEngineeringObject'>, <type 'IInternalBaseAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'object'>
+class GsdDevice(IEngineeringService, IGsdObject, DeviceFeature): # skipped bases: <type 'IEngineeringObject'>, <type 'IEngineeringInstance'>, <type 'IInternalBaseAccess'>, <type 'IInternalObjectAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'IEquatable[object]'>, <type 'object'>
     """ Represents a Gsd device """
     pass
 
-class GsdDeviceItem(IEngineeringService, IGsdObject, DeviceItemFeature): # skipped bases: <type 'IInternalObjectAccess'>, <type 'IEngineeringInstance'>, <type 'IEquatable[object]'>, <type 'IEngineeringObject'>, <type 'IInternalBaseAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'object'>
+class GsdDeviceItem(IEngineeringService, IGsdObject, DeviceItemFeature): # skipped bases: <type 'IEngineeringObject'>, <type 'IEngineeringInstance'>, <type 'IInternalBaseAccess'>, <type 'IInternalObjectAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'IEquatable[object]'>, <type 'object'>
     """ Represents a Gsd device item """
     def GetPrmData(self, dsNumber:int, byteOffset:int, length:int) -> Array:
         """
@@ -274,7 +273,7 @@ class GsdDeviceItem(IEngineeringService, IGsdObject, DeviceItemFeature): # skipp
         ...
 
 
-class HwIdentifierController(IEngineeringService, DeviceItemFeature): # skipped bases: <type 'IInternalObjectAccess'>, <type 'IEngineeringInstance'>, <type 'IEquatable[object]'>, <type 'IEngineeringObject'>, <type 'IInternalBaseAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'object'>
+class HwIdentifierController(IEngineeringService, DeviceItemFeature): # skipped bases: <type 'IEngineeringObject'>, <type 'IEngineeringInstance'>, <type 'IInternalBaseAccess'>, <type 'IInternalObjectAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'IEquatable[object]'>, <type 'object'>
     """ Represents a HW identifier controller """
     @property
     def RegisteredHwIdentifiers(self) -> HwIdentifierAssociation:
@@ -287,7 +286,7 @@ class HwIdentifierController(IEngineeringService, DeviceItemFeature): # skipped 
 
 
 
-class HwIdentifierControllerAssociation(IEquatable, IEngineeringAssociation, IInternalAssociationAccess): # skipped bases: <type 'IInternalBaseAccess'>, <type 'IEnumerable'>, <type 'IInternalCollectionAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringInstance'>, <type 'object'>
+class HwIdentifierControllerAssociation(IEquatable, IEngineeringAssociation, IInternalAssociationAccess): # skipped bases: <type 'IInternalCollectionAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEnumerable'>, <type 'IEngineeringInstance'>, <type 'IInternalBaseAccess'>, <type 'object'>
     """ Associated Hw identifier controllers """
     @property
     def Parent(self) -> IEngineeringObject:
@@ -327,7 +326,7 @@ class HwIdentifierControllerAssociation(IEquatable, IEngineeringAssociation, IIn
         ...
 
 
-class ImConnection(IEngineeringService, DeviceItemFeature): # skipped bases: <type 'IInternalObjectAccess'>, <type 'IEngineeringInstance'>, <type 'IEquatable[object]'>, <type 'IEngineeringObject'>, <type 'IInternalBaseAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'object'>
+class ImConnection(IEngineeringService, DeviceItemFeature): # skipped bases: <type 'IEngineeringObject'>, <type 'IEngineeringInstance'>, <type 'IInternalBaseAccess'>, <type 'IInternalObjectAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'IEquatable[object]'>, <type 'object'>
     """ Represents the IM connection """
     def Connect(self, partnerPort:DeviceItem): # ->
         """
@@ -358,7 +357,7 @@ class ImConnection(IEngineeringService, DeviceItemFeature): # skipped bases: <ty
         ...
 
 
-class ModuleDescriptionUpdater(IEngineeringService, DeviceItemFeature): # skipped bases: <type 'IInternalObjectAccess'>, <type 'IEngineeringInstance'>, <type 'IEquatable[object]'>, <type 'IEngineeringObject'>, <type 'IInternalBaseAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'object'>
+class ModuleDescriptionUpdater(IEngineeringService, DeviceItemFeature): # skipped bases: <type 'IEngineeringObject'>, <type 'IEngineeringInstance'>, <type 'IInternalBaseAccess'>, <type 'IInternalObjectAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'IEquatable[object]'>, <type 'object'>
     """ Represents the ModuleDescriptionUpdater """
     @property
     def CanUpdate(self) -> bool:
@@ -381,7 +380,7 @@ class ModuleDescriptionUpdater(IEngineeringService, DeviceItemFeature): # skippe
         ...
 
 
-class SubnetFeature(HardwareFeature): # skipped bases: <type 'IInternalObjectAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'IEquatable[object]'>, <type 'IEngineeringObject'>, <type 'IInternalBaseAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringInstance'>, <type 'object'>
+class SubnetFeature(IEquatable, IEngineeringObject, IInternalObjectAccess): # skipped bases: <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'IEngineeringInstance'>, <type 'IInternalBaseAccess'>, <type 'object'>
     """ Base class for Subnet related services """
     @property
     def OwnedBy(self) -> Subnet:
@@ -392,9 +391,41 @@ class SubnetFeature(HardwareFeature): # skipped bases: <type 'IInternalObjectAcc
         """
         ...
 
+    @property
+    def Parent(self) -> IEngineeringObject:
+        """
+        EOM parent of this object
+
+        Get: Parent(self: SubnetFeature) -> IEngineeringObject
+        """
+        ...
 
 
-class MrpDomainOwner(IEngineeringService, SubnetFeature): # skipped bases: <type 'IInternalObjectAccess'>, <type 'IEngineeringInstance'>, <type 'IEquatable[object]'>, <type 'IEngineeringObject'>, <type 'IInternalBaseAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'object'>
+    def GetHashCode(self) -> int:
+        """
+        GetHashCode(self: SubnetFeature) -> int
+
+            Returns a hash code for this instance.
+
+            Returns: A hash code for this instance, suitable for use in hashing algorithms and data structures like a hash table.
+        """
+        ...
+
+    def ToString(self) -> str:
+        """
+        ToString(self: SubnetFeature) -> str
+
+            Returns a System.String that represents the current System.Object.
+
+            Returns: A System.String that represents the current System.Object.
+        """
+        ...
+
+    def __ne__(self, *args): #cannot find CLR method
+        ...
+
+
+class MrpDomainOwner(IEngineeringService, SubnetFeature): # skipped bases: <type 'IEngineeringObject'>, <type 'IEngineeringInstance'>, <type 'IInternalBaseAccess'>, <type 'IInternalObjectAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'IEquatable[object]'>, <type 'object'>
     """ Represents a Mrp Domain owner """
     @property
     def MrpDomains(self) -> MrpDomainComposition:
@@ -405,18 +436,9 @@ class MrpDomainOwner(IEngineeringService, SubnetFeature): # skipped bases: <type
         """
         ...
 
-    @property
-    def Parent(self) -> IEngineeringObject:
-        """
-        EOM parent of this object
-
-        Get: Parent(self: MrpDomainOwner) -> IEngineeringObject
-        """
-        ...
 
 
-
-class NetworkInterface(ISyncDomainParticipant, IEngineeringService, DeviceItemFeature): # skipped bases: <type 'IInternalObjectAccess'>, <type 'IEngineeringInstance'>, <type 'IEquatable[object]'>, <type 'IEngineeringObject'>, <type 'IInternalBaseAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'object'>
+class NetworkInterface(ISyncDomainParticipant, IEngineeringService, DeviceItemFeature): # skipped bases: <type 'IEngineeringObject'>, <type 'IEngineeringInstance'>, <type 'IInternalBaseAccess'>, <type 'IInternalObjectAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'IEquatable[object]'>, <type 'object'>
     """ Represents a HW interface """
     @property
     def InterfaceOperatingMode(self) -> InterfaceOperatingModes:
@@ -487,7 +509,7 @@ class NetworkInterface(ISyncDomainParticipant, IEngineeringService, DeviceItemFe
 
 
 
-class NetworkInterfaceAssociation(IEquatable, IEngineeringAssociation, IInternalAssociationAccess): # skipped bases: <type 'IInternalBaseAccess'>, <type 'IEnumerable'>, <type 'IInternalCollectionAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringInstance'>, <type 'object'>
+class NetworkInterfaceAssociation(IEquatable, IEngineeringAssociation, IInternalAssociationAccess): # skipped bases: <type 'IInternalCollectionAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEnumerable'>, <type 'IEngineeringInstance'>, <type 'IInternalBaseAccess'>, <type 'object'>
     """ Association of Network Interfaces """
     @property
     def Parent(self) -> IEngineeringObject:
@@ -541,7 +563,7 @@ class NetworkInterfaceAssociation(IEquatable, IEngineeringAssociation, IInternal
         ...
 
 
-class NetworkPort(IEngineeringService, DeviceItemFeature): # skipped bases: <type 'IInternalObjectAccess'>, <type 'IEngineeringInstance'>, <type 'IEquatable[object]'>, <type 'IEngineeringObject'>, <type 'IInternalBaseAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'object'>
+class NetworkPort(IEngineeringService, DeviceItemFeature): # skipped bases: <type 'IEngineeringObject'>, <type 'IEngineeringInstance'>, <type 'IInternalBaseAccess'>, <type 'IInternalObjectAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'IEquatable[object]'>, <type 'object'>
     """ Represents a port on a device item """
     @property
     def ConnectedPorts(self) -> NetworkPortAssociation:
@@ -583,7 +605,7 @@ class NetworkPort(IEngineeringService, DeviceItemFeature): # skipped bases: <typ
         ...
 
 
-class NetworkPortAssociation(IEquatable, IEngineeringAssociation, IInternalAssociationAccess): # skipped bases: <type 'IInternalBaseAccess'>, <type 'IEnumerable'>, <type 'IInternalCollectionAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringInstance'>, <type 'object'>
+class NetworkPortAssociation(IEquatable, IEngineeringAssociation, IInternalAssociationAccess): # skipped bases: <type 'IInternalCollectionAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEnumerable'>, <type 'IEngineeringInstance'>, <type 'IInternalBaseAccess'>, <type 'object'>
     """ Associated ports """
     @property
     def Parent(self) -> IEngineeringObject:
@@ -623,7 +645,7 @@ class NetworkPortAssociation(IEquatable, IEngineeringAssociation, IInternalAssoc
         ...
 
 
-class OpcUaUserManagement(IEngineeringService, DeviceItemFeature): # skipped bases: <type 'IInternalObjectAccess'>, <type 'IEngineeringInstance'>, <type 'IEquatable[object]'>, <type 'IEngineeringObject'>, <type 'IInternalBaseAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'object'>
+class OpcUaUserManagement(IEngineeringService, DeviceItemFeature): # skipped bases: <type 'IEngineeringObject'>, <type 'IEngineeringInstance'>, <type 'IInternalBaseAccess'>, <type 'IInternalObjectAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'IEquatable[object]'>, <type 'object'>
     """ Represents a OpcUa User Management """
     @property
     def OpcUaUsers(self) -> OpcUaUserComposition:
@@ -636,7 +658,7 @@ class OpcUaUserManagement(IEngineeringService, DeviceItemFeature): # skipped bas
 
 
 
-class PcInterfaceAssignment(IEngineeringService, DeviceItemFeature): # skipped bases: <type 'IInternalObjectAccess'>, <type 'IEngineeringInstance'>, <type 'IEquatable[object]'>, <type 'IEngineeringObject'>, <type 'IInternalBaseAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'object'>
+class PcInterfaceAssignment(IEngineeringService, DeviceItemFeature): # skipped bases: <type 'IEngineeringObject'>, <type 'IEngineeringInstance'>, <type 'IInternalBaseAccess'>, <type 'IInternalObjectAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'IEquatable[object]'>, <type 'object'>
     """ Interface Assignment Provider """
     @property
     def HardwareResource(self) -> HardwareResource:
@@ -708,7 +730,7 @@ class PcInterfaceAssignment(IEngineeringService, DeviceItemFeature): # skipped b
         ...
 
 
-class PlcAccessLevelProvider(IEngineeringService, DeviceItemFeature): # skipped bases: <type 'IInternalObjectAccess'>, <type 'IEngineeringInstance'>, <type 'IEquatable[object]'>, <type 'IEngineeringObject'>, <type 'IInternalBaseAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'object'>
+class PlcAccessLevelProvider(IEngineeringService, DeviceItemFeature): # skipped bases: <type 'IEngineeringObject'>, <type 'IEngineeringInstance'>, <type 'IInternalBaseAccess'>, <type 'IInternalObjectAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'IEquatable[object]'>, <type 'object'>
     """ Represents the Access level of the PLC Plus """
     @property
     def PlcProtectionAccessLevel(self) -> PlcProtectionAccessLevel:
@@ -745,64 +767,7 @@ class PlcAccessLevelProvider(IEngineeringService, DeviceItemFeature): # skipped 
         ...
 
 
-class PlcMasterSecretConfigurator(IEngineeringService, DeviceItemFeature): # skipped bases: <type 'IInternalObjectAccess'>, <type 'IEngineeringInstance'>, <type 'IEquatable[object]'>, <type 'IEngineeringObject'>, <type 'IInternalBaseAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'object'>
-    """ Represents the Master Secret configuration for the PLC """
-    @property
-    def MasterSecretConfiguration(self) -> MasterSecretConfiguration:
-        """
-        Indicates the PLC protection type
-
-        Get: MasterSecretConfiguration(self: PlcMasterSecretConfigurator) -> MasterSecretConfiguration
-        """
-        ...
-
-
-    def ChangePassword(self, oldPassword:SecureString, newPassword:SecureString): # ->
-        """
-        ChangePassword(self: PlcMasterSecretConfigurator, oldPassword: SecureString, newPassword: SecureString)
-
-            Change the Master Secret key for the protected PLC
-
-            oldPassword: Specifies the old master secret key
-
-            newPassword: Specifies the new master secret key
-        """
-        ...
-
-    def Protect(self, password:SecureString): # ->
-        """
-        Protect(self: PlcMasterSecretConfigurator, password: SecureString)
-
-            Protect the PLC with the Master Secret key(password)
-
-            password: Specifies the Master Secret key
-        """
-        ...
-
-    def Reset(self): # ->
-        """
-        Reset(self: PlcMasterSecretConfigurator)
-
-            Removes PLC configuration data from the TIA Portal project and the PLC
-        """
-        ...
-
-    def Unprotect(self, password:SecureString = ...): # ->
-        """
-        Unprotect(self: PlcMasterSecretConfigurator)
-
-            Unprotects the PLC configuration data from the TIA Portal project and the PLC
-
-        Unprotect(self: PlcMasterSecretConfigurator, password: SecureString)
-
-            Unprotects the PLC configuration data from the TIA Portal project and the PLC
-
-            password: Specifies the Master Secret password
-        """
-        ...
-
-
-class SoftwareContainer(IEngineeringService, DeviceItemFeature): # skipped bases: <type 'IInternalObjectAccess'>, <type 'IEngineeringInstance'>, <type 'IEquatable[object]'>, <type 'IEngineeringObject'>, <type 'IInternalBaseAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'object'>
+class SoftwareContainer(IEngineeringService, DeviceItemFeature): # skipped bases: <type 'IEngineeringObject'>, <type 'IEngineeringInstance'>, <type 'IInternalBaseAccess'>, <type 'IInternalObjectAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'IEquatable[object]'>, <type 'object'>
     """ Represents a class containing software components """
     @property
     def Software(self) -> Software:
@@ -815,7 +780,7 @@ class SoftwareContainer(IEngineeringService, DeviceItemFeature): # skipped bases
 
 
 
-class SubnetOwner(IEngineeringService, DeviceItemFeature): # skipped bases: <type 'IInternalObjectAccess'>, <type 'IEngineeringInstance'>, <type 'IEquatable[object]'>, <type 'IEngineeringObject'>, <type 'IInternalBaseAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'object'>
+class SubnetOwner(IEngineeringService, DeviceItemFeature): # skipped bases: <type 'IEngineeringObject'>, <type 'IEngineeringInstance'>, <type 'IInternalBaseAccess'>, <type 'IInternalObjectAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'IEquatable[object]'>, <type 'object'>
     """ Represents a Subnet owner """
     @property
     def Subnets(self) -> SubnetComposition:
@@ -828,17 +793,8 @@ class SubnetOwner(IEngineeringService, DeviceItemFeature): # skipped bases: <typ
 
 
 
-class SyncDomainOwner(IEngineeringService, SubnetFeature): # skipped bases: <type 'IInternalObjectAccess'>, <type 'IEngineeringInstance'>, <type 'IEquatable[object]'>, <type 'IEngineeringObject'>, <type 'IInternalBaseAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'object'>
+class SyncDomainOwner(IEngineeringService, SubnetFeature): # skipped bases: <type 'IEngineeringObject'>, <type 'IEngineeringInstance'>, <type 'IInternalBaseAccess'>, <type 'IInternalObjectAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'IEquatable[object]'>, <type 'object'>
     """ Represents a Sync Domain owner """
-    @property
-    def Parent(self) -> IEngineeringObject:
-        """
-        EOM parent of this object
-
-        Get: Parent(self: SyncDomainOwner) -> IEngineeringObject
-        """
-        ...
-
     @property
     def SyncDomains(self) -> SyncDomainComposition:
         """
@@ -850,7 +806,7 @@ class SyncDomainOwner(IEngineeringService, SubnetFeature): # skipped bases: <typ
 
 
 
-class WatchAndForceTableAccessManager(IEngineeringService, DeviceItemFeature): # skipped bases: <type 'IInternalObjectAccess'>, <type 'IEngineeringInstance'>, <type 'IEquatable[object]'>, <type 'IEngineeringObject'>, <type 'IInternalBaseAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'object'>
+class WatchAndForceTableAccessManager(IEngineeringService, DeviceItemFeature): # skipped bases: <type 'IEngineeringObject'>, <type 'IEngineeringInstance'>, <type 'IInternalBaseAccess'>, <type 'IInternalObjectAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'IEquatable[object]'>, <type 'object'>
     """ Represents a Webserver watch And forceTables """
     @property
     def ForcetableAccessRules(self) -> ForceTableAccessRuleComposition:
@@ -872,7 +828,7 @@ class WatchAndForceTableAccessManager(IEngineeringService, DeviceItemFeature): #
 
 
 
-class WebDBGenerateOptions(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class WebDBGenerateOptions(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     The list of possible generate options for actions
 
@@ -882,7 +838,7 @@ class WebDBGenerateOptions(Enum): # skipped bases: <type 'IComparable'>, <type '
     value__ = ...
 
 
-class WebserverUserDefinedPages(IEngineeringService, DeviceItemFeature): # skipped bases: <type 'IInternalObjectAccess'>, <type 'IEngineeringInstance'>, <type 'IEquatable[object]'>, <type 'IEngineeringObject'>, <type 'IInternalBaseAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'object'>
+class WebserverUserDefinedPages(IEngineeringService, DeviceItemFeature): # skipped bases: <type 'IEngineeringObject'>, <type 'IEngineeringInstance'>, <type 'IInternalBaseAccess'>, <type 'IInternalObjectAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'IEquatable[object]'>, <type 'object'>
     """ Represents the Web Server user defined pages service """
     def GenerateBlocks(self, *__args:WebDBGenerateOptions) -> IList:
         """
@@ -911,7 +867,7 @@ class WebserverUserDefinedPages(IEngineeringService, DeviceItemFeature): # skipp
         ...
 
 
-class WebserverUserManagement(IEngineeringService, DeviceItemFeature): # skipped bases: <type 'IInternalObjectAccess'>, <type 'IEngineeringInstance'>, <type 'IEquatable[object]'>, <type 'IEngineeringObject'>, <type 'IInternalBaseAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'object'>
+class WebserverUserManagement(IEngineeringService, DeviceItemFeature): # skipped bases: <type 'IEngineeringObject'>, <type 'IEngineeringInstance'>, <type 'IInternalBaseAccess'>, <type 'IInternalObjectAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'IEquatable[object]'>, <type 'object'>
     """ Represent the webserver usermanagement """
     @property
     def WebserverUsers(self) -> WebserverUserComposition:

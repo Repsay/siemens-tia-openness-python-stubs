@@ -1,11 +1,11 @@
 # encoding: utf-8
 # module Siemens.Engineering.SiVArc calls itself SiVArc
-# from Siemens.Engineering, Version=17.0.0.0, Culture=neutral, PublicKeyToken=d29ec89bac048f84, Siemens.Engineering.AddIn, Version=17.0.0.0, Culture=neutral, PublicKeyToken=65b871d8372d6a8f
+# from Siemens.Engineering, Version=16.0.0.0, Culture=neutral, PublicKeyToken=d29ec89bac048f84, Siemens.Engineering.AddIn, Version=16.0.0.0, Culture=neutral, PublicKeyToken=65b871d8372d6a8f
 # by generator 1.145
 """ no doc """
 from __future__ import annotations
 from Siemens.Engineering import (IEngineeringComposition, IEngineeringObject,
-    IEngineeringService, MultilingualText)
+    IEngineeringService)
 
 from Siemens.Engineering.Library.MasterCopies import MasterCopy
 
@@ -22,7 +22,7 @@ from Siemens import IInternalCompositionAccess, IInternalObjectAccess
 # no functions
 # classes
 
-class AlarmRule(IEquatable, IEngineeringObject, IInternalObjectAccess): # skipped bases: <type 'IEngineeringCompositionOrObject'>, <type 'IInternalBaseAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringInstance'>, <type 'object'>
+class AlarmRule(IEquatable, IEngineeringObject, IInternalObjectAccess): # skipped bases: <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'IEngineeringInstance'>, <type 'IInternalBaseAccess'>, <type 'object'>
     """ Represents alarm rule object """
     @property
     def AlarmLibraryItem(self) -> ISivarcLibraryMasterCopy:
@@ -143,7 +143,7 @@ class AlarmRule(IEquatable, IEngineeringObject, IInternalObjectAccess): # skippe
         ...
 
 
-class AlarmRuleComposition(IInternalCompositionAccess, IEngineeringComposition, IEquatable): # skipped bases: <type 'IEngineeringInstance'>, <type 'IEnumerable'>, <type 'IInternalBaseAccess'>, <type 'IInternalCollectionAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'object'>
+class AlarmRuleComposition(IInternalCompositionAccess, IEngineeringComposition, IEquatable): # skipped bases: <type 'IEnumerable'>, <type 'IEngineeringInstance'>, <type 'IInternalBaseAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'IInternalCollectionAccess'>, <type 'object'>
     """ Collection of immediate alarm rules """
     @property
     def Parent(self) -> IEngineeringObject:
@@ -217,7 +217,7 @@ class AlarmRuleComposition(IInternalCompositionAccess, IEngineeringComposition, 
         ...
 
 
-class AlarmRuleGroup(IEquatable, IEngineeringObject, IInternalObjectAccess): # skipped bases: <type 'IEngineeringCompositionOrObject'>, <type 'IInternalBaseAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringInstance'>, <type 'object'>
+class AlarmRuleGroup(IEquatable, IEngineeringObject, IInternalObjectAccess): # skipped bases: <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'IEngineeringInstance'>, <type 'IInternalBaseAccess'>, <type 'object'>
     """ Represents alarm rule group """
     @property
     def Comment(self) -> str:
@@ -334,7 +334,7 @@ class AlarmRuleGroup(IEquatable, IEngineeringObject, IInternalObjectAccess): # s
         ...
 
 
-class AlarmRuleGroupComposition(IInternalCompositionAccess, IEngineeringComposition, IEquatable): # skipped bases: <type 'IEngineeringInstance'>, <type 'IEnumerable'>, <type 'IInternalBaseAccess'>, <type 'IInternalCollectionAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'object'>
+class AlarmRuleGroupComposition(IInternalCompositionAccess, IEngineeringComposition, IEquatable): # skipped bases: <type 'IEnumerable'>, <type 'IEngineeringInstance'>, <type 'IInternalBaseAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'IInternalCollectionAccess'>, <type 'object'>
     """ Collection of immediate alarm rule groups """
     @property
     def Parent(self) -> IEngineeringObject:
@@ -408,7 +408,7 @@ class AlarmRuleGroupComposition(IInternalCompositionAccess, IEngineeringComposit
         ...
 
 
-class AlarmRules(IEquatable, IEngineeringObject, IInternalObjectAccess): # skipped bases: <type 'IEngineeringCompositionOrObject'>, <type 'IInternalBaseAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringInstance'>, <type 'object'>
+class AlarmRules(IEquatable, IEngineeringObject, IInternalObjectAccess): # skipped bases: <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'IEngineeringInstance'>, <type 'IInternalBaseAccess'>, <type 'object'>
     """ Represents alarm rules editor """
     @property
     def Groups(self) -> AlarmRuleGroupComposition:
@@ -462,7 +462,7 @@ class AlarmRules(IEquatable, IEngineeringObject, IInternalObjectAccess): # skipp
         ...
 
 
-class ConditionOperator(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class ConditionOperator(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Condition Operator for rule objects
 
@@ -478,7 +478,7 @@ class ConditionOperator(Enum): # skipped bases: <type 'IComparable'>, <type 'IFo
     value__ = ...
 
 
-class CopyRule(IEquatable, IEngineeringObject, IInternalObjectAccess): # skipped bases: <type 'IEngineeringCompositionOrObject'>, <type 'IInternalBaseAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringInstance'>, <type 'object'>
+class CopyRule(IEquatable, IEngineeringObject, IInternalObjectAccess): # skipped bases: <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'IEngineeringInstance'>, <type 'IInternalBaseAccess'>, <type 'object'>
     """ Represents copy rule object """
     @property
     def Comment(self) -> str:
@@ -492,28 +492,6 @@ class CopyRule(IEquatable, IEngineeringObject, IInternalObjectAccess): # skipped
         ...
 
     @property
-    def Condition(self) -> str:
-        """
-        Copy rule condition
-
-        Get: Condition(self: CopyRule) -> str
-
-        Set: Condition(self: CopyRule) = value
-        """
-        ...
-
-    @property
-    def ConditionOperator(self) -> ConditionOperator:
-        """
-        Condition Operator for rule object
-
-        Get: ConditionOperator(self: CopyRule) -> ConditionOperator
-
-        Set: ConditionOperator(self: CopyRule) = value
-        """
-        ...
-
-    @property
     def Enabled(self) -> bool:
         """
         Checks whether copy rule is selected
@@ -521,17 +499,6 @@ class CopyRule(IEquatable, IEngineeringObject, IInternalObjectAccess): # skipped
         Get: Enabled(self: CopyRule) -> bool
 
         Set: Enabled(self: CopyRule) = value
-        """
-        ...
-
-    @property
-    def FolderStructure(self) -> str:
-        """
-        Name of generated folder structure
-
-        Get: FolderStructure(self: CopyRule) -> str
-
-        Set: FolderStructure(self: CopyRule) = value
         """
         ...
 
@@ -599,7 +566,7 @@ class CopyRule(IEquatable, IEngineeringObject, IInternalObjectAccess): # skipped
         ...
 
 
-class CopyRuleComposition(IInternalCompositionAccess, IEngineeringComposition, IEquatable): # skipped bases: <type 'IEngineeringInstance'>, <type 'IEnumerable'>, <type 'IInternalBaseAccess'>, <type 'IInternalCollectionAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'object'>
+class CopyRuleComposition(IInternalCompositionAccess, IEngineeringComposition, IEquatable): # skipped bases: <type 'IEnumerable'>, <type 'IEngineeringInstance'>, <type 'IInternalBaseAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'IInternalCollectionAccess'>, <type 'object'>
     """ Collection of immediate copy rules """
     @property
     def Parent(self) -> IEngineeringObject:
@@ -673,7 +640,7 @@ class CopyRuleComposition(IInternalCompositionAccess, IEngineeringComposition, I
         ...
 
 
-class CopyRuleGroup(IEquatable, IEngineeringObject, IInternalObjectAccess): # skipped bases: <type 'IEngineeringCompositionOrObject'>, <type 'IInternalBaseAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringInstance'>, <type 'object'>
+class CopyRuleGroup(IEquatable, IEngineeringObject, IInternalObjectAccess): # skipped bases: <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'IEngineeringInstance'>, <type 'IInternalBaseAccess'>, <type 'object'>
     """ Represents copy rule group """
     @property
     def Comment(self) -> str:
@@ -683,28 +650,6 @@ class CopyRuleGroup(IEquatable, IEngineeringObject, IInternalObjectAccess): # sk
         Get: Comment(self: CopyRuleGroup) -> str
 
         Set: Comment(self: CopyRuleGroup) = value
-        """
-        ...
-
-    @property
-    def Condition(self) -> str:
-        """
-        Copy rule group condition
-
-        Get: Condition(self: CopyRuleGroup) -> str
-
-        Set: Condition(self: CopyRuleGroup) = value
-        """
-        ...
-
-    @property
-    def ConditionOperator(self) -> ConditionOperator:
-        """
-        Condition Operator for rule object
-
-        Get: ConditionOperator(self: CopyRuleGroup) -> ConditionOperator
-
-        Set: ConditionOperator(self: CopyRuleGroup) = value
         """
         ...
 
@@ -790,7 +735,7 @@ class CopyRuleGroup(IEquatable, IEngineeringObject, IInternalObjectAccess): # sk
         ...
 
 
-class CopyRuleGroupComposition(IInternalCompositionAccess, IEngineeringComposition, IEquatable): # skipped bases: <type 'IEngineeringInstance'>, <type 'IEnumerable'>, <type 'IInternalBaseAccess'>, <type 'IInternalCollectionAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'object'>
+class CopyRuleGroupComposition(IInternalCompositionAccess, IEngineeringComposition, IEquatable): # skipped bases: <type 'IEnumerable'>, <type 'IEngineeringInstance'>, <type 'IInternalBaseAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'IInternalCollectionAccess'>, <type 'object'>
     """ Collection of immediate copy rule groups """
     @property
     def Parent(self) -> IEngineeringObject:
@@ -864,7 +809,7 @@ class CopyRuleGroupComposition(IInternalCompositionAccess, IEngineeringCompositi
         ...
 
 
-class CopyRules(IEquatable, IEngineeringObject, IInternalObjectAccess): # skipped bases: <type 'IEngineeringCompositionOrObject'>, <type 'IInternalBaseAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringInstance'>, <type 'object'>
+class CopyRules(IEquatable, IEngineeringObject, IInternalObjectAccess): # skipped bases: <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'IEngineeringInstance'>, <type 'IInternalBaseAccess'>, <type 'object'>
     """ Represents copy rules editor """
     @property
     def Groups(self) -> CopyRuleGroupComposition:
@@ -918,7 +863,7 @@ class CopyRules(IEquatable, IEngineeringObject, IInternalObjectAccess): # skippe
         ...
 
 
-class CreateOptions(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class CreateOptions(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Indicates the kind of create options
 
@@ -929,7 +874,7 @@ class CreateOptions(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormat
     value__ = ...
 
 
-class GenerationOptions(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class GenerationOptions(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Indicates the kind of generation options
 
@@ -953,7 +898,7 @@ class ISivarcProgramBlockSource: # skipped bases: <type 'object'>
     """ Sivarc interface implemented by code block, library master copy and type """
     pass
 
-class MessageType(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class MessageType(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Message type
 
@@ -965,7 +910,7 @@ class MessageType(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormatta
     Warning: MessageType = ...
 
 
-class ScreenRule(IEquatable, IEngineeringObject, IInternalObjectAccess): # skipped bases: <type 'IEngineeringCompositionOrObject'>, <type 'IInternalBaseAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringInstance'>, <type 'object'>
+class ScreenRule(IEquatable, IEngineeringObject, IInternalObjectAccess): # skipped bases: <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'IEngineeringInstance'>, <type 'IInternalBaseAccess'>, <type 'object'>
     """ Represents screen rule object """
     @property
     def Comment(self) -> str:
@@ -1019,17 +964,6 @@ class ScreenRule(IEquatable, IEngineeringObject, IInternalObjectAccess): # skipp
         Get: LayoutField(self: ScreenRule) -> str
 
         Set: LayoutField(self: ScreenRule) = value
-        """
-        ...
-
-    @property
-    def LibraryScreen(self) -> ISivarcLibraryItem:
-        """
-        Screen master copy or screen type
-
-        Get: LibraryScreen(self: ScreenRule) -> ISivarcLibraryItem
-
-        Set: LibraryScreen(self: ScreenRule) = value
         """
         ...
 
@@ -1129,7 +1063,7 @@ class ScreenRule(IEquatable, IEngineeringObject, IInternalObjectAccess): # skipp
         ...
 
 
-class ScreenRuleComposition(IInternalCompositionAccess, IEngineeringComposition, IEquatable): # skipped bases: <type 'IEngineeringInstance'>, <type 'IEnumerable'>, <type 'IInternalBaseAccess'>, <type 'IInternalCollectionAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'object'>
+class ScreenRuleComposition(IInternalCompositionAccess, IEngineeringComposition, IEquatable): # skipped bases: <type 'IEnumerable'>, <type 'IEngineeringInstance'>, <type 'IInternalBaseAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'IInternalCollectionAccess'>, <type 'object'>
     """ Collection of immediate screen rules """
     @property
     def Parent(self) -> IEngineeringObject:
@@ -1203,7 +1137,7 @@ class ScreenRuleComposition(IInternalCompositionAccess, IEngineeringComposition,
         ...
 
 
-class ScreenRuleGroup(IEquatable, IEngineeringObject, IInternalObjectAccess): # skipped bases: <type 'IEngineeringCompositionOrObject'>, <type 'IInternalBaseAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringInstance'>, <type 'object'>
+class ScreenRuleGroup(IEquatable, IEngineeringObject, IInternalObjectAccess): # skipped bases: <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'IEngineeringInstance'>, <type 'IInternalBaseAccess'>, <type 'object'>
     """ Represents screen rule group """
     @property
     def Comment(self) -> str:
@@ -1320,7 +1254,7 @@ class ScreenRuleGroup(IEquatable, IEngineeringObject, IInternalObjectAccess): # 
         ...
 
 
-class ScreenRuleGroupComposition(IInternalCompositionAccess, IEngineeringComposition, IEquatable): # skipped bases: <type 'IEngineeringInstance'>, <type 'IEnumerable'>, <type 'IInternalBaseAccess'>, <type 'IInternalCollectionAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'object'>
+class ScreenRuleGroupComposition(IInternalCompositionAccess, IEngineeringComposition, IEquatable): # skipped bases: <type 'IEnumerable'>, <type 'IEngineeringInstance'>, <type 'IInternalBaseAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'IInternalCollectionAccess'>, <type 'object'>
     """ Collection of immediate screen rule groups """
     @property
     def Parent(self) -> IEngineeringObject:
@@ -1394,7 +1328,7 @@ class ScreenRuleGroupComposition(IInternalCompositionAccess, IEngineeringComposi
         ...
 
 
-class ScreenRules(IEquatable, IEngineeringObject, IInternalObjectAccess): # skipped bases: <type 'IEngineeringCompositionOrObject'>, <type 'IInternalBaseAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringInstance'>, <type 'object'>
+class ScreenRules(IEquatable, IEngineeringObject, IInternalObjectAccess): # skipped bases: <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'IEngineeringInstance'>, <type 'IInternalBaseAccess'>, <type 'object'>
     """ Represents screen rules editor """
     @property
     def Groups(self) -> ScreenRuleGroupComposition:
@@ -1448,7 +1382,7 @@ class ScreenRules(IEquatable, IEngineeringObject, IInternalObjectAccess): # skip
         ...
 
 
-class Sivarc(IEquatable, IEngineeringObject, IEngineeringService, IInternalObjectAccess): # skipped bases: <type 'IEngineeringCompositionOrObject'>, <type 'IInternalBaseAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringInstance'>, <type 'object'>
+class Sivarc(IEquatable, IEngineeringObject, IEngineeringService, IInternalObjectAccess): # skipped bases: <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'IEngineeringInstance'>, <type 'IInternalBaseAccess'>, <type 'object'>
     """ Represents SiVArc folder """
     @property
     def AlarmRules(self) -> AlarmRules:
@@ -1537,61 +1471,7 @@ class Sivarc(IEquatable, IEngineeringObject, IEngineeringService, IInternalObjec
         ...
 
 
-class SivarcDataProvider(IEquatable, IEngineeringObject, IEngineeringService, IInternalObjectAccess): # skipped bases: <type 'IEngineeringCompositionOrObject'>, <type 'IInternalBaseAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringInstance'>, <type 'object'>
-    """ Sivarc data provider for blocks and compile units """
-    @property
-    def Parent(self) -> IEngineeringObject:
-        """
-        EOM parent of this object
-
-        Get: Parent(self: SivarcDataProvider) -> IEngineeringObject
-        """
-        ...
-
-    @property
-    def TagDefinitions(self) -> TagDefinitionComposition:
-        """
-        Collection of user defined tag definitions
-
-        Get: TagDefinitions(self: SivarcDataProvider) -> TagDefinitionComposition
-        """
-        ...
-
-    @property
-    def TextDefinitions(self) -> TextDefinitionComposition:
-        """
-        Collection of user defined text definitions
-
-        Get: TextDefinitions(self: SivarcDataProvider) -> TextDefinitionComposition
-        """
-        ...
-
-
-    def GetHashCode(self) -> int:
-        """
-        GetHashCode(self: SivarcDataProvider) -> int
-
-            Returns a hash code for this instance.
-
-            Returns: A hash code for this instance, suitable for use in hashing algorithms and data structures like a hash table.
-        """
-        ...
-
-    def ToString(self) -> str:
-        """
-        ToString(self: SivarcDataProvider) -> str
-
-            Returns a System.String that represents the current System.Object.
-
-            Returns: A System.String that represents the current System.Object.
-        """
-        ...
-
-    def __ne__(self, *args): #cannot find CLR method
-        ...
-
-
-class SivarcFeedbackMessage(IEquatable, IEngineeringObject, IInternalObjectAccess): # skipped bases: <type 'IEngineeringCompositionOrObject'>, <type 'IInternalBaseAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringInstance'>, <type 'object'>
+class SivarcFeedbackMessage(IEquatable, IEngineeringObject, IInternalObjectAccess): # skipped bases: <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'IEngineeringInstance'>, <type 'IInternalBaseAccess'>, <type 'object'>
     """ Generation result message """
     @property
     def DateTime(self) -> DateTime:
@@ -1690,7 +1570,7 @@ class SivarcFeedbackMessage(IEquatable, IEngineeringObject, IInternalObjectAcces
         ...
 
 
-class SivarcFeedbackMessageComposition(IInternalCompositionAccess, IEngineeringComposition, IEquatable): # skipped bases: <type 'IEngineeringInstance'>, <type 'IEnumerable'>, <type 'IInternalBaseAccess'>, <type 'IInternalCollectionAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'object'>
+class SivarcFeedbackMessageComposition(IInternalCompositionAccess, IEngineeringComposition, IEquatable): # skipped bases: <type 'IEnumerable'>, <type 'IEngineeringInstance'>, <type 'IInternalBaseAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'IInternalCollectionAccess'>, <type 'object'>
     """ Composition of GeneratedResultMessages """
     @property
     def Parent(self) -> IEngineeringObject:
@@ -1730,7 +1610,7 @@ class SivarcFeedbackMessageComposition(IInternalCompositionAccess, IEngineeringC
         ...
 
 
-class SivarcGenerationResult(IEquatable, IEngineeringObject, IInternalObjectAccess): # skipped bases: <type 'IEngineeringCompositionOrObject'>, <type 'IInternalBaseAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringInstance'>, <type 'object'>
+class SivarcGenerationResult(IEquatable, IEngineeringObject, IInternalObjectAccess): # skipped bases: <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'IEngineeringInstance'>, <type 'IInternalBaseAccess'>, <type 'object'>
     """ Sivarc generation result """
     @property
     def ErrorCount(self) -> int:
@@ -1802,136 +1682,7 @@ class SivarcGenerationResult(IEquatable, IEngineeringObject, IInternalObjectAcce
         ...
 
 
-class TagDefinition(IEquatable, IEngineeringObject, IInternalObjectAccess): # skipped bases: <type 'IEngineeringCompositionOrObject'>, <type 'IInternalBaseAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringInstance'>, <type 'object'>
-    """ User defined tag definition """
-    @property
-    def Comment(self) -> str:
-        """
-        Tag definition comment
-
-        Get: Comment(self: TagDefinition) -> str
-
-        Set: Comment(self: TagDefinition) = value
-        """
-        ...
-
-    @property
-    def Name(self) -> str:
-        """
-        Tag definition name
-
-        Get: Name(self: TagDefinition) -> str
-
-        Set: Name(self: TagDefinition) = value
-        """
-        ...
-
-    @property
-    def Parent(self) -> IEngineeringObject:
-        """
-        EOM parent of this object
-
-        Get: Parent(self: TagDefinition) -> IEngineeringObject
-        """
-        ...
-
-    @property
-    def Value(self) -> str:
-        """
-        Tag definition value
-
-        Get: Value(self: TagDefinition) -> str
-
-        Set: Value(self: TagDefinition) = value
-        """
-        ...
-
-
-    def Delete(self): # ->
-        """
-        Delete(self: TagDefinition)
-
-            Deletes this instance.
-        """
-        ...
-
-    def GetHashCode(self) -> int:
-        """
-        GetHashCode(self: TagDefinition) -> int
-
-            Returns a hash code for this instance.
-
-            Returns: A hash code for this instance, suitable for use in hashing algorithms and data structures like a hash table.
-        """
-        ...
-
-    def ToString(self) -> str:
-        """
-        ToString(self: TagDefinition) -> str
-
-            Returns a System.String that represents the current System.Object.
-
-            Returns: A System.String that represents the current System.Object.
-        """
-        ...
-
-    def __ne__(self, *args): #cannot find CLR method
-        ...
-
-
-class TagDefinitionComposition(IInternalCompositionAccess, IEngineeringComposition, IEquatable): # skipped bases: <type 'IEngineeringInstance'>, <type 'IEnumerable'>, <type 'IInternalBaseAccess'>, <type 'IInternalCollectionAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'object'>
-    """ Collection of user defined tag definitions """
-    @property
-    def Parent(self) -> IEngineeringObject:
-        """
-        Gets the parent.
-
-        Get: Parent(self: TagDefinitionComposition) -> IEngineeringObject
-        """
-        ...
-
-
-    def Find(self, name:str) -> TagDefinition:
-        """
-        Find(self: TagDefinitionComposition, name: str) -> TagDefinition
-
-            Find the tag definition for provided name
-
-            name: Tag definition name
-
-            Returns: Siemens.Engineering.SiVArc.TagDefinition
-        """
-        ...
-
-    def GetHashCode(self) -> int:
-        """
-        GetHashCode(self: TagDefinitionComposition) -> int
-
-            Returns a hash code for this instance.
-
-            Returns: A hash code for this instance, suitable for use in hashing algorithms and data structures like a hash table.
-        """
-        ...
-
-    def ToString(self) -> str:
-        """
-        ToString(self: TagDefinitionComposition) -> str
-
-            Returns a System.String that represents the current System.Object.
-
-            Returns: A System.String that represents the current System.Object.
-        """
-        ...
-
-    def __contains__(self, *args): #cannot find CLR method
-        """ __contains__[TagDefinition](enumerable: IEnumerable[TagDefinition], value: TagDefinition) -> bool """
-        ...
-
-    def __ne__(self, *args): #cannot find CLR method
-        ...
-
-
-class TagRule(IEquatable, IEngineeringObject, IInternalObjectAccess): # skipped bases: <type 'IEngineeringCompositionOrObject'>, <type 'IInternalBaseAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringInstance'>, <type 'object'>
+class TagRule(IEquatable, IEngineeringObject, IInternalObjectAccess): # skipped bases: <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'IEngineeringInstance'>, <type 'IInternalBaseAccess'>, <type 'object'>
     """ Represents tag rule object """
     @property
     def Comment(self) -> str:
@@ -2052,7 +1803,7 @@ class TagRule(IEquatable, IEngineeringObject, IInternalObjectAccess): # skipped 
         ...
 
 
-class TagRuleComposition(IInternalCompositionAccess, IEngineeringComposition, IEquatable): # skipped bases: <type 'IEngineeringInstance'>, <type 'IEnumerable'>, <type 'IInternalBaseAccess'>, <type 'IInternalCollectionAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'object'>
+class TagRuleComposition(IInternalCompositionAccess, IEngineeringComposition, IEquatable): # skipped bases: <type 'IEnumerable'>, <type 'IEngineeringInstance'>, <type 'IInternalBaseAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'IInternalCollectionAccess'>, <type 'object'>
     """ Collection of immediate tag rules """
     @property
     def Parent(self) -> IEngineeringObject:
@@ -2126,7 +1877,7 @@ class TagRuleComposition(IInternalCompositionAccess, IEngineeringComposition, IE
         ...
 
 
-class TagRuleGroup(IEquatable, IEngineeringObject, IInternalObjectAccess): # skipped bases: <type 'IEngineeringCompositionOrObject'>, <type 'IInternalBaseAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringInstance'>, <type 'object'>
+class TagRuleGroup(IEquatable, IEngineeringObject, IInternalObjectAccess): # skipped bases: <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'IEngineeringInstance'>, <type 'IInternalBaseAccess'>, <type 'object'>
     """ Represents tag rule group """
     @property
     def Comment(self) -> str:
@@ -2243,7 +1994,7 @@ class TagRuleGroup(IEquatable, IEngineeringObject, IInternalObjectAccess): # ski
         ...
 
 
-class TagRuleGroupComposition(IInternalCompositionAccess, IEngineeringComposition, IEquatable): # skipped bases: <type 'IEngineeringInstance'>, <type 'IEnumerable'>, <type 'IInternalBaseAccess'>, <type 'IInternalCollectionAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'object'>
+class TagRuleGroupComposition(IInternalCompositionAccess, IEngineeringComposition, IEquatable): # skipped bases: <type 'IEnumerable'>, <type 'IEngineeringInstance'>, <type 'IInternalBaseAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'IInternalCollectionAccess'>, <type 'object'>
     """ Collection of immediate tag rule groups """
     @property
     def Parent(self) -> IEngineeringObject:
@@ -2317,7 +2068,7 @@ class TagRuleGroupComposition(IInternalCompositionAccess, IEngineeringCompositio
         ...
 
 
-class TagRules(IEquatable, IEngineeringObject, IInternalObjectAccess): # skipped bases: <type 'IEngineeringCompositionOrObject'>, <type 'IInternalBaseAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringInstance'>, <type 'object'>
+class TagRules(IEquatable, IEngineeringObject, IInternalObjectAccess): # skipped bases: <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'IEngineeringInstance'>, <type 'IInternalBaseAccess'>, <type 'object'>
     """ Represents tag rules editor """
     @property
     def Groups(self) -> TagRuleGroupComposition:
@@ -2371,145 +2122,7 @@ class TagRules(IEquatable, IEngineeringObject, IInternalObjectAccess): # skipped
         ...
 
 
-class TextDefinition(IEquatable, IEngineeringObject, IInternalObjectAccess): # skipped bases: <type 'IEngineeringCompositionOrObject'>, <type 'IInternalBaseAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringInstance'>, <type 'object'>
-    """ User defined text definition """
-    @property
-    def Comment(self) -> str:
-        """
-        Text definition comment
-
-        Get: Comment(self: TextDefinition) -> str
-
-        Set: Comment(self: TextDefinition) = value
-        """
-        ...
-
-    @property
-    def Expression(self) -> str:
-        """
-        Text definition expression
-
-        Get: Expression(self: TextDefinition) -> str
-
-        Set: Expression(self: TextDefinition) = value
-        """
-        ...
-
-    @property
-    def Name(self) -> str:
-        """
-        Text definition name
-
-        Get: Name(self: TextDefinition) -> str
-
-        Set: Name(self: TextDefinition) = value
-        """
-        ...
-
-    @property
-    def Parent(self) -> IEngineeringObject:
-        """
-        EOM parent of this object
-
-        Get: Parent(self: TextDefinition) -> IEngineeringObject
-        """
-        ...
-
-    @property
-    def Text(self) -> MultilingualText:
-        """
-        Text definition text
-
-        Get: Text(self: TextDefinition) -> MultilingualText
-        """
-        ...
-
-
-    def Delete(self): # ->
-        """
-        Delete(self: TextDefinition)
-
-            Deletes this instance.
-        """
-        ...
-
-    def GetHashCode(self) -> int:
-        """
-        GetHashCode(self: TextDefinition) -> int
-
-            Returns a hash code for this instance.
-
-            Returns: A hash code for this instance, suitable for use in hashing algorithms and data structures like a hash table.
-        """
-        ...
-
-    def ToString(self) -> str:
-        """
-        ToString(self: TextDefinition) -> str
-
-            Returns a System.String that represents the current System.Object.
-
-            Returns: A System.String that represents the current System.Object.
-        """
-        ...
-
-    def __ne__(self, *args): #cannot find CLR method
-        ...
-
-
-class TextDefinitionComposition(IInternalCompositionAccess, IEngineeringComposition, IEquatable): # skipped bases: <type 'IEngineeringInstance'>, <type 'IEnumerable'>, <type 'IInternalBaseAccess'>, <type 'IInternalCollectionAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'object'>
-    """ Collection of user defined text definitions """
-    @property
-    def Parent(self) -> IEngineeringObject:
-        """
-        Gets the parent.
-
-        Get: Parent(self: TextDefinitionComposition) -> IEngineeringObject
-        """
-        ...
-
-
-    def Find(self, name:str) -> TextDefinition:
-        """
-        Find(self: TextDefinitionComposition, name: str) -> TextDefinition
-
-            Find the text definition for provided name
-
-            name: Text definition name
-
-            Returns: Siemens.Engineering.SiVArc.TextDefinition
-        """
-        ...
-
-    def GetHashCode(self) -> int:
-        """
-        GetHashCode(self: TextDefinitionComposition) -> int
-
-            Returns a hash code for this instance.
-
-            Returns: A hash code for this instance, suitable for use in hashing algorithms and data structures like a hash table.
-        """
-        ...
-
-    def ToString(self) -> str:
-        """
-        ToString(self: TextDefinitionComposition) -> str
-
-            Returns a System.String that represents the current System.Object.
-
-            Returns: A System.String that represents the current System.Object.
-        """
-        ...
-
-    def __contains__(self, *args): #cannot find CLR method
-        """ __contains__[TextDefinition](enumerable: IEnumerable[TextDefinition], value: TextDefinition) -> bool """
-        ...
-
-    def __ne__(self, *args): #cannot find CLR method
-        ...
-
-
-class TextlistRule(IEquatable, IEngineeringObject, IInternalObjectAccess): # skipped bases: <type 'IEngineeringCompositionOrObject'>, <type 'IInternalBaseAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringInstance'>, <type 'object'>
+class TextlistRule(IEquatable, IEngineeringObject, IInternalObjectAccess): # skipped bases: <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'IEngineeringInstance'>, <type 'IInternalBaseAccess'>, <type 'object'>
     """ Represents textlist rule object """
     @property
     def Comment(self) -> str:
@@ -2630,7 +2243,7 @@ class TextlistRule(IEquatable, IEngineeringObject, IInternalObjectAccess): # ski
         ...
 
 
-class TextlistRuleComposition(IInternalCompositionAccess, IEngineeringComposition, IEquatable): # skipped bases: <type 'IEngineeringInstance'>, <type 'IEnumerable'>, <type 'IInternalBaseAccess'>, <type 'IInternalCollectionAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'object'>
+class TextlistRuleComposition(IInternalCompositionAccess, IEngineeringComposition, IEquatable): # skipped bases: <type 'IEnumerable'>, <type 'IEngineeringInstance'>, <type 'IInternalBaseAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'IInternalCollectionAccess'>, <type 'object'>
     """ Collection of immediate textlist rules """
     @property
     def Parent(self) -> IEngineeringObject:
@@ -2704,7 +2317,7 @@ class TextlistRuleComposition(IInternalCompositionAccess, IEngineeringCompositio
         ...
 
 
-class TextlistRuleGroup(IEquatable, IEngineeringObject, IInternalObjectAccess): # skipped bases: <type 'IEngineeringCompositionOrObject'>, <type 'IInternalBaseAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringInstance'>, <type 'object'>
+class TextlistRuleGroup(IEquatable, IEngineeringObject, IInternalObjectAccess): # skipped bases: <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'IEngineeringInstance'>, <type 'IInternalBaseAccess'>, <type 'object'>
     """ Represents textlist rule group """
     @property
     def Comment(self) -> str:
@@ -2821,7 +2434,7 @@ class TextlistRuleGroup(IEquatable, IEngineeringObject, IInternalObjectAccess): 
         ...
 
 
-class TextlistRuleGroupComposition(IInternalCompositionAccess, IEngineeringComposition, IEquatable): # skipped bases: <type 'IEngineeringInstance'>, <type 'IEnumerable'>, <type 'IInternalBaseAccess'>, <type 'IInternalCollectionAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'object'>
+class TextlistRuleGroupComposition(IInternalCompositionAccess, IEngineeringComposition, IEquatable): # skipped bases: <type 'IEnumerable'>, <type 'IEngineeringInstance'>, <type 'IInternalBaseAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'IInternalCollectionAccess'>, <type 'object'>
     """ Collection of immediate textlist rule groups """
     @property
     def Parent(self) -> IEngineeringObject:
@@ -2895,7 +2508,7 @@ class TextlistRuleGroupComposition(IInternalCompositionAccess, IEngineeringCompo
         ...
 
 
-class TextlistRules(IEquatable, IEngineeringObject, IInternalObjectAccess): # skipped bases: <type 'IEngineeringCompositionOrObject'>, <type 'IInternalBaseAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringInstance'>, <type 'object'>
+class TextlistRules(IEquatable, IEngineeringObject, IInternalObjectAccess): # skipped bases: <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'IEngineeringInstance'>, <type 'IInternalBaseAccess'>, <type 'object'>
     """ Represents textlist rules editor """
     @property
     def Groups(self) -> TextlistRuleGroupComposition:

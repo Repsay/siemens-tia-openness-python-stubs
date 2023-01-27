@@ -1,6 +1,6 @@
 # encoding: utf-8
 # module Siemens.Engineering.Download.Configurations calls itself Configurations
-# from Siemens.Engineering, Version=17.0.0.0, Culture=neutral, PublicKeyToken=d29ec89bac048f84, Siemens.Engineering.AddIn, Version=17.0.0.0, Culture=neutral, PublicKeyToken=65b871d8372d6a8f
+# from Siemens.Engineering, Version=16.0.0.0, Culture=neutral, PublicKeyToken=d29ec89bac048f84, Siemens.Engineering.AddIn, Version=16.0.0.0, Culture=neutral, PublicKeyToken=65b871d8372d6a8f
 # by generator 1.145
 """ no doc """
 from __future__ import annotations
@@ -19,7 +19,7 @@ from Siemens import IInternalObjectAccess
 # no functions
 # classes
 
-class DownloadConfiguration(IEquatable, IEngineeringObject, IInternalObjectAccess): # skipped bases: <type 'IEngineeringCompositionOrObject'>, <type 'IInternalBaseAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringInstance'>, <type 'object'>
+class DownloadConfiguration(IEquatable, IEngineeringObject, IInternalObjectAccess): # skipped bases: <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'IEngineeringInstance'>, <type 'IInternalBaseAccess'>, <type 'object'>
     """ Donwload configuration base class. """
     @property
     def Message(self) -> str:
@@ -64,11 +64,11 @@ class DownloadConfiguration(IEquatable, IEngineeringObject, IInternalObjectAcces
         ...
 
 
-class DownloadSelectionConfiguration(DownloadConfiguration): # skipped bases: <type 'IInternalObjectAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'IEquatable[object]'>, <type 'IEngineeringObject'>, <type 'IInternalBaseAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringInstance'>, <type 'object'>
+class DownloadSelectionConfiguration(DownloadConfiguration): # skipped bases: <type 'IEngineeringObject'>, <type 'IEngineeringInstance'>, <type 'IInternalBaseAccess'>, <type 'IInternalObjectAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'IEquatable[object]'>, <type 'object'>
     """ Download configuration that provides choices. """
     pass
 
-class ActiveTestCanBeAborted(DownloadSelectionConfiguration): # skipped bases: <type 'IInternalObjectAccess'>, <type 'IEngineeringInstance'>, <type 'IEquatable[object]'>, <type 'IEngineeringObject'>, <type 'IInternalBaseAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'object'>
+class ActiveTestCanBeAborted(DownloadSelectionConfiguration): # skipped bases: <type 'IEngineeringObject'>, <type 'IEngineeringInstance'>, <type 'IInternalBaseAccess'>, <type 'IInternalObjectAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'IEquatable[object]'>, <type 'object'>
     """ Active test and commissioning functions could be canceled by loading to the device. """
     @property
     def CurrentSelection(self) -> ActiveTestCanBeAbortedSelections:
@@ -83,7 +83,7 @@ class ActiveTestCanBeAborted(DownloadSelectionConfiguration): # skipped bases: <
 
 
 
-class ActiveTestCanBeAbortedSelections(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class ActiveTestCanBeAbortedSelections(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Available selections for ActiveTestCanBeAborted configuration
 
@@ -94,7 +94,7 @@ class ActiveTestCanBeAbortedSelections(Enum): # skipped bases: <type 'IComparabl
     value__ = ...
 
 
-class ActiveTestCanPreventDownload(DownloadSelectionConfiguration): # skipped bases: <type 'IInternalObjectAccess'>, <type 'IEngineeringInstance'>, <type 'IEquatable[object]'>, <type 'IEngineeringObject'>, <type 'IInternalBaseAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'object'>
+class ActiveTestCanPreventDownload(DownloadSelectionConfiguration): # skipped bases: <type 'IEngineeringObject'>, <type 'IEngineeringInstance'>, <type 'IInternalBaseAccess'>, <type 'IInternalObjectAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'IEquatable[object]'>, <type 'object'>
     """ Active test and commissioning functions could prevent loading to the device. """
     @property
     def CurrentSelection(self) -> ActiveTestCanPreventDownloadSelections:
@@ -109,7 +109,7 @@ class ActiveTestCanPreventDownload(DownloadSelectionConfiguration): # skipped ba
 
 
 
-class ActiveTestCanPreventDownloadSelections(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class ActiveTestCanPreventDownloadSelections(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Available selections for ActiveTestCanPreventDownload configuration
 
@@ -120,7 +120,7 @@ class ActiveTestCanPreventDownloadSelections(Enum): # skipped bases: <type 'ICom
     value__ = ...
 
 
-class AlarmTextLibrariesDownload(DownloadSelectionConfiguration): # skipped bases: <type 'IInternalObjectAccess'>, <type 'IEngineeringInstance'>, <type 'IEquatable[object]'>, <type 'IEngineeringObject'>, <type 'IInternalBaseAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'object'>
+class AlarmTextLibrariesDownload(DownloadSelectionConfiguration): # skipped bases: <type 'IEngineeringObject'>, <type 'IEngineeringInstance'>, <type 'IInternalBaseAccess'>, <type 'IInternalObjectAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'IEquatable[object]'>, <type 'object'>
     """ Download all alarm texts and text list texts """
     @property
     def CurrentSelection(self) -> AlarmTextLibrariesDownloadSelections:
@@ -135,7 +135,7 @@ class AlarmTextLibrariesDownload(DownloadSelectionConfiguration): # skipped base
 
 
 
-class AlarmTextLibrariesDownloadSelections(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class AlarmTextLibrariesDownloadSelections(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Available selections for AlarmTextLibrariesDownload configuration
 
@@ -146,7 +146,7 @@ class AlarmTextLibrariesDownloadSelections(Enum): # skipped bases: <type 'ICompa
     value__ = ...
 
 
-class AllBlocksDownload(DownloadSelectionConfiguration): # skipped bases: <type 'IInternalObjectAccess'>, <type 'IEngineeringInstance'>, <type 'IEquatable[object]'>, <type 'IEngineeringObject'>, <type 'IInternalBaseAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'object'>
+class AllBlocksDownload(DownloadSelectionConfiguration): # skipped bases: <type 'IEngineeringObject'>, <type 'IEngineeringInstance'>, <type 'IInternalBaseAccess'>, <type 'IInternalObjectAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'IEquatable[object]'>, <type 'object'>
     """ Download software to device """
     @property
     def CurrentSelection(self) -> AllBlocksDownloadSelections:
@@ -161,7 +161,7 @@ class AllBlocksDownload(DownloadSelectionConfiguration): # skipped bases: <type 
 
 
 
-class AllBlocksDownloadSelections(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class AllBlocksDownloadSelections(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Available selections for AllBlocksDownload configuration
 
@@ -171,18 +171,8 @@ class AllBlocksDownloadSelections(Enum): # skipped bases: <type 'IComparable'>, 
     value__ = ...
 
 
-class DownloadPasswordConfiguration(DownloadConfiguration): # skipped bases: <type 'IInternalObjectAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'IEquatable[object]'>, <type 'IEngineeringObject'>, <type 'IInternalBaseAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringInstance'>, <type 'object'>
+class DownloadPasswordConfiguration(DownloadConfiguration): # skipped bases: <type 'IEngineeringObject'>, <type 'IEngineeringInstance'>, <type 'IInternalBaseAccess'>, <type 'IInternalObjectAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'IEquatable[object]'>, <type 'object'>
     """ Download password configuration. """
-    @property
-    def IsSecureCommunication(self) -> bool:
-        """
-        Is secure communication used.
-
-        Get: IsSecureCommunication(self: DownloadPasswordConfiguration) -> bool
-        """
-        ...
-
-
     def SetPassword(self, password:SecureString): # ->
         """
         SetPassword(self: DownloadPasswordConfiguration, password: SecureString)
@@ -194,11 +184,11 @@ class DownloadPasswordConfiguration(DownloadConfiguration): # skipped bases: <ty
         ...
 
 
-class BlockBindingPassword(DownloadPasswordConfiguration): # skipped bases: <type 'IInternalObjectAccess'>, <type 'IEngineeringInstance'>, <type 'IEquatable[object]'>, <type 'IEngineeringObject'>, <type 'IInternalBaseAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'object'>
+class BlockBindingPassword(DownloadPasswordConfiguration): # skipped bases: <type 'IEngineeringObject'>, <type 'IEngineeringInstance'>, <type 'IInternalBaseAccess'>, <type 'IInternalObjectAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'IEquatable[object]'>, <type 'object'>
     """ Block binding password configuration """
     pass
 
-class DownloadCheckConfiguration(DownloadConfiguration): # skipped bases: <type 'IInternalObjectAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'IEquatable[object]'>, <type 'IEngineeringObject'>, <type 'IInternalBaseAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringInstance'>, <type 'object'>
+class DownloadCheckConfiguration(DownloadConfiguration): # skipped bases: <type 'IEngineeringObject'>, <type 'IEngineeringInstance'>, <type 'IInternalBaseAccess'>, <type 'IInternalObjectAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'IEquatable[object]'>, <type 'object'>
     """ Download configuration that can be checked/unchecked. """
     @property
     def Checked(self) -> bool:
@@ -213,11 +203,11 @@ class DownloadCheckConfiguration(DownloadConfiguration): # skipped bases: <type 
 
 
 
-class CheckBeforeDownload(DownloadCheckConfiguration): # skipped bases: <type 'IInternalObjectAccess'>, <type 'IEngineeringInstance'>, <type 'IEquatable[object]'>, <type 'IEngineeringObject'>, <type 'IInternalBaseAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'object'>
+class CheckBeforeDownload(DownloadCheckConfiguration): # skipped bases: <type 'IEngineeringObject'>, <type 'IEngineeringInstance'>, <type 'IInternalBaseAccess'>, <type 'IInternalObjectAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'IEquatable[object]'>, <type 'object'>
     """ Checks before downloading to the device. """
     pass
 
-class ConsistentBlocksDownload(DownloadSelectionConfiguration): # skipped bases: <type 'IInternalObjectAccess'>, <type 'IEngineeringInstance'>, <type 'IEquatable[object]'>, <type 'IEngineeringObject'>, <type 'IInternalBaseAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'object'>
+class ConsistentBlocksDownload(DownloadSelectionConfiguration): # skipped bases: <type 'IEngineeringObject'>, <type 'IEngineeringInstance'>, <type 'IInternalBaseAccess'>, <type 'IInternalObjectAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'IEquatable[object]'>, <type 'object'>
     """ Download software to device """
     @property
     def CurrentSelection(self) -> ConsistentBlocksDownloadSelections:
@@ -232,7 +222,7 @@ class ConsistentBlocksDownload(DownloadSelectionConfiguration): # skipped bases:
 
 
 
-class ConsistentBlocksDownloadSelections(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class ConsistentBlocksDownloadSelections(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Available selections for ConsistentBlocksDownload configuration
 
@@ -242,33 +232,7 @@ class ConsistentBlocksDownloadSelections(Enum): # skipped bases: <type 'ICompara
     value__ = ...
 
 
-class DataBlockReinitialization(DownloadSelectionConfiguration): # skipped bases: <type 'IInternalObjectAccess'>, <type 'IEngineeringInstance'>, <type 'IEquatable[object]'>, <type 'IEngineeringObject'>, <type 'IInternalBaseAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'object'>
-    """ Different memory reserves in the online block and offline block are preventing "Download without reinitialization". """
-    @property
-    def CurrentSelection(self) -> DataBlockReinitializationSelections:
-        """
-        Current selection for this configuration.
-
-        Get: CurrentSelection(self: DataBlockReinitialization) -> DataBlockReinitializationSelections
-
-        Set: CurrentSelection(self: DataBlockReinitialization) = value
-        """
-        ...
-
-
-
-class DataBlockReinitializationSelections(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
-    """
-    Available selections for DataBlockReinitialization configuration
-
-    enum DataBlockReinitializationSelections, values: NoAction (1), StopPlcAndReinitialize (0)
-    """
-    NoAction: DataBlockReinitializationSelections = ...
-    StopPlcAndReinitialize: DataBlockReinitializationSelections = ...
-    value__ = ...
-
-
-class DifferentTargetConfiguration(DownloadSelectionConfiguration): # skipped bases: <type 'IInternalObjectAccess'>, <type 'IEngineeringInstance'>, <type 'IEquatable[object]'>, <type 'IEngineeringObject'>, <type 'IInternalBaseAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'object'>
+class DifferentTargetConfiguration(DownloadSelectionConfiguration): # skipped bases: <type 'IEngineeringObject'>, <type 'IEngineeringInstance'>, <type 'IInternalBaseAccess'>, <type 'IInternalObjectAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'IEquatable[object]'>, <type 'object'>
     """ Differences between configured and target modules (online) """
     @property
     def CurrentSelection(self) -> DifferentTargetConfigurationSelections:
@@ -283,7 +247,7 @@ class DifferentTargetConfiguration(DownloadSelectionConfiguration): # skipped ba
 
 
 
-class DifferentTargetConfigurationSelections(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class DifferentTargetConfigurationSelections(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Available selections for DifferentTargetConfiguration configuration
 
@@ -294,15 +258,11 @@ class DifferentTargetConfigurationSelections(Enum): # skipped bases: <type 'ICom
     value__ = ...
 
 
-class DowngradeTargetDevice(DownloadCheckConfiguration): # skipped bases: <type 'IInternalObjectAccess'>, <type 'IEngineeringInstance'>, <type 'IEquatable[object]'>, <type 'IEngineeringObject'>, <type 'IInternalBaseAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'object'>
+class DowngradeTargetDevice(DownloadCheckConfiguration): # skipped bases: <type 'IEngineeringObject'>, <type 'IEngineeringInstance'>, <type 'IInternalBaseAccess'>, <type 'IInternalObjectAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'IEquatable[object]'>, <type 'object'>
     """ Different data formats in online and offline project. """
     pass
 
-class DownloadCertificate(DownloadSelectionConfiguration): # skipped bases: <type 'IInternalObjectAccess'>, <type 'IEngineeringInstance'>, <type 'IEquatable[object]'>, <type 'IEngineeringObject'>, <type 'IInternalBaseAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'object'>
-    """ Based on this option dynamic certificates will be deleted """
-    pass
-
-class ExpandDownload(DownloadSelectionConfiguration): # skipped bases: <type 'IInternalObjectAccess'>, <type 'IEngineeringInstance'>, <type 'IEquatable[object]'>, <type 'IEngineeringObject'>, <type 'IInternalBaseAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'object'>
+class ExpandDownload(DownloadSelectionConfiguration): # skipped bases: <type 'IEngineeringObject'>, <type 'IEngineeringInstance'>, <type 'IInternalBaseAccess'>, <type 'IInternalObjectAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'IEquatable[object]'>, <type 'object'>
     """ The download must be expanded beyond your selection. """
     @property
     def CurrentSelection(self) -> ExpandDownloadSelections:
@@ -317,7 +277,7 @@ class ExpandDownload(DownloadSelectionConfiguration): # skipped bases: <type 'II
 
 
 
-class ExpandDownloadSelections(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class ExpandDownloadSelections(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Available selections for ExpandDownload configuration
 
@@ -328,11 +288,11 @@ class ExpandDownloadSelections(Enum): # skipped bases: <type 'IComparable'>, <ty
     value__ = ...
 
 
-class FitHmiComponents(DownloadCheckConfiguration): # skipped bases: <type 'IInternalObjectAccess'>, <type 'IEngineeringInstance'>, <type 'IEquatable[object]'>, <type 'IEngineeringObject'>, <type 'IInternalBaseAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'object'>
+class FitHmiComponents(DownloadCheckConfiguration): # skipped bases: <type 'IEngineeringObject'>, <type 'IEngineeringInstance'>, <type 'IInternalBaseAccess'>, <type 'IInternalObjectAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'IEquatable[object]'>, <type 'object'>
     """ Components with a different version are installed on the target device. """
     pass
 
-class InitializeMemory(DownloadSelectionConfiguration): # skipped bases: <type 'IInternalObjectAccess'>, <type 'IEngineeringInstance'>, <type 'IEquatable[object]'>, <type 'IEngineeringObject'>, <type 'IInternalBaseAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'object'>
+class InitializeMemory(DownloadSelectionConfiguration): # skipped bases: <type 'IEngineeringObject'>, <type 'IEngineeringInstance'>, <type 'IInternalBaseAccess'>, <type 'IInternalObjectAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'IEquatable[object]'>, <type 'object'>
     """ The modules will initialize memory. """
     @property
     def CurrentSelection(self) -> InitializeMemorySelections:
@@ -347,7 +307,7 @@ class InitializeMemory(DownloadSelectionConfiguration): # skipped bases: <type '
 
 
 
-class InitializeMemorySelections(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class InitializeMemorySelections(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Available selections for InitializeMemory configuration
 
@@ -358,7 +318,7 @@ class InitializeMemorySelections(Enum): # skipped bases: <type 'IComparable'>, <
     value__ = ...
 
 
-class LoadIdentificationData(DownloadSelectionConfiguration): # skipped bases: <type 'IInternalObjectAccess'>, <type 'IEngineeringInstance'>, <type 'IEquatable[object]'>, <type 'IEngineeringObject'>, <type 'IInternalBaseAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'object'>
+class LoadIdentificationData(DownloadSelectionConfiguration): # skipped bases: <type 'IEngineeringObject'>, <type 'IEngineeringInstance'>, <type 'IInternalBaseAccess'>, <type 'IInternalObjectAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'IEquatable[object]'>, <type 'object'>
     """ Load identification data to the PROFINET IO devices and their modules. """
     @property
     def CurrentSelection(self) -> LoadIdentificationDataSelections:
@@ -373,7 +333,7 @@ class LoadIdentificationData(DownloadSelectionConfiguration): # skipped bases: <
 
 
 
-class LoadIdentificationDataSelections(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class LoadIdentificationDataSelections(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Available selections for LoadIdentificationData configuration
 
@@ -384,19 +344,19 @@ class LoadIdentificationDataSelections(Enum): # skipped bases: <type 'IComparabl
     value__ = ...
 
 
-class ModuleReadAccessPassword(DownloadPasswordConfiguration): # skipped bases: <type 'IInternalObjectAccess'>, <type 'IEngineeringInstance'>, <type 'IEquatable[object]'>, <type 'IEngineeringObject'>, <type 'IInternalBaseAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'object'>
+class ModuleReadAccessPassword(DownloadPasswordConfiguration): # skipped bases: <type 'IEngineeringObject'>, <type 'IEngineeringInstance'>, <type 'IInternalBaseAccess'>, <type 'IInternalObjectAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'IEquatable[object]'>, <type 'object'>
     """ Enter a password to gain read access to the module. """
     pass
 
-class ModuleWriteAccessPassword(DownloadPasswordConfiguration): # skipped bases: <type 'IInternalObjectAccess'>, <type 'IEngineeringInstance'>, <type 'IEquatable[object]'>, <type 'IEngineeringObject'>, <type 'IInternalBaseAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'object'>
+class ModuleWriteAccessPassword(DownloadPasswordConfiguration): # skipped bases: <type 'IEngineeringObject'>, <type 'IEngineeringInstance'>, <type 'IInternalBaseAccess'>, <type 'IInternalObjectAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'IEquatable[object]'>, <type 'object'>
     """ Enter a password to gain write access to the module """
     pass
 
-class OverwriteHmiData(DownloadCheckConfiguration): # skipped bases: <type 'IInternalObjectAccess'>, <type 'IEngineeringInstance'>, <type 'IEquatable[object]'>, <type 'IEngineeringObject'>, <type 'IInternalBaseAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'object'>
+class OverwriteHmiData(DownloadCheckConfiguration): # skipped bases: <type 'IEngineeringObject'>, <type 'IEngineeringInstance'>, <type 'IInternalBaseAccess'>, <type 'IInternalObjectAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'IEquatable[object]'>, <type 'object'>
     """ Overwrite if object exists online? """
     pass
 
-class OverwriteSystemData(DownloadSelectionConfiguration): # skipped bases: <type 'IInternalObjectAccess'>, <type 'IEngineeringInstance'>, <type 'IEquatable[object]'>, <type 'IEngineeringObject'>, <type 'IInternalBaseAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'object'>
+class OverwriteSystemData(DownloadSelectionConfiguration): # skipped bases: <type 'IEngineeringObject'>, <type 'IEngineeringInstance'>, <type 'IInternalBaseAccess'>, <type 'IInternalObjectAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'IEquatable[object]'>, <type 'object'>
     """ Delete and replace system data in target """
     @property
     def CurrentSelection(self) -> OverwriteSystemDataSelections:
@@ -411,7 +371,7 @@ class OverwriteSystemData(DownloadSelectionConfiguration): # skipped bases: <typ
 
 
 
-class OverwriteSystemDataSelections(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class OverwriteSystemDataSelections(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Available selections for OverwriteSystemData configuration
 
@@ -422,15 +382,11 @@ class OverwriteSystemDataSelections(Enum): # skipped bases: <type 'IComparable'>
     value__ = ...
 
 
-class OverwriteTargetLanguages(DownloadCheckConfiguration): # skipped bases: <type 'IInternalObjectAccess'>, <type 'IEngineeringInstance'>, <type 'IEquatable[object]'>, <type 'IEngineeringObject'>, <type 'IInternalBaseAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'object'>
+class OverwriteTargetLanguages(DownloadCheckConfiguration): # skipped bases: <type 'IEngineeringObject'>, <type 'IEngineeringInstance'>, <type 'IInternalBaseAccess'>, <type 'IInternalObjectAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'IEquatable[object]'>, <type 'object'>
     """ There are differences between the settings for the project and the settings for PLC programming. """
     pass
 
-class PlcMasterSecretPassword(DownloadPasswordConfiguration): # skipped bases: <type 'IInternalObjectAccess'>, <type 'IEngineeringInstance'>, <type 'IEquatable[object]'>, <type 'IEngineeringObject'>, <type 'IInternalBaseAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'object'>
-    """ Set the PlcMasterSecret password for download """
-    pass
-
-class ProtectionLevelChanged(DownloadSelectionConfiguration): # skipped bases: <type 'IInternalObjectAccess'>, <type 'IEngineeringInstance'>, <type 'IEquatable[object]'>, <type 'IEngineeringObject'>, <type 'IInternalBaseAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'object'>
+class ProtectionLevelChanged(DownloadSelectionConfiguration): # skipped bases: <type 'IEngineeringObject'>, <type 'IEngineeringInstance'>, <type 'IInternalBaseAccess'>, <type 'IInternalObjectAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'IEquatable[object]'>, <type 'object'>
     """ CPU protection will be changed to a lower level. """
     @property
     def CurrentSelection(self) -> ProtectionLevelChangedSelections:
@@ -445,7 +401,7 @@ class ProtectionLevelChanged(DownloadSelectionConfiguration): # skipped bases: <
 
 
 
-class ProtectionLevelChangedSelections(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class ProtectionLevelChangedSelections(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Available selections for ProtectionLevelChanged configuration
 
@@ -456,7 +412,7 @@ class ProtectionLevelChangedSelections(Enum): # skipped bases: <type 'IComparabl
     value__ = ...
 
 
-class ResetModule(DownloadSelectionConfiguration): # skipped bases: <type 'IInternalObjectAccess'>, <type 'IEngineeringInstance'>, <type 'IEquatable[object]'>, <type 'IEngineeringObject'>, <type 'IInternalBaseAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'object'>
+class ResetModule(DownloadSelectionConfiguration): # skipped bases: <type 'IEngineeringObject'>, <type 'IEngineeringInstance'>, <type 'IInternalBaseAccess'>, <type 'IInternalObjectAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'IEquatable[object]'>, <type 'object'>
     """ Reset module """
     @property
     def CurrentSelection(self) -> ResetModuleSelections:
@@ -471,7 +427,7 @@ class ResetModule(DownloadSelectionConfiguration): # skipped bases: <type 'IInte
 
 
 
-class ResetModuleSelections(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class ResetModuleSelections(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Available selections for ResetModule configuration
 
@@ -482,7 +438,7 @@ class ResetModuleSelections(Enum): # skipped bases: <type 'IComparable'>, <type 
     value__ = ...
 
 
-class StartBackupModules(DownloadSelectionConfiguration): # skipped bases: <type 'IInternalObjectAccess'>, <type 'IEngineeringInstance'>, <type 'IEquatable[object]'>, <type 'IEngineeringObject'>, <type 'IInternalBaseAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'object'>
+class StartBackupModules(DownloadSelectionConfiguration): # skipped bases: <type 'IEngineeringObject'>, <type 'IEngineeringInstance'>, <type 'IInternalBaseAccess'>, <type 'IInternalObjectAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'IEquatable[object]'>, <type 'object'>
     """ Start modules after downloading to device. """
     @property
     def CurrentSelection(self) -> StartBackupModulesSelections:
@@ -497,7 +453,7 @@ class StartBackupModules(DownloadSelectionConfiguration): # skipped bases: <type
 
 
 
-class StartBackupModulesSelections(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class StartBackupModulesSelections(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Available selections for StartBackupModules configuration
 
@@ -509,7 +465,7 @@ class StartBackupModulesSelections(Enum): # skipped bases: <type 'IComparable'>,
     value__ = ...
 
 
-class StartModules(DownloadSelectionConfiguration): # skipped bases: <type 'IInternalObjectAccess'>, <type 'IEngineeringInstance'>, <type 'IEquatable[object]'>, <type 'IEngineeringObject'>, <type 'IInternalBaseAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'object'>
+class StartModules(DownloadSelectionConfiguration): # skipped bases: <type 'IEngineeringObject'>, <type 'IEngineeringInstance'>, <type 'IInternalBaseAccess'>, <type 'IInternalObjectAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'IEquatable[object]'>, <type 'object'>
     """ Start modules after downloading to device. """
     @property
     def CurrentSelection(self) -> StartModulesSelections:
@@ -524,7 +480,7 @@ class StartModules(DownloadSelectionConfiguration): # skipped bases: <type 'IInt
 
 
 
-class StartModulesSelections(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class StartModulesSelections(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Available selections for StartModules configuration
 
@@ -535,7 +491,7 @@ class StartModulesSelections(Enum): # skipped bases: <type 'IComparable'>, <type
     value__ = ...
 
 
-class StopHSystem(DownloadSelectionConfiguration): # skipped bases: <type 'IInternalObjectAccess'>, <type 'IEngineeringInstance'>, <type 'IEquatable[object]'>, <type 'IEngineeringObject'>, <type 'IInternalBaseAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'object'>
+class StopHSystem(DownloadSelectionConfiguration): # skipped bases: <type 'IEngineeringObject'>, <type 'IEngineeringInstance'>, <type 'IInternalBaseAccess'>, <type 'IInternalObjectAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'IEquatable[object]'>, <type 'object'>
     """ The modules are stopped for downloading to device. """
     @property
     def CurrentSelection(self) -> StopHSystemSelections:
@@ -550,7 +506,7 @@ class StopHSystem(DownloadSelectionConfiguration): # skipped bases: <type 'IInte
 
 
 
-class StopHSystemOrModule(DownloadSelectionConfiguration): # skipped bases: <type 'IInternalObjectAccess'>, <type 'IEngineeringInstance'>, <type 'IEquatable[object]'>, <type 'IEngineeringObject'>, <type 'IInternalBaseAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'object'>
+class StopHSystemOrModule(DownloadSelectionConfiguration): # skipped bases: <type 'IEngineeringObject'>, <type 'IEngineeringInstance'>, <type 'IInternalBaseAccess'>, <type 'IInternalObjectAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'IEquatable[object]'>, <type 'object'>
     """ The modules are stopped for downloading to device. """
     @property
     def CurrentSelection(self) -> StopHSystemOrModuleSelections:
@@ -565,7 +521,7 @@ class StopHSystemOrModule(DownloadSelectionConfiguration): # skipped bases: <typ
 
 
 
-class StopHSystemOrModuleSelections(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class StopHSystemOrModuleSelections(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Available selections for StopHSystemOrModule configuration
 
@@ -577,7 +533,7 @@ class StopHSystemOrModuleSelections(Enum): # skipped bases: <type 'IComparable'>
     value__ = ...
 
 
-class StopHSystemSelections(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class StopHSystemSelections(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Available selections for StopHSystem configuration
 
@@ -588,7 +544,7 @@ class StopHSystemSelections(Enum): # skipped bases: <type 'IComparable'>, <type 
     value__ = ...
 
 
-class StopModules(DownloadSelectionConfiguration): # skipped bases: <type 'IInternalObjectAccess'>, <type 'IEngineeringInstance'>, <type 'IEquatable[object]'>, <type 'IEngineeringObject'>, <type 'IInternalBaseAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'object'>
+class StopModules(DownloadSelectionConfiguration): # skipped bases: <type 'IEngineeringObject'>, <type 'IEngineeringInstance'>, <type 'IInternalBaseAccess'>, <type 'IInternalObjectAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'IEquatable[object]'>, <type 'object'>
     """ The modules are stopped for downloading to device. """
     @property
     def CurrentSelection(self) -> StopModulesSelections:
@@ -603,7 +559,7 @@ class StopModules(DownloadSelectionConfiguration): # skipped bases: <type 'IInte
 
 
 
-class StopModulesSelections(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class StopModulesSelections(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Available selections for StopModules configuration
 
@@ -614,7 +570,7 @@ class StopModulesSelections(Enum): # skipped bases: <type 'IComparable'>, <type 
     value__ = ...
 
 
-class SwitchBackupToPrimary(DownloadSelectionConfiguration): # skipped bases: <type 'IInternalObjectAccess'>, <type 'IEngineeringInstance'>, <type 'IEquatable[object]'>, <type 'IEngineeringObject'>, <type 'IInternalBaseAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'object'>
+class SwitchBackupToPrimary(DownloadSelectionConfiguration): # skipped bases: <type 'IEngineeringObject'>, <type 'IEngineeringInstance'>, <type 'IInternalBaseAccess'>, <type 'IInternalObjectAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'IEquatable[object]'>, <type 'object'>
     """ Start modules after downloading to device. """
     @property
     def CurrentSelection(self) -> SwitchBackupToPrimarySelections:
@@ -629,7 +585,7 @@ class SwitchBackupToPrimary(DownloadSelectionConfiguration): # skipped bases: <t
 
 
 
-class SwitchBackupToPrimarySelections(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class SwitchBackupToPrimarySelections(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Available selections for SwitchBackupToPrimary configuration
 
@@ -640,15 +596,15 @@ class SwitchBackupToPrimarySelections(Enum): # skipped bases: <type 'IComparable
     value__ = ...
 
 
-class TurnOffSequence(DownloadCheckConfiguration): # skipped bases: <type 'IInternalObjectAccess'>, <type 'IEngineeringInstance'>, <type 'IEquatable[object]'>, <type 'IEngineeringObject'>, <type 'IInternalBaseAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'object'>
+class TurnOffSequence(DownloadCheckConfiguration): # skipped bases: <type 'IEngineeringObject'>, <type 'IEngineeringInstance'>, <type 'IInternalBaseAccess'>, <type 'IInternalObjectAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'IEquatable[object]'>, <type 'object'>
     """ Turn off the sequence before loading. """
     pass
 
-class UpgradeTargetDevice(DownloadCheckConfiguration): # skipped bases: <type 'IInternalObjectAccess'>, <type 'IEngineeringInstance'>, <type 'IEquatable[object]'>, <type 'IEngineeringObject'>, <type 'IInternalBaseAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'object'>
+class UpgradeTargetDevice(DownloadCheckConfiguration): # skipped bases: <type 'IEngineeringObject'>, <type 'IEngineeringInstance'>, <type 'IInternalBaseAccess'>, <type 'IInternalObjectAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'IEquatable[object]'>, <type 'object'>
     """ Different project versions in the configured device and target device (online). """
     pass
 
-class WaitOnReboot(DownloadSelectionConfiguration): # skipped bases: <type 'IInternalObjectAccess'>, <type 'IEngineeringInstance'>, <type 'IEquatable[object]'>, <type 'IEngineeringObject'>, <type 'IInternalBaseAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'object'>
+class WaitOnReboot(DownloadSelectionConfiguration): # skipped bases: <type 'IEngineeringObject'>, <type 'IEngineeringInstance'>, <type 'IInternalBaseAccess'>, <type 'IInternalObjectAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'IEquatable[object]'>, <type 'object'>
     """ Wait on reboot of a pc system. """
     @property
     def CurrentSelection(self) -> WaitOnRebootSelections:
@@ -663,7 +619,7 @@ class WaitOnReboot(DownloadSelectionConfiguration): # skipped bases: <type 'IInt
 
 
 
-class WaitOnRebootSelections(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class WaitOnRebootSelections(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Available selections for WaitOnReboot configuration.
 

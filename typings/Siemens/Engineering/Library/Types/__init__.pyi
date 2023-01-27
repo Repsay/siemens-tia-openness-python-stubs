@@ -1,6 +1,6 @@
 # encoding: utf-8
 # module Siemens.Engineering.Library.Types calls itself Types
-# from Siemens.Engineering, Version=17.0.0.0, Culture=neutral, PublicKeyToken=d29ec89bac048f84, Siemens.Engineering.AddIn, Version=17.0.0.0, Culture=neutral, PublicKeyToken=65b871d8372d6a8f
+# from Siemens.Engineering, Version=16.0.0.0, Culture=neutral, PublicKeyToken=d29ec89bac048f84, Siemens.Engineering.AddIn, Version=16.0.0.0, Culture=neutral, PublicKeyToken=65b871d8372d6a8f
 # by generator 1.145
 """ no doc """
 from __future__ import annotations
@@ -31,65 +31,6 @@ from Siemens import IInternalAssociationAccess, IInternalCompositionAccess, IInt
 # no functions
 # classes
 
-class CleanUpMode(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
-    """
-    Cleanup library options to control deletion of types.
-
-    enum CleanUpMode, values: DeleteUnusedTypes (1), PreserveDefaultVersionOfUnusedTypes (0)
-    """
-    DeleteUnusedTypes: CleanUpMode = ...
-    PreserveDefaultVersionOfUnusedTypes: CleanUpMode = ...
-    value__ = ...
-
-
-class ConsistencyStatus(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
-    """
-    Consistency states of the Library types and folders
-
-    enum (flags) ConsistencyStatus, values: Consistent (1), DefaultVersionInconsistent (2), DuplicateVersionInconsistent (4), MultipleVersionsInstantiationInSameDevice (16), NonDefaultVersionInstantiation (8), None (0)
-    """
-    Consistent: ConsistencyStatus = ...
-    DefaultVersionInconsistent: ConsistencyStatus = ...
-    DuplicateVersionInconsistent: ConsistencyStatus = ...
-    MultipleVersionsInstantiationInSameDevice: ConsistencyStatus = ...
-    NonDefaultVersionInstantiation: ConsistencyStatus = ...
-    value__ = ...
-
-
-class DeleteUnusedVersionsMode(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
-    """
-    Options used to control whether or not the operation will delete unused versions
-
-    enum DeleteUnusedVersionsMode, values: AutomaticallyDelete (0), DoNotDelete (1)
-    """
-    AutomaticallyDelete: DeleteUnusedVersionsMode = ...
-    DoNotDelete: DeleteUnusedVersionsMode = ...
-    value__ = ...
-
-
-class ForceUpdateMode(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
-    """
-    Options used to control whether or not perform force update
-
-    enum ForceUpdateMode, values: ForceSetAnyUpdatedVersionAsDefault (1), NoDefaultVersionChange (2), SetOnlyHigherUpdatedVersionAsDefault (0)
-    """
-    ForceSetAnyUpdatedVersionAsDefault: ForceUpdateMode = ...
-    NoDefaultVersionChange: ForceUpdateMode = ...
-    SetOnlyHigherUpdatedVersionAsDefault: ForceUpdateMode = ...
-    value__ = ...
-
-
-class HarmonizeProjectOptions(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
-    """
-    Harmonize project options to control harmonizing of paths in project.
-
-    enum (flags) HarmonizeProjectOptions, values: HarmonizeNames (2), HarmonizePaths (1), None (0)
-    """
-    HarmonizeNames: HarmonizeProjectOptions = ...
-    HarmonizePaths: HarmonizeProjectOptions = ...
-    value__ = ...
-
-
 class IInstanceSearchScope: # skipped bases: <type 'object'>
     """ Scope of the project to search when performing a 'Find instances in project' operation """
     pass
@@ -106,7 +47,7 @@ class IUpdateProjectScope: # skipped bases: <type 'object'>
     """ Represents the scope of the project that may be updated """
     pass
 
-class LibraryType(IInternalObjectAccess, ISivarcLibraryItem, ILibraryTypeOrFolderSelection, ISivarcProgramBlockSource, IEngineeringObject, IEquatable): # skipped bases: <type 'IEngineeringCompositionOrObject'>, <type 'IInternalBaseAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringInstance'>, <type 'object'>
+class LibraryType(IInternalObjectAccess, ISivarcLibraryItem, ILibraryTypeOrFolderSelection, ISivarcProgramBlockSource, IEngineeringObject, IEquatable): # skipped bases: <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'IEngineeringInstance'>, <type 'IInternalBaseAccess'>, <type 'object'>
     """ Represents a library type """
     @property
     def Author(self) -> str:
@@ -156,15 +97,6 @@ class LibraryType(IInternalObjectAccess, ISivarcLibraryItem, ILibraryTypeOrFolde
         ...
 
     @property
-    def Status(self) -> ConsistencyStatus:
-        """
-        The consistency state of the library type
-
-        Get: Status(self: LibraryType) -> ConsistencyStatus
-        """
-        ...
-
-    @property
     def Versions(self) -> LibraryTypeVersionComposition:
         """
         Composition of library type versions
@@ -202,47 +134,23 @@ class LibraryType(IInternalObjectAccess, ISivarcLibraryItem, ILibraryTypeOrFolde
         """
         ...
 
-    def UpdateLibrary(self, targetLibrary:ILibrary, deleteUnusedVersionsMode:DeleteUnusedVersionsMode = ..., structureConflictResolutionMode:StructureConflictResolutionMode = ..., forceUpdateMode:ForceUpdateMode = ...): # ->
+    def UpdateLibrary(self, targetLibrary:ILibrary): # ->
         """
         UpdateLibrary(self: LibraryType, targetLibrary: ILibrary)
 
-            Updates the target library with the latest content from this type. Marking of default version in target is as per default forceUpdateMode parameter, i.e. SetOnlyHigherUpdatedVersionAsDefault.
+            Updates the target library with the latest content from this type
 
             targetLibrary: Target library to update
-
-        UpdateLibrary(self: LibraryType, targetLibrary: ILibrary, deleteUnusedVersionsMode: DeleteUnusedVersionsMode, structureConflictResolutionMode: StructureConflictResolutionMode, forceUpdateMode: ForceUpdateMode)
-
-            Updates the target library with the latest content from this type.  Marking of default version in target is as per forceUpdateMode parameter.
-
-            targetLibrary: Target library to update
-
-            deleteUnusedVersionsMode: This option controls whether unused versions should be deleted from updated types in the project library
-
-            structureConflictResolutionMode: Options used to select the 'Structure Conflict Resolution Mode' for the user during the operation.
-
-            forceUpdateMode: This option controls whether force update should be done on the target library
         """
         ...
 
-    def UpdateProject(self, updateProjectScope:IUpdateProjectScope, deleteUnusedVersionsMode:DeleteUnusedVersionsMode = ..., structureConflictResolutionMode:StructureConflictResolutionMode = ..., forceUpdateMode:ForceUpdateMode = ...): # ->
+    def UpdateProject(self, updateProjectScope:IUpdateProjectScope): # ->
         """
         UpdateProject(self: LibraryType, updateProjectScope: IUpdateProjectScope)
 
-            Updates the project with the latest content from this type. Marking of default version in target is as per default forceUpdateMode parameter, i.e. SetOnlyHigherUpdatedVersionAsDefault.
+            Updates the project with the latest content from this type
 
             updateProjectScope: The scope of the project that will be updated.
-
-        UpdateProject(self: LibraryType, updateProjectScope: IUpdateProjectScope, deleteUnusedVersionsMode: DeleteUnusedVersionsMode, structureConflictResolutionMode: StructureConflictResolutionMode, forceUpdateMode: ForceUpdateMode)
-
-            Updates the project's instances with the latest content from this library. Marking of default version in target is as per forceUpdateMode parameter.
-
-            updateProjectScope: The scope of the project that will be updated.
-
-            deleteUnusedVersionsMode: This option controls whether unused versions should be deleted from updated types in the project library
-
-            structureConflictResolutionMode: Options used to select the 'Structure Conflict Resolution Mode ' for the user during the operation. Project Library type supports only RetainStructure mode
-
-            forceUpdateMode: This option controls whether force update should be done on the target library
         """
         ...
 
@@ -250,7 +158,7 @@ class LibraryType(IInternalObjectAccess, ISivarcLibraryItem, ILibraryTypeOrFolde
         ...
 
 
-class LibraryTypeComposition(IInternalCompositionAccess, IEngineeringComposition, IEquatable): # skipped bases: <type 'IEngineeringInstance'>, <type 'IEnumerable'>, <type 'IInternalBaseAccess'>, <type 'IInternalCollectionAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'object'>
+class LibraryTypeComposition(IInternalCompositionAccess, IEngineeringComposition, IEquatable): # skipped bases: <type 'IEnumerable'>, <type 'IEngineeringInstance'>, <type 'IInternalBaseAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'IInternalCollectionAccess'>, <type 'object'>
     """ Composition of LibraryTypes """
     @property
     def Parent(self) -> IEngineeringObject:
@@ -302,7 +210,7 @@ class LibraryTypeComposition(IInternalCompositionAccess, IEngineeringComposition
         ...
 
 
-class LibraryTypeFolder(IEquatable, IEngineeringObject, ILibraryTypeOrFolderSelection, IInternalObjectAccess): # skipped bases: <type 'IEngineeringCompositionOrObject'>, <type 'IInternalBaseAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringInstance'>, <type 'object'>
+class LibraryTypeFolder(IEquatable, IEngineeringObject, ILibraryTypeOrFolderSelection, IInternalObjectAccess): # skipped bases: <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'IEngineeringInstance'>, <type 'IInternalBaseAccess'>, <type 'object'>
     """ Folder containing library types & library type folders """
     @property
     def Folders(self) -> LibraryTypeUserFolderComposition:
@@ -328,15 +236,6 @@ class LibraryTypeFolder(IEquatable, IEngineeringObject, ILibraryTypeOrFolderSele
         EOM parent of this object
 
         Get: Parent(self: LibraryTypeFolder) -> IEngineeringObject
-        """
-        ...
-
-    @property
-    def Status(self) -> ConsistencyStatus:
-        """
-        The consistency state of the library type
-
-        Get: Status(self: LibraryTypeFolder) -> ConsistencyStatus
         """
         ...
 
@@ -374,7 +273,7 @@ class LibraryTypeFolder(IEquatable, IEngineeringObject, ILibraryTypeOrFolderSele
         ...
 
 
-class LibraryTypeInstanceInfo(IEquatable, IEngineeringObject, IEngineeringService, IInternalObjectAccess): # skipped bases: <type 'IEngineeringCompositionOrObject'>, <type 'IInternalBaseAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringInstance'>, <type 'object'>
+class LibraryTypeInstanceInfo(IEquatable, IEngineeringObject, IEngineeringService, IInternalObjectAccess): # skipped bases: <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'IEngineeringInstance'>, <type 'IInternalBaseAccess'>, <type 'object'>
     """ Library instance service """
     @property
     def LibraryTypeInstance(self) -> IEngineeringObject:
@@ -428,11 +327,11 @@ class LibraryTypeInstanceInfo(IEquatable, IEngineeringObject, IEngineeringServic
         ...
 
 
-class LibraryTypeSystemFolder(LibraryTypeFolder): # skipped bases: <type 'ILibraryTypeOrFolderSelection'>, <type 'IEngineeringCompositionOrObject'>, <type 'IInternalObjectAccess'>, <type 'IEquatable[object]'>, <type 'IEngineeringObject'>, <type 'IInternalBaseAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringInstance'>, <type 'object'>
+class LibraryTypeSystemFolder(LibraryTypeFolder): # skipped bases: <type 'IEquatable[object]'>, <type 'IEngineeringObject'>, <type 'IEngineeringInstance'>, <type 'IInternalBaseAccess'>, <type 'IInternalObjectAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'ILibraryTypeOrFolderSelection'>, <type 'object'>
     """ System folder containing library types & library type folders """
     pass
 
-class LibraryTypeUserFolder(LibraryTypeFolder): # skipped bases: <type 'ILibraryTypeOrFolderSelection'>, <type 'IEngineeringCompositionOrObject'>, <type 'IInternalObjectAccess'>, <type 'IEquatable[object]'>, <type 'IEngineeringObject'>, <type 'IInternalBaseAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringInstance'>, <type 'object'>
+class LibraryTypeUserFolder(LibraryTypeFolder): # skipped bases: <type 'IEquatable[object]'>, <type 'IEngineeringObject'>, <type 'IEngineeringInstance'>, <type 'IInternalBaseAccess'>, <type 'IInternalObjectAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'ILibraryTypeOrFolderSelection'>, <type 'object'>
     """ User folder containing library types & library type folders """
     def Delete(self): # ->
         """
@@ -443,7 +342,7 @@ class LibraryTypeUserFolder(LibraryTypeFolder): # skipped bases: <type 'ILibrary
         ...
 
 
-class LibraryTypeUserFolderComposition(IInternalCompositionAccess, IEngineeringComposition, IEquatable): # skipped bases: <type 'IEngineeringInstance'>, <type 'IEnumerable'>, <type 'IInternalBaseAccess'>, <type 'IInternalCollectionAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'object'>
+class LibraryTypeUserFolderComposition(IInternalCompositionAccess, IEngineeringComposition, IEquatable): # skipped bases: <type 'IEnumerable'>, <type 'IEngineeringInstance'>, <type 'IInternalBaseAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'IInternalCollectionAccess'>, <type 'object'>
     """ Composition of LibraryTypeUserFolders """
     @property
     def Parent(self) -> IEngineeringObject:
@@ -495,7 +394,7 @@ class LibraryTypeUserFolderComposition(IInternalCompositionAccess, IEngineeringC
         ...
 
 
-class LibraryTypeVersion(IEquatable, IEngineeringObject, IInternalObjectAccess): # skipped bases: <type 'IEngineeringCompositionOrObject'>, <type 'IInternalBaseAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringInstance'>, <type 'object'>
+class LibraryTypeVersion(IEquatable, IEngineeringObject, IInternalObjectAccess): # skipped bases: <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'IEngineeringInstance'>, <type 'IInternalBaseAccess'>, <type 'object'>
     """ Represents a library type version """
     @property
     def Author(self) -> str:
@@ -539,15 +438,6 @@ class LibraryTypeVersion(IEquatable, IEngineeringObject, IInternalObjectAccess):
         Gets the GUID of this library version
 
         Get: Guid(self: LibraryTypeVersion) -> Guid
-        """
-        ...
-
-    @property
-    def IsDefault(self) -> bool:
-        """
-        True if the version is a default version, otherwise false.
-
-        Get: IsDefault(self: LibraryTypeVersion) -> bool
         """
         ...
 
@@ -648,14 +538,6 @@ class LibraryTypeVersion(IEquatable, IEngineeringObject, IInternalObjectAccess):
         """
         ...
 
-    def SetAsDefault(self): # ->
-        """
-        SetAsDefault(self: LibraryTypeVersion)
-
-            Sets a version object as default version of a type.
-        """
-        ...
-
     def ToString(self) -> str:
         """
         ToString(self: LibraryTypeVersion) -> str
@@ -670,7 +552,7 @@ class LibraryTypeVersion(IEquatable, IEngineeringObject, IInternalObjectAccess):
         ...
 
 
-class LibraryTypeVersionAssociation(IEquatable, IEngineeringAssociation, IInternalAssociationAccess): # skipped bases: <type 'IInternalBaseAccess'>, <type 'IEnumerable'>, <type 'IInternalCollectionAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringInstance'>, <type 'object'>
+class LibraryTypeVersionAssociation(IEquatable, IEngineeringAssociation, IInternalAssociationAccess): # skipped bases: <type 'IInternalCollectionAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEnumerable'>, <type 'IEngineeringInstance'>, <type 'IInternalBaseAccess'>, <type 'object'>
     """ Associated library type versions """
     @property
     def Parent(self) -> IEngineeringObject:
@@ -710,7 +592,7 @@ class LibraryTypeVersionAssociation(IEquatable, IEngineeringAssociation, IIntern
         ...
 
 
-class LibraryTypeVersionComposition(IInternalCompositionAccess, IEngineeringComposition, IEquatable): # skipped bases: <type 'IEngineeringInstance'>, <type 'IEnumerable'>, <type 'IInternalBaseAccess'>, <type 'IInternalCollectionAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'object'>
+class LibraryTypeVersionComposition(IInternalCompositionAccess, IEngineeringComposition, IEquatable): # skipped bases: <type 'IEnumerable'>, <type 'IEngineeringInstance'>, <type 'IInternalBaseAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'IInternalCollectionAccess'>, <type 'object'>
     """ Composition of LibraryTypeVersions """
     @property
     def Parent(self) -> IEngineeringObject:
@@ -762,7 +644,7 @@ class LibraryTypeVersionComposition(IInternalCompositionAccess, IEngineeringComp
         ...
 
 
-class LibraryTypeVersionState(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class LibraryTypeVersionState(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Defines the library version object state
 
@@ -773,19 +655,7 @@ class LibraryTypeVersionState(Enum): # skipped bases: <type 'IComparable'>, <typ
     value__ = ...
 
 
-class StructureConflictResolutionMode(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
-    """
-    Options used to select the 'Structure Conflict Resolution Mode' for the user during the update operation
-
-    enum StructureConflictResolutionMode, values: CancelIfStructureConflicts (2), RetainStructure (1), UpdateStructure (0)
-    """
-    CancelIfStructureConflicts: StructureConflictResolutionMode = ...
-    RetainStructure: StructureConflictResolutionMode = ...
-    UpdateStructure: StructureConflictResolutionMode = ...
-    value__ = ...
-
-
-class UpdateCheckMode(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class UpdateCheckMode(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Used to control verbosity of logging output from the update check
 
@@ -796,7 +666,7 @@ class UpdateCheckMode(Enum): # skipped bases: <type 'IComparable'>, <type 'IForm
     value__ = ...
 
 
-class UpdateCheckResult(IEquatable, IEngineeringObject, IInternalObjectAccess): # skipped bases: <type 'IEngineeringCompositionOrObject'>, <type 'IInternalBaseAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringInstance'>, <type 'object'>
+class UpdateCheckResult(IEquatable, IEngineeringObject, IInternalObjectAccess): # skipped bases: <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'IEngineeringInstance'>, <type 'IInternalBaseAccess'>, <type 'object'>
     """ Result returned from the update check operation """
     @property
     def Messages(self) -> UpdateCheckResultMessageComposition:
@@ -841,7 +711,7 @@ class UpdateCheckResult(IEquatable, IEngineeringObject, IInternalObjectAccess): 
         ...
 
 
-class UpdateCheckResultMessage(IEquatable, IEngineeringObject, IInternalObjectAccess): # skipped bases: <type 'IEngineeringCompositionOrObject'>, <type 'IInternalBaseAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringInstance'>, <type 'object'>
+class UpdateCheckResultMessage(IEquatable, IEngineeringObject, IInternalObjectAccess): # skipped bases: <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'IEngineeringInstance'>, <type 'IInternalBaseAccess'>, <type 'object'>
     """ Log message explaining the details of the update check """
     @property
     def Description(self) -> str:
@@ -904,7 +774,7 @@ class UpdateCheckResultMessage(IEquatable, IEngineeringObject, IInternalObjectAc
         ...
 
 
-class UpdateCheckResultMessageComposition(IInternalCompositionAccess, IEngineeringComposition, IEquatable): # skipped bases: <type 'IEngineeringInstance'>, <type 'IEnumerable'>, <type 'IInternalBaseAccess'>, <type 'IInternalCollectionAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'object'>
+class UpdateCheckResultMessageComposition(IInternalCompositionAccess, IEngineeringComposition, IEquatable): # skipped bases: <type 'IEnumerable'>, <type 'IEngineeringInstance'>, <type 'IInternalBaseAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'IInternalCollectionAccess'>, <type 'object'>
     """ Composition of UpdateCheckResultMessages """
     @property
     def Parent(self) -> IEngineeringObject:

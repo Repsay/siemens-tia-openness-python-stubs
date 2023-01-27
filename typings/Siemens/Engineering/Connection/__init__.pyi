@@ -1,6 +1,6 @@
 # encoding: utf-8
 # module Siemens.Engineering.Connection calls itself Connection
-# from Siemens.Engineering, Version=17.0.0.0, Culture=neutral, PublicKeyToken=d29ec89bac048f84, Siemens.Engineering.AddIn, Version=17.0.0.0, Culture=neutral, PublicKeyToken=65b871d8372d6a8f
+# from Siemens.Engineering, Version=16.0.0.0, Culture=neutral, PublicKeyToken=d29ec89bac048f84, Siemens.Engineering.AddIn, Version=16.0.0.0, Culture=neutral, PublicKeyToken=65b871d8372d6a8f
 # by generator 1.145
 """ no doc """
 from __future__ import annotations
@@ -8,7 +8,7 @@ from Siemens.Engineering import IEngineeringComposition, IEngineeringObject
 
 from System import IEquatable
 
-"""The following names are not found in the module: (BoundEvent,
+"""The following names are not found in the module: (
     IInternalCompositionAccess, IInternalObjectAccess)
 """
 
@@ -21,7 +21,7 @@ class IConfiguration: # skipped bases: <type 'object'>
     """ Connection cofiguration path to a device. """
     pass
 
-class ConfigurationAddress(IEquatable, IEngineeringObject, IConfiguration, IInternalObjectAccess): # skipped bases: <type 'IEngineeringCompositionOrObject'>, <type 'IInternalBaseAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringInstance'>, <type 'object'>
+class ConfigurationAddress(IEquatable, IEngineeringObject, IConfiguration, IInternalObjectAccess): # skipped bases: <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'IEngineeringInstance'>, <type 'IInternalBaseAccess'>, <type 'object'>
     """ The connection configuration address """
     @property
     def Address(self) -> str:
@@ -75,7 +75,7 @@ class ConfigurationAddress(IEquatable, IEngineeringObject, IConfiguration, IInte
         ...
 
 
-class ConfigurationAddressComposition(IInternalCompositionAccess, IEngineeringComposition, IEquatable): # skipped bases: <type 'IEngineeringInstance'>, <type 'IEnumerable'>, <type 'IInternalBaseAccess'>, <type 'IInternalCollectionAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'object'>
+class ConfigurationAddressComposition(IInternalCompositionAccess, IEngineeringComposition, IEquatable): # skipped bases: <type 'IEnumerable'>, <type 'IEngineeringInstance'>, <type 'IInternalBaseAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'IInternalCollectionAccess'>, <type 'object'>
     """ Composition of ConfigurationAddresses """
     @property
     def Parent(self) -> IEngineeringObject:
@@ -127,7 +127,7 @@ class ConfigurationAddressComposition(IInternalCompositionAccess, IEngineeringCo
         ...
 
 
-class ConfigurationGateway(IEquatable, IEngineeringObject, IInternalObjectAccess): # skipped bases: <type 'IEngineeringCompositionOrObject'>, <type 'IInternalBaseAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringInstance'>, <type 'object'>
+class ConfigurationGateway(IEquatable, IEngineeringObject, IInternalObjectAccess): # skipped bases: <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'IEngineeringInstance'>, <type 'IInternalBaseAccess'>, <type 'object'>
     """ The connection configuration gateway """
     @property
     def Addresses(self) -> ConfigurationAddressComposition:
@@ -181,7 +181,7 @@ class ConfigurationGateway(IEquatable, IEngineeringObject, IInternalObjectAccess
         ...
 
 
-class ConfigurationGatewayComposition(IInternalCompositionAccess, IEngineeringComposition, IEquatable): # skipped bases: <type 'IEngineeringInstance'>, <type 'IEnumerable'>, <type 'IInternalBaseAccess'>, <type 'IInternalCollectionAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'object'>
+class ConfigurationGatewayComposition(IInternalCompositionAccess, IEngineeringComposition, IEquatable): # skipped bases: <type 'IEnumerable'>, <type 'IEngineeringInstance'>, <type 'IInternalBaseAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'IInternalCollectionAccess'>, <type 'object'>
     """ Composition of ConfigurationGateways """
     @property
     def Parent(self) -> IEngineeringObject:
@@ -233,7 +233,7 @@ class ConfigurationGatewayComposition(IInternalCompositionAccess, IEngineeringCo
         ...
 
 
-class ConfigurationMode(IEquatable, IEngineeringObject, IInternalObjectAccess): # skipped bases: <type 'IEngineeringCompositionOrObject'>, <type 'IInternalBaseAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringInstance'>, <type 'object'>
+class ConfigurationMode(IEquatable, IEngineeringObject, IInternalObjectAccess): # skipped bases: <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'IEngineeringInstance'>, <type 'IInternalBaseAccess'>, <type 'object'>
     """ The connection configuration mode """
     @property
     def Name(self) -> str:
@@ -287,7 +287,7 @@ class ConfigurationMode(IEquatable, IEngineeringObject, IInternalObjectAccess): 
         ...
 
 
-class ConfigurationModeComposition(IInternalCompositionAccess, IEngineeringComposition, IEquatable): # skipped bases: <type 'IEngineeringInstance'>, <type 'IEnumerable'>, <type 'IInternalBaseAccess'>, <type 'IInternalCollectionAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'object'>
+class ConfigurationModeComposition(IInternalCompositionAccess, IEngineeringComposition, IEquatable): # skipped bases: <type 'IEnumerable'>, <type 'IEngineeringInstance'>, <type 'IInternalBaseAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'IInternalCollectionAccess'>, <type 'object'>
     """ Composition of ConfigurationModes """
     @property
     def Parent(self) -> IEngineeringObject:
@@ -339,7 +339,7 @@ class ConfigurationModeComposition(IInternalCompositionAccess, IEngineeringCompo
         ...
 
 
-class ConfigurationPcInterface(IEquatable, IEngineeringObject, IInternalObjectAccess): # skipped bases: <type 'IEngineeringCompositionOrObject'>, <type 'IInternalBaseAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringInstance'>, <type 'object'>
+class ConfigurationPcInterface(IEquatable, IEngineeringObject, IInternalObjectAccess): # skipped bases: <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'IEngineeringInstance'>, <type 'IInternalBaseAccess'>, <type 'object'>
     """ The connection configuration pc interface """
     @property
     def Addresses(self) -> ConfigurationAddressComposition:
@@ -420,7 +420,7 @@ class ConfigurationPcInterface(IEquatable, IEngineeringObject, IInternalObjectAc
         ...
 
 
-class ConfigurationPcInterfaceComposition(IInternalCompositionAccess, IEngineeringComposition, IEquatable): # skipped bases: <type 'IEngineeringInstance'>, <type 'IEnumerable'>, <type 'IInternalBaseAccess'>, <type 'IInternalCollectionAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'object'>
+class ConfigurationPcInterfaceComposition(IInternalCompositionAccess, IEngineeringComposition, IEquatable): # skipped bases: <type 'IEnumerable'>, <type 'IEngineeringInstance'>, <type 'IInternalBaseAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'IInternalCollectionAccess'>, <type 'object'>
     """ Composition of ConfigurationPcInterfaces """
     @property
     def Parent(self) -> IEngineeringObject:
@@ -474,7 +474,7 @@ class ConfigurationPcInterfaceComposition(IInternalCompositionAccess, IEngineeri
         ...
 
 
-class ConfigurationSubnet(IEquatable, IEngineeringObject, IInternalObjectAccess): # skipped bases: <type 'IEngineeringCompositionOrObject'>, <type 'IInternalBaseAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringInstance'>, <type 'object'>
+class ConfigurationSubnet(IEquatable, IEngineeringObject, IInternalObjectAccess): # skipped bases: <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'IEngineeringInstance'>, <type 'IInternalBaseAccess'>, <type 'object'>
     """ The connection configuration subnet """
     @property
     def Addresses(self) -> ConfigurationAddressComposition:
@@ -537,7 +537,7 @@ class ConfigurationSubnet(IEquatable, IEngineeringObject, IInternalObjectAccess)
         ...
 
 
-class ConfigurationSubnetComposition(IInternalCompositionAccess, IEngineeringComposition, IEquatable): # skipped bases: <type 'IEngineeringInstance'>, <type 'IEnumerable'>, <type 'IInternalBaseAccess'>, <type 'IInternalCollectionAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'object'>
+class ConfigurationSubnetComposition(IInternalCompositionAccess, IEngineeringComposition, IEquatable): # skipped bases: <type 'IEnumerable'>, <type 'IEngineeringInstance'>, <type 'IInternalBaseAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'IInternalCollectionAccess'>, <type 'object'>
     """ Composition of ConfigurationSubnets """
     @property
     def Parent(self) -> IEngineeringObject:
@@ -589,17 +589,8 @@ class ConfigurationSubnetComposition(IInternalCompositionAccess, IEngineeringCom
         ...
 
 
-class ConfigurationTargetInterface(IEquatable, IEngineeringObject, IConfiguration, IInternalObjectAccess): # skipped bases: <type 'IEngineeringCompositionOrObject'>, <type 'IInternalBaseAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringInstance'>, <type 'object'>
+class ConfigurationTargetInterface(IEquatable, IEngineeringObject, IConfiguration, IInternalObjectAccess): # skipped bases: <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'IEngineeringInstance'>, <type 'IInternalBaseAccess'>, <type 'object'>
     """ The connection configuration target interface """
-    @property
-    def Addresses(self) -> ConfigurationAddressComposition:
-        """
-        Composition of configurationAddress
-
-        Get: Addresses(self: ConfigurationTargetInterface) -> ConfigurationAddressComposition
-        """
-        ...
-
     @property
     def Name(self) -> str:
         """
@@ -643,7 +634,7 @@ class ConfigurationTargetInterface(IEquatable, IEngineeringObject, IConfiguratio
         ...
 
 
-class ConfigurationTargetInterfaceComposition(IInternalCompositionAccess, IEngineeringComposition, IEquatable): # skipped bases: <type 'IEngineeringInstance'>, <type 'IEnumerable'>, <type 'IInternalBaseAccess'>, <type 'IInternalCollectionAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'object'>
+class ConfigurationTargetInterfaceComposition(IInternalCompositionAccess, IEngineeringComposition, IEquatable): # skipped bases: <type 'IEnumerable'>, <type 'IEngineeringInstance'>, <type 'IInternalBaseAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'IInternalCollectionAccess'>, <type 'object'>
     """ Composition of ConfigurationTargetInterfaces """
     @property
     def Parent(self) -> IEngineeringObject:
@@ -695,19 +686,8 @@ class ConfigurationTargetInterfaceComposition(IInternalCompositionAccess, IEngin
         ...
 
 
-class ConnectionConfiguration(IEquatable, IEngineeringObject, IInternalObjectAccess): # skipped bases: <type 'IEngineeringCompositionOrObject'>, <type 'IInternalBaseAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringInstance'>, <type 'object'>
+class ConnectionConfiguration(IEquatable, IEngineeringObject, IInternalObjectAccess): # skipped bases: <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'IEngineeringInstance'>, <type 'IInternalBaseAccess'>, <type 'object'>
     """ Provides the online connection """
-    @property
-    def EnableLegacyCommunication(self): # ->
-        """
-        Disable Tls (Transport Layer Security) protocol.
-
-        Get: EnableLegacyCommunication(self: ConnectionConfiguration) -> bool
-
-        Set: EnableLegacyCommunication(self: ConnectionConfiguration) = value
-        """
-        ...
-
     @property
     def IsConfigured(self) -> bool:
         """
@@ -778,5 +758,3 @@ class ConnectionConfiguration(IEquatable, IEngineeringObject, IInternalObjectAcc
 
     def __ne__(self, *args): #cannot find CLR method
         ...
-
-    OnlineLegitimation = ...

@@ -1,6 +1,6 @@
 # encoding: utf-8
 # module Siemens.Engineering.SW.Tags calls itself Tags
-# from Siemens.Engineering, Version=17.0.0.0, Culture=neutral, PublicKeyToken=d29ec89bac048f84, Siemens.Engineering.AddIn, Version=17.0.0.0, Culture=neutral, PublicKeyToken=65b871d8372d6a8f
+# from Siemens.Engineering, Version=16.0.0.0, Culture=neutral, PublicKeyToken=d29ec89bac048f84, Siemens.Engineering.AddIn, Version=16.0.0.0, Culture=neutral, PublicKeyToken=65b871d8372d6a8f
 # by generator 1.145
 """ no doc """
 from __future__ import annotations
@@ -26,7 +26,7 @@ from Siemens import IInternalCompositionAccess, IInternalObjectAccess
 # no functions
 # classes
 
-class PlcConstant(IEquatable, IEngineeringObject, IMasterCopySource, IInternalObjectAccess): # skipped bases: <type 'IEngineeringCompositionOrObject'>, <type 'IInternalBaseAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringInstance'>, <type 'object'>
+class PlcConstant(IEquatable, IEngineeringObject, IMasterCopySource, IInternalObjectAccess): # skipped bases: <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'IEngineeringInstance'>, <type 'IInternalBaseAccess'>, <type 'object'>
     """ Represents a Plc constant """
     @property
     def DataTypeName(self) -> str:
@@ -89,11 +89,11 @@ class PlcConstant(IEquatable, IEngineeringObject, IMasterCopySource, IInternalOb
         ...
 
 
-class PlcSystemConstant(PlcConstant): # skipped bases: <type 'IEngineeringCompositionOrObject'>, <type 'IInternalObjectAccess'>, <type 'IEquatable[object]'>, <type 'IMasterCopySource'>, <type 'IEngineeringObject'>, <type 'IInternalBaseAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringInstance'>, <type 'object'>
+class PlcSystemConstant(PlcConstant): # skipped bases: <type 'IEquatable[object]'>, <type 'IEngineeringObject'>, <type 'IEngineeringInstance'>, <type 'IInternalBaseAccess'>, <type 'IInternalObjectAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'IMasterCopySource'>, <type 'object'>
     """ Represents a Plc system constant """
     pass
 
-class PlcSystemConstantComposition(IInternalCompositionAccess, IEngineeringComposition, IEquatable): # skipped bases: <type 'IEngineeringInstance'>, <type 'IEnumerable'>, <type 'IInternalBaseAccess'>, <type 'IInternalCollectionAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'object'>
+class PlcSystemConstantComposition(IInternalCompositionAccess, IEngineeringComposition, IEquatable): # skipped bases: <type 'IEnumerable'>, <type 'IEngineeringInstance'>, <type 'IInternalBaseAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'IInternalCollectionAccess'>, <type 'object'>
     """ Composition of PlcSystemConstants """
     @property
     def Parent(self) -> IEngineeringObject:
@@ -145,7 +145,7 @@ class PlcSystemConstantComposition(IInternalCompositionAccess, IEngineeringCompo
         ...
 
 
-class PlcTag(IEquatable, IEngineeringObject, IEngineeringServiceProvider, IMasterCopySource, IInternalObjectAccess): # skipped bases: <type 'IEngineeringCompositionOrObject'>, <type 'IInternalBaseAccess'>, <type 'IServiceProvider'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringInstance'>, <type 'object'>
+class PlcTag(IEquatable, IEngineeringObject, IEngineeringServiceProvider, IMasterCopySource, IInternalObjectAccess): # skipped bases: <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'IServiceProvider'>, <type 'IEngineeringInstance'>, <type 'IInternalBaseAccess'>, <type 'object'>
     """ Represents a Plc tag """
     @property
     def Comment(self) -> MultilingualText:
@@ -274,7 +274,7 @@ class PlcTag(IEquatable, IEngineeringObject, IEngineeringServiceProvider, IMaste
         ...
 
 
-class PlcTagComposition(IInternalCompositionAccess, IEngineeringComposition, IEquatable): # skipped bases: <type 'IEngineeringInstance'>, <type 'IEnumerable'>, <type 'IInternalBaseAccess'>, <type 'IInternalCollectionAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'object'>
+class PlcTagComposition(IInternalCompositionAccess, IEngineeringComposition, IEquatable): # skipped bases: <type 'IEnumerable'>, <type 'IEngineeringInstance'>, <type 'IInternalBaseAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'IInternalCollectionAccess'>, <type 'object'>
     """ Composition of PlcTags """
     @property
     def Parent(self) -> IEngineeringObject:
@@ -352,7 +352,7 @@ class PlcTagComposition(IInternalCompositionAccess, IEngineeringComposition, IEq
         ...
 
 
-class PlcTagTable(IEquatable, IEngineeringServiceProvider, IMasterCopyTarget, IShowable, IEngineeringObject, IMasterCopySource, IInternalObjectAccess): # skipped bases: <type 'IEngineeringCompositionOrObject'>, <type 'IInternalBaseAccess'>, <type 'IServiceProvider'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringInstance'>, <type 'object'>
+class PlcTagTable(IEquatable, IEngineeringServiceProvider, IMasterCopyTarget, IShowable, IEngineeringObject, IMasterCopySource, IInternalObjectAccess): # skipped bases: <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'IServiceProvider'>, <type 'IEngineeringInstance'>, <type 'IInternalBaseAccess'>, <type 'object'>
     """ Represents a Plc tag table """
     @property
     def IsDefault(self) -> bool:
@@ -462,7 +462,7 @@ class PlcTagTable(IEquatable, IEngineeringServiceProvider, IMasterCopyTarget, IS
         ...
 
 
-class PlcTagTableComposition(IInternalCompositionAccess, IEngineeringComposition, IEquatable): # skipped bases: <type 'IEngineeringInstance'>, <type 'IEnumerable'>, <type 'IInternalBaseAccess'>, <type 'IInternalCollectionAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'object'>
+class PlcTagTableComposition(IInternalCompositionAccess, IEngineeringComposition, IEquatable): # skipped bases: <type 'IEnumerable'>, <type 'IEngineeringInstance'>, <type 'IInternalBaseAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'IInternalCollectionAccess'>, <type 'object'>
     """ Composition of PlcTagTables """
     @property
     def Parent(self) -> IEngineeringObject:
@@ -540,7 +540,7 @@ class PlcTagTableComposition(IInternalCompositionAccess, IEngineeringComposition
         ...
 
 
-class PlcTagTableGroup(IEquatable, IEngineeringObject, IEngineeringServiceProvider, IInternalObjectAccess): # skipped bases: <type 'IEngineeringCompositionOrObject'>, <type 'IInternalBaseAccess'>, <type 'IServiceProvider'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringInstance'>, <type 'object'>
+class PlcTagTableGroup(IEquatable, IEngineeringObject, IEngineeringServiceProvider, IInternalObjectAccess): # skipped bases: <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'IServiceProvider'>, <type 'IEngineeringInstance'>, <type 'IInternalBaseAccess'>, <type 'object'>
     """ Group containing Plc tag tables & Plc tag table user groups """
     @property
     def Groups(self) -> PlcTagTableUserGroupComposition:
@@ -603,11 +603,11 @@ class PlcTagTableGroup(IEquatable, IEngineeringObject, IEngineeringServiceProvid
         ...
 
 
-class PlcTagTableSystemGroup(IMasterCopyTarget, PlcTagTableGroup): # skipped bases: <type 'IEngineeringCompositionOrObject'>, <type 'IInternalObjectAccess'>, <type 'IEquatable[object]'>, <type 'IEngineeringServiceProvider'>, <type 'IEngineeringObject'>, <type 'IInternalBaseAccess'>, <type 'IServiceProvider'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringInstance'>, <type 'object'>
+class PlcTagTableSystemGroup(IMasterCopyTarget, PlcTagTableGroup): # skipped bases: <type 'IEngineeringServiceProvider'>, <type 'IEngineeringObject'>, <type 'IServiceProvider'>, <type 'IEngineeringInstance'>, <type 'IInternalBaseAccess'>, <type 'IInternalObjectAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'IEquatable[object]'>, <type 'object'>
     """ System group containing Plc tag tables & Plc tag table user groups """
     pass
 
-class PlcTagTableUserGroup(IMasterCopySource, PlcTagTableGroup, IMasterCopyTarget): # skipped bases: <type 'IEngineeringCompositionOrObject'>, <type 'IInternalObjectAccess'>, <type 'IEquatable[object]'>, <type 'IEngineeringServiceProvider'>, <type 'IEngineeringObject'>, <type 'IInternalBaseAccess'>, <type 'IServiceProvider'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringInstance'>, <type 'object'>
+class PlcTagTableUserGroup(IMasterCopySource, PlcTagTableGroup, IMasterCopyTarget): # skipped bases: <type 'IEngineeringServiceProvider'>, <type 'IEngineeringObject'>, <type 'IServiceProvider'>, <type 'IEngineeringInstance'>, <type 'IInternalBaseAccess'>, <type 'IInternalObjectAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'IEquatable[object]'>, <type 'object'>
     """ User group containing Plc tag tables & Plc tag table user groups """
     def Delete(self): # ->
         """
@@ -618,7 +618,7 @@ class PlcTagTableUserGroup(IMasterCopySource, PlcTagTableGroup, IMasterCopyTarge
         ...
 
 
-class PlcTagTableUserGroupComposition(IInternalCompositionAccess, IEngineeringComposition, IEquatable): # skipped bases: <type 'IEngineeringInstance'>, <type 'IEnumerable'>, <type 'IInternalBaseAccess'>, <type 'IInternalCollectionAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'object'>
+class PlcTagTableUserGroupComposition(IInternalCompositionAccess, IEngineeringComposition, IEquatable): # skipped bases: <type 'IEnumerable'>, <type 'IEngineeringInstance'>, <type 'IInternalBaseAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'IInternalCollectionAccess'>, <type 'object'>
     """ Composition of PlcTagTableUserGroups """
     @property
     def Parent(self) -> IEngineeringObject:
@@ -682,7 +682,7 @@ class PlcTagTableUserGroupComposition(IInternalCompositionAccess, IEngineeringCo
         ...
 
 
-class PlcUserConstant(IEngineeringServiceProvider, PlcConstant): # skipped bases: <type 'IEngineeringCompositionOrObject'>, <type 'IInternalObjectAccess'>, <type 'IEquatable[object]'>, <type 'IMasterCopySource'>, <type 'IEngineeringObject'>, <type 'IInternalBaseAccess'>, <type 'IServiceProvider'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringInstance'>, <type 'object'>
+class PlcUserConstant(IEngineeringServiceProvider, PlcConstant): # skipped bases: <type 'IEquatable[object]'>, <type 'IEngineeringObject'>, <type 'IEngineeringInstance'>, <type 'IInternalBaseAccess'>, <type 'IServiceProvider'>, <type 'IInternalObjectAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'IMasterCopySource'>, <type 'object'>
     """ Represents a Plc user constant """
     @property
     def Comment(self) -> MultilingualText:
@@ -715,7 +715,7 @@ class PlcUserConstant(IEngineeringServiceProvider, PlcConstant): # skipped bases
         ...
 
 
-class PlcUserConstantComposition(IInternalCompositionAccess, IEngineeringComposition, IEquatable): # skipped bases: <type 'IEngineeringInstance'>, <type 'IEnumerable'>, <type 'IInternalBaseAccess'>, <type 'IInternalCollectionAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'object'>
+class PlcUserConstantComposition(IInternalCompositionAccess, IEngineeringComposition, IEquatable): # skipped bases: <type 'IEnumerable'>, <type 'IEngineeringInstance'>, <type 'IInternalBaseAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'IInternalCollectionAccess'>, <type 'object'>
     """ Composition of PlcUserConstants """
     @property
     def Parent(self) -> IEngineeringObject:

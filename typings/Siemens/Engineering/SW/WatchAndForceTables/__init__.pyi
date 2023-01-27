@@ -1,6 +1,6 @@
 # encoding: utf-8
 # module Siemens.Engineering.SW.WatchAndForceTables calls itself WatchAndForceTables
-# from Siemens.Engineering, Version=17.0.0.0, Culture=neutral, PublicKeyToken=d29ec89bac048f84, Siemens.Engineering.AddIn, Version=17.0.0.0, Culture=neutral, PublicKeyToken=65b871d8372d6a8f
+# from Siemens.Engineering, Version=16.0.0.0, Culture=neutral, PublicKeyToken=d29ec89bac048f84, Siemens.Engineering.AddIn, Version=16.0.0.0, Culture=neutral, PublicKeyToken=65b871d8372d6a8f
 # by generator 1.145
 """ no doc """
 from __future__ import annotations
@@ -24,7 +24,7 @@ from Siemens import IInternalCompositionAccess, IInternalObjectAccess
 # no functions
 # classes
 
-class PlcForceTable(IShowable, IEngineeringObject, IEquatable, IInternalObjectAccess): # skipped bases: <type 'IEngineeringCompositionOrObject'>, <type 'IInternalBaseAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringInstance'>, <type 'object'>
+class PlcForceTable(IShowable, IEngineeringObject, IEquatable, IInternalObjectAccess): # skipped bases: <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'IEngineeringInstance'>, <type 'IInternalBaseAccess'>, <type 'object'>
     """ Represents a Plc force table """
     @property
     def Entries(self) -> PlcTableCommentEntryComposition:
@@ -99,7 +99,7 @@ class PlcForceTable(IShowable, IEngineeringObject, IEquatable, IInternalObjectAc
         ...
 
 
-class PlcForceTableComposition(IInternalCompositionAccess, IEngineeringComposition, IEquatable): # skipped bases: <type 'IEngineeringInstance'>, <type 'IEnumerable'>, <type 'IInternalBaseAccess'>, <type 'IInternalCollectionAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'object'>
+class PlcForceTableComposition(IInternalCompositionAccess, IEngineeringComposition, IEquatable): # skipped bases: <type 'IEnumerable'>, <type 'IEngineeringInstance'>, <type 'IInternalBaseAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'IInternalCollectionAccess'>, <type 'object'>
     """ Composition of PlcForceTables """
     @property
     def Parent(self) -> IEngineeringObject:
@@ -165,8 +165,8 @@ class PlcForceTableComposition(IInternalCompositionAccess, IEngineeringCompositi
         ...
 
 
-class PlcTableCommentEntry(IEquatable, IEngineeringObject, IInternalObjectAccess): # skipped bases: <type 'IEngineeringCompositionOrObject'>, <type 'IInternalBaseAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringInstance'>, <type 'object'>
-    """ Represents a Plc Force\\Watch table comment entry """
+class PlcTableCommentEntry(IEquatable, IEngineeringObject, IInternalObjectAccess): # skipped bases: <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'IEngineeringInstance'>, <type 'IInternalBaseAccess'>, <type 'object'>
+    """ Represents a Plc Force\Watch table comment entry """
     @property
     def Parent(self) -> IEngineeringObject:
         """
@@ -209,66 +209,12 @@ class PlcTableCommentEntry(IEquatable, IEngineeringObject, IInternalObjectAccess
         ...
 
 
-class PlcForceTableEntry(PlcTableCommentEntry): # skipped bases: <type 'IInternalObjectAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'IEquatable[object]'>, <type 'IEngineeringObject'>, <type 'IInternalBaseAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringInstance'>, <type 'object'>
+class PlcForceTableEntry(PlcTableCommentEntry): # skipped bases: <type 'IEngineeringObject'>, <type 'IEngineeringInstance'>, <type 'IInternalBaseAccess'>, <type 'IInternalObjectAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'IEquatable[object]'>, <type 'object'>
     """ Represents a Plc force table entry """
-    @property
-    def Address(self) -> str:
-        """
-        Address information of the tag
+    pass
 
-        Get: Address(self: PlcForceTableEntry) -> str
-        """
-        ...
-
-    @property
-    def DisplayFormat(self) -> PlcWatchAndForceTableDisplayFormat:
-        """
-        DisplayFormat
-
-        Get: DisplayFormat(self: PlcForceTableEntry) -> PlcWatchAndForceTableDisplayFormat
-        """
-        ...
-
-    @property
-    def ForceIntention(self) -> bool:
-        """
-        Force intention of the user
-
-        Get: ForceIntention(self: PlcForceTableEntry) -> bool
-        """
-        ...
-
-    @property
-    def ForceValue(self) -> str:
-        """
-        The value that shall be forced
-
-        Get: ForceValue(self: PlcForceTableEntry) -> str
-        """
-        ...
-
-    @property
-    def MonitorTrigger(self) -> PlcWatchAndForceTablePreDefinedTrigger:
-        """
-        The trigger used for monitoring
-
-        Get: MonitorTrigger(self: PlcForceTableEntry) -> PlcWatchAndForceTablePreDefinedTrigger
-        """
-        ...
-
-    @property
-    def Name(self) -> str:
-        """
-        Name of the tag
-
-        Get: Name(self: PlcForceTableEntry) -> str
-        """
-        ...
-
-
-
-class PlcTableCommentEntryComposition(IInternalCompositionAccess, IEngineeringComposition, IEquatable): # skipped bases: <type 'IEngineeringInstance'>, <type 'IEnumerable'>, <type 'IInternalBaseAccess'>, <type 'IInternalCollectionAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'object'>
-    """ Represents a Plc Force\\Watch table comment entries """
+class PlcTableCommentEntryComposition(IInternalCompositionAccess, IEngineeringComposition, IEquatable): # skipped bases: <type 'IEnumerable'>, <type 'IEngineeringInstance'>, <type 'IInternalBaseAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'IInternalCollectionAccess'>, <type 'object'>
+    """ Represents a Plc Force\Watch table comment entries """
     @property
     def Parent(self) -> IEngineeringObject:
         """
@@ -307,7 +253,7 @@ class PlcTableCommentEntryComposition(IInternalCompositionAccess, IEngineeringCo
         ...
 
 
-class PlcWatchAndForceTableDisplayFormat(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class PlcWatchAndForceTableDisplayFormat(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Enum for DisplayFormat
 
@@ -341,7 +287,7 @@ class PlcWatchAndForceTableDisplayFormat(Enum): # skipped bases: <type 'ICompara
     value__ = ...
 
 
-class PlcWatchAndForceTableGroup(IEquatable, IEngineeringObject, IInternalObjectAccess): # skipped bases: <type 'IEngineeringCompositionOrObject'>, <type 'IInternalBaseAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringInstance'>, <type 'object'>
+class PlcWatchAndForceTableGroup(IEquatable, IEngineeringObject, IInternalObjectAccess): # skipped bases: <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'IEngineeringInstance'>, <type 'IInternalBaseAccess'>, <type 'object'>
     """ Group contatining Plc watch tables """
     @property
     def ForceTables(self) -> PlcForceTableComposition:
@@ -413,7 +359,7 @@ class PlcWatchAndForceTableGroup(IEquatable, IEngineeringObject, IInternalObject
         ...
 
 
-class PlcWatchAndForceTablePreDefinedTrigger(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class PlcWatchAndForceTablePreDefinedTrigger(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Enum for PreDefinedTrigger
 
@@ -430,11 +376,11 @@ class PlcWatchAndForceTablePreDefinedTrigger(Enum): # skipped bases: <type 'ICom
     value__ = ...
 
 
-class PlcWatchAndForceTableSystemGroup(PlcWatchAndForceTableGroup): # skipped bases: <type 'IInternalObjectAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'IEquatable[object]'>, <type 'IEngineeringObject'>, <type 'IInternalBaseAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringInstance'>, <type 'object'>
+class PlcWatchAndForceTableSystemGroup(PlcWatchAndForceTableGroup): # skipped bases: <type 'IEngineeringObject'>, <type 'IEngineeringInstance'>, <type 'IInternalBaseAccess'>, <type 'IInternalObjectAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'IEquatable[object]'>, <type 'object'>
     """ System group containing Plc watch tables and Plc force tables and user group containing these """
     pass
 
-class PlcWatchAndForceTableUserGroup(PlcWatchAndForceTableGroup): # skipped bases: <type 'IInternalObjectAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'IEquatable[object]'>, <type 'IEngineeringObject'>, <type 'IInternalBaseAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringInstance'>, <type 'object'>
+class PlcWatchAndForceTableUserGroup(PlcWatchAndForceTableGroup): # skipped bases: <type 'IEngineeringObject'>, <type 'IEngineeringInstance'>, <type 'IInternalBaseAccess'>, <type 'IInternalObjectAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'IEquatable[object]'>, <type 'object'>
     """ User group containing Plc watch tables """
     def Delete(self): # ->
         """
@@ -445,7 +391,7 @@ class PlcWatchAndForceTableUserGroup(PlcWatchAndForceTableGroup): # skipped base
         ...
 
 
-class PlcWatchAndForceTableUserGroupComposition(IInternalCompositionAccess, IEngineeringComposition, IEquatable): # skipped bases: <type 'IEngineeringInstance'>, <type 'IEnumerable'>, <type 'IInternalBaseAccess'>, <type 'IInternalCollectionAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'object'>
+class PlcWatchAndForceTableUserGroupComposition(IInternalCompositionAccess, IEngineeringComposition, IEquatable): # skipped bases: <type 'IEnumerable'>, <type 'IEngineeringInstance'>, <type 'IInternalBaseAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'IInternalCollectionAccess'>, <type 'object'>
     """ Composition of PlcWatchTableUserGroups """
     @property
     def Parent(self) -> IEngineeringObject:
@@ -509,7 +455,7 @@ class PlcWatchAndForceTableUserGroupComposition(IInternalCompositionAccess, IEng
         ...
 
 
-class PlcWatchTable(IShowable, IEngineeringObject, IEquatable, IInternalObjectAccess): # skipped bases: <type 'IEngineeringCompositionOrObject'>, <type 'IInternalBaseAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringInstance'>, <type 'object'>
+class PlcWatchTable(IShowable, IEngineeringObject, IEquatable, IInternalObjectAccess): # skipped bases: <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'IEngineeringInstance'>, <type 'IInternalBaseAccess'>, <type 'object'>
     """ Represents a Plc watch table """
     @property
     def Entries(self) -> PlcTableCommentEntryComposition:
@@ -592,7 +538,7 @@ class PlcWatchTable(IShowable, IEngineeringObject, IEquatable, IInternalObjectAc
         ...
 
 
-class PlcWatchTableComposition(IInternalCompositionAccess, IEngineeringComposition, IEquatable): # skipped bases: <type 'IEngineeringInstance'>, <type 'IEnumerable'>, <type 'IInternalBaseAccess'>, <type 'IInternalCollectionAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'object'>
+class PlcWatchTableComposition(IInternalCompositionAccess, IEngineeringComposition, IEquatable): # skipped bases: <type 'IEnumerable'>, <type 'IEngineeringInstance'>, <type 'IInternalBaseAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'IInternalCollectionAccess'>, <type 'object'>
     """ Composition of PlcWatchTables """
     @property
     def Parent(self) -> IEngineeringObject:
@@ -658,67 +604,6 @@ class PlcWatchTableComposition(IInternalCompositionAccess, IEngineeringCompositi
         ...
 
 
-class PlcWatchTableEntry(PlcTableCommentEntry): # skipped bases: <type 'IInternalObjectAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'IEquatable[object]'>, <type 'IEngineeringObject'>, <type 'IInternalBaseAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringInstance'>, <type 'object'>
+class PlcWatchTableEntry(PlcTableCommentEntry): # skipped bases: <type 'IEngineeringObject'>, <type 'IEngineeringInstance'>, <type 'IInternalBaseAccess'>, <type 'IInternalObjectAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'IEquatable[object]'>, <type 'object'>
     """ Represents a Plc watch table entry """
-    @property
-    def Address(self) -> str:
-        """
-        Address
-
-        Get: Address(self: PlcWatchTableEntry) -> str
-        """
-        ...
-
-    @property
-    def DisplayFormat(self) -> PlcWatchAndForceTableDisplayFormat:
-        """
-        DisplayFormat
-
-        Get: DisplayFormat(self: PlcWatchTableEntry) -> PlcWatchAndForceTableDisplayFormat
-        """
-        ...
-
-    @property
-    def ModifyIntention(self) -> bool:
-        """
-        The user's modify intention
-
-        Get: ModifyIntention(self: PlcWatchTableEntry) -> bool
-        """
-        ...
-
-    @property
-    def ModifyTrigger(self) -> PlcWatchAndForceTablePreDefinedTrigger:
-        """
-        The trigger used for modify
-
-        Get: ModifyTrigger(self: PlcWatchTableEntry) -> PlcWatchAndForceTablePreDefinedTrigger
-        """
-        ...
-
-    @property
-    def ModifyValue(self) -> str:
-        """
-        The value that shall be used for modify.
-
-        Get: ModifyValue(self: PlcWatchTableEntry) -> str
-        """
-        ...
-
-    @property
-    def MonitorTrigger(self) -> PlcWatchAndForceTablePreDefinedTrigger:
-        """
-        The trigger used for monitoring.
-
-        Get: MonitorTrigger(self: PlcWatchTableEntry) -> PlcWatchAndForceTablePreDefinedTrigger
-        """
-        ...
-
-    @property
-    def Name(self) -> str:
-        """
-        Name
-
-        Get: Name(self: PlcWatchTableEntry) -> str
-        """
-        ...
+    pass

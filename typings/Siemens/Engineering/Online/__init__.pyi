@@ -1,6 +1,6 @@
 # encoding: utf-8
 # module Siemens.Engineering.Online calls itself Online
-# from Siemens.Engineering, Version=17.0.0.0, Culture=neutral, PublicKeyToken=d29ec89bac048f84, Siemens.Engineering.AddIn, Version=17.0.0.0, Culture=neutral, PublicKeyToken=65b871d8372d6a8f
+# from Siemens.Engineering, Version=16.0.0.0, Culture=neutral, PublicKeyToken=d29ec89bac048f84, Siemens.Engineering.AddIn, Version=16.0.0.0, Culture=neutral, PublicKeyToken=65b871d8372d6a8f
 # by generator 1.145
 """ no doc """
 from __future__ import annotations
@@ -13,8 +13,6 @@ from Siemens.Engineering.Online.Configurations import OnlineConfiguration
 from System import (AsyncCallback, Enum, IAsyncResult, IEquatable,
     MulticastDelegate)
 
-from System.Security import SecureString
-
 """The following names are not found in the module: (IInternalObjectAccess,
     field#)
 """
@@ -24,7 +22,7 @@ from Siemens import IInternalObjectAccess
 # no functions
 # classes
 
-class OnlineConfigurationDelegate(MulticastDelegate): # skipped bases: <type 'ICloneable'>, <type 'ISerializable'>, <type 'object'>
+class OnlineConfigurationDelegate(MulticastDelegate): # skipped bases: <type 'ISerializable'>, <type 'ICloneable'>, <type 'object'>
     """
     Delegate for OnlineConfiguration callbacks
 
@@ -43,7 +41,7 @@ class OnlineConfigurationDelegate(MulticastDelegate): # skipped bases: <type 'IC
         ...
 
 
-class OnlineProvider(IEquatable, IEngineeringObject, IEngineeringService, IInternalObjectAccess): # skipped bases: <type 'IEngineeringCompositionOrObject'>, <type 'IInternalBaseAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringInstance'>, <type 'object'>
+class OnlineProvider(IEquatable, IEngineeringObject, IEngineeringService, IInternalObjectAccess): # skipped bases: <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'IEngineeringInstance'>, <type 'IInternalBaseAccess'>, <type 'object'>
     """ Service provider for online behaviors """
     @property
     def Configuration(self) -> ConnectionConfiguration:
@@ -101,24 +99,6 @@ class OnlineProvider(IEquatable, IEngineeringObject, IEngineeringService, IInter
         """
         ...
 
-    def ResetPlcMasterSecret(self): # ->
-        """
-        ResetPlcMasterSecret(self: OnlineProvider)
-
-            Delete the Plc Master Secret
-        """
-        ...
-
-    def SetPlcMasterSecret(self, securePassword:SecureString): # ->
-        """
-        SetPlcMasterSecret(self: OnlineProvider, securePassword: SecureString)
-
-            Performs the reset of the plc master secure password
-
-            securePassword: The new master secret. If the password is NULL the master secret will be deleted.
-        """
-        ...
-
     def ToString(self) -> str:
         """
         ToString(self: OnlineProvider) -> str
@@ -133,7 +113,7 @@ class OnlineProvider(IEquatable, IEngineeringObject, IEngineeringService, IInter
         ...
 
 
-class OnlineState(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class OnlineState(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     The list of possible online states
 
@@ -149,7 +129,7 @@ class OnlineState(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormatta
     value__ = ...
 
 
-class RHOnlineProvider(IEquatable, IEngineeringService, IInternalObjectAccess): # skipped bases: <type 'IInternalBaseAccess'>, <type 'IInternalInstanceAccess'>, <type 'object'>
+class RHOnlineProvider(IEquatable, IEngineeringService, IInternalObjectAccess): # skipped bases: <type 'IInternalInstanceAccess'>, <type 'IInternalBaseAccess'>, <type 'object'>
     """ Service provides online functionality for R/H systems """
     @property
     def BackupState(self) -> OnlineState:

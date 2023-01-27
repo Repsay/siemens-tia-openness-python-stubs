@@ -1,6 +1,6 @@
 # encoding: utf-8
 # module Siemens.Engineering.SW.TechnologicalObjects calls itself TechnologicalObjects
-# from Siemens.Engineering, Version=17.0.0.0, Culture=neutral, PublicKeyToken=d29ec89bac048f84, Siemens.Engineering.AddIn, Version=17.0.0.0, Culture=neutral, PublicKeyToken=65b871d8372d6a8f
+# from Siemens.Engineering, Version=16.0.0.0, Culture=neutral, PublicKeyToken=d29ec89bac048f84, Siemens.Engineering.AddIn, Version=16.0.0.0, Culture=neutral, PublicKeyToken=65b871d8372d6a8f
 # by generator 1.145
 """ no doc """
 from __future__ import annotations
@@ -28,7 +28,7 @@ from Siemens import IInternalAssociationAccess, IInternalCompositionAccess, IInt
 # no functions
 # classes
 
-class TechnologicalInstanceDB(InstanceDB): # skipped bases: <type 'IInternalObjectAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'IEquatable[object]'>, <type 'IShowable'>, <type 'IEngineeringServiceProvider'>, <type 'IServiceProvider'>, <type 'IMasterCopySource'>, <type 'IEngineeringObject'>, <type 'IInternalBaseAccess'>, <type 'IGenerateSource'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringInstance'>, <type 'object'>
+class TechnologicalInstanceDB(InstanceDB): # skipped bases: <type 'IEngineeringObject'>, <type 'IServiceProvider'>, <type 'IInternalBaseAccess'>, <type 'IGenerateSource'>, <type 'IInternalObjectAccess'>, <type 'IMasterCopySource'>, <type 'IEquatable[object]'>, <type 'IShowable'>, <type 'IEngineeringServiceProvider'>, <type 'IEngineeringInstance'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'object'>
     """ Instance of a technological DB """
     @property
     def Name(self) -> str:
@@ -84,7 +84,7 @@ class TechnologicalInstanceDB(InstanceDB): # skipped bases: <type 'IInternalObje
         ...
 
 
-class TechnologicalInstanceDBAssociation(IEquatable, IEngineeringAssociation, IInternalAssociationAccess): # skipped bases: <type 'IInternalBaseAccess'>, <type 'IEnumerable'>, <type 'IInternalCollectionAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringInstance'>, <type 'object'>
+class TechnologicalInstanceDBAssociation(IEquatable, IEngineeringAssociation, IInternalAssociationAccess): # skipped bases: <type 'IInternalCollectionAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEnumerable'>, <type 'IEngineeringInstance'>, <type 'IInternalBaseAccess'>, <type 'object'>
     """ TO Association """
     @property
     def Parent(self) -> IEngineeringObject:
@@ -150,7 +150,7 @@ class TechnologicalInstanceDBAssociation(IEquatable, IEngineeringAssociation, II
         ...
 
 
-class TechnologicalInstanceDBComposition(IInternalCompositionAccess, IEngineeringComposition, IEquatable): # skipped bases: <type 'IEngineeringInstance'>, <type 'IEnumerable'>, <type 'IInternalBaseAccess'>, <type 'IInternalCollectionAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'object'>
+class TechnologicalInstanceDBComposition(IInternalCompositionAccess, IEngineeringComposition, IEquatable): # skipped bases: <type 'IEnumerable'>, <type 'IEngineeringInstance'>, <type 'IInternalBaseAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'IInternalCollectionAccess'>, <type 'object'>
     """ TO composition """
     @property
     def Parent(self) -> IEngineeringObject:
@@ -228,7 +228,7 @@ class TechnologicalInstanceDBComposition(IInternalCompositionAccess, IEngineerin
         ...
 
 
-class TechnologicalInstanceDBGroup(IEquatable, IEngineeringObject, IEngineeringServiceProvider, IInternalObjectAccess): # skipped bases: <type 'IEngineeringCompositionOrObject'>, <type 'IInternalBaseAccess'>, <type 'IServiceProvider'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringInstance'>, <type 'object'>
+class TechnologicalInstanceDBGroup(IEquatable, IEngineeringObject, IEngineeringServiceProvider, IInternalObjectAccess): # skipped bases: <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'IServiceProvider'>, <type 'IEngineeringInstance'>, <type 'IInternalBaseAccess'>, <type 'object'>
     """ Contains Technological Objects """
     @property
     def Name(self) -> str:
@@ -282,11 +282,11 @@ class TechnologicalInstanceDBGroup(IEquatable, IEngineeringObject, IEngineeringS
         ...
 
 
-class TechnologicalInstanceDBSystemGroup(TechnologicalInstanceDBGroup): # skipped bases: <type 'IEngineeringCompositionOrObject'>, <type 'IInternalObjectAccess'>, <type 'IEquatable[object]'>, <type 'IEngineeringServiceProvider'>, <type 'IEngineeringObject'>, <type 'IInternalBaseAccess'>, <type 'IServiceProvider'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringInstance'>, <type 'object'>
+class TechnologicalInstanceDBSystemGroup(TechnologicalInstanceDBGroup): # skipped bases: <type 'IEngineeringServiceProvider'>, <type 'IEngineeringObject'>, <type 'IServiceProvider'>, <type 'IEngineeringInstance'>, <type 'IInternalBaseAccess'>, <type 'IInternalObjectAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'IEquatable[object]'>, <type 'object'>
     """ Contains Technological Objects """
     pass
 
-class TechnologicalParameter(IEquatable, IEngineeringObject, IInternalObjectAccess): # skipped bases: <type 'IEngineeringCompositionOrObject'>, <type 'IInternalBaseAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringInstance'>, <type 'object'>
+class TechnologicalParameter(IEquatable, IEngineeringObject, IInternalObjectAccess): # skipped bases: <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'IEngineeringInstance'>, <type 'IInternalBaseAccess'>, <type 'object'>
     """ Represenst a technological parameter """
     @property
     def Name(self) -> str:
@@ -342,7 +342,7 @@ class TechnologicalParameter(IEquatable, IEngineeringObject, IInternalObjectAcce
         ...
 
 
-class TechnologicalParameterComposition(IInternalCompositionAccess, IEngineeringComposition, IEquatable): # skipped bases: <type 'IEngineeringInstance'>, <type 'IEnumerable'>, <type 'IInternalBaseAccess'>, <type 'IInternalCollectionAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'object'>
+class TechnologicalParameterComposition(IInternalCompositionAccess, IEngineeringComposition, IEquatable): # skipped bases: <type 'IEnumerable'>, <type 'IEngineeringInstance'>, <type 'IInternalBaseAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'IInternalCollectionAccess'>, <type 'object'>
     """ Parameter composition """
     @property
     def Parent(self) -> IEngineeringObject:

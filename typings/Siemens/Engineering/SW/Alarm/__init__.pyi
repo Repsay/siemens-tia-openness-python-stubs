@@ -1,11 +1,11 @@
 # encoding: utf-8
 # module Siemens.Engineering.SW.Alarm calls itself Alarm
-# from Siemens.Engineering, Version=17.0.0.0, Culture=neutral, PublicKeyToken=d29ec89bac048f84, Siemens.Engineering.AddIn, Version=17.0.0.0, Culture=neutral, PublicKeyToken=65b871d8372d6a8f
+# from Siemens.Engineering, Version=16.0.0.0, Culture=neutral, PublicKeyToken=d29ec89bac048f84, Siemens.Engineering.AddIn, Version=16.0.0.0, Culture=neutral, PublicKeyToken=65b871d8372d6a8f
 # by generator 1.145
 """ no doc """
 from __future__ import annotations
-from Siemens.Engineering import (IEngineeringComposition, IEngineeringObject,
-    IEngineeringService, ImportOptions)
+from Siemens.Engineering import (IEngineeringObject, IEngineeringService,
+    ImportOptions)
 
 from System import Enum, IEquatable
 
@@ -13,254 +13,16 @@ from System.Collections import IEnumerable
 
 from System.IO import FileInfo
 
-"""The following names are not found in the module: (
-    IInternalCompositionAccess, IInternalObjectAccess, field#)
+"""The following names are not found in the module: (IInternalObjectAccess,
+    field#)
 """
 
-from Siemens import IInternalCompositionAccess, IInternalObjectAccess
+from Siemens import IInternalObjectAccess
 
 # no functions
 # classes
 
-class AlarmClassDataProvider(IEquatable, IEngineeringObject, IEngineeringService, IInternalObjectAccess): # skipped bases: <type 'IEngineeringCompositionOrObject'>, <type 'IInternalBaseAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringInstance'>, <type 'object'>
-    """ Common alarm classes """
-    @property
-    def Parent(self) -> IEngineeringObject:
-        """
-        EOM parent of this object
-
-        Get: Parent(self: AlarmClassDataProvider) -> IEngineeringObject
-        """
-        ...
-
-
-    def Export(self, path:FileInfo) -> AlarmClassExportImportResult:
-        """
-        Export(self: AlarmClassDataProvider, path: FileInfo) -> AlarmClassExportImportResult
-
-            Exports common alarm classes to a file
-
-            path: Path for alarm class export
-
-            Returns: Siemens.Engineering.SW.Alarm.AlarmClassExportImportResult
-        """
-        ...
-
-    def GetHashCode(self) -> int:
-        """
-        GetHashCode(self: AlarmClassDataProvider) -> int
-
-            Returns a hash code for this instance.
-
-            Returns: A hash code for this instance, suitable for use in hashing algorithms and data structures like a hash table.
-        """
-        ...
-
-    def Import(self, path:FileInfo) -> AlarmClassExportImportResult:
-        """
-        Import(self: AlarmClassDataProvider, path: FileInfo) -> AlarmClassExportImportResult
-
-            Imports common alarm classes from file
-
-            path: Path to import common alarm classes from
-
-            Returns: Siemens.Engineering.SW.Alarm.AlarmClassExportImportResult
-        """
-        ...
-
-    def ToString(self) -> str:
-        """
-        ToString(self: AlarmClassDataProvider) -> str
-
-            Returns a System.String that represents the current System.Object.
-
-            Returns: A System.String that represents the current System.Object.
-        """
-        ...
-
-    def __ne__(self, *args): #cannot find CLR method
-        ...
-
-
-class AlarmClassExportImportResult(IEquatable, IEngineeringObject, IInternalObjectAccess): # skipped bases: <type 'IEngineeringCompositionOrObject'>, <type 'IInternalBaseAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringInstance'>, <type 'object'>
-    """ Result of an alarm class export or import """
-    @property
-    def ErrorCount(self) -> int:
-        """
-        Number of errors occured during the process
-
-        Get: ErrorCount(self: AlarmClassExportImportResult) -> int
-        """
-        ...
-
-    @property
-    def Messages(self) -> AlarmClassExportImportResultMessageComposition:
-        """
-        Messages of the alarm class export/import
-
-        Get: Messages(self: AlarmClassExportImportResult) -> AlarmClassExportImportResultMessageComposition
-        """
-        ...
-
-    @property
-    def Parent(self) -> IEngineeringObject:
-        """
-        EOM parent of this object
-
-        Get: Parent(self: AlarmClassExportImportResult) -> IEngineeringObject
-        """
-        ...
-
-    @property
-    def State(self) -> AlarmClassExportImportResultState:
-        """
-        Result state of the process
-
-        Get: State(self: AlarmClassExportImportResult) -> AlarmClassExportImportResultState
-        """
-        ...
-
-    @property
-    def WarningCount(self) -> int:
-        """
-        Number of warnings created during the process
-
-        Get: WarningCount(self: AlarmClassExportImportResult) -> int
-        """
-        ...
-
-
-    def GetHashCode(self) -> int:
-        """
-        GetHashCode(self: AlarmClassExportImportResult) -> int
-
-            Returns a hash code for this instance.
-
-            Returns: A hash code for this instance, suitable for use in hashing algorithms and data structures like a hash table.
-        """
-        ...
-
-    def ToString(self) -> str:
-        """
-        ToString(self: AlarmClassExportImportResult) -> str
-
-            Returns a System.String that represents the current System.Object.
-
-            Returns: A System.String that represents the current System.Object.
-        """
-        ...
-
-    def __ne__(self, *args): #cannot find CLR method
-        ...
-
-
-class AlarmClassExportImportResultMessage(IEquatable, IEngineeringObject, IInternalObjectAccess): # skipped bases: <type 'IEngineeringCompositionOrObject'>, <type 'IInternalBaseAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringInstance'>, <type 'object'>
-    """ Messages generated during alarm class export/import """
-    @property
-    def Message(self) -> str:
-        """
-        Description of an error or warning
-
-        Get: Message(self: AlarmClassExportImportResultMessage) -> str
-        """
-        ...
-
-    @property
-    def Parent(self) -> IEngineeringObject:
-        """
-        EOM parent of this object
-
-        Get: Parent(self: AlarmClassExportImportResultMessage) -> IEngineeringObject
-        """
-        ...
-
-    @property
-    def State(self) -> AlarmClassExportImportResultState:
-        """
-        State of the message
-
-        Get: State(self: AlarmClassExportImportResultMessage) -> AlarmClassExportImportResultState
-        """
-        ...
-
-
-    def GetHashCode(self) -> int:
-        """
-        GetHashCode(self: AlarmClassExportImportResultMessage) -> int
-
-            Returns a hash code for this instance.
-
-            Returns: A hash code for this instance, suitable for use in hashing algorithms and data structures like a hash table.
-        """
-        ...
-
-    def ToString(self) -> str:
-        """
-        ToString(self: AlarmClassExportImportResultMessage) -> str
-
-            Returns a System.String that represents the current System.Object.
-
-            Returns: A System.String that represents the current System.Object.
-        """
-        ...
-
-    def __ne__(self, *args): #cannot find CLR method
-        ...
-
-
-class AlarmClassExportImportResultMessageComposition(IInternalCompositionAccess, IEngineeringComposition, IEquatable): # skipped bases: <type 'IEngineeringInstance'>, <type 'IEnumerable'>, <type 'IInternalBaseAccess'>, <type 'IInternalCollectionAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'object'>
-    """ Collection of alarm class export/import messages """
-    @property
-    def Parent(self) -> IEngineeringObject:
-        """
-        Gets the parent.
-
-        Get: Parent(self: AlarmClassExportImportResultMessageComposition) -> IEngineeringObject
-        """
-        ...
-
-
-    def GetHashCode(self) -> int:
-        """
-        GetHashCode(self: AlarmClassExportImportResultMessageComposition) -> int
-
-            Returns a hash code for this instance.
-
-            Returns: A hash code for this instance, suitable for use in hashing algorithms and data structures like a hash table.
-        """
-        ...
-
-    def ToString(self) -> str:
-        """
-        ToString(self: AlarmClassExportImportResultMessageComposition) -> str
-
-            Returns a System.String that represents the current System.Object.
-
-            Returns: A System.String that represents the current System.Object.
-        """
-        ...
-
-    def __contains__(self, *args): #cannot find CLR method
-        """ __contains__[AlarmClassExportImportResultMessage](enumerable: IEnumerable[AlarmClassExportImportResultMessage], value: AlarmClassExportImportResultMessage) -> bool """
-        ...
-
-    def __ne__(self, *args): #cannot find CLR method
-        ...
-
-
-class AlarmClassExportImportResultState(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
-    """
-    Result state of common alarm class export or import
-
-    enum AlarmClassExportImportResultState, values: Error (2), Success (0), Warning (1)
-    """
-    Error: AlarmClassExportImportResultState = ...
-    Success: AlarmClassExportImportResultState = ...
-    value__ = ...
-    Warning: AlarmClassExportImportResultState = ...
-
-
-class PlcAlarmTextListProvider(IEquatable, IEngineeringObject, IEngineeringService, IInternalObjectAccess): # skipped bases: <type 'IEngineeringCompositionOrObject'>, <type 'IInternalBaseAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringInstance'>, <type 'object'>
+class PlcAlarmTextListProvider(IEquatable, IEngineeringObject, IEngineeringService, IInternalObjectAccess): # skipped bases: <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'IEngineeringInstance'>, <type 'IInternalBaseAccess'>, <type 'object'>
     """ Plc alarm text lists of the PLC or Unit. """
     @property
     def Parent(self) -> IEngineeringObject:
@@ -324,7 +86,7 @@ class PlcAlarmTextListProvider(IEquatable, IEngineeringObject, IEngineeringServi
         ...
 
 
-class PlcAlarmTextProvider(IEquatable, IEngineeringObject, IEngineeringService, IInternalObjectAccess): # skipped bases: <type 'IEngineeringCompositionOrObject'>, <type 'IInternalBaseAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringInstance'>, <type 'object'>
+class PlcAlarmTextProvider(IEquatable, IEngineeringObject, IEngineeringService, IInternalObjectAccess): # skipped bases: <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'IEngineeringInstance'>, <type 'IInternalBaseAccess'>, <type 'object'>
     """ Access to alarm text of the PLC or Unit. """
     @property
     def Parent(self) -> IEngineeringObject:
@@ -368,7 +130,7 @@ class PlcAlarmTextProvider(IEquatable, IEngineeringObject, IEngineeringService, 
         ...
 
 
-class PlcAlarmTextXlsxExportOption(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class PlcAlarmTextXlsxExportOption(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Export content options.
 
@@ -381,7 +143,7 @@ class PlcAlarmTextXlsxExportOption(Enum): # skipped bases: <type 'IComparable'>,
     value__ = ...
 
 
-class PlcAlarmTextXlsxResult(IEquatable, IEngineeringObject, IInternalObjectAccess): # skipped bases: <type 'IEngineeringCompositionOrObject'>, <type 'IInternalBaseAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringInstance'>, <type 'object'>
+class PlcAlarmTextXlsxResult(IEquatable, IEngineeringObject, IInternalObjectAccess): # skipped bases: <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'IEngineeringInstance'>, <type 'IInternalBaseAccess'>, <type 'object'>
     """ Represents an alarm text export or import result. """
     @property
     def LogFilePath(self) -> FileInfo:
@@ -435,7 +197,7 @@ class PlcAlarmTextXlsxResult(IEquatable, IEngineeringObject, IInternalObjectAcce
         ...
 
 
-class PlcAlarmTextXlsxResultState(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class PlcAlarmTextXlsxResultState(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     The state of text lists export or import result.
 
@@ -447,7 +209,7 @@ class PlcAlarmTextXlsxResultState(Enum): # skipped bases: <type 'IComparable'>, 
     Warning: PlcAlarmTextXlsxResultState = ...
 
 
-class TextListXlsxResult(IEquatable, IEngineeringObject, IInternalObjectAccess): # skipped bases: <type 'IEngineeringCompositionOrObject'>, <type 'IInternalBaseAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringInstance'>, <type 'object'>
+class TextListXlsxResult(IEquatable, IEngineeringObject, IInternalObjectAccess): # skipped bases: <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'IEngineeringInstance'>, <type 'IInternalBaseAccess'>, <type 'object'>
     """ Represents a text lists export or import result. """
     @property
     def LogFilePath(self) -> FileInfo:
@@ -501,7 +263,7 @@ class TextListXlsxResult(IEquatable, IEngineeringObject, IInternalObjectAccess):
         ...
 
 
-class TextListXlsxResultState(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class TextListXlsxResultState(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     The state of text lists export or import result.
 
@@ -511,6 +273,3 @@ class TextListXlsxResultState(Enum): # skipped bases: <type 'IComparable'>, <typ
     OK: TextListXlsxResultState = ...
     value__ = ...
     Warning: TextListXlsxResultState = ...
-
-
-# variables with complex values

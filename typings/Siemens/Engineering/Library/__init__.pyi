@@ -1,6 +1,6 @@
 # encoding: utf-8
 # module Siemens.Engineering.Library calls itself Library
-# from Siemens.Engineering, Version=17.0.0.0, Culture=neutral, PublicKeyToken=d29ec89bac048f84, Siemens.Engineering.AddIn, Version=17.0.0.0, Culture=neutral, PublicKeyToken=65b871d8372d6a8f
+# from Siemens.Engineering, Version=16.0.0.0, Culture=neutral, PublicKeyToken=d29ec89bac048f84, Siemens.Engineering.AddIn, Version=16.0.0.0, Culture=neutral, PublicKeyToken=65b871d8372d6a8f
 # by generator 1.145
 """ no doc """
 from __future__ import annotations
@@ -10,10 +10,9 @@ from Siemens.Engineering import (IEngineeringComposition, IEngineeringObject,
 
 from Siemens.Engineering.Library.MasterCopies import MasterCopySystemFolder
 
-from Siemens.Engineering.Library.Types import (CleanUpMode,
-    DeleteUnusedVersionsMode, ForceUpdateMode, HarmonizeProjectOptions,
-    LibraryType, LibraryTypeSystemFolder, LibraryTypeVersion,
-    StructureConflictResolutionMode, UpdateCheckMode, UpdateCheckResult)
+from Siemens.Engineering.Library.Types import (LibraryType,
+    LibraryTypeSystemFolder, LibraryTypeVersion, UpdateCheckMode,
+    UpdateCheckResult)
 
 from Siemens.Engineering.SW import ISoftwareCompareTarget
 
@@ -77,10 +76,6 @@ class ILibrary: # skipped bases: <type 'object'>
         """
         ...
 
-    def HarmonizeProject(self, sourceTypesAndFolders:IEnumerable, harmonizeScope:IEnumerable, harmonizeProjectOptions:HarmonizeProjectOptions): # ->
-        """ HarmonizeProject(self: ILibrary, sourceTypesAndFolders: IEnumerable[ILibraryTypeOrFolderSelection], harmonizeScope: IEnumerable[IUpdateProjectScope], harmonizeProjectOptions: HarmonizeProjectOptions) """
-        ...
-
     def UpdateCheck(self, project:Project, updateCheckMode:UpdateCheckMode) -> UpdateCheckResult:
         """
         UpdateCheck(self: ILibrary, project: Project, updateCheckMode: UpdateCheckMode) -> UpdateCheckResult
@@ -92,21 +87,11 @@ class ILibrary: # skipped bases: <type 'object'>
             updateCheckMode: Used to control whether or not to log out of date instances
 
             Returns: Siemens.Engineering.Library.Types.UpdateCheckResult
-
-        UpdateCheck(self: ILibrary, project: ProjectBase, updateCheckMode: UpdateCheckMode) -> UpdateCheckResult
-
-            Identify all instances in a project that require updating based on the content of this library
-
-            project: The project to be compared with this library
-
-            updateCheckMode: Used to control whether or not to log out of date instances
-
-            Returns: Siemens.Engineering.Library.Types.UpdateCheckResult
         """
         ...
 
-    def UpdateLibrary(self, sourceTypesAndFolders:IEnumerable, targetLibrary:ILibrary, forceUpdateMode:ForceUpdateMode = ..., deleteUnusedVersionsMode:DeleteUnusedVersionsMode = ..., structureConflictResolutionMode:StructureConflictResolutionMode = ...): # ->
-        """ UpdateLibrary(self: ILibrary, sourceTypesAndFolders: IEnumerable[ILibraryTypeOrFolderSelection], targetLibrary: ILibrary)UpdateLibrary(self: ILibrary, sourceTypesAndFolders: IEnumerable[ILibraryTypeOrFolderSelection], targetLibrary: ILibrary, forceUpdateMode: ForceUpdateMode, deleteUnusedVersionsMode: DeleteUnusedVersionsMode, structureConflictResolutionMode: StructureConflictResolutionMode) """
+    def UpdateLibrary(self, sourceTypesAndFolders:IEnumerable, targetLibrary:ILibrary): # ->
+        """ UpdateLibrary(self: ILibrary, sourceTypesAndFolders: IEnumerable[ILibraryTypeOrFolderSelection], targetLibrary: ILibrary) """
         ...
 
     def UpdateProject(self, sourceTypesAndFolders:IEnumerable, updateProjectScopes:IEnumerable): # ->
@@ -114,7 +99,7 @@ class ILibrary: # skipped bases: <type 'object'>
         ...
 
 
-class GlobalLibrary(IInternalObjectAccess, ITransactionSupport, ILibrary, IEngineeringObject, ISoftwareCompareTarget, IEquatable): # skipped bases: <type 'IEngineeringCompositionOrObject'>, <type 'IInternalBaseAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringInstance'>, <type 'object'>
+class GlobalLibrary(IInternalObjectAccess, ITransactionSupport, ILibrary, IEngineeringObject, ISoftwareCompareTarget, IEquatable): # skipped bases: <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'IEngineeringInstance'>, <type 'IInternalBaseAccess'>, <type 'object'>
     """ Represents a global library """
     @property
     def Author(self) -> str:
@@ -213,11 +198,11 @@ class GlobalLibrary(IInternalObjectAccess, ITransactionSupport, ILibrary, IEngin
         ...
 
 
-class CorporateGlobalLibrary(GlobalLibrary): # skipped bases: <type 'IEngineeringCompositionOrObject'>, <type 'IInternalObjectAccess'>, <type 'IEquatable[object]'>, <type 'ILibrary'>, <type 'ITransactionSupport'>, <type 'ISoftwareCompareTarget'>, <type 'IEngineeringObject'>, <type 'IInternalBaseAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringInstance'>, <type 'object'>
+class CorporateGlobalLibrary(GlobalLibrary): # skipped bases: <type 'ISoftwareCompareTarget'>, <type 'ILibrary'>, <type 'IEngineeringObject'>, <type 'IEngineeringInstance'>, <type 'IInternalBaseAccess'>, <type 'IInternalObjectAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'ITransactionSupport'>, <type 'IEquatable[object]'>, <type 'object'>
     """ A corporate global library. """
     pass
 
-class GlobalLibraryComposition(IInternalCompositionAccess, IEngineeringComposition, IEquatable): # skipped bases: <type 'IEngineeringInstance'>, <type 'IEnumerable'>, <type 'IInternalBaseAccess'>, <type 'IInternalCollectionAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'object'>
+class GlobalLibraryComposition(IInternalCompositionAccess, IEngineeringComposition, IEquatable): # skipped bases: <type 'IEnumerable'>, <type 'IEngineeringInstance'>, <type 'IInternalBaseAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'IInternalCollectionAccess'>, <type 'object'>
     """ Composition of GlobalLibraries """
     @property
     def Parent(self) -> IEngineeringObject:
@@ -333,7 +318,7 @@ class GlobalLibraryComposition(IInternalCompositionAccess, IEngineeringCompositi
         ...
 
 
-class GlobalLibraryInfo(IEquatable, IEngineeringObject, IInternalObjectAccess): # skipped bases: <type 'IEngineeringCompositionOrObject'>, <type 'IInternalBaseAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringInstance'>, <type 'object'>
+class GlobalLibraryInfo(IEquatable, IEngineeringObject, IInternalObjectAccess): # skipped bases: <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'IEngineeringInstance'>, <type 'IInternalBaseAccess'>, <type 'object'>
     """ Represents information for a Global Library """
     @property
     def IsOpen(self) -> bool:
@@ -414,7 +399,7 @@ class GlobalLibraryInfo(IEquatable, IEngineeringObject, IInternalObjectAccess): 
         ...
 
 
-class GlobalLibraryType(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class GlobalLibraryType(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Represents the GlobalLibrary Types such as System, User, or Corporate
 
@@ -426,7 +411,7 @@ class GlobalLibraryType(Enum): # skipped bases: <type 'IComparable'>, <type 'IFo
     value__ = ...
 
 
-class LibraryArchivationMode(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class LibraryArchivationMode(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Library archivation modes
 
@@ -438,7 +423,7 @@ class LibraryArchivationMode(Enum): # skipped bases: <type 'IComparable'>, <type
     value__ = ...
 
 
-class ProjectLibrary(IEquatable, IEngineeringObject, ILibrary, ISoftwareCompareTarget, IInternalObjectAccess): # skipped bases: <type 'IEngineeringCompositionOrObject'>, <type 'IInternalBaseAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringInstance'>, <type 'object'>
+class ProjectLibrary(IEquatable, IEngineeringObject, ILibrary, ISoftwareCompareTarget, IInternalObjectAccess): # skipped bases: <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'IEngineeringInstance'>, <type 'IInternalBaseAccess'>, <type 'object'>
     """ Represents the project library """
     @property
     def Parent(self) -> IEngineeringObject:
@@ -449,10 +434,6 @@ class ProjectLibrary(IEquatable, IEngineeringObject, ILibrary, ISoftwareCompareT
         """
         ...
 
-
-    def CleanUpLibrary(self, sourceTypesAndFolders:IEnumerable, cleanUpMode:CleanUpMode): # ->
-        """ CleanUpLibrary(self: ProjectLibrary, sourceTypesAndFolders: IEnumerable[ILibraryTypeOrFolderSelection], cleanUpMode: CleanUpMode) """
-        ...
 
     def GetHashCode(self) -> int:
         """
@@ -478,11 +459,11 @@ class ProjectLibrary(IEquatable, IEngineeringObject, ILibrary, ISoftwareCompareT
         ...
 
 
-class SystemGlobalLibrary(GlobalLibrary): # skipped bases: <type 'IEngineeringCompositionOrObject'>, <type 'IInternalObjectAccess'>, <type 'IEquatable[object]'>, <type 'ILibrary'>, <type 'ITransactionSupport'>, <type 'ISoftwareCompareTarget'>, <type 'IEngineeringObject'>, <type 'IInternalBaseAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringInstance'>, <type 'object'>
+class SystemGlobalLibrary(GlobalLibrary): # skipped bases: <type 'ISoftwareCompareTarget'>, <type 'ILibrary'>, <type 'IEngineeringObject'>, <type 'IEngineeringInstance'>, <type 'IInternalBaseAccess'>, <type 'IInternalObjectAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'ITransactionSupport'>, <type 'IEquatable[object]'>, <type 'object'>
     """ Represents a System Library """
     pass
 
-class UserGlobalLibrary(GlobalLibrary): # skipped bases: <type 'IEngineeringCompositionOrObject'>, <type 'IInternalObjectAccess'>, <type 'IEquatable[object]'>, <type 'ILibrary'>, <type 'ITransactionSupport'>, <type 'ISoftwareCompareTarget'>, <type 'IEngineeringObject'>, <type 'IInternalBaseAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringInstance'>, <type 'object'>
+class UserGlobalLibrary(GlobalLibrary): # skipped bases: <type 'ISoftwareCompareTarget'>, <type 'ILibrary'>, <type 'IEngineeringObject'>, <type 'IEngineeringInstance'>, <type 'IInternalBaseAccess'>, <type 'IInternalObjectAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'ITransactionSupport'>, <type 'IEquatable[object]'>, <type 'object'>
     """ Represents a User Global Library """
     def Archive(self, targetDirectory:DirectoryInfo, targetName:str, archivationMode:LibraryArchivationMode): # ->
         """
@@ -496,10 +477,6 @@ class UserGlobalLibrary(GlobalLibrary): # skipped bases: <type 'IEngineeringComp
 
             archivationMode: Archivation mode
         """
-        ...
-
-    def CleanUpLibrary(self, sourceTypesAndFolders:IEnumerable): # ->
-        """ CleanUpLibrary(self: UserGlobalLibrary, sourceTypesAndFolders: IEnumerable[ILibraryTypeOrFolderSelection]) """
         ...
 
     def Close(self): # ->

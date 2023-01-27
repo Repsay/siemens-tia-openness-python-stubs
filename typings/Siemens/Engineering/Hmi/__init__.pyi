@@ -1,6 +1,6 @@
 # encoding: utf-8
 # module Siemens.Engineering.Hmi calls itself Hmi
-# from Siemens.Engineering, Version=17.0.0.0, Culture=neutral, PublicKeyToken=d29ec89bac048f84, Siemens.Engineering.Hmi, Version=17.0.0.0, Culture=neutral, PublicKeyToken=d29ec89bac048f84, Siemens.Engineering.AddIn, Version=17.0.0.0, Culture=neutral, PublicKeyToken=65b871d8372d6a8f
+# from Siemens.Engineering, Version=16.0.0.0, Culture=neutral, PublicKeyToken=d29ec89bac048f84, Siemens.Engineering.Hmi, Version=16.0.0.0, Culture=neutral, PublicKeyToken=d29ec89bac048f84, Siemens.Engineering.AddIn, Version=16.0.0.0, Culture=neutral, PublicKeyToken=65b871d8372d6a8f
 # by generator 1.145
 """ no doc """
 from __future__ import annotations
@@ -60,7 +60,7 @@ class ConstValue(ILimit): # skipped bases: <type 'object'>
         ...
 
 
-class DateTimeValues(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class DateTimeValues(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     A value indicating the granularity of the data or time (eg. Year, Month, etc.).
     enum (flags) DateTimeValues, values: Day (4), Hour (8), Minute (16), Month (2), None (0), Second (32), Year (1)
@@ -74,7 +74,7 @@ class DateTimeValues(Enum): # skipped bases: <type 'IComparable'>, <type 'IForma
     Year: DateTimeValues = ...
 
 
-class HmiTarget(IInstanceSearchScope, IUpdateProjectScope, IEngineeringServiceProvider, Software): # skipped bases: <type 'IInternalObjectAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'IEquatable[object]'>, <type 'IEngineeringObject'>, <type 'IInternalBaseAccess'>, <type 'IServiceProvider'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringInstance'>, <type 'object'>
+class HmiTarget(IInstanceSearchScope, IUpdateProjectScope, IEngineeringServiceProvider, Software): # skipped bases: <type 'IEngineeringObject'>, <type 'IEngineeringInstance'>, <type 'IInternalBaseAccess'>, <type 'IServiceProvider'>, <type 'IInternalObjectAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'IEquatable[object]'>, <type 'object'>
     """ Represents the target device """
     @property
     def Author(self) -> str:

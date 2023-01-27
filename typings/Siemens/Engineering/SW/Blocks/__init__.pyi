@@ -1,6 +1,6 @@
 # encoding: utf-8
 # module Siemens.Engineering.SW.Blocks calls itself Blocks
-# from Siemens.Engineering, Version=17.0.0.0, Culture=neutral, PublicKeyToken=d29ec89bac048f84, Siemens.Engineering.AddIn, Version=17.0.0.0, Culture=neutral, PublicKeyToken=65b871d8372d6a8f
+# from Siemens.Engineering, Version=16.0.0.0, Culture=neutral, PublicKeyToken=d29ec89bac048f84, Siemens.Engineering.AddIn, Version=16.0.0.0, Culture=neutral, PublicKeyToken=65b871d8372d6a8f
 # by generator 1.145
 """ no doc """
 from __future__ import annotations
@@ -20,8 +20,6 @@ from Siemens.Engineering.SiVArc import ISivarcProgramBlockSource
 
 from Siemens.Engineering.SW import SWImportOptions
 
-from Siemens.Engineering.SW.Blocks.Interface import PlcBlockInterface
-
 from Siemens.Engineering.SW.ExternalSources import IGenerateSource
 
 from System import DateTime, Enum, IEquatable, Version
@@ -39,7 +37,7 @@ from Siemens import IInternalCompositionAccess, IInternalObjectAccess
 # no functions
 # classes
 
-class PlcBlock(IInternalObjectAccess, IEngineeringServiceProvider, IShowable, IEngineeringObject, IGenerateSource, IEquatable): # skipped bases: <type 'IEngineeringCompositionOrObject'>, <type 'IInternalBaseAccess'>, <type 'IServiceProvider'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringInstance'>, <type 'object'>
+class PlcBlock(IInternalObjectAccess, IEngineeringServiceProvider, IShowable, IEngineeringObject, IGenerateSource, IEquatable): # skipped bases: <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'IServiceProvider'>, <type 'IEngineeringInstance'>, <type 'IInternalBaseAccess'>, <type 'object'>
     """ Represents a Plc block """
     @property
     def AutoNumber(self) -> bool:
@@ -265,20 +263,11 @@ class PlcBlock(IInternalObjectAccess, IEngineeringServiceProvider, IShowable, IE
         ...
 
 
-class DataBlock(PlcBlock, IMasterCopySource): # skipped bases: <type 'IEngineeringCompositionOrObject'>, <type 'IShowable'>, <type 'IInternalObjectAccess'>, <type 'IEquatable[object]'>, <type 'IEngineeringServiceProvider'>, <type 'IEngineeringObject'>, <type 'IInternalBaseAccess'>, <type 'IGenerateSource'>, <type 'IServiceProvider'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringInstance'>, <type 'object'>
+class DataBlock(PlcBlock, IMasterCopySource): # skipped bases: <type 'IEquatable[object]'>, <type 'IEngineeringServiceProvider'>, <type 'IEngineeringObject'>, <type 'IServiceProvider'>, <type 'IEngineeringInstance'>, <type 'IInternalBaseAccess'>, <type 'IGenerateSource'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'IInternalObjectAccess'>, <type 'IShowable'>, <type 'object'>
     """ Class representing a data block """
-    @property
-    def Interface(self) -> PlcBlockInterface:
-        """
-        Interface to all members of a block
+    pass
 
-        Get: Interface(self: DataBlock) -> PlcBlockInterface
-        """
-        ...
-
-
-
-class ArrayDB(DataBlock): # skipped bases: <type 'IInternalObjectAccess'>, <type 'IEngineeringInstance'>, <type 'IEquatable[object]'>, <type 'IShowable'>, <type 'IEngineeringServiceProvider'>, <type 'IServiceProvider'>, <type 'IMasterCopySource'>, <type 'IEngineeringObject'>, <type 'IInternalBaseAccess'>, <type 'IGenerateSource'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'object'>
+class ArrayDB(DataBlock): # skipped bases: <type 'IEngineeringObject'>, <type 'IServiceProvider'>, <type 'IInternalBaseAccess'>, <type 'IGenerateSource'>, <type 'IInternalObjectAccess'>, <type 'IShowable'>, <type 'IMasterCopySource'>, <type 'IEquatable[object]'>, <type 'IEngineeringServiceProvider'>, <type 'IEngineeringInstance'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'object'>
     """ Class representing array DBs """
     @property
     def Parent(self) -> IEngineeringObject:
@@ -291,7 +280,7 @@ class ArrayDB(DataBlock): # skipped bases: <type 'IInternalObjectAccess'>, <type
 
 
 
-class BlockType(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class BlockType(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     The list of possible IECPL block types
 
@@ -306,7 +295,7 @@ class BlockType(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattabl
     value__ = ...
 
 
-class CodeBlock(PlcBlock, IMasterCopySource, ISivarcProgramBlockSource): # skipped bases: <type 'IEngineeringCompositionOrObject'>, <type 'IShowable'>, <type 'IInternalObjectAccess'>, <type 'IEquatable[object]'>, <type 'IEngineeringServiceProvider'>, <type 'IEngineeringObject'>, <type 'IInternalBaseAccess'>, <type 'IGenerateSource'>, <type 'IServiceProvider'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringInstance'>, <type 'object'>
+class CodeBlock(PlcBlock, IMasterCopySource, ISivarcProgramBlockSource): # skipped bases: <type 'IEquatable[object]'>, <type 'IEngineeringServiceProvider'>, <type 'IEngineeringObject'>, <type 'IServiceProvider'>, <type 'IEngineeringInstance'>, <type 'IInternalBaseAccess'>, <type 'IGenerateSource'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'IInternalObjectAccess'>, <type 'IShowable'>, <type 'object'>
     """ Class representing a code block """
     def ExportProDIAGInfo(self, path:DirectoryInfo): # ->
         """
@@ -319,15 +308,15 @@ class CodeBlock(PlcBlock, IMasterCopySource, ISivarcProgramBlockSource): # skipp
         ...
 
 
-class CodeBlockLibraryType(LibraryType): # skipped bases: <type 'ILibraryTypeOrFolderSelection'>, <type 'IEngineeringCompositionOrObject'>, <type 'ISivarcLibraryItem'>, <type 'IInternalObjectAccess'>, <type 'IEquatable[object]'>, <type 'IEngineeringObject'>, <type 'IInternalBaseAccess'>, <type 'ISivarcProgramBlockSource'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringInstance'>, <type 'object'>
+class CodeBlockLibraryType(LibraryType): # skipped bases: <type 'IEquatable[object]'>, <type 'IEngineeringObject'>, <type 'IEngineeringInstance'>, <type 'IInternalBaseAccess'>, <type 'IInternalObjectAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'ISivarcLibraryItem'>, <type 'ISivarcProgramBlockSource'>, <type 'ILibraryTypeOrFolderSelection'>, <type 'object'>
     """ Class representing a code block library type """
     pass
 
-class CodeBlockLibraryTypeVersion(LibraryTypeVersion): # skipped bases: <type 'IInternalObjectAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'IEquatable[object]'>, <type 'IEngineeringObject'>, <type 'IInternalBaseAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringInstance'>, <type 'object'>
+class CodeBlockLibraryTypeVersion(LibraryTypeVersion): # skipped bases: <type 'IEngineeringObject'>, <type 'IEngineeringInstance'>, <type 'IInternalBaseAccess'>, <type 'IInternalObjectAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'IEquatable[object]'>, <type 'object'>
     """ Class representing a code block library type version """
     pass
 
-class FB(CodeBlock): # skipped bases: <type 'IInternalObjectAccess'>, <type 'IEngineeringInstance'>, <type 'IEquatable[object]'>, <type 'IShowable'>, <type 'IEngineeringServiceProvider'>, <type 'IServiceProvider'>, <type 'IMasterCopySource'>, <type 'IEngineeringObject'>, <type 'IInternalBaseAccess'>, <type 'ISivarcProgramBlockSource'>, <type 'IGenerateSource'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'object'>
+class FB(CodeBlock): # skipped bases: <type 'IEngineeringObject'>, <type 'IServiceProvider'>, <type 'IInternalBaseAccess'>, <type 'IGenerateSource'>, <type 'IInternalObjectAccess'>, <type 'ISivarcProgramBlockSource'>, <type 'IShowable'>, <type 'IMasterCopySource'>, <type 'IEquatable[object]'>, <type 'IEngineeringServiceProvider'>, <type 'IEngineeringInstance'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'object'>
     """ Represents an FB """
     @property
     def Parent(self) -> IEngineeringObject:
@@ -349,7 +338,7 @@ class FB(CodeBlock): # skipped bases: <type 'IInternalObjectAccess'>, <type 'IEn
 
 
 
-class FC(CodeBlock): # skipped bases: <type 'IInternalObjectAccess'>, <type 'IEngineeringInstance'>, <type 'IEquatable[object]'>, <type 'IShowable'>, <type 'IEngineeringServiceProvider'>, <type 'IServiceProvider'>, <type 'IMasterCopySource'>, <type 'IEngineeringObject'>, <type 'IInternalBaseAccess'>, <type 'ISivarcProgramBlockSource'>, <type 'IGenerateSource'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'object'>
+class FC(CodeBlock): # skipped bases: <type 'IEngineeringObject'>, <type 'IServiceProvider'>, <type 'IInternalBaseAccess'>, <type 'IGenerateSource'>, <type 'IInternalObjectAccess'>, <type 'ISivarcProgramBlockSource'>, <type 'IShowable'>, <type 'IMasterCopySource'>, <type 'IEquatable[object]'>, <type 'IEngineeringServiceProvider'>, <type 'IEngineeringInstance'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'object'>
     """ Represents an FC """
     @property
     def Parent(self) -> IEngineeringObject:
@@ -362,7 +351,7 @@ class FC(CodeBlock): # skipped bases: <type 'IInternalObjectAccess'>, <type 'IEn
 
 
 
-class GlobalDB(DataBlock): # skipped bases: <type 'IInternalObjectAccess'>, <type 'IEngineeringInstance'>, <type 'IEquatable[object]'>, <type 'IShowable'>, <type 'IEngineeringServiceProvider'>, <type 'IServiceProvider'>, <type 'IMasterCopySource'>, <type 'IEngineeringObject'>, <type 'IInternalBaseAccess'>, <type 'IGenerateSource'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'object'>
+class GlobalDB(DataBlock): # skipped bases: <type 'IEngineeringObject'>, <type 'IServiceProvider'>, <type 'IInternalBaseAccess'>, <type 'IGenerateSource'>, <type 'IInternalObjectAccess'>, <type 'IShowable'>, <type 'IMasterCopySource'>, <type 'IEquatable[object]'>, <type 'IEngineeringServiceProvider'>, <type 'IEngineeringInstance'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'object'>
     """ Represents a global DB """
     @property
     def Parent(self) -> IEngineeringObject:
@@ -375,7 +364,7 @@ class GlobalDB(DataBlock): # skipped bases: <type 'IInternalObjectAccess'>, <typ
 
 
 
-class InstanceDB(DataBlock): # skipped bases: <type 'IInternalObjectAccess'>, <type 'IEngineeringInstance'>, <type 'IEquatable[object]'>, <type 'IShowable'>, <type 'IEngineeringServiceProvider'>, <type 'IServiceProvider'>, <type 'IMasterCopySource'>, <type 'IEngineeringObject'>, <type 'IInternalBaseAccess'>, <type 'IGenerateSource'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'object'>
+class InstanceDB(DataBlock): # skipped bases: <type 'IEngineeringObject'>, <type 'IServiceProvider'>, <type 'IInternalBaseAccess'>, <type 'IGenerateSource'>, <type 'IInternalObjectAccess'>, <type 'IShowable'>, <type 'IMasterCopySource'>, <type 'IEquatable[object]'>, <type 'IEngineeringServiceProvider'>, <type 'IEngineeringInstance'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'object'>
     """ Represents an instance DB """
     @property
     def InstanceOfName(self): # ->
@@ -397,7 +386,7 @@ class InstanceDB(DataBlock): # skipped bases: <type 'IInternalObjectAccess'>, <t
 
 
 
-class InterfaceSnapshot(IEquatable, IEngineeringObject, IEngineeringService, IInternalObjectAccess): # skipped bases: <type 'IEngineeringCompositionOrObject'>, <type 'IInternalBaseAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringInstance'>, <type 'object'>
+class InterfaceSnapshot(IEquatable, IEngineeringObject, IEngineeringService, IInternalObjectAccess): # skipped bases: <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'IEngineeringInstance'>, <type 'IInternalBaseAccess'>, <type 'object'>
     """ Provides Snapshot Value functionality. """
     @property
     def Parent(self) -> IEngineeringObject:
@@ -445,7 +434,7 @@ class InterfaceSnapshot(IEquatable, IEngineeringObject, IEngineeringService, IIn
         ...
 
 
-class MemoryLayout(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class MemoryLayout(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Determines if a block access is optimized or not
 
@@ -456,7 +445,7 @@ class MemoryLayout(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormatt
     value__ = ...
 
 
-class OB(CodeBlock): # skipped bases: <type 'IInternalObjectAccess'>, <type 'IEngineeringInstance'>, <type 'IEquatable[object]'>, <type 'IShowable'>, <type 'IEngineeringServiceProvider'>, <type 'IServiceProvider'>, <type 'IMasterCopySource'>, <type 'IEngineeringObject'>, <type 'IInternalBaseAccess'>, <type 'ISivarcProgramBlockSource'>, <type 'IGenerateSource'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'object'>
+class OB(CodeBlock): # skipped bases: <type 'IEngineeringObject'>, <type 'IServiceProvider'>, <type 'IInternalBaseAccess'>, <type 'IGenerateSource'>, <type 'IInternalObjectAccess'>, <type 'ISivarcProgramBlockSource'>, <type 'IShowable'>, <type 'IMasterCopySource'>, <type 'IEquatable[object]'>, <type 'IEngineeringServiceProvider'>, <type 'IEngineeringInstance'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'object'>
     """ Represents an OB """
     @property
     def Parent(self) -> IEngineeringObject:
@@ -478,7 +467,7 @@ class OB(CodeBlock): # skipped bases: <type 'IInternalObjectAccess'>, <type 'IEn
 
 
 
-class OBDataExchangeMode(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class OBDataExchangeMode(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Enum for OBDataExchangeMode
 
@@ -489,7 +478,7 @@ class OBDataExchangeMode(Enum): # skipped bases: <type 'IComparable'>, <type 'IF
     value__ = ...
 
 
-class OBExecution(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class OBExecution(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Enum for Execution
 
@@ -507,7 +496,7 @@ class OBExecution(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormatta
     Yearly: OBExecution = ...
 
 
-class OBTimeMode(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class OBTimeMode(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Enum for TimeMode
 
@@ -518,7 +507,7 @@ class OBTimeMode(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattab
     value__ = ...
 
 
-class PlcBlockComposition(IInternalCompositionAccess, IEngineeringComposition, IEquatable): # skipped bases: <type 'IEngineeringInstance'>, <type 'IEnumerable'>, <type 'IInternalBaseAccess'>, <type 'IInternalCollectionAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'object'>
+class PlcBlockComposition(IInternalCompositionAccess, IEngineeringComposition, IEquatable): # skipped bases: <type 'IEnumerable'>, <type 'IEngineeringInstance'>, <type 'IInternalBaseAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'IInternalCollectionAccess'>, <type 'object'>
     """ Composition of PlcBlocks """
     @property
     def Parent(self) -> IEngineeringObject:
@@ -572,7 +561,7 @@ class PlcBlockComposition(IInternalCompositionAccess, IEngineeringComposition, I
         """
         CreateInstanceDB(self: PlcBlockComposition, name: str, isAutoNumbered: bool, number: int, instanceOfName: str) -> InstanceDB
 
-            Creates an instance DB.
+            Creates an instance DB for Prodiag block.
 
             name: Name of the block.
 
@@ -652,7 +641,7 @@ class PlcBlockComposition(IInternalCompositionAccess, IEngineeringComposition, I
         ...
 
 
-class PlcBlockGroup(IEquatable, IEngineeringObject, IEngineeringServiceProvider, IInternalObjectAccess): # skipped bases: <type 'IEngineeringCompositionOrObject'>, <type 'IInternalBaseAccess'>, <type 'IServiceProvider'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringInstance'>, <type 'object'>
+class PlcBlockGroup(IEquatable, IEngineeringObject, IEngineeringServiceProvider, IInternalObjectAccess): # skipped bases: <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'IServiceProvider'>, <type 'IEngineeringInstance'>, <type 'IInternalBaseAccess'>, <type 'object'>
     """ Group containing Plc blocks & Plc block user groups """
     @property
     def Blocks(self) -> PlcBlockComposition:
@@ -715,7 +704,7 @@ class PlcBlockGroup(IEquatable, IEngineeringObject, IEngineeringServiceProvider,
         ...
 
 
-class PlcBlockProtectionProvider(ProtectionProviderBase): # skipped bases: <type 'IInternalObjectAccess'>, <type 'IInternalBaseAccess'>, <type 'IEquatable[object]'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringService'>, <type 'object'>
+class PlcBlockProtectionProvider(ProtectionProviderBase): # skipped bases: <type 'IEquatable[object]'>, <type 'IInternalObjectAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringService'>, <type 'IInternalBaseAccess'>, <type 'object'>
     """ Provides protection services. """
     @property
     def Parent(self) -> IEngineeringObject:
@@ -728,7 +717,7 @@ class PlcBlockProtectionProvider(ProtectionProviderBase): # skipped bases: <type
 
 
 
-class PlcBlockSystemGroup(PlcBlockGroup, ILibraryTypeInstantiationTarget, IMasterCopyTarget): # skipped bases: <type 'IEngineeringCompositionOrObject'>, <type 'IInternalObjectAccess'>, <type 'IEquatable[object]'>, <type 'IEngineeringServiceProvider'>, <type 'IEngineeringObject'>, <type 'IInternalBaseAccess'>, <type 'IServiceProvider'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringInstance'>, <type 'object'>
+class PlcBlockSystemGroup(PlcBlockGroup, ILibraryTypeInstantiationTarget, IMasterCopyTarget): # skipped bases: <type 'IEngineeringServiceProvider'>, <type 'IEngineeringObject'>, <type 'IServiceProvider'>, <type 'IEngineeringInstance'>, <type 'IInternalBaseAccess'>, <type 'IInternalObjectAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'IEquatable[object]'>, <type 'object'>
     """ System group containing Plc blocks & Plc block user groups """
     @property
     def SystemBlockGroups(self) -> PlcSystemBlockGroupComposition:
@@ -741,7 +730,7 @@ class PlcBlockSystemGroup(PlcBlockGroup, ILibraryTypeInstantiationTarget, IMaste
 
 
 
-class PlcBlockUserGroup(PlcBlockGroup, ILibraryTypeInstantiationTarget, IMasterCopySource, IMasterCopyTarget): # skipped bases: <type 'IEngineeringCompositionOrObject'>, <type 'IInternalObjectAccess'>, <type 'IEquatable[object]'>, <type 'IEngineeringServiceProvider'>, <type 'IEngineeringObject'>, <type 'IInternalBaseAccess'>, <type 'IServiceProvider'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringInstance'>, <type 'object'>
+class PlcBlockUserGroup(PlcBlockGroup, ILibraryTypeInstantiationTarget, IMasterCopySource, IMasterCopyTarget): # skipped bases: <type 'IEngineeringServiceProvider'>, <type 'IEngineeringObject'>, <type 'IServiceProvider'>, <type 'IEngineeringInstance'>, <type 'IInternalBaseAccess'>, <type 'IInternalObjectAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'IEquatable[object]'>, <type 'object'>
     """ User group containing Plc blocks & Plc block user groups """
     def Delete(self): # ->
         """
@@ -752,7 +741,7 @@ class PlcBlockUserGroup(PlcBlockGroup, ILibraryTypeInstantiationTarget, IMasterC
         ...
 
 
-class PlcBlockUserGroupComposition(IInternalCompositionAccess, IEngineeringComposition, IEquatable): # skipped bases: <type 'IEngineeringInstance'>, <type 'IEnumerable'>, <type 'IInternalBaseAccess'>, <type 'IInternalCollectionAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'object'>
+class PlcBlockUserGroupComposition(IInternalCompositionAccess, IEngineeringComposition, IEquatable): # skipped bases: <type 'IEnumerable'>, <type 'IEngineeringInstance'>, <type 'IInternalBaseAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'IInternalCollectionAccess'>, <type 'object'>
     """ Composition of PlcBlockUserGroups """
     @property
     def Parent(self) -> IEngineeringObject:
@@ -816,7 +805,7 @@ class PlcBlockUserGroupComposition(IInternalCompositionAccess, IEngineeringCompo
         ...
 
 
-class PlcSystemBlockGroup(IEquatable, IEngineeringObject, IInternalObjectAccess): # skipped bases: <type 'IEngineeringCompositionOrObject'>, <type 'IInternalBaseAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringInstance'>, <type 'object'>
+class PlcSystemBlockGroup(IEquatable, IEngineeringObject, IInternalObjectAccess): # skipped bases: <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'IEngineeringInstance'>, <type 'IInternalBaseAccess'>, <type 'object'>
     """ Group containing Plc system blocks & Plc system block groups """
     @property
     def Blocks(self) -> PlcBlockComposition:
@@ -879,7 +868,7 @@ class PlcSystemBlockGroup(IEquatable, IEngineeringObject, IInternalObjectAccess)
         ...
 
 
-class PlcSystemBlockGroupComposition(IInternalCompositionAccess, IEngineeringComposition, IEquatable): # skipped bases: <type 'IEngineeringInstance'>, <type 'IEnumerable'>, <type 'IInternalBaseAccess'>, <type 'IInternalCollectionAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'object'>
+class PlcSystemBlockGroupComposition(IInternalCompositionAccess, IEngineeringComposition, IEquatable): # skipped bases: <type 'IEnumerable'>, <type 'IEngineeringInstance'>, <type 'IInternalBaseAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'IInternalCollectionAccess'>, <type 'object'>
     """ Composition of PlcSystemBlockGroups """
     @property
     def Parent(self) -> IEngineeringObject:
@@ -931,13 +920,12 @@ class PlcSystemBlockGroupComposition(IInternalCompositionAccess, IEngineeringCom
         ...
 
 
-class ProgrammingLanguage(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class ProgrammingLanguage(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     The list of possible creation languages of programming blocks
 
-    enum ProgrammingLanguage, values: CEM (27), CFC (8), CPU_DB (7), DB (5), F_CALL (26), F_DB (18), F_FBD (17), F_FBD_LIB (20), F_LAD (16), F_LAD_LIB (19), F_STL (15), FBD (3), FBD_IEC (10), FCP (21), FLD (22), GRAPH (6), LAD (2), LAD_IEC (11), Motion_DB (25), ProDiag (23), ProDiag_OB (24), RSE (14), S7_PDIAG (13), SCL (4), SDB (12), SFC (9), STL (1), Undef (0)
+    enum ProgrammingLanguage, values: CFC (8), CPU_DB (7), DB (5), F_CALL (26), F_DB (18), F_FBD (17), F_FBD_LIB (20), F_LAD (16), F_LAD_LIB (19), F_STL (15), FBD (3), FBD_IEC (10), FCP (21), FLD (22), GRAPH (6), LAD (2), LAD_IEC (11), Motion_DB (25), ProDiag (23), ProDiag_OB (24), RSE (14), S7_PDIAG (13), SCL (4), SDB (12), SFC (9), STL (1), Undef (0)
     """
-    CEM: ProgrammingLanguage = ...
     CFC: ProgrammingLanguage = ...
     CPU_DB: ProgrammingLanguage = ...
     DB: ProgrammingLanguage = ...
@@ -968,7 +956,7 @@ class ProgrammingLanguage(Enum): # skipped bases: <type 'IComparable'>, <type 'I
     value__ = ...
 
 
-class Supervision(IEquatable, IEngineeringObject, IInternalObjectAccess): # skipped bases: <type 'IEngineeringCompositionOrObject'>, <type 'IInternalBaseAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringInstance'>, <type 'object'>
+class Supervision(IEquatable, IEngineeringObject, IInternalObjectAccess): # skipped bases: <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'IEngineeringInstance'>, <type 'IInternalBaseAccess'>, <type 'object'>
     """ Supervision """
     @property
     def Parent(self) -> IEngineeringObject:
@@ -1004,7 +992,7 @@ class Supervision(IEquatable, IEngineeringObject, IInternalObjectAccess): # skip
         ...
 
 
-class SupervisionComposition(IInternalCompositionAccess, IEngineeringComposition, IEquatable): # skipped bases: <type 'IEngineeringInstance'>, <type 'IEnumerable'>, <type 'IInternalBaseAccess'>, <type 'IInternalCollectionAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'object'>
+class SupervisionComposition(IInternalCompositionAccess, IEngineeringComposition, IEquatable): # skipped bases: <type 'IEnumerable'>, <type 'IEngineeringInstance'>, <type 'IInternalBaseAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'IInternalCollectionAccess'>, <type 'object'>
     """ Supervisions of the block """
     @property
     def Parent(self) -> IEngineeringObject:
@@ -1042,6 +1030,3 @@ class SupervisionComposition(IInternalCompositionAccess, IEngineeringComposition
 
     def __ne__(self, *args): #cannot find CLR method
         ...
-
-
-# variables with complex values

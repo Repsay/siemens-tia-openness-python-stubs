@@ -1,6 +1,6 @@
 # encoding: utf-8
 # module Siemens.Engineering.CustomIdentity calls itself CustomIdentity
-# from Siemens.Engineering, Version=17.0.0.0, Culture=neutral, PublicKeyToken=d29ec89bac048f84, Siemens.Engineering.AddIn, Version=17.0.0.0, Culture=neutral, PublicKeyToken=65b871d8372d6a8f
+# from Siemens.Engineering, Version=16.0.0.0, Culture=neutral, PublicKeyToken=d29ec89bac048f84, Siemens.Engineering.AddIn, Version=16.0.0.0, Culture=neutral, PublicKeyToken=65b871d8372d6a8f
 # by generator 1.145
 """ no doc """
 from __future__ import annotations
@@ -33,7 +33,7 @@ class CustomIdentityNotFoundException(EngineeringTargetInvocationException): # s
     SerializeObjectState = ...
 
 
-class CustomIdentityProvider(IEquatable, IEngineeringService, IInternalObjectAccess): # skipped bases: <type 'IInternalBaseAccess'>, <type 'IInternalInstanceAccess'>, <type 'object'>
+class CustomIdentityProvider(IEquatable, IEngineeringService, IInternalObjectAccess): # skipped bases: <type 'IInternalInstanceAccess'>, <type 'IInternalBaseAccess'>, <type 'object'>
     """ The class for setting and getting the user defined key-value """
     def Get(self, key:str) -> str:
         """

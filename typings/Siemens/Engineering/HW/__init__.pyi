@@ -1,6 +1,6 @@
 # encoding: utf-8
 # module Siemens.Engineering.HW calls itself HW
-# from Siemens.Engineering, Version=17.0.0.0, Culture=neutral, PublicKeyToken=d29ec89bac048f84, Siemens.Engineering.AddIn, Version=17.0.0.0, Culture=neutral, PublicKeyToken=65b871d8372d6a8f
+# from Siemens.Engineering, Version=16.0.0.0, Culture=neutral, PublicKeyToken=d29ec89bac048f84, Siemens.Engineering.AddIn, Version=16.0.0.0, Culture=neutral, PublicKeyToken=65b871d8372d6a8f
 # by generator 1.145
 """ no doc """
 from __future__ import annotations
@@ -36,19 +36,7 @@ from Siemens import IInternalAssociationAccess, IInternalCompositionAccess, IInt
 # no functions
 # classes
 
-class Activation(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
-    """
-    Possible values for property Activation
-
-    enum Activation, values: PowerStageActive (1), PowerStageActiveStopCurrent (2), PowerStageDisabled (0)
-    """
-    PowerStageActive: Activation = ...
-    PowerStageActiveStopCurrent: Activation = ...
-    PowerStageDisabled: Activation = ...
-    value__ = ...
-
-
-class ActivePowerLowerTripLevelResponse(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class ActivePowerLowerTripLevelResponse(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property ActivePowerLowerTripLevelResponse
 
@@ -60,7 +48,7 @@ class ActivePowerLowerTripLevelResponse(Enum): # skipped bases: <type 'IComparab
     value__ = ...
 
 
-class ActivePowerLowerWarningLevelResponse(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class ActivePowerLowerWarningLevelResponse(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property ActivePowerLowerWarningLevelResponse
 
@@ -72,7 +60,7 @@ class ActivePowerLowerWarningLevelResponse(Enum): # skipped bases: <type 'ICompa
     Warn: ActivePowerLowerWarningLevelResponse = ...
 
 
-class ActivePowerUpperWarningLevelResponse(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class ActivePowerUpperWarningLevelResponse(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property ActivePowerUpperWarningLevelResponse
 
@@ -84,7 +72,7 @@ class ActivePowerUpperWarningLevelResponse(Enum): # skipped bases: <type 'ICompa
     Warn: ActivePowerUpperWarningLevelResponse = ...
 
 
-class Address(IEquatable, IEngineeringObject, IInternalObjectAccess): # skipped bases: <type 'IEngineeringCompositionOrObject'>, <type 'IInternalBaseAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringInstance'>, <type 'object'>
+class Address(IEquatable, IEngineeringObject, IInternalObjectAccess): # skipped bases: <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'IEngineeringInstance'>, <type 'IInternalBaseAccess'>, <type 'object'>
     """ The object holding the address data """
     @property
     def AddressControllers(self) -> AddressControllerAssociation:
@@ -170,7 +158,7 @@ class Address(IEquatable, IEngineeringObject, IInternalObjectAccess): # skipped 
         ...
 
 
-class AddressAssociation(IEquatable, IEngineeringAssociation, IInternalAssociationAccess): # skipped bases: <type 'IInternalBaseAccess'>, <type 'IEnumerable'>, <type 'IInternalCollectionAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringInstance'>, <type 'object'>
+class AddressAssociation(IEquatable, IEngineeringAssociation, IInternalAssociationAccess): # skipped bases: <type 'IInternalCollectionAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEnumerable'>, <type 'IEngineeringInstance'>, <type 'IInternalBaseAccess'>, <type 'object'>
     """ Associated addresses """
     @property
     def Parent(self) -> IEngineeringObject:
@@ -210,7 +198,7 @@ class AddressAssociation(IEquatable, IEngineeringAssociation, IInternalAssociati
         ...
 
 
-class AddressComposition(IInternalCompositionAccess, IEngineeringComposition, IEquatable): # skipped bases: <type 'IEngineeringInstance'>, <type 'IEnumerable'>, <type 'IInternalBaseAccess'>, <type 'IInternalCollectionAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'object'>
+class AddressComposition(IInternalCompositionAccess, IEngineeringComposition, IEquatable): # skipped bases: <type 'IEnumerable'>, <type 'IEngineeringInstance'>, <type 'IInternalBaseAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'IInternalCollectionAccess'>, <type 'object'>
     """ Composition of Addresses """
     @property
     def Parent(self) -> IEngineeringObject:
@@ -250,7 +238,7 @@ class AddressComposition(IInternalCompositionAccess, IEngineeringComposition, IE
         ...
 
 
-class AddressContext(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class AddressContext(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     AddressContext of an address
 
@@ -261,7 +249,7 @@ class AddressContext(Enum): # skipped bases: <type 'IComparable'>, <type 'IForma
     value__ = ...
 
 
-class AddressIoType(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class AddressIoType(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Address IO type
 
@@ -274,7 +262,7 @@ class AddressIoType(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormat
     value__ = ...
 
 
-class AM1InputsActiveInputs(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class AM1InputsActiveInputs(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property AM1InputsActiveInputs
 
@@ -285,7 +273,7 @@ class AM1InputsActiveInputs(Enum): # skipped bases: <type 'IComparable'>, <type 
     value__ = ...
 
 
-class AM1InputsInputSignal(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class AM1InputsInputSignal(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property AM1InputsInputSignal
 
@@ -296,7 +284,7 @@ class AM1InputsInputSignal(Enum): # skipped bases: <type 'IComparable'>, <type '
     value__ = ...
 
 
-class AM1InputsResponseToOpenCircuit(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class AM1InputsResponseToOpenCircuit(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property AM1InputsResponseToOpenCircuit
 
@@ -308,7 +296,7 @@ class AM1InputsResponseToOpenCircuit(Enum): # skipped bases: <type 'IComparable'
     Warn: AM1InputsResponseToOpenCircuit = ...
 
 
-class AM1LowerTripLevelActiveStatus(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class AM1LowerTripLevelActiveStatus(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property AM1LowerTripLevelActiveStatus
 
@@ -321,7 +309,7 @@ class AM1LowerTripLevelActiveStatus(Enum): # skipped bases: <type 'IComparable'>
     value__ = ...
 
 
-class AM1LowerTripLevelResponse(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class AM1LowerTripLevelResponse(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property AM1LowerTripLevelResponse
 
@@ -333,7 +321,7 @@ class AM1LowerTripLevelResponse(Enum): # skipped bases: <type 'IComparable'>, <t
     value__ = ...
 
 
-class AM1LowerWarningLevelActiveStatus(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class AM1LowerWarningLevelActiveStatus(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property AM1LowerWarningLevelActiveStatus
 
@@ -346,7 +334,7 @@ class AM1LowerWarningLevelActiveStatus(Enum): # skipped bases: <type 'IComparabl
     value__ = ...
 
 
-class AM1LowerWarningLevelResponse(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class AM1LowerWarningLevelResponse(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property AM1LowerWarningLevelResponse
 
@@ -358,7 +346,7 @@ class AM1LowerWarningLevelResponse(Enum): # skipped bases: <type 'IComparable'>,
     Warn: AM1LowerWarningLevelResponse = ...
 
 
-class AM1OutputsOutputSignal(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class AM1OutputsOutputSignal(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property AM1OutputsOutputSignal
 
@@ -369,7 +357,7 @@ class AM1OutputsOutputSignal(Enum): # skipped bases: <type 'IComparable'>, <type
     value__ = ...
 
 
-class AM1UpperTripLevelActiveStatus(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class AM1UpperTripLevelActiveStatus(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property AM1UpperTripLevelActiveStatus
 
@@ -382,7 +370,7 @@ class AM1UpperTripLevelActiveStatus(Enum): # skipped bases: <type 'IComparable'>
     value__ = ...
 
 
-class AM1UpperTripLevelResponse(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class AM1UpperTripLevelResponse(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property AM1UpperTripLevelResponse
 
@@ -394,7 +382,7 @@ class AM1UpperTripLevelResponse(Enum): # skipped bases: <type 'IComparable'>, <t
     value__ = ...
 
 
-class AM1UpperWarningLevelActiveStatus(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class AM1UpperWarningLevelActiveStatus(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property AM1UpperWarningLevelActiveStatus
 
@@ -407,7 +395,7 @@ class AM1UpperWarningLevelActiveStatus(Enum): # skipped bases: <type 'IComparabl
     value__ = ...
 
 
-class AM1UpperWarningLevelResponse(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class AM1UpperWarningLevelResponse(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property AM1UpperWarningLevelResponse
 
@@ -419,7 +407,7 @@ class AM1UpperWarningLevelResponse(Enum): # skipped bases: <type 'IComparable'>,
     Warn: AM1UpperWarningLevelResponse = ...
 
 
-class AM2InputsActiveInputs(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class AM2InputsActiveInputs(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property AM2InputsActiveInputs
 
@@ -430,7 +418,7 @@ class AM2InputsActiveInputs(Enum): # skipped bases: <type 'IComparable'>, <type 
     value__ = ...
 
 
-class AM2InputsInputSignal(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class AM2InputsInputSignal(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property AM2InputsInputSignal
 
@@ -441,7 +429,7 @@ class AM2InputsInputSignal(Enum): # skipped bases: <type 'IComparable'>, <type '
     value__ = ...
 
 
-class AM2InputsResponseToOpenCircuit(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class AM2InputsResponseToOpenCircuit(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property AM2InputsResponseToOpenCircuit
 
@@ -453,7 +441,7 @@ class AM2InputsResponseToOpenCircuit(Enum): # skipped bases: <type 'IComparable'
     Warn: AM2InputsResponseToOpenCircuit = ...
 
 
-class AM2LowerTripLevelActiveStatus(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class AM2LowerTripLevelActiveStatus(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property AM2LowerTripLevelActiveStatus
 
@@ -466,7 +454,7 @@ class AM2LowerTripLevelActiveStatus(Enum): # skipped bases: <type 'IComparable'>
     value__ = ...
 
 
-class AM2LowerTripLevelResponse(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class AM2LowerTripLevelResponse(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property AM2LowerTripLevelResponse
 
@@ -478,7 +466,7 @@ class AM2LowerTripLevelResponse(Enum): # skipped bases: <type 'IComparable'>, <t
     value__ = ...
 
 
-class AM2LowerWarningLevelActiveStatus(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class AM2LowerWarningLevelActiveStatus(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property AM2LowerWarningLevelActiveStatus
 
@@ -491,7 +479,7 @@ class AM2LowerWarningLevelActiveStatus(Enum): # skipped bases: <type 'IComparabl
     value__ = ...
 
 
-class AM2LowerWarningLevelResponse(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class AM2LowerWarningLevelResponse(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property AM2LowerWarningLevelResponse
 
@@ -503,7 +491,7 @@ class AM2LowerWarningLevelResponse(Enum): # skipped bases: <type 'IComparable'>,
     Warn: AM2LowerWarningLevelResponse = ...
 
 
-class AM2OutputsOutputSignal(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class AM2OutputsOutputSignal(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property AM2OutputsOutputSignal
 
@@ -514,7 +502,7 @@ class AM2OutputsOutputSignal(Enum): # skipped bases: <type 'IComparable'>, <type
     value__ = ...
 
 
-class AM2UpperTripLevelActiveStatus(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class AM2UpperTripLevelActiveStatus(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property AM2UpperTripLevelActiveStatus
 
@@ -527,7 +515,7 @@ class AM2UpperTripLevelActiveStatus(Enum): # skipped bases: <type 'IComparable'>
     value__ = ...
 
 
-class AM2UpperTripLevelResponse(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class AM2UpperTripLevelResponse(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property AM2UpperTripLevelResponse
 
@@ -539,7 +527,7 @@ class AM2UpperTripLevelResponse(Enum): # skipped bases: <type 'IComparable'>, <t
     value__ = ...
 
 
-class AM2UpperWarningLevelActiveStatus(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class AM2UpperWarningLevelActiveStatus(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property AM2UpperWarningLevelActiveStatus
 
@@ -552,7 +540,7 @@ class AM2UpperWarningLevelActiveStatus(Enum): # skipped bases: <type 'IComparabl
     value__ = ...
 
 
-class AM2UpperWarningLevelResponse(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class AM2UpperWarningLevelResponse(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property AM2UpperWarningLevelResponse
 
@@ -564,20 +552,7 @@ class AM2UpperWarningLevelResponse(Enum): # skipped bases: <type 'IComparable'>,
     Warn: AM2UpperWarningLevelResponse = ...
 
 
-class AmplifierBoost(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
-    """
-    Possible values for property AmplifierBoost
-
-    enum AmplifierBoost, values: Activated (1), Deactivated (0), No (2), Yes (3)
-    """
-    Activated: AmplifierBoost = ...
-    Deactivated: AmplifierBoost = ...
-    No: AmplifierBoost = ...
-    value__ = ...
-    Yes: AmplifierBoost = ...
-
-
-class ApplicationControlFunction(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class ApplicationControlFunction(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property ApplicationControlFunction
 
@@ -604,111 +579,7 @@ class ApplicationControlFunction(Enum): # skipped bases: <type 'IComparable'>, <
     value__ = ...
 
 
-class ApplicationControllerActive(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
-    """
-    Possible values for property ApplicationControllerActive
-
-    enum ApplicationControllerActive, values: Active (1), Deactivated (0)
-    """
-    Active: ApplicationControllerActive = ...
-    Deactivated: ApplicationControllerActive = ...
-    value__ = ...
-
-
-class AsiProfileID(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
-    """
-    Possible values for property AsiProfileID
-
-    enum AsiProfileID, values: Value0 (0), Value1 (1), Value2 (2), Value3 (3), Value4 (4), Value5 (5), Value6 (6), Value7 (7), Value8 (8), Value9 (9), ValueA (10), ValueB (11), ValueC (12), ValueD (13), ValueE (14), ValueF (15)
-    """
-    Value0: AsiProfileID = ...
-    Value1: AsiProfileID = ...
-    Value2: AsiProfileID = ...
-    Value3: AsiProfileID = ...
-    Value4: AsiProfileID = ...
-    Value5: AsiProfileID = ...
-    Value6: AsiProfileID = ...
-    Value7: AsiProfileID = ...
-    Value8: AsiProfileID = ...
-    Value9: AsiProfileID = ...
-    ValueA: AsiProfileID = ...
-    ValueB: AsiProfileID = ...
-    ValueC: AsiProfileID = ...
-    ValueD: AsiProfileID = ...
-    ValueE: AsiProfileID = ...
-    ValueF: AsiProfileID = ...
-    value__ = ...
-
-
-class AsiProfileID1(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
-    """
-    Possible values for property AsiProfileID1
-
-    enum AsiProfileID1, values: Value0 (0), Value1 (1), Value2 (2), Value3 (3), Value4 (4), Value5 (5), Value6 (6), Value7 (7), Value8 (8), Value9 (9), ValueA (10), ValueB (11), ValueC (12), ValueD (13), ValueE (14), ValueF (15)
-    """
-    Value0: AsiProfileID1 = ...
-    Value1: AsiProfileID1 = ...
-    Value2: AsiProfileID1 = ...
-    Value3: AsiProfileID1 = ...
-    Value4: AsiProfileID1 = ...
-    Value5: AsiProfileID1 = ...
-    Value6: AsiProfileID1 = ...
-    Value7: AsiProfileID1 = ...
-    Value8: AsiProfileID1 = ...
-    Value9: AsiProfileID1 = ...
-    ValueA: AsiProfileID1 = ...
-    ValueB: AsiProfileID1 = ...
-    ValueC: AsiProfileID1 = ...
-    ValueD: AsiProfileID1 = ...
-    ValueE: AsiProfileID1 = ...
-    ValueF: AsiProfileID1 = ...
-    value__ = ...
-
-
-class AsiProfileIO(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
-    """
-    Possible values for property AsiProfileIO
-
-    enum AsiProfileIO, values: Value0 (0), Value1 (1), Value2 (2), Value3 (3), Value4 (4), Value5 (5), Value6 (6), Value7 (7), Value8 (8), Value9 (9), ValueA (10), ValueB (11), ValueC (12), ValueD (13), ValueE (14), ValueF (15)
-    """
-    Value0: AsiProfileIO = ...
-    Value1: AsiProfileIO = ...
-    Value2: AsiProfileIO = ...
-    Value3: AsiProfileIO = ...
-    Value4: AsiProfileIO = ...
-    Value5: AsiProfileIO = ...
-    Value6: AsiProfileIO = ...
-    Value7: AsiProfileIO = ...
-    Value8: AsiProfileIO = ...
-    Value9: AsiProfileIO = ...
-    ValueA: AsiProfileIO = ...
-    ValueB: AsiProfileIO = ...
-    ValueC: AsiProfileIO = ...
-    ValueD: AsiProfileIO = ...
-    ValueE: AsiProfileIO = ...
-    ValueF: AsiProfileIO = ...
-    value__ = ...
-
-
-class BaseFrequency(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
-    """
-    Possible values for property BaseFrequency
-
-    enum BaseFrequency, values: Value20 (5), Value200 (2), Value2000 (8), Value4 (7), Value40 (4), Value400 (1), Value8 (6), Value80 (3), Value800 (0)
-    """
-    Value20: BaseFrequency = ...
-    Value200: BaseFrequency = ...
-    Value2000: BaseFrequency = ...
-    Value4: BaseFrequency = ...
-    Value40: BaseFrequency = ...
-    Value400: BaseFrequency = ...
-    Value8: BaseFrequency = ...
-    Value80: BaseFrequency = ...
-    Value800: BaseFrequency = ...
-    value__ = ...
-
-
-class BasicType(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class BasicType(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property BasicType
 
@@ -720,7 +591,7 @@ class BasicType(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattabl
     value__ = ...
 
 
-class BasicUnitInputsDebouncingTimes(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class BasicUnitInputsDebouncingTimes(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property BasicUnitInputsDebouncingTimes
 
@@ -733,7 +604,7 @@ class BasicUnitInputsDebouncingTimes(Enum): # skipped bases: <type 'IComparable'
     value__ = ...
 
 
-class BaudRate(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class BaudRate(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Devices baud rate
 
@@ -752,7 +623,7 @@ class BaudRate(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable
     value__ = ...
 
 
-class BehaviorOfCounterValueAfterCaptureDI0(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class BehaviorOfCounterValueAfterCaptureDI0(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property BehaviorOfCounterValueAfterCaptureDI0
 
@@ -763,7 +634,7 @@ class BehaviorOfCounterValueAfterCaptureDI0(Enum): # skipped bases: <type 'IComp
     value__ = ...
 
 
-class BehaviorOfCounterValueAfterCaptureDI1(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class BehaviorOfCounterValueAfterCaptureDI1(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property BehaviorOfCounterValueAfterCaptureDI1
 
@@ -774,7 +645,7 @@ class BehaviorOfCounterValueAfterCaptureDI1(Enum): # skipped bases: <type 'IComp
     value__ = ...
 
 
-class BehaviorOfCounterValueAfterCaptureDI2(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class BehaviorOfCounterValueAfterCaptureDI2(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property BehaviorOfCounterValueAfterCaptureDI2
 
@@ -785,7 +656,7 @@ class BehaviorOfCounterValueAfterCaptureDI2(Enum): # skipped bases: <type 'IComp
     value__ = ...
 
 
-class BehaviorOfDI4(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class BehaviorOfDI4(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property BehaviorOfDI4
 
@@ -796,7 +667,7 @@ class BehaviorOfDI4(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormat
     value__ = ...
 
 
-class BehaviorOfDI5(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class BehaviorOfDI5(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property BehaviorOfDI5
 
@@ -807,7 +678,7 @@ class BehaviorOfDI5(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormat
     value__ = ...
 
 
-class BehaviorOfDI6(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class BehaviorOfDI6(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property BehaviorOfDI6
 
@@ -818,7 +689,7 @@ class BehaviorOfDI6(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormat
     value__ = ...
 
 
-class BehaviorOfDI7(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class BehaviorOfDI7(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property BehaviorOfDI7
 
@@ -829,7 +700,7 @@ class BehaviorOfDI7(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormat
     value__ = ...
 
 
-class BlockingCurrent(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class BlockingCurrent(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property BlockingCurrent
 
@@ -856,52 +727,7 @@ class BlockingCurrent(Enum): # skipped bases: <type 'IComparable'>, <type 'IForm
     value__ = ...
 
 
-class BoostCurrent(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
-    """
-    Possible values for property BoostCurrent
-
-    enum BoostCurrent, values: CouldNotCalculateTheDynamicDisplayName (1), CouldNotCalculateTheDynamicDisplayName10 (10), CouldNotCalculateTheDynamicDisplayName11 (11), CouldNotCalculateTheDynamicDisplayName12 (12), CouldNotCalculateTheDynamicDisplayName13 (13), CouldNotCalculateTheDynamicDisplayName14 (14), CouldNotCalculateTheDynamicDisplayName15 (15), CouldNotCalculateTheDynamicDisplayName16 (16), CouldNotCalculateTheDynamicDisplayName17 (17), CouldNotCalculateTheDynamicDisplayName18 (18), CouldNotCalculateTheDynamicDisplayName19 (19), CouldNotCalculateTheDynamicDisplayName2 (2), CouldNotCalculateTheDynamicDisplayName20 (20), CouldNotCalculateTheDynamicDisplayName21 (21), CouldNotCalculateTheDynamicDisplayName22 (22), CouldNotCalculateTheDynamicDisplayName23 (23), CouldNotCalculateTheDynamicDisplayName24 (24), CouldNotCalculateTheDynamicDisplayName25 (25), CouldNotCalculateTheDynamicDisplayName26 (26), CouldNotCalculateTheDynamicDisplayName27 (27), CouldNotCalculateTheDynamicDisplayName28 (28), CouldNotCalculateTheDynamicDisplayName29 (29), CouldNotCalculateTheDynamicDisplayName3 (3), CouldNotCalculateTheDynamicDisplayName30 (30), CouldNotCalculateTheDynamicDisplayName31 (31), CouldNotCalculateTheDynamicDisplayName32 (32), CouldNotCalculateTheDynamicDisplayName33 (33), CouldNotCalculateTheDynamicDisplayName34 (34), CouldNotCalculateTheDynamicDisplayName35 (35), CouldNotCalculateTheDynamicDisplayName4 (4), CouldNotCalculateTheDynamicDisplayName5 (5), CouldNotCalculateTheDynamicDisplayName6 (6), CouldNotCalculateTheDynamicDisplayName7 (7), CouldNotCalculateTheDynamicDisplayName8 (8), CouldNotCalculateTheDynamicDisplayName9 (9), Value0 (0)
-    """
-    CouldNotCalculateTheDynamicDisplayName: BoostCurrent = ...
-    CouldNotCalculateTheDynamicDisplayName10: BoostCurrent = ...
-    CouldNotCalculateTheDynamicDisplayName11: BoostCurrent = ...
-    CouldNotCalculateTheDynamicDisplayName12: BoostCurrent = ...
-    CouldNotCalculateTheDynamicDisplayName13: BoostCurrent = ...
-    CouldNotCalculateTheDynamicDisplayName14: BoostCurrent = ...
-    CouldNotCalculateTheDynamicDisplayName15: BoostCurrent = ...
-    CouldNotCalculateTheDynamicDisplayName16: BoostCurrent = ...
-    CouldNotCalculateTheDynamicDisplayName17: BoostCurrent = ...
-    CouldNotCalculateTheDynamicDisplayName18: BoostCurrent = ...
-    CouldNotCalculateTheDynamicDisplayName19: BoostCurrent = ...
-    CouldNotCalculateTheDynamicDisplayName2: BoostCurrent = ...
-    CouldNotCalculateTheDynamicDisplayName20: BoostCurrent = ...
-    CouldNotCalculateTheDynamicDisplayName21: BoostCurrent = ...
-    CouldNotCalculateTheDynamicDisplayName22: BoostCurrent = ...
-    CouldNotCalculateTheDynamicDisplayName23: BoostCurrent = ...
-    CouldNotCalculateTheDynamicDisplayName24: BoostCurrent = ...
-    CouldNotCalculateTheDynamicDisplayName25: BoostCurrent = ...
-    CouldNotCalculateTheDynamicDisplayName26: BoostCurrent = ...
-    CouldNotCalculateTheDynamicDisplayName27: BoostCurrent = ...
-    CouldNotCalculateTheDynamicDisplayName28: BoostCurrent = ...
-    CouldNotCalculateTheDynamicDisplayName29: BoostCurrent = ...
-    CouldNotCalculateTheDynamicDisplayName3: BoostCurrent = ...
-    CouldNotCalculateTheDynamicDisplayName30: BoostCurrent = ...
-    CouldNotCalculateTheDynamicDisplayName31: BoostCurrent = ...
-    CouldNotCalculateTheDynamicDisplayName32: BoostCurrent = ...
-    CouldNotCalculateTheDynamicDisplayName33: BoostCurrent = ...
-    CouldNotCalculateTheDynamicDisplayName34: BoostCurrent = ...
-    CouldNotCalculateTheDynamicDisplayName35: BoostCurrent = ...
-    CouldNotCalculateTheDynamicDisplayName4: BoostCurrent = ...
-    CouldNotCalculateTheDynamicDisplayName5: BoostCurrent = ...
-    CouldNotCalculateTheDynamicDisplayName6: BoostCurrent = ...
-    CouldNotCalculateTheDynamicDisplayName7: BoostCurrent = ...
-    CouldNotCalculateTheDynamicDisplayName8: BoostCurrent = ...
-    CouldNotCalculateTheDynamicDisplayName9: BoostCurrent = ...
-    Value0: BoostCurrent = ...
-    value__ = ...
-
-
-class Brightness(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class Brightness(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property Brightness
 
@@ -915,18 +741,7 @@ class Brightness(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattab
     VeryDark: Brightness = ...
 
 
-class BusPowerSupplyActive(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
-    """
-    Possible values for property BusPowerSupplyActive
-
-    enum BusPowerSupplyActive, values: Active (1), Deactivated (0)
-    """
-    Active: BusPowerSupplyActive = ...
-    Deactivated: BusPowerSupplyActive = ...
-    value__ = ...
-
-
-class BusProfile(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class BusProfile(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     BusProfile
 
@@ -939,7 +754,7 @@ class BusProfile(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattab
     value__ = ...
 
 
-class CableLength(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class CableLength(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property CableLength
 
@@ -953,7 +768,7 @@ class CableLength(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormatta
     value__ = ...
 
 
-class CableLocking(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class CableLocking(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property CableLocking
 
@@ -967,7 +782,7 @@ class CableLocking(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormatt
     value__ = ...
 
 
-class CableLockingFeedback(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class CableLockingFeedback(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property CableLockingFeedback
 
@@ -979,7 +794,7 @@ class CableLockingFeedback(Enum): # skipped bases: <type 'IComparable'>, <type '
     value__ = ...
 
 
-class CableName(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class CableName(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Cable Name
 
@@ -1003,7 +818,7 @@ class CableName(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattabl
     value__ = ...
 
 
-class Calculator2OperatingMode(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class Calculator2OperatingMode(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property Calculator2OperatingMode
 
@@ -1014,7 +829,7 @@ class Calculator2OperatingMode(Enum): # skipped bases: <type 'IComparable'>, <ty
     value__ = ...
 
 
-class Calculator2Operator(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class Calculator2Operator(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property Calculator2Operator
 
@@ -1027,7 +842,7 @@ class Calculator2Operator(Enum): # skipped bases: <type 'IComparable'>, <type 'I
     value__ = ...
 
 
-class Calculator3Operator1(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class Calculator3Operator1(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property Calculator3Operator1
 
@@ -1040,7 +855,7 @@ class Calculator3Operator1(Enum): # skipped bases: <type 'IComparable'>, <type '
     value__ = ...
 
 
-class Calculator3Operator2(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class Calculator3Operator2(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property Calculator3Operator2
 
@@ -1053,7 +868,7 @@ class Calculator3Operator2(Enum): # skipped bases: <type 'IComparable'>, <type '
     value__ = ...
 
 
-class Calculator3Operator3(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class Calculator3Operator3(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property Calculator3Operator3
 
@@ -1066,7 +881,7 @@ class Calculator3Operator3(Enum): # skipped bases: <type 'IComparable'>, <type '
     value__ = ...
 
 
-class Calculator3Priority1(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class Calculator3Priority1(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property Calculator3Priority1
 
@@ -1078,7 +893,7 @@ class Calculator3Priority1(Enum): # skipped bases: <type 'IComparable'>, <type '
     value__ = ...
 
 
-class Calculator3Priority2(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class Calculator3Priority2(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property Calculator3Priority2
 
@@ -1090,7 +905,7 @@ class Calculator3Priority2(Enum): # skipped bases: <type 'IComparable'>, <type '
     value__ = ...
 
 
-class Calculator3Priority3(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class Calculator3Priority3(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property Calculator3Priority3
 
@@ -1102,7 +917,7 @@ class Calculator3Priority3(Enum): # skipped bases: <type 'IComparable'>, <type '
     value__ = ...
 
 
-class Calculator4Operator1(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class Calculator4Operator1(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property Calculator4Operator1
 
@@ -1115,7 +930,7 @@ class Calculator4Operator1(Enum): # skipped bases: <type 'IComparable'>, <type '
     value__ = ...
 
 
-class Calculator4Operator2(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class Calculator4Operator2(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property Calculator4Operator2
 
@@ -1128,7 +943,7 @@ class Calculator4Operator2(Enum): # skipped bases: <type 'IComparable'>, <type '
     value__ = ...
 
 
-class Calculator4Operator3(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class Calculator4Operator3(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property Calculator4Operator3
 
@@ -1141,7 +956,7 @@ class Calculator4Operator3(Enum): # skipped bases: <type 'IComparable'>, <type '
     value__ = ...
 
 
-class Calculator4Priority1(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class Calculator4Priority1(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property Calculator4Priority1
 
@@ -1153,7 +968,7 @@ class Calculator4Priority1(Enum): # skipped bases: <type 'IComparable'>, <type '
     value__ = ...
 
 
-class Calculator4Priority2(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class Calculator4Priority2(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property Calculator4Priority2
 
@@ -1165,7 +980,7 @@ class Calculator4Priority2(Enum): # skipped bases: <type 'IComparable'>, <type '
     value__ = ...
 
 
-class Calculator4Priority3(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class Calculator4Priority3(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property Calculator4Priority3
 
@@ -1177,24 +992,7 @@ class Calculator4Priority3(Enum): # skipped bases: <type 'IComparable'>, <type '
     value__ = ...
 
 
-class Category(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
-    """
-    Possible values for property Category
-
-    enum Category, values: Currents (1), Energies (4), Harmonics (8), None (0), Other (6), PowerQualityValues (7), Powers (3), QualityData (5), Voltages (2)
-    """
-    Currents: Category = ...
-    Energies: Category = ...
-    Harmonics: Category = ...
-    Other: Category = ...
-    PowerQualityValues: Category = ...
-    Powers: Category = ...
-    QualityData: Category = ...
-    value__ = ...
-    Voltages: Category = ...
-
-
-class Channel(IEquatable, IEngineeringObject, IInternalObjectAccess): # skipped bases: <type 'IEngineeringCompositionOrObject'>, <type 'IInternalBaseAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringInstance'>, <type 'object'>
+class Channel(IEquatable, IEngineeringObject, IInternalObjectAccess): # skipped bases: <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'IEngineeringInstance'>, <type 'IInternalBaseAccess'>, <type 'object'>
     """ Class representing a channel """
     @property
     def IoType(self) -> ChannelIoType:
@@ -1257,20 +1055,7 @@ class Channel(IEquatable, IEngineeringObject, IInternalObjectAccess): # skipped 
         ...
 
 
-class ChannelAssignment(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
-    """
-    Possible values for property ChannelAssignment
-
-    enum ChannelAssignment, values: Channel0 (0), Channel1 (1), Channel2 (2), Channel3 (3)
-    """
-    Channel0: ChannelAssignment = ...
-    Channel1: ChannelAssignment = ...
-    Channel2: ChannelAssignment = ...
-    Channel3: ChannelAssignment = ...
-    value__ = ...
-
-
-class ChannelComposition(IInternalCompositionAccess, IEngineeringComposition, IEquatable): # skipped bases: <type 'IEngineeringInstance'>, <type 'IEnumerable'>, <type 'IInternalBaseAccess'>, <type 'IInternalCollectionAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'object'>
+class ChannelComposition(IInternalCompositionAccess, IEngineeringComposition, IEquatable): # skipped bases: <type 'IEnumerable'>, <type 'IEngineeringInstance'>, <type 'IInternalBaseAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'IInternalCollectionAccess'>, <type 'object'>
     """ Composition of Channels """
     @property
     def Parent(self) -> IEngineeringObject:
@@ -1326,7 +1111,7 @@ class ChannelComposition(IInternalCompositionAccess, IEngineeringComposition, IE
         ...
 
 
-class ChannelConfiguration(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class ChannelConfiguration(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property ChannelConfiguration
 
@@ -1337,7 +1122,7 @@ class ChannelConfiguration(Enum): # skipped bases: <type 'IComparable'>, <type '
     value__ = ...
 
 
-class ChannelIoType(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class ChannelIoType(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Channel IO type
 
@@ -1349,7 +1134,7 @@ class ChannelIoType(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormat
     value__ = ...
 
 
-class ChannelType(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class ChannelType(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Channel type
 
@@ -1361,7 +1146,7 @@ class ChannelType(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormatta
     value__ = ...
 
 
-class ChannelTypeForIO(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class ChannelTypeForIO(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property ChannelTypeForIO
 
@@ -1372,7 +1157,7 @@ class ChannelTypeForIO(Enum): # skipped bases: <type 'IComparable'>, <type 'IFor
     value__ = ...
 
 
-class ChargingStandard(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class ChargingStandard(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property ChargingStandard
 
@@ -1384,7 +1169,7 @@ class ChargingStandard(Enum): # skipped bases: <type 'IComparable'>, <type 'IFor
     value__ = ...
 
 
-class ChatterMonitoring(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class ChatterMonitoring(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property ChatterMonitoring
 
@@ -1395,7 +1180,7 @@ class ChatterMonitoring(Enum): # skipped bases: <type 'IComparable'>, <type 'IFo
     value__ = ...
 
 
-class Classification(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class Classification(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property Classification
 
@@ -1406,7 +1191,7 @@ class Classification(Enum): # skipped bases: <type 'IComparable'>, <type 'IForma
     value__ = ...
 
 
-class CodeType(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class CodeType(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property CodeType
 
@@ -1417,7 +1202,7 @@ class CodeType(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable
     value__ = ...
 
 
-class CommunicationLoad(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class CommunicationLoad(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Profibus Communication Load
 
@@ -1429,7 +1214,7 @@ class CommunicationLoad(Enum): # skipped bases: <type 'IComparable'>, <type 'IFo
     value__ = ...
 
 
-class CompatibilityMode3UF50BasicType(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class CompatibilityMode3UF50BasicType(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property CompatibilityMode3UF50BasicType
 
@@ -1441,7 +1226,7 @@ class CompatibilityMode3UF50BasicType(Enum): # skipped bases: <type 'IComparable
     value__ = ...
 
 
-class CompatibilityMode3UF50Mode(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class CompatibilityMode3UF50Mode(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property CompatibilityMode3UF50Mode
 
@@ -1452,7 +1237,7 @@ class CompatibilityMode3UF50Mode(Enum): # skipped bases: <type 'IComparable'>, <
     value__ = ...
 
 
-class ComputerNameIdenticalToPcStationName(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class ComputerNameIdenticalToPcStationName(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property ComputerNameIdenticalToPcStationName
 
@@ -1463,7 +1248,7 @@ class ComputerNameIdenticalToPcStationName(Enum): # skipped bases: <type 'ICompa
     value__ = ...
 
 
-class ConfigurationDQOrDIGroup0(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class ConfigurationDQOrDIGroup0(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property ConfigurationDQOrDIGroup0
 
@@ -1474,7 +1259,7 @@ class ConfigurationDQOrDIGroup0(Enum): # skipped bases: <type 'IComparable'>, <t
     value__ = ...
 
 
-class ConfigurationDQOrDIGroup1(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class ConfigurationDQOrDIGroup1(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property ConfigurationDQOrDIGroup1
 
@@ -1485,7 +1270,7 @@ class ConfigurationDQOrDIGroup1(Enum): # skipped bases: <type 'IComparable'>, <t
     value__ = ...
 
 
-class ConfigurationDQOrDIGroup2(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class ConfigurationDQOrDIGroup2(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property ConfigurationDQOrDIGroup2
 
@@ -1499,15 +1284,12 @@ class ConfigurationDQOrDIGroup2(Enum): # skipped bases: <type 'IComparable'>, <t
     value__ = ...
 
 
-class ConnectionType(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class ConnectionType(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property ConnectionType
 
-    enum ConnectionType, values: DriverMode (10), Endstufe (11), Indexer (9), None (0), Value1P2w1Phase2Wire (1), Value2P3w2Phase3Wire (6), Value3P3w13Phase3WireSymmetricalLoad (8), Value3P3w3Phase3Wire (7), Value3P4w13Phase4WireSymmetricalLoad (4), Value3P4w3Phase4Wire (2), Value3P4wi3PhaseCurrentMeasurement4Wire (3), Value3X1p2w3X1PhaseEach2Conductors (5)
+    enum ConnectionType, values: None (0), Value1P2w1Phase2Wire (1), Value2P3w2Phase3Wire (6), Value3P3w13Phase3WireSymmetricalLoad (8), Value3P3w3Phase3Wire (7), Value3P4w13Phase4WireSymmetricalLoad (4), Value3P4w3Phase4Wire (2), Value3P4wi3PhaseCurrentMeasurement4Wire (3), Value3X1p2w3X1PhaseEach2Conductors (5)
     """
-    DriverMode: ConnectionType = ...
-    Endstufe: ConnectionType = ...
-    Indexer: ConnectionType = ...
     Value1P2w1Phase2Wire: ConnectionType = ...
     Value2P3w2Phase3Wire: ConnectionType = ...
     Value3P3w13Phase3WireSymmetricalLoad: ConnectionType = ...
@@ -1519,7 +1301,7 @@ class ConnectionType(Enum): # skipped bases: <type 'IComparable'>, <type 'IForma
     value__ = ...
 
 
-class ContactorFeedback(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class ContactorFeedback(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property ContactorFeedback
 
@@ -1531,7 +1313,7 @@ class ContactorFeedback(Enum): # skipped bases: <type 'IComparable'>, <type 'IFo
     value__ = ...
 
 
-class ControlFunctionCurrentMeasuringModuleInstalled(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class ControlFunctionCurrentMeasuringModuleInstalled(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property ControlFunctionCurrentMeasuringModuleInstalled
 
@@ -1542,7 +1324,7 @@ class ControlFunctionCurrentMeasuringModuleInstalled(Enum): # skipped bases: <ty
     value__ = ...
 
 
-class ControlFunctionFeedbackCLOSEDFC(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class ControlFunctionFeedbackCLOSEDFC(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property ControlFunctionFeedbackCLOSEDFC
 
@@ -1779,7 +1561,7 @@ class ControlFunctionFeedbackCLOSEDFC(Enum): # skipped bases: <type 'IComparable
     WarningSimultaneity: ControlFunctionFeedbackCLOSEDFC = ...
 
 
-class ControlFunctionFeedbackON(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class ControlFunctionFeedbackON(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property ControlFunctionFeedbackON
 
@@ -2016,7 +1798,7 @@ class ControlFunctionFeedbackON(Enum): # skipped bases: <type 'IComparable'>, <t
     WarningSimultaneity: ControlFunctionFeedbackON = ...
 
 
-class ControlFunctionFeedbackOPENFO(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class ControlFunctionFeedbackOPENFO(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property ControlFunctionFeedbackOPENFO
 
@@ -2253,7 +2035,7 @@ class ControlFunctionFeedbackOPENFO(Enum): # skipped bases: <type 'IComparable'>
     WarningSimultaneity: ControlFunctionFeedbackOPENFO = ...
 
 
-class ControlFunctionForward(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class ControlFunctionForward(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property ControlFunctionForward
 
@@ -2490,7 +2272,7 @@ class ControlFunctionForward(Enum): # skipped bases: <type 'IComparable'>, <type
     WarningSimultaneity: ControlFunctionForward = ...
 
 
-class ControlFunctionForwardFast(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class ControlFunctionForwardFast(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property ControlFunctionForwardFast
 
@@ -2727,7 +2509,7 @@ class ControlFunctionForwardFast(Enum): # skipped bases: <type 'IComparable'>, <
     WarningSimultaneity: ControlFunctionForwardFast = ...
 
 
-class ControlFunctionOFF(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class ControlFunctionOFF(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property ControlFunctionOFF
 
@@ -2964,7 +2746,7 @@ class ControlFunctionOFF(Enum): # skipped bases: <type 'IComparable'>, <type 'IF
     WarningSimultaneity: ControlFunctionOFF = ...
 
 
-class ControlFunctionReverse(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class ControlFunctionReverse(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property ControlFunctionReverse
 
@@ -3201,7 +2983,7 @@ class ControlFunctionReverse(Enum): # skipped bases: <type 'IComparable'>, <type
     WarningSimultaneity: ControlFunctionReverse = ...
 
 
-class ControlFunctionReverseFast(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class ControlFunctionReverseFast(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property ControlFunctionReverseFast
 
@@ -3438,7 +3220,7 @@ class ControlFunctionReverseFast(Enum): # skipped bases: <type 'IComparable'>, <
     WarningSimultaneity: ControlFunctionReverseFast = ...
 
 
-class ControlFunctionTorqueCLOSEDTC(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class ControlFunctionTorqueCLOSEDTC(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property ControlFunctionTorqueCLOSEDTC
 
@@ -3675,7 +3457,7 @@ class ControlFunctionTorqueCLOSEDTC(Enum): # skipped bases: <type 'IComparable'>
     WarningSimultaneity: ControlFunctionTorqueCLOSEDTC = ...
 
 
-class ControlFunctionTorqueOPENTO(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class ControlFunctionTorqueOPENTO(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property ControlFunctionTorqueOPENTO
 
@@ -3912,7 +3694,7 @@ class ControlFunctionTorqueOPENTO(Enum): # skipped bases: <type 'IComparable'>, 
     WarningSimultaneity: ControlFunctionTorqueOPENTO = ...
 
 
-class ControlStationModeSelectorS1(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class ControlStationModeSelectorS1(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property ControlStationModeSelectorS1
 
@@ -4149,7 +3931,7 @@ class ControlStationModeSelectorS1(Enum): # skipped bases: <type 'IComparable'>,
     WarningSimultaneity: ControlStationModeSelectorS1 = ...
 
 
-class ControlStationModeSelectorS2(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class ControlStationModeSelectorS2(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property ControlStationModeSelectorS2
 
@@ -4386,7 +4168,7 @@ class ControlStationModeSelectorS2(Enum): # skipped bases: <type 'IComparable'>,
     WarningSimultaneity: ControlStationModeSelectorS2 = ...
 
 
-class CosPhiLowerTripLevelResponse(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class CosPhiLowerTripLevelResponse(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property CosPhiLowerTripLevelResponse
 
@@ -4398,7 +4180,7 @@ class CosPhiLowerTripLevelResponse(Enum): # skipped bases: <type 'IComparable'>,
     value__ = ...
 
 
-class CosPhiLowerWarningLevelResponse(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class CosPhiLowerWarningLevelResponse(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property CosPhiLowerWarningLevelResponse
 
@@ -4410,7 +4192,7 @@ class CosPhiLowerWarningLevelResponse(Enum): # skipped bases: <type 'IComparable
     Warn: CosPhiLowerWarningLevelResponse = ...
 
 
-class CountDirection(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class CountDirection(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property CountDirection
 
@@ -4421,7 +4203,7 @@ class CountDirection(Enum): # skipped bases: <type 'IComparable'>, <type 'IForma
     value__ = ...
 
 
-class CountDirectionDQ0(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class CountDirectionDQ0(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property CountDirectionDQ0
 
@@ -4433,7 +4215,7 @@ class CountDirectionDQ0(Enum): # skipped bases: <type 'IComparable'>, <type 'IFo
     value__ = ...
 
 
-class CountDirectionDQ1(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class CountDirectionDQ1(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property CountDirectionDQ1
 
@@ -4445,7 +4227,7 @@ class CountDirectionDQ1(Enum): # skipped bases: <type 'IComparable'>, <type 'IFo
     value__ = ...
 
 
-class CountDirectionForSynchronization(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class CountDirectionForSynchronization(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property CountDirectionForSynchronization
 
@@ -4457,7 +4239,7 @@ class CountDirectionForSynchronization(Enum): # skipped bases: <type 'IComparabl
     value__ = ...
 
 
-class CounterConfiguration(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class CounterConfiguration(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property CounterConfiguration
 
@@ -4468,7 +4250,7 @@ class CounterConfiguration(Enum): # skipped bases: <type 'IComparable'>, <type '
     value__ = ...
 
 
-class CounterMode(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class CounterMode(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property CounterMode
 
@@ -4482,32 +4264,7 @@ class CounterMode(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormatta
     value__ = ...
 
 
-class CurrentDelayTime(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
-    """
-    Possible values for property CurrentDelayTime
-
-    enum CurrentDelayTime, values: Value1 (0), Value10 (5), Value100 (12), Value1000 (15), Value12 (6), Value14 (7), Value16 (8), Value2 (1), Value20 (9), Value200 (13), Value4 (2), Value40 (10), Value500 (14), Value6 (3), Value60 (11), Value8 (4)
-    """
-    Value1: CurrentDelayTime = ...
-    Value10: CurrentDelayTime = ...
-    Value100: CurrentDelayTime = ...
-    Value1000: CurrentDelayTime = ...
-    Value12: CurrentDelayTime = ...
-    Value14: CurrentDelayTime = ...
-    Value16: CurrentDelayTime = ...
-    Value2: CurrentDelayTime = ...
-    Value20: CurrentDelayTime = ...
-    Value200: CurrentDelayTime = ...
-    Value4: CurrentDelayTime = ...
-    Value40: CurrentDelayTime = ...
-    Value500: CurrentDelayTime = ...
-    Value6: CurrentDelayTime = ...
-    Value60: CurrentDelayTime = ...
-    Value8: CurrentDelayTime = ...
-    value__ = ...
-
-
-class CurrentLimitsLowerTripLevelResponse(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class CurrentLimitsLowerTripLevelResponse(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property CurrentLimitsLowerTripLevelResponse
 
@@ -4519,7 +4276,7 @@ class CurrentLimitsLowerTripLevelResponse(Enum): # skipped bases: <type 'ICompar
     value__ = ...
 
 
-class CurrentLimitsLowerWarningLevelResponse(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class CurrentLimitsLowerWarningLevelResponse(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property CurrentLimitsLowerWarningLevelResponse
 
@@ -4531,7 +4288,7 @@ class CurrentLimitsLowerWarningLevelResponse(Enum): # skipped bases: <type 'ICom
     Warn: CurrentLimitsLowerWarningLevelResponse = ...
 
 
-class CurrentLimitsUpperTripLevelResponse(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class CurrentLimitsUpperTripLevelResponse(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property CurrentLimitsUpperTripLevelResponse
 
@@ -4543,7 +4300,7 @@ class CurrentLimitsUpperTripLevelResponse(Enum): # skipped bases: <type 'ICompar
     value__ = ...
 
 
-class CurrentLimitsUpperWarningLevelResponse(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class CurrentLimitsUpperWarningLevelResponse(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property CurrentLimitsUpperWarningLevelResponse
 
@@ -4555,7 +4312,7 @@ class CurrentLimitsUpperWarningLevelResponse(Enum): # skipped bases: <type 'ICom
     Warn: CurrentLimitsUpperWarningLevelResponse = ...
 
 
-class CurrentMeasurement(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class CurrentMeasurement(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property CurrentMeasurement
 
@@ -4567,7 +4324,7 @@ class CurrentMeasurement(Enum): # skipped bases: <type 'IComparable'>, <type 'IF
     value__ = ...
 
 
-class CurrentTransformerForL1L2L3AndNeutralConductor(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class CurrentTransformerForL1L2L3AndNeutralConductor(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property CurrentTransformerForL1L2L3AndNeutralConductor
 
@@ -4578,7 +4335,7 @@ class CurrentTransformerForL1L2L3AndNeutralConductor(Enum): # skipped bases: <ty
     value__ = ...
 
 
-class CurrentTransformerSecondaryCurrent(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class CurrentTransformerSecondaryCurrent(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property CurrentTransformerSecondaryCurrent
 
@@ -4589,15 +4346,13 @@ class CurrentTransformerSecondaryCurrent(Enum): # skipped bases: <type 'ICompara
     value__ = ...
 
 
-class CyclicSendDataFloatValuesByte10to13(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class CyclicSendDataFloatValuesByte10to13(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property CyclicSendDataFloatValuesByte10to13
 
-    enum CyclicSendDataFloatValuesByte10to13, values: ActivePowerP (9), ActivePowerPaSigned (50), ActivePowerPbSignedInverted (51), ApparentPowerS (10), AverageCurrentI (5), CosPhi (14), CurrentIL1 (6), CurrentIL2 (7), CurrentIL3 (8), FrequencyHz (15), LineToLineVoltageUl1L2 (11), LineToLineVoltageUl2L3 (12), LineToLineVoltageUl3L1 (13), MaxCurrentI (4), NotConnected (0), PhaseVoltageUl1N (16), PhaseVoltageUl2N (17), PhaseVoltageUl3N (18)
+    enum CyclicSendDataFloatValuesByte10to13, values: ActivePowerP (9), ApparentPowerS (10), AverageCurrentI (5), CosPhi (14), CurrentIL1 (6), CurrentIL2 (7), CurrentIL3 (8), FrequencyHz (15), LineToLineVoltageUl1L2 (11), LineToLineVoltageUl2L3 (12), LineToLineVoltageUl3L1 (13), MaxCurrentI (4), NotConnected (0), PhaseVoltageUl1N (16), PhaseVoltageUl2N (17), PhaseVoltageUl3N (18)
     """
     ActivePowerP: CyclicSendDataFloatValuesByte10to13 = ...
-    ActivePowerPaSigned: CyclicSendDataFloatValuesByte10to13 = ...
-    ActivePowerPbSignedInverted: CyclicSendDataFloatValuesByte10to13 = ...
     ApparentPowerS: CyclicSendDataFloatValuesByte10to13 = ...
     AverageCurrentI: CyclicSendDataFloatValuesByte10to13 = ...
     CosPhi: CyclicSendDataFloatValuesByte10to13 = ...
@@ -4616,15 +4371,13 @@ class CyclicSendDataFloatValuesByte10to13(Enum): # skipped bases: <type 'ICompar
     value__ = ...
 
 
-class CyclicSendDataFloatValuesByte14to17(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class CyclicSendDataFloatValuesByte14to17(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property CyclicSendDataFloatValuesByte14to17
 
-    enum CyclicSendDataFloatValuesByte14to17, values: ActivePowerP (9), ActivePowerPaSigned (50), ActivePowerPbSignedInverted (51), ApparentPowerS (10), AverageCurrentI (5), CosPhi (14), CurrentIL1 (6), CurrentIL2 (7), CurrentIL3 (8), FrequencyHz (15), LineToLineVoltageUl1L2 (11), LineToLineVoltageUl2L3 (12), LineToLineVoltageUl3L1 (13), MaxCurrentI (4), NotConnected (0), PhaseVoltageUl1N (16), PhaseVoltageUl2N (17), PhaseVoltageUl3N (18)
+    enum CyclicSendDataFloatValuesByte14to17, values: ActivePowerP (9), ApparentPowerS (10), AverageCurrentI (5), CosPhi (14), CurrentIL1 (6), CurrentIL2 (7), CurrentIL3 (8), FrequencyHz (15), LineToLineVoltageUl1L2 (11), LineToLineVoltageUl2L3 (12), LineToLineVoltageUl3L1 (13), MaxCurrentI (4), NotConnected (0), PhaseVoltageUl1N (16), PhaseVoltageUl2N (17), PhaseVoltageUl3N (18)
     """
     ActivePowerP: CyclicSendDataFloatValuesByte14to17 = ...
-    ActivePowerPaSigned: CyclicSendDataFloatValuesByte14to17 = ...
-    ActivePowerPbSignedInverted: CyclicSendDataFloatValuesByte14to17 = ...
     ApparentPowerS: CyclicSendDataFloatValuesByte14to17 = ...
     AverageCurrentI: CyclicSendDataFloatValuesByte14to17 = ...
     CosPhi: CyclicSendDataFloatValuesByte14to17 = ...
@@ -4643,15 +4396,13 @@ class CyclicSendDataFloatValuesByte14to17(Enum): # skipped bases: <type 'ICompar
     value__ = ...
 
 
-class CyclicSendDataFloatValuesByte2to5(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class CyclicSendDataFloatValuesByte2to5(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property CyclicSendDataFloatValuesByte2to5
 
-    enum CyclicSendDataFloatValuesByte2to5, values: ActivePowerP (9), ActivePowerPaSigned (50), ActivePowerPbSignedInverted (51), ApparentPowerS (10), AverageCurrentI (5), CosPhi (14), CurrentIL1 (6), CurrentIL2 (7), CurrentIL3 (8), FrequencyHz (15), LineToLineVoltageUl1L2 (11), LineToLineVoltageUl2L3 (12), LineToLineVoltageUl3L1 (13), MaxCurrentI (4), NotConnected (0), PhaseVoltageUl1N (16), PhaseVoltageUl2N (17), PhaseVoltageUl3N (18)
+    enum CyclicSendDataFloatValuesByte2to5, values: ActivePowerP (9), ApparentPowerS (10), AverageCurrentI (5), CosPhi (14), CurrentIL1 (6), CurrentIL2 (7), CurrentIL3 (8), FrequencyHz (15), LineToLineVoltageUl1L2 (11), LineToLineVoltageUl2L3 (12), LineToLineVoltageUl3L1 (13), MaxCurrentI (4), NotConnected (0), PhaseVoltageUl1N (16), PhaseVoltageUl2N (17), PhaseVoltageUl3N (18)
     """
     ActivePowerP: CyclicSendDataFloatValuesByte2to5 = ...
-    ActivePowerPaSigned: CyclicSendDataFloatValuesByte2to5 = ...
-    ActivePowerPbSignedInverted: CyclicSendDataFloatValuesByte2to5 = ...
     ApparentPowerS: CyclicSendDataFloatValuesByte2to5 = ...
     AverageCurrentI: CyclicSendDataFloatValuesByte2to5 = ...
     CosPhi: CyclicSendDataFloatValuesByte2to5 = ...
@@ -4670,15 +4421,13 @@ class CyclicSendDataFloatValuesByte2to5(Enum): # skipped bases: <type 'IComparab
     value__ = ...
 
 
-class CyclicSendDataFloatValuesByte6to9(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class CyclicSendDataFloatValuesByte6to9(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property CyclicSendDataFloatValuesByte6to9
 
-    enum CyclicSendDataFloatValuesByte6to9, values: ActivePowerP (9), ActivePowerPaSigned (50), ActivePowerPbSignedInverted (51), ApparentPowerS (10), AverageCurrentI (5), CosPhi (14), CurrentIL1 (6), CurrentIL2 (7), CurrentIL3 (8), FrequencyHz (15), LineToLineVoltageUl1L2 (11), LineToLineVoltageUl2L3 (12), LineToLineVoltageUl3L1 (13), MaxCurrentI (4), NotConnected (0), PhaseVoltageUl1N (16), PhaseVoltageUl2N (17), PhaseVoltageUl3N (18)
+    enum CyclicSendDataFloatValuesByte6to9, values: ActivePowerP (9), ApparentPowerS (10), AverageCurrentI (5), CosPhi (14), CurrentIL1 (6), CurrentIL2 (7), CurrentIL3 (8), FrequencyHz (15), LineToLineVoltageUl1L2 (11), LineToLineVoltageUl2L3 (12), LineToLineVoltageUl3L1 (13), MaxCurrentI (4), NotConnected (0), PhaseVoltageUl1N (16), PhaseVoltageUl2N (17), PhaseVoltageUl3N (18)
     """
     ActivePowerP: CyclicSendDataFloatValuesByte6to9 = ...
-    ActivePowerPaSigned: CyclicSendDataFloatValuesByte6to9 = ...
-    ActivePowerPbSignedInverted: CyclicSendDataFloatValuesByte6to9 = ...
     ApparentPowerS: CyclicSendDataFloatValuesByte6to9 = ...
     AverageCurrentI: CyclicSendDataFloatValuesByte6to9 = ...
     CosPhi: CyclicSendDataFloatValuesByte6to9 = ...
@@ -4697,7 +4446,7 @@ class CyclicSendDataFloatValuesByte6to9(Enum): # skipped bases: <type 'IComparab
     value__ = ...
 
 
-class DataBits(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class DataBits(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property DataBits
 
@@ -4708,7 +4457,7 @@ class DataBits(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable
     value__ = ...
 
 
-class DataFlowControl(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class DataFlowControl(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property DataFlowControl
 
@@ -4720,68 +4469,11 @@ class DataFlowControl(Enum): # skipped bases: <type 'IComparable'>, <type 'IForm
     XonOrXoff: DataFlowControl = ...
 
 
-class DataFormat(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
-    """
-    Possible values for property DataFormat
-
-    enum DataFormat, values: S7 (0)
-    """
-    S7: DataFormat = ...
-    value__ = ...
-
-
-class DelayTimeForLimitMonitoring(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
-    """
-    Possible values for property DelayTimeForLimitMonitoring
-
-    enum DelayTimeForLimitMonitoring, values: None (0), Value10S (10), Value1S (1), Value2S (2), Value3S (3), Value4S (4), Value5S (5), Value6S (6), Value7S (7), Value8S (8), Value9S (9)
-    """
-    Value10S: DelayTimeForLimitMonitoring = ...
-    Value1S: DelayTimeForLimitMonitoring = ...
-    Value2S: DelayTimeForLimitMonitoring = ...
-    Value3S: DelayTimeForLimitMonitoring = ...
-    Value4S: DelayTimeForLimitMonitoring = ...
-    Value5S: DelayTimeForLimitMonitoring = ...
-    Value6S: DelayTimeForLimitMonitoring = ...
-    Value7S: DelayTimeForLimitMonitoring = ...
-    Value8S: DelayTimeForLimitMonitoring = ...
-    Value9S: DelayTimeForLimitMonitoring = ...
-    value__ = ...
-
-
-class DensityUnit(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
-    """
-    Possible values for property DensityUnit
-
-    enum DensityUnit, values: Default (0), GramPerCubicCentimeter (1), GramPerCubicMeter (4), GramPerLiter (3), GramPerMilliliter (2), KilogramPerCubicDecimeter (5), KilogramPerCubicMeter (7), KilogramPerLiter (6), MegagramPerCubicMeter (18), MetricTonPerCubicMeter (16), MicrogramPerLiter (17), MilligramPerCubicDecimeter (12), MilligramPerCubicMeter (14), MilligramPerLiter (13), PoundsPerCubicFoot (8), PoundsPerCubicInch (11), PoundsPerGallons (9), PoundsPerImperialGallons (10), TonPerCubicYard (15)
-    """
-    Default: DensityUnit = ...
-    GramPerCubicCentimeter: DensityUnit = ...
-    GramPerCubicMeter: DensityUnit = ...
-    GramPerLiter: DensityUnit = ...
-    GramPerMilliliter: DensityUnit = ...
-    KilogramPerCubicDecimeter: DensityUnit = ...
-    KilogramPerCubicMeter: DensityUnit = ...
-    KilogramPerLiter: DensityUnit = ...
-    MegagramPerCubicMeter: DensityUnit = ...
-    MetricTonPerCubicMeter: DensityUnit = ...
-    MicrogramPerLiter: DensityUnit = ...
-    MilligramPerCubicDecimeter: DensityUnit = ...
-    MilligramPerCubicMeter: DensityUnit = ...
-    MilligramPerLiter: DensityUnit = ...
-    PoundsPerCubicFoot: DensityUnit = ...
-    PoundsPerCubicInch: DensityUnit = ...
-    PoundsPerGallons: DensityUnit = ...
-    PoundsPerImperialGallons: DensityUnit = ...
-    TonPerCubicYard: DensityUnit = ...
-    value__ = ...
-
-
 class IHardwareCompareTarget: # skipped bases: <type 'object'>
     """ Access to the device/device item in a HW compare scenario """
     pass
 
-class HardwareObject(IEquatable, IEngineeringObject, IHardwareCompareTarget, IInternalObjectAccess): # skipped bases: <type 'IEngineeringCompositionOrObject'>, <type 'IInternalBaseAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringInstance'>, <type 'object'>
+class HardwareObject(IEquatable, IEngineeringObject, IHardwareCompareTarget, IInternalObjectAccess): # skipped bases: <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'IEngineeringInstance'>, <type 'IInternalBaseAccess'>, <type 'object'>
     """ The base for hardware modules like devices or device items """
     @property
     def DeviceItems(self) -> DeviceItemComposition:
@@ -4974,7 +4666,7 @@ class HardwareObject(IEquatable, IEngineeringObject, IHardwareCompareTarget, IIn
         ...
 
 
-class Device(IEngineeringServiceProvider, IMasterCopySource, IMasterCopyTarget, HardwareObject): # skipped bases: <type 'IEngineeringCompositionOrObject'>, <type 'IInternalObjectAccess'>, <type 'IEquatable[object]'>, <type 'IHardwareCompareTarget'>, <type 'IEngineeringObject'>, <type 'IInternalBaseAccess'>, <type 'IServiceProvider'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringInstance'>, <type 'object'>
+class Device(IEngineeringServiceProvider, IMasterCopySource, IMasterCopyTarget, HardwareObject): # skipped bases: <type 'IEngineeringObject'>, <type 'IEngineeringInstance'>, <type 'IInternalBaseAccess'>, <type 'IServiceProvider'>, <type 'IHardwareCompareTarget'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'IInternalObjectAccess'>, <type 'IEquatable[object]'>, <type 'object'>
     """ Device as an container for DeviceItems """
     @property
     def IsGsd(self) -> bool:
@@ -5014,7 +4706,7 @@ class Device(IEngineeringServiceProvider, IMasterCopySource, IMasterCopyTarget, 
         ...
 
 
-class DeviceComposition(IInternalCompositionAccess, IEngineeringComposition, IEquatable): # skipped bases: <type 'IEngineeringInstance'>, <type 'IEnumerable'>, <type 'IInternalBaseAccess'>, <type 'IInternalCollectionAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'object'>
+class DeviceComposition(IInternalCompositionAccess, IEngineeringComposition, IEquatable): # skipped bases: <type 'IEnumerable'>, <type 'IEngineeringInstance'>, <type 'IInternalBaseAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'IInternalCollectionAccess'>, <type 'object'>
     """ Composition of Devices """
     @property
     def Parent(self) -> IEngineeringObject:
@@ -5094,7 +4786,7 @@ class DeviceComposition(IInternalCompositionAccess, IEngineeringComposition, IEq
         ...
 
 
-class DeviceGroup(IEquatable, IEngineeringObject, IEngineeringServiceProvider, IInternalObjectAccess): # skipped bases: <type 'IEngineeringCompositionOrObject'>, <type 'IInternalBaseAccess'>, <type 'IServiceProvider'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringInstance'>, <type 'object'>
+class DeviceGroup(IEquatable, IEngineeringObject, IEngineeringServiceProvider, IInternalObjectAccess): # skipped bases: <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'IServiceProvider'>, <type 'IEngineeringInstance'>, <type 'IInternalBaseAccess'>, <type 'object'>
     """ Group containing devices """
     @property
     def Devices(self) -> DeviceComposition:
@@ -5148,7 +4840,7 @@ class DeviceGroup(IEquatable, IEngineeringObject, IEngineeringServiceProvider, I
         ...
 
 
-class DeviceItem(IEngineeringServiceProvider, IMasterCopySource, HardwareObject): # skipped bases: <type 'IEngineeringCompositionOrObject'>, <type 'IInternalObjectAccess'>, <type 'IEquatable[object]'>, <type 'IHardwareCompareTarget'>, <type 'IEngineeringObject'>, <type 'IInternalBaseAccess'>, <type 'IServiceProvider'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringInstance'>, <type 'object'>
+class DeviceItem(IEngineeringServiceProvider, IMasterCopySource, HardwareObject): # skipped bases: <type 'IEngineeringObject'>, <type 'IEngineeringInstance'>, <type 'IInternalBaseAccess'>, <type 'IServiceProvider'>, <type 'IHardwareCompareTarget'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'IInternalObjectAccess'>, <type 'IEquatable[object]'>, <type 'object'>
     """ DeviceItem object as representation of a hardware module """
     @property
     def Addresses(self) -> AddressComposition:
@@ -5223,7 +4915,7 @@ class DeviceItem(IEngineeringServiceProvider, IMasterCopySource, HardwareObject)
         ...
 
 
-class DeviceItemAssociation(IEquatable, IEngineeringAssociation, IInternalAssociationAccess): # skipped bases: <type 'IInternalBaseAccess'>, <type 'IEnumerable'>, <type 'IInternalCollectionAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringInstance'>, <type 'object'>
+class DeviceItemAssociation(IEquatable, IEngineeringAssociation, IInternalAssociationAccess): # skipped bases: <type 'IInternalCollectionAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEnumerable'>, <type 'IEngineeringInstance'>, <type 'IInternalBaseAccess'>, <type 'object'>
     """ Associated device items """
     @property
     def Parent(self) -> IEngineeringObject:
@@ -5263,7 +4955,7 @@ class DeviceItemAssociation(IEquatable, IEngineeringAssociation, IInternalAssoci
         ...
 
 
-class DeviceItemClassifications(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class DeviceItemClassifications(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     The classifications a device item can belong to; Flags-enum.
 
@@ -5274,7 +4966,7 @@ class DeviceItemClassifications(Enum): # skipped bases: <type 'IComparable'>, <t
     value__ = ...
 
 
-class DeviceItemComposition(IInternalCompositionAccess, IEngineeringComposition, IEquatable): # skipped bases: <type 'IEngineeringInstance'>, <type 'IEnumerable'>, <type 'IInternalBaseAccess'>, <type 'IInternalCollectionAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'object'>
+class DeviceItemComposition(IInternalCompositionAccess, IEngineeringComposition, IEquatable): # skipped bases: <type 'IEnumerable'>, <type 'IEngineeringInstance'>, <type 'IInternalBaseAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'IInternalCollectionAccess'>, <type 'object'>
     """ Composition of DeviceItems """
     @property
     def Parent(self) -> IEngineeringObject:
@@ -5326,11 +5018,11 @@ class DeviceItemComposition(IInternalCompositionAccess, IEngineeringComposition,
         ...
 
 
-class DeviceSystemGroup(DeviceGroup): # skipped bases: <type 'IEngineeringCompositionOrObject'>, <type 'IInternalObjectAccess'>, <type 'IEquatable[object]'>, <type 'IEngineeringServiceProvider'>, <type 'IEngineeringObject'>, <type 'IInternalBaseAccess'>, <type 'IServiceProvider'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringInstance'>, <type 'object'>
+class DeviceSystemGroup(DeviceGroup): # skipped bases: <type 'IEngineeringServiceProvider'>, <type 'IEngineeringObject'>, <type 'IServiceProvider'>, <type 'IEngineeringInstance'>, <type 'IInternalBaseAccess'>, <type 'IInternalObjectAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'IEquatable[object]'>, <type 'object'>
     """ Represents a device system group (e.g. ungrouped devices group) """
     pass
 
-class DeviceUserGroup(DeviceGroup, IMasterCopySource, IMasterCopyTarget): # skipped bases: <type 'IEngineeringCompositionOrObject'>, <type 'IInternalObjectAccess'>, <type 'IEquatable[object]'>, <type 'IEngineeringServiceProvider'>, <type 'IEngineeringObject'>, <type 'IInternalBaseAccess'>, <type 'IServiceProvider'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringInstance'>, <type 'object'>
+class DeviceUserGroup(DeviceGroup, IMasterCopySource, IMasterCopyTarget): # skipped bases: <type 'IEngineeringServiceProvider'>, <type 'IEngineeringObject'>, <type 'IServiceProvider'>, <type 'IEngineeringInstance'>, <type 'IInternalBaseAccess'>, <type 'IInternalObjectAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'IEquatable[object]'>, <type 'object'>
     """ Group containing the devices """
     @property
     def Groups(self) -> DeviceUserGroupComposition:
@@ -5351,7 +5043,7 @@ class DeviceUserGroup(DeviceGroup, IMasterCopySource, IMasterCopyTarget): # skip
         ...
 
 
-class DeviceUserGroupComposition(IInternalCompositionAccess, IEngineeringComposition, IEquatable): # skipped bases: <type 'IEngineeringInstance'>, <type 'IEnumerable'>, <type 'IInternalBaseAccess'>, <type 'IInternalCollectionAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'object'>
+class DeviceUserGroupComposition(IInternalCompositionAccess, IEngineeringComposition, IEquatable): # skipped bases: <type 'IEnumerable'>, <type 'IEngineeringInstance'>, <type 'IInternalBaseAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'IInternalCollectionAccess'>, <type 'object'>
     """ Composition of DeviceUserGroups """
     @property
     def Parent(self) -> IEngineeringObject:
@@ -5415,18 +5107,7 @@ class DeviceUserGroupComposition(IInternalCompositionAccess, IEngineeringComposi
         ...
 
 
-class DhcpSupportedMode(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
-    """
-    DHCP Supported Modes
-
-    enum DhcpSupportedMode, values: ClientId (1), MacAddress (0)
-    """
-    ClientId: DhcpSupportedMode = ...
-    MacAddress: DhcpSupportedMode = ...
-    value__ = ...
-
-
-class DiagnosticParameterMode(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class DiagnosticParameterMode(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property DiagnosticParameterMode
 
@@ -5437,7 +5118,7 @@ class DiagnosticParameterMode(Enum): # skipped bases: <type 'IComparable'>, <typ
     value__ = ...
 
 
-class DiagnosticsCPlug(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class DiagnosticsCPlug(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property DiagnosticsCPlug
 
@@ -5448,29 +5129,7 @@ class DiagnosticsCPlug(Enum): # skipped bases: <type 'IComparable'>, <type 'IFor
     value__ = ...
 
 
-class DiagnosticsCycleCounter(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
-    """
-    Possible values for property DiagnosticsCycleCounter
-
-    enum DiagnosticsCycleCounter, values: Active (1), Deactivated (0)
-    """
-    Active: DiagnosticsCycleCounter = ...
-    Deactivated: DiagnosticsCycleCounter = ...
-    value__ = ...
-
-
-class DiagnosticsCycleCounterPilotValves(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
-    """
-    Possible values for property DiagnosticsCycleCounterPilotValves
-
-    enum DiagnosticsCycleCounterPilotValves, values: Active (1), Deactivated (0)
-    """
-    Active: DiagnosticsCycleCounterPilotValves = ...
-    Deactivated: DiagnosticsCycleCounterPilotValves = ...
-    value__ = ...
-
-
-class DiagnosticsGroup(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class DiagnosticsGroup(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property DiagnosticsGroup
 
@@ -5481,7 +5140,7 @@ class DiagnosticsGroup(Enum): # skipped bases: <type 'IComparable'>, <type 'IFor
     value__ = ...
 
 
-class DiagnosticsInterrupt(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class DiagnosticsInterrupt(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property DiagnosticsInterrupt
 
@@ -5492,7 +5151,7 @@ class DiagnosticsInterrupt(Enum): # skipped bases: <type 'IComparable'>, <type '
     value__ = ...
 
 
-class DiagnosticsNoSupplyVoltage(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class DiagnosticsNoSupplyVoltage(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property DiagnosticsNoSupplyVoltage
 
@@ -5503,7 +5162,7 @@ class DiagnosticsNoSupplyVoltage(Enum): # skipped bases: <type 'IComparable'>, <
     value__ = ...
 
 
-class DiagnosticsOverflow(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class DiagnosticsOverflow(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property DiagnosticsOverflow
 
@@ -5514,7 +5173,7 @@ class DiagnosticsOverflow(Enum): # skipped bases: <type 'IComparable'>, <type 'I
     value__ = ...
 
 
-class DiagnosticsPort1(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class DiagnosticsPort1(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property DiagnosticsPort1
 
@@ -5525,7 +5184,7 @@ class DiagnosticsPort1(Enum): # skipped bases: <type 'IComparable'>, <type 'IFor
     value__ = ...
 
 
-class DiagnosticsPort2(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class DiagnosticsPort2(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property DiagnosticsPort2
 
@@ -5536,7 +5195,7 @@ class DiagnosticsPort2(Enum): # skipped bases: <type 'IComparable'>, <type 'IFor
     value__ = ...
 
 
-class DiagnosticsPort3(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class DiagnosticsPort3(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property DiagnosticsPort3
 
@@ -5547,7 +5206,7 @@ class DiagnosticsPort3(Enum): # skipped bases: <type 'IComparable'>, <type 'IFor
     value__ = ...
 
 
-class DiagnosticsPort4(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class DiagnosticsPort4(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property DiagnosticsPort4
 
@@ -5558,7 +5217,7 @@ class DiagnosticsPort4(Enum): # skipped bases: <type 'IComparable'>, <type 'IFor
     value__ = ...
 
 
-class DiagnosticsRedundantPowerSupply(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class DiagnosticsRedundantPowerSupply(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property DiagnosticsRedundantPowerSupply
 
@@ -5570,18 +5229,7 @@ class DiagnosticsRedundantPowerSupply(Enum): # skipped bases: <type 'IComparable
     value__ = ...
 
 
-class DiagnosticsShortCircuitActive(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
-    """
-    Possible values for property DiagnosticsShortCircuitActive
-
-    enum DiagnosticsShortCircuitActive, values: Active (1), Deactivated (0)
-    """
-    Active: DiagnosticsShortCircuitActive = ...
-    Deactivated: DiagnosticsShortCircuitActive = ...
-    value__ = ...
-
-
-class DiagnosticsShortCircuitToGround(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class DiagnosticsShortCircuitToGround(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property DiagnosticsShortCircuitToGround
 
@@ -5592,7 +5240,7 @@ class DiagnosticsShortCircuitToGround(Enum): # skipped bases: <type 'IComparable
     value__ = ...
 
 
-class DiagnosticsShortCircuitToLplus(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class DiagnosticsShortCircuitToLplus(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property DiagnosticsShortCircuitToLplus
 
@@ -5603,7 +5251,7 @@ class DiagnosticsShortCircuitToLplus(Enum): # skipped bases: <type 'IComparable'
     value__ = ...
 
 
-class DiagnosticsUnderflow(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class DiagnosticsUnderflow(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property DiagnosticsUnderflow
 
@@ -5614,7 +5262,7 @@ class DiagnosticsUnderflow(Enum): # skipped bases: <type 'IComparable'>, <type '
     value__ = ...
 
 
-class DiagnosticsWireBreak(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class DiagnosticsWireBreak(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property DiagnosticsWireBreak
 
@@ -5625,7 +5273,7 @@ class DiagnosticsWireBreak(Enum): # skipped bases: <type 'IComparable'>, <type '
     value__ = ...
 
 
-class DiagnosticsWireBreakLimit(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class DiagnosticsWireBreakLimit(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property DiagnosticsWireBreakLimit
 
@@ -5636,51 +5284,7 @@ class DiagnosticsWireBreakLimit(Enum): # skipped bases: <type 'IComparable'>, <t
     value__ = ...
 
 
-class Diag_HighErrorLimit(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
-    """
-    Possible values for property Diag_HighErrorLimit
-
-    enum Diag_HighErrorLimit, values: Activated (1), Deactivated (0)
-    """
-    Activated: Diag_HighErrorLimit = ...
-    Deactivated: Diag_HighErrorLimit = ...
-    value__ = ...
-
-
-class Diag_HighWarningLimit(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
-    """
-    Possible values for property Diag_HighWarningLimit
-
-    enum Diag_HighWarningLimit, values: Activated (1), Deactivated (0)
-    """
-    Activated: Diag_HighWarningLimit = ...
-    Deactivated: Diag_HighWarningLimit = ...
-    value__ = ...
-
-
-class Diag_LowErrorLimit(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
-    """
-    Possible values for property Diag_LowErrorLimit
-
-    enum Diag_LowErrorLimit, values: Activated (1), Deactivated (0)
-    """
-    Activated: Diag_LowErrorLimit = ...
-    Deactivated: Diag_LowErrorLimit = ...
-    value__ = ...
-
-
-class Diag_LowWarningLimit(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
-    """
-    Possible values for property Diag_LowWarningLimit
-
-    enum Diag_LowWarningLimit, values: Activated (1), Deactivated (0)
-    """
-    Activated: Diag_LowWarningLimit = ...
-    Deactivated: Diag_LowWarningLimit = ...
-    value__ = ...
-
-
-class DigitalInputDirection(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class DigitalInputDirection(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property DigitalInputDirection
 
@@ -5691,31 +5295,7 @@ class DigitalInputDirection(Enum): # skipped bases: <type 'IComparable'>, <type 
     value__ = ...
 
 
-class DIMode(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
-    """
-    Possible values for property DIMode
-
-    enum DIMode, values: Deactivate (0), ForceOutputs (9), FreezeProcessValues (10), NoControlFromStartParameters (14), ResetAllCounterOnRisingLevel (6), ResetCounter1OnRisingLevel (3), ResetCounter2OnRisingLevel (4), ResetCounter3OnRisingLevel (5), SetZeroPointOnRisingLevel (7), StartDosingOnRisingLevel (1), StopDosingOnRisingLevel (2), StopOrContinueCounter1 (11), StopOrContinueCounter2 (12), StopOrContinueCounter3 (13), StopOrContinueDosing (8)
-    """
-    Deactivate: DIMode = ...
-    ForceOutputs: DIMode = ...
-    FreezeProcessValues: DIMode = ...
-    NoControlFromStartParameters: DIMode = ...
-    ResetAllCounterOnRisingLevel: DIMode = ...
-    ResetCounter1OnRisingLevel: DIMode = ...
-    ResetCounter2OnRisingLevel: DIMode = ...
-    ResetCounter3OnRisingLevel: DIMode = ...
-    SetZeroPointOnRisingLevel: DIMode = ...
-    StartDosingOnRisingLevel: DIMode = ...
-    StopDosingOnRisingLevel: DIMode = ...
-    StopOrContinueCounter1: DIMode = ...
-    StopOrContinueCounter2: DIMode = ...
-    StopOrContinueCounter3: DIMode = ...
-    StopOrContinueDosing: DIMode = ...
-    value__ = ...
-
-
-class DisplayAutoLogOffTime(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class DisplayAutoLogOffTime(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property DisplayAutoLogOffTime
 
@@ -5732,7 +5312,7 @@ class DisplayAutoLogOffTime(Enum): # skipped bases: <type 'IComparable'>, <type 
     value__ = ...
 
 
-class DisplayDefaultLanguage(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class DisplayDefaultLanguage(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property DisplayDefaultLanguage
 
@@ -5752,7 +5332,7 @@ class DisplayDefaultLanguage(Enum): # skipped bases: <type 'IComparable'>, <type
     value__ = ...
 
 
-class DisplayTimeToEnergySavingMode(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class DisplayTimeToEnergySavingMode(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property DisplayTimeToEnergySavingMode
 
@@ -5769,7 +5349,7 @@ class DisplayTimeToEnergySavingMode(Enum): # skipped bases: <type 'IComparable'>
     value__ = ...
 
 
-class DisplayTimeToStandbyMode(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class DisplayTimeToStandbyMode(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property DisplayTimeToStandbyMode
 
@@ -5786,7 +5366,7 @@ class DisplayTimeToStandbyMode(Enum): # skipped bases: <type 'IComparable'>, <ty
     value__ = ...
 
 
-class DisplayUpdateInterval(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class DisplayUpdateInterval(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property DisplayUpdateInterval
 
@@ -5807,7 +5387,7 @@ class DisplayUpdateInterval(Enum): # skipped bases: <type 'IComparable'>, <type 
     value__ = ...
 
 
-class DMInputsDebouncingTimes(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class DMInputsDebouncingTimes(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property DMInputsDebouncingTimes
 
@@ -5820,20 +5400,7 @@ class DMInputsDebouncingTimes(Enum): # skipped bases: <type 'IComparable'>, <typ
     value__ = ...
 
 
-class DPMasterMode(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
-    """
-    Possible values for property DPMasterMode
-
-    enum DPMasterMode, values: CanopenManager (4), CanopenSlave (8), CanTransparent (2), LessthanBetriebsartFestlegenGeaterthan (0)
-    """
-    CanopenManager: DPMasterMode = ...
-    CanopenSlave: DPMasterMode = ...
-    CanTransparent: DPMasterMode = ...
-    LessthanBetriebsartFestlegenGeaterthan: DPMasterMode = ...
-    value__ = ...
-
-
-class DpOperatingMode(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class DpOperatingMode(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property DpOperatingMode
 
@@ -5846,7 +5413,7 @@ class DpOperatingMode(Enum): # skipped bases: <type 'IComparable'>, <type 'IForm
     value__ = ...
 
 
-class DpProtocolMode(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class DpProtocolMode(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property DpProtocolMode
 
@@ -5858,19 +5425,7 @@ class DpProtocolMode(Enum): # skipped bases: <type 'IComparable'>, <type 'IForma
     value__ = ...
 
 
-class DQMode(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
-    """
-    Possible values for property DQMode
-
-    enum DQMode, values: Deactivate (0), FlowDirection (2), StateSignal (1)
-    """
-    Deactivate: DQMode = ...
-    FlowDirection: DQMode = ...
-    StateSignal: DQMode = ...
-    value__ = ...
-
-
-class DriveEnableOutput(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class DriveEnableOutput(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property DriveEnableOutput
 
@@ -5913,7 +5468,7 @@ class DriveEnableOutput(Enum): # skipped bases: <type 'IComparable'>, <type 'IFo
     X12Clamp38: DriveEnableOutput = ...
 
 
-class DriveReadyInput(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class DriveReadyInput(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property DriveReadyInput
 
@@ -5961,18 +5516,7 @@ class DriveReadyInput(Enum): # skipped bases: <type 'IComparable'>, <type 'IForm
     X12Clamp9: DriveReadyInput = ...
 
 
-class DryRunningProtectionBehavior(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
-    """
-    Possible values for property DryRunningProtectionBehavior
-
-    enum DryRunningProtectionBehavior, values: Deactivated (0), Trip (3)
-    """
-    Deactivated: DryRunningProtectionBehavior = ...
-    Trip: DryRunningProtectionBehavior = ...
-    value__ = ...
-
-
-class EdgeSelection(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class EdgeSelection(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property EdgeSelection
 
@@ -5984,7 +5528,7 @@ class EdgeSelection(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormat
     value__ = ...
 
 
-class EdgeSelectionDI0(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class EdgeSelectionDI0(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property EdgeSelectionDI0
 
@@ -5996,7 +5540,7 @@ class EdgeSelectionDI0(Enum): # skipped bases: <type 'IComparable'>, <type 'IFor
     value__ = ...
 
 
-class EdgeSelectionDI1(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class EdgeSelectionDI1(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property EdgeSelectionDI1
 
@@ -6008,7 +5552,7 @@ class EdgeSelectionDI1(Enum): # skipped bases: <type 'IComparable'>, <type 'IFor
     value__ = ...
 
 
-class EdgeSelectionDI2(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class EdgeSelectionDI2(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property EdgeSelectionDI2
 
@@ -6020,30 +5564,7 @@ class EdgeSelectionDI2(Enum): # skipped bases: <type 'IComparable'>, <type 'IFor
     value__ = ...
 
 
-class EdgeSelectionReferenceSwitch(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
-    """
-    Possible values for property EdgeSelectionReferenceSwitch
-
-    enum EdgeSelectionReferenceSwitch, values: AtFallingEdge (1), AtRisingEdge (0)
-    """
-    AtFallingEdge: EdgeSelectionReferenceSwitch = ...
-    AtRisingEdge: EdgeSelectionReferenceSwitch = ...
-    value__ = ...
-
-
-class EffectiveDirection(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
-    """
-    Possible values for property EffectiveDirection
-
-    enum EffectiveDirection, values: Both (3), Negative (2), None (0), Positive (1)
-    """
-    Both: EffectiveDirection = ...
-    Negative: EffectiveDirection = ...
-    Positive: EffectiveDirection = ...
-    value__ = ...
-
-
-class EMGroundFaultResponse(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class EMGroundFaultResponse(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property EMGroundFaultResponse
 
@@ -6055,7 +5576,7 @@ class EMGroundFaultResponse(Enum): # skipped bases: <type 'IComparable'>, <type 
     Warn: EMGroundFaultResponse = ...
 
 
-class EMGroundFaultSensorFaultResponse(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class EMGroundFaultSensorFaultResponse(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property EMGroundFaultSensorFaultResponse
 
@@ -6068,7 +5589,7 @@ class EMGroundFaultSensorFaultResponse(Enum): # skipped bases: <type 'IComparabl
     Warn: EMGroundFaultSensorFaultResponse = ...
 
 
-class EMTripLevelActiveStatus(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class EMTripLevelActiveStatus(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property EMTripLevelActiveStatus
 
@@ -6080,7 +5601,7 @@ class EMTripLevelActiveStatus(Enum): # skipped bases: <type 'IComparable'>, <typ
     value__ = ...
 
 
-class EMTripLevelResponse(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class EMTripLevelResponse(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property EMTripLevelResponse
 
@@ -6091,7 +5612,7 @@ class EMTripLevelResponse(Enum): # skipped bases: <type 'IComparable'>, <type 'I
     value__ = ...
 
 
-class EMWarningActiveStatus(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class EMWarningActiveStatus(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property EMWarningActiveStatus
 
@@ -6103,7 +5624,7 @@ class EMWarningActiveStatus(Enum): # skipped bases: <type 'IComparable'>, <type 
     value__ = ...
 
 
-class EMWarningLevelResponse(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class EMWarningLevelResponse(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property EMWarningLevelResponse
 
@@ -6115,7 +5636,7 @@ class EMWarningLevelResponse(Enum): # skipped bases: <type 'IComparable'>, <type
     Warn: EMWarningLevelResponse = ...
 
 
-class EncoderEvaluation(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class EncoderEvaluation(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property EncoderEvaluation
 
@@ -6132,7 +5653,7 @@ class EncoderEvaluation(Enum): # skipped bases: <type 'IComparable'>, <type 'IFo
     value__ = ...
 
 
-class EncoderType(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class EncoderType(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property EncoderType
 
@@ -6148,7 +5669,7 @@ class EncoderType(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormatta
     value__ = ...
 
 
-class EndValueEnergyCounter(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class EndValueEnergyCounter(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property EndValueEnergyCounter
 
@@ -6163,7 +5684,7 @@ class EndValueEnergyCounter(Enum): # skipped bases: <type 'IComparable'>, <type 
     value__ = ...
 
 
-class ExternalFault1ActiveStatus(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class ExternalFault1ActiveStatus(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property ExternalFault1ActiveStatus
 
@@ -6174,7 +5695,7 @@ class ExternalFault1ActiveStatus(Enum): # skipped bases: <type 'IComparable'>, <
     value__ = ...
 
 
-class ExternalFault1Response(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class ExternalFault1Response(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property ExternalFault1Response
 
@@ -6186,7 +5707,7 @@ class ExternalFault1Response(Enum): # skipped bases: <type 'IComparable'>, <type
     Warn: ExternalFault1Response = ...
 
 
-class ExternalFault1Type(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class ExternalFault1Type(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property ExternalFault1Type
 
@@ -6197,7 +5718,7 @@ class ExternalFault1Type(Enum): # skipped bases: <type 'IComparable'>, <type 'IF
     value__ = ...
 
 
-class ExternalFault2ActiveStatus(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class ExternalFault2ActiveStatus(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property ExternalFault2ActiveStatus
 
@@ -6208,7 +5729,7 @@ class ExternalFault2ActiveStatus(Enum): # skipped bases: <type 'IComparable'>, <
     value__ = ...
 
 
-class ExternalFault2Response(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class ExternalFault2Response(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property ExternalFault2Response
 
@@ -6220,7 +5741,7 @@ class ExternalFault2Response(Enum): # skipped bases: <type 'IComparable'>, <type
     Warn: ExternalFault2Response = ...
 
 
-class ExternalFault2Type(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class ExternalFault2Type(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property ExternalFault2Type
 
@@ -6231,7 +5752,7 @@ class ExternalFault2Type(Enum): # skipped bases: <type 'IComparable'>, <type 'IF
     value__ = ...
 
 
-class ExternalFault3ActiveStatus(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class ExternalFault3ActiveStatus(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property ExternalFault3ActiveStatus
 
@@ -6242,7 +5763,7 @@ class ExternalFault3ActiveStatus(Enum): # skipped bases: <type 'IComparable'>, <
     value__ = ...
 
 
-class ExternalFault3Response(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class ExternalFault3Response(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property ExternalFault3Response
 
@@ -6254,7 +5775,7 @@ class ExternalFault3Response(Enum): # skipped bases: <type 'IComparable'>, <type
     Warn: ExternalFault3Response = ...
 
 
-class ExternalFault3Type(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class ExternalFault3Type(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property ExternalFault3Type
 
@@ -6265,7 +5786,7 @@ class ExternalFault3Type(Enum): # skipped bases: <type 'IComparable'>, <type 'IF
     value__ = ...
 
 
-class ExternalFault4ActiveStatus(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class ExternalFault4ActiveStatus(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property ExternalFault4ActiveStatus
 
@@ -6276,7 +5797,7 @@ class ExternalFault4ActiveStatus(Enum): # skipped bases: <type 'IComparable'>, <
     value__ = ...
 
 
-class ExternalFault4Response(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class ExternalFault4Response(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property ExternalFault4Response
 
@@ -6288,7 +5809,7 @@ class ExternalFault4Response(Enum): # skipped bases: <type 'IComparable'>, <type
     Warn: ExternalFault4Response = ...
 
 
-class ExternalFault4Type(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class ExternalFault4Type(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property ExternalFault4Type
 
@@ -6299,7 +5820,7 @@ class ExternalFault4Type(Enum): # skipped bases: <type 'IComparable'>, <type 'IF
     value__ = ...
 
 
-class ExternalFault5ActiveStatus(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class ExternalFault5ActiveStatus(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property ExternalFault5ActiveStatus
 
@@ -6310,7 +5831,7 @@ class ExternalFault5ActiveStatus(Enum): # skipped bases: <type 'IComparable'>, <
     value__ = ...
 
 
-class ExternalFault5Response(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class ExternalFault5Response(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property ExternalFault5Response
 
@@ -6322,7 +5843,7 @@ class ExternalFault5Response(Enum): # skipped bases: <type 'IComparable'>, <type
     Warn: ExternalFault5Response = ...
 
 
-class ExternalFault5Type(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class ExternalFault5Type(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property ExternalFault5Type
 
@@ -6333,7 +5854,7 @@ class ExternalFault5Type(Enum): # skipped bases: <type 'IComparable'>, <type 'IF
     value__ = ...
 
 
-class ExternalFault6ActiveStatus(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class ExternalFault6ActiveStatus(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property ExternalFault6ActiveStatus
 
@@ -6344,7 +5865,7 @@ class ExternalFault6ActiveStatus(Enum): # skipped bases: <type 'IComparable'>, <
     value__ = ...
 
 
-class ExternalFault6Response(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class ExternalFault6Response(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property ExternalFault6Response
 
@@ -6356,7 +5877,7 @@ class ExternalFault6Response(Enum): # skipped bases: <type 'IComparable'>, <type
     Warn: ExternalFault6Response = ...
 
 
-class ExternalFault6Type(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class ExternalFault6Type(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property ExternalFault6Type
 
@@ -6367,7 +5888,7 @@ class ExternalFault6Type(Enum): # skipped bases: <type 'IComparable'>, <type 'IF
     value__ = ...
 
 
-class Failsafe_Activated(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class Failsafe_Activated(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property Failsafe_Activated
 
@@ -6378,7 +5899,7 @@ class Failsafe_Activated(Enum): # skipped bases: <type 'IComparable'>, <type 'IF
     value__ = ...
 
 
-class Failsafe_ActivatedLightTest(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class Failsafe_ActivatedLightTest(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property Failsafe_ActivatedLightTest
 
@@ -6389,7 +5910,7 @@ class Failsafe_ActivatedLightTest(Enum): # skipped bases: <type 'IComparable'>, 
     value__ = ...
 
 
-class Failsafe_BehaviorAfterChannelFault(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class Failsafe_BehaviorAfterChannelFault(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property Failsafe_BehaviorAfterChannelFault
 
@@ -6400,7 +5921,7 @@ class Failsafe_BehaviorAfterChannelFault(Enum): # skipped bases: <type 'ICompara
     value__ = ...
 
 
-class Failsafe_ChannelFailureAcknowledge(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class Failsafe_ChannelFailureAcknowledge(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property Failsafe_ChannelFailureAcknowledge
 
@@ -6411,7 +5932,7 @@ class Failsafe_ChannelFailureAcknowledge(Enum): # skipped bases: <type 'ICompara
     value__ = ...
 
 
-class Failsafe_ChatterMonitoring(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class Failsafe_ChatterMonitoring(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property Failsafe_ChatterMonitoring
 
@@ -6422,7 +5943,7 @@ class Failsafe_ChatterMonitoring(Enum): # skipped bases: <type 'IComparable'>, <
     value__ = ...
 
 
-class Failsafe_ControlOfOutput(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class Failsafe_ControlOfOutput(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property Failsafe_ControlOfOutput
 
@@ -6433,7 +5954,7 @@ class Failsafe_ControlOfOutput(Enum): # skipped bases: <type 'IComparable'>, <ty
     value__ = ...
 
 
-class Failsafe_DiagnosisWireBreak(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class Failsafe_DiagnosisWireBreak(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property Failsafe_DiagnosisWireBreak
 
@@ -6444,7 +5965,7 @@ class Failsafe_DiagnosisWireBreak(Enum): # skipped bases: <type 'IComparable'>, 
     value__ = ...
 
 
-class Failsafe_DisableDarkTestFor48Hours(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class Failsafe_DisableDarkTestFor48Hours(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property Failsafe_DisableDarkTestFor48Hours
 
@@ -6455,7 +5976,7 @@ class Failsafe_DisableDarkTestFor48Hours(Enum): # skipped bases: <type 'ICompara
     value__ = ...
 
 
-class Failsafe_DisableDarkTestMaxSIL2_CAT3_PLd(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class Failsafe_DisableDarkTestMaxSIL2_CAT3_PLd(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property Failsafe_DisableDarkTestMaxSIL2_CAT3_PLd
 
@@ -6466,7 +5987,7 @@ class Failsafe_DisableDarkTestMaxSIL2_CAT3_PLd(Enum): # skipped bases: <type 'IC
     value__ = ...
 
 
-class Failsafe_DiscrepancyBehavior(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class Failsafe_DiscrepancyBehavior(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property Failsafe_DiscrepancyBehavior
 
@@ -6477,7 +5998,7 @@ class Failsafe_DiscrepancyBehavior(Enum): # skipped bases: <type 'IComparable'>,
     value__ = ...
 
 
-class Failsafe_DiscrepancyMonitoring(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class Failsafe_DiscrepancyMonitoring(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property Failsafe_DiscrepancyMonitoring
 
@@ -6488,7 +6009,7 @@ class Failsafe_DiscrepancyMonitoring(Enum): # skipped bases: <type 'IComparable'
     value__ = ...
 
 
-class Failsafe_DiscrepancyTimeUnlimited(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class Failsafe_DiscrepancyTimeUnlimited(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property Failsafe_DiscrepancyTimeUnlimited
 
@@ -6499,7 +6020,7 @@ class Failsafe_DiscrepancyTimeUnlimited(Enum): # skipped bases: <type 'IComparab
     value__ = ...
 
 
-class Failsafe_FCapabilityActivated(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class Failsafe_FCapabilityActivated(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property Failsafe_FCapabilityActivated
 
@@ -6510,7 +6031,7 @@ class Failsafe_FCapabilityActivated(Enum): # skipped bases: <type 'IComparable'>
     value__ = ...
 
 
-class Failsafe_FCheckiPar(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class Failsafe_FCheckiPar(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property Failsafe_FCheckiPar
 
@@ -6521,7 +6042,7 @@ class Failsafe_FCheckiPar(Enum): # skipped bases: <type 'IComparable'>, <type 'I
     value__ = ...
 
 
-class Failsafe_FCheckSeqNr(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class Failsafe_FCheckSeqNr(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property Failsafe_FCheckSeqNr
 
@@ -6532,7 +6053,7 @@ class Failsafe_FCheckSeqNr(Enum): # skipped bases: <type 'IComparable'>, <type '
     value__ = ...
 
 
-class Failsafe_FCRCSeed(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class Failsafe_FCRCSeed(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property Failsafe_FCRCSeed
 
@@ -6543,7 +6064,7 @@ class Failsafe_FCRCSeed(Enum): # skipped bases: <type 'IComparable'>, <type 'IFo
     value__ = ...
 
 
-class Failsafe_FParVersion(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class Failsafe_FParVersion(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property Failsafe_FParVersion
 
@@ -6554,7 +6075,7 @@ class Failsafe_FParVersion(Enum): # skipped bases: <type 'IComparable'>, <type '
     value__ = ...
 
 
-class Failsafe_FPassivation(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class Failsafe_FPassivation(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property Failsafe_FPassivation
 
@@ -6565,7 +6086,7 @@ class Failsafe_FPassivation(Enum): # skipped bases: <type 'IComparable'>, <type 
     value__ = ...
 
 
-class Failsafe_FSIL(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class Failsafe_FSIL(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property Failsafe_FSIL
 
@@ -6578,7 +6099,7 @@ class Failsafe_FSIL(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormat
     value__ = ...
 
 
-class Failsafe_F_CRC_Length(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class Failsafe_F_CRC_Length(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property Failsafe_F_CRC_Length
 
@@ -6590,7 +6111,7 @@ class Failsafe_F_CRC_Length(Enum): # skipped bases: <type 'IComparable'>, <type 
     value__ = ...
 
 
-class Failsafe_InputDelay(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class Failsafe_InputDelay(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property Failsafe_InputDelay
 
@@ -6619,7 +6140,7 @@ class Failsafe_InputDelay(Enum): # skipped bases: <type 'IComparable'>, <type 'I
     value__ = ...
 
 
-class Failsafe_InterferenceFrequencySuppression(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class Failsafe_InterferenceFrequencySuppression(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property Failsafe_InterferenceFrequencySuppression
 
@@ -6630,7 +6151,7 @@ class Failsafe_InterferenceFrequencySuppression(Enum): # skipped bases: <type 'I
     value__ = ...
 
 
-class Failsafe_ManualAssignmentFIODBNumber(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class Failsafe_ManualAssignmentFIODBNumber(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property Failsafe_ManualAssignmentFIODBNumber
 
@@ -6641,7 +6162,7 @@ class Failsafe_ManualAssignmentFIODBNumber(Enum): # skipped bases: <type 'ICompa
     value__ = ...
 
 
-class Failsafe_MaximumTestPeriod(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class Failsafe_MaximumTestPeriod(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property Failsafe_MaximumTestPeriod
 
@@ -6652,7 +6173,7 @@ class Failsafe_MaximumTestPeriod(Enum): # skipped bases: <type 'IComparable'>, <
     value__ = ...
 
 
-class Failsafe_MaxReadbackTimeLightTestAndDarkTest(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class Failsafe_MaxReadbackTimeLightTestAndDarkTest(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property Failsafe_MaxReadbackTimeLightTestAndDarkTest
 
@@ -6663,19 +6184,18 @@ class Failsafe_MaxReadbackTimeLightTestAndDarkTest(Enum): # skipped bases: <type
     value__ = ...
 
 
-class Failsafe_MeasuringRange(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class Failsafe_MeasuringRange(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property Failsafe_MeasuringRange
 
-    enum Failsafe_MeasuringRange, values: Value0To20 (0), Value0ToDot10 (2), Value4To20 (1)
+    enum Failsafe_MeasuringRange, values: Value0To20 (0), Value4To20 (1)
     """
     Value0To20: Failsafe_MeasuringRange = ...
-    Value0ToDot10: Failsafe_MeasuringRange = ...
     Value4To20: Failsafe_MeasuringRange = ...
     value__ = ...
 
 
-class Failsafe_OutputType(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class Failsafe_OutputType(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property Failsafe_OutputType
 
@@ -6686,7 +6206,7 @@ class Failsafe_OutputType(Enum): # skipped bases: <type 'IComparable'>, <type 'I
     value__ = ...
 
 
-class Failsafe_ReintegrationAfterChannelFault(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class Failsafe_ReintegrationAfterChannelFault(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property Failsafe_ReintegrationAfterChannelFault
 
@@ -6698,7 +6218,7 @@ class Failsafe_ReintegrationAfterChannelFault(Enum): # skipped bases: <type 'ICo
     value__ = ...
 
 
-class Failsafe_ReintegrationAfterDiscrepancyError(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class Failsafe_ReintegrationAfterDiscrepancyError(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property Failsafe_ReintegrationAfterDiscrepancyError
 
@@ -6709,29 +6229,25 @@ class Failsafe_ReintegrationAfterDiscrepancyError(Enum): # skipped bases: <type 
     value__ = ...
 
 
-class Failsafe_SensorEvaluation(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class Failsafe_SensorEvaluation(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property Failsafe_SensorEvaluation
 
-    enum Failsafe_SensorEvaluation, values: Value1oo1Evaluation (0), Value1oo2Evaluation2Channel3WireNonEquivalent (3), Value1oo2Evaluation2Channel4WireNonEquivalent (4), Value1oo2EvaluationEquivalent (1), Value1oo2EvaluationNonEquivalent (2)
+    enum Failsafe_SensorEvaluation, values: Value1oo1Evaluation (0), Value1oo2EvaluationEquivalent (1), Value1oo2EvaluationNonEquivalent (2)
     """
     Value1oo1Evaluation: Failsafe_SensorEvaluation = ...
-    Value1oo2Evaluation2Channel3WireNonEquivalent: Failsafe_SensorEvaluation = ...
-    Value1oo2Evaluation2Channel4WireNonEquivalent: Failsafe_SensorEvaluation = ...
     Value1oo2EvaluationEquivalent: Failsafe_SensorEvaluation = ...
     Value1oo2EvaluationNonEquivalent: Failsafe_SensorEvaluation = ...
     value__ = ...
 
 
-class Failsafe_SensorSupply(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class Failsafe_SensorSupply(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property Failsafe_SensorSupply
 
-    enum Failsafe_SensorSupply, values: External (9), ExternalSensorSupply (8), Internal (10), SensorSupply0 (0), SensorSupply1 (1), SensorSupply2 (2), SensorSupply3 (3), SensorSupply4 (4), SensorSupply5 (5), SensorSupply6 (6), SensorSupply7 (7)
+    enum Failsafe_SensorSupply, values: ExternalSensorSupply (8), SensorSupply0 (0), SensorSupply1 (1), SensorSupply2 (2), SensorSupply3 (3), SensorSupply4 (4), SensorSupply5 (5), SensorSupply6 (6), SensorSupply7 (7)
     """
-    External: Failsafe_SensorSupply = ...
     ExternalSensorSupply: Failsafe_SensorSupply = ...
-    Internal: Failsafe_SensorSupply = ...
     SensorSupply0: Failsafe_SensorSupply = ...
     SensorSupply1: Failsafe_SensorSupply = ...
     SensorSupply2: Failsafe_SensorSupply = ...
@@ -6743,7 +6259,7 @@ class Failsafe_SensorSupply(Enum): # skipped bases: <type 'IComparable'>, <type 
     value__ = ...
 
 
-class Failsafe_SequenceMonitoring(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class Failsafe_SequenceMonitoring(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property Failsafe_SequenceMonitoring
 
@@ -6755,49 +6271,7 @@ class Failsafe_SequenceMonitoring(Enum): # skipped bases: <type 'IComparable'>, 
     value__ = ...
 
 
-class Failsafe_ShortCircuitDiagnosticActive(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
-    """
-    Possible values for property Failsafe_ShortCircuitDiagnosticActive
-
-    enum Failsafe_ShortCircuitDiagnosticActive, values: Disable (0), Enable (1)
-    """
-    Disable: Failsafe_ShortCircuitDiagnosticActive = ...
-    Enable: Failsafe_ShortCircuitDiagnosticActive = ...
-    value__ = ...
-
-
-class Failsafe_ShortCircuitTestDuration(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
-    """
-    Possible values for property Failsafe_ShortCircuitTestDuration
-
-    enum Failsafe_ShortCircuitTestDuration, values: Value0 (0), Value12Dot8 (9), Value1Dot6 (5), Value3Dot2 (6), Value6Dot4 (7)
-    """
-    Value0: Failsafe_ShortCircuitTestDuration = ...
-    Value12Dot8: Failsafe_ShortCircuitTestDuration = ...
-    Value1Dot6: Failsafe_ShortCircuitTestDuration = ...
-    Value3Dot2: Failsafe_ShortCircuitTestDuration = ...
-    Value6Dot4: Failsafe_ShortCircuitTestDuration = ...
-    value__ = ...
-
-
-class Failsafe_ShortCircuitTestInterval(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
-    """
-    Possible values for property Failsafe_ShortCircuitTestInterval
-
-    enum Failsafe_ShortCircuitTestInterval, values: Value0 (0), Value102Dot4 (13), Value12Dot8 (9), Value204Dot8 (14), Value25Dot6 (11), Value409Dot6 (15), Value51Dot2 (12), Value819Dot2 (16)
-    """
-    Value0: Failsafe_ShortCircuitTestInterval = ...
-    Value102Dot4: Failsafe_ShortCircuitTestInterval = ...
-    Value12Dot8: Failsafe_ShortCircuitTestInterval = ...
-    Value204Dot8: Failsafe_ShortCircuitTestInterval = ...
-    Value25Dot6: Failsafe_ShortCircuitTestInterval = ...
-    Value409Dot6: Failsafe_ShortCircuitTestInterval = ...
-    Value51Dot2: Failsafe_ShortCircuitTestInterval = ...
-    Value819Dot2: Failsafe_ShortCircuitTestInterval = ...
-    value__ = ...
-
-
-class Failsafe_ShortCircuitTest_0(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class Failsafe_ShortCircuitTest_0(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property Failsafe_ShortCircuitTest_0
 
@@ -6808,7 +6282,7 @@ class Failsafe_ShortCircuitTest_0(Enum): # skipped bases: <type 'IComparable'>, 
     value__ = ...
 
 
-class Failsafe_ShortCircuitTest_1(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class Failsafe_ShortCircuitTest_1(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property Failsafe_ShortCircuitTest_1
 
@@ -6819,7 +6293,7 @@ class Failsafe_ShortCircuitTest_1(Enum): # skipped bases: <type 'IComparable'>, 
     value__ = ...
 
 
-class Failsafe_ShortCircuitTest_2(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class Failsafe_ShortCircuitTest_2(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property Failsafe_ShortCircuitTest_2
 
@@ -6830,7 +6304,7 @@ class Failsafe_ShortCircuitTest_2(Enum): # skipped bases: <type 'IComparable'>, 
     value__ = ...
 
 
-class Failsafe_ShortCircuitTest_3(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class Failsafe_ShortCircuitTest_3(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property Failsafe_ShortCircuitTest_3
 
@@ -6841,7 +6315,7 @@ class Failsafe_ShortCircuitTest_3(Enum): # skipped bases: <type 'IComparable'>, 
     value__ = ...
 
 
-class Failsafe_ShortCircuitTest_4(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class Failsafe_ShortCircuitTest_4(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property Failsafe_ShortCircuitTest_4
 
@@ -6852,7 +6326,7 @@ class Failsafe_ShortCircuitTest_4(Enum): # skipped bases: <type 'IComparable'>, 
     value__ = ...
 
 
-class Failsafe_ShortCircuitTest_5(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class Failsafe_ShortCircuitTest_5(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property Failsafe_ShortCircuitTest_5
 
@@ -6863,7 +6337,7 @@ class Failsafe_ShortCircuitTest_5(Enum): # skipped bases: <type 'IComparable'>, 
     value__ = ...
 
 
-class Failsafe_ShortCircuitTest_6(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class Failsafe_ShortCircuitTest_6(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property Failsafe_ShortCircuitTest_6
 
@@ -6874,7 +6348,7 @@ class Failsafe_ShortCircuitTest_6(Enum): # skipped bases: <type 'IComparable'>, 
     value__ = ...
 
 
-class Failsafe_ShortCircuitTest_7(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class Failsafe_ShortCircuitTest_7(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property Failsafe_ShortCircuitTest_7
 
@@ -6885,7 +6359,7 @@ class Failsafe_ShortCircuitTest_7(Enum): # skipped bases: <type 'IComparable'>, 
     value__ = ...
 
 
-class Failsafe_Smoothing(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class Failsafe_Smoothing(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property Failsafe_Smoothing
 
@@ -6901,7 +6375,7 @@ class Failsafe_Smoothing(Enum): # skipped bases: <type 'IComparable'>, <type 'IF
     value__ = ...
 
 
-class Failsafe_StartupTest(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class Failsafe_StartupTest(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property Failsafe_StartupTest
 
@@ -6912,7 +6386,7 @@ class Failsafe_StartupTest(Enum): # skipped bases: <type 'IComparable'>, <type '
     value__ = ...
 
 
-class Failsafe_UnitValue(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class Failsafe_UnitValue(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property Failsafe_UnitValue
 
@@ -6923,19 +6397,7 @@ class Failsafe_UnitValue(Enum): # skipped bases: <type 'IComparable'>, <type 'IF
     value__ = ...
 
 
-class FeedbackValue(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
-    """
-    Possible values for property FeedbackValue
-
-    enum FeedbackValue, values: AbsolutePosition (1), RemainingDistance (0), Speed (2)
-    """
-    AbsolutePosition: FeedbackValue = ...
-    RemainingDistance: FeedbackValue = ...
-    Speed: FeedbackValue = ...
-    value__ = ...
-
-
-class FilterFrequency(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class FilterFrequency(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property FilterFrequency
 
@@ -6957,29 +6419,7 @@ class FilterFrequency(Enum): # skipped bases: <type 'IComparable'>, <type 'IForm
     value__ = ...
 
 
-class FloatingMeanValueFilterActive(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
-    """
-    Possible values for property FloatingMeanValueFilterActive
-
-    enum FloatingMeanValueFilterActive, values: Active (0), Deactivated (1)
-    """
-    Active: FloatingMeanValueFilterActive = ...
-    Deactivated: FloatingMeanValueFilterActive = ...
-    value__ = ...
-
-
-class ForcedValues(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
-    """
-    Possible values for property ForcedValues
-
-    enum ForcedValues, values: Activate (1), Deactivate (0)
-    """
-    Activate: ForcedValues = ...
-    Deactivate: ForcedValues = ...
-    value__ = ...
-
-
-class ForceTableAccessRule(IEquatable, IEngineeringObject, IInternalObjectAccess): # skipped bases: <type 'IEngineeringCompositionOrObject'>, <type 'IInternalBaseAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringInstance'>, <type 'object'>
+class ForceTableAccessRule(IEquatable, IEngineeringObject, IInternalObjectAccess): # skipped bases: <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'IEngineeringInstance'>, <type 'IInternalBaseAccess'>, <type 'object'>
     """ Represents a ForceTableAccessRule object """
     @property
     def Access(self) -> WatchAndForceTableAccess:
@@ -7043,7 +6483,7 @@ class ForceTableAccessRule(IEquatable, IEngineeringObject, IInternalObjectAccess
         ...
 
 
-class ForceTableAccessRuleComposition(IInternalCompositionAccess, IEngineeringComposition, IEquatable): # skipped bases: <type 'IEngineeringInstance'>, <type 'IEnumerable'>, <type 'IInternalBaseAccess'>, <type 'IInternalCollectionAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'object'>
+class ForceTableAccessRuleComposition(IInternalCompositionAccess, IEngineeringComposition, IEquatable): # skipped bases: <type 'IEnumerable'>, <type 'IEngineeringInstance'>, <type 'IInternalBaseAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'IInternalCollectionAccess'>, <type 'object'>
     """ Composition of ForceTableAccessRule """
     @property
     def Parent(self) -> IEngineeringObject:
@@ -7095,7 +6535,7 @@ class ForceTableAccessRuleComposition(IInternalCompositionAccess, IEngineeringCo
         ...
 
 
-class FrequencyForCapture(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class FrequencyForCapture(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property FrequencyForCapture
 
@@ -7106,7 +6546,7 @@ class FrequencyForCapture(Enum): # skipped bases: <type 'IComparable'>, <type 'I
     value__ = ...
 
 
-class FunctionDI(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class FunctionDI(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property FunctionDI
 
@@ -7121,7 +6561,7 @@ class FunctionDI(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattab
     value__ = ...
 
 
-class FunctionDI0(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class FunctionDI0(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property FunctionDI0
 
@@ -7136,7 +6576,7 @@ class FunctionDI0(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormatta
     value__ = ...
 
 
-class FunctionDI1(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class FunctionDI1(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property FunctionDI1
 
@@ -7151,7 +6591,7 @@ class FunctionDI1(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormatta
     value__ = ...
 
 
-class FunctionDI2(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class FunctionDI2(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property FunctionDI2
 
@@ -7166,43 +6606,7 @@ class FunctionDI2(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormatta
     value__ = ...
 
 
-class FunctionInputS1(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
-    """
-    Possible values for property FunctionInputS1
-
-    enum FunctionInputS1, values: LimitSwitch (1), LimitSwitchPlus (2), None (0), ReferenceSwitch (3)
-    """
-    LimitSwitch: FunctionInputS1 = ...
-    LimitSwitchPlus: FunctionInputS1 = ...
-    ReferenceSwitch: FunctionInputS1 = ...
-    value__ = ...
-
-
-class FunctionInputS2(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
-    """
-    Possible values for property FunctionInputS2
-
-    enum FunctionInputS2, values: LimitSwitch (1), LimitSwitchPlus (2), None (0), ReferenceSwitch (3)
-    """
-    LimitSwitch: FunctionInputS2 = ...
-    LimitSwitchPlus: FunctionInputS2 = ...
-    ReferenceSwitch: FunctionInputS2 = ...
-    value__ = ...
-
-
-class FunctionInputS3(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
-    """
-    Possible values for property FunctionInputS3
-
-    enum FunctionInputS3, values: LimitSwitch (1), LimitSwitchPlus (2), None (0), ReferenceSwitch (3)
-    """
-    LimitSwitch: FunctionInputS3 = ...
-    LimitSwitchPlus: FunctionInputS3 = ...
-    ReferenceSwitch: FunctionInputS3 = ...
-    value__ = ...
-
-
-class GateControlActive(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class GateControlActive(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property GateControlActive
 
@@ -7213,7 +6617,7 @@ class GateControlActive(Enum): # skipped bases: <type 'IComparable'>, <type 'IFo
     value__ = ...
 
 
-class GenerateDeviceNamesAutomatically(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class GenerateDeviceNamesAutomatically(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property GenerateDeviceNamesAutomatically
 
@@ -7224,7 +6628,7 @@ class GenerateDeviceNamesAutomatically(Enum): # skipped bases: <type 'IComparabl
     value__ = ...
 
 
-class HardwareInterrupt(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class HardwareInterrupt(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property HardwareInterrupt
 
@@ -7235,18 +6639,7 @@ class HardwareInterrupt(Enum): # skipped bases: <type 'IComparable'>, <type 'IFo
     value__ = ...
 
 
-class HardwareInterruptActive(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
-    """
-    Possible values for property HardwareInterruptActive
-
-    enum HardwareInterruptActive, values: PseudoActive (1), PseudoDeactivated (0)
-    """
-    PseudoActive: HardwareInterruptActive = ...
-    PseudoDeactivated: HardwareInterruptActive = ...
-    value__ = ...
-
-
-class HardwareInterruptFallingEdgeActive(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class HardwareInterruptFallingEdgeActive(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property HardwareInterruptFallingEdgeActive
 
@@ -7257,7 +6650,7 @@ class HardwareInterruptFallingEdgeActive(Enum): # skipped bases: <type 'ICompara
     value__ = ...
 
 
-class HardwareInterruptRisingEdgeActive(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class HardwareInterruptRisingEdgeActive(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property HardwareInterruptRisingEdgeActive
 
@@ -7268,7 +6661,7 @@ class HardwareInterruptRisingEdgeActive(Enum): # skipped bases: <type 'IComparab
     value__ = ...
 
 
-class HardwareResource(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class HardwareResource(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Hardware Resources that are assignable for interfaces
 
@@ -7293,18 +6686,7 @@ class HardwareResource(Enum): # skipped bases: <type 'IComparable'>, <type 'IFor
     X4: HardwareResource = ...
 
 
-class HighErrorLimit(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
-    """
-    Possible values for property HighErrorLimit
-
-    enum HighErrorLimit, values: Activated (1), Deactivated (0)
-    """
-    Activated: HighErrorLimit = ...
-    Deactivated: HighErrorLimit = ...
-    value__ = ...
-
-
-class HighLimitCurrent(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class HighLimitCurrent(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property HighLimitCurrent
 
@@ -7426,18 +6808,7 @@ class HighLimitCurrent(Enum): # skipped bases: <type 'IComparable'>, <type 'IFor
     value__ = ...
 
 
-class HighWarningLimit(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
-    """
-    Possible values for property HighWarningLimit
-
-    enum HighWarningLimit, values: Activated (1), Deactivated (0)
-    """
-    Activated: HighWarningLimit = ...
-    Deactivated: HighWarningLimit = ...
-    value__ = ...
-
-
-class HscDI0(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class HscDI0(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property HscDI0
 
@@ -7478,7 +6849,7 @@ class HscDI0(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>
     X12Clamp8: HscDI0 = ...
 
 
-class HscDI1(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class HscDI1(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property HscDI1
 
@@ -7519,7 +6890,7 @@ class HscDI1(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>
     X12Clamp8: HscDI1 = ...
 
 
-class HscDQ1(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class HscDQ1(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property HscDQ1
 
@@ -7540,7 +6911,7 @@ class HscDQ1(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>
     X11Clamp38: HscDQ1 = ...
 
 
-class HwEnable(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class HwEnable(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property HwEnable
 
@@ -7551,7 +6922,7 @@ class HwEnable(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable
     value__ = ...
 
 
-class HwIdentifier(IEquatable, IEngineeringObject, IInternalObjectAccess): # skipped bases: <type 'IEngineeringCompositionOrObject'>, <type 'IInternalBaseAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringInstance'>, <type 'object'>
+class HwIdentifier(IEquatable, IEngineeringObject, IInternalObjectAccess): # skipped bases: <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'IEngineeringInstance'>, <type 'IInternalBaseAccess'>, <type 'object'>
     """ Represents a HW identifier """
     @property
     def HwIdentifierControllers(self) -> HwIdentifierControllerAssociation:
@@ -7605,7 +6976,7 @@ class HwIdentifier(IEquatable, IEngineeringObject, IInternalObjectAccess): # ski
         ...
 
 
-class HwIdentifierAssociation(IEquatable, IEngineeringAssociation, IInternalAssociationAccess): # skipped bases: <type 'IInternalBaseAccess'>, <type 'IEnumerable'>, <type 'IInternalCollectionAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringInstance'>, <type 'object'>
+class HwIdentifierAssociation(IEquatable, IEngineeringAssociation, IInternalAssociationAccess): # skipped bases: <type 'IInternalCollectionAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEnumerable'>, <type 'IEngineeringInstance'>, <type 'IInternalBaseAccess'>, <type 'object'>
     """ Associated Hw identifiers """
     @property
     def Parent(self) -> IEngineeringObject:
@@ -7645,7 +7016,7 @@ class HwIdentifierAssociation(IEquatable, IEngineeringAssociation, IInternalAsso
         ...
 
 
-class HwIdentifierComposition(IInternalCompositionAccess, IEngineeringComposition, IEquatable): # skipped bases: <type 'IEngineeringInstance'>, <type 'IEnumerable'>, <type 'IInternalBaseAccess'>, <type 'IInternalCollectionAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'object'>
+class HwIdentifierComposition(IInternalCompositionAccess, IEngineeringComposition, IEquatable): # skipped bases: <type 'IEnumerable'>, <type 'IEngineeringInstance'>, <type 'IInternalBaseAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'IInternalCollectionAccess'>, <type 'object'>
     """ Composition of HwIdentifiers """
     @property
     def Parent(self) -> IEngineeringObject:
@@ -7685,7 +7056,7 @@ class HwIdentifierComposition(IInternalCompositionAccess, IEngineeringCompositio
         ...
 
 
-class IdentificationMode(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class IdentificationMode(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property IdentificationMode
 
@@ -7696,18 +7067,7 @@ class IdentificationMode(Enum): # skipped bases: <type 'IComparable'>, <type 'IF
     value__ = ...
 
 
-class IIRLowPassFilterActive(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
-    """
-    Possible values for property IIRLowPassFilterActive
-
-    enum IIRLowPassFilterActive, values: Activate (0), Deactivated (1)
-    """
-    Activate: IIRLowPassFilterActive = ...
-    Deactivated: IIRLowPassFilterActive = ...
-    value__ = ...
-
-
-class Input1Action(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class Input1Action(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property Input1Action
 
@@ -7729,7 +7089,7 @@ class Input1Action(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormatt
     value__ = ...
 
 
-class Input1Level(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class Input1Level(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property Input1Level
 
@@ -7740,7 +7100,7 @@ class Input1Level(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormatta
     value__ = ...
 
 
-class Input1Signal(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class Input1Signal(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property Input1Signal
 
@@ -7751,7 +7111,7 @@ class Input1Signal(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormatt
     value__ = ...
 
 
-class Input2Action(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class Input2Action(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property Input2Action
 
@@ -7773,7 +7133,7 @@ class Input2Action(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormatt
     value__ = ...
 
 
-class Input2Level(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class Input2Level(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property Input2Level
 
@@ -7784,7 +7144,7 @@ class Input2Level(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormatta
     value__ = ...
 
 
-class Input2Signal(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class Input2Signal(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property Input2Signal
 
@@ -7795,7 +7155,7 @@ class Input2Signal(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormatt
     value__ = ...
 
 
-class Input3Action(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class Input3Action(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property Input3Action
 
@@ -7817,7 +7177,7 @@ class Input3Action(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormatt
     value__ = ...
 
 
-class Input3Level(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class Input3Level(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property Input3Level
 
@@ -7828,7 +7188,7 @@ class Input3Level(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormatta
     value__ = ...
 
 
-class Input3Signal(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class Input3Signal(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property Input3Signal
 
@@ -7839,7 +7199,7 @@ class Input3Signal(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormatt
     value__ = ...
 
 
-class InputA(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class InputA(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property InputA
 
@@ -7857,7 +7217,7 @@ class InputA(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>
     X12Clamp7: InputA = ...
 
 
-class InputB(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class InputB(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property InputB
 
@@ -7875,7 +7235,7 @@ class InputB(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>
     X12Clamp8: InputB = ...
 
 
-class InputDelay(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class InputDelay(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property InputDelay
 
@@ -7897,7 +7257,7 @@ class InputDelay(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattab
     value__ = ...
 
 
-class InputDelayDI4(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class InputDelayDI4(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property InputDelayDI4
 
@@ -7914,7 +7274,7 @@ class InputDelayDI4(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormat
     value__ = ...
 
 
-class InputDelayDI5(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class InputDelayDI5(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property InputDelayDI5
 
@@ -7931,7 +7291,7 @@ class InputDelayDI5(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormat
     value__ = ...
 
 
-class InputDelayDI6(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class InputDelayDI6(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property InputDelayDI6
 
@@ -7948,7 +7308,7 @@ class InputDelayDI6(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormat
     value__ = ...
 
 
-class InputDelayDI7(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class InputDelayDI7(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property InputDelayDI7
 
@@ -7965,29 +7325,7 @@ class InputDelayDI7(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormat
     value__ = ...
 
 
-class InputDI0(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
-    """
-    Possible values for property InputDI0
-
-    enum InputDI0, values: NormallyClosedContact (0), NormallyOpenContact (1)
-    """
-    NormallyClosedContact: InputDI0 = ...
-    NormallyOpenContact: InputDI0 = ...
-    value__ = ...
-
-
-class InputDI1(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
-    """
-    Possible values for property InputDI1
-
-    enum InputDI1, values: NormallyClosedContact (0), NormallyOpenContact (1)
-    """
-    NormallyClosedContact: InputDI1 = ...
-    NormallyOpenContact: InputDI1 = ...
-    value__ = ...
-
-
-class InputN(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class InputN(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property InputN
 
@@ -8004,7 +7342,7 @@ class InputN(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>
     X12Clamp6: InputN = ...
 
 
-class InputOrOutputType(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class InputOrOutputType(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property InputOrOutputType
 
@@ -8018,7 +7356,7 @@ class InputOrOutputType(Enum): # skipped bases: <type 'IComparable'>, <type 'IFo
     value__ = ...
 
 
-class InspectionOrBackupLevel(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class InspectionOrBackupLevel(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property InspectionOrBackupLevel
 
@@ -8031,7 +7369,7 @@ class InspectionOrBackupLevel(Enum): # skipped bases: <type 'IComparable'>, <typ
     value__ = ...
 
 
-class InspectionOrBackupLevelPort1(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class InspectionOrBackupLevelPort1(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property InspectionOrBackupLevelPort1
 
@@ -8047,7 +7385,7 @@ class InspectionOrBackupLevelPort1(Enum): # skipped bases: <type 'IComparable'>,
     value__ = ...
 
 
-class InspectionOrBackupLevelPort2(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class InspectionOrBackupLevelPort2(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property InspectionOrBackupLevelPort2
 
@@ -8063,7 +7401,7 @@ class InspectionOrBackupLevelPort2(Enum): # skipped bases: <type 'IComparable'>,
     value__ = ...
 
 
-class InspectionOrBackupLevelPort3(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class InspectionOrBackupLevelPort3(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property InspectionOrBackupLevelPort3
 
@@ -8079,7 +7417,7 @@ class InspectionOrBackupLevelPort3(Enum): # skipped bases: <type 'IComparable'>,
     value__ = ...
 
 
-class InspectionOrBackupLevelPort4(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class InspectionOrBackupLevelPort4(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property InspectionOrBackupLevelPort4
 
@@ -8095,7 +7433,7 @@ class InspectionOrBackupLevelPort4(Enum): # skipped bases: <type 'IComparable'>,
     value__ = ...
 
 
-class InterfaceOperatingModes(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class InterfaceOperatingModes(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property InterfaceOperatingModes
 
@@ -8106,7 +7444,7 @@ class InterfaceOperatingModes(Enum): # skipped bases: <type 'IComparable'>, <typ
     value__ = ...
 
 
-class InterfaceStandard(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class InterfaceStandard(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property InterfaceStandard
 
@@ -8117,7 +7455,7 @@ class InterfaceStandard(Enum): # skipped bases: <type 'IComparable'>, <type 'IFo
     value__ = ...
 
 
-class InterfaceType(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class InterfaceType(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property InterfaceType
 
@@ -8137,7 +7475,7 @@ class InterfaceType(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormat
     Wan: InterfaceType = ...
 
 
-class InterferenceFrequencySuppression(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class InterferenceFrequencySuppression(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property InterferenceFrequencySuppression
 
@@ -8150,7 +7488,7 @@ class InterferenceFrequencySuppression(Enum): # skipped bases: <type 'IComparabl
     value__ = ...
 
 
-class InternalGroundFaultTripResponse(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class InternalGroundFaultTripResponse(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property InternalGroundFaultTripResponse
 
@@ -8163,7 +7501,7 @@ class InternalGroundFaultTripResponse(Enum): # skipped bases: <type 'IComparable
     Warn: InternalGroundFaultTripResponse = ...
 
 
-class InternalGroundFaultWarningResponse(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class InternalGroundFaultWarningResponse(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property InternalGroundFaultWarningResponse
 
@@ -8175,7 +7513,7 @@ class InternalGroundFaultWarningResponse(Enum): # skipped bases: <type 'ICompara
     Warn: InternalGroundFaultWarningResponse = ...
 
 
-class IoConnector(IEquatable, IEngineeringObject, IInternalObjectAccess): # skipped bases: <type 'IEngineeringCompositionOrObject'>, <type 'IInternalBaseAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringInstance'>, <type 'object'>
+class IoConnector(IEquatable, IEngineeringObject, IInternalObjectAccess): # skipped bases: <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'IEngineeringInstance'>, <type 'IInternalBaseAccess'>, <type 'object'>
     """ Represents an IO connector """
     @property
     def ConnectedToIoSystem(self) -> IoSystem:
@@ -8248,7 +7586,7 @@ class IoConnector(IEquatable, IEngineeringObject, IInternalObjectAccess): # skip
         ...
 
 
-class IoConnectorAssociation(IEquatable, IEngineeringAssociation, IInternalAssociationAccess): # skipped bases: <type 'IInternalBaseAccess'>, <type 'IEnumerable'>, <type 'IInternalCollectionAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringInstance'>, <type 'object'>
+class IoConnectorAssociation(IEquatable, IEngineeringAssociation, IInternalAssociationAccess): # skipped bases: <type 'IInternalCollectionAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEnumerable'>, <type 'IEngineeringInstance'>, <type 'IInternalBaseAccess'>, <type 'object'>
     """ Associated IO connectors """
     @property
     def Parent(self) -> IEngineeringObject:
@@ -8288,7 +7626,7 @@ class IoConnectorAssociation(IEquatable, IEngineeringAssociation, IInternalAssoc
         ...
 
 
-class IoConnectorComposition(IInternalCompositionAccess, IEngineeringComposition, IEquatable): # skipped bases: <type 'IEngineeringInstance'>, <type 'IEnumerable'>, <type 'IInternalBaseAccess'>, <type 'IInternalCollectionAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'object'>
+class IoConnectorComposition(IInternalCompositionAccess, IEngineeringComposition, IEquatable): # skipped bases: <type 'IEnumerable'>, <type 'IEngineeringInstance'>, <type 'IInternalBaseAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'IInternalCollectionAccess'>, <type 'object'>
     """ Composition of IoConnectors """
     @property
     def Parent(self) -> IEngineeringObject:
@@ -8328,7 +7666,7 @@ class IoConnectorComposition(IInternalCompositionAccess, IEngineeringComposition
         ...
 
 
-class IoController(IEquatable, IEngineeringObject, IInternalObjectAccess): # skipped bases: <type 'IEngineeringCompositionOrObject'>, <type 'IInternalBaseAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringInstance'>, <type 'object'>
+class IoController(IEquatable, IEngineeringObject, IInternalObjectAccess): # skipped bases: <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'IEngineeringInstance'>, <type 'IInternalBaseAccess'>, <type 'object'>
     """ Represents an IO controller """
     @property
     def Addresses(self) -> AddressComposition:
@@ -8394,7 +7732,7 @@ class IoController(IEquatable, IEngineeringObject, IInternalObjectAccess): # ski
         ...
 
 
-class IoControllerComposition(IInternalCompositionAccess, IEngineeringComposition, IEquatable): # skipped bases: <type 'IEngineeringInstance'>, <type 'IEnumerable'>, <type 'IInternalBaseAccess'>, <type 'IInternalCollectionAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'object'>
+class IoControllerComposition(IInternalCompositionAccess, IEngineeringComposition, IEquatable): # skipped bases: <type 'IEnumerable'>, <type 'IEngineeringInstance'>, <type 'IInternalBaseAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'IInternalCollectionAccess'>, <type 'object'>
     """ Composition of IoControllers """
     @property
     def Parent(self) -> IEngineeringObject:
@@ -8438,7 +7776,7 @@ class ISyncDomainParticipant: # skipped bases: <type 'object'>
     """ Repesents objects which can participate in sync domain """
     pass
 
-class IoSystem(IEquatable, ISyncDomainParticipant, IEngineeringObject, IInternalObjectAccess): # skipped bases: <type 'IEngineeringCompositionOrObject'>, <type 'IInternalBaseAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringInstance'>, <type 'object'>
+class IoSystem(IEquatable, ISyncDomainParticipant, IEngineeringObject, IInternalObjectAccess): # skipped bases: <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'IEngineeringInstance'>, <type 'IInternalBaseAccess'>, <type 'object'>
     """ Represents an IO system """
     @property
     def ConnectedIoDevices(self) -> IoConnectorAssociation:
@@ -8531,7 +7869,7 @@ class IoSystem(IEquatable, ISyncDomainParticipant, IEngineeringObject, IInternal
         ...
 
 
-class IoSystemAssociation(IEquatable, IEngineeringAssociation, IInternalAssociationAccess): # skipped bases: <type 'IInternalBaseAccess'>, <type 'IEnumerable'>, <type 'IInternalCollectionAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringInstance'>, <type 'object'>
+class IoSystemAssociation(IEquatable, IEngineeringAssociation, IInternalAssociationAccess): # skipped bases: <type 'IInternalCollectionAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEnumerable'>, <type 'IEngineeringInstance'>, <type 'IInternalBaseAccess'>, <type 'object'>
     """ Associated IO systems """
     @property
     def Parent(self) -> IEngineeringObject:
@@ -8571,7 +7909,7 @@ class IoSystemAssociation(IEquatable, IEngineeringAssociation, IInternalAssociat
         ...
 
 
-class IpProtocolSelection(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class IpProtocolSelection(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     IP protocol selection
 
@@ -8585,7 +7923,7 @@ class IpProtocolSelection(Enum): # skipped bases: <type 'IComparable'>, <type 'I
     ViaIoController: IpProtocolSelection = ...
 
 
-class IsochronousTiToCalculationMode(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class IsochronousTiToCalculationMode(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property IsochronousTiToCalculationMode
 
@@ -8598,7 +7936,7 @@ class IsochronousTiToCalculationMode(Enum): # skipped bases: <type 'IComparable'
     value__ = ...
 
 
-class ISyncDomainParticipantAssociation(IEquatable, IEngineeringAssociation, IInternalAssociationAccess): # skipped bases: <type 'IInternalBaseAccess'>, <type 'IEnumerable'>, <type 'IInternalCollectionAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringInstance'>, <type 'object'>
+class ISyncDomainParticipantAssociation(IEquatable, IEngineeringAssociation, IInternalAssociationAccess): # skipped bases: <type 'IInternalCollectionAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEnumerable'>, <type 'IEngineeringInstance'>, <type 'IInternalBaseAccess'>, <type 'object'>
     """ Association of SyncDomainParticipant objects """
     @property
     def Parent(self) -> IEngineeringObject:
@@ -8652,7 +7990,7 @@ class ISyncDomainParticipantAssociation(IEquatable, IEngineeringAssociation, IIn
         ...
 
 
-class LengthOfIORange(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class LengthOfIORange(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property LengthOfIORange
 
@@ -8677,18 +8015,7 @@ class LengthOfIORange(Enum): # skipped bases: <type 'IComparable'>, <type 'IForm
     value__ = ...
 
 
-class LevelSelection(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
-    """
-    Possible values for property LevelSelection
-
-    enum LevelSelection, values: ActivOnHighLevel (1), ActivOnLowLevel (0)
-    """
-    ActivOnHighLevel: LevelSelection = ...
-    ActivOnLowLevel: LevelSelection = ...
-    value__ = ...
-
-
-class LimitMonitor1ActiveStatus(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class LimitMonitor1ActiveStatus(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property LimitMonitor1ActiveStatus
 
@@ -8701,7 +8028,7 @@ class LimitMonitor1ActiveStatus(Enum): # skipped bases: <type 'IComparable'>, <t
     value__ = ...
 
 
-class LimitMonitor1Type(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class LimitMonitor1Type(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property LimitMonitor1Type
 
@@ -8712,7 +8039,7 @@ class LimitMonitor1Type(Enum): # skipped bases: <type 'IComparable'>, <type 'IFo
     value__ = ...
 
 
-class LimitMonitor2ActiveStatus(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class LimitMonitor2ActiveStatus(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property LimitMonitor2ActiveStatus
 
@@ -8725,7 +8052,7 @@ class LimitMonitor2ActiveStatus(Enum): # skipped bases: <type 'IComparable'>, <t
     value__ = ...
 
 
-class LimitMonitor2Type(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class LimitMonitor2Type(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property LimitMonitor2Type
 
@@ -8736,7 +8063,7 @@ class LimitMonitor2Type(Enum): # skipped bases: <type 'IComparable'>, <type 'IFo
     value__ = ...
 
 
-class LimitMonitor3ActiveStatus(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class LimitMonitor3ActiveStatus(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property LimitMonitor3ActiveStatus
 
@@ -8749,7 +8076,7 @@ class LimitMonitor3ActiveStatus(Enum): # skipped bases: <type 'IComparable'>, <t
     value__ = ...
 
 
-class LimitMonitor3Type(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class LimitMonitor3Type(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property LimitMonitor3Type
 
@@ -8760,7 +8087,7 @@ class LimitMonitor3Type(Enum): # skipped bases: <type 'IComparable'>, <type 'IFo
     value__ = ...
 
 
-class LimitMonitor4ActiveStatus(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class LimitMonitor4ActiveStatus(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property LimitMonitor4ActiveStatus
 
@@ -8773,7 +8100,7 @@ class LimitMonitor4ActiveStatus(Enum): # skipped bases: <type 'IComparable'>, <t
     value__ = ...
 
 
-class LimitMonitor4Type(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class LimitMonitor4Type(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property LimitMonitor4Type
 
@@ -8784,7 +8111,7 @@ class LimitMonitor4Type(Enum): # skipped bases: <type 'IComparable'>, <type 'IFo
     value__ = ...
 
 
-class LimitMonitor5ActiveStatus(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class LimitMonitor5ActiveStatus(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property LimitMonitor5ActiveStatus
 
@@ -8797,7 +8124,7 @@ class LimitMonitor5ActiveStatus(Enum): # skipped bases: <type 'IComparable'>, <t
     value__ = ...
 
 
-class LimitMonitor5Type(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class LimitMonitor5Type(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property LimitMonitor5Type
 
@@ -8808,7 +8135,7 @@ class LimitMonitor5Type(Enum): # skipped bases: <type 'IComparable'>, <type 'IFo
     value__ = ...
 
 
-class LimitMonitor6ActiveStatus(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class LimitMonitor6ActiveStatus(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property LimitMonitor6ActiveStatus
 
@@ -8821,7 +8148,7 @@ class LimitMonitor6ActiveStatus(Enum): # skipped bases: <type 'IComparable'>, <t
     value__ = ...
 
 
-class LimitMonitor6Type(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class LimitMonitor6Type(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property LimitMonitor6Type
 
@@ -8832,40 +8159,7 @@ class LimitMonitor6Type(Enum): # skipped bases: <type 'IComparable'>, <type 'IFo
     value__ = ...
 
 
-class LimitMonitoringActive(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
-    """
-    Possible values for property LimitMonitoringActive
-
-    enum LimitMonitoringActive, values: Activate (1), Deactivated (0)
-    """
-    Activate: LimitMonitoringActive = ...
-    Deactivated: LimitMonitoringActive = ...
-    value__ = ...
-
-
-class LimitSwitch(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
-    """
-    Possible values for property LimitSwitch
-
-    enum LimitSwitch, values: NormallyClosedContact (0), NormallyOpenContact (1)
-    """
-    NormallyClosedContact: LimitSwitch = ...
-    NormallyOpenContact: LimitSwitch = ...
-    value__ = ...
-
-
-class LimitValueType(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
-    """
-    Possible values for property LimitValueType
-
-    enum LimitValueType, values: HighLimit (0), LowLimit (1)
-    """
-    HighLimit: LimitValueType = ...
-    LowLimit: LimitValueType = ...
-    value__ = ...
-
-
-class LineFrequency(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class LineFrequency(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property LineFrequency
 
@@ -8876,54 +8170,7 @@ class LineFrequency(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormat
     value__ = ...
 
 
-class LinkAggregationFrameDistribution(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
-    """
-    Set the type of distribution of frames on the individual links of an aggregation
-
-    enum (flags) LinkAggregationFrameDistribution, values: DestinationSourceIPMAC (6), DestinationSourceMAC (3), None (0)
-    """
-    DestinationSourceIPMAC: LinkAggregationFrameDistribution = ...
-    DestinationSourceMAC: LinkAggregationFrameDistribution = ...
-    value__ = ...
-
-
-class LinkAggregationLacpStatus(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
-    """
-    LinkAggregation Lacp Status
-
-    enum (flags) LinkAggregationLacpStatus, values: None (0), Off (2), On (1)
-    """
-    Off: LinkAggregationLacpStatus = ...
-    On: LinkAggregationLacpStatus = ...
-    value__ = ...
-
-
-class LinkAggregationPortState(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
-    """
-    LinkAggregation Port States
-
-    enum (flags) LinkAggregationPortState, values: Active (3), Deactivated (2), None (0), On (5), Passive (4)
-    """
-    Active: LinkAggregationPortState = ...
-    Deactivated: LinkAggregationPortState = ...
-    On: LinkAggregationPortState = ...
-    Passive: LinkAggregationPortState = ...
-    value__ = ...
-
-
-class LinkAggregationVlanMode(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
-    """
-    Specify how the link aggregation is entered in a VLAN
-
-    enum (flags) LinkAggregationVlanMode, values: Access (1), Hybrid (3), None (0), Trunk (2)
-    """
-    Access: LinkAggregationVlanMode = ...
-    Hybrid: LinkAggregationVlanMode = ...
-    Trunk: LinkAggregationVlanMode = ...
-    value__ = ...
-
-
-class LoadType(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class LoadType(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property LoadType
 
@@ -8934,7 +8181,7 @@ class LoadType(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable
     value__ = ...
 
 
-class LowerCurrentWarningLimit(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class LowerCurrentWarningLimit(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property LowerCurrentWarningLimit
 
@@ -8970,18 +8217,7 @@ class LowerCurrentWarningLimit(Enum): # skipped bases: <type 'IComparable'>, <ty
     value__ = ...
 
 
-class LowErrorLimit(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
-    """
-    Possible values for property LowErrorLimit
-
-    enum LowErrorLimit, values: Activated (1), Deactivated (0)
-    """
-    Activated: LowErrorLimit = ...
-    Deactivated: LowErrorLimit = ...
-    value__ = ...
-
-
-class LowLimitCurrent(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class LowLimitCurrent(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property LowLimitCurrent
 
@@ -9017,30 +8253,7 @@ class LowLimitCurrent(Enum): # skipped bases: <type 'IComparable'>, <type 'IForm
     value__ = ...
 
 
-class LowWarningLimit(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
-    """
-    Possible values for property LowWarningLimit
-
-    enum LowWarningLimit, values: Activated (1), Deactivated (0)
-    """
-    Activated: LowWarningLimit = ...
-    Deactivated: LowWarningLimit = ...
-    value__ = ...
-
-
-class MacRtLicensePurchased(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
-    """
-    Possible values for property MacRtLicensePurchased
-
-    enum MacRtLicensePurchased, values: LicenseMacAdvanced (2), LicenseMacBasic (1), NoLicense (0)
-    """
-    LicenseMacAdvanced: MacRtLicensePurchased = ...
-    LicenseMacBasic: MacRtLicensePurchased = ...
-    NoLicense: MacRtLicensePurchased = ...
-    value__ = ...
-
-
-class MainCountingDirection(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class MainCountingDirection(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property MainCountingDirection
 
@@ -9051,101 +8264,7 @@ class MainCountingDirection(Enum): # skipped bases: <type 'IComparable'>, <type 
     value__ = ...
 
 
-class MassFlowUnit(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
-    """
-    Possible values for property MassFlowUnit
-
-    enum MassFlowUnit, values: Default (0), KilogramPerDay (4), KilogramPerHour (3), KilogramPerMinute (2), KilogramPerSecond (1), MetricTonPerDay (8), MetricTonPerHour (7), MetricTonPerMinute (6), MetricTonPerSecond (5), OuncesPerDay (24), OuncesPerHour (23), OuncesPerMinute (22), OuncesPerSecond (21), PoundPerDay (12), PoundPerHour (11), PoundPerMinute (10), PoundPerSecond (9), TonPerDay (16), TonPerHour (15), TonPerMinute (14), TonPerSecond (13), TonUkPerDay (20), TonUkPerHour (19), TonUkPerMinute (18), TonUkPerSecond (17)
-    """
-    Default: MassFlowUnit = ...
-    KilogramPerDay: MassFlowUnit = ...
-    KilogramPerHour: MassFlowUnit = ...
-    KilogramPerMinute: MassFlowUnit = ...
-    KilogramPerSecond: MassFlowUnit = ...
-    MetricTonPerDay: MassFlowUnit = ...
-    MetricTonPerHour: MassFlowUnit = ...
-    MetricTonPerMinute: MassFlowUnit = ...
-    MetricTonPerSecond: MassFlowUnit = ...
-    OuncesPerDay: MassFlowUnit = ...
-    OuncesPerHour: MassFlowUnit = ...
-    OuncesPerMinute: MassFlowUnit = ...
-    OuncesPerSecond: MassFlowUnit = ...
-    PoundPerDay: MassFlowUnit = ...
-    PoundPerHour: MassFlowUnit = ...
-    PoundPerMinute: MassFlowUnit = ...
-    PoundPerSecond: MassFlowUnit = ...
-    TonPerDay: MassFlowUnit = ...
-    TonPerHour: MassFlowUnit = ...
-    TonPerMinute: MassFlowUnit = ...
-    TonPerSecond: MassFlowUnit = ...
-    TonUkPerDay: MassFlowUnit = ...
-    TonUkPerHour: MassFlowUnit = ...
-    TonUkPerMinute: MassFlowUnit = ...
-    TonUkPerSecond: MassFlowUnit = ...
-    value__ = ...
-
-
-class MassValue(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
-    """
-    Possible values for property MassValue
-
-    enum MassValue, values: Af (0), Bbl (1), BblBeer (3), BblUs (2), Bu (4), Cl (5), CubicCm (6), CubicDm (7), CubicFt (9), CubicIn (14), CubicM (21), CubicMiles (24), CubicMm (26), CubicNm (28), CubicSm (35), CubicYd (39), FlOz (8), G (10), Gal (11), GalUk (12), Hl (13), Karat (15), Kg (16), Kl (17), L (18), Lb (19), LbT (20), MegaG (23), Mg (22), Ml (25), Nl (27), Oz (29), OzT (30), Pint (31), Quart (32), Scf (33), Sl (34), T (36), Ton (37), TonUk (38)
-    """
-    Af: MassValue = ...
-    Bbl: MassValue = ...
-    BblBeer: MassValue = ...
-    BblUs: MassValue = ...
-    Bu: MassValue = ...
-    Cl: MassValue = ...
-    CubicCm: MassValue = ...
-    CubicDm: MassValue = ...
-    CubicFt: MassValue = ...
-    CubicIn: MassValue = ...
-    CubicM: MassValue = ...
-    CubicMiles: MassValue = ...
-    CubicMm: MassValue = ...
-    CubicNm: MassValue = ...
-    CubicSm: MassValue = ...
-    CubicYd: MassValue = ...
-    FlOz: MassValue = ...
-    G: MassValue = ...
-    Gal: MassValue = ...
-    GalUk: MassValue = ...
-    Hl: MassValue = ...
-    Karat: MassValue = ...
-    Kg: MassValue = ...
-    Kl: MassValue = ...
-    L: MassValue = ...
-    Lb: MassValue = ...
-    LbT: MassValue = ...
-    MegaG: MassValue = ...
-    Mg: MassValue = ...
-    Ml: MassValue = ...
-    Nl: MassValue = ...
-    Oz: MassValue = ...
-    OzT: MassValue = ...
-    Pint: MassValue = ...
-    Quart: MassValue = ...
-    Scf: MassValue = ...
-    Sl: MassValue = ...
-    T: MassValue = ...
-    Ton: MassValue = ...
-    TonUk: MassValue = ...
-    value__ = ...
-
-
-class MasterSecretConfiguration(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
-    """
-    Name of the Master Secret Protection Types
-
-    enum (flags) MasterSecretConfiguration, values: None (0), WithoutPassword (2), WithPassword (1)
-    """
-    value__ = ...
-    WithoutPassword: MasterSecretConfiguration = ...
-    WithPassword: MasterSecretConfiguration = ...
-
-
-class MaximumBufferedReceivedFrames(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class MaximumBufferedReceivedFrames(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property MaximumBufferedReceivedFrames
 
@@ -9155,7 +8274,7 @@ class MaximumBufferedReceivedFrames(Enum): # skipped bases: <type 'IComparable'>
     value__ = ...
 
 
-class MeasuredVariable(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class MeasuredVariable(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property MeasuredVariable
 
@@ -9168,7 +8287,7 @@ class MeasuredVariable(Enum): # skipped bases: <type 'IComparable'>, <type 'IFor
     Velocity: MeasuredVariable = ...
 
 
-class MeasuringInput(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class MeasuringInput(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property MeasuringInput
 
@@ -9210,7 +8329,7 @@ class MeasuringInput(Enum): # skipped bases: <type 'IComparable'>, <type 'IForma
     X12Clamp8: MeasuringInput = ...
 
 
-class MeasuringTemperatureCoefficient(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class MeasuringTemperatureCoefficient(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property MeasuringTemperatureCoefficient
 
@@ -9236,7 +8355,7 @@ class MeasuringTemperatureCoefficient(Enum): # skipped bases: <type 'IComparable
     value__ = ...
 
 
-class MediaRedundancyRole(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class MediaRedundancyRole(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Media Redundancy Role
 
@@ -9249,7 +8368,7 @@ class MediaRedundancyRole(Enum): # skipped bases: <type 'IComparable'>, <type 'I
     value__ = ...
 
 
-class MediumAttachmentType(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class MediumAttachmentType(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property MediumAttachmentType
 
@@ -9260,42 +8379,18 @@ class MediumAttachmentType(Enum): # skipped bases: <type 'IComparable'>, <type '
     value__ = ...
 
 
-class Mode(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
-    """
-    Possible values for property Mode
-
-    enum Mode, values: PositioningMode (0), TechnologyObject (1)
-    """
-    PositioningMode: Mode = ...
-    TechnologyObject: Mode = ...
-    value__ = ...
-
-
-class ModuleDistribution(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class ModuleDistribution(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property ModuleDistribution
 
-    enum ModuleDistribution, values: None (0), Value4SubmodulesWith1AnalogOutput (1), Value4SubmodulesWith8DigitalInputs4SubmodulesWith8DigitalOutputs (19), Value8SubmodulesWith1AnalogInput (2), Value8SubmodulesWith8DigitalInputs (18)
+    enum ModuleDistribution, values: None (0), Value4SubmodulesWith1AnalogOutput (1), Value8SubmodulesWith1AnalogInput (2)
     """
     Value4SubmodulesWith1AnalogOutput: ModuleDistribution = ...
-    Value4SubmodulesWith8DigitalInputs4SubmodulesWith8DigitalOutputs: ModuleDistribution = ...
     Value8SubmodulesWith1AnalogInput: ModuleDistribution = ...
-    Value8SubmodulesWith8DigitalInputs: ModuleDistribution = ...
     value__ = ...
 
 
-class ModuleUseFromUserProgram(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
-    """
-    Possible values for property ModuleUseFromUserProgram
-
-    enum ModuleUseFromUserProgram, values: UseWithInstructionFromTimeBasedIoLibrary (0), UseWithTechnologyObjectMotionControl (1)
-    """
-    UseWithInstructionFromTimeBasedIoLibrary: ModuleUseFromUserProgram = ...
-    UseWithTechnologyObjectMotionControl: ModuleUseFromUserProgram = ...
-    value__ = ...
-
-
-class ModuleVariant(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class ModuleVariant(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property ModuleVariant
 
@@ -9311,18 +8406,7 @@ class ModuleVariant(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormat
     value__ = ...
 
 
-class ModuloAxis(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
-    """
-    Possible values for property ModuloAxis
-
-    enum ModuloAxis, values: Active (1), Deactivated (0)
-    """
-    Active: ModuloAxis = ...
-    Deactivated: ModuloAxis = ...
-    value__ = ...
-
-
-class MonitoringWindow(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class MonitoringWindow(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property MonitoringWindow
 
@@ -9432,7 +8516,7 @@ class MonitoringWindow(Enum): # skipped bases: <type 'IComparable'>, <type 'IFor
     value__ = ...
 
 
-class MonoflopTime(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class MonoflopTime(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property MonoflopTime
 
@@ -9445,7 +8529,7 @@ class MonoflopTime(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormatt
     value__ = ...
 
 
-class MotorProtectionClass(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class MotorProtectionClass(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property MotorProtectionClass
 
@@ -9463,7 +8547,7 @@ class MotorProtectionClass(Enum): # skipped bases: <type 'IComparable'>, <type '
     value__ = ...
 
 
-class MotorProtectionReset(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class MotorProtectionReset(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property MotorProtectionReset
 
@@ -9474,7 +8558,7 @@ class MotorProtectionReset(Enum): # skipped bases: <type 'IComparable'>, <type '
     value__ = ...
 
 
-class MotorProtectionResponseToPrewarning(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class MotorProtectionResponseToPrewarning(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property MotorProtectionResponseToPrewarning
 
@@ -9487,7 +8571,7 @@ class MotorProtectionResponseToPrewarning(Enum): # skipped bases: <type 'ICompar
     Warn: MotorProtectionResponseToPrewarning = ...
 
 
-class MotorProtectionResponseToTripLevel(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class MotorProtectionResponseToTripLevel(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property MotorProtectionResponseToTripLevel
 
@@ -9500,7 +8584,7 @@ class MotorProtectionResponseToTripLevel(Enum): # skipped bases: <type 'ICompara
     Warn: MotorProtectionResponseToTripLevel = ...
 
 
-class MotorProtectionStalledRotorResponse(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class MotorProtectionStalledRotorResponse(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property MotorProtectionStalledRotorResponse
 
@@ -9513,7 +8597,7 @@ class MotorProtectionStalledRotorResponse(Enum): # skipped bases: <type 'ICompar
     Warn: MotorProtectionStalledRotorResponse = ...
 
 
-class MotorProtectionTypeOfLoad(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class MotorProtectionTypeOfLoad(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property MotorProtectionTypeOfLoad
 
@@ -9524,7 +8608,7 @@ class MotorProtectionTypeOfLoad(Enum): # skipped bases: <type 'IComparable'>, <t
     value__ = ...
 
 
-class MotorProtectionUnbalanceResponse(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class MotorProtectionUnbalanceResponse(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property MotorProtectionUnbalanceResponse
 
@@ -9537,7 +8621,7 @@ class MotorProtectionUnbalanceResponse(Enum): # skipped bases: <type 'IComparabl
     Warn: MotorProtectionUnbalanceResponse = ...
 
 
-class MrpDomain(IEquatable, IEngineeringObject, IInternalObjectAccess): # skipped bases: <type 'IEngineeringCompositionOrObject'>, <type 'IInternalBaseAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringInstance'>, <type 'object'>
+class MrpDomain(IEquatable, IEngineeringObject, IInternalObjectAccess): # skipped bases: <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'IEngineeringInstance'>, <type 'IInternalBaseAccess'>, <type 'object'>
     """ Media Redundancy Protocol Domain """
     @property
     def DomainParticipants(self) -> NetworkInterfaceAssociation:
@@ -9601,7 +8685,7 @@ class MrpDomain(IEquatable, IEngineeringObject, IInternalObjectAccess): # skippe
         ...
 
 
-class MrpDomainComposition(IInternalCompositionAccess, IEngineeringComposition, IEquatable): # skipped bases: <type 'IEngineeringInstance'>, <type 'IEnumerable'>, <type 'IInternalBaseAccess'>, <type 'IInternalCollectionAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'object'>
+class MrpDomainComposition(IInternalCompositionAccess, IEngineeringComposition, IEquatable): # skipped bases: <type 'IEnumerable'>, <type 'IEngineeringInstance'>, <type 'IInternalBaseAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'IInternalCollectionAccess'>, <type 'object'>
     """ Composition of Mrp Domains """
     @property
     def Parent(self) -> IEngineeringObject:
@@ -9653,7 +8737,7 @@ class MrpDomainComposition(IInternalCompositionAccess, IEngineeringComposition, 
         ...
 
 
-class NetType(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class NetType(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Network type
 
@@ -9673,7 +8757,7 @@ class NetType(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'
     Wan: NetType = ...
 
 
-class NeutralConductorCurrentTransformerSecondaryCurrent(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class NeutralConductorCurrentTransformerSecondaryCurrent(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property NeutralConductorCurrentTransformerSecondaryCurrent
 
@@ -9684,7 +8768,7 @@ class NeutralConductorCurrentTransformerSecondaryCurrent(Enum): # skipped bases:
     value__ = ...
 
 
-class Node(IEquatable, IEngineeringObject, IEngineeringServiceProvider, IInternalObjectAccess): # skipped bases: <type 'IEngineeringCompositionOrObject'>, <type 'IInternalBaseAccess'>, <type 'IServiceProvider'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringInstance'>, <type 'object'>
+class Node(IEquatable, IEngineeringObject, IEngineeringServiceProvider, IInternalObjectAccess): # skipped bases: <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'IServiceProvider'>, <type 'IEngineeringInstance'>, <type 'IInternalBaseAccess'>, <type 'object'>
     """ Node is an object which is used as an interface from DeviceItem to Subnet """
     @property
     def ConnectedSubnet(self) -> Subnet:
@@ -9788,7 +8872,7 @@ class Node(IEquatable, IEngineeringObject, IEngineeringServiceProvider, IInterna
         ...
 
 
-class NodeAssociation(IEquatable, IEngineeringAssociation, IInternalAssociationAccess): # skipped bases: <type 'IInternalBaseAccess'>, <type 'IEnumerable'>, <type 'IInternalCollectionAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringInstance'>, <type 'object'>
+class NodeAssociation(IEquatable, IEngineeringAssociation, IInternalAssociationAccess): # skipped bases: <type 'IInternalCollectionAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEnumerable'>, <type 'IEngineeringInstance'>, <type 'IInternalBaseAccess'>, <type 'object'>
     """ Associated nodes """
     @property
     def Parent(self) -> IEngineeringObject:
@@ -9828,7 +8912,7 @@ class NodeAssociation(IEquatable, IEngineeringAssociation, IInternalAssociationA
         ...
 
 
-class NodeComposition(IInternalCompositionAccess, IEngineeringComposition, IEquatable): # skipped bases: <type 'IEngineeringInstance'>, <type 'IEnumerable'>, <type 'IInternalBaseAccess'>, <type 'IInternalCollectionAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'object'>
+class NodeComposition(IInternalCompositionAccess, IEngineeringComposition, IEquatable): # skipped bases: <type 'IEnumerable'>, <type 'IEngineeringInstance'>, <type 'IInternalBaseAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'IInternalCollectionAccess'>, <type 'object'>
     """ Composition of Nodes """
     @property
     def Parent(self) -> IEngineeringObject:
@@ -9880,7 +8964,7 @@ class NodeComposition(IInternalCompositionAccess, IEngineeringComposition, IEqua
         ...
 
 
-class NonVolatileElement1Type(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class NonVolatileElement1Type(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property NonVolatileElement1Type
 
@@ -9893,7 +8977,7 @@ class NonVolatileElement1Type(Enum): # skipped bases: <type 'IComparable'>, <typ
     value__ = ...
 
 
-class NonVolatileElement2Type(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class NonVolatileElement2Type(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property NonVolatileElement2Type
 
@@ -9906,7 +8990,7 @@ class NonVolatileElement2Type(Enum): # skipped bases: <type 'IComparable'>, <typ
     value__ = ...
 
 
-class NonVolatileElement3Type(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class NonVolatileElement3Type(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property NonVolatileElement3Type
 
@@ -9919,7 +9003,7 @@ class NonVolatileElement3Type(Enum): # skipped bases: <type 'IComparable'>, <typ
     value__ = ...
 
 
-class NonVolatileElement4Type(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class NonVolatileElement4Type(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property NonVolatileElement4Type
 
@@ -9932,29 +9016,7 @@ class NonVolatileElement4Type(Enum): # skipped bases: <type 'IComparable'>, <typ
     value__ = ...
 
 
-class NotchFilterActive(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
-    """
-    Possible values for property NotchFilterActive
-
-    enum NotchFilterActive, values: Active (0), Deactivated (1)
-    """
-    Active: NotchFilterActive = ...
-    Deactivated: NotchFilterActive = ...
-    value__ = ...
-
-
-class NoValveVoltageOrEvsActive(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
-    """
-    Possible values for property NoValveVoltageOrEvsActive
-
-    enum NoValveVoltageOrEvsActive, values: Activated (1), Deactivated (0)
-    """
-    Activated: NoValveVoltageOrEvsActive = ...
-    Deactivated: NoValveVoltageOrEvsActive = ...
-    value__ = ...
-
-
-class NumberOfSequences(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class NumberOfSequences(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property NumberOfSequences
 
@@ -9967,7 +9029,7 @@ class NumberOfSequences(Enum): # skipped bases: <type 'IComparable'>, <type 'IFo
     value__ = ...
 
 
-class OpcUaMinimumSamplingInterval(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class OpcUaMinimumSamplingInterval(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property OpcUaMinimumSamplingInterval
 
@@ -9976,7 +9038,7 @@ class OpcUaMinimumSamplingInterval(Enum): # skipped bases: <type 'IComparable'>,
     value__ = ...
 
 
-class OpcUaPurchasedLicense(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class OpcUaPurchasedLicense(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property OpcUaPurchasedLicense
 
@@ -9989,7 +9051,7 @@ class OpcUaPurchasedLicense(Enum): # skipped bases: <type 'IComparable'>, <type 
     value__ = ...
 
 
-class OpcUaRequiredLicense(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class OpcUaRequiredLicense(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property OpcUaRequiredLicense
 
@@ -10002,7 +9064,7 @@ class OpcUaRequiredLicense(Enum): # skipped bases: <type 'IComparable'>, <type '
     value__ = ...
 
 
-class OpcUaSecurityPolicies(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class OpcUaSecurityPolicies(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property OpcUaSecurityPolicies
 
@@ -10018,18 +9080,7 @@ class OpcUaSecurityPolicies(Enum): # skipped bases: <type 'IComparable'>, <type 
     value__ = ...
 
 
-class OpcUaServerCertificateSettings(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
-    """
-    Possible values for property OpcUaServerCertificateSettings
-
-    enum OpcUaServerCertificateSettings, values: OpcUaCertificatesAtRuntime (1), OpcUaCertificatesViaDownload (0)
-    """
-    OpcUaCertificatesAtRuntime: OpcUaServerCertificateSettings = ...
-    OpcUaCertificatesViaDownload: OpcUaServerCertificateSettings = ...
-    value__ = ...
-
-
-class OpcUaUser(IEquatable, IEngineeringObject, IInternalObjectAccess): # skipped bases: <type 'IEngineeringCompositionOrObject'>, <type 'IInternalBaseAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringInstance'>, <type 'object'>
+class OpcUaUser(IEquatable, IEngineeringObject, IInternalObjectAccess): # skipped bases: <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'IEngineeringInstance'>, <type 'IInternalBaseAccess'>, <type 'object'>
     """ Represents a OpcUa User Management object """
     @property
     def Parent(self) -> IEngineeringObject:
@@ -10092,7 +9143,7 @@ class OpcUaUser(IEquatable, IEngineeringObject, IInternalObjectAccess): # skippe
         ...
 
 
-class OpcUaUserComposition(IInternalCompositionAccess, IEngineeringComposition, IEquatable): # skipped bases: <type 'IEngineeringInstance'>, <type 'IEnumerable'>, <type 'IInternalBaseAccess'>, <type 'IInternalCollectionAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'object'>
+class OpcUaUserComposition(IInternalCompositionAccess, IEngineeringComposition, IEquatable): # skipped bases: <type 'IEnumerable'>, <type 'IEngineeringInstance'>, <type 'IInternalBaseAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'IInternalCollectionAccess'>, <type 'object'>
     """ Composition of OpcUa Users """
     @property
     def Parent(self) -> IEngineeringObject:
@@ -10144,7 +9195,7 @@ class OpcUaUserComposition(IInternalCompositionAccess, IEngineeringComposition, 
         ...
 
 
-class OPDFaults(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class OPDFaults(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property OPDFaults
 
@@ -10155,7 +9206,7 @@ class OPDFaults(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattabl
     value__ = ...
 
 
-class OPDKeepIlluminationOnFor(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class OPDKeepIlluminationOnFor(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property OPDKeepIlluminationOnFor
 
@@ -10169,7 +9220,7 @@ class OPDKeepIlluminationOnFor(Enum): # skipped bases: <type 'IComparable'>, <ty
     value__ = ...
 
 
-class OPDLanguage(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class OPDLanguage(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property OPDLanguage
 
@@ -10194,7 +9245,7 @@ class OPDLanguage(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormatta
     value__ = ...
 
 
-class OPDProfiles(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class OPDProfiles(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property OPDProfiles
 
@@ -10237,7 +9288,7 @@ class OPDProfiles(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormatta
     value__ = ...
 
 
-class OPDReturnToOperationsDisplayAfter(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class OPDReturnToOperationsDisplayAfter(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property OPDReturnToOperationsDisplayAfter
 
@@ -10251,7 +9302,7 @@ class OPDReturnToOperationsDisplayAfter(Enum): # skipped bases: <type 'IComparab
     value__ = ...
 
 
-class OPDWarnings(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class OPDWarnings(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property OPDWarnings
 
@@ -10262,7 +9313,7 @@ class OPDWarnings(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormatta
     value__ = ...
 
 
-class OperatingHoursMonitoringResponse(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class OperatingHoursMonitoringResponse(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property OperatingHoursMonitoringResponse
 
@@ -10274,7 +9325,7 @@ class OperatingHoursMonitoringResponse(Enum): # skipped bases: <type 'IComparabl
     Warn: OperatingHoursMonitoringResponse = ...
 
 
-class OperatingMode(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class OperatingMode(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property OperatingMode
 
@@ -10364,7 +9415,7 @@ class OperatingMode(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormat
     WriteReadNeg: OperatingMode = ...
 
 
-class OperatingRange(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class OperatingRange(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property OperatingRange
 
@@ -10469,7 +9520,7 @@ class OperatingRange(Enum): # skipped bases: <type 'IComparable'>, <type 'IForma
     value__ = ...
 
 
-class OperatingRangeOutput(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class OperatingRangeOutput(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property OperatingRangeOutput
 
@@ -10485,11 +9536,11 @@ class OperatingRangeOutput(Enum): # skipped bases: <type 'IComparable'>, <type '
     value__ = ...
 
 
-class OperatingType(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class OperatingType(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property OperatingType
 
-    enum OperatingType, values: CountingOrPositionInput (26), Current (2), Current2WireTransducer (4), Current4WireTransducer (3), Deactivated (0), Hart (24), Measuring (27), Resistance (18), Resistor2Wire (7), Resistor3Wire (6), Resistor4Wire (5), RtdThermalResistorLinear (19), ThermalResistor2Wire (25), ThermalResistor3Wire (9), ThermalResistor4Wire (8), Thermocouple (10), Thermocouple0CCompLinear (22), Thermocouple50CCompLinear (23), ThermocoupleExtComp (11), ThermocoupleExtCompLinear (14), ThermocoupleIntComp (21), ThermocoupleIntCompLinear (13), Voltage (1), Voltage4WireStrainGaugeFullBridge (29), Voltage6WireStrainGaugeFullBridge (30)
+    enum OperatingType, values: CountingOrPositionInput (26), Current (2), Current2WireTransducer (4), Current4WireTransducer (3), Deactivated (0), Hart (24), Measuring (27), Resistance (18), Resistor2Wire (7), Resistor3Wire (6), Resistor4Wire (5), RtdThermalResistorLinear (19), ThermalResistor2Wire (25), ThermalResistor3Wire (9), ThermalResistor4Wire (8), Thermocouple (10), Thermocouple0CCompLinear (22), Thermocouple50CCompLinear (23), ThermocoupleExtComp (11), ThermocoupleExtCompLinear (14), ThermocoupleIntComp (21), ThermocoupleIntCompLinear (13), Voltage (1)
     """
     CountingOrPositionInput: OperatingType = ...
     Current: OperatingType = ...
@@ -10515,11 +9566,9 @@ class OperatingType(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormat
     ThermocoupleIntCompLinear: OperatingType = ...
     value__ = ...
     Voltage: OperatingType = ...
-    Voltage4WireStrainGaugeFullBridge: OperatingType = ...
-    Voltage6WireStrainGaugeFullBridge: OperatingType = ...
 
 
-class OperatingTypeAndRange(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class OperatingTypeAndRange(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property OperatingTypeAndRange
 
@@ -10550,7 +9599,7 @@ class OperatingTypeAndRange(Enum): # skipped bases: <type 'IComparable'>, <type 
     VoltagePlusMinus80mV: OperatingTypeAndRange = ...
 
 
-class OperatingTypeOutput(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class OperatingTypeOutput(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property OperatingTypeOutput
 
@@ -10562,7 +9611,7 @@ class OperatingTypeOutput(Enum): # skipped bases: <type 'IComparable'>, <type 'I
     Voltage: OperatingTypeOutput = ...
 
 
-class OperationalProtectionOffResponsePositioner(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class OperationalProtectionOffResponsePositioner(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property OperationalProtectionOffResponsePositioner
 
@@ -10573,7 +9622,7 @@ class OperationalProtectionOffResponsePositioner(Enum): # skipped bases: <type '
     value__ = ...
 
 
-class OperationalProtectionOffStandardFunctionsType(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class OperationalProtectionOffStandardFunctionsType(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property OperationalProtectionOffStandardFunctionsType
 
@@ -10584,7 +9633,7 @@ class OperationalProtectionOffStandardFunctionsType(Enum): # skipped bases: <typ
     value__ = ...
 
 
-class OutputA(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class OutputA(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property OutputA
 
@@ -10609,7 +9658,7 @@ class OutputA(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'
     X11Clamp38: OutputA = ...
 
 
-class OutputB(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class OutputB(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property OutputB
 
@@ -10634,7 +9683,7 @@ class OutputB(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'
     X11Clamp38: OutputB = ...
 
 
-class OutputFilterDown(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class OutputFilterDown(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property OutputFilterDown
 
@@ -10650,7 +9699,7 @@ class OutputFilterDown(Enum): # skipped bases: <type 'IComparable'>, <type 'IFor
     value__ = ...
 
 
-class OutputFilterUp(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class OutputFilterUp(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property OutputFilterUp
 
@@ -10666,7 +9715,7 @@ class OutputFilterUp(Enum): # skipped bases: <type 'IComparable'>, <type 'IForma
     value__ = ...
 
 
-class ParameterAssignmentOfPnInterfaceByHigherLevelIoController(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class ParameterAssignmentOfPnInterfaceByHigherLevelIoController(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property ParameterAssignmentOfPnInterfaceByHigherLevelIoController
 
@@ -10677,7 +9726,7 @@ class ParameterAssignmentOfPnInterfaceByHigherLevelIoController(Enum): # skipped
     value__ = ...
 
 
-class ParameterSettings(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class ParameterSettings(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property ParameterSettings
 
@@ -10688,7 +9737,7 @@ class ParameterSettings(Enum): # skipped bases: <type 'IComparable'>, <type 'IFo
     value__ = ...
 
 
-class Parity(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class Parity(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property Parity
 
@@ -10699,7 +9748,7 @@ class Parity(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>
     value__ = ...
 
 
-class PcInterfaceAssignmentMode(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class PcInterfaceAssignmentMode(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Interface assignment type for assignable interfaces
 
@@ -10710,11 +9759,11 @@ class PcInterfaceAssignmentMode(Enum): # skipped bases: <type 'IComparable'>, <t
     value__ = ...
 
 
-class PcStationType(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class PcStationType(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property PcStationType
 
-    enum PcStationType, values: NotInstalled (0), PcStationV1Dot0 (1), PcStationV2Dot0 (2), PcStationV2Dot1 (3), PcStationV2Dot2 (4), PcStationV2Dot3 (5), PcStationV2Dot4 (6), PcStationV2Dot7 (7), PcStationV2Dot8 (8), PcStationV2Dot9 (9)
+    enum PcStationType, values: NotInstalled (0), PcStationV1Dot0 (1), PcStationV2Dot0 (2), PcStationV2Dot1 (3), PcStationV2Dot2 (4), PcStationV2Dot3 (5), PcStationV2Dot4 (6), PcStationV2Dot7 (7), PcStationV2Dot8 (8)
     """
     NotInstalled: PcStationType = ...
     PcStationV1Dot0: PcStationType = ...
@@ -10725,11 +9774,10 @@ class PcStationType(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormat
     PcStationV2Dot4: PcStationType = ...
     PcStationV2Dot7: PcStationType = ...
     PcStationV2Dot8: PcStationType = ...
-    PcStationV2Dot9: PcStationType = ...
     value__ = ...
 
 
-class PhysicalQuantity(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class PhysicalQuantity(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property PhysicalQuantity
 
@@ -10760,18 +9808,7 @@ class PhysicalQuantity(Enum): # skipped bases: <type 'IComparable'>, <type 'IFor
     Volume: PhysicalQuantity = ...
 
 
-class PilotValve(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
-    """
-    Possible values for property PilotValve
-
-    enum PilotValve, values: Activated (1), Deactivated (0)
-    """
-    Activated: PilotValve = ...
-    Deactivated: PilotValve = ...
-    value__ = ...
-
-
-class PlcProtectionAccessLevel(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class PlcProtectionAccessLevel(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Access Level entries -enum
 
@@ -10785,20 +9822,7 @@ class PlcProtectionAccessLevel(Enum): # skipped bases: <type 'IComparable'>, <ty
     value__ = ...
 
 
-class PnDnsConfigNameResolve(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
-    """
-    Name resolution via DNS
-
-    enum PnDnsConfigNameResolve, values: Deactivated (0), Device (4), Project (1), Remotely (2)
-    """
-    Deactivated: PnDnsConfigNameResolve = ...
-    Device: PnDnsConfigNameResolve = ...
-    Project: PnDnsConfigNameResolve = ...
-    Remotely: PnDnsConfigNameResolve = ...
-    value__ = ...
-
-
-class PortConfiguration(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class PortConfiguration(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property PortConfiguration
 
@@ -10816,7 +9840,7 @@ class PortConfiguration(Enum): # skipped bases: <type 'IComparable'>, <type 'IFo
     value__ = ...
 
 
-class PortMode(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class PortMode(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property PortMode
 
@@ -10827,7 +9851,7 @@ class PortMode(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable
     value__ = ...
 
 
-class PortModePort1(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class PortModePort1(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property PortModePort1
 
@@ -10841,7 +9865,7 @@ class PortModePort1(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormat
     value__ = ...
 
 
-class PortModePort2(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class PortModePort2(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property PortModePort2
 
@@ -10855,7 +9879,7 @@ class PortModePort2(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormat
     value__ = ...
 
 
-class PortModePort3(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class PortModePort3(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property PortModePort3
 
@@ -10869,7 +9893,7 @@ class PortModePort3(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormat
     value__ = ...
 
 
-class PortModePort4(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class PortModePort4(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property PortModePort4
 
@@ -10883,7 +9907,7 @@ class PortModePort4(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormat
     value__ = ...
 
 
-class PotentialGroup(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class PotentialGroup(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property PotentialGroup
 
@@ -10894,7 +9918,7 @@ class PotentialGroup(Enum): # skipped bases: <type 'IComparable'>, <type 'IForma
     value__ = ...
 
 
-class PowerFailureMonitoringType(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class PowerFailureMonitoringType(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property PowerFailureMonitoringType
 
@@ -10905,7 +9929,7 @@ class PowerFailureMonitoringType(Enum): # skipped bases: <type 'IComparable'>, <
     value__ = ...
 
 
-class PreConfigurationForDIDQ(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class PreConfigurationForDIDQ(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property PreConfigurationForDIDQ
 
@@ -10917,52 +9941,7 @@ class PreConfigurationForDIDQ(Enum): # skipped bases: <type 'IComparable'>, <typ
     value__ = ...
 
 
-class PreferenceDirection(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
-    """
-    Possible values for property PreferenceDirection
-
-    enum PreferenceDirection, values: InvertDirection (1), StandardDirection (0)
-    """
-    InvertDirection: PreferenceDirection = ...
-    StandardDirection: PreferenceDirection = ...
-    value__ = ...
-
-
-class PressureIndicator(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
-    """
-    Possible values for property PressureIndicator
-
-    enum PressureIndicator, values: AlternatingWithValveStatus (2), Deactivated (0), Permanent (1)
-    """
-    AlternatingWithValveStatus: PressureIndicator = ...
-    Deactivated: PressureIndicator = ...
-    Permanent: PressureIndicator = ...
-    value__ = ...
-
-
-class PressureMeasurement(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
-    """
-    Possible values for property PressureMeasurement
-
-    enum PressureMeasurement, values: Activated (1), Deactivated (0)
-    """
-    Activated: PressureMeasurement = ...
-    Deactivated: PressureMeasurement = ...
-    value__ = ...
-
-
-class PressureOutsideTheDefinedRangeActive(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
-    """
-    Possible values for property PressureOutsideTheDefinedRangeActive
-
-    enum PressureOutsideTheDefinedRangeActive, values: Activated (1), Deactivated (0)
-    """
-    Activated: PressureOutsideTheDefinedRangeActive = ...
-    Deactivated: PressureOutsideTheDefinedRangeActive = ...
-    value__ = ...
-
-
-class PrewarningLimitForMotorHeating(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class PrewarningLimitForMotorHeating(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property PrewarningLimitForMotorHeating
 
@@ -11071,7 +10050,7 @@ class PrewarningLimitForMotorHeating(Enum): # skipped bases: <type 'IComparable'
     value__ = ...
 
 
-class Priority(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class Priority(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property Priority
 
@@ -11082,18 +10061,7 @@ class Priority(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable
     value__ = ...
 
 
-class ProcessDataMode(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
-    """
-    Possible values for property ProcessDataMode
-
-    enum ProcessDataMode, values: Fragmented (1), Standard (0)
-    """
-    Fragmented: ProcessDataMode = ...
-    Standard: ProcessDataMode = ...
-    value__ = ...
-
-
-class ProcessDataVariant(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class ProcessDataVariant(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property ProcessDataVariant
 
@@ -11133,21 +10101,7 @@ class ProcessDataVariant(Enum): # skipped bases: <type 'IComparable'>, <type 'IF
     value__ = ...
 
 
-class ProcessValue(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
-    """
-    Possible values for property ProcessValue
-
-    enum ProcessValue, values: Mass (0), Standardvolume (4), TotalFraktionA (5), TotalFraktionB (6), Volume (1)
-    """
-    Mass: ProcessValue = ...
-    Standardvolume: ProcessValue = ...
-    TotalFraktionA: ProcessValue = ...
-    TotalFraktionB: ProcessValue = ...
-    value__ = ...
-    Volume: ProcessValue = ...
-
-
-class ProDiagUsedLicenses(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class ProDiagUsedLicenses(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property ProDiagUsedLicenses
 
@@ -11162,7 +10116,7 @@ class ProDiagUsedLicenses(Enum): # skipped bases: <type 'IComparable'>, <type 'I
     value__ = ...
 
 
-class ProtectionUnitForSummarizeOfSecurityEvents(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class ProtectionUnitForSummarizeOfSecurityEvents(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property ProtectionUnitForSummarizeOfSecurityEvents
 
@@ -11174,7 +10128,7 @@ class ProtectionUnitForSummarizeOfSecurityEvents(Enum): # skipped bases: <type '
     value__ = ...
 
 
-class ProtocolCompatibility(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class ProtocolCompatibility(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property ProtocolCompatibility
 
@@ -11186,7 +10140,7 @@ class ProtocolCompatibility(Enum): # skipped bases: <type 'IComparable'>, <type 
     value__ = ...
 
 
-class PulseOutput(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class PulseOutput(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property PulseOutput
 
@@ -11211,20 +10165,7 @@ class PulseOutput(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormatta
     X11Clamp38: PulseOutput = ...
 
 
-class PulsePauseOnReversalOfDirection(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
-    """
-    Possible values for property PulsePauseOnReversalOfDirection
-
-    enum PulsePauseOnReversalOfDirection, values: Value0Ms (0), Value10Ms (10), Value1Ms (1), Value4Ms (4)
-    """
-    Value0Ms: PulsePauseOnReversalOfDirection = ...
-    Value10Ms: PulsePauseOnReversalOfDirection = ...
-    Value1Ms: PulsePauseOnReversalOfDirection = ...
-    Value4Ms: PulsePauseOnReversalOfDirection = ...
-    value__ = ...
-
-
-class PulseStretching(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class PulseStretching(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property PulseStretching
 
@@ -11239,7 +10180,7 @@ class PulseStretching(Enum): # skipped bases: <type 'IComparable'>, <type 'IForm
     value__ = ...
 
 
-class PulseWidthModulationFrequency(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class PulseWidthModulationFrequency(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property PulseWidthModulationFrequency
 
@@ -11253,7 +10194,7 @@ class PulseWidthModulationFrequency(Enum): # skipped bases: <type 'IComparable'>
     value__ = ...
 
 
-class PulseWidthModulationTimePeriod(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class PulseWidthModulationTimePeriod(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property PulseWidthModulationTimePeriod
 
@@ -11272,7 +10213,7 @@ class PulseWidthModulationTimePeriod(Enum): # skipped bases: <type 'IComparable'
     value__ = ...
 
 
-class PwmOutputFormat(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class PwmOutputFormat(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property PwmOutputFormat
 
@@ -11283,7 +10224,7 @@ class PwmOutputFormat(Enum): # skipped bases: <type 'IComparable'>, <type 'IForm
     value__ = ...
 
 
-class ReactionToCountingLimit(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class ReactionToCountingLimit(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property ReactionToCountingLimit
 
@@ -11294,7 +10235,7 @@ class ReactionToCountingLimit(Enum): # skipped bases: <type 'IComparable'>, <typ
     value__ = ...
 
 
-class ReactionToCpuStop(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class ReactionToCpuStop(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property ReactionToCpuStop
 
@@ -11309,7 +10250,7 @@ class ReactionToCpuStop(Enum): # skipped bases: <type 'IComparable'>, <type 'IFo
     value__ = ...
 
 
-class ReactionToCpuStopforDQ1(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class ReactionToCpuStopforDQ1(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property ReactionToCpuStopforDQ1
 
@@ -11320,7 +10261,7 @@ class ReactionToCpuStopforDQ1(Enum): # skipped bases: <type 'IComparable'>, <typ
     value__ = ...
 
 
-class ReactionToError(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class ReactionToError(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property ReactionToError
 
@@ -11332,7 +10273,7 @@ class ReactionToError(Enum): # skipped bases: <type 'IComparable'>, <type 'IForm
     value__ = ...
 
 
-class ReactionToGateStart(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class ReactionToGateStart(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property ReactionToGateStart
 
@@ -11343,7 +10284,7 @@ class ReactionToGateStart(Enum): # skipped bases: <type 'IComparable'>, <type 'I
     value__ = ...
 
 
-class ReactionToSignalN(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class ReactionToSignalN(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property ReactionToSignalN
 
@@ -11355,7 +10296,7 @@ class ReactionToSignalN(Enum): # skipped bases: <type 'IComparable'>, <type 'IFo
     value__ = ...
 
 
-class ReceiveLineInitialState(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class ReceiveLineInitialState(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property ReceiveLineInitialState
 
@@ -11366,7 +10307,7 @@ class ReceiveLineInitialState(Enum): # skipped bases: <type 'IComparable'>, <typ
     value__ = ...
 
 
-class ReferenceJunction(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class ReferenceJunction(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property ReferenceJunction
 
@@ -11379,7 +10320,7 @@ class ReferenceJunction(Enum): # skipped bases: <type 'IComparable'>, <type 'IFo
     value__ = ...
 
 
-class ReferenceSwitchInput(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class ReferenceSwitchInput(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property ReferenceSwitchInput
 
@@ -11406,22 +10347,7 @@ class ReferenceSwitchInput(Enum): # skipped bases: <type 'IComparable'>, <type '
     X12Clamp18: ReferenceSwitchInput = ...
 
 
-class RelationMeasuredVariable(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
-    """
-    Possible values for property RelationMeasuredVariable
-
-    enum RelationMeasuredVariable, values: Disable (0), LineConductor1 (1), LineConductor2 (2), LineConductor3 (3), Module (5), NeutralConductor (4)
-    """
-    Disable: RelationMeasuredVariable = ...
-    LineConductor1: RelationMeasuredVariable = ...
-    LineConductor2: RelationMeasuredVariable = ...
-    LineConductor3: RelationMeasuredVariable = ...
-    Module: RelationMeasuredVariable = ...
-    NeutralConductor: RelationMeasuredVariable = ...
-    value__ = ...
-
-
-class ResetWhenCountingLimitIsViolated(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class ResetWhenCountingLimitIsViolated(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property ResetWhenCountingLimitIsViolated
 
@@ -11432,7 +10358,7 @@ class ResetWhenCountingLimitIsViolated(Enum): # skipped bases: <type 'IComparabl
     value__ = ...
 
 
-class ResponseToOverload(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class ResponseToOverload(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property ResponseToOverload
 
@@ -11444,7 +10370,7 @@ class ResponseToOverload(Enum): # skipped bases: <type 'IComparable'>, <type 'IF
     Warn: ResponseToOverload = ...
 
 
-class ResponseToOvershoot(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class ResponseToOvershoot(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property ResponseToOvershoot
 
@@ -11457,7 +10383,7 @@ class ResponseToOvershoot(Enum): # skipped bases: <type 'IComparable'>, <type 'I
     Warn: ResponseToOvershoot = ...
 
 
-class ResponseToPrewarning(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class ResponseToPrewarning(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property ResponseToPrewarning
 
@@ -11469,7 +10395,7 @@ class ResponseToPrewarning(Enum): # skipped bases: <type 'IComparable'>, <type '
     Warn: ResponseToPrewarning = ...
 
 
-class ResponseToResidualCurrentDetection(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class ResponseToResidualCurrentDetection(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property ResponseToResidualCurrentDetection
 
@@ -11480,7 +10406,7 @@ class ResponseToResidualCurrentDetection(Enum): # skipped bases: <type 'ICompara
     Warn: ResponseToResidualCurrentDetection = ...
 
 
-class ResponseToThermalMotorModelAtRestart(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class ResponseToThermalMotorModelAtRestart(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property ResponseToThermalMotorModelAtRestart
 
@@ -11491,7 +10417,7 @@ class ResponseToThermalMotorModelAtRestart(Enum): # skipped bases: <type 'ICompa
     value__ = ...
 
 
-class RetentiveDataMemoryUsage(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class RetentiveDataMemoryUsage(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property RetentiveDataMemoryUsage
 
@@ -11502,7 +10428,7 @@ class RetentiveDataMemoryUsage(Enum): # skipped bases: <type 'IComparable'>, <ty
     value__ = ...
 
 
-class ReverseCurrentDirection(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class ReverseCurrentDirection(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property ReverseCurrentDirection
 
@@ -11513,7 +10439,7 @@ class ReverseCurrentDirection(Enum): # skipped bases: <type 'IComparable'>, <typ
     value__ = ...
 
 
-class RtClass(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class RtClass(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property RtClass
 
@@ -11524,77 +10450,7 @@ class RtClass(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'
     value__ = ...
 
 
-class RunCurrent(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
-    """
-    Possible values for property RunCurrent
-
-    enum RunCurrent, values: CouldNotCalculateTheDynamicDisplayName (1), CouldNotCalculateTheDynamicDisplayName10 (10), CouldNotCalculateTheDynamicDisplayName11 (11), CouldNotCalculateTheDynamicDisplayName12 (12), CouldNotCalculateTheDynamicDisplayName13 (13), CouldNotCalculateTheDynamicDisplayName14 (14), CouldNotCalculateTheDynamicDisplayName15 (15), CouldNotCalculateTheDynamicDisplayName16 (16), CouldNotCalculateTheDynamicDisplayName17 (17), CouldNotCalculateTheDynamicDisplayName18 (18), CouldNotCalculateTheDynamicDisplayName19 (19), CouldNotCalculateTheDynamicDisplayName2 (2), CouldNotCalculateTheDynamicDisplayName20 (20), CouldNotCalculateTheDynamicDisplayName21 (21), CouldNotCalculateTheDynamicDisplayName22 (22), CouldNotCalculateTheDynamicDisplayName23 (23), CouldNotCalculateTheDynamicDisplayName24 (24), CouldNotCalculateTheDynamicDisplayName25 (25), CouldNotCalculateTheDynamicDisplayName26 (26), CouldNotCalculateTheDynamicDisplayName27 (27), CouldNotCalculateTheDynamicDisplayName28 (28), CouldNotCalculateTheDynamicDisplayName29 (29), CouldNotCalculateTheDynamicDisplayName3 (3), CouldNotCalculateTheDynamicDisplayName30 (30), CouldNotCalculateTheDynamicDisplayName31 (31), CouldNotCalculateTheDynamicDisplayName32 (32), CouldNotCalculateTheDynamicDisplayName33 (33), CouldNotCalculateTheDynamicDisplayName34 (34), CouldNotCalculateTheDynamicDisplayName35 (35), CouldNotCalculateTheDynamicDisplayName4 (4), CouldNotCalculateTheDynamicDisplayName5 (5), CouldNotCalculateTheDynamicDisplayName6 (6), CouldNotCalculateTheDynamicDisplayName7 (7), CouldNotCalculateTheDynamicDisplayName8 (8), CouldNotCalculateTheDynamicDisplayName9 (9), Value0 (0)
-    """
-    CouldNotCalculateTheDynamicDisplayName: RunCurrent = ...
-    CouldNotCalculateTheDynamicDisplayName10: RunCurrent = ...
-    CouldNotCalculateTheDynamicDisplayName11: RunCurrent = ...
-    CouldNotCalculateTheDynamicDisplayName12: RunCurrent = ...
-    CouldNotCalculateTheDynamicDisplayName13: RunCurrent = ...
-    CouldNotCalculateTheDynamicDisplayName14: RunCurrent = ...
-    CouldNotCalculateTheDynamicDisplayName15: RunCurrent = ...
-    CouldNotCalculateTheDynamicDisplayName16: RunCurrent = ...
-    CouldNotCalculateTheDynamicDisplayName17: RunCurrent = ...
-    CouldNotCalculateTheDynamicDisplayName18: RunCurrent = ...
-    CouldNotCalculateTheDynamicDisplayName19: RunCurrent = ...
-    CouldNotCalculateTheDynamicDisplayName2: RunCurrent = ...
-    CouldNotCalculateTheDynamicDisplayName20: RunCurrent = ...
-    CouldNotCalculateTheDynamicDisplayName21: RunCurrent = ...
-    CouldNotCalculateTheDynamicDisplayName22: RunCurrent = ...
-    CouldNotCalculateTheDynamicDisplayName23: RunCurrent = ...
-    CouldNotCalculateTheDynamicDisplayName24: RunCurrent = ...
-    CouldNotCalculateTheDynamicDisplayName25: RunCurrent = ...
-    CouldNotCalculateTheDynamicDisplayName26: RunCurrent = ...
-    CouldNotCalculateTheDynamicDisplayName27: RunCurrent = ...
-    CouldNotCalculateTheDynamicDisplayName28: RunCurrent = ...
-    CouldNotCalculateTheDynamicDisplayName29: RunCurrent = ...
-    CouldNotCalculateTheDynamicDisplayName3: RunCurrent = ...
-    CouldNotCalculateTheDynamicDisplayName30: RunCurrent = ...
-    CouldNotCalculateTheDynamicDisplayName31: RunCurrent = ...
-    CouldNotCalculateTheDynamicDisplayName32: RunCurrent = ...
-    CouldNotCalculateTheDynamicDisplayName33: RunCurrent = ...
-    CouldNotCalculateTheDynamicDisplayName34: RunCurrent = ...
-    CouldNotCalculateTheDynamicDisplayName35: RunCurrent = ...
-    CouldNotCalculateTheDynamicDisplayName4: RunCurrent = ...
-    CouldNotCalculateTheDynamicDisplayName5: RunCurrent = ...
-    CouldNotCalculateTheDynamicDisplayName6: RunCurrent = ...
-    CouldNotCalculateTheDynamicDisplayName7: RunCurrent = ...
-    CouldNotCalculateTheDynamicDisplayName8: RunCurrent = ...
-    CouldNotCalculateTheDynamicDisplayName9: RunCurrent = ...
-    Value0: RunCurrent = ...
-    value__ = ...
-
-
-class RunningCurrentIncreaseTime(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
-    """
-    Possible values for property RunningCurrentIncreaseTime
-
-    enum RunningCurrentIncreaseTime, values: Value1 (0), Value10 (5), Value100 (12), Value1000 (15), Value12 (6), Value14 (7), Value16 (8), Value2 (1), Value20 (9), Value200 (13), Value4 (2), Value40 (10), Value500 (14), Value6 (3), Value60 (11), Value8 (4)
-    """
-    Value1: RunningCurrentIncreaseTime = ...
-    Value10: RunningCurrentIncreaseTime = ...
-    Value100: RunningCurrentIncreaseTime = ...
-    Value1000: RunningCurrentIncreaseTime = ...
-    Value12: RunningCurrentIncreaseTime = ...
-    Value14: RunningCurrentIncreaseTime = ...
-    Value16: RunningCurrentIncreaseTime = ...
-    Value2: RunningCurrentIncreaseTime = ...
-    Value20: RunningCurrentIncreaseTime = ...
-    Value200: RunningCurrentIncreaseTime = ...
-    Value4: RunningCurrentIncreaseTime = ...
-    Value40: RunningCurrentIncreaseTime = ...
-    Value500: RunningCurrentIncreaseTime = ...
-    Value6: RunningCurrentIncreaseTime = ...
-    Value60: RunningCurrentIncreaseTime = ...
-    Value8: RunningCurrentIncreaseTime = ...
-    value__ = ...
-
-
-class SafetyRelatedTrippingReset(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class SafetyRelatedTrippingReset(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property SafetyRelatedTrippingReset
 
@@ -11605,7 +10461,7 @@ class SafetyRelatedTrippingReset(Enum): # skipped bases: <type 'IComparable'>, <
     value__ = ...
 
 
-class SafetyRelatedTrippingResponse(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class SafetyRelatedTrippingResponse(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property SafetyRelatedTrippingResponse
 
@@ -11618,7 +10474,7 @@ class SafetyRelatedTrippingResponse(Enum): # skipped bases: <type 'IComparable'>
     Warn: SafetyRelatedTrippingResponse = ...
 
 
-class SelectLevel(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class SelectLevel(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property SelectLevel
 
@@ -11629,7 +10485,7 @@ class SelectLevel(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormatta
     value__ = ...
 
 
-class SelectLevelDI0(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class SelectLevelDI0(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property SelectLevelDI0
 
@@ -11640,7 +10496,7 @@ class SelectLevelDI0(Enum): # skipped bases: <type 'IComparable'>, <type 'IForma
     value__ = ...
 
 
-class SelectLevelDI1(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class SelectLevelDI1(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property SelectLevelDI1
 
@@ -11651,7 +10507,7 @@ class SelectLevelDI1(Enum): # skipped bases: <type 'IComparable'>, <type 'IForma
     value__ = ...
 
 
-class SelectLevelDI2(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class SelectLevelDI2(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property SelectLevelDI2
 
@@ -11662,7 +10518,7 @@ class SelectLevelDI2(Enum): # skipped bases: <type 'IComparable'>, <type 'IForma
     value__ = ...
 
 
-class SensorType(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class SensorType(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property SensorType
 
@@ -11678,7 +10534,7 @@ class SensorType(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattab
     value__ = ...
 
 
-class SerialProtocolMode(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class SerialProtocolMode(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property SerialProtocolMode
 
@@ -11693,20 +10549,19 @@ class SerialProtocolMode(Enum): # skipped bases: <type 'IComparable'>, <type 'IF
     value__ = ...
 
 
-class SetOutputDO(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class SetOutputDO(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property SetOutputDO
 
-    enum SetOutputDO, values: BetweenComparisonValueAndHighCountingLimit (1), BetweenComparisonValueAndLowCountingLimit (2), Deactivated (8), OffDqEqualTo0 (0)
+    enum SetOutputDO, values: BetweenComparisonValueAndHighCountingLimit (1), BetweenComparisonValueAndLowCountingLimit (2), Deactivated (0)
     """
     BetweenComparisonValueAndHighCountingLimit: SetOutputDO = ...
     BetweenComparisonValueAndLowCountingLimit: SetOutputDO = ...
     Deactivated: SetOutputDO = ...
-    OffDqEqualTo0: SetOutputDO = ...
     value__ = ...
 
 
-class SetOutputDQ0(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class SetOutputDQ0(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property SetOutputDQ0
 
@@ -11722,7 +10577,7 @@ class SetOutputDQ0(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormatt
     value__ = ...
 
 
-class SetOutputDQ1(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class SetOutputDQ1(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property SetOutputDQ1
 
@@ -11740,7 +10595,7 @@ class SetOutputDQ1(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormatt
     value__ = ...
 
 
-class SharedDeviceCopyOfModule(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class SharedDeviceCopyOfModule(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property SharedDeviceCopyOfModule
 
@@ -11752,7 +10607,7 @@ class SharedDeviceCopyOfModule(Enum): # skipped bases: <type 'IComparable'>, <ty
     value__ = ...
 
 
-class SignalConditioning1Type(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class SignalConditioning1Type(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property SignalConditioning1Type
 
@@ -11765,7 +10620,7 @@ class SignalConditioning1Type(Enum): # skipped bases: <type 'IComparable'>, <typ
     value__ = ...
 
 
-class SignalConditioning2Type(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class SignalConditioning2Type(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property SignalConditioning2Type
 
@@ -11778,7 +10633,7 @@ class SignalConditioning2Type(Enum): # skipped bases: <type 'IComparable'>, <typ
     value__ = ...
 
 
-class SignalConditioning3Type(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class SignalConditioning3Type(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property SignalConditioning3Type
 
@@ -11791,7 +10646,7 @@ class SignalConditioning3Type(Enum): # skipped bases: <type 'IComparable'>, <typ
     value__ = ...
 
 
-class SignalConditioning4Type(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class SignalConditioning4Type(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property SignalConditioning4Type
 
@@ -11804,7 +10659,7 @@ class SignalConditioning4Type(Enum): # skipped bases: <type 'IComparable'>, <typ
     value__ = ...
 
 
-class SignalConditioning5Type(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class SignalConditioning5Type(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property SignalConditioning5Type
 
@@ -11817,7 +10672,7 @@ class SignalConditioning5Type(Enum): # skipped bases: <type 'IComparable'>, <typ
     value__ = ...
 
 
-class SignalConditioning6Type(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class SignalConditioning6Type(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property SignalConditioning6Type
 
@@ -11830,7 +10685,7 @@ class SignalConditioning6Type(Enum): # skipped bases: <type 'IComparable'>, <typ
     value__ = ...
 
 
-class SignalDelaySelection(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class SignalDelaySelection(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property SignalDelaySelection
 
@@ -11841,7 +10696,7 @@ class SignalDelaySelection(Enum): # skipped bases: <type 'IComparable'>, <type '
     value__ = ...
 
 
-class SignalEvaluation(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class SignalEvaluation(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property SignalEvaluation
 
@@ -11853,7 +10708,7 @@ class SignalEvaluation(Enum): # skipped bases: <type 'IComparable'>, <type 'IFor
     value__ = ...
 
 
-class SignalSelectionForReferenceMark0(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class SignalSelectionForReferenceMark0(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property SignalSelectionForReferenceMark0
 
@@ -11864,24 +10719,22 @@ class SignalSelectionForReferenceMark0(Enum): # skipped bases: <type 'IComparabl
     value__ = ...
 
 
-class SignalType(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class SignalType(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property SignalType
 
-    enum SignalType, values: AbsoluteEncoderSsi (5), CountUpACountDownB (2), IncrementalEncoderABN (4), IncrementalEncoderABPhaseShifted (3), IncrementalEncoderABPhaseShiftedQuadruple (131), PulseA (0), PulseAAndDirectionB (1), PulsePAndDirectionD (132)
+    enum SignalType, values: AbsoluteEncoderSsi (5), CountUpACountDownB (2), IncrementalEncoderABN (4), IncrementalEncoderABPhaseShifted (3), PulseA (0), PulseAAndDirectionB (1)
     """
     AbsoluteEncoderSsi: SignalType = ...
     CountUpACountDownB: SignalType = ...
     IncrementalEncoderABN: SignalType = ...
     IncrementalEncoderABPhaseShifted: SignalType = ...
-    IncrementalEncoderABPhaseShiftedQuadruple: SignalType = ...
     PulseA: SignalType = ...
     PulseAAndDirectionB: SignalType = ...
-    PulsePAndDirectionD: SignalType = ...
     value__ = ...
 
 
-class SimocodeAnalogConnections(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class SimocodeAnalogConnections(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property SimocodeAnalogConnections
 
@@ -11981,11 +10834,11 @@ class SimocodeAnalogConnections(Enum): # skipped bases: <type 'IComparable'>, <t
     VoltageUMin: SimocodeAnalogConnections = ...
 
 
-class SimocodeDigitalConnections(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class SimocodeDigitalConnections(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property SimocodeDigitalConnections
 
-    enum SimocodeDigitalConnections, values: AcyclicReceiveByte0Bit0 (40), AcyclicReceiveByte0Bit1 (41), AcyclicReceiveByte0Bit2 (42), AcyclicReceiveByte0Bit3 (43), AcyclicReceiveByte0Bit4 (44), AcyclicReceiveByte0Bit5 (45), AcyclicReceiveByte0Bit6 (46), AcyclicReceiveByte0Bit7 (47), AcyclicReceiveByte1Bit0 (48), AcyclicReceiveByte1Bit1 (49), AcyclicReceiveByte1Bit2 (50), AcyclicReceiveByte1Bit3 (51), AcyclicReceiveByte1Bit4 (52), AcyclicReceiveByte1Bit5 (53), AcyclicReceiveByte1Bit6 (54), AcyclicReceiveByte1Bit7 (55), BuInput1 (9), BuInput2 (10), BuInput3 (11), BuInput4 (12), BuTestOrResetButton (8), ClosePositioner (256), CloseSolenoidValve (255), ContactorControl1Qe1 (80), ContactorControl2Qe2 (81), ContactorControl3Qe3 (82), ContactorControl4Qe4 (83), ContactorControl5Qe5 (84), Counter1Output (236), Counter2Output (237), Counter3Output (238), Counter4Output (239), Counter5Output (228), Counter6Output (229), CyclicReceiveByte0Bit0 (56), CyclicReceiveByte0Bit1 (57), CyclicReceiveByte0Bit2 (58), CyclicReceiveByte0Bit3 (59), CyclicReceiveByte0Bit4 (60), CyclicReceiveByte0Bit5 (61), CyclicReceiveByte0Bit6 (62), CyclicReceiveByte0Bit7 (63), CyclicReceiveByte1Bit0 (64), CyclicReceiveByte1Bit1 (65), CyclicReceiveByte1Bit2 (66), CyclicReceiveByte1Bit3 (67), CyclicReceiveByte1Bit4 (68), CyclicReceiveByte1Bit5 (69), CyclicReceiveByte1Bit6 (70), CyclicReceiveByte1Bit7 (71), DisplayQlaOff (90), DisplayQleForward (91), DisplayQleForwardFast (92), DisplayQleReverse (89), DisplayQleReversefast (88), DisplayQlsFault (93), Dm1CascadingInput (19), Dm1FeedbackCircuitDmfl (18), Dm1FeedbackCircuitDmfp (240), Dm1Input1 (241), Dm1Input2 (17), Dm1Input3 (242), Dm1Input4 (243), Dm1InputDMFL (16), Dm1SensorChannel1 (24), Dm1SensorChannel2 (25), Dm1Start (244), Dm2Input1 (20), Dm2Input2 (21), Dm2Input3 (22), Dm2Input4 (23), DryRunningProtectionTripLevel (199), EventAm1OpenCircuit (180), EventAm1TripLevelLowerLimit (159), EventAm1TripLevelUpperLimit (158), EventAm1WarningLeveLowerLimit (151), EventAm1WarningLevelUpperLimit (150), EventAm2OpenCircuit (179), EventAm2TripLevelLowerLimit (7), EventAm2TripLevelUpperLimit (6), EventAm2WarningLevelLowerLimit (5), EventAm2WarningLevelUpperLimit (4), EventConfiguredOperatorPanelMissing (188), EventDmFLocalOK (186), EventEmOpenCircuit (142), EventEmShortCircuit (143), EventExternalFault1 (172), EventExternalFault2 (173), EventExternalFault3 (174), EventExternalFault4 (175), EventExternalFault5 (176), EventExternalFault6 (177), EventExternalGroundFault (133), EventExternalGroundFaultWarning (134), EventInternalGroundFault (132), EventInternalGroundFaultWarning (161), EventJustOneStartPossible (165), EventLimitMonitor1 (168), EventLimitMonitor2 (169), EventLimitMonitor3 (170), EventLimitMonitor4 (171), EventLimitMonitor5 (38), EventLimitMonitor6 (39), EventMonitoringPeriodForMandatoryTestingTestRequirement (182), EventMotorOperatingHours (166), EventNoStartPermitted (163), EventNumberOfStarts (164), EventOverload (130), EventOverloadAndPhaseFailure (131), EventPrewarningOverload (128), EventProfisafeActive (187), EventSafetyRelatedTripping (181), EventStalledRotor (160), EventStopTime (167), EventThermistorOpenCircuit (137), EventThermistorShortCircuit (136), EventThermistorTripLevel (135), EventTimestampfctActive (184), EventTm1OutOfRange (141), EventTm1SensorFault (140), EventTm1TripLevelUpperLimit (139), EventTm1WarningLevelUpperLimit (138), EventTm2OutOfRange (29), EventTm2SensorFault (28), EventTm2TripLevelUpperLimit (31), EventTm2WarningLevelUpperLimit (30), EventTripLevelCosPhi (156), EventTripLevelILowerLimit (153), EventTripLevelIUpperLimit (152), EventTripLevelPLowerLimit (155), EventTripLevelPUpperLimit (154), EventTripLevelULowerLimit (157), EventUnbalance (129), EventWarningLevelCosPhi (148), EventWarningLevelILowerLimit (145), EventWarningLevelIUpperLimit (144), EventWarningLevelPLowerLimit (147), EventWarningLevelPUpperLimit (146), EventWarningLevelULowerLimit (149), FaultAntivalence (208), FaultBus (197), FaultConfigurationError (195), FaultDouble0 (205), FaultDouble1 (206), FaultEndPosition (207), FaultExecutionOnCommand (200), FaultExecutionStopCommand (201), FaultFeedbackOff (203), FaultFeedbackOn (202), FaultHardwareFaultBasicUnit (192), FaultModuleFault (193), FaultOperationalProtectionOff (211), FaultParameterization (196), FaultPlcDcs (198), FaultPowerFailure (210), FaultStalledPositioner (204), FaultTemporaryComponents (194), FaultTestPositionFeedback (209), FixedLevel0 (1), FixedLevel1 (2), Flashing1Output (248), Flashing2Output (249), Flashing3Output (250), Flicker1Output (251), Flicker2Output (252), Flicker3Output (253), NonVolatileElement1Output (254), NonVolatileElement2Output (245), NonVolatileElement3Output (246), NonVolatileElement4Output (247), NotConnected (0), OffEnabledControlCommand (74), OnForwardEnabledControlCommand (75), OnForwardFastEnabledControlCommand (76), OnReverseEnabledControlCommand (73), OnReverseFastEnabledControlCommand (72), OpButton1 (33), OpButton2 (34), OpButton3 (35), OpButton4 (36), OpcUaReceiveByte0Bit0 (257), OpcUaReceiveByte0Bit1 (258), OpcUaReceiveByte0Bit2 (259), OpcUaReceiveByte0Bit3 (260), OpcUaReceiveByte0Bit4 (261), OpcUaReceiveByte0Bit5 (262), OpcUaReceiveByte0Bit6 (263), OpcUaReceiveByte0Bit7 (264), OpcUaReceiveByte1Bit0 (265), OpcUaReceiveByte1Bit1 (266), OpcUaReceiveByte1Bit2 (267), OpcUaReceiveByte1Bit3 (268), OpcUaReceiveByte1Bit4 (269), OpcUaReceiveByte1Bit5 (270), OpcUaReceiveByte1Bit6 (271), OpcUaReceiveByte1Bit7 (272), Open (273), OpTestOrResetButton (32), PwmOutput (274), SignalConditioning1Output (275), SignalConditioning2Output (276), SignalConditioning3Output (277), SignalConditioning4Output (278), SignalConditioning5Output (214), SignalConditioning6Output (215), StatusBusOK (99), StatusChangeOverPauseActive (111), StatusCoolingDownPeriodActive (122), StatusCurrentFlowing (101), StatusDeviceOK (98), StatusDeviceTestActive (124), StatusEmergencyStartExecuted (121), StatusEnablingCircuitClosed (127), StatusFeedbackClosedFc (114), StatusFeedbackOpenFo (115), StatusGroupFault (96), StatusGroupWarning (97), StatusInterlockingTimeActive (110), StatusOff (106), StatusOnForward (107), StatusOnForwardFast (108), StatusOnReverse (105), StatusOnReverseFast (104), StatusOperationalProtectionOff (119), StatusPauseTimeActive (123), StatusPhaseSequence123 (125), StatusPhaseSequence321 (126), StatusPlcDcsInRun (100), StatusPositionerRunsInClosedDirection (113), StatusPositionerRunsInOpenDirection (112), StatusProfienergyCommandStartPausePending (102), StatusRemoteMode (120), StatusStartActive (109), StatusTestPositionFeedback (118), StatusTorqueClosedTc (116), StatusTorqueOpenTo (117), Stop (279), Timer1Output (232), Timer2Output (233), Timer3Output (234), Timer4Output (235), Timer5Output (230), Timer6Output (231), TruthTable10Output (226), TruthTable11Output (227), TruthTable1Output (216), TruthTable2Output (217), TruthTable3Output (218), TruthTable4Output (219), TruthTable5Output (220), TruthTable6Output (221), TruthTable7Output (222), TruthTable8Output (223), TruthTable9Output1 (224), TruthTable9Output2 (225), WarningFeedbackCircuit (190), WarningSimultaneity (191)
+    enum SimocodeDigitalConnections, values: AcyclicReceiveByte0Bit0 (40), AcyclicReceiveByte0Bit1 (41), AcyclicReceiveByte0Bit2 (42), AcyclicReceiveByte0Bit3 (43), AcyclicReceiveByte0Bit4 (44), AcyclicReceiveByte0Bit5 (45), AcyclicReceiveByte0Bit6 (46), AcyclicReceiveByte0Bit7 (47), AcyclicReceiveByte1Bit0 (48), AcyclicReceiveByte1Bit1 (49), AcyclicReceiveByte1Bit2 (50), AcyclicReceiveByte1Bit3 (51), AcyclicReceiveByte1Bit4 (52), AcyclicReceiveByte1Bit5 (53), AcyclicReceiveByte1Bit6 (54), AcyclicReceiveByte1Bit7 (55), BuInput1 (9), BuInput2 (10), BuInput3 (11), BuInput4 (12), BuTestOrResetButton (8), ClosePositioner (256), CloseSolenoidValve (255), ContactorControl1Qe1 (80), ContactorControl2Qe2 (81), ContactorControl3Qe3 (82), ContactorControl4Qe4 (83), ContactorControl5Qe5 (84), Counter1Output (236), Counter2Output (237), Counter3Output (238), Counter4Output (239), Counter5Output (228), Counter6Output (229), CyclicReceiveByte0Bit0 (56), CyclicReceiveByte0Bit1 (57), CyclicReceiveByte0Bit2 (58), CyclicReceiveByte0Bit3 (59), CyclicReceiveByte0Bit4 (60), CyclicReceiveByte0Bit5 (61), CyclicReceiveByte0Bit6 (62), CyclicReceiveByte0Bit7 (63), CyclicReceiveByte1Bit0 (64), CyclicReceiveByte1Bit1 (65), CyclicReceiveByte1Bit2 (66), CyclicReceiveByte1Bit3 (67), CyclicReceiveByte1Bit4 (68), CyclicReceiveByte1Bit5 (69), CyclicReceiveByte1Bit6 (70), CyclicReceiveByte1Bit7 (71), DisplayQlaOff (90), DisplayQleForward (91), DisplayQleForwardFast (92), DisplayQleReverse (89), DisplayQleReversefast (88), DisplayQlsFault (93), Dm1CascadingInput (19), Dm1FeedbackCircuitDmfl (18), Dm1FeedbackCircuitDmfp (240), Dm1Input1 (241), Dm1Input2 (17), Dm1Input3 (242), Dm1Input4 (243), Dm1InputDMFL (16), Dm1SensorChannel1 (24), Dm1SensorChannel2 (25), Dm1Start (244), Dm2Input1 (20), Dm2Input2 (21), Dm2Input3 (22), Dm2Input4 (23), EventAm1OpenCircuit (180), EventAm1TripLevelLowerLimit (159), EventAm1TripLevelUpperLimit (158), EventAm1WarningLeveLowerLimit (151), EventAm1WarningLevelUpperLimit (150), EventAm2OpenCircuit (179), EventAm2TripLevelLowerLimit (7), EventAm2TripLevelUpperLimit (6), EventAm2WarningLevelLowerLimit (5), EventAm2WarningLevelUpperLimit (4), EventConfiguredOperatorPanelMissing (188), EventDmFLocalOK (186), EventEmOpenCircuit (142), EventEmShortCircuit (143), EventExternalFault1 (172), EventExternalFault2 (173), EventExternalFault3 (174), EventExternalFault4 (175), EventExternalFault5 (176), EventExternalFault6 (177), EventExternalGroundFault (133), EventExternalGroundFaultWarning (134), EventInternalGroundFault (132), EventInternalGroundFaultWarning (161), EventJustOneStartPossible (165), EventLimitMonitor1 (168), EventLimitMonitor2 (169), EventLimitMonitor3 (170), EventLimitMonitor4 (171), EventLimitMonitor5 (38), EventLimitMonitor6 (39), EventMonitoringPeriodForMandatoryTestingTestRequirement (182), EventMotorOperatingHours (166), EventNoStartPermitted (163), EventNumberOfStarts (164), EventOverload (130), EventOverloadAndPhaseFailure (131), EventPrewarningOverload (128), EventProfisafeActive (187), EventSafetyRelatedTripping (181), EventStalledRotor (160), EventStopTime (167), EventThermistorOpenCircuit (137), EventThermistorShortCircuit (136), EventThermistorTripLevel (135), EventTimestampfctActive (184), EventTm1OutOfRange (141), EventTm1SensorFault (140), EventTm1TripLevelUpperLimit (139), EventTm1WarningLevelUpperLimit (138), EventTm2OutOfRange (29), EventTm2SensorFault (28), EventTm2TripLevelUpperLimit (31), EventTm2WarningLevelUpperLimit (30), EventTripLevelCosPhi (156), EventTripLevelILowerLimit (153), EventTripLevelIUpperLimit (152), EventTripLevelPLowerLimit (155), EventTripLevelPUpperLimit (154), EventTripLevelULowerLimit (157), EventUnbalance (129), EventWarningLevelCosPhi (148), EventWarningLevelILowerLimit (145), EventWarningLevelIUpperLimit (144), EventWarningLevelPLowerLimit (147), EventWarningLevelPUpperLimit (146), EventWarningLevelULowerLimit (149), FaultAntivalence (208), FaultBus (197), FaultConfigurationError (195), FaultDouble0 (205), FaultDouble1 (206), FaultEndPosition (207), FaultExecutionOnCommand (200), FaultExecutionStopCommand (201), FaultFeedbackOff (203), FaultFeedbackOn (202), FaultHardwareFaultBasicUnit (192), FaultModuleFault (193), FaultOperationalProtectionOff (211), FaultParameterization (196), FaultPlcDcs (198), FaultPowerFailure (210), FaultStalledPositioner (204), FaultTemporaryComponents (194), FaultTestPositionFeedback (209), FixedLevel0 (1), FixedLevel1 (2), Flashing1Output (248), Flashing2Output (249), Flashing3Output (250), Flicker1Output (251), Flicker2Output (252), Flicker3Output (253), NonVolatileElement1Output (254), NonVolatileElement2Output (245), NonVolatileElement3Output (246), NonVolatileElement4Output (247), NotConnected (0), OffEnabledControlCommand (74), OnForwardEnabledControlCommand (75), OnForwardFastEnabledControlCommand (76), OnReverseEnabledControlCommand (73), OnReverseFastEnabledControlCommand (72), OpButton1 (33), OpButton2 (34), OpButton3 (35), OpButton4 (36), OpcUaReceiveByte0Bit0 (257), OpcUaReceiveByte0Bit1 (258), OpcUaReceiveByte0Bit2 (259), OpcUaReceiveByte0Bit3 (260), OpcUaReceiveByte0Bit4 (261), OpcUaReceiveByte0Bit5 (262), OpcUaReceiveByte0Bit6 (263), OpcUaReceiveByte0Bit7 (264), OpcUaReceiveByte1Bit0 (265), OpcUaReceiveByte1Bit1 (266), OpcUaReceiveByte1Bit2 (267), OpcUaReceiveByte1Bit3 (268), OpcUaReceiveByte1Bit4 (269), OpcUaReceiveByte1Bit5 (270), OpcUaReceiveByte1Bit6 (271), OpcUaReceiveByte1Bit7 (272), Open (273), OpTestOrResetButton (32), PwmOutput (274), SignalConditioning1Output (275), SignalConditioning2Output (276), SignalConditioning3Output (277), SignalConditioning4Output (278), SignalConditioning5Output (214), SignalConditioning6Output (215), StatusBusOK (99), StatusChangeOverPauseActive (111), StatusCoolingDownPeriodActive (122), StatusCurrentFlowing (101), StatusDeviceOK (98), StatusDeviceTestActive (124), StatusEmergencyStartExecuted (121), StatusEnablingCircuitClosed (127), StatusFeedbackClosedFc (114), StatusFeedbackOpenFo (115), StatusGroupFault (96), StatusGroupWarning (97), StatusInterlockingTimeActive (110), StatusOff (106), StatusOnForward (107), StatusOnForwardFast (108), StatusOnReverse (105), StatusOnReverseFast (104), StatusOperationalProtectionOff (119), StatusPauseTimeActive (123), StatusPhaseSequence123 (125), StatusPhaseSequence321 (126), StatusPlcDcsInRun (100), StatusPositionerRunsInClosedDirection (113), StatusPositionerRunsInOpenDirection (112), StatusProfienergyCommandStartPausePending (102), StatusRemoteMode (120), StatusStartActive (109), StatusTestPositionFeedback (118), StatusTorqueClosedTc (116), StatusTorqueOpenTo (117), Stop (279), Timer1Output (232), Timer2Output (233), Timer3Output (234), Timer4Output (235), Timer5Output (230), Timer6Output (231), TruthTable10Output (226), TruthTable11Output (227), TruthTable1Output (216), TruthTable2Output (217), TruthTable3Output (218), TruthTable4Output (219), TruthTable5Output (220), TruthTable6Output (221), TruthTable7Output (222), TruthTable8Output (223), TruthTable9Output1 (224), TruthTable9Output2 (225), WarningFeedbackCircuit (190), WarningSimultaneity (191)
     """
     AcyclicReceiveByte0Bit0: SimocodeDigitalConnections = ...
     AcyclicReceiveByte0Bit1: SimocodeDigitalConnections = ...
@@ -12058,7 +10911,6 @@ class SimocodeDigitalConnections(Enum): # skipped bases: <type 'IComparable'>, <
     Dm2Input2: SimocodeDigitalConnections = ...
     Dm2Input3: SimocodeDigitalConnections = ...
     Dm2Input4: SimocodeDigitalConnections = ...
-    DryRunningProtectionTripLevel: SimocodeDigitalConnections = ...
     EventAm1OpenCircuit: SimocodeDigitalConnections = ...
     EventAm1TripLevelLowerLimit: SimocodeDigitalConnections = ...
     EventAm1TripLevelUpperLimit: SimocodeDigitalConnections = ...
@@ -12247,7 +11099,7 @@ class SimocodeDigitalConnections(Enum): # skipped bases: <type 'IComparable'>, <
     WarningSimultaneity: SimocodeDigitalConnections = ...
 
 
-class SizeLengthField(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class SizeLengthField(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property SizeLengthField
 
@@ -12259,14 +11111,12 @@ class SizeLengthField(Enum): # skipped bases: <type 'IComparable'>, <type 'IForm
     value__ = ...
 
 
-class Smoothing(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class Smoothing(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property Smoothing
 
-    enum Smoothing, values: Activated50Hertz (11), Activated60Hertz (12), Medium (2), None (0), Strong (3), Value16x (8), Value2x (5), Value32x (9), Value4x (6), Value64x (10), Value8x (7), Weak (1)
+    enum Smoothing, values: Medium (2), None (0), Strong (3), Value16x (8), Value2x (5), Value32x (9), Value4x (6), Value64x (10), Value8x (7), Weak (1)
     """
-    Activated50Hertz: Smoothing = ...
-    Activated60Hertz: Smoothing = ...
     Medium: Smoothing = ...
     Strong: Smoothing = ...
     Value16x: Smoothing = ...
@@ -12279,7 +11129,7 @@ class Smoothing(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattabl
     Weak: Smoothing = ...
 
 
-class Snmpv1Orv2cReadOnly(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class Snmpv1Orv2cReadOnly(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property Snmpv1Orv2cReadOnly
 
@@ -12290,7 +11140,7 @@ class Snmpv1Orv2cReadOnly(Enum): # skipped bases: <type 'IComparable'>, <type 'I
     value__ = ...
 
 
-class Snmpv1TrapsActive(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class Snmpv1TrapsActive(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property Snmpv1TrapsActive
 
@@ -12301,7 +11151,7 @@ class Snmpv1TrapsActive(Enum): # skipped bases: <type 'IComparable'>, <type 'IFo
     value__ = ...
 
 
-class Software(IEquatable, IEngineeringObject, IInternalObjectAccess): # skipped bases: <type 'IEngineeringCompositionOrObject'>, <type 'IInternalBaseAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringInstance'>, <type 'object'>
+class Software(IEquatable, IEngineeringObject, IInternalObjectAccess): # skipped bases: <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'IEngineeringInstance'>, <type 'IInternalBaseAccess'>, <type 'object'>
     """ Represents a base class of an object containing software components """
     @property
     def Name(self) -> str:
@@ -12346,7 +11196,7 @@ class Software(IEquatable, IEngineeringObject, IInternalObjectAccess): # skipped
         ...
 
 
-class SourceCycleTime(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class SourceCycleTime(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Network type
 
@@ -12359,50 +11209,7 @@ class SourceCycleTime(Enum): # skipped bases: <type 'IComparable'>, <type 'IForm
     value__ = ...
 
 
-class StandardVolumeFlow(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
-    """
-    Possible values for property StandardVolumeFlow
-
-    enum StandardVolumeFlow, values: NormCubicMeterPerDay (4), NormCubicMeterPerHour (5), NormCubicMeterPerMinute (6), NormCubicMeterPerSecond (7), NormLiterPerDay (0), NormLiterPerHour (1), NormLiterPerMinute (2), NormLiterPerSecond (3), ScfPerDay (8), ScfPerHour (9), ScfPerMinute (10), ScfPerSecond (11), StandardCubicMeterPerDay (16), StandardCubicMeterPerHour (17), StandardCubicMeterPerMinute (18), StandardCubicMeterPerSecond (19), StandardLiterPerDay (12), StandardLiterPerHour (13), StandardLiterPerMinute (14), StandardLiterPerSecond (15)
-    """
-    NormCubicMeterPerDay: StandardVolumeFlow = ...
-    NormCubicMeterPerHour: StandardVolumeFlow = ...
-    NormCubicMeterPerMinute: StandardVolumeFlow = ...
-    NormCubicMeterPerSecond: StandardVolumeFlow = ...
-    NormLiterPerDay: StandardVolumeFlow = ...
-    NormLiterPerHour: StandardVolumeFlow = ...
-    NormLiterPerMinute: StandardVolumeFlow = ...
-    NormLiterPerSecond: StandardVolumeFlow = ...
-    ScfPerDay: StandardVolumeFlow = ...
-    ScfPerHour: StandardVolumeFlow = ...
-    ScfPerMinute: StandardVolumeFlow = ...
-    ScfPerSecond: StandardVolumeFlow = ...
-    StandardCubicMeterPerDay: StandardVolumeFlow = ...
-    StandardCubicMeterPerHour: StandardVolumeFlow = ...
-    StandardCubicMeterPerMinute: StandardVolumeFlow = ...
-    StandardCubicMeterPerSecond: StandardVolumeFlow = ...
-    StandardLiterPerDay: StandardVolumeFlow = ...
-    StandardLiterPerHour: StandardVolumeFlow = ...
-    StandardLiterPerMinute: StandardVolumeFlow = ...
-    StandardLiterPerSecond: StandardVolumeFlow = ...
-    value__ = ...
-
-
-class StandardVolumeUnit(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
-    """
-    Possible values for property StandardVolumeUnit
-
-    enum StandardVolumeUnit, values: CubicNm (1), CubicSm (4), Nl (0), Scf (2), Sl (3)
-    """
-    CubicNm: StandardVolumeUnit = ...
-    CubicSm: StandardVolumeUnit = ...
-    Nl: StandardVolumeUnit = ...
-    Scf: StandardVolumeUnit = ...
-    Sl: StandardVolumeUnit = ...
-    value__ = ...
-
-
-class StartDetectionOfAReceivedFrame(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class StartDetectionOfAReceivedFrame(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property StartDetectionOfAReceivedFrame
 
@@ -12413,7 +11220,7 @@ class StartDetectionOfAReceivedFrame(Enum): # skipped bases: <type 'IComparable'
     value__ = ...
 
 
-class StartupActionAfterPowerOn(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class StartupActionAfterPowerOn(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property StartupActionAfterPowerOn
 
@@ -12428,7 +11235,7 @@ class StartupActionAfterPowerOn(Enum): # skipped bases: <type 'IComparable'>, <t
     WarmRestartRun: StartupActionAfterPowerOn = ...
 
 
-class StartupComparisonPresetToActualModule(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class StartupComparisonPresetToActualModule(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property StartupComparisonPresetToActualModule
 
@@ -12440,74 +11247,7 @@ class StartupComparisonPresetToActualModule(Enum): # skipped bases: <type 'IComp
     value__ = ...
 
 
-class StateSignalFailureActive(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
-    """
-    Possible values for property StateSignalFailureActive
-
-    enum StateSignalFailureActive, values: SignalFailureOff (0), SignalFailureOn (1)
-    """
-    SignalFailureOff: StateSignalFailureActive = ...
-    SignalFailureOn: StateSignalFailureActive = ...
-    value__ = ...
-
-
-class StateSignalFunctionControlActive(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
-    """
-    Possible values for property StateSignalFunctionControlActive
-
-    enum StateSignalFunctionControlActive, values: SignalFunctionControlOff (0), SignalFunctionControlOn (1)
-    """
-    SignalFunctionControlOff: StateSignalFunctionControlActive = ...
-    SignalFunctionControlOn: StateSignalFunctionControlActive = ...
-    value__ = ...
-
-
-class StateSignalMaintenanceActive(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
-    """
-    Possible values for property StateSignalMaintenanceActive
-
-    enum StateSignalMaintenanceActive, values: SignalMaintainceOff (0), SignalMaintainceOn (1)
-    """
-    SignalMaintainceOff: StateSignalMaintenanceActive = ...
-    SignalMaintainceOn: StateSignalMaintenanceActive = ...
-    value__ = ...
-
-
-class StateSignalOutOfSpecificationActive(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
-    """
-    Possible values for property StateSignalOutOfSpecificationActive
-
-    enum StateSignalOutOfSpecificationActive, values: OutOfSpecificationOff (0), OutOfSpecificationOn (1)
-    """
-    OutOfSpecificationOff: StateSignalOutOfSpecificationActive = ...
-    OutOfSpecificationOn: StateSignalOutOfSpecificationActive = ...
-    value__ = ...
-
-
-class StepResolution(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
-    """
-    Possible values for property StepResolution
-
-    enum StepResolution, values: Value1Or1 (0), Value1Or10 (9), Value1Or128 (7), Value1Or16 (4), Value1Or2 (1), Value1Or20 (11), Value1Or25 (10), Value1Or256 (8), Value1Or32 (5), Value1Or4 (2), Value1Or5 (12), Value1Or512 (13), Value1Or64 (6), Value1Or8 (3)
-    """
-    Value1Or1: StepResolution = ...
-    Value1Or10: StepResolution = ...
-    Value1Or128: StepResolution = ...
-    Value1Or16: StepResolution = ...
-    Value1Or2: StepResolution = ...
-    Value1Or20: StepResolution = ...
-    Value1Or25: StepResolution = ...
-    Value1Or256: StepResolution = ...
-    Value1Or32: StepResolution = ...
-    Value1Or4: StepResolution = ...
-    Value1Or5: StepResolution = ...
-    Value1Or512: StepResolution = ...
-    Value1Or64: StepResolution = ...
-    Value1Or8: StepResolution = ...
-    value__ = ...
-
-
-class StopBits(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class StopBits(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property StopBits
 
@@ -12518,52 +11258,7 @@ class StopBits(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable
     value__ = ...
 
 
-class StopCurrent(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
-    """
-    Possible values for property StopCurrent
-
-    enum StopCurrent, values: CouldNotCalculateTheDynamicDisplayName (1), CouldNotCalculateTheDynamicDisplayName10 (10), CouldNotCalculateTheDynamicDisplayName11 (11), CouldNotCalculateTheDynamicDisplayName12 (12), CouldNotCalculateTheDynamicDisplayName13 (13), CouldNotCalculateTheDynamicDisplayName14 (14), CouldNotCalculateTheDynamicDisplayName15 (15), CouldNotCalculateTheDynamicDisplayName16 (16), CouldNotCalculateTheDynamicDisplayName17 (17), CouldNotCalculateTheDynamicDisplayName18 (18), CouldNotCalculateTheDynamicDisplayName19 (19), CouldNotCalculateTheDynamicDisplayName2 (2), CouldNotCalculateTheDynamicDisplayName20 (20), CouldNotCalculateTheDynamicDisplayName21 (21), CouldNotCalculateTheDynamicDisplayName22 (22), CouldNotCalculateTheDynamicDisplayName23 (23), CouldNotCalculateTheDynamicDisplayName24 (24), CouldNotCalculateTheDynamicDisplayName25 (25), CouldNotCalculateTheDynamicDisplayName26 (26), CouldNotCalculateTheDynamicDisplayName27 (27), CouldNotCalculateTheDynamicDisplayName28 (28), CouldNotCalculateTheDynamicDisplayName29 (29), CouldNotCalculateTheDynamicDisplayName3 (3), CouldNotCalculateTheDynamicDisplayName30 (30), CouldNotCalculateTheDynamicDisplayName31 (31), CouldNotCalculateTheDynamicDisplayName32 (32), CouldNotCalculateTheDynamicDisplayName33 (33), CouldNotCalculateTheDynamicDisplayName34 (34), CouldNotCalculateTheDynamicDisplayName35 (35), CouldNotCalculateTheDynamicDisplayName4 (4), CouldNotCalculateTheDynamicDisplayName5 (5), CouldNotCalculateTheDynamicDisplayName6 (6), CouldNotCalculateTheDynamicDisplayName7 (7), CouldNotCalculateTheDynamicDisplayName8 (8), CouldNotCalculateTheDynamicDisplayName9 (9), Value0 (0)
-    """
-    CouldNotCalculateTheDynamicDisplayName: StopCurrent = ...
-    CouldNotCalculateTheDynamicDisplayName10: StopCurrent = ...
-    CouldNotCalculateTheDynamicDisplayName11: StopCurrent = ...
-    CouldNotCalculateTheDynamicDisplayName12: StopCurrent = ...
-    CouldNotCalculateTheDynamicDisplayName13: StopCurrent = ...
-    CouldNotCalculateTheDynamicDisplayName14: StopCurrent = ...
-    CouldNotCalculateTheDynamicDisplayName15: StopCurrent = ...
-    CouldNotCalculateTheDynamicDisplayName16: StopCurrent = ...
-    CouldNotCalculateTheDynamicDisplayName17: StopCurrent = ...
-    CouldNotCalculateTheDynamicDisplayName18: StopCurrent = ...
-    CouldNotCalculateTheDynamicDisplayName19: StopCurrent = ...
-    CouldNotCalculateTheDynamicDisplayName2: StopCurrent = ...
-    CouldNotCalculateTheDynamicDisplayName20: StopCurrent = ...
-    CouldNotCalculateTheDynamicDisplayName21: StopCurrent = ...
-    CouldNotCalculateTheDynamicDisplayName22: StopCurrent = ...
-    CouldNotCalculateTheDynamicDisplayName23: StopCurrent = ...
-    CouldNotCalculateTheDynamicDisplayName24: StopCurrent = ...
-    CouldNotCalculateTheDynamicDisplayName25: StopCurrent = ...
-    CouldNotCalculateTheDynamicDisplayName26: StopCurrent = ...
-    CouldNotCalculateTheDynamicDisplayName27: StopCurrent = ...
-    CouldNotCalculateTheDynamicDisplayName28: StopCurrent = ...
-    CouldNotCalculateTheDynamicDisplayName29: StopCurrent = ...
-    CouldNotCalculateTheDynamicDisplayName3: StopCurrent = ...
-    CouldNotCalculateTheDynamicDisplayName30: StopCurrent = ...
-    CouldNotCalculateTheDynamicDisplayName31: StopCurrent = ...
-    CouldNotCalculateTheDynamicDisplayName32: StopCurrent = ...
-    CouldNotCalculateTheDynamicDisplayName33: StopCurrent = ...
-    CouldNotCalculateTheDynamicDisplayName34: StopCurrent = ...
-    CouldNotCalculateTheDynamicDisplayName35: StopCurrent = ...
-    CouldNotCalculateTheDynamicDisplayName4: StopCurrent = ...
-    CouldNotCalculateTheDynamicDisplayName5: StopCurrent = ...
-    CouldNotCalculateTheDynamicDisplayName6: StopCurrent = ...
-    CouldNotCalculateTheDynamicDisplayName7: StopCurrent = ...
-    CouldNotCalculateTheDynamicDisplayName8: StopCurrent = ...
-    CouldNotCalculateTheDynamicDisplayName9: StopCurrent = ...
-    Value0: StopCurrent = ...
-    value__ = ...
-
-
-class StopTimeOperatingHoursMonitoringResponse(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class StopTimeOperatingHoursMonitoringResponse(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property StopTimeOperatingHoursMonitoringResponse
 
@@ -12575,38 +11270,7 @@ class StopTimeOperatingHoursMonitoringResponse(Enum): # skipped bases: <type 'IC
     Warn: StopTimeOperatingHoursMonitoringResponse = ...
 
 
-class SubCategory(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
-    """
-    Possible values for property SubCategory
-
-    enum SubCategory, values: ActiveEnergies (10), ActiveFactorsCosPhi (21), ActivePowers (6), ApparentEnergies (9), ApparentPowers (5), Asymmetries (22), General (13), HarmonicOfTheLineConductorCurrent (28), HarmonicOfTheLineToNeutralVoltageLN (26), LineConductorCurrent (1), LineToLineVoltageLL (4), LineToNeutralVoltageLN (3), MeasuredVariableRelatedQualityData (12), NeutralConductorCurrent (2), None (0), PhaseAngles (20), PowerFactors (19), PowerFactorsOrPhaseAngle (8), Qualifier (25), ReactiveEnergies (11), ReactivePowers (7), Times (17), TotalHarmonicDistortions (23)
-    """
-    ActiveEnergies: SubCategory = ...
-    ActiveFactorsCosPhi: SubCategory = ...
-    ActivePowers: SubCategory = ...
-    ApparentEnergies: SubCategory = ...
-    ApparentPowers: SubCategory = ...
-    Asymmetries: SubCategory = ...
-    General: SubCategory = ...
-    HarmonicOfTheLineConductorCurrent: SubCategory = ...
-    HarmonicOfTheLineToNeutralVoltageLN: SubCategory = ...
-    LineConductorCurrent: SubCategory = ...
-    LineToLineVoltageLL: SubCategory = ...
-    LineToNeutralVoltageLN: SubCategory = ...
-    MeasuredVariableRelatedQualityData: SubCategory = ...
-    NeutralConductorCurrent: SubCategory = ...
-    PhaseAngles: SubCategory = ...
-    PowerFactors: SubCategory = ...
-    PowerFactorsOrPhaseAngle: SubCategory = ...
-    Qualifier: SubCategory = ...
-    ReactiveEnergies: SubCategory = ...
-    ReactivePowers: SubCategory = ...
-    Times: SubCategory = ...
-    TotalHarmonicDistortions: SubCategory = ...
-    value__ = ...
-
-
-class SubmoduleSlotNumber(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class SubmoduleSlotNumber(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property SubmoduleSlotNumber
 
@@ -12619,7 +11283,7 @@ class SubmoduleSlotNumber(Enum): # skipped bases: <type 'IComparable'>, <type 'I
     value__ = ...
 
 
-class Subnet(IEquatable, IEngineeringObject, IEngineeringServiceProvider, IMasterCopySource, IInternalObjectAccess): # skipped bases: <type 'IEngineeringCompositionOrObject'>, <type 'IInternalBaseAccess'>, <type 'IServiceProvider'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringInstance'>, <type 'object'>
+class Subnet(IEquatable, IEngineeringObject, IEngineeringServiceProvider, IMasterCopySource, IInternalObjectAccess): # skipped bases: <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'IServiceProvider'>, <type 'IEngineeringInstance'>, <type 'IInternalBaseAccess'>, <type 'object'>
     """ Represents a Subnet, one of the following (SubnetMpi or SubnetIE) represents the net object """
     @property
     def IoSystems(self) -> IoSystemAssociation:
@@ -12710,7 +11374,7 @@ class Subnet(IEquatable, IEngineeringObject, IEngineeringServiceProvider, IMaste
         ...
 
 
-class SubnetComposition(IInternalCompositionAccess, IEngineeringComposition, IEquatable): # skipped bases: <type 'IEngineeringInstance'>, <type 'IEnumerable'>, <type 'IInternalBaseAccess'>, <type 'IInternalCollectionAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'object'>
+class SubnetComposition(IInternalCompositionAccess, IEngineeringComposition, IEquatable): # skipped bases: <type 'IEnumerable'>, <type 'IEngineeringInstance'>, <type 'IInternalBaseAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'IInternalCollectionAccess'>, <type 'object'>
     """ Composition of Subnets """
     @property
     def Parent(self) -> IEngineeringObject:
@@ -12774,7 +11438,7 @@ class SubnetComposition(IInternalCompositionAccess, IEngineeringComposition, IEq
         ...
 
 
-class SubstituteValue(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class SubstituteValue(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property SubstituteValue
 
@@ -12785,7 +11449,7 @@ class SubstituteValue(Enum): # skipped bases: <type 'IComparable'>, <type 'IForm
     value__ = ...
 
 
-class SubstituteValueDQ0(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class SubstituteValueDQ0(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property SubstituteValueDQ0
 
@@ -12796,7 +11460,7 @@ class SubstituteValueDQ0(Enum): # skipped bases: <type 'IComparable'>, <type 'IF
     value__ = ...
 
 
-class SubstituteValueDQ1(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class SubstituteValueDQ1(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property SubstituteValueDQ1
 
@@ -12807,7 +11471,7 @@ class SubstituteValueDQ1(Enum): # skipped bases: <type 'IComparable'>, <type 'IF
     value__ = ...
 
 
-class SubstituteValueDQA(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class SubstituteValueDQA(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property SubstituteValueDQA
 
@@ -12818,7 +11482,7 @@ class SubstituteValueDQA(Enum): # skipped bases: <type 'IComparable'>, <type 'IF
     value__ = ...
 
 
-class SubstituteValueDQB(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class SubstituteValueDQB(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property SubstituteValueDQB
 
@@ -12829,46 +11493,7 @@ class SubstituteValueDQB(Enum): # skipped bases: <type 'IComparable'>, <type 'IF
     value__ = ...
 
 
-class SwitchingCycleCounterActuatorInclDiagnostics(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
-    """
-    Possible values for property SwitchingCycleCounterActuatorInclDiagnostics
-
-    enum SwitchingCycleCounterActuatorInclDiagnostics, values: Activated (1), Deactivated (0)
-    """
-    Activated: SwitchingCycleCounterActuatorInclDiagnostics = ...
-    Deactivated: SwitchingCycleCounterActuatorInclDiagnostics = ...
-    value__ = ...
-
-
-class SwitchingCycleCounterPilotValveInclDiagnostics(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
-    """
-    Possible values for property SwitchingCycleCounterPilotValveInclDiagnostics
-
-    enum SwitchingCycleCounterPilotValveInclDiagnostics, values: Activated (1), Deactivated (0)
-    """
-    Activated: SwitchingCycleCounterPilotValveInclDiagnostics = ...
-    Deactivated: SwitchingCycleCounterPilotValveInclDiagnostics = ...
-    value__ = ...
-
-
-class SwitchingFrequencyOverdrive(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
-    """
-    Possible values for property SwitchingFrequencyOverdrive
-
-    enum SwitchingFrequencyOverdrive, values: OverdriveOff (8), Value1 (0), Value10 (4), Value15 (5), Value2 (1), Value20 (6), Value4 (2), Value8 (3)
-    """
-    OverdriveOff: SwitchingFrequencyOverdrive = ...
-    Value1: SwitchingFrequencyOverdrive = ...
-    Value10: SwitchingFrequencyOverdrive = ...
-    Value15: SwitchingFrequencyOverdrive = ...
-    Value2: SwitchingFrequencyOverdrive = ...
-    Value20: SwitchingFrequencyOverdrive = ...
-    Value4: SwitchingFrequencyOverdrive = ...
-    Value8: SwitchingFrequencyOverdrive = ...
-    value__ = ...
-
-
-class SyncDomain(IEquatable, IEngineeringObject, IInternalObjectAccess): # skipped bases: <type 'IEngineeringCompositionOrObject'>, <type 'IInternalBaseAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringInstance'>, <type 'object'>
+class SyncDomain(IEquatable, IEngineeringObject, IInternalObjectAccess): # skipped bases: <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'IEngineeringInstance'>, <type 'IInternalBaseAccess'>, <type 'object'>
     """ Sync Domain """
     @property
     def ConvertedName(self) -> str:
@@ -12952,7 +11577,7 @@ class SyncDomain(IEquatable, IEngineeringObject, IInternalObjectAccess): # skipp
         ...
 
 
-class SyncDomainComposition(IInternalCompositionAccess, IEngineeringComposition, IEquatable): # skipped bases: <type 'IEngineeringInstance'>, <type 'IEnumerable'>, <type 'IInternalBaseAccess'>, <type 'IInternalCollectionAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'object'>
+class SyncDomainComposition(IInternalCompositionAccess, IEngineeringComposition, IEquatable): # skipped bases: <type 'IEnumerable'>, <type 'IEngineeringInstance'>, <type 'IInternalBaseAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'IInternalCollectionAccess'>, <type 'object'>
     """ Composition of Sync Domains """
     @property
     def Parent(self) -> IEngineeringObject:
@@ -13004,7 +11629,7 @@ class SyncDomainComposition(IInternalCompositionAccess, IEngineeringComposition,
         ...
 
 
-class SynchronizationFrequency(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class SynchronizationFrequency(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property SynchronizationFrequency
 
@@ -13015,7 +11640,7 @@ class SynchronizationFrequency(Enum): # skipped bases: <type 'IComparable'>, <ty
     value__ = ...
 
 
-class SyncRole(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class SyncRole(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property SyncRole
 
@@ -13028,7 +11653,7 @@ class SyncRole(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable
     value__ = ...
 
 
-class SyslogClientActive(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class SyslogClientActive(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property SyslogClientActive
 
@@ -13039,7 +11664,7 @@ class SyslogClientActive(Enum): # skipped bases: <type 'IComparable'>, <type 'IF
     value__ = ...
 
 
-class SystemPowerSupplyExternal(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class SystemPowerSupplyExternal(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property SystemPowerSupplyExternal
 
@@ -13050,7 +11675,7 @@ class SystemPowerSupplyExternal(Enum): # skipped bases: <type 'IComparable'>, <t
     value__ = ...
 
 
-class TemperatureShutdown(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class TemperatureShutdown(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property TemperatureShutdown
 
@@ -13061,7 +11686,7 @@ class TemperatureShutdown(Enum): # skipped bases: <type 'IComparable'>, <type 'I
     value__ = ...
 
 
-class TemperatureUnit(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class TemperatureUnit(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property TemperatureUnit
 
@@ -13074,7 +11699,7 @@ class TemperatureUnit(Enum): # skipped bases: <type 'IComparable'>, <type 'IForm
     value__ = ...
 
 
-class Terminal0Function(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class Terminal0Function(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property Terminal0Function
 
@@ -13085,7 +11710,7 @@ class Terminal0Function(Enum): # skipped bases: <type 'IComparable'>, <type 'IFo
     value__ = ...
 
 
-class Terminal16Function(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class Terminal16Function(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property Terminal16Function
 
@@ -13096,7 +11721,7 @@ class Terminal16Function(Enum): # skipped bases: <type 'IComparable'>, <type 'IF
     value__ = ...
 
 
-class Terminal17Function(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class Terminal17Function(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property Terminal17Function
 
@@ -13107,7 +11732,7 @@ class Terminal17Function(Enum): # skipped bases: <type 'IComparable'>, <type 'IF
     value__ = ...
 
 
-class Terminal18Function(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class Terminal18Function(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property Terminal18Function
 
@@ -13118,7 +11743,7 @@ class Terminal18Function(Enum): # skipped bases: <type 'IComparable'>, <type 'IF
     value__ = ...
 
 
-class Terminal19Function(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class Terminal19Function(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property Terminal19Function
 
@@ -13129,7 +11754,7 @@ class Terminal19Function(Enum): # skipped bases: <type 'IComparable'>, <type 'IF
     value__ = ...
 
 
-class Terminal1Function(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class Terminal1Function(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property Terminal1Function
 
@@ -13140,7 +11765,7 @@ class Terminal1Function(Enum): # skipped bases: <type 'IComparable'>, <type 'IFo
     value__ = ...
 
 
-class Terminal20Function(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class Terminal20Function(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property Terminal20Function
 
@@ -13151,7 +11776,7 @@ class Terminal20Function(Enum): # skipped bases: <type 'IComparable'>, <type 'IF
     value__ = ...
 
 
-class Terminal21Function(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class Terminal21Function(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property Terminal21Function
 
@@ -13162,7 +11787,7 @@ class Terminal21Function(Enum): # skipped bases: <type 'IComparable'>, <type 'IF
     value__ = ...
 
 
-class Terminal22Function(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class Terminal22Function(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property Terminal22Function
 
@@ -13173,7 +11798,7 @@ class Terminal22Function(Enum): # skipped bases: <type 'IComparable'>, <type 'IF
     value__ = ...
 
 
-class Terminal23Function(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class Terminal23Function(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property Terminal23Function
 
@@ -13184,7 +11809,7 @@ class Terminal23Function(Enum): # skipped bases: <type 'IComparable'>, <type 'IF
     value__ = ...
 
 
-class Terminal24Function(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class Terminal24Function(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property Terminal24Function
 
@@ -13195,7 +11820,7 @@ class Terminal24Function(Enum): # skipped bases: <type 'IComparable'>, <type 'IF
     value__ = ...
 
 
-class Terminal25Function(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class Terminal25Function(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property Terminal25Function
 
@@ -13206,7 +11831,7 @@ class Terminal25Function(Enum): # skipped bases: <type 'IComparable'>, <type 'IF
     value__ = ...
 
 
-class Terminal26Function(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class Terminal26Function(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property Terminal26Function
 
@@ -13217,7 +11842,7 @@ class Terminal26Function(Enum): # skipped bases: <type 'IComparable'>, <type 'IF
     value__ = ...
 
 
-class Terminal27Function(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class Terminal27Function(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property Terminal27Function
 
@@ -13228,7 +11853,7 @@ class Terminal27Function(Enum): # skipped bases: <type 'IComparable'>, <type 'IF
     value__ = ...
 
 
-class Terminal28Function(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class Terminal28Function(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property Terminal28Function
 
@@ -13239,7 +11864,7 @@ class Terminal28Function(Enum): # skipped bases: <type 'IComparable'>, <type 'IF
     value__ = ...
 
 
-class Terminal29Function(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class Terminal29Function(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property Terminal29Function
 
@@ -13250,7 +11875,7 @@ class Terminal29Function(Enum): # skipped bases: <type 'IComparable'>, <type 'IF
     value__ = ...
 
 
-class Terminal2Function(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class Terminal2Function(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property Terminal2Function
 
@@ -13261,7 +11886,7 @@ class Terminal2Function(Enum): # skipped bases: <type 'IComparable'>, <type 'IFo
     value__ = ...
 
 
-class Terminal30Function(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class Terminal30Function(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property Terminal30Function
 
@@ -13272,7 +11897,7 @@ class Terminal30Function(Enum): # skipped bases: <type 'IComparable'>, <type 'IF
     value__ = ...
 
 
-class Terminal31Function(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class Terminal31Function(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property Terminal31Function
 
@@ -13283,7 +11908,7 @@ class Terminal31Function(Enum): # skipped bases: <type 'IComparable'>, <type 'IF
     value__ = ...
 
 
-class Terminal3Function(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class Terminal3Function(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property Terminal3Function
 
@@ -13294,7 +11919,7 @@ class Terminal3Function(Enum): # skipped bases: <type 'IComparable'>, <type 'IFo
     value__ = ...
 
 
-class Terminal4Function(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class Terminal4Function(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property Terminal4Function
 
@@ -13305,7 +11930,7 @@ class Terminal4Function(Enum): # skipped bases: <type 'IComparable'>, <type 'IFo
     value__ = ...
 
 
-class Terminal5Function(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class Terminal5Function(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property Terminal5Function
 
@@ -13316,7 +11941,7 @@ class Terminal5Function(Enum): # skipped bases: <type 'IComparable'>, <type 'IFo
     value__ = ...
 
 
-class Terminal6Function(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class Terminal6Function(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property Terminal6Function
 
@@ -13327,7 +11952,7 @@ class Terminal6Function(Enum): # skipped bases: <type 'IComparable'>, <type 'IFo
     value__ = ...
 
 
-class Terminal7Function(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class Terminal7Function(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property Terminal7Function
 
@@ -13338,7 +11963,7 @@ class Terminal7Function(Enum): # skipped bases: <type 'IComparable'>, <type 'IFo
     value__ = ...
 
 
-class TestPositionFeedbackTPFStandardFunctionsType(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class TestPositionFeedbackTPFStandardFunctionsType(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property TestPositionFeedbackTPFStandardFunctionsType
 
@@ -13349,7 +11974,7 @@ class TestPositionFeedbackTPFStandardFunctionsType(Enum): # skipped bases: <type
     value__ = ...
 
 
-class TestResponse(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class TestResponse(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property TestResponse
 
@@ -13361,7 +11986,7 @@ class TestResponse(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormatt
     Warn: TestResponse = ...
 
 
-class ThermistorResponseToSensorFault(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class ThermistorResponseToSensorFault(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property ThermistorResponseToSensorFault
 
@@ -13374,7 +11999,7 @@ class ThermistorResponseToSensorFault(Enum): # skipped bases: <type 'IComparable
     Warn: ThermistorResponseToSensorFault = ...
 
 
-class ThermistorResponseToTripLevel(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class ThermistorResponseToTripLevel(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property ThermistorResponseToTripLevel
 
@@ -13386,7 +12011,7 @@ class ThermistorResponseToTripLevel(Enum): # skipped bases: <type 'IComparable'>
     Warn: ThermistorResponseToTripLevel = ...
 
 
-class TimeBaseForVelocityMeasurement(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class TimeBaseForVelocityMeasurement(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property TimeBaseForVelocityMeasurement
 
@@ -13400,7 +12025,7 @@ class TimeBaseForVelocityMeasurement(Enum): # skipped bases: <type 'IComparable'
     value__ = ...
 
 
-class TimeOfDayDaylightSavingTimeStartHour(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class TimeOfDayDaylightSavingTimeStartHour(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property TimeOfDayDaylightSavingTimeStartHour
 
@@ -13433,7 +12058,7 @@ class TimeOfDayDaylightSavingTimeStartHour(Enum): # skipped bases: <type 'ICompa
     value__ = ...
 
 
-class TimeOfDayDaylightSavingTimeStartMonth(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class TimeOfDayDaylightSavingTimeStartMonth(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property TimeOfDayDaylightSavingTimeStartMonth
 
@@ -13454,7 +12079,7 @@ class TimeOfDayDaylightSavingTimeStartMonth(Enum): # skipped bases: <type 'IComp
     value__ = ...
 
 
-class TimeOfDayDaylightSavingTimeStartWeek(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class TimeOfDayDaylightSavingTimeStartWeek(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property TimeOfDayDaylightSavingTimeStartWeek
 
@@ -13468,7 +12093,7 @@ class TimeOfDayDaylightSavingTimeStartWeek(Enum): # skipped bases: <type 'ICompa
     value__ = ...
 
 
-class TimeOfDayDaylightSavingTimeStartWeekday(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class TimeOfDayDaylightSavingTimeStartWeekday(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property TimeOfDayDaylightSavingTimeStartWeekday
 
@@ -13484,7 +12109,7 @@ class TimeOfDayDaylightSavingTimeStartWeekday(Enum): # skipped bases: <type 'ICo
     Wednesday: TimeOfDayDaylightSavingTimeStartWeekday = ...
 
 
-class TimeOfDayLocalTimeZone(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class TimeOfDayLocalTimeZone(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property TimeOfDayLocalTimeZone
 
@@ -13595,7 +12220,7 @@ class TimeOfDayLocalTimeZone(Enum): # skipped bases: <type 'IComparable'>, <type
     value__ = ...
 
 
-class TimeOfDayStandardTimeStartHour(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class TimeOfDayStandardTimeStartHour(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property TimeOfDayStandardTimeStartHour
 
@@ -13628,7 +12253,7 @@ class TimeOfDayStandardTimeStartHour(Enum): # skipped bases: <type 'IComparable'
     value__ = ...
 
 
-class TimeOfDayStandardTimeStartMonth(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class TimeOfDayStandardTimeStartMonth(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property TimeOfDayStandardTimeStartMonth
 
@@ -13649,7 +12274,7 @@ class TimeOfDayStandardTimeStartMonth(Enum): # skipped bases: <type 'IComparable
     value__ = ...
 
 
-class TimeOfDayStandardTimeStartWeek(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class TimeOfDayStandardTimeStartWeek(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property TimeOfDayStandardTimeStartWeek
 
@@ -13663,7 +12288,7 @@ class TimeOfDayStandardTimeStartWeek(Enum): # skipped bases: <type 'IComparable'
     value__ = ...
 
 
-class TimeOfDayStandardTimeStartWeekday(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class TimeOfDayStandardTimeStartWeekday(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property TimeOfDayStandardTimeStartWeekday
 
@@ -13679,7 +12304,7 @@ class TimeOfDayStandardTimeStartWeekday(Enum): # skipped bases: <type 'IComparab
     Wednesday: TimeOfDayStandardTimeStartWeekday = ...
 
 
-class TimeOfDayTimeIntervalOnDp(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class TimeOfDayTimeIntervalOnDp(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property TimeOfDayTimeIntervalOnDp
 
@@ -13695,7 +12320,7 @@ class TimeOfDayTimeIntervalOnDp(Enum): # skipped bases: <type 'IComparable'>, <t
     value__ = ...
 
 
-class TimeOfDayTypeOfSynchronizationOnDp(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class TimeOfDayTypeOfSynchronizationOnDp(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property TimeOfDayTypeOfSynchronizationOnDp
 
@@ -13706,7 +12331,7 @@ class TimeOfDayTypeOfSynchronizationOnDp(Enum): # skipped bases: <type 'ICompara
     value__ = ...
 
 
-class Timer1Type(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class Timer1Type(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property Timer1Type
 
@@ -13719,7 +12344,7 @@ class Timer1Type(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattab
     WithOpeningDelay: Timer1Type = ...
 
 
-class Timer2Type(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class Timer2Type(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property Timer2Type
 
@@ -13732,7 +12357,7 @@ class Timer2Type(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattab
     WithOpeningDelay: Timer2Type = ...
 
 
-class Timer3Type(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class Timer3Type(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property Timer3Type
 
@@ -13745,7 +12370,7 @@ class Timer3Type(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattab
     WithOpeningDelay: Timer3Type = ...
 
 
-class Timer4Type(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class Timer4Type(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property Timer4Type
 
@@ -13758,7 +12383,7 @@ class Timer4Type(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattab
     WithOpeningDelay: Timer4Type = ...
 
 
-class Timer5Type(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class Timer5Type(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property Timer5Type
 
@@ -13771,7 +12396,7 @@ class Timer5Type(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattab
     WithOpeningDelay: Timer5Type = ...
 
 
-class Timer6Type(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class Timer6Type(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property Timer6Type
 
@@ -13784,7 +12409,7 @@ class Timer6Type(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattab
     WithOpeningDelay: Timer6Type = ...
 
 
-class TimeSynchronizationNtp(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class TimeSynchronizationNtp(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property TimeSynchronizationNtp
 
@@ -13795,7 +12420,7 @@ class TimeSynchronizationNtp(Enum): # skipped bases: <type 'IComparable'>, <type
     value__ = ...
 
 
-class TM1InputsActiveSensors(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class TM1InputsActiveSensors(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property TM1InputsActiveSensors
 
@@ -13807,7 +12432,7 @@ class TM1InputsActiveSensors(Enum): # skipped bases: <type 'IComparable'>, <type
     value__ = ...
 
 
-class TM1InputsResponseToSensorFaultOutOfRange(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class TM1InputsResponseToSensorFaultOutOfRange(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property TM1InputsResponseToSensorFaultOutOfRange
 
@@ -13820,7 +12445,7 @@ class TM1InputsResponseToSensorFaultOutOfRange(Enum): # skipped bases: <type 'IC
     Warn: TM1InputsResponseToSensorFaultOutOfRange = ...
 
 
-class TM1InputsSensorType(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class TM1InputsSensorType(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property TM1InputsSensorType
 
@@ -13834,7 +12459,7 @@ class TM1InputsSensorType(Enum): # skipped bases: <type 'IComparable'>, <type 'I
     value__ = ...
 
 
-class TM1TripLevelResponse(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class TM1TripLevelResponse(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property TM1TripLevelResponse
 
@@ -13845,7 +12470,7 @@ class TM1TripLevelResponse(Enum): # skipped bases: <type 'IComparable'>, <type '
     value__ = ...
 
 
-class TM1WarningLevelResponse(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class TM1WarningLevelResponse(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property TM1WarningLevelResponse
 
@@ -13857,7 +12482,7 @@ class TM1WarningLevelResponse(Enum): # skipped bases: <type 'IComparable'>, <typ
     Warn: TM1WarningLevelResponse = ...
 
 
-class TM2InputsActiveSensors(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class TM2InputsActiveSensors(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property TM2InputsActiveSensors
 
@@ -13869,7 +12494,7 @@ class TM2InputsActiveSensors(Enum): # skipped bases: <type 'IComparable'>, <type
     value__ = ...
 
 
-class TM2InputsResponseToSensorFaultOutOfRange(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class TM2InputsResponseToSensorFaultOutOfRange(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property TM2InputsResponseToSensorFaultOutOfRange
 
@@ -13882,7 +12507,7 @@ class TM2InputsResponseToSensorFaultOutOfRange(Enum): # skipped bases: <type 'IC
     Warn: TM2InputsResponseToSensorFaultOutOfRange = ...
 
 
-class TM2InputsSensorType(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class TM2InputsSensorType(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property TM2InputsSensorType
 
@@ -13896,7 +12521,7 @@ class TM2InputsSensorType(Enum): # skipped bases: <type 'IComparable'>, <type 'I
     value__ = ...
 
 
-class TM2TripLevelResponse(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class TM2TripLevelResponse(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property TM2TripLevelResponse
 
@@ -13907,7 +12532,7 @@ class TM2TripLevelResponse(Enum): # skipped bases: <type 'IComparable'>, <type '
     value__ = ...
 
 
-class TM2WarningLevelResponse(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class TM2WarningLevelResponse(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property TM2WarningLevelResponse
 
@@ -13919,7 +12544,7 @@ class TM2WarningLevelResponse(Enum): # skipped bases: <type 'IComparable'>, <typ
     Warn: TM2WarningLevelResponse = ...
 
 
-class TraceTriggerEdge(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class TraceTriggerEdge(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property TraceTriggerEdge
 
@@ -13930,7 +12555,7 @@ class TraceTriggerEdge(Enum): # skipped bases: <type 'IComparable'>, <type 'IFor
     value__ = ...
 
 
-class TransferArea(IEquatable, IEngineeringObject, IInternalObjectAccess): # skipped bases: <type 'IEngineeringCompositionOrObject'>, <type 'IInternalBaseAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringInstance'>, <type 'object'>
+class TransferArea(IEquatable, IEngineeringObject, IInternalObjectAccess): # skipped bases: <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'IEngineeringInstance'>, <type 'IInternalBaseAccess'>, <type 'object'>
     """ Addressmapping between local I-Slave / I-device and remote partner """
     @property
     def Direction(self) -> TransferAreaDirection:
@@ -14074,7 +12699,7 @@ class TransferArea(IEquatable, IEngineeringObject, IInternalObjectAccess): # ski
         ...
 
 
-class TransferAreaComposition(IInternalCompositionAccess, IEngineeringComposition, IEquatable): # skipped bases: <type 'IEngineeringInstance'>, <type 'IEnumerable'>, <type 'IInternalBaseAccess'>, <type 'IInternalCollectionAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'object'>
+class TransferAreaComposition(IInternalCompositionAccess, IEngineeringComposition, IEquatable): # skipped bases: <type 'IEnumerable'>, <type 'IEngineeringInstance'>, <type 'IInternalBaseAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'IInternalCollectionAccess'>, <type 'object'>
     """ Composition of transfer areas """
     @property
     def Parent(self) -> IEngineeringObject:
@@ -14136,7 +12761,7 @@ class TransferAreaComposition(IInternalCompositionAccess, IEngineeringCompositio
         ...
 
 
-class TransferAreaDirection(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class TransferAreaDirection(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Direction of data communication between local and partner device
 
@@ -14148,7 +12773,7 @@ class TransferAreaDirection(Enum): # skipped bases: <type 'IComparable'>, <type 
     value__ = ...
 
 
-class TransferAreaMappingRule(IEquatable, IEngineeringObject, IInternalObjectAccess): # skipped bases: <type 'IEngineeringCompositionOrObject'>, <type 'IInternalBaseAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringInstance'>, <type 'object'>
+class TransferAreaMappingRule(IEquatable, IEngineeringObject, IInternalObjectAccess): # skipped bases: <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'IEngineeringInstance'>, <type 'IInternalBaseAccess'>, <type 'object'>
     """ Mapping rule for transfer area """
     @property
     def Begin(self) -> int:
@@ -14256,7 +12881,7 @@ class TransferAreaMappingRule(IEquatable, IEngineeringObject, IInternalObjectAcc
         ...
 
 
-class TransferAreaMappingRuleComposition(IInternalCompositionAccess, IEngineeringComposition, IEquatable): # skipped bases: <type 'IEngineeringInstance'>, <type 'IEnumerable'>, <type 'IInternalBaseAccess'>, <type 'IInternalCollectionAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'object'>
+class TransferAreaMappingRuleComposition(IInternalCompositionAccess, IEngineeringComposition, IEquatable): # skipped bases: <type 'IEnumerable'>, <type 'IEngineeringInstance'>, <type 'IInternalBaseAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'IInternalCollectionAccess'>, <type 'object'>
     """ Mapping rules for transfer areas """
     @property
     def Parent(self) -> IEngineeringObject:
@@ -14296,7 +12921,7 @@ class TransferAreaMappingRuleComposition(IInternalCompositionAccess, IEngineerin
         ...
 
 
-class TransferAreaType(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class TransferAreaType(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Type of transfer area
 
@@ -14329,7 +12954,7 @@ class TransferAreaType(Enum): # skipped bases: <type 'IComparable'>, <type 'IFor
     value__ = ...
 
 
-class TransmissionRate(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class TransmissionRate(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property TransmissionRate
 
@@ -14344,7 +12969,7 @@ class TransmissionRate(Enum): # skipped bases: <type 'IComparable'>, <type 'IFor
     value__ = ...
 
 
-class TransmissionRateAndDuplex(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class TransmissionRateAndDuplex(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property TransmissionRateAndDuplex
 
@@ -14369,7 +12994,7 @@ class TransmissionRateAndDuplex(Enum): # skipped bases: <type 'IComparable'>, <t
     X1000MbpsFullDuplex: TransmissionRateAndDuplex = ...
 
 
-class TrippingClass(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class TrippingClass(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property TrippingClass
 
@@ -14380,52 +13005,7 @@ class TrippingClass(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormat
     value__ = ...
 
 
-class TypeInputS1(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
-    """
-    Possible values for property TypeInputS1
-
-    enum TypeInputS1, values: Close (5), Nc (0), Ncc (1), No (2), Noc (3), Open (4)
-    """
-    Close: TypeInputS1 = ...
-    Nc: TypeInputS1 = ...
-    Ncc: TypeInputS1 = ...
-    No: TypeInputS1 = ...
-    Noc: TypeInputS1 = ...
-    Open: TypeInputS1 = ...
-    value__ = ...
-
-
-class TypeInputS2(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
-    """
-    Possible values for property TypeInputS2
-
-    enum TypeInputS2, values: Close (5), Nc (0), Ncc (1), No (2), Noc (3), Open (4)
-    """
-    Close: TypeInputS2 = ...
-    Nc: TypeInputS2 = ...
-    Ncc: TypeInputS2 = ...
-    No: TypeInputS2 = ...
-    Noc: TypeInputS2 = ...
-    Open: TypeInputS2 = ...
-    value__ = ...
-
-
-class TypeInputS3(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
-    """
-    Possible values for property TypeInputS3
-
-    enum TypeInputS3, values: Close (5), Nc (0), Ncc (1), No (2), Noc (3), Open (4)
-    """
-    Close: TypeInputS3 = ...
-    Nc: TypeInputS3 = ...
-    Ncc: TypeInputS3 = ...
-    No: TypeInputS3 = ...
-    Noc: TypeInputS3 = ...
-    Open: TypeInputS3 = ...
-    value__ = ...
-
-
-class TypeOfConsumerLoad(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class TypeOfConsumerLoad(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property TypeOfConsumerLoad
 
@@ -14436,7 +13016,7 @@ class TypeOfConsumerLoad(Enum): # skipped bases: <type 'IComparable'>, <type 'IF
     value__ = ...
 
 
-class UnitsOfMeasure(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class UnitsOfMeasure(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property UnitsOfMeasure
 
@@ -14452,7 +13032,7 @@ class UnitsOfMeasure(Enum): # skipped bases: <type 'IComparable'>, <type 'IForma
     value__ = ...
 
 
-class UpperCurrentWarningLimit(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class UpperCurrentWarningLimit(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property UpperCurrentWarningLimit
 
@@ -14574,7 +13154,7 @@ class UpperCurrentWarningLimit(Enum): # skipped bases: <type 'IComparable'>, <ty
     value__ = ...
 
 
-class View(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class View(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     The list of possible views in the HW editor
 
@@ -14586,7 +13166,7 @@ class View(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, 
     value__ = ...
 
 
-class VirtualSubType(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class VirtualSubType(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property VirtualSubType
 
@@ -14598,7 +13178,7 @@ class VirtualSubType(Enum): # skipped bases: <type 'IComparable'>, <type 'IForma
     value__ = ...
 
 
-class VirtualType(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class VirtualType(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property VirtualType
 
@@ -14609,7 +13189,7 @@ class VirtualType(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormatta
     value__ = ...
 
 
-class VoltageDisplay(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class VoltageDisplay(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property VoltageDisplay
 
@@ -14620,7 +13200,7 @@ class VoltageDisplay(Enum): # skipped bases: <type 'IComparable'>, <type 'IForma
     value__ = ...
 
 
-class VoltageLowerTripLevelResponse(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class VoltageLowerTripLevelResponse(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property VoltageLowerTripLevelResponse
 
@@ -14632,7 +13212,7 @@ class VoltageLowerTripLevelResponse(Enum): # skipped bases: <type 'IComparable'>
     value__ = ...
 
 
-class VoltageLowerWarningLevelActiveStatus(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class VoltageLowerWarningLevelActiveStatus(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property VoltageLowerWarningLevelActiveStatus
 
@@ -14644,7 +13224,7 @@ class VoltageLowerWarningLevelActiveStatus(Enum): # skipped bases: <type 'ICompa
     value__ = ...
 
 
-class VoltageLowerWarningLevelResponse(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class VoltageLowerWarningLevelResponse(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property VoltageLowerWarningLevelResponse
 
@@ -14656,7 +13236,7 @@ class VoltageLowerWarningLevelResponse(Enum): # skipped bases: <type 'IComparabl
     Warn: VoltageLowerWarningLevelResponse = ...
 
 
-class VoltageState(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class VoltageState(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property VoltageState
 
@@ -14668,7 +13248,7 @@ class VoltageState(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormatt
     value__ = ...
 
 
-class VoltageTypeOfLoadForVoltageCosPhiAndPower(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class VoltageTypeOfLoadForVoltageCosPhiAndPower(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property VoltageTypeOfLoadForVoltageCosPhiAndPower
 
@@ -14679,178 +13259,7 @@ class VoltageTypeOfLoadForVoltageCosPhiAndPower(Enum): # skipped bases: <type 'I
     value__ = ...
 
 
-class VolumeFlowUnit(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
-    """
-    Possible values for property VolumeFlowUnit
-
-    enum VolumeFlowUnit, values: AcreFeetPerDay (16), AcreFeetPerHour (17), AcreFeetPerMinute (18), AcreFeetPerSecond (19), BarrelBeerPerDay (28), BarrelBeerPerHour (29), BarrelBeerPerMinute (30), BarrelBeerPerSecond (31), BarrelPerDay (24), BarrelPerHour (25), BarrelPerMinute (26), BarrelPerSecond (27), BegafeetPerDay (101), BushelPerDay (32), BushelPerHour (33), BushelPerMinute (34), BushelPerSecond (35), CubiccmPerDay (36), CubiccmPerHour (37), CubiccmPerMinute (38), CubiccmPerSecond (39), CubicFeetPerDay (45), CubicFeetPerHour (46), CubicFeetPerMinute (47), CubicFeetPerSecond (48), CubicInchPerDay (61), CubicInchPerHour (62), CubicInchPerMin (63), CubicInchPerSecond (64), CubicKmPerDay (81), CubicKmPerHour (82), CubicKmPerMinute (83), CubicKmPerSecond (84), CubicmeterPerDay (89), CubicmeterPerHour (90), CubicmeterPerMinute (91), CubicmeterPerSecond (92), CubicmmPerDay (122), CubicmmPerHour (123), CubicmmPerMinute (124), CubicmmPerSecond (125), CubicyardPerDay (126), CubicyardPerHour (127), CubicyardPerMinute (128), CubicyardPerSecond (129), FluidOuncePerDay (40), FluidOuncePerHour (41), FluidOuncePerMinute (42), FluidOuncePerSecond (43), GalPerDay (53), GalPerHour (54), GalPerMinute (55), GalPerSecond (56), GalUKPerDay (49), GalUKPerHour (50), GalUKPerMinute (51), GalUKPerSecond (52), HektorliterPerDay (57), HektorliterPerHour (58), HektorliterPerMinute (59), HektorliterPerSecond (60), KilobarrelPerDay (65), KilobarrelPerHour (66), KilobarrelPerMinute (67), KilobarrelPerSecond (68), KiloGalPerDay (73), KiloGalPerHour (74), KiloGalPerMinute (75), KiloGalPerSecond (76), KiloGalUKPerDay (69), KiloGalUKPerHour (70), KiloGalUKPerMinute (71), KiloGalUKPerSecond (72), KlPerDay (77), KlPerHour (78), KlPerMinute (79), KlPerSecond (80), LitrePerDay (85), LitrePerHour (86), LitrePerMinute (87), LitrePerSecond (88), MegabarrelPerDay (94), MegabarrelPerHour (96), MegabarrelPerMinute (98), MegabarrelPerSecond (100), MegagalPerDay (111), MegagalPerHour (113), MegagalPerMinute (115), MegagalPerSecond (117), MegagalUKPerDay (103), MegagalUKPerHour (105), MegagalUKPerMinute (107), MegagalUKPerSecond (109), MegalitersPerDay (44), MicroBarrelPerDay (0), MicroBarrelPerHour (1), MicroBarrelPerMinute (2), MicroBarrelPerSecond (3), MicroCubicmeterPerDay (12), MicroCubicmeterPerHour (13), MicroCubicmeterPerMinute (14), MicroCubicmeterPerSecond (15), MicroGalPerDay (8), MicroGalPerHour (9), MicroGalPerMinute (10), MicroGalPerSecond (11), MicroGalUKPerDay (4), MicroGalUKPerHour (5), MicroGalUKPerMinute (6), MicroGalUKPerSecond (7), MilibarrelPerDay (93), MilibarrelPerHour (95), MilibarrelPerMinute (97), MilibarrelPerSecond (99), MiligalPerDay (110), MiligalPerHour (112), MiligalPerMinute (114), MiligalPerSecond (116), MiligalUKPerDay (102), MiligalUKPerHour (104), MiligalUKPerMinute (106), MiligalUKPerSecond (108), MililiterPerDay (118), MililiterPerHour (119), MililiterPerMinute (120), MililiterPerSecond (121), USBarrelPerDay (21), USBarrelPerHour (22), USBarrelPerMinute (23), USBarrelPerSecond (20)
-    """
-    AcreFeetPerDay: VolumeFlowUnit = ...
-    AcreFeetPerHour: VolumeFlowUnit = ...
-    AcreFeetPerMinute: VolumeFlowUnit = ...
-    AcreFeetPerSecond: VolumeFlowUnit = ...
-    BarrelBeerPerDay: VolumeFlowUnit = ...
-    BarrelBeerPerHour: VolumeFlowUnit = ...
-    BarrelBeerPerMinute: VolumeFlowUnit = ...
-    BarrelBeerPerSecond: VolumeFlowUnit = ...
-    BarrelPerDay: VolumeFlowUnit = ...
-    BarrelPerHour: VolumeFlowUnit = ...
-    BarrelPerMinute: VolumeFlowUnit = ...
-    BarrelPerSecond: VolumeFlowUnit = ...
-    BegafeetPerDay: VolumeFlowUnit = ...
-    BushelPerDay: VolumeFlowUnit = ...
-    BushelPerHour: VolumeFlowUnit = ...
-    BushelPerMinute: VolumeFlowUnit = ...
-    BushelPerSecond: VolumeFlowUnit = ...
-    CubiccmPerDay: VolumeFlowUnit = ...
-    CubiccmPerHour: VolumeFlowUnit = ...
-    CubiccmPerMinute: VolumeFlowUnit = ...
-    CubiccmPerSecond: VolumeFlowUnit = ...
-    CubicFeetPerDay: VolumeFlowUnit = ...
-    CubicFeetPerHour: VolumeFlowUnit = ...
-    CubicFeetPerMinute: VolumeFlowUnit = ...
-    CubicFeetPerSecond: VolumeFlowUnit = ...
-    CubicInchPerDay: VolumeFlowUnit = ...
-    CubicInchPerHour: VolumeFlowUnit = ...
-    CubicInchPerMin: VolumeFlowUnit = ...
-    CubicInchPerSecond: VolumeFlowUnit = ...
-    CubicKmPerDay: VolumeFlowUnit = ...
-    CubicKmPerHour: VolumeFlowUnit = ...
-    CubicKmPerMinute: VolumeFlowUnit = ...
-    CubicKmPerSecond: VolumeFlowUnit = ...
-    CubicmeterPerDay: VolumeFlowUnit = ...
-    CubicmeterPerHour: VolumeFlowUnit = ...
-    CubicmeterPerMinute: VolumeFlowUnit = ...
-    CubicmeterPerSecond: VolumeFlowUnit = ...
-    CubicmmPerDay: VolumeFlowUnit = ...
-    CubicmmPerHour: VolumeFlowUnit = ...
-    CubicmmPerMinute: VolumeFlowUnit = ...
-    CubicmmPerSecond: VolumeFlowUnit = ...
-    CubicyardPerDay: VolumeFlowUnit = ...
-    CubicyardPerHour: VolumeFlowUnit = ...
-    CubicyardPerMinute: VolumeFlowUnit = ...
-    CubicyardPerSecond: VolumeFlowUnit = ...
-    FluidOuncePerDay: VolumeFlowUnit = ...
-    FluidOuncePerHour: VolumeFlowUnit = ...
-    FluidOuncePerMinute: VolumeFlowUnit = ...
-    FluidOuncePerSecond: VolumeFlowUnit = ...
-    GalPerDay: VolumeFlowUnit = ...
-    GalPerHour: VolumeFlowUnit = ...
-    GalPerMinute: VolumeFlowUnit = ...
-    GalPerSecond: VolumeFlowUnit = ...
-    GalUKPerDay: VolumeFlowUnit = ...
-    GalUKPerHour: VolumeFlowUnit = ...
-    GalUKPerMinute: VolumeFlowUnit = ...
-    GalUKPerSecond: VolumeFlowUnit = ...
-    HektorliterPerDay: VolumeFlowUnit = ...
-    HektorliterPerHour: VolumeFlowUnit = ...
-    HektorliterPerMinute: VolumeFlowUnit = ...
-    HektorliterPerSecond: VolumeFlowUnit = ...
-    KilobarrelPerDay: VolumeFlowUnit = ...
-    KilobarrelPerHour: VolumeFlowUnit = ...
-    KilobarrelPerMinute: VolumeFlowUnit = ...
-    KilobarrelPerSecond: VolumeFlowUnit = ...
-    KiloGalPerDay: VolumeFlowUnit = ...
-    KiloGalPerHour: VolumeFlowUnit = ...
-    KiloGalPerMinute: VolumeFlowUnit = ...
-    KiloGalPerSecond: VolumeFlowUnit = ...
-    KiloGalUKPerDay: VolumeFlowUnit = ...
-    KiloGalUKPerHour: VolumeFlowUnit = ...
-    KiloGalUKPerMinute: VolumeFlowUnit = ...
-    KiloGalUKPerSecond: VolumeFlowUnit = ...
-    KlPerDay: VolumeFlowUnit = ...
-    KlPerHour: VolumeFlowUnit = ...
-    KlPerMinute: VolumeFlowUnit = ...
-    KlPerSecond: VolumeFlowUnit = ...
-    LitrePerDay: VolumeFlowUnit = ...
-    LitrePerHour: VolumeFlowUnit = ...
-    LitrePerMinute: VolumeFlowUnit = ...
-    LitrePerSecond: VolumeFlowUnit = ...
-    MegabarrelPerDay: VolumeFlowUnit = ...
-    MegabarrelPerHour: VolumeFlowUnit = ...
-    MegabarrelPerMinute: VolumeFlowUnit = ...
-    MegabarrelPerSecond: VolumeFlowUnit = ...
-    MegagalPerDay: VolumeFlowUnit = ...
-    MegagalPerHour: VolumeFlowUnit = ...
-    MegagalPerMinute: VolumeFlowUnit = ...
-    MegagalPerSecond: VolumeFlowUnit = ...
-    MegagalUKPerDay: VolumeFlowUnit = ...
-    MegagalUKPerHour: VolumeFlowUnit = ...
-    MegagalUKPerMinute: VolumeFlowUnit = ...
-    MegagalUKPerSecond: VolumeFlowUnit = ...
-    MegalitersPerDay: VolumeFlowUnit = ...
-    MicroBarrelPerDay: VolumeFlowUnit = ...
-    MicroBarrelPerHour: VolumeFlowUnit = ...
-    MicroBarrelPerMinute: VolumeFlowUnit = ...
-    MicroBarrelPerSecond: VolumeFlowUnit = ...
-    MicroCubicmeterPerDay: VolumeFlowUnit = ...
-    MicroCubicmeterPerHour: VolumeFlowUnit = ...
-    MicroCubicmeterPerMinute: VolumeFlowUnit = ...
-    MicroCubicmeterPerSecond: VolumeFlowUnit = ...
-    MicroGalPerDay: VolumeFlowUnit = ...
-    MicroGalPerHour: VolumeFlowUnit = ...
-    MicroGalPerMinute: VolumeFlowUnit = ...
-    MicroGalPerSecond: VolumeFlowUnit = ...
-    MicroGalUKPerDay: VolumeFlowUnit = ...
-    MicroGalUKPerHour: VolumeFlowUnit = ...
-    MicroGalUKPerMinute: VolumeFlowUnit = ...
-    MicroGalUKPerSecond: VolumeFlowUnit = ...
-    MilibarrelPerDay: VolumeFlowUnit = ...
-    MilibarrelPerHour: VolumeFlowUnit = ...
-    MilibarrelPerMinute: VolumeFlowUnit = ...
-    MilibarrelPerSecond: VolumeFlowUnit = ...
-    MiligalPerDay: VolumeFlowUnit = ...
-    MiligalPerHour: VolumeFlowUnit = ...
-    MiligalPerMinute: VolumeFlowUnit = ...
-    MiligalPerSecond: VolumeFlowUnit = ...
-    MiligalUKPerDay: VolumeFlowUnit = ...
-    MiligalUKPerHour: VolumeFlowUnit = ...
-    MiligalUKPerMinute: VolumeFlowUnit = ...
-    MiligalUKPerSecond: VolumeFlowUnit = ...
-    MililiterPerDay: VolumeFlowUnit = ...
-    MililiterPerHour: VolumeFlowUnit = ...
-    MililiterPerMinute: VolumeFlowUnit = ...
-    MililiterPerSecond: VolumeFlowUnit = ...
-    USBarrelPerDay: VolumeFlowUnit = ...
-    USBarrelPerHour: VolumeFlowUnit = ...
-    USBarrelPerMinute: VolumeFlowUnit = ...
-    USBarrelPerSecond: VolumeFlowUnit = ...
-    value__ = ...
-
-
-class VolumeUnit(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
-    """
-    Possible values for property VolumeUnit
-
-    enum VolumeUnit, values: AF (0), Bbl (1), BblBeer (3), BblUS (2), Bu (4), Cl (5), Cm (6), CubicIn (13), CubicM (16), CubicMiles (17), Cubicmm (19), CubicYd (22), Dm (7), FlOz (8), Ft (9), Gal (10), GalUk (11), Hl (12), Kl (14), L (15), Ml (18), Pints (20), Quart (21)
-    """
-    AF: VolumeUnit = ...
-    Bbl: VolumeUnit = ...
-    BblBeer: VolumeUnit = ...
-    BblUS: VolumeUnit = ...
-    Bu: VolumeUnit = ...
-    Cl: VolumeUnit = ...
-    Cm: VolumeUnit = ...
-    CubicIn: VolumeUnit = ...
-    CubicM: VolumeUnit = ...
-    CubicMiles: VolumeUnit = ...
-    Cubicmm: VolumeUnit = ...
-    CubicYd: VolumeUnit = ...
-    Dm: VolumeUnit = ...
-    FlOz: VolumeUnit = ...
-    Ft: VolumeUnit = ...
-    Gal: VolumeUnit = ...
-    GalUk: VolumeUnit = ...
-    Hl: VolumeUnit = ...
-    Kl: VolumeUnit = ...
-    L: VolumeUnit = ...
-    Ml: VolumeUnit = ...
-    Pints: VolumeUnit = ...
-    Quart: VolumeUnit = ...
-    value__ = ...
-
-
-class WatchAndForceTableAccess(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class WatchAndForceTableAccess(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for WebAccess
 
@@ -14861,7 +13270,7 @@ class WatchAndForceTableAccess(Enum): # skipped bases: <type 'IComparable'>, <ty
     Write: WatchAndForceTableAccess = ...
 
 
-class WatchdogBusPLCFaultReset(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class WatchdogBusPLCFaultReset(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property WatchdogBusPLCFaultReset
 
@@ -14872,7 +13281,7 @@ class WatchdogBusPLCFaultReset(Enum): # skipped bases: <type 'IComparable'>, <ty
     value__ = ...
 
 
-class WatchTableAccessRule(IEquatable, IEngineeringObject, IInternalObjectAccess): # skipped bases: <type 'IEngineeringCompositionOrObject'>, <type 'IInternalBaseAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringInstance'>, <type 'object'>
+class WatchTableAccessRule(IEquatable, IEngineeringObject, IInternalObjectAccess): # skipped bases: <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'IEngineeringInstance'>, <type 'IInternalBaseAccess'>, <type 'object'>
     """ Represents a  Watch Table Access Rule """
     @property
     def Access(self) -> WatchAndForceTableAccess:
@@ -14936,7 +13345,7 @@ class WatchTableAccessRule(IEquatable, IEngineeringObject, IInternalObjectAccess
         ...
 
 
-class WatchTableAccessRuleComposition(IInternalCompositionAccess, IEngineeringComposition, IEquatable): # skipped bases: <type 'IEngineeringInstance'>, <type 'IEnumerable'>, <type 'IInternalBaseAccess'>, <type 'IInternalCollectionAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'object'>
+class WatchTableAccessRuleComposition(IInternalCompositionAccess, IEngineeringComposition, IEquatable): # skipped bases: <type 'IEnumerable'>, <type 'IEngineeringInstance'>, <type 'IInternalBaseAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'IInternalCollectionAccess'>, <type 'object'>
     """ Composition of Watch Table Access """
     @property
     def Parent(self) -> IEngineeringObject:
@@ -14988,7 +13397,7 @@ class WatchTableAccessRuleComposition(IInternalCompositionAccess, IEngineeringCo
         ...
 
 
-class WebserverEntryPage(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class WebserverEntryPage(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property WebserverEntryPage
 
@@ -14999,7 +13408,7 @@ class WebserverEntryPage(Enum): # skipped bases: <type 'IComparable'>, <type 'IF
     value__ = ...
 
 
-class WebserverUser(IEquatable, IEngineeringObject, IInternalObjectAccess): # skipped bases: <type 'IEngineeringCompositionOrObject'>, <type 'IInternalBaseAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringInstance'>, <type 'object'>
+class WebserverUser(IEquatable, IEngineeringObject, IInternalObjectAccess): # skipped bases: <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'IEngineeringInstance'>, <type 'IInternalBaseAccess'>, <type 'object'>
     """ Represents a WebserverUser """
     @property
     def Parent(self) -> IEngineeringObject:
@@ -15073,7 +13482,7 @@ class WebserverUser(IEquatable, IEngineeringObject, IInternalObjectAccess): # sk
         ...
 
 
-class WebserverUserComposition(IInternalCompositionAccess, IEngineeringComposition, IEquatable): # skipped bases: <type 'IEngineeringInstance'>, <type 'IEnumerable'>, <type 'IInternalBaseAccess'>, <type 'IInternalCollectionAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'object'>
+class WebserverUserComposition(IInternalCompositionAccess, IEngineeringComposition, IEquatable): # skipped bases: <type 'IEnumerable'>, <type 'IEngineeringInstance'>, <type 'IInternalBaseAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'IInternalCollectionAccess'>, <type 'object'>
     """ Represent list of Webserver Users """
     @property
     def Parent(self) -> IEngineeringObject:
@@ -15125,7 +13534,7 @@ class WebserverUserComposition(IInternalCompositionAccess, IEngineeringCompositi
         ...
 
 
-class WebserverUserPermissions(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class WebserverUserPermissions(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Represents Webserver User Permissions
 
@@ -15153,7 +13562,7 @@ class WebserverUserPermissions(Enum): # skipped bases: <type 'IComparable'>, <ty
     WriteUserDefinedWebPages: WebserverUserPermissions = ...
 
 
-class WithBlockCheck(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class WithBlockCheck(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Possible values for property WithBlockCheck
 

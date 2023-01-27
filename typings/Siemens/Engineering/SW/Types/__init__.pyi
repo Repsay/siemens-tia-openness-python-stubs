@@ -1,6 +1,6 @@
 # encoding: utf-8
 # module Siemens.Engineering.SW.Types calls itself Types
-# from Siemens.Engineering, Version=17.0.0.0, Culture=neutral, PublicKeyToken=d29ec89bac048f84, Siemens.Engineering.AddIn, Version=17.0.0.0, Culture=neutral, PublicKeyToken=65b871d8372d6a8f
+# from Siemens.Engineering, Version=16.0.0.0, Culture=neutral, PublicKeyToken=d29ec89bac048f84, Siemens.Engineering.AddIn, Version=16.0.0.0, Culture=neutral, PublicKeyToken=65b871d8372d6a8f
 # by generator 1.145
 """ no doc """
 from __future__ import annotations
@@ -32,7 +32,7 @@ from Siemens import IInternalCompositionAccess, IInternalObjectAccess
 # no functions
 # classes
 
-class PlcType(IInternalObjectAccess, IEngineeringServiceProvider, IEngineeringObject, IGenerateSource, IMasterCopySource, IEquatable): # skipped bases: <type 'IEngineeringCompositionOrObject'>, <type 'IInternalBaseAccess'>, <type 'IServiceProvider'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringInstance'>, <type 'object'>
+class PlcType(IInternalObjectAccess, IEngineeringServiceProvider, IEngineeringObject, IGenerateSource, IMasterCopySource, IEquatable): # skipped bases: <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'IServiceProvider'>, <type 'IEngineeringInstance'>, <type 'IInternalBaseAccess'>, <type 'object'>
     """ Represents a Plc type """
     @property
     def CreationDate(self) -> DateTime:
@@ -152,11 +152,11 @@ class PlcType(IInternalObjectAccess, IEngineeringServiceProvider, IEngineeringOb
         ...
 
 
-class PlcStruct(PlcType): # skipped bases: <type 'IEngineeringCompositionOrObject'>, <type 'IInternalObjectAccess'>, <type 'IEquatable[object]'>, <type 'IMasterCopySource'>, <type 'IEngineeringServiceProvider'>, <type 'IEngineeringObject'>, <type 'IInternalBaseAccess'>, <type 'IGenerateSource'>, <type 'IServiceProvider'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringInstance'>, <type 'object'>
+class PlcStruct(PlcType): # skipped bases: <type 'IEquatable[object]'>, <type 'IEngineeringServiceProvider'>, <type 'IEngineeringObject'>, <type 'IServiceProvider'>, <type 'IEngineeringInstance'>, <type 'IInternalBaseAccess'>, <type 'IGenerateSource'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'IInternalObjectAccess'>, <type 'IMasterCopySource'>, <type 'object'>
     """ Represents a Plc struct """
     pass
 
-class PlcSystemTypeGroup(IEquatable, IEngineeringObject, IInternalObjectAccess): # skipped bases: <type 'IEngineeringCompositionOrObject'>, <type 'IInternalBaseAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringInstance'>, <type 'object'>
+class PlcSystemTypeGroup(IEquatable, IEngineeringObject, IInternalObjectAccess): # skipped bases: <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'IEngineeringInstance'>, <type 'IInternalBaseAccess'>, <type 'object'>
     """ Group containing Plc system types """
     @property
     def Name(self) -> str:
@@ -210,7 +210,7 @@ class PlcSystemTypeGroup(IEquatable, IEngineeringObject, IInternalObjectAccess):
         ...
 
 
-class PlcSystemTypeGroupComposition(IInternalCompositionAccess, IEngineeringComposition, IEquatable): # skipped bases: <type 'IEngineeringInstance'>, <type 'IEnumerable'>, <type 'IInternalBaseAccess'>, <type 'IInternalCollectionAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'object'>
+class PlcSystemTypeGroupComposition(IInternalCompositionAccess, IEngineeringComposition, IEquatable): # skipped bases: <type 'IEnumerable'>, <type 'IEngineeringInstance'>, <type 'IInternalBaseAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'IInternalCollectionAccess'>, <type 'object'>
     """ Composition of PlcSystemTypeGroups """
     @property
     def Parent(self) -> IEngineeringObject:
@@ -250,7 +250,7 @@ class PlcSystemTypeGroupComposition(IInternalCompositionAccess, IEngineeringComp
         ...
 
 
-class PlcTypeComposition(IInternalCompositionAccess, IEngineeringComposition, IEquatable): # skipped bases: <type 'IEngineeringInstance'>, <type 'IEnumerable'>, <type 'IInternalBaseAccess'>, <type 'IInternalCollectionAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'object'>
+class PlcTypeComposition(IInternalCompositionAccess, IEngineeringComposition, IEquatable): # skipped bases: <type 'IEnumerable'>, <type 'IEngineeringInstance'>, <type 'IInternalBaseAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'IInternalCollectionAccess'>, <type 'object'>
     """ Composition of PlcTypes """
     @property
     def Parent(self) -> IEngineeringObject:
@@ -348,7 +348,7 @@ class PlcTypeComposition(IInternalCompositionAccess, IEngineeringComposition, IE
         ...
 
 
-class PlcTypeGroup(IEquatable, IEngineeringObject, IEngineeringServiceProvider, IInternalObjectAccess): # skipped bases: <type 'IEngineeringCompositionOrObject'>, <type 'IInternalBaseAccess'>, <type 'IServiceProvider'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringInstance'>, <type 'object'>
+class PlcTypeGroup(IEquatable, IEngineeringObject, IEngineeringServiceProvider, IInternalObjectAccess): # skipped bases: <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'IServiceProvider'>, <type 'IEngineeringInstance'>, <type 'IInternalBaseAccess'>, <type 'object'>
     """ Group containing Plc types & Plc type user groups """
     @property
     def Groups(self) -> PlcTypeUserGroupComposition:
@@ -411,15 +411,15 @@ class PlcTypeGroup(IEquatable, IEngineeringObject, IEngineeringServiceProvider, 
         ...
 
 
-class PlcTypeLibraryType(LibraryType): # skipped bases: <type 'ILibraryTypeOrFolderSelection'>, <type 'IEngineeringCompositionOrObject'>, <type 'ISivarcLibraryItem'>, <type 'IInternalObjectAccess'>, <type 'IEquatable[object]'>, <type 'IEngineeringObject'>, <type 'IInternalBaseAccess'>, <type 'ISivarcProgramBlockSource'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringInstance'>, <type 'object'>
+class PlcTypeLibraryType(LibraryType): # skipped bases: <type 'IEquatable[object]'>, <type 'IEngineeringObject'>, <type 'IEngineeringInstance'>, <type 'IInternalBaseAccess'>, <type 'IInternalObjectAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'ISivarcLibraryItem'>, <type 'ISivarcProgramBlockSource'>, <type 'ILibraryTypeOrFolderSelection'>, <type 'object'>
     """ Represents a library type made from a Plc type """
     pass
 
-class PlcTypeLibraryTypeVersion(LibraryTypeVersion): # skipped bases: <type 'IInternalObjectAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'IEquatable[object]'>, <type 'IEngineeringObject'>, <type 'IInternalBaseAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringInstance'>, <type 'object'>
+class PlcTypeLibraryTypeVersion(LibraryTypeVersion): # skipped bases: <type 'IEngineeringObject'>, <type 'IEngineeringInstance'>, <type 'IInternalBaseAccess'>, <type 'IInternalObjectAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'IEquatable[object]'>, <type 'object'>
     """ Represents a library type version made from a Plc type """
     pass
 
-class PlcTypeSystemGroup(ILibraryTypeInstantiationTarget, IMasterCopyTarget, PlcTypeGroup): # skipped bases: <type 'IEngineeringCompositionOrObject'>, <type 'IInternalObjectAccess'>, <type 'IEquatable[object]'>, <type 'IEngineeringServiceProvider'>, <type 'IEngineeringObject'>, <type 'IInternalBaseAccess'>, <type 'IServiceProvider'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringInstance'>, <type 'object'>
+class PlcTypeSystemGroup(ILibraryTypeInstantiationTarget, IMasterCopyTarget, PlcTypeGroup): # skipped bases: <type 'IEngineeringServiceProvider'>, <type 'IEngineeringObject'>, <type 'IServiceProvider'>, <type 'IEngineeringInstance'>, <type 'IInternalBaseAccess'>, <type 'IInternalObjectAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'IEquatable[object]'>, <type 'object'>
     """ System group containing Plc types & Plc type user groups """
     @property
     def SystemTypeGroups(self) -> PlcSystemTypeGroupComposition:
@@ -432,7 +432,7 @@ class PlcTypeSystemGroup(ILibraryTypeInstantiationTarget, IMasterCopyTarget, Plc
 
 
 
-class PlcTypeUserGroup(ILibraryTypeInstantiationTarget, IMasterCopySource, PlcTypeGroup, IMasterCopyTarget): # skipped bases: <type 'IEngineeringCompositionOrObject'>, <type 'IInternalObjectAccess'>, <type 'IEquatable[object]'>, <type 'IEngineeringServiceProvider'>, <type 'IEngineeringObject'>, <type 'IInternalBaseAccess'>, <type 'IServiceProvider'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringInstance'>, <type 'object'>
+class PlcTypeUserGroup(ILibraryTypeInstantiationTarget, IMasterCopySource, PlcTypeGroup, IMasterCopyTarget): # skipped bases: <type 'IEngineeringServiceProvider'>, <type 'IEngineeringObject'>, <type 'IServiceProvider'>, <type 'IEngineeringInstance'>, <type 'IInternalBaseAccess'>, <type 'IInternalObjectAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'IEquatable[object]'>, <type 'object'>
     """ User group containing Plc types & Plc type user groups """
     def Delete(self): # ->
         """
@@ -443,7 +443,7 @@ class PlcTypeUserGroup(ILibraryTypeInstantiationTarget, IMasterCopySource, PlcTy
         ...
 
 
-class PlcTypeUserGroupComposition(IInternalCompositionAccess, IEngineeringComposition, IEquatable): # skipped bases: <type 'IEngineeringInstance'>, <type 'IEnumerable'>, <type 'IInternalBaseAccess'>, <type 'IInternalCollectionAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'object'>
+class PlcTypeUserGroupComposition(IInternalCompositionAccess, IEngineeringComposition, IEquatable): # skipped bases: <type 'IEnumerable'>, <type 'IEngineeringInstance'>, <type 'IInternalBaseAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'IInternalCollectionAccess'>, <type 'object'>
     """ Composition of PlcTypeUserGroups """
     @property
     def Parent(self) -> IEngineeringObject:

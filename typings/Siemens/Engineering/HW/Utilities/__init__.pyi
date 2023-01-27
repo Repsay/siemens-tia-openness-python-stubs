@@ -1,6 +1,6 @@
 # encoding: utf-8
 # module Siemens.Engineering.HW.Utilities calls itself Utilities
-# from Siemens.Engineering, Version=17.0.0.0, Culture=neutral, PublicKeyToken=d29ec89bac048f84, Siemens.Engineering.AddIn, Version=17.0.0.0, Culture=neutral, PublicKeyToken=65b871d8372d6a8f
+# from Siemens.Engineering, Version=16.0.0.0, Culture=neutral, PublicKeyToken=d29ec89bac048f84, Siemens.Engineering.AddIn, Version=16.0.0.0, Culture=neutral, PublicKeyToken=65b871d8372d6a8f
 # by generator 1.145
 """ no doc """
 from __future__ import annotations
@@ -21,7 +21,7 @@ from Siemens import IInternalCompositionAccess, IInternalObjectAccess
 # no functions
 # classes
 
-class HardwareUtility(IEquatable, IEngineeringObject, IInternalObjectAccess): # skipped bases: <type 'IEngineeringCompositionOrObject'>, <type 'IInternalBaseAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringInstance'>, <type 'object'>
+class HardwareUtility(IEquatable, IEngineeringObject, IInternalObjectAccess): # skipped bases: <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'IEngineeringInstance'>, <type 'IInternalBaseAccess'>, <type 'object'>
     """ Abstract base class for all extensions to the HW model """
     @property
     def Identifier(self) -> str:
@@ -66,7 +66,7 @@ class HardwareUtility(IEquatable, IEngineeringObject, IInternalObjectAccess): # 
         ...
 
 
-class CardReaderPscProvider(HardwareUtility): # skipped bases: <type 'IInternalObjectAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'IEquatable[object]'>, <type 'IEngineeringObject'>, <type 'IInternalBaseAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringInstance'>, <type 'object'>
+class CardReaderPscProvider(HardwareUtility): # skipped bases: <type 'IEngineeringObject'>, <type 'IEngineeringInstance'>, <type 'IInternalBaseAccess'>, <type 'IInternalObjectAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'IEquatable[object]'>, <type 'object'>
     """ Card reader provider utility for .psc file """
     def Export(self, device:Device, fileName:FileInfo): # ->
         """
@@ -81,7 +81,7 @@ class CardReaderPscProvider(HardwareUtility): # skipped bases: <type 'IInternalO
         ...
 
 
-class HardwareUtilityComposition(IInternalCompositionAccess, IEngineeringComposition, IEquatable): # skipped bases: <type 'IEngineeringInstance'>, <type 'IEnumerable'>, <type 'IInternalBaseAccess'>, <type 'IInternalCollectionAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'object'>
+class HardwareUtilityComposition(IInternalCompositionAccess, IEngineeringComposition, IEquatable): # skipped bases: <type 'IEnumerable'>, <type 'IEngineeringInstance'>, <type 'IInternalBaseAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'IInternalCollectionAccess'>, <type 'object'>
     """ Composition of HardwareUtilities """
     @property
     def Parent(self) -> IEngineeringObject:
@@ -133,7 +133,7 @@ class HardwareUtilityComposition(IInternalCompositionAccess, IEngineeringComposi
         ...
 
 
-class ModuleInformationProvider(HardwareUtility): # skipped bases: <type 'IInternalObjectAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'IEquatable[object]'>, <type 'IEngineeringObject'>, <type 'IInternalBaseAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringInstance'>, <type 'object'>
+class ModuleInformationProvider(HardwareUtility): # skipped bases: <type 'IEngineeringObject'>, <type 'IEngineeringInstance'>, <type 'IInternalBaseAccess'>, <type 'IInternalObjectAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'IEquatable[object]'>, <type 'object'>
     """ Service provider for module information """
     def FindContainerTypes(self, typeIdentifier:str) -> Array:
         """
@@ -159,20 +159,8 @@ class ModuleInformationProvider(HardwareUtility): # skipped bases: <type 'IInter
         """
         ...
 
-    def GetTypeIdentifierNormalized(self, typeIdentifier:str) -> str:
-        """
-        GetTypeIdentifierNormalized(self: ModuleInformationProvider, typeIdentifier: str) -> str
 
-            Gets the TypeIdentifierNormalized
-
-            typeIdentifier: The type identifier to be used to get TypeIdentifierNormalized
-
-            Returns: System.String
-        """
-        ...
-
-
-class OpcUaExportProvider(HardwareUtility): # skipped bases: <type 'IInternalObjectAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'IEquatable[object]'>, <type 'IEngineeringObject'>, <type 'IInternalBaseAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringInstance'>, <type 'object'>
+class OpcUaExportProvider(HardwareUtility): # skipped bases: <type 'IEngineeringObject'>, <type 'IEngineeringInstance'>, <type 'IInternalBaseAccess'>, <type 'IInternalObjectAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'IEquatable[object]'>, <type 'object'>
     """ Service provider for export of OPC UA """
     def Export(self, deviceItem:DeviceItem, path:FileInfo): # ->
         """

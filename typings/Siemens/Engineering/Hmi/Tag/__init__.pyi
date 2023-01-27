@@ -1,6 +1,6 @@
 # encoding: utf-8
 # module Siemens.Engineering.Hmi.Tag calls itself Tag
-# from Siemens.Engineering, Version=17.0.0.0, Culture=neutral, PublicKeyToken=d29ec89bac048f84
+# from Siemens.Engineering, Version=16.0.0.0, Culture=neutral, PublicKeyToken=d29ec89bac048f84
 # by generator 1.145
 """ no doc """
 from __future__ import annotations
@@ -20,22 +20,24 @@ from System.Collections import IList
 from System.IO import FileInfo
 
 """The following names are not found in the module: (
-    IInternalCompositionAccess, IInternalObjectAccess, ILimit)
+    IInternalCompositionAccess, IInternalObjectAccess, ILimit, LibraryType,
+    LibraryTypeVersion, TagTable, TagTableComposition,
+    TagUserFolderComposition)
 """
 from Siemens import IInternalCompositionAccess, IInternalObjectAccess
 
 # no functions
 # classes
 
-class HmiUdtLibraryType(LibraryType): # skipped bases: <type 'IEquatable[object]'>, <type 'IInternalBaseAccess'>, <type 'IEngineeringObject'>, <type 'IInternalInstanceAccess'>, <type 'ILibraryTypeOrFolderSelection'>, <type 'ISivarcLibraryItem'>, <type 'IInternalObjectAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'IEngineeringInstance'>, <type 'ISivarcProgramBlockSource'>, <type 'object'>
+class HmiUdtLibraryType(LibraryType): # skipped bases: <type 'ISivarcProgramBlockSource'>, <type 'ILibraryTypeOrFolderSelection'>, <type 'IEngineeringObject'>, <type 'IEngineeringCompositionOrObject'>, <type 'ISivarcLibraryItem'>, <type 'IEngineeringInstance'>, <type 'IInternalObjectAccess'>, <type 'IInternalBaseAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEquatable[object]'>, <type 'object'>
     """ Represents a library type made from a Udt """
     pass
 
-class HmiUdtLibraryTypeVersion(LibraryTypeVersion): # skipped bases: <type 'IEquatable[object]'>, <type 'IInternalBaseAccess'>, <type 'IEngineeringObject'>, <type 'IInternalInstanceAccess'>, <type 'IInternalObjectAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'IEngineeringInstance'>, <type 'object'>
+class HmiUdtLibraryTypeVersion(LibraryTypeVersion): # skipped bases: <type 'IEngineeringObject'>, <type 'IEngineeringCompositionOrObject'>, <type 'IEngineeringInstance'>, <type 'IInternalObjectAccess'>, <type 'IInternalBaseAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEquatable[object]'>, <type 'object'>
     """ Represents a library type version made from a Udt """
     pass
 
-class Tag(IInternalObjectAccess, IEngineeringServiceProvider, IEngineeringObject, ILimit, IMasterCopySource, IEquatable): # skipped bases: <type 'IEngineeringCompositionOrObject'>, <type 'IEngineeringInstance'>, <type 'IInternalBaseAccess'>, <type 'IInternalInstanceAccess'>, <type 'IServiceProvider'>, <type 'object'>
+class Tag(IInternalObjectAccess, IEngineeringServiceProvider, IEngineeringObject, ILimit, IMasterCopySource, IEquatable): # skipped bases: <type 'IEngineeringInstance'>, <type 'IServiceProvider'>, <type 'IEngineeringCompositionOrObject'>, <type 'IInternalBaseAccess'>, <type 'IInternalInstanceAccess'>, <type 'object'>
     """ Represents an Hmi tag """
     @property
     def Name(self) -> str:
@@ -100,7 +102,7 @@ class Tag(IInternalObjectAccess, IEngineeringServiceProvider, IEngineeringObject
         ...
 
 
-class TagComposition(IInternalCompositionAccess, IEngineeringComposition, IEquatable): # skipped bases: <type 'IInternalBaseAccess'>, <type 'IEnumerable'>, <type 'IInternalInstanceAccess'>, <type 'IInternalCollectionAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'IEngineeringInstance'>, <type 'object'>
+class TagComposition(IInternalCompositionAccess, IEngineeringComposition, IEquatable): # skipped bases: <type 'IInternalCollectionAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'IEnumerable'>, <type 'IEngineeringInstance'>, <type 'IInternalBaseAccess'>, <type 'IInternalInstanceAccess'>, <type 'object'>
     """ Composition of (Hmi)Tags """
     @property
     def Parent(self) -> IEngineeringObject:
@@ -178,7 +180,7 @@ class TagComposition(IInternalCompositionAccess, IEngineeringComposition, IEquat
         ...
 
 
-class TagFolder(IEquatable, IEngineeringObject, IInternalObjectAccess): # skipped bases: <type 'IEngineeringCompositionOrObject'>, <type 'IEngineeringInstance'>, <type 'IInternalBaseAccess'>, <type 'IInternalInstanceAccess'>, <type 'object'>
+class TagFolder(IEquatable, IEngineeringObject, IInternalObjectAccess): # skipped bases: <type 'IEngineeringInstance'>, <type 'IEngineeringCompositionOrObject'>, <type 'IInternalBaseAccess'>, <type 'IInternalInstanceAccess'>, <type 'object'>
     """ Folder containing Hmi tag tables & Hmi tag user folders """
     @property
     def Folders(self) -> TagUserFolderComposition:
@@ -241,7 +243,7 @@ class TagFolder(IEquatable, IEngineeringObject, IInternalObjectAccess): # skippe
         ...
 
 
-class TagSystemFolder(IMasterCopyTarget, TagFolder): # skipped bases: <type 'IEquatable[object]'>, <type 'IInternalBaseAccess'>, <type 'IEngineeringObject'>, <type 'IInternalInstanceAccess'>, <type 'IInternalObjectAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'IEngineeringInstance'>, <type 'object'>
+class TagSystemFolder(IMasterCopyTarget, TagFolder): # skipped bases: <type 'IEngineeringObject'>, <type 'IEngineeringCompositionOrObject'>, <type 'IEngineeringInstance'>, <type 'IInternalObjectAccess'>, <type 'IInternalBaseAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEquatable[object]'>, <type 'object'>
     """ System folder containing Hmi tag tables & Hmi tag user folders """
     @property
     def DefaultTagTable(self) -> TagTable:
@@ -254,7 +256,7 @@ class TagSystemFolder(IMasterCopyTarget, TagFolder): # skipped bases: <type 'IEq
 
 
 
-class TagTable(IEquatable, IEngineeringObject, IMasterCopySource, IMasterCopyTarget, IInternalObjectAccess): # skipped bases: <type 'IEngineeringCompositionOrObject'>, <type 'IEngineeringInstance'>, <type 'IInternalBaseAccess'>, <type 'IInternalInstanceAccess'>, <type 'object'>
+class TagTable(IEquatable, IEngineeringObject, IMasterCopySource, IMasterCopyTarget, IInternalObjectAccess): # skipped bases: <type 'IEngineeringInstance'>, <type 'IEngineeringCompositionOrObject'>, <type 'IInternalBaseAccess'>, <type 'IInternalInstanceAccess'>, <type 'object'>
     """ Represents an Hmi tag table """
     @property
     def IsSystemObject(self) -> bool:
@@ -337,7 +339,7 @@ class TagTable(IEquatable, IEngineeringObject, IMasterCopySource, IMasterCopyTar
         ...
 
 
-class TagTableComposition(IInternalCompositionAccess, IEngineeringComposition, IEquatable): # skipped bases: <type 'IInternalBaseAccess'>, <type 'IEnumerable'>, <type 'IInternalInstanceAccess'>, <type 'IInternalCollectionAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'IEngineeringInstance'>, <type 'object'>
+class TagTableComposition(IInternalCompositionAccess, IEngineeringComposition, IEquatable): # skipped bases: <type 'IInternalCollectionAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'IEnumerable'>, <type 'IEngineeringInstance'>, <type 'IInternalBaseAccess'>, <type 'IInternalInstanceAccess'>, <type 'object'>
     """ Composition of (Hmi)TagTables """
     @property
     def Parent(self) -> IEngineeringObject:
@@ -415,7 +417,7 @@ class TagTableComposition(IInternalCompositionAccess, IEngineeringComposition, I
         ...
 
 
-class TagUserFolder(IMasterCopySource, TagFolder, IMasterCopyTarget): # skipped bases: <type 'IEquatable[object]'>, <type 'IInternalBaseAccess'>, <type 'IEngineeringObject'>, <type 'IInternalInstanceAccess'>, <type 'IInternalObjectAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'IEngineeringInstance'>, <type 'object'>
+class TagUserFolder(IMasterCopySource, TagFolder, IMasterCopyTarget): # skipped bases: <type 'IEngineeringObject'>, <type 'IEngineeringCompositionOrObject'>, <type 'IEngineeringInstance'>, <type 'IInternalObjectAccess'>, <type 'IInternalBaseAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEquatable[object]'>, <type 'object'>
     """ User folder containing Hmi tag tables & Hmi tag user folders """
     def Delete(self): # ->
         """
@@ -426,7 +428,7 @@ class TagUserFolder(IMasterCopySource, TagFolder, IMasterCopyTarget): # skipped 
         ...
 
 
-class TagUserFolderComposition(IInternalCompositionAccess, IEngineeringComposition, IEquatable): # skipped bases: <type 'IInternalBaseAccess'>, <type 'IEnumerable'>, <type 'IInternalInstanceAccess'>, <type 'IInternalCollectionAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'IEngineeringInstance'>, <type 'object'>
+class TagUserFolderComposition(IInternalCompositionAccess, IEngineeringComposition, IEquatable): # skipped bases: <type 'IInternalCollectionAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'IEnumerable'>, <type 'IEngineeringInstance'>, <type 'IInternalBaseAccess'>, <type 'IInternalInstanceAccess'>, <type 'object'>
     """ Composition of (Hmi)TagUserFolders """
     @property
     def Parent(self) -> IEngineeringObject:

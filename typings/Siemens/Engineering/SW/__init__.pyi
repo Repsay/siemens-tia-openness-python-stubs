@@ -1,6 +1,6 @@
 # encoding: utf-8
 # module Siemens.Engineering.SW calls itself SW
-# from Siemens.Engineering, Version=17.0.0.0, Culture=neutral, PublicKeyToken=d29ec89bac048f84, Siemens.Engineering.AddIn, Version=17.0.0.0, Culture=neutral, PublicKeyToken=65b871d8372d6a8f
+# from Siemens.Engineering, Version=16.0.0.0, Culture=neutral, PublicKeyToken=d29ec89bac048f84, Siemens.Engineering.AddIn, Version=16.0.0.0, Culture=neutral, PublicKeyToken=65b871d8372d6a8f
 # by generator 1.145
 """ no doc """
 from __future__ import annotations
@@ -42,7 +42,7 @@ from Siemens import IInternalObjectAccess
 # no functions
 # classes
 
-class Fingerprint(IEquatable, IEngineeringObject, IInternalObjectAccess): # skipped bases: <type 'IEngineeringCompositionOrObject'>, <type 'IInternalBaseAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringInstance'>, <type 'object'>
+class Fingerprint(IEquatable, IEngineeringObject, IInternalObjectAccess): # skipped bases: <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'IEngineeringInstance'>, <type 'IInternalBaseAccess'>, <type 'object'>
     """ fingerprint """
     @property
     def Id(self) -> FingerprintId:
@@ -96,7 +96,7 @@ class Fingerprint(IEquatable, IEngineeringObject, IInternalObjectAccess): # skip
         ...
 
 
-class FingerprintId(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class FingerprintId(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     fingerprint id
 
@@ -116,7 +116,7 @@ class FingerprintId(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormat
     value__ = ...
 
 
-class FingerprintProvider(IEquatable, IEngineeringObject, IEngineeringService, IInternalObjectAccess): # skipped bases: <type 'IEngineeringCompositionOrObject'>, <type 'IInternalBaseAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringInstance'>, <type 'object'>
+class FingerprintProvider(IEquatable, IEngineeringObject, IEngineeringService, IInternalObjectAccess): # skipped bases: <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'IEngineeringInstance'>, <type 'IInternalBaseAccess'>, <type 'object'>
     """ Provides fingerprints. """
     @property
     def Parent(self) -> IEngineeringObject:
@@ -166,7 +166,7 @@ class ISoftwareCompareTarget: # skipped bases: <type 'object'>
     """ Access to the controller in a compare scenario """
     pass
 
-class PlcChecksumProvider(IEquatable, IEngineeringObject, IEngineeringService, IInternalObjectAccess): # skipped bases: <type 'IEngineeringCompositionOrObject'>, <type 'IInternalBaseAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringInstance'>, <type 'object'>
+class PlcChecksumProvider(IEquatable, IEngineeringObject, IEngineeringService, IInternalObjectAccess): # skipped bases: <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'IEngineeringInstance'>, <type 'IInternalBaseAccess'>, <type 'object'>
     """ Provides checksums. """
     @property
     def Parent(self) -> IEngineeringObject:
@@ -211,7 +211,7 @@ class PlcChecksumProvider(IEquatable, IEngineeringObject, IEngineeringService, I
         ...
 
 
-class PlcSoftware(IInstanceSearchScope, IUpdateProjectScope, IEngineeringServiceProvider, ISoftwareCompareTarget, Software): # skipped bases: <type 'IInternalObjectAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'IEquatable[object]'>, <type 'IEngineeringObject'>, <type 'IInternalBaseAccess'>, <type 'IServiceProvider'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringInstance'>, <type 'object'>
+class PlcSoftware(IInstanceSearchScope, IUpdateProjectScope, IEngineeringServiceProvider, ISoftwareCompareTarget, Software): # skipped bases: <type 'IEngineeringObject'>, <type 'IEngineeringInstance'>, <type 'IInternalBaseAccess'>, <type 'IServiceProvider'>, <type 'IInternalObjectAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'IEquatable[object]'>, <type 'object'>
     """ Represents the software components of a Plc """
     @property
     def BlockGroup(self) -> PlcBlockSystemGroup:
@@ -291,7 +291,7 @@ class PlcSoftware(IInstanceSearchScope, IUpdateProjectScope, IEngineeringService
         ...
 
 
-class SWImportOptions(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class SWImportOptions(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     The list of possible sw importoptions for Import
 

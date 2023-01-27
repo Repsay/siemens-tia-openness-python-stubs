@@ -1,6 +1,6 @@
 # encoding: utf-8
 # module Siemens.Engineering.Download calls itself Download
-# from Siemens.Engineering, Version=17.0.0.0, Culture=neutral, PublicKeyToken=d29ec89bac048f84, Siemens.Engineering.AddIn, Version=17.0.0.0, Culture=neutral, PublicKeyToken=65b871d8372d6a8f
+# from Siemens.Engineering, Version=16.0.0.0, Culture=neutral, PublicKeyToken=d29ec89bac048f84, Siemens.Engineering.AddIn, Version=16.0.0.0, Culture=neutral, PublicKeyToken=65b871d8372d6a8f
 # by generator 1.145
 """ no doc """
 from __future__ import annotations
@@ -25,7 +25,7 @@ from Siemens import IInternalCompositionAccess, IInternalObjectAccess
 # no functions
 # classes
 
-class DownloadConfigurationDelegate(MulticastDelegate): # skipped bases: <type 'ICloneable'>, <type 'ISerializable'>, <type 'object'>
+class DownloadConfigurationDelegate(MulticastDelegate): # skipped bases: <type 'ISerializable'>, <type 'ICloneable'>, <type 'object'>
     """ DownloadConfigurationDelegate(object: object, method: IntPtr) """
     def BeginInvoke(self, downloadConfiguration:DownloadConfiguration, callback:AsyncCallback, object:object) -> IAsyncResult:
         """ BeginInvoke(self: DownloadConfigurationDelegate, downloadConfiguration: DownloadConfiguration, callback: AsyncCallback, object: object) -> IAsyncResult """
@@ -40,19 +40,18 @@ class DownloadConfigurationDelegate(MulticastDelegate): # skipped bases: <type '
         ...
 
 
-class DownloadOptions(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class DownloadOptions(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     The list of possible download options
 
-    enum (flags) DownloadOptions, values: Hardware (1), None (0), Software (2), SoftwareOnlyChanges (4)
+    enum (flags) DownloadOptions, values: Hardware (1), None (0), Software (2)
     """
     Hardware: DownloadOptions = ...
     Software: DownloadOptions = ...
-    SoftwareOnlyChanges: DownloadOptions = ...
     value__ = ...
 
 
-class DownloadProvider(IEquatable, IEngineeringObject, IEngineeringService, IInternalObjectAccess): # skipped bases: <type 'IEngineeringCompositionOrObject'>, <type 'IInternalBaseAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringInstance'>, <type 'object'>
+class DownloadProvider(IEquatable, IEngineeringObject, IEngineeringService, IInternalObjectAccess): # skipped bases: <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'IEngineeringInstance'>, <type 'IInternalBaseAccess'>, <type 'object'>
     """ Service provides download functionality """
     @property
     def Configuration(self) -> ConnectionConfiguration:
@@ -73,29 +72,13 @@ class DownloadProvider(IEquatable, IEngineeringObject, IEngineeringService, IInt
         ...
 
 
-    def Download(self, configuration, *__args) -> DownloadResult:
+    def Download(self, configuration:IConfiguration, preDownloadConfigurationDelegate:DownloadConfigurationDelegate, postDownloadConfigurationDelegate:DownloadConfigurationDelegate, downloadOptions:DownloadOptions) -> DownloadResult:
         """
         Download(self: DownloadProvider, configuration: IConfiguration, preDownloadConfigurationDelegate: DownloadConfigurationDelegate, postDownloadConfigurationDelegate: DownloadConfigurationDelegate, downloadOptions: DownloadOptions) -> DownloadResult
 
             Downloads hardware and software to the device
 
             configuration: Connection cofiguration path to a device.
-
-            preDownloadConfigurationDelegate: This delegate will be called for each configuration before the download.
-
-            postDownloadConfigurationDelegate: This delegate will be called for each configuration after the download.
-
-            downloadOptions: Download options
-
-            Returns: Siemens.Engineering.Download.DownloadResult
-
-        Download(self: DownloadProvider, configuration: IConfiguration, configurationAddress: ConfigurationAddress, preDownloadConfigurationDelegate: DownloadConfigurationDelegate, postDownloadConfigurationDelegate: DownloadConfigurationDelegate, downloadOptions: DownloadOptions) -> DownloadResult
-
-            Download Hardware and Software to a target with specific IP-Address
-
-            configuration: Connection cofiguration path to a device.
-
-            configurationAddress: Configuration address for station download
 
             preDownloadConfigurationDelegate: This delegate will be called for each configuration before the download.
 
@@ -131,7 +114,7 @@ class DownloadProvider(IEquatable, IEngineeringObject, IEngineeringService, IInt
         ...
 
 
-class DownloadResult(IEquatable, IEngineeringObject, IInternalObjectAccess): # skipped bases: <type 'IEngineeringCompositionOrObject'>, <type 'IInternalBaseAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringInstance'>, <type 'object'>
+class DownloadResult(IEquatable, IEngineeringObject, IInternalObjectAccess): # skipped bases: <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'IEngineeringInstance'>, <type 'IInternalBaseAccess'>, <type 'object'>
     """ The results of a download """
     @property
     def ErrorCount(self) -> int:
@@ -203,7 +186,7 @@ class DownloadResult(IEquatable, IEngineeringObject, IInternalObjectAccess): # s
         ...
 
 
-class DownloadResultMessage(IEquatable, IEngineeringObject, IInternalObjectAccess): # skipped bases: <type 'IEngineeringCompositionOrObject'>, <type 'IInternalBaseAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringInstance'>, <type 'object'>
+class DownloadResultMessage(IEquatable, IEngineeringObject, IInternalObjectAccess): # skipped bases: <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'IEngineeringInstance'>, <type 'IInternalBaseAccess'>, <type 'object'>
     """ Download result message """
     @property
     def DateTime(self) -> DateTime:
@@ -293,7 +276,7 @@ class DownloadResultMessage(IEquatable, IEngineeringObject, IInternalObjectAcces
         ...
 
 
-class DownloadResultMessageComposition(IInternalCompositionAccess, IEngineeringComposition, IEquatable): # skipped bases: <type 'IEngineeringInstance'>, <type 'IEnumerable'>, <type 'IInternalBaseAccess'>, <type 'IInternalCollectionAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'object'>
+class DownloadResultMessageComposition(IInternalCompositionAccess, IEngineeringComposition, IEquatable): # skipped bases: <type 'IEnumerable'>, <type 'IEngineeringInstance'>, <type 'IInternalBaseAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'IInternalCollectionAccess'>, <type 'object'>
     """ Composition of download result messages. """
     @property
     def Parent(self) -> IEngineeringObject:
@@ -333,7 +316,7 @@ class DownloadResultMessageComposition(IInternalCompositionAccess, IEngineeringC
         ...
 
 
-class DownloadResultState(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class DownloadResultState(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     The list of possible compiler result options
 
@@ -346,7 +329,7 @@ class DownloadResultState(Enum): # skipped bases: <type 'IComparable'>, <type 'I
     Warning: DownloadResultState = ...
 
 
-class RHDownloadProvider(IEquatable, IEngineeringService, IInternalObjectAccess): # skipped bases: <type 'IInternalBaseAccess'>, <type 'IInternalInstanceAccess'>, <type 'object'>
+class RHDownloadProvider(IEquatable, IEngineeringService, IInternalObjectAccess): # skipped bases: <type 'IInternalInstanceAccess'>, <type 'IInternalBaseAccess'>, <type 'object'>
     """ Service provides download functionality for R/H systems """
     @property
     def Configuration(self) -> ConnectionConfiguration:
@@ -358,7 +341,7 @@ class RHDownloadProvider(IEquatable, IEngineeringService, IInternalObjectAccess)
         ...
 
 
-    def DownloadToBackup(self, configuration, *__args) -> DownloadResult:
+    def DownloadToBackup(self, configuration:IConfiguration, preDownloadConfigurationDelegate:DownloadConfigurationDelegate, postDownloadConfigurationDelegate:DownloadConfigurationDelegate, downloadOptions:DownloadOptions) -> DownloadResult:
         """
         DownloadToBackup(self: RHDownloadProvider, configuration: IConfiguration, preDownloadConfigurationDelegate: DownloadConfigurationDelegate, postDownloadConfigurationDelegate: DownloadConfigurationDelegate, downloadOptions: DownloadOptions) -> DownloadResult
 
@@ -373,48 +356,16 @@ class RHDownloadProvider(IEquatable, IEngineeringService, IInternalObjectAccess)
             downloadOptions: Download options
 
             Returns: Siemens.Engineering.Download.DownloadResult
-
-        DownloadToBackup(self: RHDownloadProvider, configuration: IConfiguration, configurationAddress: ConfigurationAddress, preDownloadConfigurationDelegate: DownloadConfigurationDelegate, postDownloadConfigurationDelegate: DownloadConfigurationDelegate, downloadOptions: DownloadOptions) -> DownloadResult
-
-            Downloads hardware and software to the backup device with specific address
-
-            configuration: Connection cofiguration path to a device.
-
-            configurationAddress: Configuration address for station download
-
-            preDownloadConfigurationDelegate: This delegate will be called for each configuration before the download.
-
-            postDownloadConfigurationDelegate: This delegate will be called for each configuration after the download.
-
-            downloadOptions: Download options
-
-            Returns: Siemens.Engineering.Download.DownloadResult
         """
         ...
 
-    def DownloadToPrimary(self, configuration, *__args) -> DownloadResult:
+    def DownloadToPrimary(self, configuration:IConfiguration, preDownloadConfigurationDelegate:DownloadConfigurationDelegate, postDownloadConfigurationDelegate:DownloadConfigurationDelegate, downloadOptions:DownloadOptions) -> DownloadResult:
         """
         DownloadToPrimary(self: RHDownloadProvider, configuration: IConfiguration, preDownloadConfigurationDelegate: DownloadConfigurationDelegate, postDownloadConfigurationDelegate: DownloadConfigurationDelegate, downloadOptions: DownloadOptions) -> DownloadResult
 
             Downloads hardware and software to the primary device
 
             configuration: Connection cofiguration path to a device.
-
-            preDownloadConfigurationDelegate: This delegate will be called for each configuration before the download.
-
-            postDownloadConfigurationDelegate: This delegate will be called for each configuration after the download.
-
-            downloadOptions: Download options
-
-            Returns: Siemens.Engineering.Download.DownloadResult
-
-        DownloadToPrimary(self: RHDownloadProvider, configuration: IConfiguration, configurationAddress: ConfigurationAddress, preDownloadConfigurationDelegate: DownloadConfigurationDelegate, postDownloadConfigurationDelegate: DownloadConfigurationDelegate, downloadOptions: DownloadOptions) -> DownloadResult
-
-            Downloads hardware and software to the primary device with specific address
-
-            configuration: Connection cofiguration path to a device.
-
-            configurationAddress: Configuration address for station download
 
             preDownloadConfigurationDelegate: This delegate will be called for each configuration before the download.
 

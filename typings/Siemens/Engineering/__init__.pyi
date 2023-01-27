@@ -1,11 +1,12 @@
 # encoding: utf-8
 # module Siemens.Engineering calls itself Engineering
-# from Siemens.Engineering, Version=17.0.0.0, Culture=neutral, PublicKeyToken=d29ec89bac048f84, Siemens.Engineering.Hmi, Version=17.0.0.0, Culture=neutral, PublicKeyToken=d29ec89bac048f84, Siemens.Engineering.AddIn, Version=17.0.0.0, Culture=neutral, PublicKeyToken=65b871d8372d6a8f, Siemens.Engineering.AddIn.Permissions, Version=17.0.0.0, Culture=neutral, PublicKeyToken=65b871d8372d6a8f, Siemens.Engineering.AddIn.Utilities, Version=17.0.0.0, Culture=neutral, PublicKeyToken=65b871d8372d6a8f
+# from Siemens.Engineering, Version=16.0.0.0, Culture=neutral, PublicKeyToken=d29ec89bac048f84, Siemens.Engineering.Hmi, Version=16.0.0.0, Culture=neutral, PublicKeyToken=d29ec89bac048f84, Siemens.Engineering.AddIn, Version=16.0.0.0, Culture=neutral, PublicKeyToken=65b871d8372d6a8f, Siemens.Engineering.AddIn.Permissions, Version=16.0.0.0, Culture=neutral, PublicKeyToken=65b871d8372d6a8f, Siemens.Engineering.AddIn.Utilities, Version=16.0.0.0, Culture=neutral, PublicKeyToken=65b871d8372d6a8f
 # by generator 1.145
 """ no doc """
 from __future__ import annotations
 
-from Siemens.Engineering.Hmi.Globalization import  MultiLingualGraphicComposition
+from Siemens.Engineering.Hmi.Globalization import \
+    MultiLingualGraphicComposition
 from Siemens.Engineering.HW import (DeviceComposition, DeviceSystemGroup,
                                     DeviceUserGroupComposition,
                                     SubnetComposition, View)
@@ -13,8 +14,6 @@ from Siemens.Engineering.HW.Utilities import HardwareUtilityComposition
 from Siemens.Engineering.Library import (GlobalLibraryComposition,
                                          ProjectLibrary)
 from Siemens.Engineering.Library.MasterCopies import IMasterCopyTarget
-from Siemens.Engineering.Multiuser import (LocalSessionComposition,
-                                           ProjectServerComposition)
 from Siemens.Engineering.Settings import TiaPortalSettingsFolderComposition
 from System import (AsyncCallback, DateTime, Enum, EventArgs, IAsyncResult,
                     IDisposable, IEquatable, Int64, IServiceProvider,
@@ -90,6 +89,24 @@ class AttachingEventArgs(EventArgs): # skipped bases: <type 'object'>
             Grants permission to the attaching Openness application to attach.
         """
         ...
+
+
+class ConfirmationChoices(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
+    """
+    The list of possible confirmation choices
+
+    enum (flags) ConfirmationChoices, values: Abort (8), Cancel (256), Ignore (32), No (64), None (0), NoToAll (128), Ok (1), Retry (16), Yes (2), YesToAll (4)
+    """
+    Abort: ConfirmationChoices = ...
+    Cancel: ConfirmationChoices = ...
+    Ignore: ConfirmationChoices = ...
+    No: ConfirmationChoices = ...
+    NoToAll: ConfirmationChoices = ...
+    Ok: ConfirmationChoices = ...
+    Retry: ConfirmationChoices = ...
+    value__ = ...
+    Yes: ConfirmationChoices = ...
+    YesToAll: ConfirmationChoices = ...
 
 
 class IEngineeringInstance: # skipped bases: <type 'object'>
@@ -198,99 +215,7 @@ class IEngineeringObject(IEngineeringCompositionOrObject): # skipped bases: <typ
         ...
 
 
-class AuthenticationEventArgs(IInternalObjectAccess, IEngineeringObject, IEquatable, EventArgs): # skipped bases: <type 'IEngineeringCompositionOrObject'>, <type 'IInternalBaseAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringInstance'>, <type 'object'>
-    """ AuthenticationEventArgs to provide AuthenticationTypeProvider and credentials from user """
-    @property
-    def AuthenticationTypeProvider(self) -> AuthenticationTypeProvider:
-        """
-        AuthenticationTypeProvider provided differrent AuthenticationTypes
-
-        Get: AuthenticationTypeProvider(self: AuthenticationEventArgs) -> AuthenticationTypeProvider
-
-        Set: AuthenticationTypeProvider(self: AuthenticationEventArgs) = value
-        """
-        ...
-
-    @property
-    def Parent(self) -> IEngineeringObject:
-        """
-        EOM parent of this object
-
-        Get: Parent(self: AuthenticationEventArgs) -> IEngineeringObject
-        """
-        ...
-
-    @property
-    def UmacCredentials(self) -> UmacCredentials:
-        """
-        UmacCredentials
-
-        Get: UmacCredentials(self: AuthenticationEventArgs) -> UmacCredentials
-
-        Set: UmacCredentials(self: AuthenticationEventArgs) = value
-        """
-        ...
-
-
-    def GetHashCode(self) -> int:
-        """
-        GetHashCode(self: AuthenticationEventArgs) -> int
-
-            Returns a hash code for this instance.
-
-            Returns: A hash code for this instance, suitable for use in hashing algorithms and data structures like a hash table.
-        """
-        ...
-
-    def ToString(self) -> str:
-        """
-        ToString(self: AuthenticationEventArgs) -> str
-
-            Returns a System.String that represents the current System.Object.
-
-            Returns: A System.String that represents the current System.Object.
-        """
-        ...
-
-    def __ne__(self, *args): #cannot find CLR method
-        ...
-
-    def __str__(self, *args): #cannot find CLR method
-        ...
-
-
-class AuthenticationTypeProvider(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
-    """
-    Provides different types of AuthenticationType
-
-    enum AuthenticationTypeProvider, values: Anonymous (2), Credentials (0), DesktopSso (1), Interactive (3)
-    """
-    Anonymous: AuthenticationTypeProvider = ...
-    Credentials: AuthenticationTypeProvider = ...
-    DesktopSso: AuthenticationTypeProvider = ...
-    Interactive: AuthenticationTypeProvider = ...
-    value__ = ...
-
-
-class ConfirmationChoices(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
-    """
-    The list of possible confirmation choices
-
-    enum (flags) ConfirmationChoices, values: Abort (8), Cancel (256), Ignore (32), No (64), None (0), NoToAll (128), Ok (1), Retry (16), Yes (2), YesToAll (4)
-    """
-    Abort: ConfirmationChoices = ...
-    Cancel: ConfirmationChoices = ...
-    Ignore: ConfirmationChoices = ...
-    No: ConfirmationChoices = ...
-    NoToAll: ConfirmationChoices = ...
-    Ok: ConfirmationChoices = ...
-    Retry: ConfirmationChoices = ...
-    value__ = ...
-    Yes: ConfirmationChoices = ...
-    YesToAll: ConfirmationChoices = ...
-
-
-class ConfirmationEventArgs(IInternalObjectAccess, IEngineeringObject, IEquatable, EventArgs): # skipped bases: <type 'IEngineeringCompositionOrObject'>, <type 'IInternalBaseAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringInstance'>, <type 'object'>
+class ConfirmationEventArgs(IInternalObjectAccess, IEngineeringObject, IEquatable, EventArgs): # skipped bases: <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'IEngineeringInstance'>, <type 'IInternalBaseAccess'>, <type 'object'>
     """ The confirmation result. """
     @property
     def Caption(self) -> str:
@@ -396,7 +321,7 @@ class ConfirmationEventArgs(IInternalObjectAccess, IEngineeringObject, IEquatabl
         ...
 
 
-class ConfirmationIcon(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class ConfirmationIcon(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     The list of possible confirmation icons
 
@@ -408,7 +333,7 @@ class ConfirmationIcon(Enum): # skipped bases: <type 'IComparable'>, <type 'IFor
     value__ = ...
 
 
-class ConfirmationResult(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class ConfirmationResult(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     The list of possible confirmation results
 
@@ -426,7 +351,7 @@ class ConfirmationResult(Enum): # skipped bases: <type 'IComparable'>, <type 'IF
     YesToAll: ConfirmationResult = ...
 
 
-class EngineeringAttributeAccessMode(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class EngineeringAttributeAccessMode(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Flags enum that describes different access levels
 
@@ -498,7 +423,7 @@ class EngineeringCompositionInfo: # skipped bases: <type 'object'>, <type 'objec
         ...
 
 
-class EngineeringCreateRelevance(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class EngineeringCreateRelevance(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """ enum EngineeringCreateRelevance, values: Mandatory (2), None (0), Relevant (1) """
     Mandatory: EngineeringCreateRelevance = ...
     Relevant: EngineeringCreateRelevance = ...
@@ -842,7 +767,7 @@ class ExceptionMessageData: # skipped bases: <type 'object'>, <type 'object'>
         ...
 
 
-class ExclusiveAccess(IEquatable, IEngineeringObject, IDisposable, IInternalObjectAccess): # skipped bases: <type 'IEngineeringCompositionOrObject'>, <type 'IInternalBaseAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringInstance'>, <type 'object'>
+class ExclusiveAccess(IEquatable, IEngineeringObject, IDisposable, IInternalObjectAccess): # skipped bases: <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'IEngineeringInstance'>, <type 'IInternalBaseAccess'>, <type 'object'>
     """ The class representing an exclusive access session to the TIA Portal """
     @property
     def IsCancellationRequested(self) -> bool:
@@ -912,7 +837,7 @@ class ExclusiveAccess(IEquatable, IEngineeringObject, IDisposable, IInternalObje
         ...
 
 
-class ExportOptions(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class ExportOptions(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     The list of possible scenarios supported by export action parameterization
 
@@ -938,7 +863,7 @@ class FunctionRightNotFoundException(EngineeringTargetInvocationException): # sk
     SerializeObjectState = ...
 
 
-class HistoryEntry(IEquatable, IEngineeringObject, IInternalObjectAccess): # skipped bases: <type 'IEngineeringCompositionOrObject'>, <type 'IInternalBaseAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringInstance'>, <type 'object'>
+class HistoryEntry(IEquatable, IEngineeringObject, IInternalObjectAccess): # skipped bases: <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'IEngineeringInstance'>, <type 'IInternalBaseAccess'>, <type 'object'>
     """ Represents a TIAP project history event """
     @property
     def DateTime(self) -> DateTime:
@@ -1070,7 +995,7 @@ class IEngineeringComposition(IEngineeringCompositionOrObject, IEnumerable): # s
         ...
 
 
-class HistoryEntryComposition(IInternalCompositionAccess, IEngineeringComposition, IEquatable): # skipped bases: <type 'IEngineeringInstance'>, <type 'IEnumerable'>, <type 'IInternalBaseAccess'>, <type 'IInternalCollectionAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'object'>
+class HistoryEntryComposition(IInternalCompositionAccess, IEngineeringComposition, IEquatable): # skipped bases: <type 'IEnumerable'>, <type 'IEngineeringInstance'>, <type 'IInternalBaseAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'IInternalCollectionAccess'>, <type 'object'>
     """ Composition of HistoryEntries """
     @property
     def Parent(self) -> IEngineeringObject:
@@ -1174,7 +1099,7 @@ class IEngineeringAssociation(IEngineeringInstance, IEnumerable): # skipped base
         ...
 
 
-class IEngineeringObjectAssociation(IEquatable, IEngineeringAssociation, IInternalAssociationAccess): # skipped bases: <type 'IInternalBaseAccess'>, <type 'IEnumerable'>, <type 'IInternalCollectionAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringInstance'>, <type 'object'>
+class IEngineeringObjectAssociation(IEquatable, IEngineeringAssociation, IInternalAssociationAccess): # skipped bases: <type 'IInternalCollectionAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEnumerable'>, <type 'IEngineeringInstance'>, <type 'IInternalBaseAccess'>, <type 'object'>
     """ Associated engineering objects """
     @property
     def Parent(self) -> IEngineeringObject:
@@ -1235,7 +1160,7 @@ class IEngineeringServiceProvider(IServiceProvider): # skipped bases: <type 'obj
         ...
 
 
-class ImportOptions(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class ImportOptions(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     The list of possible options for Import
 
@@ -1273,7 +1198,7 @@ class ITransactionSupport: # skipped bases: <type 'object'>
     """ An interface indication that the item supports transactions """
     pass
 
-class Language(IEquatable, IEngineeringObject, IInternalObjectAccess): # skipped bases: <type 'IEngineeringCompositionOrObject'>, <type 'IInternalBaseAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringInstance'>, <type 'object'>
+class Language(IEquatable, IEngineeringObject, IInternalObjectAccess): # skipped bases: <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'IEngineeringInstance'>, <type 'IInternalBaseAccess'>, <type 'object'>
     """ Represents a language that can be enabled in this Project """
     @property
     def Culture(self) -> CultureInfo:
@@ -1318,7 +1243,7 @@ class Language(IEquatable, IEngineeringObject, IInternalObjectAccess): # skipped
         ...
 
 
-class LanguageAssociation(IEquatable, IEngineeringAssociation, IInternalAssociationAccess): # skipped bases: <type 'IInternalBaseAccess'>, <type 'IEnumerable'>, <type 'IInternalCollectionAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringInstance'>, <type 'object'>
+class LanguageAssociation(IEquatable, IEngineeringAssociation, IInternalAssociationAccess): # skipped bases: <type 'IInternalCollectionAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEnumerable'>, <type 'IEngineeringInstance'>, <type 'IInternalBaseAccess'>, <type 'object'>
     """ Collection of Languages. """
     @property
     def Parent(self) -> IEngineeringObject:
@@ -1396,7 +1321,7 @@ class LanguageAssociation(IEquatable, IEngineeringAssociation, IInternalAssociat
         ...
 
 
-class LanguageComposition(IInternalCompositionAccess, IEngineeringComposition, IEquatable): # skipped bases: <type 'IEngineeringInstance'>, <type 'IEnumerable'>, <type 'IInternalBaseAccess'>, <type 'IInternalCollectionAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'object'>
+class LanguageComposition(IInternalCompositionAccess, IEngineeringComposition, IEquatable): # skipped bases: <type 'IEnumerable'>, <type 'IEngineeringInstance'>, <type 'IInternalBaseAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'IInternalCollectionAccess'>, <type 'object'>
     """ Composition of Languages """
     @property
     def Parent(self) -> IEngineeringObject:
@@ -1448,7 +1373,7 @@ class LanguageComposition(IInternalCompositionAccess, IEngineeringComposition, I
         ...
 
 
-class LanguageSettings(IEquatable, IEngineeringObject, IInternalObjectAccess): # skipped bases: <type 'IEngineeringCompositionOrObject'>, <type 'IInternalBaseAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringInstance'>, <type 'object'>
+class LanguageSettings(IEquatable, IEngineeringObject, IInternalObjectAccess): # skipped bases: <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'IEngineeringInstance'>, <type 'IInternalBaseAccess'>, <type 'object'>
     """ Represents a language settings object. """
     @property
     def ActiveLanguages(self) -> LanguageAssociation:
@@ -1524,22 +1449,7 @@ class LanguageSettings(IEquatable, IEngineeringObject, IInternalObjectAccess): #
         ...
 
 
-class LicenseNotFoundException(EngineeringTargetInvocationException): # skipped bases: <type 'ISerializable'>, <type '_Exception'>, <type 'object'>
-    """
-    Throws when license not found to execute a TIA portal operation using openness API.
-
-    LicenseNotFoundException()
-
-    LicenseNotFoundException(text: str)
-
-    LicenseNotFoundException(text: str, exception: Exception)
-
-    LicenseNotFoundException(text: str, *detailTexts: Array[str])
-    """
-    SerializeObjectState = ...
-
-
-class MultilingualText(IEquatable, IEngineeringObject, IInternalObjectAccess): # skipped bases: <type 'IEngineeringCompositionOrObject'>, <type 'IInternalBaseAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringInstance'>, <type 'object'>
+class MultilingualText(IEquatable, IEngineeringObject, IInternalObjectAccess): # skipped bases: <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'IEngineeringInstance'>, <type 'IInternalBaseAccess'>, <type 'object'>
     """ Represents a String in multiple language translations """
     @property
     def Items(self) -> MultilingualTextItemComposition:
@@ -1584,7 +1494,7 @@ class MultilingualText(IEquatable, IEngineeringObject, IInternalObjectAccess): #
         ...
 
 
-class MultilingualTextItem(IEquatable, IEngineeringObject, IInternalObjectAccess): # skipped bases: <type 'IEngineeringCompositionOrObject'>, <type 'IInternalBaseAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringInstance'>, <type 'object'>
+class MultilingualTextItem(IEquatable, IEngineeringObject, IInternalObjectAccess): # skipped bases: <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'IEngineeringInstance'>, <type 'IInternalBaseAccess'>, <type 'object'>
     """ Multilingual text item. """
     @property
     def Language(self) -> Language:
@@ -1640,7 +1550,7 @@ class MultilingualTextItem(IEquatable, IEngineeringObject, IInternalObjectAccess
         ...
 
 
-class MultilingualTextItemComposition(IInternalCompositionAccess, IEngineeringComposition, IEquatable): # skipped bases: <type 'IEngineeringInstance'>, <type 'IEnumerable'>, <type 'IInternalBaseAccess'>, <type 'IInternalCollectionAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'object'>
+class MultilingualTextItemComposition(IInternalCompositionAccess, IEngineeringComposition, IEquatable): # skipped bases: <type 'IEnumerable'>, <type 'IEngineeringInstance'>, <type 'IInternalBaseAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'IInternalCollectionAccess'>, <type 'object'>
     """ Collection of multilingual text items. """
     @property
     def Parent(self) -> IEngineeringObject:
@@ -1726,7 +1636,7 @@ class NonRecoverableException(Exception): # skipped bases: <type 'ISerializable'
     SerializeObjectState = ...
 
 
-class NotificationEventArgs(IInternalObjectAccess, IEngineeringObject, IEquatable, EventArgs): # skipped bases: <type 'IEngineeringCompositionOrObject'>, <type 'IInternalBaseAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringInstance'>, <type 'object'>
+class NotificationEventArgs(IInternalObjectAccess, IEngineeringObject, IEquatable, EventArgs): # skipped bases: <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'IEngineeringInstance'>, <type 'IInternalBaseAccess'>, <type 'object'>
     """ The confirmation result. """
     @property
     def Caption(self) -> str:
@@ -1812,7 +1722,7 @@ class NotificationEventArgs(IInternalObjectAccess, IEngineeringObject, IEquatabl
         ...
 
 
-class NotificationIcon(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class NotificationIcon(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     The list of possible notification icons
 
@@ -1825,7 +1735,7 @@ class NotificationIcon(Enum): # skipped bases: <type 'IComparable'>, <type 'IFor
     Warning: NotificationIcon = ...
 
 
-class OpenMode(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class OpenMode(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     The modification state of an item being opened.
 
@@ -1836,14 +1746,14 @@ class OpenMode(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable
     value__ = ...
 
 
-class ProjectBase(IInternalObjectAccess, ITransactionSupport, IEngineeringServiceProvider, IMasterCopyTarget, IEngineeringObject, IEquatable): # skipped bases: <type 'IEngineeringCompositionOrObject'>, <type 'IInternalBaseAccess'>, <type 'IServiceProvider'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringInstance'>, <type 'object'>
-    """ Base Class for Projects """
+class Project(IInternalObjectAccess, ITransactionSupport, IEngineeringServiceProvider, IMasterCopyTarget, IEngineeringObject, IEquatable): # skipped bases: <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'IServiceProvider'>, <type 'IEngineeringInstance'>, <type 'IInternalBaseAccess'>, <type 'object'>
+    """ Represents a project """
     @property
     def Author(self) -> str:
         """
         Author of the project
 
-        Get: Author(self: ProjectBase) -> str
+        Get: Author(self: Project) -> str
         """
         ...
 
@@ -1852,7 +1762,7 @@ class ProjectBase(IInternalObjectAccess, ITransactionSupport, IEngineeringServic
         """
         The project's comment
 
-        Get: Comment(self: ProjectBase) -> MultilingualText
+        Get: Comment(self: Project) -> MultilingualText
         """
         ...
 
@@ -1861,7 +1771,7 @@ class ProjectBase(IInternalObjectAccess, ITransactionSupport, IEngineeringServic
         """
         Project copyright information
 
-        Get: Copyright(self: ProjectBase) -> str
+        Get: Copyright(self: Project) -> str
         """
         ...
 
@@ -1870,7 +1780,7 @@ class ProjectBase(IInternalObjectAccess, ITransactionSupport, IEngineeringServic
         """
         The creation time of the project
 
-        Get: CreationTime(self: ProjectBase) -> DateTime
+        Get: CreationTime(self: Project) -> DateTime
         """
         ...
 
@@ -1879,7 +1789,7 @@ class ProjectBase(IInternalObjectAccess, ITransactionSupport, IEngineeringServic
         """
         Composition of device user groups
 
-        Get: DeviceGroups(self: ProjectBase) -> DeviceUserGroupComposition
+        Get: DeviceGroups(self: Project) -> DeviceUserGroupComposition
         """
         ...
 
@@ -1888,7 +1798,7 @@ class ProjectBase(IInternalObjectAccess, ITransactionSupport, IEngineeringServic
         """
         Composition of devices
 
-        Get: Devices(self: ProjectBase) -> DeviceComposition
+        Get: Devices(self: Project) -> DeviceComposition
         """
         ...
 
@@ -1897,7 +1807,7 @@ class ProjectBase(IInternalObjectAccess, ITransactionSupport, IEngineeringServic
         """
         The project family
 
-        Get: Family(self: ProjectBase) -> str
+        Get: Family(self: Project) -> str
         """
         ...
 
@@ -1906,7 +1816,7 @@ class ProjectBase(IInternalObjectAccess, ITransactionSupport, IEngineeringServic
         """
         Composition of graphics
 
-        Get: Graphics(self: ProjectBase) -> MultiLingualGraphicComposition
+        Get: Graphics(self: Project) -> MultiLingualGraphicComposition
         """
         ...
 
@@ -1915,7 +1825,7 @@ class ProjectBase(IInternalObjectAccess, ITransactionSupport, IEngineeringServic
         """
         Contains log of project history events
 
-        Get: HistoryEntries(self: ProjectBase) -> HistoryEntryComposition
+        Get: HistoryEntries(self: Project) -> HistoryEntryComposition
         """
         ...
 
@@ -1924,7 +1834,7 @@ class ProjectBase(IInternalObjectAccess, ITransactionSupport, IEngineeringServic
         """
         Composition of HW extensions
 
-        Get: HwUtilities(self: ProjectBase) -> HardwareUtilityComposition
+        Get: HwUtilities(self: Project) -> HardwareUtilityComposition
         """
         ...
 
@@ -1933,7 +1843,7 @@ class ProjectBase(IInternalObjectAccess, ITransactionSupport, IEngineeringServic
         """
         True if there are unsaved changes to the project
 
-        Get: IsModified(self: ProjectBase) -> bool
+        Get: IsModified(self: Project) -> bool
         """
         ...
 
@@ -1942,7 +1852,7 @@ class ProjectBase(IInternalObjectAccess, ITransactionSupport, IEngineeringServic
         """
         Indicates whether the project is the primary project
 
-        Get: IsPrimary(self: ProjectBase) -> bool
+        Get: IsPrimary(self: Project) -> bool
         """
         ...
 
@@ -1951,9 +1861,9 @@ class ProjectBase(IInternalObjectAccess, ITransactionSupport, IEngineeringServic
         """
         To indicate whether Support for Simulation during block compilation is enabled for the project
 
-        Get: IsSimulationDuringBlockCompilationEnabled(self: ProjectBase) -> bool
+        Get: IsSimulationDuringBlockCompilationEnabled(self: Project) -> bool
 
-        Set: IsSimulationDuringBlockCompilationEnabled(self: ProjectBase) = value
+        Set: IsSimulationDuringBlockCompilationEnabled(self: Project) = value
         """
         ...
 
@@ -1962,7 +1872,7 @@ class ProjectBase(IInternalObjectAccess, ITransactionSupport, IEngineeringServic
         """
         Project's language settings.
 
-        Get: LanguageSettings(self: ProjectBase) -> LanguageSettings
+        Get: LanguageSettings(self: Project) -> LanguageSettings
         """
         ...
 
@@ -1971,7 +1881,7 @@ class ProjectBase(IInternalObjectAccess, ITransactionSupport, IEngineeringServic
         """
         The time of the last modification of the project
 
-        Get: LastModified(self: ProjectBase) -> DateTime
+        Get: LastModified(self: Project) -> DateTime
         """
         ...
 
@@ -1980,16 +1890,16 @@ class ProjectBase(IInternalObjectAccess, ITransactionSupport, IEngineeringServic
         """
         The project was last modified by this user.
 
-        Get: LastModifiedBy(self: ProjectBase) -> str
+        Get: LastModifiedBy(self: Project) -> str
         """
         ...
 
     @property
     def Name(self) -> str:
         """
-        The name of the Project
+        The name of the project
 
-        Get: Name(self: ProjectBase) -> str
+        Get: Name(self: Project) -> str
         """
         ...
 
@@ -1998,7 +1908,7 @@ class ProjectBase(IInternalObjectAccess, ITransactionSupport, IEngineeringServic
         """
         EOM parent of this object
 
-        Get: Parent(self: ProjectBase) -> IEngineeringObject
+        Get: Parent(self: Project) -> IEngineeringObject
         """
         ...
 
@@ -2007,7 +1917,7 @@ class ProjectBase(IInternalObjectAccess, ITransactionSupport, IEngineeringServic
         """
         The path to this project
 
-        Get: Path(self: ProjectBase) -> FileInfo
+        Get: Path(self: Project) -> FileInfo
         """
         ...
 
@@ -2016,7 +1926,7 @@ class ProjectBase(IInternalObjectAccess, ITransactionSupport, IEngineeringServic
         """
         Gets the project library
 
-        Get: ProjectLibrary(self: ProjectBase) -> ProjectLibrary
+        Get: ProjectLibrary(self: Project) -> ProjectLibrary
         """
         ...
 
@@ -2025,7 +1935,7 @@ class ProjectBase(IInternalObjectAccess, ITransactionSupport, IEngineeringServic
         """
         The size of the project in KB
 
-        Get: Size(self: ProjectBase) -> Int64
+        Get: Size(self: Project) -> Int64
         """
         ...
 
@@ -2034,7 +1944,7 @@ class ProjectBase(IInternalObjectAccess, ITransactionSupport, IEngineeringServic
         """
         Composition of Subnets
 
-        Get: Subnets(self: ProjectBase) -> SubnetComposition
+        Get: Subnets(self: Project) -> SubnetComposition
         """
         ...
 
@@ -2043,7 +1953,7 @@ class ProjectBase(IInternalObjectAccess, ITransactionSupport, IEngineeringServic
         """
         Gets the devices system group
 
-        Get: UngroupedDevicesGroup(self: ProjectBase) -> DeviceSystemGroup
+        Get: UngroupedDevicesGroup(self: Project) -> DeviceSystemGroup
         """
         ...
 
@@ -2052,7 +1962,7 @@ class ProjectBase(IInternalObjectAccess, ITransactionSupport, IEngineeringServic
         """
         Composition of used products in the project
 
-        Get: UsedProducts(self: ProjectBase) -> UsedProductComposition
+        Get: UsedProducts(self: Project) -> UsedProductComposition
         """
         ...
 
@@ -2061,87 +1971,11 @@ class ProjectBase(IInternalObjectAccess, ITransactionSupport, IEngineeringServic
         """
         The version of this project
 
-        Get: Version(self: ProjectBase) -> str
+        Get: Version(self: Project) -> str
         """
         ...
 
 
-    def ExportProjectTexts(self, path:FileInfo, sourceLanguage:CultureInfo, targetLanguage:CultureInfo): # ->
-        """
-        ExportProjectTexts(self: ProjectBase, path: FileInfo, sourceLanguage: CultureInfo, targetLanguage: CultureInfo)
-
-            Export project text to an xlsx file
-
-            path: Path to the xlsx file
-
-            sourceLanguage: The source language to use for the export of project texts
-
-            targetLanguage: The target language to use for the export of project texts
-        """
-        ...
-
-    def GetHashCode(self) -> int:
-        """
-        GetHashCode(self: ProjectBase) -> int
-
-            Returns a hash code for this instance.
-
-            Returns: A hash code for this instance, suitable for use in hashing algorithms and data structures like a hash table.
-        """
-        ...
-
-    def ImportProjectTexts(self, path:FileInfo, updateSourceLanguage:bool) -> ProjectTextResult:
-        """
-        ImportProjectTexts(self: ProjectBase, path: FileInfo, updateSourceLanguage: bool) -> ProjectTextResult
-
-            Import project text from an import file
-
-            path: Path to the xlsx file
-
-            updateSourceLanguage: True if the source language is to be updated
-
-            Returns: Siemens.Engineering.ProjectTextResult
-        """
-        ...
-
-    def ProtectProject(self, administratorUsername:str, administratorUserPassword:SecureString): # ->
-        """
-        ProtectProject(self: ProjectBase, administratorUsername: str, administratorUserPassword: SecureString)
-
-            Protects the project
-
-            administratorUsername: Administrator user name must be provided and it shouldn't be empty
-
-            administratorUserPassword: Administrator user password must be added and it shouldn't be null or empty
-        """
-        ...
-
-    def ShowHwEditor(self, view:View): # ->
-        """
-        ShowHwEditor(self: ProjectBase, view: View)
-
-            Show the indicated item in the HW editor of the attached TIA Portal
-
-            view: Which view of the HW editor to show
-        """
-        ...
-
-    def ToString(self) -> str:
-        """
-        ToString(self: ProjectBase) -> str
-
-            Returns a System.String that represents the current System.Object.
-
-            Returns: A System.String that represents the current System.Object.
-        """
-        ...
-
-    def __ne__(self, *args): #cannot find CLR method
-        ...
-
-
-class Project(ProjectBase): # skipped bases: <type 'IEngineeringCompositionOrObject'>, <type 'IMasterCopyTarget'>, <type 'IInternalObjectAccess'>, <type 'IEquatable[object]'>, <type 'IEngineeringServiceProvider'>, <type 'ITransactionSupport'>, <type 'IEngineeringObject'>, <type 'IInternalBaseAccess'>, <type 'IServiceProvider'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringInstance'>, <type 'object'>
-    """ Represents a project """
     def Archive(self, targetDirectory:DirectoryInfo, targetName:str, archivationMode:ProjectArchivationMode): # ->
         """
         Archive(self: Project, targetDirectory: DirectoryInfo, targetName: str, archivationMode: ProjectArchivationMode)
@@ -2164,6 +1998,44 @@ class Project(ProjectBase): # skipped bases: <type 'IEngineeringCompositionOrObj
         """
         ...
 
+    def ExportProjectTexts(self, path:FileInfo, sourceLanguage:CultureInfo, targetLanguage:CultureInfo): # ->
+        """
+        ExportProjectTexts(self: Project, path: FileInfo, sourceLanguage: CultureInfo, targetLanguage: CultureInfo)
+
+            Export project text to an xlsx file
+
+            path: Path to the xlsx file
+
+            sourceLanguage: The source language to use for the export of project texts
+
+            targetLanguage: The target language to use for the export of project texts
+        """
+        ...
+
+    def GetHashCode(self) -> int:
+        """
+        GetHashCode(self: Project) -> int
+
+            Returns a hash code for this instance.
+
+            Returns: A hash code for this instance, suitable for use in hashing algorithms and data structures like a hash table.
+        """
+        ...
+
+    def ImportProjectTexts(self, path:FileInfo, updateSourceLanguage:bool) -> ProjectTextResult:
+        """
+        ImportProjectTexts(self: Project, path: FileInfo, updateSourceLanguage: bool) -> ProjectTextResult
+
+            Import project text from an import file
+
+            path: Path to the xlsx file
+
+            updateSourceLanguage: True if the source language is to be updated
+
+            Returns: Siemens.Engineering.ProjectTextResult
+        """
+        ...
+
     def Save(self): # ->
         """
         Save(self: Project)
@@ -2182,8 +2054,31 @@ class Project(ProjectBase): # skipped bases: <type 'IEngineeringCompositionOrObj
         """
         ...
 
+    def ShowHwEditor(self, view:View): # ->
+        """
+        ShowHwEditor(self: Project, view: View)
 
-class ProjectArchivationMode(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+            Show the indicated item in the HW editor of the attached TIA Portal
+
+            view: Which view of the HW editor to show
+        """
+        ...
+
+    def ToString(self) -> str:
+        """
+        ToString(self: Project) -> str
+
+            Returns a System.String that represents the current System.Object.
+
+            Returns: A System.String that represents the current System.Object.
+        """
+        ...
+
+    def __ne__(self, *args): #cannot find CLR method
+        ...
+
+
+class ProjectArchivationMode(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Archivation mode
 
@@ -2195,7 +2090,7 @@ class ProjectArchivationMode(Enum): # skipped bases: <type 'IComparable'>, <type
     value__ = ...
 
 
-class ProjectComposition(IInternalCompositionAccess, IEngineeringComposition, IEquatable): # skipped bases: <type 'IEngineeringInstance'>, <type 'IEnumerable'>, <type 'IInternalBaseAccess'>, <type 'IInternalCollectionAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'object'>
+class ProjectComposition(IInternalCompositionAccess, IEngineeringComposition, IEquatable): # skipped bases: <type 'IEnumerable'>, <type 'IEngineeringInstance'>, <type 'IInternalBaseAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'IInternalCollectionAccess'>, <type 'object'>
     """ Composition of Projects """
     @property
     def Parent(self) -> IEngineeringObject:
@@ -2383,7 +2278,7 @@ class ProjectComposition(IInternalCompositionAccess, IEngineeringComposition, IE
         ...
 
 
-class ProjectOpenMode(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class ProjectOpenMode(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Project open mode
 
@@ -2394,7 +2289,7 @@ class ProjectOpenMode(Enum): # skipped bases: <type 'IComparable'>, <type 'IForm
     value__ = ...
 
 
-class ProjectTextResult(IEquatable, IEngineeringObject, IInternalObjectAccess): # skipped bases: <type 'IEngineeringCompositionOrObject'>, <type 'IInternalBaseAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringInstance'>, <type 'object'>
+class ProjectTextResult(IEquatable, IEngineeringObject, IInternalObjectAccess): # skipped bases: <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'IEngineeringInstance'>, <type 'IInternalBaseAccess'>, <type 'object'>
     """ Represents a project text result """
     @property
     def Parent(self) -> IEngineeringObject:
@@ -2448,7 +2343,7 @@ class ProjectTextResult(IEquatable, IEngineeringObject, IInternalObjectAccess): 
         ...
 
 
-class ProjectTextResultState(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class ProjectTextResultState(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     The state of project text result
 
@@ -2460,7 +2355,7 @@ class ProjectTextResultState(Enum): # skipped bases: <type 'IComparable'>, <type
     Warning: ProjectTextResultState = ...
 
 
-class TiaPortal(IInternalApplicationAccess, IDisposable, IEngineeringServiceProvider, IApplicationEntryPoint, IEngineeringRoot, IEquatable): # skipped bases: <type 'IInternalObjectAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'IEngineeringObject'>, <type 'IInternalBaseAccess'>, <type 'IServiceProvider'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringInstance'>, <type 'object'>
+class TiaPortal(IInternalApplicationAccess, IDisposable, IEngineeringServiceProvider, IApplicationEntryPoint, IEngineeringRoot, IEquatable): # skipped bases: <type 'IEngineeringObject'>, <type 'IEngineeringInstance'>, <type 'IInternalBaseAccess'>, <type 'IServiceProvider'>, <type 'IInternalObjectAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'object'>
     """ TIAPortal. """
     @property
     def GlobalLibraries(self) -> GlobalLibraryComposition:
@@ -2472,29 +2367,11 @@ class TiaPortal(IInternalApplicationAccess, IDisposable, IEngineeringServiceProv
         ...
 
     @property
-    def LocalSessions(self) -> LocalSessionComposition:
-        """
-        Multiuser LocalSessions
-
-        Get: LocalSessions(self: TiaPortal) -> LocalSessionComposition
-        """
-        ...
-
-    @property
     def Projects(self) -> ProjectComposition:
         """
         Composition of open projects
 
         Get: Projects(self: TiaPortal) -> ProjectComposition
-        """
-        ...
-
-    @property
-    def ProjectServers(self) -> ProjectServerComposition:
-        """
-        Multiuser Project Servers
-
-        Get: ProjectServers(self: TiaPortal) -> ProjectServerComposition
         """
         ...
 
@@ -2536,13 +2413,12 @@ class TiaPortal(IInternalApplicationAccess, IDisposable, IEngineeringServiceProv
         """
         ...
 
-    Authentication = ...
     Confirmation = ...
     Disposed = ...
     Notification = ...
 
 
-class TiaPortalAccessLevel(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class TiaPortalAccessLevel(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     The access level of the associated TIA Portal
 
@@ -2557,7 +2433,7 @@ class TiaPortalAccessLevel(Enum): # skipped bases: <type 'IComparable'>, <type '
     value__ = ...
 
 
-class TiaPortalMode(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class TiaPortalMode(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Mode how to start the TIA-Portal.
 
@@ -2751,7 +2627,7 @@ class TiaPortalSession(IDisposable): # skipped bases: <type 'object'>
 
 
 
-class TiaPortalTrustAuthority(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class TiaPortalTrustAuthority(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     The trust authority of the associated TIA Portal
 
@@ -2764,7 +2640,7 @@ class TiaPortalTrustAuthority(Enum): # skipped bases: <type 'IComparable'>, <typ
     value__ = ...
 
 
-class Transaction(IEquatable, IEngineeringObject, IDisposable, IInternalObjectAccess): # skipped bases: <type 'IEngineeringCompositionOrObject'>, <type 'IInternalBaseAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringInstance'>, <type 'object'>
+class Transaction(IEquatable, IEngineeringObject, IDisposable, IInternalObjectAccess): # skipped bases: <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'IEngineeringInstance'>, <type 'IInternalBaseAccess'>, <type 'object'>
     """ Represents an open transaction in a persistence (i.e. single unit of work) """
     @property
     def CanCommit(self) -> bool:
@@ -2826,7 +2702,7 @@ class Transaction(IEquatable, IEngineeringObject, IDisposable, IInternalObjectAc
         ...
 
 
-class UmacCredentials(IEquatable, IEngineeringObject, IInternalObjectAccess): # skipped bases: <type 'IEngineeringCompositionOrObject'>, <type 'IInternalBaseAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringInstance'>, <type 'object'>
+class UmacCredentials(IEquatable, IEngineeringObject, IInternalObjectAccess): # skipped bases: <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'IEngineeringInstance'>, <type 'IInternalBaseAccess'>, <type 'object'>
     """ Object that is used to authenticate user. """
     @property
     def Name(self) -> str:
@@ -2894,7 +2770,7 @@ class UmacCredentials(IEquatable, IEngineeringObject, IInternalObjectAccess): # 
         ...
 
 
-class UmacDelegate(MulticastDelegate): # skipped bases: <type 'ICloneable'>, <type 'ISerializable'>, <type 'object'>
+class UmacDelegate(MulticastDelegate): # skipped bases: <type 'ISerializable'>, <type 'ICloneable'>, <type 'object'>
     """
     The delegate that will called back for user credetials if project is protected.
 
@@ -2913,7 +2789,7 @@ class UmacDelegate(MulticastDelegate): # skipped bases: <type 'ICloneable'>, <ty
         ...
 
 
-class UmacUserType(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class UmacUserType(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     User type.
 
@@ -2924,7 +2800,7 @@ class UmacUserType(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormatt
     value__ = ...
 
 
-class UsedProduct(IEquatable, IEngineeringObject, IInternalObjectAccess): # skipped bases: <type 'IEngineeringCompositionOrObject'>, <type 'IInternalBaseAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringInstance'>, <type 'object'>
+class UsedProduct(IEquatable, IEngineeringObject, IInternalObjectAccess): # skipped bases: <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'IEngineeringInstance'>, <type 'IInternalBaseAccess'>, <type 'object'>
     """ Represents a product used by a project """
     @property
     def Name(self) -> str:
@@ -2978,7 +2854,7 @@ class UsedProduct(IEquatable, IEngineeringObject, IInternalObjectAccess): # skip
         ...
 
 
-class UsedProductComposition(IInternalCompositionAccess, IEngineeringComposition, IEquatable): # skipped bases: <type 'IEngineeringInstance'>, <type 'IEnumerable'>, <type 'IInternalBaseAccess'>, <type 'IInternalCollectionAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'object'>
+class UsedProductComposition(IInternalCompositionAccess, IEngineeringComposition, IEquatable): # skipped bases: <type 'IEnumerable'>, <type 'IEngineeringInstance'>, <type 'IInternalBaseAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'IInternalCollectionAccess'>, <type 'object'>
     """ Composition of UsedProducts """
     @property
     def Parent(self) -> IEngineeringObject:

@@ -1,6 +1,6 @@
 # encoding: utf-8
 # module Siemens.Engineering.Library.MasterCopies calls itself MasterCopies
-# from Siemens.Engineering, Version=17.0.0.0, Culture=neutral, PublicKeyToken=d29ec89bac048f84, Siemens.Engineering.AddIn, Version=17.0.0.0, Culture=neutral, PublicKeyToken=65b871d8372d6a8f
+# from Siemens.Engineering, Version=16.0.0.0, Culture=neutral, PublicKeyToken=d29ec89bac048f84, Siemens.Engineering.AddIn, Version=16.0.0.0, Culture=neutral, PublicKeyToken=65b871d8372d6a8f
 # by generator 1.145
 """ no doc """
 from __future__ import annotations
@@ -32,7 +32,7 @@ class IMasterCopyTarget: # skipped bases: <type 'object'>
     """ Target for pasting a library master copy """
     pass
 
-class MasterCopy(ISivarcLibraryMasterCopy, IEquatable, ISivarcLibraryItem, ISivarcProgramBlockSource, IEngineeringObject, ISoftwareCompareTarget, IInternalObjectAccess): # skipped bases: <type 'IEngineeringCompositionOrObject'>, <type 'IInternalBaseAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringInstance'>, <type 'object'>
+class MasterCopy(ISivarcLibraryMasterCopy, IEquatable, ISivarcLibraryItem, ISivarcProgramBlockSource, IEngineeringObject, ISoftwareCompareTarget, IInternalObjectAccess): # skipped bases: <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'IEngineeringInstance'>, <type 'IInternalBaseAccess'>, <type 'object'>
     """ Represents a library master copy """
     @property
     def Author(self) -> str:
@@ -114,7 +114,7 @@ class MasterCopy(ISivarcLibraryMasterCopy, IEquatable, ISivarcLibraryItem, ISiva
         ...
 
 
-class MasterCopyAssociation(IEquatable, IEngineeringAssociation, IInternalAssociationAccess): # skipped bases: <type 'IInternalBaseAccess'>, <type 'IEnumerable'>, <type 'IInternalCollectionAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringInstance'>, <type 'object'>
+class MasterCopyAssociation(IEquatable, IEngineeringAssociation, IInternalAssociationAccess): # skipped bases: <type 'IInternalCollectionAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEnumerable'>, <type 'IEngineeringInstance'>, <type 'IInternalBaseAccess'>, <type 'object'>
     """ Associated MasterCopies """
     @property
     def Parent(self) -> IEngineeringObject:
@@ -154,7 +154,7 @@ class MasterCopyAssociation(IEquatable, IEngineeringAssociation, IInternalAssoci
         ...
 
 
-class MasterCopyComposition(IInternalCompositionAccess, IEngineeringComposition, IEquatable): # skipped bases: <type 'IEngineeringInstance'>, <type 'IEnumerable'>, <type 'IInternalBaseAccess'>, <type 'IInternalCollectionAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'object'>
+class MasterCopyComposition(IInternalCompositionAccess, IEngineeringComposition, IEquatable): # skipped bases: <type 'IEnumerable'>, <type 'IEngineeringInstance'>, <type 'IInternalBaseAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'IInternalCollectionAccess'>, <type 'object'>
     """ Composition of MasterCopies """
     @property
     def Parent(self) -> IEngineeringObject:
@@ -218,7 +218,7 @@ class MasterCopyComposition(IInternalCompositionAccess, IEngineeringComposition,
         ...
 
 
-class MasterCopyContentDescription(IEquatable, IEngineeringObject, IInternalObjectAccess): # skipped bases: <type 'IEngineeringCompositionOrObject'>, <type 'IInternalBaseAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringInstance'>, <type 'object'>
+class MasterCopyContentDescription(IEquatable, IEngineeringObject, IInternalObjectAccess): # skipped bases: <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'IEngineeringInstance'>, <type 'IInternalBaseAccess'>, <type 'object'>
     """ Master copy content description """
     @property
     def ContentName(self) -> str:
@@ -272,7 +272,7 @@ class MasterCopyContentDescription(IEquatable, IEngineeringObject, IInternalObje
         ...
 
 
-class MasterCopyContentDescriptionComposition(IInternalCompositionAccess, IEngineeringComposition, IEquatable): # skipped bases: <type 'IEngineeringInstance'>, <type 'IEnumerable'>, <type 'IInternalBaseAccess'>, <type 'IInternalCollectionAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'object'>
+class MasterCopyContentDescriptionComposition(IInternalCompositionAccess, IEngineeringComposition, IEquatable): # skipped bases: <type 'IEnumerable'>, <type 'IEngineeringInstance'>, <type 'IInternalBaseAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'IInternalCollectionAccess'>, <type 'object'>
     """ Composition of master copy contents """
     @property
     def Parent(self) -> IEngineeringObject:
@@ -312,7 +312,7 @@ class MasterCopyContentDescriptionComposition(IInternalCompositionAccess, IEngin
         ...
 
 
-class MasterCopyFolder(IEquatable, IEngineeringObject, ISivarcLibraryItem, IInternalObjectAccess): # skipped bases: <type 'IEngineeringCompositionOrObject'>, <type 'IInternalBaseAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringInstance'>, <type 'object'>
+class MasterCopyFolder(IEquatable, IEngineeringObject, IInternalObjectAccess): # skipped bases: <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'IEngineeringInstance'>, <type 'IInternalBaseAccess'>, <type 'object'>
     """ Folder containing Master Copies & Master Copy folders """
     @property
     def Folders(self) -> MasterCopyUserFolderComposition:
@@ -375,7 +375,7 @@ class MasterCopyFolder(IEquatable, IEngineeringObject, ISivarcLibraryItem, IInte
         ...
 
 
-class MasterCopyMode(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class MasterCopyMode(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     The list of possible scenarios supported by master copy 'copy' action parameterization
 
@@ -387,11 +387,11 @@ class MasterCopyMode(Enum): # skipped bases: <type 'IComparable'>, <type 'IForma
     value__ = ...
 
 
-class MasterCopySystemFolder(MasterCopyFolder): # skipped bases: <type 'IEngineeringCompositionOrObject'>, <type 'ISivarcLibraryItem'>, <type 'IInternalObjectAccess'>, <type 'IEquatable[object]'>, <type 'IEngineeringObject'>, <type 'IInternalBaseAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringInstance'>, <type 'object'>
+class MasterCopySystemFolder(MasterCopyFolder): # skipped bases: <type 'IEngineeringObject'>, <type 'IEngineeringInstance'>, <type 'IInternalBaseAccess'>, <type 'IInternalObjectAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'IEquatable[object]'>, <type 'object'>
     """ System folder containing Master Copies & Master Copy folders """
     pass
 
-class MasterCopyUserFolder(MasterCopyFolder): # skipped bases: <type 'IEngineeringCompositionOrObject'>, <type 'ISivarcLibraryItem'>, <type 'IInternalObjectAccess'>, <type 'IEquatable[object]'>, <type 'IEngineeringObject'>, <type 'IInternalBaseAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringInstance'>, <type 'object'>
+class MasterCopyUserFolder(MasterCopyFolder): # skipped bases: <type 'IEngineeringObject'>, <type 'IEngineeringInstance'>, <type 'IInternalBaseAccess'>, <type 'IInternalObjectAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'IEquatable[object]'>, <type 'object'>
     """ User folder containing Master Copies & Master Copy folders """
     def Delete(self): # ->
         """
@@ -402,7 +402,7 @@ class MasterCopyUserFolder(MasterCopyFolder): # skipped bases: <type 'IEngineeri
         ...
 
 
-class MasterCopyUserFolderComposition(IInternalCompositionAccess, IEngineeringComposition, IEquatable): # skipped bases: <type 'IEngineeringInstance'>, <type 'IEnumerable'>, <type 'IInternalBaseAccess'>, <type 'IInternalCollectionAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'object'>
+class MasterCopyUserFolderComposition(IInternalCompositionAccess, IEngineeringComposition, IEquatable): # skipped bases: <type 'IEnumerable'>, <type 'IEngineeringInstance'>, <type 'IInternalBaseAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'IInternalCollectionAccess'>, <type 'object'>
     """ Composition of MasterCopyUserFolders """
     @property
     def Parent(self) -> IEngineeringObject:

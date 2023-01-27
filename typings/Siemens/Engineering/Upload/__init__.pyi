@@ -1,6 +1,6 @@
 # encoding: utf-8
 # module Siemens.Engineering.Upload calls itself Upload
-# from Siemens.Engineering, Version=17.0.0.0, Culture=neutral, PublicKeyToken=d29ec89bac048f84, Siemens.Engineering.AddIn, Version=17.0.0.0, Culture=neutral, PublicKeyToken=65b871d8372d6a8f
+# from Siemens.Engineering, Version=16.0.0.0, Culture=neutral, PublicKeyToken=d29ec89bac048f84, Siemens.Engineering.AddIn, Version=16.0.0.0, Culture=neutral, PublicKeyToken=65b871d8372d6a8f
 # by generator 1.145
 """ no doc """
 from __future__ import annotations
@@ -26,7 +26,7 @@ from Siemens import IInternalCompositionAccess, IInternalObjectAccess
 # no functions
 # classes
 
-class StationUploadProvider(IEquatable, IEngineeringObject, IEngineeringService, IInternalObjectAccess): # skipped bases: <type 'IEngineeringCompositionOrObject'>, <type 'IInternalBaseAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringInstance'>, <type 'object'>
+class StationUploadProvider(IEquatable, IEngineeringObject, IEngineeringService, IInternalObjectAccess): # skipped bases: <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'IEngineeringInstance'>, <type 'IInternalBaseAccess'>, <type 'object'>
     """ Service provides station upload """
     @property
     def Configuration(self) -> ConnectionConfiguration:
@@ -85,7 +85,7 @@ class StationUploadProvider(IEquatable, IEngineeringObject, IEngineeringService,
         ...
 
 
-class UploadConfigurationDelegate(MulticastDelegate): # skipped bases: <type 'ICloneable'>, <type 'ISerializable'>, <type 'object'>
+class UploadConfigurationDelegate(MulticastDelegate): # skipped bases: <type 'ISerializable'>, <type 'ICloneable'>, <type 'object'>
     """ UploadConfigurationDelegate(object: object, method: IntPtr) """
     def BeginInvoke(self, uploadConfiguration:UploadConfiguration, callback:AsyncCallback, object:object) -> IAsyncResult:
         """ BeginInvoke(self: UploadConfigurationDelegate, uploadConfiguration: UploadConfiguration, callback: AsyncCallback, object: object) -> IAsyncResult """
@@ -100,7 +100,7 @@ class UploadConfigurationDelegate(MulticastDelegate): # skipped bases: <type 'IC
         ...
 
 
-class UploadResult(IEquatable, IEngineeringObject, IInternalObjectAccess): # skipped bases: <type 'IEngineeringCompositionOrObject'>, <type 'IInternalBaseAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringInstance'>, <type 'object'>
+class UploadResult(IEquatable, IEngineeringObject, IInternalObjectAccess): # skipped bases: <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'IEngineeringInstance'>, <type 'IInternalBaseAccess'>, <type 'object'>
     """ The results of a Upload """
     @property
     def ErrorCount(self) -> int:
@@ -181,7 +181,7 @@ class UploadResult(IEquatable, IEngineeringObject, IInternalObjectAccess): # ski
         ...
 
 
-class UploadResultMessage(IEquatable, IEngineeringObject, IInternalObjectAccess): # skipped bases: <type 'IEngineeringCompositionOrObject'>, <type 'IInternalBaseAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringInstance'>, <type 'object'>
+class UploadResultMessage(IEquatable, IEngineeringObject, IInternalObjectAccess): # skipped bases: <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'IEngineeringInstance'>, <type 'IInternalBaseAccess'>, <type 'object'>
     """ Upload result message """
     @property
     def DateTime(self) -> DateTime:
@@ -271,7 +271,7 @@ class UploadResultMessage(IEquatable, IEngineeringObject, IInternalObjectAccess)
         ...
 
 
-class UploadResultMessageComposition(IInternalCompositionAccess, IEngineeringComposition, IEquatable): # skipped bases: <type 'IEngineeringInstance'>, <type 'IEnumerable'>, <type 'IInternalBaseAccess'>, <type 'IInternalCollectionAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'object'>
+class UploadResultMessageComposition(IInternalCompositionAccess, IEngineeringComposition, IEquatable): # skipped bases: <type 'IEnumerable'>, <type 'IEngineeringInstance'>, <type 'IInternalBaseAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'IInternalCollectionAccess'>, <type 'object'>
     """ Composition of Upload result messages. """
     @property
     def Parent(self) -> IEngineeringObject:
@@ -311,7 +311,7 @@ class UploadResultMessageComposition(IInternalCompositionAccess, IEngineeringCom
         ...
 
 
-class UploadResultState(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class UploadResultState(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     The list of possible compiler result options
 

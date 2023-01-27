@@ -1,6 +1,6 @@
 # encoding: utf-8
 # module Siemens.Engineering.VersionControl calls itself VersionControl
-# from Siemens.Engineering, Version=17.0.0.0, Culture=neutral, PublicKeyToken=d29ec89bac048f84, Siemens.Engineering.AddIn, Version=17.0.0.0, Culture=neutral, PublicKeyToken=65b871d8372d6a8f
+# from Siemens.Engineering, Version=16.0.0.0, Culture=neutral, PublicKeyToken=d29ec89bac048f84, Siemens.Engineering.AddIn, Version=16.0.0.0, Culture=neutral, PublicKeyToken=65b871d8372d6a8f
 # by generator 1.145
 """ no doc """
 from __future__ import annotations
@@ -20,7 +20,7 @@ from Siemens import IInternalCompositionAccess, IInternalObjectAccess
 # no functions
 # classes
 
-class CompareState(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class CompareState(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Compare status
 
@@ -33,7 +33,7 @@ class CompareState(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormatt
     WorkspaceFileMissing: CompareState = ...
 
 
-class IndividualObjectCompareDetails(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class IndividualObjectCompareDetails(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Individual object compare details
 
@@ -44,7 +44,7 @@ class IndividualObjectCompareDetails(Enum): # skipped bases: <type 'IComparable'
     WorkspaceFileChanged: IndividualObjectCompareDetails = ...
 
 
-class IndividualObjectCompareResult(IEquatable, IEngineeringObject, IInternalObjectAccess): # skipped bases: <type 'IEngineeringCompositionOrObject'>, <type 'IInternalBaseAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringInstance'>, <type 'object'>
+class IndividualObjectCompareResult(IEquatable, IEngineeringObject, IInternalObjectAccess): # skipped bases: <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'IEngineeringInstance'>, <type 'IInternalBaseAccess'>, <type 'object'>
     """ Individual Object Compare Result """
     @property
     def CompareState(self) -> CompareState:
@@ -98,7 +98,7 @@ class IndividualObjectCompareResult(IEquatable, IEngineeringObject, IInternalObj
         ...
 
 
-class IndividualObjectSynchronizationStatus(IEquatable, IEngineeringService, IInternalObjectAccess): # skipped bases: <type 'IInternalBaseAccess'>, <type 'IInternalInstanceAccess'>, <type 'object'>
+class IndividualObjectSynchronizationStatus(IEquatable, IEngineeringService, IInternalObjectAccess): # skipped bases: <type 'IInternalInstanceAccess'>, <type 'IInternalBaseAccess'>, <type 'object'>
     """ Individual object synchronization status """
     def GetHashCode(self) -> int:
         """
@@ -152,7 +152,7 @@ class IndividualObjectSynchronizationStatus(IEquatable, IEngineeringService, IIn
         ...
 
 
-class SynchronizationMode(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class SynchronizationMode(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """
     Describe the sync direction
 
@@ -163,7 +163,7 @@ class SynchronizationMode(Enum): # skipped bases: <type 'IComparable'>, <type 'I
     WorkspaceToProject: SynchronizationMode = ...
 
 
-class VersionControlInterface(IEquatable, IEngineeringObject, IEngineeringService, IInternalObjectAccess): # skipped bases: <type 'IEngineeringCompositionOrObject'>, <type 'IInternalBaseAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringInstance'>, <type 'object'>
+class VersionControlInterface(IEquatable, IEngineeringObject, IEngineeringService, IInternalObjectAccess): # skipped bases: <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'IEngineeringInstance'>, <type 'IInternalBaseAccess'>, <type 'object'>
     """ Service to access the WorkspaceSystemGroup """
     @property
     def Parent(self) -> IEngineeringObject:
@@ -208,7 +208,7 @@ class VersionControlInterface(IEquatable, IEngineeringObject, IEngineeringServic
         ...
 
 
-class Workspace(IEquatable, IEngineeringObject, IInternalObjectAccess): # skipped bases: <type 'IEngineeringCompositionOrObject'>, <type 'IInternalBaseAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringInstance'>, <type 'object'>
+class Workspace(IEquatable, IEngineeringObject, IInternalObjectAccess): # skipped bases: <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'IEngineeringInstance'>, <type 'IInternalBaseAccess'>, <type 'object'>
     """ Represents a VCI workspace """
     @property
     def Comment(self) -> MultilingualText:
@@ -292,7 +292,7 @@ class Workspace(IEquatable, IEngineeringObject, IInternalObjectAccess): # skippe
         ...
 
 
-class WorkspaceComposition(IInternalCompositionAccess, IEngineeringComposition, IEquatable): # skipped bases: <type 'IEngineeringInstance'>, <type 'IEnumerable'>, <type 'IInternalBaseAccess'>, <type 'IInternalCollectionAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'object'>
+class WorkspaceComposition(IInternalCompositionAccess, IEngineeringComposition, IEquatable): # skipped bases: <type 'IEnumerable'>, <type 'IEngineeringInstance'>, <type 'IInternalBaseAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'IInternalCollectionAccess'>, <type 'object'>
     """ Collection of workspaces """
     @property
     def Parent(self) -> IEngineeringObject:
@@ -344,7 +344,7 @@ class WorkspaceComposition(IInternalCompositionAccess, IEngineeringComposition, 
         ...
 
 
-class WorkspaceGroup(IEquatable, IEngineeringObject, IInternalObjectAccess): # skipped bases: <type 'IEngineeringCompositionOrObject'>, <type 'IInternalBaseAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringInstance'>, <type 'object'>
+class WorkspaceGroup(IEquatable, IEngineeringObject, IInternalObjectAccess): # skipped bases: <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'IEngineeringInstance'>, <type 'IInternalBaseAccess'>, <type 'object'>
     """ Group containing Workspaces & Workspace user groups """
     @property
     def Groups(self) -> WorkspaceUserGroupComposition:
@@ -406,7 +406,7 @@ class WorkspaceGroup(IEquatable, IEngineeringObject, IInternalObjectAccess): # s
         ...
 
 
-class WorkspaceMapping(IEquatable, IEngineeringObject, IEngineeringServiceProvider, IInternalObjectAccess): # skipped bases: <type 'IEngineeringCompositionOrObject'>, <type 'IInternalBaseAccess'>, <type 'IServiceProvider'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringInstance'>, <type 'object'>
+class WorkspaceMapping(IEquatable, IEngineeringObject, IEngineeringServiceProvider, IInternalObjectAccess): # skipped bases: <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'IServiceProvider'>, <type 'IEngineeringInstance'>, <type 'IInternalBaseAccess'>, <type 'object'>
     """ Represents a VCI workspace entry """
     @property
     def LinkedProjectObject(self) -> IEngineeringObject:
@@ -470,7 +470,7 @@ class WorkspaceMapping(IEquatable, IEngineeringObject, IEngineeringServiceProvid
         ...
 
 
-class WorkspaceMappingComposition(IInternalCompositionAccess, IEngineeringComposition, IEquatable): # skipped bases: <type 'IEngineeringInstance'>, <type 'IEnumerable'>, <type 'IInternalBaseAccess'>, <type 'IInternalCollectionAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'object'>
+class WorkspaceMappingComposition(IInternalCompositionAccess, IEngineeringComposition, IEquatable): # skipped bases: <type 'IEnumerable'>, <type 'IEngineeringInstance'>, <type 'IInternalBaseAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'IInternalCollectionAccess'>, <type 'object'>
     """ Collection of Workspace entries """
     @property
     def Parent(self) -> IEngineeringObject:
@@ -522,7 +522,7 @@ class WorkspaceMappingComposition(IInternalCompositionAccess, IEngineeringCompos
         ...
 
 
-class WorkspaceSystemGroup(WorkspaceGroup): # skipped bases: <type 'IInternalObjectAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'IEquatable[object]'>, <type 'IEngineeringObject'>, <type 'IInternalBaseAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringInstance'>, <type 'object'>
+class WorkspaceSystemGroup(WorkspaceGroup): # skipped bases: <type 'IEngineeringObject'>, <type 'IEngineeringInstance'>, <type 'IInternalBaseAccess'>, <type 'IInternalObjectAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'IEquatable[object]'>, <type 'object'>
     """ The top folder for workspaces """
     @property
     def Name(self) -> str:
@@ -535,7 +535,7 @@ class WorkspaceSystemGroup(WorkspaceGroup): # skipped bases: <type 'IInternalObj
 
 
 
-class WorkspaceUserGroup(WorkspaceGroup): # skipped bases: <type 'IInternalObjectAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'IEquatable[object]'>, <type 'IEngineeringObject'>, <type 'IInternalBaseAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringInstance'>, <type 'object'>
+class WorkspaceUserGroup(WorkspaceGroup): # skipped bases: <type 'IEngineeringObject'>, <type 'IEngineeringInstance'>, <type 'IInternalBaseAccess'>, <type 'IInternalObjectAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'IEquatable[object]'>, <type 'object'>
     """ User group for workspaces """
     @property
     def Name(self) -> str:
@@ -550,7 +550,7 @@ class WorkspaceUserGroup(WorkspaceGroup): # skipped bases: <type 'IInternalObjec
 
 
 
-class WorkspaceUserGroupComposition(IInternalCompositionAccess, IEngineeringComposition, IEquatable): # skipped bases: <type 'IEngineeringInstance'>, <type 'IEnumerable'>, <type 'IInternalBaseAccess'>, <type 'IInternalCollectionAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'object'>
+class WorkspaceUserGroupComposition(IInternalCompositionAccess, IEngineeringComposition, IEquatable): # skipped bases: <type 'IEnumerable'>, <type 'IEngineeringInstance'>, <type 'IInternalBaseAccess'>, <type 'IInternalInstanceAccess'>, <type 'IEngineeringCompositionOrObject'>, <type 'IInternalCollectionAccess'>, <type 'object'>
     """ Collection of user groups """
     @property
     def Parent(self) -> IEngineeringObject:

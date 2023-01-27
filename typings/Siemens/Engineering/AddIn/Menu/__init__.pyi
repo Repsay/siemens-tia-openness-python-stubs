@@ -1,6 +1,6 @@
 # encoding: utf-8
 # module Siemens.Engineering.AddIn.Menu calls itself Menu
-# from Siemens.Engineering.AddIn, Version=17.0.0.0, Culture=neutral, PublicKeyToken=65b871d8372d6a8f
+# from Siemens.Engineering.AddIn, Version=16.0.0.0, Culture=neutral, PublicKeyToken=65b871d8372d6a8f
 # by generator 1.145
 """ no doc """
 from __future__ import annotations
@@ -41,14 +41,14 @@ class CheckBoxActionItemStyle(ActionItemStyle): # skipped bases: <type 'object'>
 
 
 
-class CheckBoxState(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class CheckBoxState(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """ enum CheckBoxState, values: Checked (1), Unchecked (0) """
     Checked: CheckBoxState = ...
     Unchecked: CheckBoxState = ...
     value__ = ...
 
 
-class ChildItemFactory(IMenuItemFactoryPrivate): # skipped bases: <type 'ISubmenuFactoryPrivate'>, <type 'IActionItemFactoryPrivate'>, <type 'object'>
+class ChildItemFactory(IMenuItemFactoryPrivate): # skipped bases: <type 'IActionItemFactoryPrivate'>, <type 'ISubmenuFactoryPrivate'>, <type 'object'>
     """  """
     def AddActionItem(self, defaultLabelText:str, clickDelegate, updateStatusDelegate = ...) -> ActionItem: # Not found arg types: {'clickDelegate': 'OnClickDelegate', 'updateStatusDelegate': 'OnUpdateStatusDelegate'}
         """
@@ -121,7 +121,7 @@ class MenuSelectionProvider: # skipped bases: <type 'object'>
         ...
 
 
-class MenuStatus(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class MenuStatus(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """ enum MenuStatus, values: Disabled (1), Enabled (0), Hidden (2) """
     Disabled: MenuStatus = ...
     Enabled: MenuStatus = ...
@@ -141,7 +141,7 @@ class RadioButtonActionItemStyle(ActionItemStyle): # skipped bases: <type 'objec
 
 
 
-class RadioButtonState(Enum): # skipped bases: <type 'IComparable'>, <type 'IFormattable'>, <type 'IConvertible'>, <type 'object'>
+class RadioButtonState(Enum): # skipped bases: <type 'IFormattable'>, <type 'IConvertible'>, <type 'IComparable'>, <type 'object'>
     """ enum RadioButtonState, values: Selected (1), Unselected (0) """
     Selected: RadioButtonState = ...
     Unselected: RadioButtonState = ...
