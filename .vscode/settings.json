@@ -1,0 +1,11 @@
+{
+    "python.analysis.ignore": [],
+    "python.analysis.exclude": [
+        "**/*venv",
+        "**/*.bak",
+        "**/**.bak",
+        "**/ironstubs"
+    ],
+    "python.analysis.stubPath": "",
+    "python.analysis.diagnosticMode": "workspace",
+}
