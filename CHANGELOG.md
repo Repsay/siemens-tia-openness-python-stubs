@@ -2,299 +2,560 @@
 
 All notable changes to this project will be documented in this file.
 
-## Openness v17
+## Openness v16
 
-The following new features and innovations are available in TIA Portal Openness V17. You can find additional details on the various topics in the individual sections of the product documentation.
+The following new features and innovations are available in TIA Portal Openness V16. You can find additional details on the various topics in the individual sections of the product documentation.
 
-- Extensions for project generation of PLC programs
-  - Creation of instance DBs for FBs in the following additional languages: LAD, FBD, STL, SCL, Graph, Cause Effect Matrix (CEM)
-  - Write access to the "PriorityNumber" OB attribute
-  - Modules or data types from "ExternalSourceGroup" can be generated directly into a subgroup.
-  - Direct read access to DB tags and write access to their "StartValue" property
-- Extension for devices with IP address not configured in the project when downloading to the PLC
-- Extensions for Safety engineering
-  - Write access for most attributes of the Safety Administration Editor (SAE)
-  - Configuration of the Safety engineering password (set, reset, lock, unlock)
-  - Compiling the Safety hardware and Safety software
-  - Loading of changes in the standard software or standard hardware configuration to an F-PLC with unchanged Safety program / Safety hardware configuration
-  - Documentation generation (Safety printout)
-- Extended support for library processes:
-  - Structure applied when updating the library
-  - Clean up library
-  - Harmonize project
-  - Force update
-  - Reading and setting the default version of a type
-  - Reading the status information of library types
-- Extension of CAx export and import:
-  - Support of the AML specification AR APC v1.2
-  - Support of Safety Base Units for ET200SP modules
-  - Exchange of manufacturer-specific hardware parameters for GSD/GSDML-based devices
-  - Option to export normalized order numbers (MLFB)
-  - Tolerant import of order numbers (MLFB)
-- Support for protected projects (UMAC):
-  - Activation of project protection
-  - Method extension for opening a protected project
-  - Configuration of users and roles in the project
-  - Openness function right to prevent changes to a protected project via the Openness API
-- Support of the Openness API in a multiuser session
-- Support of multi-user processes
-  - Create, modify and delete server connections
-  - Read out the available projects, sessions on a project server
-  - Add projects to the project server
-  - Create, open, save and close multi-user sessions
-  - Information about changed objects
-  - Apply or discard changes (exclusive sessions / server project view)
-- Extended export/import support for alarms and ProDiag
-  - Export/import of alarm classes
-  - Export/import of system diagnostics settings
-  - Export/import of ProDiag supervisions and supervision settings
-  - Export/import of global supervisions of a ProDiag FB
-  - Exporting/importing UDT supervisions
-- Support of TIA Portal Test Suite Advanced
-  - Export/import of rule sets and test cases
-  - Execution of rule sets and test cases
-  - Provision of test results from application tests or style guide checks as .NET objects
-- Enhancements for Startdrive
-  - Write access to MRP communication attributes for all drive devices that support this function
-  - Support for G115D
-- Openness API enhancement
-  - Load software changes into all CPU families
+- User specific flags for identification of devices and modules
+- Querying online checksums of PLCs for Hardware and software.
+- Support of Software Units.
+- Support of Export/Import of technological objects
+- Support of Version Control Interface (VCI)
+- Extensions for CAx exports and imports concerning
+  - Support of APC AR V1.1
+  - Using objects from libraries
+  - Support of base units of ET200SP
+- Extension of the support of hardware configuration concerning
+  - OPC UA Server configuration and user management
+  - Management of certificates
+  - Web Server configuration and user management
+  - Watch tables for Web Server and display
+- Support of the configuration of WinCC Unified
+- Support of SiVArc concerning
+  - Creation and modification of SiVArc rules
+- Support of Safety engineering even if a password is set for the Safety programm
 
 ### New Features/Files
 
-- HW.Systemdiagnostics
-- Multiuser
-- SW.Alarm.Exceptions
-- SW.Blocks.Exceptions
-- SW.Blocks.Interface
-- SW.Supervision
-- Umac
+- AddIn.Menu
+- AddIn.Permissions
+- AddIn.Utilities
+- AddIn.VersionControl
+- AddIn
+- CustomIdentity
+- FingerprintData
+- HW.CustomDataTypes
+- Online.Configurations
+- Safety
+- Security
+- SW.Alarm
+- SW.Units
+- VersionControl
 
 ### Added
 
-- Connection.ConfigurationTargetInterface.Addresses property -> get the Composition of configurationAddress
-- Connection.ConnectionConfiguration.EnableLegacyCommunication property -> Disable Tls (Transport Layer Security) protocol.
-- Download.Configurations.DownloadPasswordConfiguration.IsSecureCommunication property -> Is secure communication used.
-- Download.Configurations.DataBlockReinitialization class -> Different memory reserves in the online block and offline block are preventing
-- Download.Configurations.DataBlockReinitializationSelections enum -> Available selections for DataBlockReinitialization configuration.
-- Download.Configurations.DownloadCertficate class -> Based on this option dynamic certificates will be deleted.
-- Download.Configurations.PlcMasterSecretPassword class -> Set the PlcMasterSecret password for download
-- Download.DownloadOptions.SoftwareOnlyChanges enum option -> 4
-- HW.Features.MrpDomainOwner.Parent property -> Get the parent of the MRP domain owner.
-- HW.Features.PlcMasterSecretConfigurator class -> Represents the Master Secret configuration for the PLC.
-- HW.Features.SyncDomainOwner.Parent property -> Get the parent of the Sync domain owner.
-- HW.Utilities.ModuleInformationProvider.GetTypeIdentifierrNormalized() method -> Get the normalized type identifier.
-- HW.Activation enum -> Possible values for property Activation
-- HW.AmplifierBoost enum -> Possible values for property AmplifierBoost
-- HW.ApplicationControllerActive enum -> Possible values for property ApplicationControllerActive
-- HW.AsiProfileID enum -> Possible values for property AsiProfileID
-- HW.AsiProfileID1 enum -> Possible values for property AsiProfileID1
-- HW.AsiProfileIO enum -> Possible values for property AsiProfileIO
-- HW.BaseFrequency enum -> Possible values for property BaseFrequency
-- HW.BoosterCurrent enum -> Possible values for property BoosterCurrent
-- HW.BusPowerSupplyActive enum -> Possible values for property BusPowerSupplyActive
-- HW.Category enum -> Possible values for property Category
-- HW.ChannelAssignment enum -> Possible values for property ChannelAssignment
-- HW.ConnectionType.DriverMode enum option -> 10
-- HW.ConnectionType.Endstufe enum option -> 11
-- HW.ConnectionType.Indexer enum option -> 9
-- HW.CurrentDelayTime enum -> Possible values for property CurrentDelayTime
-- HW.CyclicSendDataFloatValuesByte10to13.ActivePowerPaSigned enum option -> 50
-- HW.CyclicSendDataFloatValuesByte10to13.ActivePowerPaSignedInverted enum option -> 51
-- HW.CyclicSendDataFloatValuesByte14to17.ActivePowerPaUnsigned enum option -> 50
-- HW.CyclicSendDataFloatValuesByte14to17.ActivePowerPaUnsignedInverted enum option -> 51
-- HW.CyclicSendDataFloatValuesByte2to5.ActivePowerPaSigned enum option -> 50
-- HW.CyclicSendDataFloatValuesByte2to5.ActivePowerPaSignedInverted enum option -> 51
-- HW.CyclicSendDataFloatValuesByte6to9.ActivePowerPaUnsigned enum option -> 50
-- HW.CyclicSendDataFloatValuesByte6to9.ActivePowerPaUnsignedInverted enum option -> 51
-- HW.DataFormat enum -> Possible values for property DataFormat
-- HW.DelayTimeForLimitMonitoring enum -> Possible values for property DelayTimeForLimitMonitoring
-- HW.DensityUnit enum -> Possible values for property DensityUnit
-- HW.DhcpSupportedMode enum -> DHCP Supported Modes
-- HW.DiagnosticsCycleCounter enum -> Possible values for property DiagnosticCycleCounter
-- HW.DiagnosticsCycleCounterPilotValves enum -> Possible values for property DiagnosticCycleCounterPilotValves
-- HW.DiagnosticsShortCircuitActive enum -> Possible values for property DiagnosticsShortCircuitActive
-- HW.Diag_HighErrorLimit enum -> Possible values for property Diag_HighErrorLimit
-- HW.Diag_HighWarningLimit enum -> Possible values for property Diag_HighWarningLimit
-- HW.Diag_LowErrorLimit enum -> Possible values for property Diag_LowErrorLimit
-- HW.Diag_LowWarningLimit enum -> Possible values for property Diag_LowWarningLimit
-- HW.DIMode enum -> Possible values for property DIMode
-- HW.DPMasterMode enum -> Possible values for property DPMasterMode
-- HW.DQMode enum -> Possible values for property DQMode
-- HW.DryRunningProtectionBehavior enum -> Possible values for property DryRunningProtectionBehavior
-- HW.EdgeSelectionReferenceSwitch enum -> Possible values for property EdgeSelectionReferenceSwitch
-- HW.EffectiveDirection enum -> Possible values for property EffectiveDirection
-- HW.Failsafe_MeasuringRange.Value0ToDot100 enum option -> 2
-- HW.Failsafe_SensorEvaluation.Value1oo2Evaluation2Channel3WireNonEquivalent enum option -> 3
-- HW.Failsafe_SensorEvaluation.Value1oo2Evaluation2Channel4WireNonEquivalent enum option -> 4
-- HW.Failsafe_SensorSupply.External enum option -> 9
-- HW.Failsafe_SensorSupply.Internal enum option -> 10
-- HW.Failsafe_ShortCircuitDiagnosticActive enum -> Possible values for property Failsafe_ShortCircuitDiagnosticActive
-- HW.Failsafe_ShortCircuitTestDuration enum -> Possible values for property Failsafe_ShortCircuitTestDuration
-- HW.Failsafe_ShortCircuitTestInterval enum -> Possible values for property Failsafe_ShortCircuitTestInterval
-- HW.FeedbackValue enum -> Possible values for property FeedbackValue
-- HW.FloatingMeanValueFilterActive enum -> Possible values for property FloatingMeanValueFilterActive
-- HW.ForceValues enum -> Possible values for property ForceValues
-- HW.FunctionInputS1 enum -> Possible values for property FunctionInputS1
-- HW.FunctionInputS2 enum -> Possible values for property FunctionInputS2
-- HW.FunctionInputS3 enum -> Possible values for property FunctionInputS3
-- HW.HardwareInterruptActive enum -> Possible values for property HardwareInterruptActive
-- HW.HighErrorLimit enum -> Possible values for property HighErrorLimit
-- HW.HighWarningLimit enum -> Possible values for property HighWarningLimit
-- HW.IIRLowPassFilterActive enum -> Possible values for property IIRLowPassFilterActive
-- HW.InputDI0 enum -> Possible values for property InputDI0
-- HW.InputDI1 enum -> Possible values for property InputDI1
-- HW.LevelSelection enum -> Possible values for property LevelSelection
-- HW.LimitMonitoringActive enum -> Possible values for property LimitMonitoringActive
-- HW.LimitSwitch enum -> Possible values for property LimitSwitch
-- HW.LimitValueType enum -> Possible values for property LimitValueType
-- HW.LinkAggregationFrameDistribution enum -> Set the type of distribution of frames on the individual links of an aggregation
-- HW.LinkAggregationLacpStatus enum -> Possible values for property LinkAggregationLacpStatus
-- HW.LinkAggregationPortState enum -> Possible values for property LinkAggregationPortState
-- HW.LinkAggregationVlanMode enum -> Specify how the link aggregation is entered in a VLAN
-- HW.LowErrorLimit enum -> Possible values for property LowErrorLimit
-- HW.LowWarningLimit enum -> Possible values for property LowWarningLimit
-- HW.MacRtLicensePurchased enum -> Possible values for property MacRtLicensePurchased
-- HW.MassFlowUnit enum -> Possible values for property MassFlowUnit
-- HW.MassValue enum -> Possible values for property MassValue
-- HW.MasterSecretConfiguration enum -> Name of the Master Secret Protection Types
-- HW.Mode enum -> Possible values for property Mode
-- HW.ModuleDistribution.Value4SubmodulesWith8DigitalInputs4SubmodulesWith8DigitalOutputs enum option -> 19
-- HW.ModuleDistribution.Value8SubmodulesWith8DigitalInputs enum option -> 18
-- HW.ModuleUseFromUserProgram enum -> Possible values for property ModuleUseFromUserProgram
-- HW.ModuloAxis enum -> Possible values for property ModuloAxis
-- HW.NotchFilterActive enum -> Possible values for property NotchFilterActive
-- HW.NoValveVoltageOrEvsActive enum -> Possible values for property NoValveVoltageOrEvsActive
-- HW.OpcUaServerCertificateSettings enum -> Possible values for property OpcUaServerCertificateSettings
-- HW.OperatingType.Voltage4WireStrainGaugeFullBridge enum option -> 29
-- HW.OperatingType.Voltage6WireStrainGaugeFullBridge enum option -> 30
-- HW.PcStationType.PcStationV2Dot9 enum option -> 9
-- HW.PilotValve enum -> Possible values for property PilotValve
-- HW.PnDnsConfigNameResolve enum -> Name resolution via DNS
-- HW.PreferenceDirection enum -> Possible values for property PreferenceDirection
-- HW.PressureIndicator enum -> Possible values for property PressureIndicator
-- HW.PressureMeasurement enum -> Possible values for property PressureMeasurement
-- HW.PressureOutsideTheDefinedRangeActive enum -> Possible values for property PressureOutsideTheDefinedRangeActive
-- HW.ProcessDataMode enum -> Possible values for property ProcessDataMode
-- HW.ProcessValue enum -> Possible values for property ProcessValue
-- HW.PulsePauseOnReversalOfDirection enum -> Possible values for property PulsePauseOnReversalOfDirection
-- HW.RelationMeasuredVariable enum -> Possible values for property RelationMeasuredVariable
-- HW.RunCurrent enum -> Possible values for property RunCurrent
-- HW.RunningCurrentIncreaseTime enum -> Possible values for property RunningCurrentIncreaseTime
-- HW.SetOutputDO.OffDqEqualTo0 enum option -> 0
-- HW.SignalType.IncrementalEncoderABPhaseShiftedQuadruple enum option -> 131
-- HW.SignalType.PulsePAndDirectionD enum option -> 132
-- HW.SimocodeDigitalConnections.DryRunningProtectionTripLevel enum option -> 199
-- HW.Smoothing.Activated50Hertz enum option -> 11
-- HW.Smoothing.Activated60Hertz enum option -> 12
-- HW.StandardVolumeFlow enum -> Possible values for property StandardVolumeFlow
-- HW.StandardVolumeUnit enum -> Possible values for property StandardVolumeUnit
-- HW.StateSignalFailureActive enum -> Possible values for property StateSignalFailureActive
-- HW.StateSignalFunctionControlActive enum -> Possible values for property StateSignalFunctionControlActive
-- HW.StateSignalMaintenanceActive enum -> Possible values for property StateSignalMaintenanceActive
-- HW.StateSignalOutOfSpecificationActive enum -> Possible values for property StateSignalOutOfSpecificationActive
-- HW.StepResolution enum -> Possible values for property StepResolution
-- HW.StopCurrent enum -> Possible values for property StopCurrent
-- HW.SubCategory enum -> Possible values for property SubCategory
-- HW.SwitchingCycleCounterActuatorInclDiagnostics enum -> Possible values for property SwitchingCycleCounterActuatorInclDiagnostics
-- HW.SwitchingCycleCounterPilotValveInclDiagnostics enum -> Possible values for property SwitchingCycleCounterPilotValveInclDiagnostics
-- HW.SwitchingFrequencyOverdrive enum -> Possible values for property SwitchingFrequencyOverdrive
-- HW.TypeInputS1 enum -> Possible values for property TypeInputS1
-- HW.TypeInputS2 enum -> Possible values for property TypeInputS2
-- HW.TypeInputS3 enum -> Possible values for property TypeInputS3
-- HW.VolumeFlowUnit enum -> Possible values for property VolumeFlowUnit
-- HW.VolumeUnit enum -> Possible values for property VolumeUnit
-- Library.Types.CleanUpMode enum -> Cleanup library options to control deletion of types.
-- Library.Types.ConsistencySatus enum -> Consistency states of the Library types and folders
-- Library.Types.DeleteUnusedVersionsMode enum -> Options used to control whether or not the operation will delete unused versions
-- Library.Types.ForceUpdateMode enum -> Options used to control whether or not perform force update
-- Library.Types.HarmonizeProjectOptions enum -> Harmonize project options to control harmonizing of paths in project.
-- Library.Types.LibraryType.Status property -> The consistency state of the library type
-- Library.Types.LibraryTypeFolder.Status property -> The consistency state of the library type
-- Library.Types.LibraryTypeVersion.IsDefault property -> True if the version is a default version, otherwise false.
-- Library.Types.LibraryTypeVersion.SetAsDefault() method -> Sets the version as default version of a type.
-- Library.Types.StructureConflictResolutionMode enum -> Options used to select the 'Structure Conflict Resolution Mode' for the user during the update operation
-- Library.ILibrary.HarmonizeProject() method -> Harmonizes the project with the library.
-- Library.ProjectLibrary.CleanUpLibrary() method -> Cleans up the library.
-- Library.UserGlobalLibrary.CleanUpLibrary() method -> Cleans up the library.
-- Online.Configurations.OnlineConfigurationSelection class -> Online configuration that provide choices.
-- Online.Configurations.TlsVerificationConfiguration class -> Online configuration for TLS Communication.
-- Online.Configurations.TlsVerificationConfigurationSelection enum -> Selection if the connection can be trustable or not.
-- Online.OnlineProvider.ResetPlcMasterSecret() method -> Delete the Plc Master Secret
-- Online.OnlineProvider.SetPlcMasterSecret() method -> Performs the reset of the plc master secure password
-- Safety.AssignmentOfBlockNumbers class -> Enables access to attributes for configuring block number ranges of system-generated safety blocks.
-- Safety.BlockNumbersManagementMode enum -> Defines modes for managing the number blocks of F-system blocks
-- Safety.RuntimeGroup class -> Enables access to information and methods regarding the Runtime Groups of the Safety program.
-- Safety.RuntimeGroupComposition class -> Represents a Safety Runtime Group with its associated information and actions for working with them.
-- Safety.SafetyAdministration class -> Provides access to Safety-related information and configuration.
-- Safety.SafetyPrintout class -> Service providing Safety Printout functionality for Plus PLCs.
-- Safety.SafetyPrintoutFilePrinter enum -> Defines the available built-in Windows printer drivers which support printing to file.
-- Safety.SafetyPrintoutOption enum -> Defines the options for Safety Printout.
-- Safety.SafetySettings class -> Enables access to information and methods regarding the Settings of the Safety program.
-- Safety.Signature class -> Provides the Safety Signature.
-- Safety.SafetySignatureComposition class -> Composition of the Safety Signature.
-- Safety.SafetySignatureProvider class -> Represents the Safety Signature of a object.
-- Safety.SafetySignatureType enum -> Defines the types of Safety Signature.
-- Safety.SafetySystemVersion class -> Represents a Safety system version value.
-- SiVArc.CopyRule.Condition property -> The condition of the copy rule.
-- SiVArc.CopyRule.ConditionOperator property -> Condition operator of the copy rule.
-- SiVArc.CopyRule.FolderStructure property -> Name of generated folder structure
-- SiVArc.CopyRuleGroup.Condition property -> The condition of the copy rule group.
-- SiVArc.CopyRuleGroup.ConditionOperator property -> Condition operator of the copy rule group.
-- SiVArc.ScreenRule.LibraryScreen property -> Screen master copy of screen type.
-- SiVArc.SivarcDataProvider class -> Sivarc data provider for blocks and compile units
-- SiVArc.TagDefinition class -> User defined tag definition
-- SiVArc.TagDefinitionComposition class -> Composition of the tag definition.
-- SiVArc.TextDefinition class -> User defined text definition
-- SiVArc.TextDefinitionComposition class -> Composition of the text definition.
-- SW.Alarm.AlarmClassDataProvider class -> Common alarm classes
-- SW.Alarm.AlarmClassExportImportResult class -> Result of the export/import of alarm classes
-- SW.Alarm.AlarmClassExportImportResultMessage class -> Message generated during alarm class export/import
-- SW.Alarm.AlarmClassExportImportResultMessageComposition class -> Composition of the alarm class export/import result message.
-- SW.Alarm.AlarmClassExportImportResultState enum -> Result state of common alarm class export or import
-- SW.Blocks.DataBlock.Interface property -> Interface of all members of a block
-- SW.Blocks.ProgrammingLanguage.CEM enum option -> 27
-- SW.WatchAndForceTables.PlcForceTableEntry.Address property -> Address of the tag
-- SW.WatchAndForceTables.PlcForceTableEntry.DisplayFormat property -> DisplayFormat
-- SW.WatchAndForceTables.PlcForceTableEntry.ForceIntention property -> Force intention of the user
-- SW.WatchAndForceTables.PlcForceTableEntry.ForceValue property -> Force value of the user
-- SW.WatchAndForceTables.PlcForceTableEntry.MonitorTrigger property -> The trigger used for monitoring
-- SW.WatchAndForceTables.PlcForceTableEntry.Name property -> Name of the tag
-- SW.WatchAndForceTables.PlcWatchTableEntry.Address property -> Address of the tag
-- SW.WatchAndForceTables.PlcWatchTableEntry.DisplayFormat property -> DisplayFormat
-- SW.WatchAndForceTables.PlcWatchTableEntry.ModifyIntention property -> The user's modify intention
-- SW.WatchAndForceTables.PlcWatchTableEntry.ModifyTrigger property -> The trigger used for modify
-- SW.WatchAndForceTables.PlcWatchTableEntry.ModifyValue property -> The value that shall be used for modify.
-- SW.WatchAndForceTables.PlcWatchTableEntry.MonitorTrigger property -> The trigger used for monitoring
-- SW.WatchAndForceTables.PlcWatchTableEntry.Name property -> Name of the tag
-- Upload.Configurations.UploadPasswordConfiguration.IsSecureCommunication property -> True if the communication is secure, otherwise false.
-- AuthenticationEventArgs class -> AuthenticationEventArgs to provide AuthenticationTypeProvider and credentials from user
-- AuthenticationTypeProvider enum -> Provides different types of AuthenticationType
-- LicenseNotFoundException class -> Throws when license not found to execute a TIA portal operation using openness API.
-- ProjectBase class -> Base class for all project types.
-- TiaPortal.LocalSessions property -> Multiuser LocalSessions
-- TiaPortal.ProjectServers property -> Multiuser ProjectServers
-
-#### Unknown Effects
-
-- Connection.ConnectionConfiguration.OnlineLegitimation other -> Usage unclear.
-- TiaPortal.Authentication other -> Usage unclear.
+- HW.Features.DisplayProtection class -> Represents the Display Protection Service
+- HW.Features.ImConnection class -> Represents the IM Connection Service
+- HW.Features.ModuleDescriptionUpdater class -> Represents the Module Description Updater Service
+- HW.Features.SubnetFeature class -> Base class for Subnet related services
+- HW.Features.MrpDomainOwner class -> Represents the MRP Domain Owner Service
+- HW.Features.NetworkInterfaceAssociation class -> Association of network interfaces
+- HW.Features.OpcUaUserManagement class -> Represents the OPC UA User Management Service
+- HW.Features.SyncDomainOwner class -> Represents the Sync Domain Owner Service
+- HW.Features.WatchAndForceTableAccessManager class -> Represents a Webserver watch And forceTables
+- HW.Features.WebDBGenerateOptions enum -> The list of possible generate options for actions
+- HW.Features.WebserverUserDefinedPages class -> Represents the Webserver User Defined Pages Service
+- HW.Features.WebserverUserManagement class -> Represents the Webserver User Management Service
+- HW.ActivePowerLowerTripLevelResponse enum -> Possible values for property ActivePowerLowerTripLevelResponse
+- HW.ActivePowerLowerWarningLevelResponse enum -> Possible values for property ActivePowerLowerWarningLevelResponse
+- HW.ActivePowerUpperWarningLevelResponse enum -> Possible values for property ActivePowerUpperWarningLevelResponse
+- HW.AM1InputsActiveInputs enum -> Possible values for property AM1InputsActiveInputs
+- HW.AM1InputsInputSignal enum -> Possible values for property AM1InputsInputSignal
+- HW.AM1InputsResponseToOpenCircuit enum -> Possible values for property AM1InputsResponseToOpenCircuit
+- HW.AM1LowerTripLevelActiveStatus enum -> Possible values for property AM1LowerTripLevelActiveStatus
+- HW.AM1LowerTripLevelResponse enum -> Possible values for property AM1LowerTripLevelResponse
+- HW.AM1LowerWarningLevelActiveStatus enum -> Possible values for property AM1LowerWarningLevelActiveStatus
+- HW.AM1LowerWarningLevelResponse enum -> Possible values for property AM1LowerWarningLevelResponse
+- HW.AM1OutputsOutputSignal enum -> Possible values for property AM1OutputsOutputSignal
+- HW.AM1UpperTripLevelActiveStatus enum -> Possible values for property AM1UpperTripLevelActiveStatus
+- HW.AM1UpperTripLevelResponse enum -> Possible values for property AM1UpperTripLevelResponse
+- HW.AM1UpperWarningLevelActiveStatus enum -> Possible values for property AM1UpperWarningLevelActiveStatus
+- HW.AM1UpperWarningLevelResponse enum -> Possible values for property AM1UpperWarningLevelResponse
+- HW.AM2InputsActiveInputs enum -> Possible values for property AM2InputsActiveInputs
+- HW.AM2InputsInputSignal enum -> Possible values for property AM2InputsInputSignal
+- HW.AM2InputsResponseToOpenCircuit enum -> Possible values for property AM2InputsResponseToOpenCircuit
+- HW.AM2LowerTripLevelActiveStatus enum -> Possible values for property AM2LowerTripLevelActiveStatus
+- HW.AM2LowerTripLevelResponse enum -> Possible values for property AM2LowerTripLevelResponse
+- HW.AM2LowerWarningLevelActiveStatus enum -> Possible values for property AM2LowerWarningLevelActiveStatus
+- HW.AM2LowerWarningLevelResponse enum -> Possible values for property AM2LowerWarningLevelResponse
+- HW.AM2OutputsOutputSignal enum -> Possible values for property AM2OutputsOutputSignal
+- HW.AM2UpperTripLevelActiveStatus enum -> Possible values for property AM2UpperTripLevelActiveStatus
+- HW.AM2UpperTripLevelResponse enum -> Possible values for property AM2UpperTripLevelResponse
+- HW.AM2UpperWarningLevelActiveStatus enum -> Possible values for property AM2UpperWarningLevelActiveStatus
+- HW.AM2UpperWarningLevelResponse enum -> Possible values for property AM2UpperWarningLevelResponse
+- HW.BasicUnitInputsDebouncingTimes enum -> Possible values for property BasicUnitInputsDebouncingTimes
+- HW.BehaviorOfCounterValueAfterCaptureDI0 enum -> Possible values for property BehaviorOfCounterValueAfterCaptureDI0
+- HW.BehaviorOfCounterValueAfterCaptureDI1 enum -> Possible values for property BehaviorOfCounterValueAfterCaptureDI1
+- HW.BehaviorOfCounterValueAfterCaptureDI2 enum -> Possible values for property BehaviorOfCounterValueAfterCaptureDI2
+- HW.BehaviorOfDI4 enum -> Possible values for property BehaviorOfDI4
+- HW.BehaviorOfDI5 enum -> Possible values for property BehaviorOfDI5
+- HW.BehaviorOfDI6 enum -> Possible values for property BehaviorOfDI6
+- HW.BehaviorOfDI7 enum -> Possible values for property BehaviorOfDI7
+- HW.BlockingCurrent enum -> Possible values for property BlockingCurrent
+- HW.Brightness enum -> Possible values for property Brightness
+- HW.CableLocking enum -> Possible values for property CableLocking
+- HW.CableLockingFeedback enum -> Possible values for property CableLockingFeedback
+- HW.Calculator2OperatingMode enum -> Possible values for property Calculator2OperatingMode
+- HW.Calculator2Operator enum -> Possible values for property Calculator2Operator
+- HW.Calculator3Operator1 enum -> Possible values for property Calculator3Operator1
+- HW.Calculator3Operator2 enum -> Possible values for property Calculator3Operator2
+- HW.Calculator3Operator3 enum -> Possible values for property Calculator3Operator3
+- HW.Calculator3Priority1 enum -> Possible values for property Calculator3Priority1
+- HW.Calculator3Priority2 enum -> Possible values for property Calculator3Priority2
+- HW.Calculator3Priority3 enum -> Possible values for property Calculator3Priority3
+- HW.Calculator4Operator1 enum -> Possible values for property Calculator4Operator1
+- HW.Calculator4Operator2 enum -> Possible values for property Calculator4Operator2
+- HW.Calculator4Operator3 enum -> Possible values for property Calculator4Operator3
+- HW.Calculator4Priority1 enum -> Possible values for property Calculator4Priority1
+- HW.Calculator4Priority2 enum -> Possible values for property Calculator4Priority2
+- HW.Calculator4Priority3 enum -> Possible values for property Calculator4Priority3
+- HW.ChannelConfiguration enum -> Possible values for property ChannelConfiguration
+- HW.ChannelTypeForIO enum -> Possible values for property ChannelTypeForIO
+- HW.ChatterMonitoring enum -> Possible values for property ChatterMonitoring
+- HW.CodeType enum -> Possible values for property CodeType
+- HW.CompatibilityMode3UF50BasicType enum -> Possible values for property CompatibilityMode3UF50BasicType
+- HW.CompatibilityMode3UF50Mode enum -> Possible values for property CompatibilityMode3UF50Mode
+- HW.ComputerNameIdenticalToPcStationName enum -> Possible values for property ComputerNameIdenticalToPcStationName
+- HW.ConfigurationDQOrDIGroup0 enum -> Possible values for property ConfigurationDQOrDIGroup0
+- HW.ConfigurationDQOrDIGroup1 enum -> Possible values for property ConfigurationDQOrDIGroup1
+- HW.ConnectionType enum -> Possible values for property ConnectionType
+- HW.ContactorFeedback enum -> Possible values for property ContactorFeedback
+- HW.CosPhiLowerTripLevelResponse enum -> Possible values for property CosPhiLowerTripLevelResponse
+- HW.CosPhiLowerWarningLevelResponse enum -> Possible values for property CosPhiLowerWarningLevelResponse
+- HW.CountDirection enum -> Possible values for property CountDirection
+- HW.CountDirectionDQ0 enum -> Possible values for property CountDirectionDQ0
+- HW.CountDirectionDQ1 enum -> Possible values for property CountDirectionDQ1
+- HW.CountDirectionForSynchronization enum -> Possible values for property CountDirectionForSynchronization
+- HW.CounterConfiguration enum -> Possible values for property CounterConfiguration
+- HW.CurrentLimitsLowerTripLevelResponse enum -> Possible values for property CurrentLimitsLowerTripLevelResponse
+- HW.CurrentLimitsLowerWarningLevelResponse enum -> Possible values for property CurrentLimitsLowerWarningLevelResponse
+- HW.CurrentLimitsUpperTripLevelResponse enum -> Possible values for property CurrentLimitsUpperTripLevelResponse
+- HW.CurrentLimitsUpperWarningLevelResponse enum -> Possible values for property CurrentLimitsUpperWarningLevelResponse
+- HW.CurrentMeasurement enum -> Possible values for property CurrentMeasurement
+- HW.CurrentTransformerForL1L2L3AndNeutralConductor enum -> Possible values for property CurrentTransformerForL1L2L3AndNeutralConductor
+- HW.CurrentTransformerSecondaryCurrent enum -> Possible values for property CurrentTransformerSecondaryCurrent
+- HW.CyclicSendDataFloatValuesByte10to13 enum -> Possible values for property CyclicSendDataFloatValuesByte10to13
+- HW.CyclicSendDataFloatValuesByte14to17 enum -> Possible values for property CyclicSendDataFloatValuesByte14to17
+- HW.CyclicSendDataFloatValuesByte2to5 enum -> Possible values for property CyclicSendDataFloatValuesByte2to5
+- HW.CyclicSendDataFloatValuesByte6to9 enum -> Possible values for property CyclicSendDataFloatValuesByte6to9
+- HW.DataBits enum -> Possible values for property DataBits
+- HW.DataFlowControl enum -> Possible values for property DataFlowControl
+- HW.DiagnosticParameterMode enum -> Possible values for property DiagnosticParameterMode
+- HW.DiagnosticsPlug enum -> Possible values for property DiagnosticsPlug
+- HW.DiagnosticsGroup enum -> Possible values for property DiagnosticsGroup
+- HW.DiagnosticsInterrupt enum -> Possible values for property DiagnosticsInterrupt
+- HW.DiagnosticsNoSupplyVoltage enum -> Possible values for property DiagnosticsNoSupplyVoltage
+- HW.DiagnosticsOverflow enum -> Possible values for property DiagnosticsOverflow
+- HW.DiagnosticsPort1 enum -> Possible values for property DiagnosticsPort1
+- HW.DiagnosticsPort2 enum -> Possible values for property DiagnosticsPort2
+- HW.DiagnosticsPort3 enum -> Possible values for property DiagnosticsPort3
+- HW.DiagnosticsPort4 enum -> Possible values for property DiagnosticsPort4
+- HW.DiagnosticsRedundantPowerSupply enum -> Possible values for property DiagnosticsRedundantPowerSupply
+- HW.DiagnosticsShortCircuitToGround enum -> Possible values for property DiagnosticsShortCircuitToGround
+- HW.DiagnosticsShortCircuitToLplus enum -> Possible values for property DiagnosticsShortCircuitToLplus
+- HW.DiagnosticsUnderflow enum -> Possible values for property DiagnosticsUnderflow
+- HW.DiagnosticsWireBreak enum -> Possible values for property DiagnosticsWireBreak
+- HW.DiagnosticsWireBreakLimit enum -> Possible values for property DiagnosticsWireBreakLimit
+- HW.DigitalInputDirection enum -> Possible values for property DigitalInputDirection
+- HW.DisplayAutoLogOffTime enum -> Possible values for property DisplayAutoLogOffTime
+- HW.DisplayDefaultLanguage enum -> Possible values for property DisplayDefaultLanguage
+- HW.DisplayTimeToEnergySavingMode enum -> Possible values for property DisplayTimeToEnergySavingMode
+- HW.DisplayTimeToStandbyMode enum -> Possible values for property DisplayTimeToStandbyMode
+- HW.DisplayUpdateInterval enum -> Possible values for property DisplayUpdateInterval
+- HW.DMInputsDebouncingTimes enum -> Possible values for property DMInputsDebouncingTimes
+- HW.DpOperatingMode enum -> Possible values for property DpOperatingMode
+- HW.DpProtocolMode enum -> Possible values for property DpProtocolMode
+- HW.DriveEnableOutput enum -> Possible values for property DriveEnableOutput
+- HW.DriveReadyInput enum -> Possible values for property DriveReadyInput
+- HW.EdgeSelection enum -> Possible values for property EdgeSelection
+- HW.EdgeSelectionDI0 enum -> Possible values for property EdgeSelectionDI0
+- HW.EdgeSelectionDI1 enum -> Possible values for property EdgeSelectionDI1
+- HW.EdgeSelectionDI2 enum -> Possible values for property EdgeSelectionDI2
+- HW.EMGroundFaultResponse enum -> Possible values for property EMGroundFaultResponse
+- HW.EMGroundFaultSensorFaultResponse enum -> Possible values for property EMGroundFaultSensorFaultResponse
+- HW.EMTripLevelActiveStatus enum -> Possible values for property EMTripLevelActiveStatus
+- HW.EMTripLevelResponse enum -> Possible values for property EMTripLevelResponse
+- HW.EMWarningActiveStatus enum -> Possible values for property EMWarningActiveStatus
+- HW.EMWarningLevelResponse enum -> Possible values for property EMWarningLevelResponse
+- HW.EncoderEvaluation enum -> Possible values for property EncoderEvaluation
+- HW.EncoderType enum -> Possible values for property EncoderType
+- HW.EndValueEnergyCounter enum -> Possible values for property EndValueEnergyCounter
+- HW.ExternalFault1ActiveSatus enum -> Possible values for property ExternalFault1ActiveSatus
+- HW.ExternalFault1Response enum -> Possible values for property ExternalFault1Response
+- HW.ExternalFault1Type enum -> Possible values for property ExternalFault1Type
+- HW.ExternalFault2ActiveSatus enum -> Possible values for property ExternalFault2ActiveSatus
+- HW.ExternalFault2Response enum -> Possible values for property ExternalFault2Response
+- HW.ExternalFault2Type enum -> Possible values for property ExternalFault2Type
+- HW.ExternalFault3ActiveSatus enum -> Possible values for property ExternalFault3ActiveSatus
+- HW.ExternalFault3Response enum -> Possible values for property ExternalFault3Response
+- HW.ExternalFault3Type enum -> Possible values for property ExternalFault3Type
+- HW.ExternalFault4ActiveSatus enum -> Possible values for property ExternalFault4ActiveSatus
+- HW.ExternalFault4Response enum -> Possible values for property ExternalFault4Response
+- HW.ExternalFault4Type enum -> Possible values for property ExternalFault4Type
+- HW.ExternalFault5ActiveSatus enum -> Possible values for property ExternalFault5ActiveSatus
+- HW.ExternalFault5Response enum -> Possible values for property ExternalFault5Response
+- HW.ExternalFault5Type enum -> Possible values for property ExternalFault5Type
+- HW.ExternalFault6ActiveSatus enum -> Possible values for property ExternalFault6ActiveSatus
+- HW.ExternalFault6Response enum -> Possible values for property ExternalFault6Response
+- HW.ExternalFault6Type enum -> Possible values for property ExternalFault6Type
+- HW.Failsafe_Activated enum -> Possible values for property Failsafe_Activated
+- HW.Failsafe_ActivatedLightTest enum -> Possible values for property Failsafe_ActivatedLightTest
+- HW.Failsafe_ChatterMonitoring enum -> Possible values for property Failsafe_ChatterMonitoring
+- HW.Failsafe_DiagnosisWireBreak enum -> Possible values for property Failsafe_DiagnosisWireBreak
+- HW.Failsafe_DisableDarkTestFor48Hours enum -> Possible values for property Failsafe_DisableDarkTestFor48Hours
+- HW.Failsafe_DiscrepancyTimeUnlimited enum -> Possible values for property Failsafe_DiscrepancyTimeUnlimited
+- HW.Failsafe_FCapabilityActivated enum -> Possible values for property Failsafe_FCapabilityActivated
+- HW.Failsafe_InterferenceFrequencySuppression enum -> Possible values for property Failsafe_InterferenceFrequencySuppression
+- HW.Failsafe_MeasuringRange enum -> Possible values for property Failsafe_MeasuringRange
+- HW.Failsafe_ShortCircuitTest_0 enum -> Possible values for property Failsafe_ShortCircuitTest_0
+- HW.Failsafe_ShortCircuitTest_1 enum -> Possible values for property Failsafe_ShortCircuitTest_1
+- HW.Failsafe_ShortCircuitTest_2 enum -> Possible values for property Failsafe_ShortCircuitTest_2
+- HW.Failsafe_ShortCircuitTest_3 enum -> Possible values for property Failsafe_ShortCircuitTest_3
+- HW.Failsafe_ShortCircuitTest_4 enum -> Possible values for property Failsafe_ShortCircuitTest_4
+- HW.Failsafe_ShortCircuitTest_5 enum -> Possible values for property Failsafe_ShortCircuitTest_5
+- HW.Failsafe_ShortCircuitTest_6 enum -> Possible values for property Failsafe_ShortCircuitTest_6
+- HW.Failsafe_ShortCircuitTest_7 enum -> Possible values for property Failsafe_ShortCircuitTest_7
+- HW.Failsafe_Smoothing enum -> Possible values for property Failsafe_Smoothing
+- HW.Failsafe_StartupTest enum -> Possible values for property Failsafe_StartupTest
+- HW.Failsafe_UnitValue enum -> Possible values for property Failsafe_UnitValue
+- HW.FilterFrequency enum -> Possible values for property FilterFrequency
+- HW.ForceTableAccessRule class -> Represents a ForceTableAccessRule object
+- HW.ForceTableAccessRuleComposition class -> Composition of ForceTableAccessRule objects
+- HW.FrequencyForCapture enum -> Possible values for property FrequencyForCapture
+- HW.FunctionDI enum -> Possible values for property FunctionDI
+- HW.FunctionDI0 enum -> Possible values for property FunctionDI0
+- HW.FunctionDI1 enum -> Possible values for property FunctionDI1
+- HW.FunctionDI2 enum -> Possible values for property FunctionDI2
+- HW.GateControlActive enum -> Possible values for property GateControlActive
+- HW.GenerateDeviceNamesAutomatically enum -> Possible values for property GenerateDeviceNamesAutomatically
+- HW.HardwareInterrupt enum -> Possible values for property HardwareInterrupt
+- HW.HardwareInterruptFallingEdgeActive enum -> Possible values for property HardwareInterruptFallingEdgeActive
+- HW.HardwareInterruptRisingEdgeActive enum -> Possible values for property HardwareInterruptRisingEdgeActive
+- HW.HighLimitCurrent enum -> Possible values for property HighLimitCurrent
+- HW.HscDI0 enum -> Possible values for property HscDI0
+- HW.HscDI1 enum -> Possible values for property HscDI1
+- HW.HscDQ1 enum -> Possible values for property HscDQ1
+- HW.HwEnable enum -> Possible values for property HwEnable
+- HW.IdentificationMode enum -> Possible values for property IdentificationMode
+- HW.Input1Action enum -> Possible values for property Input1Action
+- HW.Input1Level enum -> Possible values for property Input1Level
+- HW.Input1Signal enum -> Possible values for property Input1Signal
+- HW.Input2Action enum -> Possible values for property Input2Action
+- HW.Input2Level enum -> Possible values for property Input2Level
+- HW.Input2Signal enum -> Possible values for property Input2Signal
+- HW.Input3Action enum -> Possible values for property Input3Action
+- HW.Input3Level enum -> Possible values for property Input3Level
+- HW.Input3Signal enum -> Possible values for property Input3Signal
+- HW.InputA enum -> Possible values for property InputA
+- HW.InputB enum -> Possible values for property InputB
+- HW.InputDelay enum -> Possible values for property InputDelay
+- HW.InputDelayDI4 enum -> Possible values for property InputDelayDI4
+- HW.InputDelayDI5 enum -> Possible values for property InputDelayDI5
+- HW.InputDelayDI6 enum -> Possible values for property InputDelayDI6
+- HW.InputDelayDI7 enum -> Possible values for property InputDelayDI7
+- HW.InputN enum -> Possible values for property InputN
+- HW.InputOrOutputType enum -> Possible values for property InputOrOutputType
+- HW.InspectionOrBackupLevel enum -> Possible values for property InspectionOrBackupLevel
+- HW.InspectionOrBackupLevelPort1 enum -> Possible values for property InspectionOrBackupLevelPort1
+- HW.InspectionOrBackupLevelPort2 enum -> Possible values for property InspectionOrBackupLevelPort2
+- HW.InspectionOrBackupLevelPort3 enum -> Possible values for property InspectionOrBackupLevelPort3
+- HW.InspectionOrBackupLevelPort4 enum -> Possible values for property InspectionOrBackupLevelPort4
+- HW.InterfaceStandard enum -> Possible values for property InterfaceStandard
+- HW.InterfaceType.ProfidriveIntegrated enum option -> 10
+- HW.InterfaceType.Wan enum option -> 9
+- HW.InterfaceFrequencySuppression enum -> Possible values for property InterfaceFrequencySuppression
+- HW.InternalGroundFaultTripResponse enum -> Possible values for property InternalGroundFaultTripResponse
+- HW.InternalGroundFaultWarningResponse enum -> Possible values for property InternalGroundFaultWarningResponse
+- HW.ISyncDomainParticipant class -> Repesents objects which can participate in sync domain
+- HW.ISyncDomainParticipantAssociation class -> Association of SyncDomainParticipant objects
+- HW.LimitMonitor1ActiveStatus enum -> Possible values for property LimitMonitor1ActiveStatus
+- HW.LimitMonitor1Type enum -> Possible values for property LimitMonitor1Type
+- HW.LimitMonitor2ActiveStatus enum -> Possible values for property LimitMonitor2ActiveStatus
+- HW.LimitMonitor2Type enum -> Possible values for property LimitMonitor2Type
+- HW.LimitMonitor3ActiveStatus enum -> Possible values for property LimitMonitor3ActiveStatus
+- HW.LimitMonitor3Type enum -> Possible values for property LimitMonitor3Type
+- HW.LimitMonitor4ActiveStatus enum -> Possible values for property LimitMonitor4ActiveStatus
+- HW.LimitMonitor4Type enum -> Possible values for property LimitMonitor4Type
+- HW.LimitMonitor5ActiveStatus enum -> Possible values for property LimitMonitor5ActiveStatus
+- HW.LimitMonitor5Type enum -> Possible values for property LimitMonitor5Type
+- HW.LimitMonitor6ActiveStatus enum -> Possible values for property LimitMonitor6ActiveStatus
+- HW.LimitMonitor6Type enum -> Possible values for property LimitMonitor6Type
+- HW.LineFrequency enum -> Possible values for property LineFrequency
+- HW.LoadType enum -> Possible values for property LoadType
+- HW.LowerCurrentWarningLimit enum -> Possible values for property LowerCurrentWarningLimit
+- HW.LowLimitCurrent enum -> Possible values for property LowLimitCurrent
+- HW.MainCountingDirection enum -> Possible values for property MainCountingDirection
+- HW.MaximumBufferedReceivedFrames enum -> Possible values for property MaximumBufferedReceivedFrames
+- HW.MeasuredVariable enum -> Possible values for property MeasuredVariable
+- HW.MeasuringInput enum -> Possible values for property MeasuringInput
+- HW.ModuleDistribution enum -> Possible values for property ModuleDistribution
+- HW.ModuleVariant enum -> Possible values for property ModuleVariant
+- HW.MonitoringWindow enum -> Possible values for property MonitoringWindow
+- HW.MonoflopTime enum -> Possible values for property MonoflopTime
+- HW.MrpDomain class -> Media Redundancy Protocol (MRP) domain
+- HW.MrpDomainComposition class -> Composition of MrpDomain objects
+- HW.NetType.ProfidriveIntegrated enum option -> 10
+- HW.NeutralConductorCurrentTransformerSecondaryCurrent enum -> Possible values for property NeutralConductorCurrentTransformerSecondaryCurrent
+- HW.NonVolatileElement1Type enum -> Possible values for property NonVolatileElement1Type
+- HW.NonVolatileElement2Type enum -> Possible values for property NonVolatileElement2Type
+- HW.NonVolatileElement3Type enum -> Possible values for property NonVolatileElement3Type
+- HW.NonVolatileElement4Type enum -> Possible values for property NonVolatileElement4Type
+- HW.NumberOfSequences enum -> Possible values for property NumberOfSequences
+- HW.OpcUaMinimumSamplingInterval enum -> Possible values for property OpcUaMinimumSamplingInterval
+- HW.OpcUaPurchasedLicense enum -> Possible values for property OpcUaPurchasedLicense
+- HW.OpcUaRequiredLicense enum -> Possible values for property OpcUaRequiredLicense
+- HW.OpcUaUser class -> Represents a OpcUa User Management object
+- HW.OpcUaUserComposition class -> Composition of OpcUaUser objects
+- HW.OPDFaults enum -> Possible values for property OPDFaults
+- HW.OPDKeepIlluminationOnFor enum -> Possible values for property OPDKeepIlluminationOnFor
+- HW.OPDLanguage enum -> Possible values for property OPDLanguage
+- HW.OPDProfiles enum -> Possible values for property OPDProfiles
+- HW.OPDReturnToOperationsDisplayAfter enum -> Possible values for property OPDReturnToOperationsDisplayAfter
+- HW.OPDWarnings enum -> Possible values for property OPDWarnings
+- HW.OperatingMode.OversamplingInput enum option -> 283
+- HW.OperatingMode.OversamplingOutput enum option -> 282
+- HW.OperatingRange.Value0To10mA enum option -> 106
+- HW.OperatingRange.Value4To20mAHART enum option -> 107
+- HW.OperatingRangeOutput enum -> Possible values for property OperatingRangeOutput
+- HW.OperatingType.CountingOrPositionInput enum option -> 26
+- HW.OperatingType.Measuring enum option -> 27
+- HW.OperatingTypeOutput enum -> Possible values for property OperatingTypeOutput
+- HW.OperationalProtectionOffResponsePositioner enum -> Possible values for property OperationalProtectionOffResponsePositioner
+- HW.OperationalProtectionOffStandardFunctionsType enum -> Possible values for property OperationalProtectionOffStandardFunctionsType
+- HW.OutputA enum -> Possible values for property OutputA
+- HW.OutputB enum -> Possible values for property OutputB
+- HW.OutputFilterDown enum -> Possible values for property OutputFilterDown
+- HW.OutputFilterUp enum -> Possible values for property OutputFilterUp
+- HW.ParameterAssignmentOfPnInterfaceByHigherLevelIoController enum -> Possible values for property ParameterAssignmentOfPnInterfaceByHigherLevelIoController
+- HW.ParameterSettings enum -> Possible values for property ParameterSettings
+- HW.Parity enum -> Possible values for property Parity
+- HW.PcStationType.PcStationV2Dot8 enum option -> 8
+- HW.PhysicalQuantity enum -> Possible values for property PhysicalQuantity
+- HW.PortConfiguration enum -> Possible values for property PortConfiguration
+- HW.PortMode enum -> Possible values for property PortMode
+- HW.PortModePort1 enum -> Possible values for property PortModePort1
+- HW.PortModePort2 enum -> Possible values for property PortModePort2
+- HW.PortModePort3 enum -> Possible values for property PortModePort3
+- HW.PortModePort4 enum -> Possible values for property PortModePort4
+- HW.PotentialGroup enum -> Possible values for property PotentialGroup
+- HW.PowerFailureMonitoringType enum -> Possible values for property PowerFailureMonitoringType
+- HW.PreConfigurationForDIDQ enum -> Possible values for property PreConfigurationForDIDQ
+- HW.PrewarningLimitForMotorHeating enum -> Possible values for property PrewarningLimitForMotorHeating
+- HW.Priority enum -> Possible values for property Priority
+- HW.ProcessDataVariant enum -> Possible values for property ProcessDataVariant
+- HW.ProDiagUsedLicenses enum -> Possible values for property ProDiagUsedLicenses
+- HW.ProtectionUnitForSummarizeOfSecurityEvents enum -> Possible values for property ProtectionUnitForSummarizeOfSecurityEvents
+- HW.ProtocolCompatibility enum -> Possible values for property ProtocolCompatibility
+- HW.PulseOutput enum -> Possible values for property PulseOutput
+- HW.PulseStretching enum -> Possible values for property PulseStretching
+- HW.PulseWidthModulationFrequency enum -> Possible values for property PulseWidthModulationFrequency
+- HW.PulseWidthModulationTimePeriod enum -> Possible values for property PulseWidthModulationTimePeriod
+- HW.PwmOutputFormat enum -> Possible values for property PwmOutputFormat
+- HW.ReactionToCountingLimit enum -> Possible values for property ReactionToCountingLimit
+- HW.ReactionToCpuStop enum -> Possible values for property ReactionToCpuStop
+- HW.ReactionToCpuStopforDQ1 enum -> Possible values for property ReactionToCpuStopforDQ1
+- HW.ReactionToError enum -> Possible values for property ReactionToError
+- HW.ReactionToGateStart enum -> Possible values for property ReactionToGateStart
+- HW.ReactionToSignalN enum -> Possible values for property ReactionToSignalN
+- HW.ReceiveLineInitialState enum -> Possible values for property ReceiveLineInitialState
+- HW.ReferenceJunction enum -> Possible values for property ReferenceJunction
+- HW.ReferenceSwitchInput enum -> Possible values for property ReferenceSwitchInput
+- HW.ResetWhenCountingLimitIsViolated enum -> Possible values for property ResetWhenCountingLimitIsViolated
+- HW.ResponseToOverload enum -> Possible values for property ResponseToOverload
+- HW.ResponseToResidualCurrentDetection enum -> Possible values for property ResponseToResidualCurrentDetection
+- HW.ResponseToThermalMotorModelAtRestart enum -> Possible values for property ResponseToThermalMotorModelAtRestart
+- HW.ReverseCurrentDirection enum -> Possible values for property ReverseCurrentDirection
+- HW.SafetyRelatedTrippingReset enum -> Possible values for property SafetyRelatedTrippingReset
+- HW.SafetyRelatedTrippingResponse enum -> Possible values for property SafetyRelatedTrippingResponse
+- HW.SelectLevel enum -> Possible values for property SelectLevel
+- HW.SelectLevelDI0 enum -> Possible values for property SelectLevelDI0
+- HW.SelectLevelDI1 enum -> Possible values for property SelectLevelDI1
+- HW.SelectLevelDI2 enum -> Possible values for property SelectLevelDI2
+- HW.SensorType enum -> Possible values for property SensorType
+- HW.SerialProtocolMode enum -> Possible values for property SerialProtocolMode
+- HW.SetOutputDO enum -> Possible values for property SetOutputDO
+- HW.SetOutputDQ0 enum -> Possible values for property SetOutputDQ0
+- HW.SetOutputDQ1 enum -> Possible values for property SetOutputDQ1
+- HW.SharedDeviceCopyOfModule enum -> Possible values for property SharedDeviceCopyOfModule
+- HW.SignalConditioning1Type enum -> Possible values for property SignalConditioning1Type
+- HW.SignalConditioning2Type enum -> Possible values for property SignalConditioning2Type
+- HW.SignalConditioning3Type enum -> Possible values for property SignalConditioning3Type
+- HW.SignalConditioning4Type enum -> Possible values for property SignalConditioning4Type
+- HW.SignalConditioning5Type enum -> Possible values for property SignalConditioning5Type
+- HW.SignalConditioning6Type enum -> Possible values for property SignalConditioning6Type
+- HW.SignalEvaluation enum -> Possible values for property SignalEvaluation
+- HW.SignalSelectionForReferenceMark0 enum -> Possible values for property SignalSelectionForReferenceMark0
+- HW.SignalType enum -> Possible values for property SignalType
+- HW.SimocodeAnalogConnections enum -> Possible values for property SimocodeAnalogConnections
+- HW.SimocodeDigitalConnections enum -> Possible values for property SimocodeDigitalConnections
+- HW.SizeLengthField enum -> Possible values for property SizeLengthField
+- HW.Smoothing enum -> Possible values for property Smoothing
+- HW.Snmpv1Orv2cReadOnly enum -> Possible values for property Snmpv1Orv2cReadOnly
+- HW.Snmpv1TrapsActive enum -> Possible values for property Snmpv1TrapsActive
+- HW.SourceCycleTime enum -> Possible values for property SourceCycleTime
+- HW.StartDetectionOfAReceivedFrame enum -> Possible values for property StartDetectionOfAReceivedFrame
+- HW.StartupActionAfterPowerOn enum -> Possible values for property StartupActionAfterPowerOn
+- HW.StartupComparisonPresetToActualModule enum -> Possible values for property StartupComparisonPresetToActualModule
+- HW.StopBits enum -> Possible values for property StopBits
+- HW.SubmoduleSlotNumber enum -> Possible values for property SubmoduleSlotNumber
+- HW.SubstituteValue enum -> Possible values for property SubstituteValue
+- HW.SubstituteValueDQ0 enum -> Possible values for property SubstituteValueDQ0
+- HW.SubstituteValueDQ1 enum -> Possible values for property SubstituteValueDQ1
+- HW.SubstituteValueDQA enum -> Possible values for property SubstituteValueDQA
+- HW.SubstituteValueDQB enum -> Possible values for property SubstituteValueDQB
+- HW.SyncDomain class -> Synchronization domain
+- HW.SyncDomainComposition class -> Composition of a synchronization domain
+- HW.SynchronizationFrequency enum -> Possible values for property SynchronizationFrequency
+- HW.SyslogClientActive enum -> Possible values for property SyslogClientActive
+- HW.SystemPowerSupplyExternal enum -> Possible values for property SystemPowerSupplyExternal
+- HW.TemperatureShutdown enum -> Possible values for property TemperatureShutdown
+- HW.Terminal0Function enum -> Possible values for property Terminal0Function
+- HW.Terminal16Function enum -> Possible values for property Terminal16Function
+- HW.Terminal17Function enum -> Possible values for property Terminal17Function
+- HW.Terminal18Function enum -> Possible values for property Terminal18Function
+- HW.Terminal19Function enum -> Possible values for property Terminal19Function
+- HW.Terminal1Function enum -> Possible values for property Terminal1Function
+- HW.Terminal20Function enum -> Possible values for property Terminal20Function
+- HW.Terminal21Function enum -> Possible values for property Terminal21Function
+- HW.Terminal22Function enum -> Possible values for property Terminal22Function
+- HW.Terminal23Function enum -> Possible values for property Terminal23Function
+- HW.Terminal24Function enum -> Possible values for property Terminal24Function
+- HW.Terminal25Function enum -> Possible values for property Terminal25Function
+- HW.Terminal26Function enum -> Possible values for property Terminal26Function
+- HW.Terminal27Function enum -> Possible values for property Terminal27Function
+- HW.Terminal28Function enum -> Possible values for property Terminal28Function
+- HW.Terminal29Function enum -> Possible values for property Terminal29Function
+- HW.Terminal2Function enum -> Possible values for property Terminal2Function
+- HW.Terminal30Function enum -> Possible values for property Terminal30Function
+- HW.Terminal31Function enum -> Possible values for property Terminal31Function
+- HW.Terminal3Function enum -> Possible values for property Terminal3Function
+- HW.Terminal4Function enum -> Possible values for property Terminal4Function
+- HW.Terminal5Function enum -> Possible values for property Terminal5Function
+- HW.Terminal6Function enum -> Possible values for property Terminal6Function
+- HW.Terminal7Function enum -> Possible values for property Terminal7Function
+- HW.TestPositionFeedbackTPFStandardFunctionsType enum -> Possible values for property TestPositionFeedbackTPFStandardFunctionsType
+- HW.TestResponse enum -> Possible values for property TestResponse
+- HW.TimeBaseForVelocityMeasurement enum -> Possible values for property TimeBaseForVelocityMeasurement
+- HW.TimeOfDayDaylightSavingTimeStartHour enum -> Possible values for property TimeOfDayDaylightSavingTimeStartHour
+- HW.TimeOfDayDaylightSavingTimeStartMonth enum -> Possible values for property TimeOfDayDaylightSavingTimeStartMonth
+- HW.TimeOfDayDaylightSavingTimeStartWeek enum -> Possible values for property TimeOfDayDaylightSavingTimeStartWeek
+- HW.TimeOfDayDaylightSavingTimeStartWeekday enum -> Possible values for property TimeOfDayDaylightSavingTimeStartWeekday
+- HW.TimeOfDayLocalTimeZone enum -> Possible values for property TimeOfDayLocalTimeZone
+- HW.TimeOfDayStandardTimeStartHour enum -> Possible values for property TimeOfDayStandardTimeStartHour
+- HW.TimeOfDayStandardTimeStartMonth enum -> Possible values for property TimeOfDayStandardTimeStartMonth
+- HW.TimeOfDayStandardTimeStartWeek enum -> Possible values for property TimeOfDayStandardTimeStartWeek
+- HW.TimeOfDayStandardTimeStartWeekday enum -> Possible values for property TimeOfDayStandardTimeStartWeekday
+- HW.TimeOfDayTimeIntervalOnDp enum -> Possible values for property TimeOfDayTimeIntervalOnDp
+- HW.TimeOfDayTypeOfSynchronizationOnDp enum -> Possible values for property TimeOfDayTypeOfSynchronizationOnDp
+- HW.Timer1Type enum -> Possible values for property Timer1Type
+- HW.Timer2Type enum -> Possible values for property Timer2Type
+- HW.Timer3Type enum -> Possible values for property Timer3Type
+- HW.Timer4Type enum -> Possible values for property Timer4Type
+- HW.Timer5Type enum -> Possible values for property Timer5Type
+- HW.Timer6Type enum -> Possible values for property Timer6Type
+- HW.TimeSynchronizationNtp enum -> Possible values for property TimeSynchronizationNtp
+- HW.TM1InputsActiveSensors enum -> Possible values for property TM1InputsActiveSensors
+- HW.TM1InputsResponseToSensorFaultOutOfRange enum -> Possible values for property TM1InputsResponseToSensorFaultOutOfRange
+- HW.TM1InputsSensorType enum -> Possible values for property TM1InputsSensorType
+- HW.TM1TripLevelResponse enum -> Possible values for property TM1TripLevelResponse
+- HW.TM1WarningLevelResponse enum -> Possible values for property TM1WarningLevelResponse
+- HW.TM2InputsActiveSensors enum -> Possible values for property TM2InputsActiveSensors
+- HW.TM2InputsResponseToSensorFaultOutOfRange enum -> Possible values for property TM2InputsResponseToSensorFaultOutOfRange
+- HW.TM2InputsSensorType enum -> Possible values for property TM2InputsSensorType
+- HW.TM2TripLevelResponse enum -> Possible values for property TM2TripLevelResponse
+- HW.TM2WarningLevelResponse enum -> Possible values for property TM2WarningLevelResponse
+- HW.TraceTriggerEdge enum -> Possible values for property TraceTriggerEdge
+- HW.TransferArea.ExtendedPositionNumber property -> Subslotnumber/Slotnumber of transfer area
+- HW.TransferAreaType.F_Proxy_CD enum option -> 24
+- HW.TransferAreaType.IN enum option -> 5
+- HW.TransferAreaType.IN_OUT enum option -> 15
+- HW.TransferAreaType.LOCAL_RECORD_PUB enum option -> 17
+- HW.TransferAreaType.LOCAL_RECORD_STO enum option -> 16
+- HW.TransferAreaType.MSI enum option -> 7
+- HW.TransferAreaType.MSI_MSO enum option -> 14
+- HW.TransferAreaType.MSO enum option -> 8
+- HW.TransferAreaType.MSO_LOCAL enum option -> 9
+- HW.TransferAreaType.OUT enum option -> 6
+- HW.TransferAreaType.PROFISAFE_IN12_OUT6 enum option -> 22
+- HW.TransferAreaType.PROFISAFE_IN6_OUT12 enum option -> 23
+- HW.TransferAreaType.RECORD_READ_PUB enum option -> 13
+- HW.TransferAreaType.RECORD_READ_STO enum option -> 12
+- HW.TransferAreaType.RECORD_WRITE_PUB enum option -> 11
+- HW.TransferAreaType.RECORD_WRITE_STO enum option -> 10
+- HW.TransferAreaType.SUB_LOCAL_RECORD_PUB_READ enum option -> 21
+- HW.TransferAreaType.SUB_LOCAL_RECORD_STO_READ enum option -> 20
+- HW.TransferAreaType.SUB_MSI enum option -> 18
+- HW.TransferAreaType.SUB_MSO enum option -> 19
+- HW.TransmissionRate enum -> Possible values for property TransmissionRate
+- HW.TrippingClass enum -> Possible values for property TrippingClass
+- HW.UnitsOfMeasure enum -> Possible values for property UnitsOfMeasure
+- HW.UpperCurrentWarningLimit enum -> Possible values for property UpperCurrentWarningLimit
+- HW.VirtualSubType enum -> Possible values for property VirtualSubType
+- HW.VirtualType enum -> Possible values for property VirtualType
+- HW.VoltageDisplay enum -> Possible values for property VoltageDisplay
+- HW.VoltageLowerTripLevelResponse enum -> Possible values for property VoltageLowerTripLevelResponse
+- HW.VoltageLowerWarningLevelActiveStatus enum -> Possible values for property VoltageLowerWarningLevelActiveStatus
+- HW.VoltageLowerWarningLevelResponse enum -> Possible values for property VoltageLowerWarningLevelResponse
+- HW.VoltageState enum -> Possible values for property VoltageState
+- HW.VoltageTypeOfLoadForVoltageCosPhiAndPower enum -> Possible values for property VoltageTypeOfLoadForVoltageCosPhiAndPower
+- HW.WatchAndForceTableAccess enum -> Possible values for property WatchAndForceTableAccess
+- HW.WatchdogBusPLCFaultReset enum -> Possible values for property WatchdogBusPLCFaultReset
+- HW.WatchTableAccessRule class -> Access rule for watch table
+- HW.WatchTableAccessRuleComposition class -> Composition of access rules for watch table
+- HW.WebserverEntryPage enum -> Possible values for property WebserverEntryPage
+- HW.WebserverUser class -> User for webserver
+- HW.WebserverUserComposition class -> Composition of users for webserver
+- HW.WebserverUserPermissions enum -> Possible values for property WebserverUserPermissions
+- HW.WithBlockCheck enum -> Possible values for property WithBlockCheck
+- Online.OnlineConfigurationDelegate class -> Delegate for OnlineConfiguration callbacks
+- SiVArc.AlarmRule.AlarmLibraryItem property -> Alarm library item
+- SiVArc.AlarmRule.ConditionOperator property -> Condition operator for rule object
+- SiVArc.AlarmRule.ProgramBlock property -> Program block for rule object
+- SiVArc.AlarmRuleGroup.ConditionOperator property -> Condition operator for rule group
+- SiVArc.ConditionOperator enum -> Possible values for property ConditionOperator
+- SiVArc.CopyRule.LibraryObject property -> Library object for rule object
+- SiVArc.ISivarcLibraryItem class -> Sivarc interface implemented by library master copy and type
+- SiVArc.ISivarcLibraryMasterCopy class -> Sivarc interface implemented by library master copy
+- SiVArc.ISivarcProgramBlockSource class -> Sivarc interface implemented by code block, library master copy and type
+- SiVArc.ScreenRule.ConditionOperator property -> Condition operator for rule object
+- SiVArc.ScreenRule.LayoutField property -> Layout field for rule object
+- SiVArc.ScreenRule.ProgramBlock property -> Program block for rule object
+- SiVArc.ScreenRule.ScreenLibraryItem property -> Screen master copy
+- SiVArc.ScreenRule.ScreenObjectLibraryItem property -> Screen object library item
+- SiVArc.ScreenRule.GetLayoutField() method -> Get all layout fields applicable for the rule
+- SiVArc.ScreenRuleGroup.ConditionOperator property -> Condition operator for rule group
+- SiVArc.TagRule.ConditionOperator property -> Condition operator for rule object
+- SiVArc.TagRule.TagGroupHierarchy property -> Tag group hierarchy for rule object
+- SiVArc.TagRule.TagTable property -> Tag table for rule object
+- SiVArc.TagRuleGroup.ConditionOperator property -> Condition operator for rule group
+- SiVArc.TextlistRule.ConditionOperator property -> Condition operator for rule object
+- SiVArc.TextlistRule.ProgramBlock property -> Program block for rule object
+- SiVArc.TextlistRule.TextlistLibraryItem property -> Textlist master copy
+- SiVArc.TextlistRuleGroup.ConditionOperator property -> Condition operator for rule group
+- SW.OpcUa.ReferenceNamespace class -> OpcUa reference namespace
+- SW.OpcUa.ReferenceNamespaceComposition class -> Composition of OpcUa reference namespaces
+- SW.OpcUa.ServerInterfaceGroup.ReferenceNamespaces property -> Returns a list of Server Interfaces
+- SW.OpcUa.ServerInterfaceGroup.SimaticInterfaces property -> Returns a list of Server Interfaces
+- SW.OpcUa.SimaticInterface class -> OpcUa simatic interface
+- SW.OpcUa.SimaticInterfaceComposition class -> Composition of OpcUa simatic interfaces
+- SW.TechnologicalObjects.Motion.ConveyorTrackingLeadingValues class -> Handles connections between Kinematics Technological Objects and their master values
+- SW.TechnologicalObjects.Motion.SynchronousAxisMasterValues.DelayedCoupling property -> Master values that are coupled via actual values
+- SW.TechnologicalObjects.TechnologicalInstanceDBComposition.Import() method -> Simatic ML import of a Technological Object
+- SW.SWImportOptions.IgnoreUnitAttributes enum option -> 4
+- Project.IsSimulationDuringBlockCompilationEnabled property -> To indicate whether Support for Simulation during block compilation is enabled for the project
 
 ### Changed
 
-- Cax.CaxProvider.Export() method -> supports ProjectBase as export target
-- Download.DownloadProvider.Download() method -> Added ConfigurationAddress as parameter option.
-- Download.RHDownloadProvider.DownloadToBackup() method -> Added ConfigurationAddress as parameter option.
-- Download.RHDownloadProvider.DownloadToPrimary() method -> Added ConfigurationAddress as parameter option.
-- HW.Features.SubnetFeature class -> Base class changed to HardwareFeature
-  - Removed properties: Parent
-  - Removed methods: GetHashCode(), ToString()
-- Library.Types.LibraryType.UpdateLibrary() method -> Added different options mode that were created (DeleteUnusedVersionsMode, StructureConflictResolutionMode, ForceUpdateMode)
-- Library.Types.LibraryType.UpdateProject() method -> Added different options mode that were created (DeleteUnusedVersionsMode, StructureConflictResolutionMode, ForceUpdateMode)
-- Library.ILibrary.UpdateLibrary() method -> Added different options mode that were created (DeleteUnusedVersionsMode, StructureConflictResolutionMode, ForceUpdateMode)
-- Safety.GlobalSettings.SafetyModificationsPossible() method -> safetyModificationsPossible is now optional
-- Safety.GlobalSettings.UsernameForFChangeHistory() method -> usernameForFChangeHistory is now optional
-- SW.ExternalSources.PlcExternalSource.GenerateBlocksFromSource() method -> Added *args parameter because can run method with giving either PlcBlockUserGroup, PlcTypeUserGroup or nothing.
-- Project class -> Base class changed to ProjectBase
-  - Removed properties
-  - Removed methods: ExportProjectTexts(), GetHashCode(), ImportProjectTexts(), ShowHwEditor(), ToString() (Moved to ProjectBase)
+- HW.TransferAreaComposition.Find() method -> added optional parameter extendedPositionNumber
+- Library.MasterCopies.MasterCopy class -> base classes are added to the class (ISivarcLibraryMasterCopy, ISivarcLibraryItem, ISivarcProgramBlockSource)
+- Library.Types.LibraryType class -> base classes are added to the class (ISivarcLibraryItem, ISivarcProgramBlockSource)
+- SiVArc.Generate() method -> changed parameters to *args can use both devicename and list of devicenames
+- SW.Blocks.CodeBlock class -> base classes are added to the class (ISivarcProgramBlockSource)
+- TiaPortal class -> base classes are added to the class (IEngineeringServiceProvider)
+
+### Removed
+
+- TiaPortal.GetProcess() method
+- TiaPortal.GetProcesses() method
+- TiaPortalProcess.Attach() method
+- TiaPortalProcess.Attaching other
