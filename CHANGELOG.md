@@ -2,9 +2,6 @@
 
 All notable changes to this project will be documented in this file.
 
-The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
-and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
-
 ## Openness v17
 
 The following new features and innovations are available in TIA Portal Openness V17. You can find additional details on the various topics in the individual sections of the product documentation.
